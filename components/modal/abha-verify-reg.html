@@ -1,0 +1,976 @@
+<div class="abha_verify_reg_container">
+    <div class="keyboard_lastcheckin" ng-if="abhaVerifyReg.checkinAbhaEnable">
+        <p class="checkin_abha_verify_heading">Do you have an ABHA account already? would you like to link now?</p>
+        <div style="padding-top:40px;padding-left:32px;display: flex; flex-direction: column;font-size: 20px;" class="abha_radio_division">
+            <label style="margin-bottom: 31px;">
+                <input type="radio" id="radio_btn_for_abha1" name="radio_btn_for_abha1" value="Yes" ng-model="selectedOption" ng-click="abhaVerifyReg.buttonenable()">
+                &nbsp;&nbsp;&nbsp;&nbsp;Yes, I have an ABHA number and I would like to link now.
+            </label>
+            <label style="margin-bottom: 31px;">
+                <input type="radio" id="radio_btn_for_abha2" name="radio_btn_for_abha2" value="No" ng-model="selectedOption" ng-click="abhaVerifyReg.buttonenable()">
+                &nbsp;&nbsp;&nbsp;&nbsp;Don't have an ABHA number, and I would like to create now.
+            </label>
+            <label style="margin-bottom: 31px;">
+                <input type="radio" id="radio_btn_for_abha3" name="radio_btn_for_abha3" value="" ng-model="selectedOption" ng-click="abhaVerifyReg.buttonenable()">
+                &nbsp;&nbsp;&nbsp;&nbsp;I don't like to link now.
+            </label>
+        </div>
+        <div style="padding-left:33px">
+            <div class="abha_info_button" ng-click="showAbhaInfobox()">
+                <img class="global_info_button_icon" src="images/icons8-info-32.png">
+                <span class="global_info_button_text ng-binding">Info</span>
+            </div>
+        </div>
+        <a class="abha_would_you_link_continue_button flow_begins_button" ng-show="continuevisible" ng-click="abhaVerifyReg.abhaVerifySection(selectedOption)"
+            ng-class="{'button-enter-right' : continuevisible, 'button-exit-right' : !continuevisible}" style="width: 200px;">
+            <span style="font-size: 24px;padding-left: 22px;">Continue</span>
+        </a>
+    </div>
+    
+    <div ng-show="nextVisible" ng-class="{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-if="EnableshowAbhaInfobox" id="abha_info_container" style="left: 11px;">
+        <div id="abha_info_container_scroll">
+            <div>
+                <p class="infobox_content_title ng-binding">
+                    ABHA Health System
+                    <img src="images/abha_logo.jpg" style="width: 37px; object-fit: cover; top: 8px; position: relative;right:440px">             
+                </p>
+                <div style="height:334px;font-size: 18px;color:#6d6d6d;">
+                    <p style="padding-left: 14px;color: black;font-size: larger;">What is ABHA ?</p>
+                    <p style="padding-left: 14px;">ABHA, or Ayushman Bharat Health System, is a smart healthcare system by the Indian government. It's your digital health identity for all your important health records.</p>
+                    <p style="padding-left: 14px;color: black;font-size: larger;">Benefits of ABHA</p>
+                    <div class="info_row">
+                        <div class="info_column">
+                          <div class="info_card">
+                            <div style="padding-left: 100px;text-align: initial;padding-top:15px;font-size:15px">
+                                <a style="font-weight: bolder;color: black;">Connect your hpod to ABHA</a> for amazing advantages.
+                            </div>
+                            <div>
+                                <img src="images/cloud-service.png" style="width: 62px; object-fit: cover; top: -48px; position: relative;right:112px">             
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="info_column">
+                          <div class="info_card">
+                            <div style="padding-left: 100px;text-align: initial;padding-top:7px;font-size:15px">
+                                <a style="font-weight: bolder;color: black;">Seamless Care:</a> Doctors and nurses can access your health info for better care.
+                            </div>
+                            <div>
+                                <img src="images/medical-checkup.png" style="width: 62px; object-fit: cover; top: -60px; position: relative;right:112px">             
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="info_column">
+                          <div class="info_card">
+                            <div style="padding-left: 100px;text-align: initial;padding-top:7px;font-size:15px">
+                                <a style="font-weight: bolder;color: black;">Acess Important health details:</a> ECG, Weight, Blood pressure & more.
+                            </div>
+                            <div>
+                                <img src="images/assistance.png" style="width: 62px; object-fit: cover; top: -60px; position: relative;right:112px">             
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="info_column">
+                          <div class="info_card">
+                            <div style="padding-left: 100px;text-align: initial;padding-top:5px;font-size:15px">
+                                <a style="font-weight: bolder;color: black;">Ayushhman Bharat Scheme:</a> Enjoy affordable healthcare services and insurance.
+                            </div>
+                            <div>
+                                <img src="images/planning.png" style="width: 62px; object-fit: cover; top: -55px; position: relative;right:112px">             
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="info_column">
+                            <div class="info_card">
+                                <div style="padding-left: 100px;text-align: initial;padding-top:7px;font-size:15px">
+                                    <a style="font-weight: bolder;color: black;">Smart Choices:</a> Keep track of your health journey and make informed decisions.
+                                </div>
+                                <div>
+                                    <img src="images/choice.png" style="width: 62px; object-fit: cover; top: -60px; position: relative;right:112px">             
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a ng-if="abhabackbutton" class="abha_back_button button-enter-left" ng-click="abhainfobackbutton()">
+            <span class="global_previous_page_text">Back</span>
+        </a>
+    </div>
+    <div class="keyboard_lastcheckin" ng-if="abhaVerifyReg.abhaCareContextShare">
+        <p class="checkin_abha_careContext_heading">Would you like to share your data with ABHA ?</p>
+        <div id="abha_card_dummy" ng-show="true"></div>
+
+        <a class="abha_verify_Section_yes_btn {{abhaVerifyReg.abhaVerifyButtonClass}}" ng-click="abhaVerifyReg.abhaCareContextShareBtn('Yes')">
+            <span>Yes</span>
+        </a>
+
+        <a class="abha_verify_Section_no_btn {{abhaVerifyReg.abhaVerifyButtonClass}}" ng-click="abhaVerifyReg.abhaCareContextShareBtn('No')">
+            <span>No</span>
+        </a>
+    </div>
+
+    <div ng-show="abhaVerifyShow">
+
+        <!-- <div ng-show="abhaVerifyReg.aadharNumShow">
+            <div class="abha_aadhar_number_division">
+                <p style="font-size: x-large;color: #0000009c;font-style: oblique;font-family: 'LatoSemibold';margin-left: 10px;margin-top: -28px;">Aadhaar Number</p>
+                <p class="signup_modal_aadhar_number_heading">Enter your Aadhaar number to link ABHA</p>
+                <higi-text-field field="abhaVerifyReg.fields[3]" class="signup_modal_aadhar_number_input_box_1"></higi-text-field>
+                <higi-text-field field="abhaVerifyReg.fields[4]" class="signup_modal_aadhar_number_input_box_2"></higi-text-field>
+                <higi-text-field field="abhaVerifyReg.fields[5]" class="signup_modal_aadhar_number_input_box_3"></higi-text-field>
+                <div id = "signup_aadhhar_loader" class="adr_no_validation_loader"></div>
+                <div id = "signup_aadhhar_error" class="adr_no_validation_error">Aadhaar already exists</div>
+                <div id = "signup_aadhhar_srv_err" class="adr_no_validation_srv_err">Server Error!</div>
+                <div id = "signup_aadhhar_num" class="adr_no_not_exist">Invalid Aadhaar Number</div>
+            </div>
+
+            <a class="aadha_valid_next_btn {{abhaVerifyReg.aadharValidNextButtonClass}}" ng-click="abhaVerifyReg.aadharValidate()">
+                <span>Next</span>
+            </a>
+        </div> -->
+
+        <!-- <div ng-show="abhaVerifyReg.abhaAadharOTP" class="">
+            <div class="otpSection_abha">
+                <p style="font-size: x-large;color: #0000009c;font-style: oblique;font-family: 'LatoSemibold';margin-left: 10px;margin-top: -28px;">Enter OTP</p>
+                <p class="otpSection_abha_heading">OTP <span ng-show="!newMobileNumAddAbha" style="font-size: 15px;">(Aadhaar linked mobile number gets OTP)</span><span ng-show="newMobileNumAddAbha">(To link New mobile number with ABHA)</span></p>
+                <higi-text-field field="abhaVerifyReg.fields[6]" class="otpSection_abha_input_box"></higi-text-field>
+                <div id = "otp_val_loader" class="otp_validation_loader"></div>
+                <div id = "otp_no_error" class="abha_otp_no_not_exist">Invalid OTP</div>
+                <div id = "otp_no_resend" class="otp_resend">OTP Sent</div>
+                <div id = "otp_no_srv" class="otp_srv_err">Something went wrong</div>
+                
+    
+                <small ng-hide="newMobileNumAddAbha" class="otpSection_text_resend"><a ng-click="abhaVerifyReg.resendOtpAbha()" style="color: #0261c2;">Resend</a> the OTP code</small>
+            </div>
+    
+            <a class="abha_otpSection_submit_btn {{abhaVerifyReg.otpSectionNextButtonClass}}" ng-click="abhaVerifyReg.validOtpNextSection()">
+                <span>Submit</span>
+            </a>
+    
+        </div> -->
+
+        <div ng-show="abhaVerifyReg.abhaDropSelectAuthMode">
+            <p class="checkin_abha_enable_abhaAddress_title_new">ABHA address / number</p>
+            <higi-text-field field="abhaVerifyReg.fields[0]" class="last_checkin_abhaAddress_input_new"></higi-text-field>
+            <div style="right: 300px;width: 100px;height: 0px;position: fixed;top: 74px;font-size: 23px;">
+                <div ng-show="abhaVerifyReg.abhasbx">@sbx</div>
+            </div>
+            <div style="right: 230px;width: 100px;height: 0px;position: fixed;top: 57px;font-size: 12px;color: red;">
+                <div ng-show="abha_already_exist">ABHA account is already linked to another IHL account !</div>
+            </div>
+            <div id = "abha_authMode_loader" class="abha_auth_mode_loader" style="top: 72px;"></div>
+            <div id = "abha_authAddress_error" class="abha_auth_address_error" style="top: 65px;">Invalid ABHA address</div>
+            <div id = "abha_authServer_error" class="abha_auth_server_error" style="top: 72px;">Server Error</div>
+            
+            <p class="checkin_abha_enable_authMode_title_new">Do you know verification (Authentication) mode?</p>
+            <div class="abha_auth_dropDown_division">
+                <!-- <select id="abhaAuthSelect" class="abha_auth_dropDown_input_new" ng-model="abhaAuthDropvalue" ng-change="onAbhaAuthChange(abhaAuthDropvalue)" ng-click ="onAbhaAuthClickEvent()">
+                    <option value="" disabled selected>Select verification model</option>
+                    <option ng-repeat= "option in abhaAuthDropOptions">{{option.auth}}</option>
+                </select> -->
+                <div style="padding-top: 40px;padding-left:10px;" class="abha_auth_radio_division">
+                    <label>
+                        <input type="radio" name="yes" value="yes" ng-model="abhaAuthDropvalue" ng-click="onAbhaAuthChange(abhaAuthDropvalue)" ng-checked="abhaAuthDropvalue == 'yes'">
+                        &nbsp;&nbsp;&nbsp;&nbsp;Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="Don't Know" value="Don't Know" ng-model="abhaAuthDropvalue" ng-click="onAbhaAuthChange(abhaAuthDropvalue)">
+                        &nbsp;&nbsp;&nbsp;&nbsp;No
+                    </label>
+                </div>
+            </div>
+            
+            <!-- old code for aligning input fields and css works fyn
+                <p class="checkin_abha_enable_authMode_title">Select the Verification Model</p> 
+            <div class="abha_auth_dropDown_division">
+                <select id="abhaAuthSelect" class="abha_auth_dropDown_input" ng-model="abhaAuthDropvalue" ng-change="onAbhaAuthChange(abhaAuthDropvalue)" ng-click ="onAbhaAuthClickEvent()">
+                    <option value="" disabled selected>Select verification model</option>
+                    <option ng-repeat= "option in abhaAuthDropOptions">{{option.auth}}</option>
+                </select>
+            </div>
+            <p class="checkin_abha_enable_abhaAddress_title">ABHA Address</p>
+            <higi-text-field field="abhaVerifyReg.fields[0]" class="last_checkin_abhaAddress_input"></higi-text-field>
+            <div id = "abha_authMode_loader" class="abha_auth_mode_loader"></div>
+            <div id = "abha_authAddress_error" class="abha_auth_address_error">Invalid ABHA address</div>
+            <div id = "abha_authServer_error" class="abha_auth_server_error">Server Error</div> -->
+
+            <a class="checkin_abhaFetch_next_btn {{ abhaVerifyReg.abhaFetchNextBtn }}" ng-click="abhaVerifyReg.fetchModesForAbha()" style="top:60px !important;">
+                <span>Next</span>
+            </a>
+
+            <!-- <a ng-class="{'button-enter-up' : loginModal.accountVisible, 'button-exit-down' : !loginModal.accountVisible}" class="login_modal_register_forgot_password_button button-enter-up" ng-click="abhaVerifyReg.qrSection()" style="color: rgb(77, 77, 77); background: linear-gradient(rgb(247, 247, 247), rgb(219, 219, 219), rgb(193, 193, 193)); border-top: 2px solid rgba(32, 138, 214, 0.75); border-bottom: 2px solid rgba(32, 138, 214, 0.75); border-left: 2px solid rgba(32, 138, 214, 0.75); box-shadow: rgba(74, 74, 74, 0.88) 0px 5px 3px; border-right: none; top:180px !important;">
+                <span class="login_modal_register_forgot_password_button_text ng-binding"> ABHA Quick Verify
+                    <i class="fa fa-qrcode login_modal_QRCode_option_button_icon" style="left: 155px;"></i>
+                </span>
+            </a> -->
+            <a ng-show="abhaVerifyReg.abha_quick_verify_button" class="abha_quick_verify_button button-enter-up" ng-click="abhaVerifyReg.qrSection()">
+                <span class="abha_quick_verify_button_text ng-binding"> ABHA Quick Verify
+                    <i class="fa fa-qrcode login_modal_QRCode_option_button_icon" style="left: 155px;"></i>
+                </span>
+            </a>
+        </div>
+        <div ng-show="abhaVerifyReg.directlinknext">
+
+
+            <div class="abha_logo" ng-show="true">
+                <!-- <img src="https://healthid.ndhm.gov.in/static/media/mainlogo.310f2e1c.svg" style="width: 135px; object-fit: cover;"> -->
+                <img src="images/abha_logo.jpg" style="width: 105px; object-fit: cover; top: 16px; position: relative;">
+            </div>
+
+            <p style="font-size: x-large;color: #000000c7;font-style: oblique;font-family: 'LatoSemibold';margin-left: 150px; margin-top: 80px;">Select the Abha Authentication Mode</p>
+
+            <div class="abha_auth_main_container">
+                <div class="abha_auth_main_inner_container">
+                    <div class="abha_auth_outer_box" ng-click="directlinknext('MOBILE_OTP')" ng-class="{'abha-auth-active': directlinknext == 'MOBILE_OTP'}">
+
+                        <div class="abha_auth_inner_box" ng-class="{'abha-auth-active': directlinknext == 'MOBILE_OTP'}">
+                            <span class="abha-auth-outer-box-title" ng-class="{'abha-auth-active': directlinknext == 'MOBILE_OTP'}">
+                                Mobile OTP
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="abha_auth_outer_box" ng-click="directlinknext('AADHAAR_OTP')" ng-class="{'abha-auth-active': directlinknext == 'AADHAAR_OTP'}">
+
+                        <div class="abha_auth_inner_box" ng-class="{'abha-auth-active': directlinknext == 'AADHAAR_OTP'}">
+                            <span class="abha-auth-outer-box-title" ng-class="{'abha-auth-active': directlinknext == 'AADHAAR_OTP'}">
+                                Aadhaar OTP
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <div id = "abha_authMode_loader" class="abha_auth_mode_loader" style="top: 276px;"></div>
+                <div id = "abha_tabServer_error" class="abha_tab_server_error">Server Error... Please try again</div>
+                <div style="margin-top: -66px;margin-left: 123px;" ng-show="wait_for_minutes" class="otpSection_text_resend"><a style="color: #f00606;">Please wait for 30 minutes before sending another OTP request.</a></div>
+            </div>
+
+        </div>
+
+        <div ng-show="abhaVerifyReg.abhaQRsection" style="text-align:center;padding-top:35px;">   
+            <!-- <div> 
+                <p id="ABHAqrInfo"> </p> 
+            </div>          -->
+            <p style="font-size: 18px !important;font-family: LatoRegular !important;color: black !important;pointer-events: none !important;margin-top: 30px !important;">Initate and verify your ABHA Address</p>
+            <div id="abhaQR" style="margin-top:38px"> </div>
+            <div class="abha_qr_logo">
+                <img src="images/abha_qr.png" style="width: 57px; object-fit: cover; top: 16px; position: relative;">
+            </div>
+            <p style="font-size: 18px !important;font-family: LatoRegular !important;color: black !important;pointer-events: none !important;margin-top: 30px !important;margin-left:40px">Scan the above QR code with your PHR app</p>
+            <a class="abha_quick_verify_back_button button-enter-right" ng-if="quickverifybackbutton" ng-click="abhaVerifyReg.quickverifybackbutton()">
+                <span style="font-size: 24px">Back</span>
+            </a>
+        </a>
+        </div>
+
+        <div ng-show="abhaVerifyReg.abhaChooseAuthMode">
+
+
+            <div class="abha_logo" ng-show="true">
+                <!-- <img src="https://healthid.ndhm.gov.in/static/media/mainlogo.310f2e1c.svg" style="width: 135px; object-fit: cover;"> -->
+                <img src="images/abha_logo.jpg" style="width: 105px; object-fit: cover; top: 16px; position: relative;">
+            </div>
+
+            <p style="font-size: x-large;color: #000000c7;font-style: oblique;font-family: 'LatoSemibold';margin-left: 150px; margin-top: 80px;">Select the Abha Authentication Mode</p>
+
+            <div class="abha_auth_main_container">
+                <div class="abha_auth_main_inner_container">
+                    <div class="abha_auth_outer_box" ng-click="openTab('MOBILE_OTP')" ng-class="{'abha-auth-active': selectedAuth == 'MOBILE_OTP'}">
+
+                        <div class="abha_auth_inner_box" ng-class="{'abha-auth-active': selectedAuth == 'MOBILE_OTP'}">
+                            <span class="abha-auth-outer-box-title" ng-class="{'abha-auth-active': selectedAuth == 'MOBILE_OTP'}">
+                                Mobile OTP
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="abha_auth_outer_box" ng-click="openTab('AADHAAR_OTP')" ng-class="{'abha-auth-active': selectedAuth == 'AADHAAR_OTP'}">
+
+                        <div class="abha_auth_inner_box" ng-class="{'abha-auth-active': selectedAuth == 'AADHAAR_OTP'}">
+                            <span class="abha-auth-outer-box-title" ng-class="{'abha-auth-active': selectedAuth == 'AADHAAR_OTP'}">
+                                Aadhaar OTP
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="abha_auth_outer_box" ng-click="openTab('DEMOGRAPHICS')" ng-class="{'abha-auth-active': selectedAuth == 'DEMOGRAPHICS'}">
+
+                        <div class="abha_auth_inner_box" ng-class="{'abha-auth-active': selectedAuth == 'DEMOGRAPHICS'}">
+                            <span class="abha-auth-outer-box-title" ng-class="{'abha-auth-active': selectedAuth == 'DEMOGRAPHICS'}">
+                                Demographics (Personal) Details
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <!--ABHA CARE CONTEXT Starts here-->
+                    <!-- <div ng-show="shareCareContextEnable" class="abha_auth_outer_box" ng-click="openTab('QRCODE')" ng-class="{'abha-auth-active': selectedAuth == 'QRCODE'}">
+                        <div class="abha_auth_inner_box" ng-class="{'abha-auth-active': selectedAuth == 'QRCODE'}">
+                            <span class="abha-auth-outer-box-title" ng-class="{'abha-auth-active': selectedAuth == 'QRCODE'}">
+                                ABHA Quick Verify
+                            </span>
+                        </div>
+                    </div> -->
+                    <!--ABHA CARE CONTEXT ends here-->
+
+                </div>
+                <div id = "abha_authMode_loader" class="abha_auth_mode_loader" style="top: 276px;"></div>
+                <div id = "abha_tabServer_error" class="abha_tab_server_error">Server Error... Please try again</div>
+                <div style="margin-top: -66px;margin-left: 123px;" ng-show="wait_for_minutes" class="otpSection_text_resend"><a style="color: #f00606;">Please wait for 30 minutes before sending another OTP request.</a></div>
+            </div>
+
+        </div>
+
+        <div ng-show="abhaVerifyReg.abhaDemographicForm">
+
+            <p style="font-size: x-large; color: #0000009c; font-style: oblique; font-family: 'LatoSemibold'; position: relative; top: -10px;">Demographics (Personal) Details </p>
+            <p class="checkin_abha_name_title">Name </p>
+            <higi-text-field field="abhaVerifyReg.fields[1]" class="last_checkin_name_input"></higi-text-field>
+            <div id = "abha_demoServer_error" class="abha_demo_server_error">Server Error</div>
+            <div id = "abha_demoCred_error" class="abha_demo_cred_error" style="top: 100px;left: 570px;width: 130px;"> Invalid request, Enter valid input</div>
+
+            <p class="checkin_abha_gender_title">Gender</p>
+            <!-- <div class="abha_gender_dropDown_division">
+                <select id="abhaGenderSelect" placeholder="Select Gender" class="abha_gender_dropDown_input" ng-model="abhaGenderDropvalue" ng-change="onAbhaGenderChange(abhaGenderDropvalue)" ng-click ="onAbhaGenderClickEvent()">
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="M" ng-selected="gender === 'm'">Male</option>
+                    <option value="F" ng-selected="gender === 'f'">Female</option>
+                </select>
+            </div> -->
+            <div style="padding-top:34px;padding-left:3px" class="abha_gender_radio_division">
+                <label>
+                    <input type="radio" name="gender" value="M" ng-model="abhaGenderDropvalue" ng-click="onAbhaGenderClickEvent()" ng-change="onAbhaGenderChange(abhaGenderDropvalue)" ng-checked="abhaGenderDropvalue === 'M'">
+                    &nbsp;&nbsp;&nbsp;&nbsp;Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="F" ng-model="abhaGenderDropvalue" ng-click="onAbhaGenderClickEvent()" ng-change="onAbhaGenderChange(abhaGenderDropvalue)" ng-checked="abhaGenderDropvalue === 'F'">
+                    &nbsp;&nbsp;&nbsp;&nbsp;Female
+                </label>
+            </div>
+            <div style="position: relative;top: -160px;left: 297px;width: 270px;height: 80px;">
+                <p class="checkin_abha_optional_number_title" style="position: relative;top: -16px;">Mobile Number (Optional)</p>
+                <higi-text-field field="abhaVerifyReg.fields[14]" class="abhaMobileBox"></higi-text-field>
+            </div>
+            <div class="abhaDOBsection">
+                <p class="checkin_abha_dob_title">Date Of Birth <a ng-if="ShowInvalidDob" style="color: red;padding-left:8px">Invalid Date of birth</a></p>
+                <div style="top: -97px; left: -11px; position: relative;">
+                    <higi-text-field field="abhaVerifyReg.fields[11]" class="dob_input_box_1"></higi-text-field>
+                </div>
+                <div style="top:-97px;left: 79px;position: relative;">
+                    <higi-text-field field="abhaVerifyReg.fields[12]" class="dob_input_box_2"></higi-text-field>
+                </div>
+                <div style="top:-97px;left: 169px;position: relative;">
+                    <higi-text-field field="abhaVerifyReg.fields[13]" class="dob_input_box_3"></higi-text-field>
+                </div>
+            </div>
+
+<style type="text/css">
+
+    /* Style for radio buttons */
+    .abha_radio_division input[type="radio"] {
+        transform: scale(2); /* Adjust the scale value as needed to increase/decrease the size */
+    }
+    /* Add space between Male and Female labels */
+    .abha_radio_division label {
+        margin-right: 30px;
+        color:#0000009c !important;
+    }
+
+
+    /* Style for radio buttons */
+    .abha_gender_radio_division input[type="radio"] {
+        transform: scale(2); /* Adjust the scale value as needed to increase/decrease the size */
+    }
+    /* Add space between Male and Female labels */
+    .abha_gender_radio_division label {
+        margin-right: 30px;
+    }
+
+    /* Style for radio buttons */
+    .abha_auth_radio_division input[type="radio"] {
+    transform: scale(2); /* Adjust the scale value as needed to increase/decrease the size */
+    }
+    /* Add space between Male and Female labels */
+    .abha_auth_radio_division label {
+        margin-right: 30px;
+    }
+
+    #abhaDemographicFormMobile{
+        width: 270px;
+    }
+    .abhaMobileBox{
+        position: relative;
+        top: -144px;
+        left: -18px;
+    }
+    .abhaMobileBox input{
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+        border: 2px solid #808080d1;
+        color: #808080d1 !important;
+        font-weight: 500 !important;
+        font-family: 'LatoRegular' !important;
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
+        border-radius: 10px !important;
+        outline: none !important;
+        text-indent: 0px !important;
+        box-sizing: border-box !important;
+        width: 261px !important;
+        display: block !important;
+        font-size: 18px !important;
+        background: white !important;
+        position: relative;
+    }
+.abhainfoscrollbar
+{
+	margin-left: 30px;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+
+/*
+ *  STYLE 2
+ */
+
+#style-2::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #8f8e8e;
+}
+</style>
+            <!-- <div class="abhaDOBsection">
+                <p class="checkin_abha_dob_title">Date Of Birth</p>
+                <div style="top: 15px; left: -10px; position: relative;padding-right: 0px;">
+                    <a ng-click="upArrowBtnClick('D')" class="day-up-btn">  <img src="images/arrow_up.png"> </a>
+                    <higi-text-field field="abhaVerifyReg.fields[11]" class="dob_input_box_1"></higi-text-field>
+                    <a ng-click="downArrowBtnClick('D')" class="day-down-btn">  <img src="images/arrow_up.png"> </a>
+                </div>
+                <div style="top: -69px; left: 77px; position: relative;">
+                    <a ng-click="upArrowBtnClick('M')" class="day-up-btn">  <img src="images/arrow_up.png"> </a>
+                    <higi-text-field field="abhaVerifyReg.fields[12]" class="dob_input_box_2"></higi-text-field>
+                    <a ng-click="downArrowBtnClick('M')" class="day-down-btn">  <img src="images/arrow_up.png"> </a>
+                </div>
+                <div style="top: -153px; left: 164px; position: relative;">
+                    <a ng-click="upArrowBtnClick('Y')" class="day-up-btn">  <img src="images/arrow_up.png"> </a>
+                    <higi-text-field field="abhaVerifyReg.fields[13]" class="dob_input_box_3"></higi-text-field>
+                    <a ng-click="downArrowBtnClick('Y')" class="day-down-btn">  <img src="images/arrow_up.png"> </a>
+                </div>
+            </div> -->
+
+            <a class="checkin_abhaDemo_submit_btn {{ abhaVerifyReg.abhaDemographicFormSubmit }}" ng-click="abhaVerifyReg.submitAbhaDemoDetails()">
+                <span>Submit</span>
+            </a>
+            <!-- abhaCareContext code starts here
+            <div id = "abha_no_care_contxt_data_server" class="abha_no_data_server">No Data Found</div>
+            <div id = "abha_wrng_addr_server" class="abha_wrng_addr">Please try again later</div> 
+            abhaCareContext code ends here -->
+        </div>
+
+        <div ng-show="abhaVerifyReg.abhaOTPSection">
+
+            <p style="font-size: x-large;color: #000000c7;font-style: oblique;font-family: 'LatoSemibold';margin-left: 10px; margin-top: 17px;">{{otpSectionTitle}}</p>
+
+            <p class="checkin_abha_otp_title">Please enter the correct OTP</p>
+            <higi-text-field field="abhaVerifyReg.fields[2]" class="last_checkin_otp_input"></higi-text-field>
+                <div id = "otp_val_loader" class="otp_validation_loader" style="top: 95px"></div>
+                <div id = "otp_no_error" class="abha_otp_no_not_exist" style="top: 95px">Invalid OTP</div>
+                <div id = "otp_no_srv" class="otp_srv_err" style="top: 85px">Something went wrong</div><!--style="top: -64px;"-->
+                <div id = "otp_no_resend" class="otp_resend" style="top: 105px">OTP Sent</div>                
+                <div id = "otp_no_later" class="otp_srv_try_later" style="top: 95px">Please try again later</div>
+                <div ng-show="showTimer" class="otpSection_text_resend">Time Remaining : {{timerValue}} seconds for resend OTP</div>
+                <small ng-hide="newMobileNumAddAbha" class="otpSection_text_resend"><a ng-click="abhaVerifyReg.resendOTP()" style="color: #0261c2;">Resend</a> the OTP code</small>
+                <small ng-show="wait_for_minutes" class="otpSection_text_resend"><a style="color: #f00606;">Please wait for 30 minutes before sending another OTP request.</a></small>
+
+            <!-- <p class="abha_link_success_response">ABHA has been linked with IHL successfully</p> -->
+            <a class="checkin_abhaOtp_submit_btn {{ abhaVerifyReg.abhaOtpSubmit }}" ng-click="abhaVerifyReg.submitOTP()">
+                <span>Submit</span>
+            </a>
+        </div>
+        <div class="keyboard_lastcheckin" style="text-align:center;" ng-if="abha_card_show_last_link">
+            <p style="left: 0px;" ng-if="abha_card_show_last_link" class="abha_card_heading">Your ABHA card</p>
+            <div ng-if="abha_card_show_last_link" class="abha_card_section">
+                <img src="{{ abhaVerifyReg.abhaIntermedCardShow }}">
+            </div>
+            <div class="keyboard_lastcheckin_continue_btn keyboard_submit_btn active_btn" ng-click="emailCheckinResults()" style="top: 382px;left: 238px;height: 50px;line-height:10px"><span>Email ABHA card</span></div>
+            <a class="abha_continue_button button-enter-right" ng-click="closeabhafullmodule()"style="width: 200px;top:440px">
+                <span style="font-size: 24px;padding-left: 22px;">Continue</span>
+            </a>
+        </div>
+    </div>
+
+
+    <div ng-show="abhaRegShow">
+        <div ng-show="abhaVerifyReg.aadharNumShow">
+            <div class="abha_aadhar_number_division">
+                <p style="font-size: x-large;color: #0000009c;font-style: oblique;font-family: 'LatoSemibold';margin-left: 10px;margin-top: -28px;">Aadhaar Number * </p>
+                <p class="signup_modal_aadhar_number_heading" style="width: max-content; margin-top: -12px!important;">Enter your Aadhaar to create ABHA number</p>
+                <!-- <higi-text-field field="abhaVerifyReg.fields[3]" class="signup_modal_aadhar_number_input_box_1"></higi-text-field>
+                <higi-text-field field="abhaVerifyReg.fields[4]" class="signup_modal_aadhar_number_input_box_2"></higi-text-field>
+                <higi-text-field field="abhaVerifyReg.fields[5]" class="signup_modal_aadhar_number_input_box_3"></higi-text-field> -->
+                <div class="signup_modal_new_password_division">
+                    <p class="signup_modal_new_password_heading">{{interfaceLabels[passwordPageTitle]}}</p>
+                    <higi-text-field field="abhaVerifyReg.fields[3]" class="signup_modal_new_password_input_box"></higi-text-field>
+                    <div ng-click="abhaVerifyReg.showAadhaarnumberToggle(abhaVerifyReg.fields[3])" class="signup_modal_new_password_eyes_images {{abhaVerifyReg.showAadhaarnumberClass}}"></div>
+                </div> 
+                <div id = "signup_aadhhar_loader" class="adr_no_validation_loader"></div>
+                <div id = "signup_aadhhar_error" class="adr_no_validation_error">Aadhaar already exists</div>
+                <div id = "signup_aadhhar_srv_err" class="adr_no_validation_srv_err">Server Error!</div>
+                <div id = "signup_aadhhar_num" class="adr_no_not_exist">Invalid Aadhaar Number</div>
+                <div id = "signup_aadhhar_later" class="adr_no_try_later">Try after sometime</div>
+            </div>
+
+            <a class="aadha_valid_next_btn {{abhaVerifyReg.aadharValidNextButtonClass}}" ng-click="abhaVerifyReg.aadharValidate()">
+                <span>Next</span>
+            </a>
+        </div>
+        <div ng-show="abhaVerifyReg.half_declaration" id="login_tos_privacy" style="top: 165px;left: 11px;height:322px;">
+            <div id="abha_declarion_wrapper">
+                <div class="declration_container">
+                    <div class="abha_declration_button_container" ng-if="abhaVerifyReg.half_declaration">
+                        <small class="signup_modal_create_account_Terms_button_text">I agree with all the</small>
+                       <a class="signup_modal_create_account_Terms_cond_button" ng-click="declaration()">
+                            <span class="abha_declaration_text_span"><b>Declaration</b></span>
+                        </a>
+                        <a class="signup_terms_accept_check_box {{abhaVerifyReg.DeclarationAcceptanceClass}}" ng-click="abhaVerifyReg.toggleDeclarationAcceptance()"></a>
+                    </div> 
+                    <div ng-if="abhaVerifyReg.half_declaration" style="width: 357px;padding-top: 10px;color:#808080d1 !important;text-align:justify;line-height:20px">
+                        I, hereby declare that:
+                    </div>
+                    <div style="width: 357px;padding-top: 10px;color:#808080d1 !important;text-align:justify;line-height:20px">
+                        <a style="left: -3px;" class="declration_full_check_box {{abhaVerifyReg.firstcheckboxFullDeclarationAcceptanceClass}}" ng-click="abhaVerifyReg.firstcheckboxtoggleDeclarationAcceptance()"></a><a style="margin-left: 26px;">I am voluntarily sharing my Aadhaar Number and demographic information issued by UIDAI, with National Health Authority (NHA) for the sole purpose of creation of ABHA number .</a>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div ng-show="abhaVerifyReg.full_declaration" id="abha_declaration_container" style="top: 173px;left: 11px;">
+        	<div id="abha_main_container_scroll">
+                <div class="abha_container_padding">
+                    <div class="declration_container">
+                        <div class="abha_declration_button_container" style="top: -12px;left: 388px;height: 83px;">
+                            <small class="signup_modal_create_account_Terms_button_text">I agree with all the</small>
+                           <a class="signup_modal_create_account_Terms_cond_button" ng-click="declaration()">
+                                <span class="abha_declaration_text_span"><b>Declaration</b></span>
+                            </a>
+                            <a class="signup_terms_accept_check_box {{abhaVerifyReg.DeclarationAcceptanceClass}}" ng-click="abhaVerifyReg.toggleDeclarationAcceptance()"></a>
+                        </div> 
+                    </div>
+                    <br>
+                    <div style="width: 146px;">
+                        I, hereby declare that:
+                    </div>
+                    <br>
+                    <div>
+                        <a class="declration_full_check_box {{abhaVerifyReg.firstcheckboxFullDeclarationAcceptanceClass}}" ng-click="abhaVerifyReg.firstcheckboxtoggleDeclarationAcceptance()"></a><div style="margin-left: 42px;">I am voluntarily sharing my Aadhaar Number / Virtual ID issued by the Unique Identification Authority of India (“<a style="font-weight: bold;color: black;">UIDAI</a>”), and my demographic information for the purpose of creating an Ayushman Bharat Health Account number (“<a style="font-weight: bold;color: black;">ABHA number</a>”) and Ayushman Bharat Health Account address (“<a style="font-weight: bold;color: black;">ABHA Address</a>”). I authorize NHA to use my Aadhaar number / Virtual ID for performing Aadhaar based authentication with UIDAI as per the provisions of the Aadhaar (Targeted Delivery of Financial and other Subsidies,Benefits and Services) Act, 2016 for the aforesaid purpose. I understand that UIDAI will share my e-KYC details, or response of “Yes” with NHA upon successful authentication.</div>
+                    </div>
+                    <br>
+                    <div>
+                        <a class="declration_full_check_box {{abhaVerifyReg.secondcheckboxFullDeclarationAcceptanceClass}}" ng-click="abhaVerifyReg.secondcheckboxtoggleDeclarationAcceptance()"></a><div style="margin-left: 42px;">I intend to create Ayushman Bharat Health Account Number (“<a style="font-weight: bold;color: black;">ABHLA number</a>”) and Ayushman Bharat Health Account address (“<a style="font-weight: bold;color: black;">ABHLA Address</a>”) using document other than Aadhaar.</div>
+                    </div>
+                    <br>
+                    <div>
+                        <a class="declration_full_check_box {{abhaVerifyReg.thirdcheckboxFullDeclarationAcceptanceClass}}" ng-click="abhaVerifyReg.thirdcheckboxtoggleDeclarationAcceptance()"></a><div style="margin-left: 42px;">I consent to usage of my ABHA address and ABHA number for linking of my legacy (past) government health records and those which will be generated during this encounter.</div>
+                    </div>
+                    <br>
+                    <div>
+                        <a class="declration_full_check_box {{abhaVerifyReg.fourthcheckboxFullDeclarationAcceptanceClass}}" ng-click="abhaVerifyReg.fourthcheckboxtoggleDeclarationAcceptance()"></a><div style="margin-left: 42px;">I authorize the sharing of all my health records with healthcare provider(s) for the purpose of providing healthcare services to me during this encounter.</div>
+                    </div>
+                    <br>
+                    <div>
+                        <a class="declration_full_check_box {{abhaVerifyReg.fifthcheckboxFullDeclarationAcceptanceClass}}" ng-click="abhaVerifyReg.fifthcheckboxtoggleDeclarationAcceptance()"></a><div style="margin-left: 42px;">I consent to the anonymization and subsequent use of my government health records for public health purposes.</div>
+                        <br>
+                        <div style=" margin-left: 30px;">
+                            <a class="declration_full_check_box {{abhaVerifyReg.sixthcheckboxFullDeclarationAcceptanceClass}}" ng-click="abhaVerifyReg.sixthcheckboxtoggleDeclarationAcceptance()"></a><div style="margin-left: 42px;">I {{abhaVerifyReg.declarationusername}}, confirm that I have duly informed and explained the beneficiary of the contents of consent for aforementioned purposes.</div>
+                        </div>
+                        <br>
+                        <div style="margin-left: 30px;">
+                            <a class="declration_full_check_box {{abhaVerifyReg.seventhcheckboxFullDeclarationAcceptanceClass}}" ng-click="abhaVerifyReg.seventhcheckboxtoggleDeclarationAcceptance()"></a><div style="margin-left: 42px;">I {{abhaVerifyReg.declarationusername}}, have been explained about the consent as stated above and hereby provide my consent for the aforementioned purposes.</div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="abhaVerifyReg.abhaAadharOTP" class="">
+        <div class="otpSection_abha">
+            <p style="font-size: x-large;color: #0000009c;font-style: oblique;font-family: 'LatoSemibold';margin-left: 10px;margin-top: -28px;">Enter OTP * </p>
+            <p class="otpSection_abha_heading">OTP <span ng-show="!newMobileNumAddAbha" style="font-size: 15px;">(Aadhaar linked mobile number gets OTP)</span><span ng-show="newMobileNumAddAbha">(To link New mobile number with ABHA)</span></p>
+            <higi-text-field field="abhaVerifyReg.fields[6]" class="otpSection_abha_input_box"></higi-text-field>
+            <div id = "otp_val_loader" class="otp_validation_loader"></div>
+            <div id = "otp_no_error" class="abha_otp_no_not_exist" style="top: 50px; left: 348px;">Invalid OTP</div>
+            <div id = "otp_no_resend" class="otp_resend" style="top: 54px;">OTP Sent</div>
+            <div id = "otp_no_later" class="otp_srv_try_later" style="top: 50px;">Please try again later</div>
+            <div id = "otp_no_srv" class="otp_srv_err">Something went wrong</div>
+            
+            <div ng-show="showTimer" class="otpSection_text_resend">Time Remaining : {{timerValue}} seconds for resend OTP</div>
+            <small ng-hide="newMobileNumAddAbhaforRegisterOTP" class="otpSection_text_resend"><a ng-click="abhaVerifyReg.resendOtpAbha()" style="color: #0261c2;">Resend</a> the OTP code</small>
+        </div>
+
+        <a class="abha_otpSection_submit_btn {{abhaVerifyReg.otpSectionNextButtonClass}}" ng-click="abhaVerifyReg.validOtpNextSection()">
+            <span>Submit</span>
+        </a>
+
+    </div>
+
+    <div ng-show="abhaVerifyReg.abhaMobileVerify" class="">
+        <div data-ng-hide="accountAlreadyLinked" class="abha_MobileLink_section">
+            <p style="font-size: x-large;color: #0000009c;font-style: oblique;font-family: 'LatoSemibold';margin-left: 10px;margin-top: -28px;">Mobile Number * </p>
+            <p class="abhaMobileLinkSection_heading">Please verify Aadhaar linked Mobile Number</p>
+            <div class="signup_modal_mobile_number_cnt_code">
+                <p class="signup_modal_mobile_number_cnt_code_text">+91</p>
+            </div>
+            <higi-text-field field="abhaVerifyReg.fields[7]" class="signup_modal_mobile_number_input_box"></higi-text-field>
+            <div id = "signup_mobile_loader" class="mob_no_validation_loader"></div>
+            <div id = "signup_mobile_error" class="mob_no_validation_error">Mobile number already exist</div>
+            <div id = "abha_mobile_srv_error" class="mob_no_srv_error">Something went wrong</div>
+        </div>
+
+        <a data-ng-hide="accountAlreadyLinked" class="abhaMobileVerify_next_btn {{abhaVerifyReg.abhaMobileVerifyNextButtonClass}}" ng-click="abhaVerifyReg.aadharLinkMobileNextSection()">
+            <span>Next</span>
+        </a>
+
+        <div data-ng-show="accountAlreadyLinked" style="padding-top:40px;padding-left:32px;display: flex; flex-direction: column;font-size: 20px;" class="abha_radio_division">
+            <label style="margin-bottom: 31px;">
+                <img src="./images/welcomeback_higicheckin_point_token_20140611.png" style="width: 18px;">
+                &nbsp;&nbsp;&nbsp;This ABHA account is already linked with IHL.
+            </label>
+            <label style="margin-bottom: 31px;">
+                <img src="./images/welcomeback_higicheckin_point_token_20140611.png" style="width: 18px;">
+                &nbsp;&nbsp;&nbsp;Please press "Continue" to give an alternative Aadhaar number to register with ABHA.
+            </label>
+        </div>
+
+        <a data-ng-show="accountAlreadyLinked" class="abhaMobileVerify_continue_btn abha_continue_active_btn" ng-click="abhaVerifyReg.goBackTOAadhaarSection()">
+            <span>Continue</span>
+        </a>
+
+    </div>
+
+    <div ng-show="abhaVerifyReg.healthIDSection" class="">
+        <div class="abha_health_id_division">
+            <p style="font-size: x-large;color: #0000009c;font-style: oblique;font-family: 'LatoSemibold';margin-left: 10px;margin-top: -28px;">Enter your ABHA address * </p>
+            <p class="abha_health_id_heading">Enter your ABHA address</p>
+            <higi-text-field data-ng-show="typeAbhaAddress" field="abhaVerifyReg.fields[8]" class="signup_modal_health_id_input_box"></higi-text-field>
+            <div data-ng-show="typeAbhaAddress" style="right: 230px;width: 100px;height: 0px;position: fixed;top: 52px;font-size: 23px;">
+                <div>@sbx</div>
+            </div>
+
+            <div id = "healthId_val_loader" class="healthId_validation_loader"></div>
+            <div id = "healthId_error_ihl" class="healthId_exist_ihl">ABHA address already linked with IHL</div>
+            <div id = "healthId_error" class="healthId_exist">ABHA address already exist</div>
+            <div id = "healthId_something_wrong_error" class="healthId_something_wrong">Something went wrong</div>
+            <div id = "healthId_no_special_char_error" class="healthId_no_special_char">No special characters are allowed</div>
+            <div id = "healthId_no_min_error" class="healthId_no_min">Minimum 8 characters</div>
+            <div id = "healthId_no_max_error" class="healthId_no_max">Maxmum 18 characters</div>
+            <div id = "healthId_no_dotUp_length" class="healthId_no_dotUp_length">Only one _ or . is allowed</div>
+            <div id = "healthId_no_dotUp_length" class="healthId_no_dotUp_position">(_) or (.) should come only in the middle</div>
+            <div id = "healthId_no_invalid_error" class="healthId_no_invalid">Invalid ABHA address</div>
+            <div style="left: 357px;top: 50px;" ng-show = "abha_address_selected_loader" class="abha_accCreate_loader"></div>
+            <!-- <small data-ng-show="!typeAbhaAddress" class="abha_address_type_hint"> If you wanna give your own ABHA address, please <a style="color: #0261c2;font-size: 20px;" ng-click="abhaVerifyReg.abhaHealthIdInputShow()">click here</a>. </small> -->
+            <small ng-show="slectedAbhaadress" class="abha_modal_new_password_hint" style="margin-top: 95px!important;">If you want, Please pick any one of the suggested abha address below.</small>
+            <small data-ng-show="typeAbhaAddress" class="abha_modal_new_password_hint" style="margin-top: 106px!important;">Your ABHA address should be unique. Use alphanumeric letters only. <i>Ex: abc_123</i></small>
+        </div>
+
+        <!-- <span>Please provide a unique Health ID</span> -->
+
+        <a class="abha_health_id_next_btn {{abhaVerifyReg.healthIdNextButtonClass}}" ng-click="abhaVerifyReg.healthIdEntrySection()">
+            <span>Next</span>
+        </a> 
+    </div>
+
+    <div ng-show="abhaVerifyReg.abhaPassword" class="" style="margin-top: -10px;">
+        <div class="abha_new_password_division">
+            <p style="font-size: x-large;color: #0000009c;font-style: oblique;font-family: 'LatoSemibold';margin-left: 10px;margin-top: 0px;">ABHA Password * </p>
+            <higi-text-field field="abhaVerifyReg.fields[9]" class="signup_modal_new_password_input_box"></higi-text-field>
+            <div ng-click="abhaVerifyReg.showPasswordToggle(abhaVerifyReg.fields[9])" class="signup_modal_new_password_eyes_images {{abhaVerifyReg.showPasswordClass}}"></div>
+        </div> 
+        
+        <div class="abha_confirm_password_division">
+            <higi-text-field field="abhaVerifyReg.fields[10]" class="signup_modal_confirm_password_input_box"></higi-text-field>  
+            <div ng-click="abhaVerifyReg.showPasswordToggle(abhaVerifyReg.fields[10])" class="signup_modal_confirm_password_eyes_images {{abhaVerifyReg.showPasswordClass2}}"></div>
+            <p id="abha_confirm_password_text_match"></p>
+            <!-- <small class="signup_modal_new_password_hint">Password should have number,alphabet,symbol & min 8 character</small> -->
+            <!-- <small class="abha_modal_new_password_hint">Password should have <span class="abha_modal_new_password_hint_Num">atleat one Number, </span><span class="abha_modal_new_password_hint_consecutiveNum">the number shouldn't be consecutive(Like:123), </span><span class="abha_modal_new_password_hint_Cap">Capital alphabet, </span><span class="abha_modal_new_password_hint_Sym">Symbol (!, @, $, &, *) </span><span class="abha_modal_new_password_hint_Min">and minimum 8 character is required</span></small> -->
+            <div id = "abha_confirm_weak_password" class="abha_weak_password">Weak Password</div>
+            <small class="abha_modal_new_password_hint" style="width: 600px;">Password must contain an uppercase, a lowercase, a number, a special character and at least 8 or more characters. It should not contain any sequences (like 123).</small>
+        </div> 
+
+        <a class="abha_password_submit_btn {{abhaVerifyReg.abhaCreateSubmitButtonClass}}" ng-click="abhaVerifyReg.abhaCreateSubmitBtn()">
+            <span>Create ABHA</span>
+        </a>
+
+    </div>
+
+    <div ng-show="abhaVerifyReg.abhaAccountProcess">
+
+        <p ng-show="abhaVerifyShow" style="font-size: x-large;color: #0000009c;font-style: oblique;font-family: 'LatoSemibold';margin-left: 10px;margin-top: 20px;">ABHA Link</p>
+        <p ng-show="abhaRegShow" style="font-size: x-large;color: #0000009c;font-style: oblique;font-family: 'LatoSemibold';margin-left: 10px;margin-top: 20px;">ABHA creation & link to IHL account</p>
+        <div class="vertical-line" ng-show="abhaRegShow">
+            <div class="tic"> 
+                <div style="width: 173px;margin-left: 25px;margin-top: -3px;">ABHA Address created</div>
+                <div style="left: -11px;top: -11px;" id = "abha_create_loader" class="abha_accCreate_loader {{ abhaVerifyReg.abhaHealthProgressState }}"></div>
+                <button style="color: blue;margin-left: 72px;margin-top: 10px;" ng-show="abhaVerifyReg.abhaCreateRetry" ng-click="abhaVerifyReg.retryAbhaStore('create')">Retry</button>
+            </div>
+            <div class="tic" ng-hide="abhaAuthMode == 'DONT_KNOW' || abhaAuthMode == 'QR_Flow'">
+                <div style="width: 173px;margin-left: 25px;margin-top: -3px;">ABHA card created</div>
+                <div style="left: -11px;top: -11px;" id = "abha_card_loader" class="abha_accCard_loader {{ abhaVerifyReg.abhaCardProgressState }}"></div>
+                <button style="color: blue;margin-left: 72px;margin-top: 10px;" ng-show="abhaVerifyReg.abhaCardRetry" ng-click="abhaVerifyReg.retryAbhaStore('card')">Retry</button>
+            </div>
+            <div class="tic">
+                <div style="width: 173px;margin-left: 25px;margin-top: -3px;">ABHA linked with IHL</div>
+                <div style="left: -11px;top: -11px;" id = "abha_link_loader" class="abha_ihlLink_loader {{ abhaVerifyReg.abhaIhlLinkProgressState }}"></div>
+                <button style="color: blue;margin-left: 72px;margin-top: 10px;" ng-show="abhaVerifyReg.abhaIhlLinkRetry" ng-click="abhaVerifyReg.retryAbhaStore('ihlLink')">Retry</button>
+            </div>
+        </div>
+        <div class="horizontal-line" ng-show="abhaVerifyShow">
+            <div class="tic_abhalink">
+                <div style="width: 173px;margin-left: -49px;margin-top: 20px;">ABHA details fetched</div>
+                <div style="left: -11px;top: -11px;" id = "abha_link_loader" class="abha_accLink_loader {{ abhaVerifyReg.abhaLinkProgressState }}"></div>
+                <button style="color: blue;margin-left: -17px;margin-top: 10px;" ng-show="abhaVerifyReg.abhaLinkRetry" ng-click="abhaVerifyReg.retryAbhaStore('link')">Retry</button>
+            </div>
+            <div class="tic_abhalink">
+                <div style="width: 173px;margin-left: -83px;margin-top: 20px;">ABHA linked with IHL</div>
+                <div style="left: -11px;top: -11px;" id = "abha_link_loader" class="abha_ihlLink_loader {{ abhaVerifyReg.abhaIhlLinkProgressState }}"></div>
+                <div class="errro_txt_abhaLink" style="width: 345px;margin-left: -437px;margin-top: 130px;display: none;font-size: x-large;text-align: center;color: #0261c2;">ABHA address already linked with IHL</div>
+                <button style="color: blue;margin-left: -14px;margin-top: 10px;" ng-show="abhaVerifyReg.abhaIhlLinkRetry" ng-click="abhaVerifyReg.retryAbhaStore('ihlLink')">Retry</button>
+            </div>
+        </div>
+       
+        <div ng-show="abhaVerifyReg.abhaCardDisplay && abhaVerifyReg.abhaIntermedCardShow != '' && abhaRegShow" style="left: 275px; position: absolute;top: 56px;" class="abha_card">
+            <img ng-src="{{ abhaVerifyReg.abhaIntermedCardShow }}" width="400px" height="320px"/>
+            <p class="abha_success_response">ABHA has been linked with IHL successfully</p>
+            <div class="keyboard_lastcheckin_continue_btn keyboard_submit_btn active_btn" ng-click="emailCheckinResults()" style="top: 371px;left: 33px;height: 50px;line-height:10px"><span>Email ABHA</span></div>
+            <div class="keyboard_lastcheckin_continue_btn keyboard_submit_btn active_btn" ng-click="printabhacard()" style="top: 371px;left: -199px;height: 50px;line-height: 10px;"><span>Print ABHA</span></div>
+        </div>
+        <div ng-show="abhaVerifyReg.abhaCardDisplay && abhaVerifyReg.abhaIntermedCardShow != '' && abhaVerifyShow" style="left: 275px; position: absolute;top: 57px;margin-top: 10px;" class="abha_card">
+            <img ng-src="{{ abhaVerifyReg.abhaIntermedCardShow }}" width="400px" height="270px" style="margin-top: 45px;"/>
+            <p class="abha_success_response">ABHA has been linked with IHL successfully</p>
+            <div class="keyboard_lastcheckin_continue_btn keyboard_submit_btn active_btn" ng-click="emailCheckinResults()" style="top: 362px;left: 33px;height: 50px;line-height:10px"><span>Email ABHA</span></div>
+            <div class="keyboard_lastcheckin_continue_btn keyboard_submit_btn active_btn" ng-click="printabhacard()" style="top: 362px;left: -199px;height: 50px;line-height: 10px;"><span>Print ABHA</span></div>
+        </div>
+        <div ng-show="abhaVerifyReg.patientDetailsShow" id="abha_link_container" style="left: 11px;margin-top: 59px;width: 256px;height: 268px;">
+            <div id="abha_link_container_scroll" style="width: 256px;height: 268px;">
+                <div>
+                    <p>Patient Name: {{abhaVerifyReg.abhaCardDetailsObj.PatientName}}</p>
+                    <div class="patien-info">
+                        <label class="abhacard-details-title">Age: </label> <span>{{abhaVerifyReg.abhaCardDetailsObj.Age}}</span>
+                        <label class="abhacard-details-title">Gender: </label> <span>{{abhaVerifyReg.abhaCardDetailsObj.Gender}}</span>
+                        <label class="abhacard-details-title">Date of Birth (DD/MM/YYYY): </label> <span>{{abhaVerifyReg.abhaCardDetailsObj.DOB}}</span>
+                    </div>
+                    <p>ABHA Number: {{abhaVerifyReg.abhaCardDetailsObj.ABHANumber}}</p>
+                    <p>ABHA Address: {{abhaVerifyReg.abhaCardDetailsObj.ABHAAddress}}</p>
+                    <p>Mobile Number: {{abhaVerifyReg.abhaCardDetailsObj.MobileNumber}}</p>
+                    <p>State: {{abhaVerifyReg.abhaCardDetailsObj.State}}</p>
+                    <p>Address: {{abhaVerifyReg.abhaCardDetailsObj.Address}}</p>
+                    <p>City: {{abhaVerifyReg.abhaCardDetailsObj.City}}</p>
+                    <p>Pincode: {{abhaVerifyReg.abhaCardDetailsObj.Pincode}}</p>                     
+                </div>
+            </div>
+        </div>
+        <div ng-show="abhaVerifyReg.authLinkDropDown" style="margin-top: 45px;">
+            <p class="checkin_abha_enable_authMode_title">Please select mode for ABHA card fetch</p>
+            <div class="abha_auth_radio_division">
+                <div style="padding-top: 21px;padding-left:10px" class="abha_auth_radio_division">
+                    <label>
+                        <input type="radio" name="otpMode" value="Mobile OTP" ng-model="abhaLinkDropvalue" ng-click="onAbhaAuthChange(abhaLinkDropvalue)">
+                        &nbsp;&nbsp;&nbsp;&nbsp;Mobile OTP
+                    </label>
+                    <label>
+                        <input type="radio" name="otpMode" value="Aadhaar OTP" ng-model="abhaLinkDropvalue" ng-click="onAbhaAuthChange(abhaLinkDropvalue)">
+                        &nbsp;&nbsp;&nbsp;&nbsp;Aadhaar OTP
+                    </label>
+                    <label>
+                        <input type="radio" name="otpMode" value="Do it Later" ng-model="abhaLinkDropvalue" ng-click="onAbhaAuthChange(abhaLinkDropvalue)">
+                        &nbsp;&nbsp;&nbsp;&nbsp;Do it Later
+                    </label>
+                </div>
+                <div id = "abha_authModeEnd_loader" class="abha_demo_auth_mode_end_loader"></div>
+                <div id = "abha_authServer_error" class="abha_demo_auth_server_error">Server Error</div>
+                <div style="margin-top: 88px;margin-left: 162px;" ng-show="wait_for_minutes" class="otpSection_text_resend"><a style="color: #f00606;">Please wait for 30 minutes before sending another OTP request.</a></div>
+            </div>
+        </div>
+
+        <a class="abha_close_continue {{abhaVerifyReg.abhaFinishcontinueBtn}}" ng-click="abhaVerifyReg.closeAbha()">
+            <span ng-if="!abhaVerifyReg.authLinkDropDown">Continue</span>
+            <span ng-if="abhaVerifyReg.authLinkDropDown">Next</span>
+        </a>
+
+
+    </div>
+
+    <!-- <div ng-show="abhaVerifyReg.abhaAccAddMobileNew" class="">
+        <div  id="abhaAccAddMobileConfirmExit_back_btn" ng-show="aadharMobileNotLink" class="abhaAccAddMobileConfirmExit_back_active_btn"><a ng-click="registerModal.backToAddAadharMobile()">{{interfaceLabels[passwordResetModal.globalBack]}} <i class="fa fa-reply"></i></a></div>
+        <div id="abha_card_dummy" ng-show="true"></div>
+        <div class="abhaAccAddMobileSection_heading">
+            <p class="abhaAccAddMobileSection_info_heading" ng-show="aadharMobileNotLink">Mobile number does not linked with the Aadhar Number</p>
+            <p class="abhaAccAddMobileSection_info2_heading">Would you like to Use this Mobile number(<span style="font-size: 18px; color: #3887b2;">{{ mobileNumber }}</span>) to link it with Abha's account?</p>
+        </div>
+
+        <a class="abhaAccAddMobileSection_yes_btn {{registerModal.abhaAccAddMobButtonClass}}" ng-click="abhaVerifyReg.abhaAccAddMobileSection('yes')">
+            <span>Yes</span>
+        </a>
+
+        <a class="abhaAccAddMobileSection_no_btn {{registerModal.abhaAccAddMobButtonClass}}" ng-click="abhaVerifyReg.abhaAccAddMobileSection('no')">
+            <span>No</span>
+        </a>
+
+    </div> -->
+
+    <!-- <div id="show_care_context_success_info" class="show_care_context_success_info">
+        <p class="show_care_context_success_msg">
+            <span>successfully Linked</span>
+        </p>     
+    </div> -->
+
+    <!-- <div class="keyboard_lastcheckin" ng-show="abhaVerifyReg.brigdeDataToABHAInfo">
+        <img src="images/abha_logo.jpg" style="width: 105px; object-fit: cover; top: -3px; position: relative;">
+        <p style="font-size: x-large;color: #0000009c;font-style: oblique;font-family: 'LatoSemibold';margin-left: 150px; margin-top: -45px;">Bridging your data with ABHA's Platform</p>
+        <div class="abha_auth_main_container">
+            <div class="abha_auth_main_inner_container">
+                <p ng-if="abhaVerifyReg.brigdeDataToABHASuccessInfo">Your data is successfully linked with ABHA</p>
+                <p ng-if="abhaVerifyReg.brigdeDataToABHAFailureInfo">Your data is not linked with ABHA</p>
+                <a class="abha_verify_Section_no_btn {{abhaVerifyReg.abhaVerifyButtonClass}}" ng-click="abhaVerifyReg.abhaCareContextShareBtn('No')" style="top: 235px !important; left: 290px !important;">
+                    <span>Ok</span>
+                </a>
+            </div>
+        </div>
+    </div> -->
+
+    <div ng-show="abhaVerifyReg.abhaCarecontextDataShared">
+
+        <div class="abha_logo" ng-show="true">
+            <img src="images/abha_logo.jpg" style="width: 105px; object-fit: cover; top: 16px; position: relative;">
+        </div>
+
+        <p style="font-size: x-large;color: #000000c7;font-style: oblique;font-family: 'LatoSemibold';margin-left: 150px; margin-top: 80px;">Bridging your data with ABHA's platform</p>
+
+        <div class="abha_auth_main_container">
+            <div class="abha_careContext_dataLink_container">
+                <img src="images/abha_link.png" style="width: 70px;object-fit: cover;top: 69px;position: relative;left: 213px;">
+                <p ng-if="abhaVerifyReg.brigdeDataToABHASuccessInfo" style="font-size: 25px;color: #000000c7;/* font-style: oblique; */font-family: LatoSemibold;margin-left: 15px;margin-top: 88px;">Your data successfully linked with ABHA! </p>
+                <p ng-if="abhaVerifyReg.brigdeDataToABHAFailureInfo" style="font-size: 25px;color: #000000c7;/* font-style: oblique; */font-family: LatoSemibold;margin-left: 15px;margin-top: 88px;">Your data is not linked with ABHA, Please try later.</p>
+                <a class="abha_careContext_okay_btn abha_verify_active_btn" ng-click="abhaVerifyReg.abhaCareContextShareBtn('No')" style="top: 235px !important; left: 290px !important;">
+                    <span>Okay</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div data-ng-show="loadingImg" style="top: 222px;position: fixed;left: 293px;">
+        <div style="text-align: center;">Please wait..</div>
+        <div class="abhaVitalDataLoader"></div>
+    </div>
+
+    <div class="keyboard_lastcheckin" ng-show="abhaVerifyReg.abhaCardDetails">
+
+        <p style="font-size: x-large;color: #3e8dc7;font-style: oblique;font-family: 'LatoSemibold';margin-left: 5px;margin-top: 30px;">Your ABHA Details</p>
+
+        <div class="ptcontainer">
+            <!-- First section in the first column of the first row -->
+            <div class="ptsection">
+                <table class="pttable">
+                    <tr>
+                        <td style="padding: 5px;" class="ptlabel">Patient Name</td>
+                        <td style="padding: 5px;" class="ptanswer">{{abhaVerifyReg.abhaCardDetailsObj.PatientName}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;" class="ptlabel">Age</td>
+                        <td style="padding: 5px;" class="ptanswer">{{abhaVerifyReg.abhaCardDetailsObj.Age}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;" class="ptlabel">Gender</td>
+                        <td style="padding: 5px;" class="ptanswer">{{abhaVerifyReg.abhaCardDetailsObj.Gender}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;" class="ptlabel">Date of Birth</td>
+                        <td style="padding: 5px;" class="ptanswer">{{abhaVerifyReg.abhaCardDetailsObj.DOB}}</td>
+                    </tr>
+                </table>
+            </div>
+    
+            <!-- Second section in the second column of the first row -->
+            <div class="ptsection">
+                <table class="pttable">
+                    <tr>
+                        <td style="padding: 5px;" class="ptlabel">ABHA Number</td>
+                        <td style="padding: 5px;" class="ptanswer">{{abhaVerifyReg.abhaCardDetailsObj.ABHANumber}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;" class="ptlabel">ABHA Address</td>
+                        <td style="padding: 5px;" class="ptanswer">{{abhaVerifyReg.abhaCardDetailsObj.ABHAAddress}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;" class="ptlabel">Mobile Number</td>
+                        <td style="padding: 5px;" class="ptanswer">{{abhaVerifyReg.abhaCardDetailsObj.MobileNumber}}</td>
+                    </tr>
+                </table>
+            </div>
+    
+            <!-- Third section in the single column of the second row -->
+            <div class="ptsection third-section">
+                <table class="pttable">
+                    <tr>
+                        <td style="padding: 5px;" class="ptlabel">Address</td>
+                        <td style="padding: 5px;" class="ptanswer">{{abhaVerifyReg.abhaCardDetailsObj.Address}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;" class="ptlabel">City</td>
+                        <td style="padding: 5px;" class="ptanswer">{{abhaVerifyReg.abhaCardDetailsObj.City}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;" class="ptlabel">State</td>
+                        <td style="padding: 5px;" class="ptanswer">{{abhaVerifyReg.abhaCardDetailsObj.State}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;" class="ptlabel">Pincode</td>
+                        <td style="padding: 5px;" class="ptanswer">{{abhaVerifyReg.abhaCardDetailsObj.Pincode}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- <p>Patient Name: {{abhaVerifyReg.abhaCardDetailsObj.PatientName}}</p>
+        <div class="patien-info">
+            <label class="abhacard-details-title">Age: </label> <span>{{abhaVerifyReg.abhaCardDetailsObj.Age}}</span>
+            <label class="abhacard-details-title">Gender: </label> <span>{{abhaVerifyReg.abhaCardDetailsObj.Gender}}</span>
+            <label class="abhacard-details-title">Date of Birth (DD/MM/YYYY): </label> <span>{{abhaVerifyReg.abhaCardDetailsObj.DOB}}</span>
+        </div>
+        <p>ABHA Number: {{abhaVerifyReg.abhaCardDetailsObj.ABHANumber}}</p>
+        <p>ABHA Address: {{abhaVerifyReg.abhaCardDetailsObj.ABHAAddress}}</p>
+        <p>Mobile Number: {{abhaVerifyReg.abhaCardDetailsObj.MobileNumber}}</p>
+        <p>State: {{abhaVerifyReg.abhaCardDetailsObj.State}}</p>
+        <p>Address: {{abhaVerifyReg.abhaCardDetailsObj.Address}}</p>
+        <p>City: {{abhaVerifyReg.abhaCardDetailsObj.City}}</p>
+        <p>Pincode: {{abhaVerifyReg.abhaCardDetailsObj.Pincode}}</p> -->
+
+        <a class="abha_close_continue abha_close_continue_active" ng-click="abhaVerifyReg.checkProfileDetailsYes()">
+            <span >Continue</span>
+        </a>
+
+    </div>
+
+</div>

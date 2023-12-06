@@ -1,0 +1,10 @@
+{
+    
+    "bmc01_audio01" : "sounds/dogri/vo6_weight&bmi.wav",
+    "bmc01_audio02" : "sounds/dogri/hand_instructions1.wav",
+    "bmc01_audio03" : "sounds/dogri/hand_instructions2.wav",
+    "bmc01_audio04" : "sounds/dogri/voice9_weight &bmi.wav",
+    "bmc01_audio05":"sounds/dogri/chkBmcAgain.wav",
+    "bmc01_audio06" : "sounds/dogri/restyourlegsonfootrest.wav"
+    
+}

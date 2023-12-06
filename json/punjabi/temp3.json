@@ -1,0 +1,20 @@
+{
+    "temp3.results": "ਨਤੀਜੇ",
+    "temp3.continue": "ਜਾਰੀ ਰੱਖੋ",
+    "temp3.calibration": "ਕੈਲੀਬ੍ਰੇਸ਼ਨ",
+    "temp3.tempScale": "ਸਰੀਰ ਦੇ ਤਾਪਮਾਨ ਦਾ ਪੈਮਾਨਾ",
+    "temp3.status.healt": "ਸਧਾਰਨ",
+    "temp3.status.accep": "ਸਵੀਕਾਰਯੋਗ",
+    "temp3.status.fever": "ਬੁਖ਼ਾਰ",
+    "temp3.status.highfever": "ਜਿਆਦਾ ਬੁਖ਼ਾਰ",
+    "temp3.roomTemp": "ਕਮਰਾ",
+    "temp3.wristTemp": "ਸਰੀਰ",
+    "temp3.temperature": "ਤਾਪਮਾਨ",
+    "temp3.bodyTemp": "ਸਰੀਰ ਦਾ ਤਾਪਮਾਨ",
+    "temp3.information": "ਜਾਣਕਾਰੀ",
+    "temp3.parameter": "ਮਾਪਦੰਡ",
+    "temp3.yourscore": "ਤੁਹਾਡਾ ਸਕੋਰ",
+    "temp3.OverallStatus": "ਸਮੁੱਚੀ ਸਥਿਤੀ",
+    "temp3.finalResult": "ਅੰਤਿਮ ਨਤੀਜਾ",
+    "temp3.checkTempagain": "ਤਾਪਮਾਨ ਦੀ ਦੁਬਾਰਾ ਜਾਂਚ ਕਰੋ"
+}

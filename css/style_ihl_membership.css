@@ -1,0 +1,95 @@
+.membership_header{
+    font-size: x-large !important;
+    font-family: LatoSemibold !important;
+    color: #0000009c !important;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.membership_next_btn {
+    top: 350px !important;
+    position: absolute !important;
+    height: 54px !important;
+    left: 300px !important;
+    width: 125px !important;
+    pointer-events: none !important;
+    text-align: center !important;
+    font-family: "LatoRegular" !important;
+    line-height: 60px !important;
+    border: 1px solid #cecece !important;
+    border-radius: 7px !important;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%) !important;
+}
+
+.membership_next_btn span {
+    position: relative !important;
+    top: -1px !important;
+    color: #fff !important;
+    font-size: 22px !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2) !important;
+    line-height: 50px !important;
+    height: 50px !important;
+    display: inline-block !important;
+    opacity: .9 !important;
+    pointer-events: none !important;
+}
+
+.membership_next_btn.membership_next_btn_active {
+    top: 350px !important;
+    position: absolute !important;
+    height: 54px !important;
+    left: 300px !important;
+    border-radius: 10px !important;
+    border-right: 2px solid #50a4e0bf !important;
+    width: 125px !important;
+    color: white !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    background: linear-gradient(to bottom, #5AA4D9, #3989c3, #0261c2) !important;
+    text-shadow: none !important;
+    font-family: 'LatoRegular' !important;
+    font-weight: 500 !important;
+    box-shadow: 0px 3px 1px #3989c3, -1px 2px 1px #3989c3 !important;
+    pointer-events: auto !important;
+    text-align: unset !important;
+    line-height: 60px !important;
+    border: none !important;
+}
+
+.membership_next_btn.membership_next_btn_active span {
+    font-size: 21px !important;
+    text-align: center !important;
+    position: relative !important;
+    top: -1px !important;
+    font-family: LatoRegular !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+    left: 39px !important;
+    pointer-events: auto !important;
+}
+
+.membership_next_btn.membership_next_btn_active:active {
+    box-shadow: none !important;
+}
+
+.ihl_membership_btn{
+    background-position: center 12px;
+    background-size: 30%;
+    box-shadow: 4px 4px 4px #AFAFAF, -3px -3px 1px white;
+    border-radius: 10px;
+    /* margin-left: 10px; */
+    /* margin-top: 10px; */
+    /* background-color: #208ad6; */
+    margin-right: 20px;
+    width: 300px;
+    padding: 10px;
+    border: 2px solid;
+}

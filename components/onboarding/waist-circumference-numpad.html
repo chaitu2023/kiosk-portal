@@ -1,0 +1,55 @@
+<div id="age_component_container" class="height-numpad-container" style="height: 308px; width:370px;margin-top: 20px;">
+    <!-- Modfification below added class height_ref -->
+    <div id="numpad_entry" class="height-pad height_ref" style="width:100%">
+        <input type="text" id="height_cm" maxlength="3" style="height: 52px;width:125px; border-radius: 10px; padding-top:30px; padding: 6px; left: 125px;display: block;" ng-model="heightNumberPad.cmsVal" >
+        <label for="height_cms" class="height_cms_label" style="top:26px;left:38px;text-transform:lowercase;font-size: 20px;display: block;text-transform: lowercase;"ng-show="cmShow">{{interfaceLabels[heightNumberPad.CM]}}</label>
+        <label for="height_cms" class="height_cms_label" style="top:26px;left:38px;text-transform:lowercase;font-size: 20px;display: block;text-transform: lowercase;"ng-show="inchShow">IN</label>
+        
+        <div class="outer_for_dropdown" style="height: auto">
+            <div class="switch">
+                <input type="checkbox" ng-checked="cmChecked" data-ng-click="CmFtSlide()">
+                <label style="top:-23px; height: 48px; line-height: 45px;width:100px; display: flex;border-radius: 10px;color:rgb(103,103,103);">
+                    <span style="width:50px;height: 100%;text-align: center;display: inline-block;box-sizing: border-box;border-right:1px solid black; border-radius: 10px 0px 0px 10px;text-transform: lowercase;background-color: rgb(146,146,146);color:rgb(103,103,103);" 
+                        ng-style="cmChecked == false && {'background-image':'linear-gradient(rgb(2,72,116), rgb(94,164,215))','color':'white'}" ng-click="CmFtSlide()"> IN </span>
+                    <span style="width:50px;height: 100%;background-color: white;text-align: center;display: inline-block;box-sizing: border-box;text-transform:lowercase;border-radius: 0px 10px 10px 0px;background-color: rgb(146,146,146);"
+                        ng-style="cmChecked == true && {'background-image':'linear-gradient(rgb(2,72,116), rgb(94,164,215))','color':'white'}" ng-click="CmFtSlide()"> {{interfaceLabels[heightNumberPad.CM]}} </span>
+                </label>
+            </div>
+        </div>
+
+        <span data-ng-show="cmShow" class="height_cm_valid"> <span data-ng-show="cmValid">{{interfaceLabels[inputErr]}}</span> </span>
+        <span data-ng-show="inchShow" class="height_inch_valid"> <span data-ng-show="inchValid">{{interfaceLabels[inputErr2]}}</span> </span>
+        
+        <!-- till here modifications -->
+    </div>  
+
+    <ul id="numpad" class="height-pad" style="padding:00px;width:100%;">
+        <!-- Modification here for cm -->
+        <div class="row_one {{(heightNumberPad.cmPanel) ? heightNumberPad.padEnterRight : heightNumberPad.padExitRight}}" ng-show="heightNumberPad.cmPanel">
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">1</a></li>
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">2</a></li>
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">3</a></li>
+        </div>
+        <div class="row_two {{(heightNumberPad.cmPanel) ? heightNumberPad.padEnterRight : heightNumberPad.padExitRight}}" ng-show="heightNumberPad.cmPanel">
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">4</a></li>
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">5</a></li>
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">6</a></li>
+        </div>
+        <div class="row_three {{(heightNumberPad.cmPanel) ? heightNumberPad.padEnterRight : heightNumberPad.padExitRight}}" ng-show="heightNumberPad.cmPanel">
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">7</a></li>
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">8</a></li>
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">9</a></li>
+        </div>
+        <div class="row_three {{(heightNumberPad.cmPanel) ? heightNumberPad.padEnterRight : heightNumberPad.padExitRight}}" ng-show="heightNumberPad.cmPanel">
+            <li class="key" style="margin-bottom: 2px;margin-left: 99px"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">0</a></li>
+            
+            <li class="key" style="margin-bottom: 2px;margin-left: 1px">
+                <a  ng-click="heightNumberPad.deleteCmsInputs()" style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">
+                    <div class="line_for_delete"></div>
+                    <div class="line2_for_delete"></div>
+                    <span class="height_ft_del"><button><i class="fa fa-times-thin fa-2x close_thin_icon" aria-hidden="true"></i></button></span>
+                </a>
+            </li>
+        </div>
+    </ul>
+</div>

@@ -1,0 +1,23 @@
+{
+    "weight3.results": "પરિણામો",
+    "weight3.information": "માહિતી",
+    "weight3.parameter": "પરિમાણ",
+    "weight3.yourscore": "તમારો સ્કોર",
+    "weight3.OverallStatus": "એકંદર સ્થિતિ",
+    "global.underweight": "ઓછું વજન",
+    "global.normalweight": "સામાન્ય",
+    "global.overweight": "વધારે વજન",
+    "global.obese": "જાડાપણું",
+    "weight3.weight": "વજન",
+    "weight3.height": "લંબાઈ",
+    "weight3.kgUnit": "in Kgs",
+    "weight3.feetUnit": "in feet",
+    "weight3.parameter.bmi.title": "બીએમઆઈ",
+    "weight3.body.mass.index": "શારીરિક વજનનો આંક",
+    "weight3.bmi.scale": "શારીરિક વજનના આંકનું માપન",
+    "weight3.underweight": "ઓછું વજન",
+    "weight3.normalweight": "સામાન્ય",
+    "weight3.overweight": "વધારે વજન",
+    "weight3.obese": "જાડાપણું",
+    "weight3.check.Again": "વજન, ફરીથી બીએમઆઈ "
+}

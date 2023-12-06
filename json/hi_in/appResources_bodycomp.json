@@ -1,0 +1,8 @@
+{
+    "bmc01_audio01": "sounds/hi_in/vo6_weight&bmi.wav",
+    "bmc01_audio02": "sounds/hi_in/hand_instructions1.wav",
+    "bmc01_audio03": "sounds/hi_in/hand_instructions2.wav",
+    "bmc01_audio04": "sounds/hi_in/voice9_weight &bmi.wav",
+    "bmc01_audio05": "sounds/hi_in/chkBmcAgain.wav",
+    "bmc01_audio06": "sounds/hi_in/restyourlegsonfootrest.wav"
+}

@@ -1,0 +1,14 @@
+
+<input ng-focus="setIndex(field.id);field.focus()" placeholder="{{field.placeholder}}" id="{{field.id}}" type="{{field.type}}" name="{{field.id}}" ng-model="field.text" class="login_input {{field.selectedClass}} {{enabledCursor}} {{field.text == '' ? 'blank' : ''}}" ng-mouseup="clearSelected(field.id);" ng-mousedown="startDrag(field.id);" ng-disabled="disabledField(field.id);"/>
+
+<!--
+<input ng-click="testCursor()" placeholder="{{field.placeholder}}" id="{{field.id}}" type="{{field.type}}" name="{{field.id}}" ng-model="field.text" class="login_input {{field.selectedClass}} {{enabledCursor}} {{field.text == '' ? 'blank' : ''}}" ng-mouseup="clearSelected(field.id);" ng-mousedown="startDrag(field.id);"/>
+-->
+<div id="signup_mail_placeholder" class="placeholder regMailid" ng-show="field.text == ''">{{interfaceLabels[field.defaultText]}}</div>
+<!--
+<div class="placeholder" ng-show="field.text == ''">
+    <div class="mock-cursor mailid_cursor {{enabledCursor}}">|</div>
+</div>
+<a class="clear-textfield" ng-click="clearTextField();" ng-if="emailTextfieldClearButton" ng-show="field.text != '' && field.selectedClass != ''"><i class="fa fa-times-circle custom_close_icon"></i></a>
+
+-->

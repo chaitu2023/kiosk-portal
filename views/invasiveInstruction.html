@@ -1,0 +1,152 @@
+
+<style type="text/css">
+    .ivt_data_entry_button{
+        position: fixed;
+        border-radius: 10px;
+        text-align: center;
+        /*box-shadow: 4px 4px 4px #afafaf, -3px -3px 1px white;*/
+        background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+        left: 615px;
+        height: 50px;
+        width: 270px;
+        /* top: 509px; */
+        background: #F0F0F0;
+        color: #333333;
+        padding: 2px;
+        top: 310px;
+    }
+.ivt_data_entry_button_icon{
+    width: 25px;
+    margin-top: 18px;
+    padding: 0px 15px;
+    margin-left: -100px;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+.global_manual_entry_button_small_text{
+    font-family: LatoHeavy;
+    font-size: 16px;
+    position: relative;
+    top: -10px;
+    left: -15px;
+}
+.ivt_instructions_bottom_heading{
+    font-family: 'LatoSemibold';
+    color: #585858;
+    position: relative;
+    top: 270px;
+    font-size: 18px;
+    text-align: center;
+    left: 80px;
+    width: 510px;
+}
+</style>
+
+<div class="invasive_instructions_header_container">
+	<img class="invasive_instructions_header_image {{ instructionHeaderImage }}" src="">
+	<p class="invasive_instructions_header_text">{{ interfaceLabels[instructionHeader] }} </p> 
+</div>
+
+
+<div ng-show="currentIvtTest === 'glc' && showGlcSelectOpt" class="invasive_instructions_main_container">
+    <p class="spo2_instructions_heading"> {{ interfaceLabels[glcSubHead] }}</p>
+    <div class="invasive_glc_slc_main_container">
+        <div id="invasive_glc_slc_container" ng-repeat="glcSel in glcSelectOpt" ng-click="selectedGlcItem(glcSel)">
+            <p class="invasive_glc_slc_title">{{ interfaceLabels[glcSel.label] }}</p>
+        </div>
+    </div>
+</div>
+
+<div ng-show="!showGlcSelectOpt" class="invasive_instructions_main_container">
+    <div ng-class = "{'instruction-enter-right' : !showGlcSelectOpt}">
+        <p class="spo2_instructions_heading">{{ interfaceLabels[ivtInstruction] }}</p>
+        
+        <div ng-if="currentIvtTest != 'lip' && currentIvtTest != 'glc' && currentIvtTest != 'heamo'">
+            <div class="optical_reader_instructions_circle_container_1">
+                <div class="optical_reader_instructions_circle_place_overlays"></div>
+                <div id="optical_reader_instructions_circle1_place_frames_png"></div>
+                <div id="optical_reader_instructions_circle1_place_frames" style="display: none;"></div>
+            </div>
+            <div class="optical_reader_instructions_text_1">
+                <!-- <span> Connect the Optical Reader Device </span> -->
+                <span> {{ interfaceLabels[opticalInstructionText1] }} </span>
+            </div>
+            <div class="optical_reader_instructions_circle_container_2">
+                <div class="optical_reader_instructions_circle_place_overlays"></div>
+                <div id="optical_reader_instructions_circle2_place_frames_png"></div>
+                <div id="optical_reader_instructions_circle2_place_frames"  style="display: none;"></div>
+            </div>    
+            <div class="optical_reader_instructions_text_2">
+                <!-- <span> Insert the caset and close the tray</span> -->
+                <span> {{ interfaceLabels[opticalInstructionText2] }}</span>
+            </div>
+            <div class="optical_reader_instructions_circle_container_3">
+                <div class="optical_reader_instructions_circle_place_overlays"></div>
+                <div id="optical_reader_instructions_circle3_place_frames_png"></div>
+                <div id="optical_reader_instructions_circle3_place_frames"  style="display: none;"></div>
+            </div>    
+            <div class="optical_reader_instructions_text_3">
+                <!-- <span> Press the blue circle button on the device</span> -->
+                <span> {{ interfaceLabels[opticalInstructionText3] }}</span>
+            </div>
+        </div>
+
+
+        <div ng-if="currentIvtTest == 'lip' || currentIvtTest == 'glc'">            
+            <div class="LipidoCare_instructions_circle_container_1">
+                <div class="LipidoCare_instructions_circle_place_overlays"></div>
+                <div id="LipidoCare_instructions_circle1_place_frames"></div>
+            </div>
+            <div class="LipidoCare_instructions_text_1">
+                <!-- <span> Connect the LipidoCare Device </span> -->
+                <span>{{interfaceLabels[lipiInstructText1]}} </span>
+            </div>          
+
+            <div class="LipidoCare_instructions_circle_container_2" style="display:none">
+                <div class="LipidoCare_instructions_circle_place_overlays"></div>
+                <div id="LipidoCare_instructions_circle2_place_frames"></div>
+            </div>
+            <div class="LipidoCare_instructions_text_2"  style="display:none">
+                <!-- <span> Gently press the power button </span> -->
+                <span> {{ interfaceLabels[lipiInstructText2] }} </span>
+            </div>
+        </div>
+
+        <div ng-if="currentIvtTest == 'heamo'">            
+            <div class="heamo_instructions_circle_container_1">
+                <div class="heamo_instructions_circle_place_overlays"></div>
+                <div id="heamo_instructions_circle1_place_frames"></div>
+            </div>
+            <div class="heamo_instructions_text_1">
+                <!-- <span> Connect the TrueHP Device </span> -->
+                <span> {{ interfaceLabels[heamoInstructText1] }}</span>
+            </div>       
+
+            <div class="heamo_instructions_circle_container_2" style="display:none">
+                <div class="heamo_instructions_circle_place_overlays"></div>
+                <div id="heamo_instructions_circle2_place_frames"></div>
+            </div>
+            <div class="heamo_instructions_text_2"  style="display:none">
+                <!-- <span> Gently press the power button </span> -->
+                <span> {{ interfaceLabels[heamoInstructText2] }} </span>
+            </div>
+        </div>        
+
+        <div class="ivt_data_entry_button" ng-click="ivtManualEntry(currentIvtTest)">
+            <div class="global_redo_outer_line">
+                <img src="images/invasive/data-entry.png" class="ivt_data_entry_button_icon">
+                <small class="global_manual_entry_button_small_text"> {{ interfaceLabels[enterManual] }}</small>
+            </div>
+        </div>  
+
+        <p class="ivt_instructions_bottom_heading">{{ interfaceLabels[instructBottomHeading] }} </p>
+    </div>
+</div>
+
+<a class= "global_skip_button" ng-click="skipTestClick()">
+    <span class="global_skip_button_text" >{{interfaceLabels[skipTest]}}</span>
+</a>
+<a ng-class = "{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible"  class="global_continue_next_button" ng-click="startInvasiveTestButton()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[startTest]}}</span>
+</a>

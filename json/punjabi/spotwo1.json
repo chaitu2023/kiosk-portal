@@ -1,0 +1,11 @@
+{
+    "spo2one.spo2": "SpO2",
+    "text.instructions": "ਨਿਰਦੇਸ਼",
+    "spo2one.skip": "ਛੱਡ ਦਿਓ",
+    "spo2one.startTest": "ਟੈਸਟ ਸ਼ੁਰੂ ਕਰੋ",
+    "spo2one.placeYourFingerProbably": "ਆਪਣੀ ਉਂਗਲ ਨੂੰ ਸਹੀ ਢੰਗ ਨਾਲ ਰੱਖੋ",
+    "spo2one.insertfinger": "ਆਪਣੇ ਸੱਜੇ ਹੱਥ ਦੀ ਤਰਜਨੀ ਉਂਗਲ ਨੂੰ Spo<sub>2</sub> ਇਲੈਕਟ੍ਰੋਡਾਂ ਦੇ ਅੰਦਰ ਹੌਲੀ ਜਿਹੀ ਪਾਓ",
+    "spo2one.instruct": "Place your finger gently and rest your palm here",
+    "spo2one.fingerinplaceBefore": " ਇਹ ਟੈਸਟ ਉਦੋਂ ਸ਼ੁਰੂ ਹੋਵੇਗਾ ਜਦੋਂ ਤੁਹਾਡੀ ਉਂਗਲ ਜਗ੍ਹਾ ਤੇ ਹੋਵੇਗੀ",
+    "spo2one.fingerinplace": " ਇਹ ਟੈਸਟ ਉਦੋਂ ਸ਼ੁਰੂ ਹੋਵੇਗਾ ਜਦੋਂ ਤੁਹਾਡੀ ਉਂਗਲ ਜਗ੍ਹਾ ਤੇ ਹੋਵੇਗੀ"
+}

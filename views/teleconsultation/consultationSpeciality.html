@@ -1,0 +1,145 @@
+<style>
+    
+    
+    .tele-consultation-outer-box{
+        width: 135px;
+        height: 130px;
+        background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(100%, #F7F7F7));
+        -moz-box-shadow: 1px 1px 7px 2px rgba(153, 153, 153, 0.4);
+        text-align: center;
+        box-shadow: 4px 4px 4px #AFAFAF, -3px -3px 1px white;
+        border-radius: 10px;
+        margin:6px 10px;
+        display: inline-block;
+    }
+    .tele-consultation-outer-box.tele-consultation-type-active{
+        /* background-color:#208ad6 */
+        border-color: #208ad6;
+        color: #dde8ef;
+        background-color: #208ad6;
+    }
+    .tele-consultation-inner-box{
+        border-radius: 10px;
+        /* border: 2px solid #48acf5; */
+        border: 2px solid #c0c0c0;
+        height: 120px;
+        width: 125px;
+        margin-left: 3px;
+        margin-top: 3px;
+        height:96%;
+        width:96%;
+        margin:3px;
+        box-sizing: border-box;
+        background-color: #e6e6e6;
+    }
+    .tele-consultation-inner-box.tele-consultation-type-active{
+        /* border:0px; */
+        /* border-color:#208ad6; */
+        border-color: #208ad6;
+        color: #dde8ef;
+        background-color: #208ad6;
+    }
+    .tele_consultation_outer_box_icon{
+        display: block;
+        width:100%;
+        text-align: center;
+        font-size: 50px;
+        /* margin:10px 0px; */
+        color: #3887b2;
+        height:60px;
+        margin-top:7px;
+    }
+    .tele_consultation_outer_box_icon.tele-consultation-type-active{
+        /* color: #e6e6e6; */
+        border-color: #208ad6;
+        color: #dde8ef;
+        background-color: #208ad6;
+    }
+    .tele_consultation_outer_box_title{
+        display: block;
+        width: 96%;
+        text-align: center;
+        font-size: 15px;
+        margin-top: 6px;
+        color: #4d4d4d;
+        font-weight: bold;
+        height: 40px;
+        overflow: hidden;
+        padding: 3px;
+        text-transform: capitalize;
+    }
+    .tele_consultation_outer_box_title.tele-consultation-type-active{
+        font-weight: normal;
+        border-color: #208ad6;
+        color: #dde8ef;
+        background-color: #208ad6;
+    }
+
+
+    .tele_consultation_speciality_main_container {
+        padding: 15px 38px 15px 65px;
+        text-align: left;
+        height: 345px;
+        overflow: hidden;
+        /* overflow-y: auto; */
+        margin-right: 23px;
+        box-sizing: border-box;
+        padding:15px 73px;
+    }
+
+</style>
+
+<div class="tele_header_container">
+    <img class="tele_header_image" src="./images/telmed.png">
+    <span class="tele_header_text"> Speciality Type </span> 
+</div>
+
+<div class="tele_main_container" style="overflow:hidden">
+    <!-- <p class="tele_subtitle_heading"> Consultation Type</p> -->
+    <div ng-show="consultationSpecialities.length != 0" class="tele_consultation_speciality_main_container" id="tele_consultation_speciality_main_container">
+        <div id="tele_consultation_speciality_main_container_scroll" style="padding:inherit">
+            <div class="tele-consultation-outer-box"
+                ng-click="selectTeleconsultationSpecialityTab(consultationSpeciality['specality_name'])"
+                ng-repeat="consultationSpeciality in consultationSpecialities"
+                ng-class="{'tele-consultation-type-active':(currentSelectedTab == consultationSpeciality['specality_name']) }">
+                
+                <div 
+                class="tele-consultation-inner-box"
+                ng-class="{'tele-consultation-type-active':(currentSelectedTab == consultationSpeciality['specality_name'])}"
+                >
+                    <span 
+                    class="tele_consultation_outer_box_icon"
+                    ng-class="{'tele-consultation-type-active':(currentSelectedTab == consultationSpeciality['specality_name'])}"
+                    >
+                        <!-- <img src="images/teleconsultation/doctor1.png" style="height:100%;"> -->
+                        <i data-ng-if="consultationSpeciality['speciality_image_url'] != undefined" class="{{consultationSpeciality['speciality_image_url']}}" style="height: 100%;"></i>
+                        <i data-ng-if="consultationSpeciality['speciality_image_url'] == undefined" class="fas fa-briefcase-medical" style="height: 100%;"></i>
+                    </span>
+                    <span 
+                    class="tele_consultation_outer_box_title"
+                    ng-class="{'tele-consultation-type-active':(currentSelectedTab == consultationSpeciality['specality_name'])}"
+                    >{{ fineTunedSpecialityName(consultationSpeciality['specality_name']) }}</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div ng-show="consultationSpecialities.length == 0" class="tele_consultation_speciality_main_container" id="tele_consultation_speciality_main_container_1" style="text-align: center;">
+        <p style="color: #c80c0c;padding-top: 150px;">No speciality is exist right now</p>
+    </div>
+
+</div>
+
+<a class="global_previous_page_button"
+    ng-class="{'button-enter-left' : prevIsVisible, 'button-exit-left' : !prevIsVisible}" ng-show="prevIsVisible"
+    ng-click="prevButtonClick()">
+    <span class="global_previous_page_text">Back</span>
+</a>
+
+<a class="global_continue_next_button"
+    ng-class="{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible"
+    ng-click="nextButtonClick()">
+    <span class="global_continue_next_button_text"> Continue </span>
+</a>

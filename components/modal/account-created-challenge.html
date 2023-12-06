@@ -1,0 +1,24 @@
+<div class="keyboard_lastcheckin" ng-hide="challengePrompt.editNameVisible">
+    <div id="keyboard_lastcheckin_header">
+        <div class="keyboard_lastcheckin_title {{langClass}}"><span ng-bind-html="interfaceLabels[challengePrompt.title]"></span></div>
+        <div class="keyboard_lastcheckin_subtitle" ng-bind-html="interfaceLabels[challengePrompt.subtitle]"/>
+    </div>
+    <div id="keyboard_lastcheckin_content">
+        <div class="lastcheckin_message">
+            <challenge-get challengeid="{{challengePrompt.challengeId}}"></challenge-get>
+        </div>
+    </div>
+    <div id="keyboard_lastcheckin_footer">
+        <div>
+            <div id="keyboard_lastcheckin_backtotop_btn" class="keyboard_grey_btn active_btn" ng-click="challengePrompt.skipChallengeJoin()" ><span>{{interfaceLabels[challengePrompt.noThanksButton]}}</span></div>
+            <div  class="keyboard_lastcheckin_continue_btn keyboard_submit_btn active_btn" ng-click="challengePrompt.showEditName()" ><span>{{interfaceLabels[challengePrompt.joinButton]}}</span></div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="keyboard_lastcheckin" ng-if="challengePrompt.editNameVisible">
+    <div class="login_title edit-user-title {{langClass}}" ng-bind-html="interfaceLabels[challengePrompt.yourName]"></div>
+    <name-entry ng-attr-challengeid="challengePrompt.challengeId" ng-if="loggedIn && challengePrompt.editNameVisible"></name-entry>
+</div>
+</div>
+

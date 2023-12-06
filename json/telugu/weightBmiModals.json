@@ -1,0 +1,16 @@
+{
+    "infobox.about.bmi": "BMI వలన హెక్ ఏమిటి?",
+    "infobox.about.bmi.subtitle": "మీ బాడీ మాస్ ఇండెక్స్, BMI అని కూడా పిలుస్తారు, ఇది మీ బరువు మరియు ఎత్తు నుండి లెక్కించబడుతుంది. ఫాన్సీ ఫార్ములా ఇక్కడ ఉంది:",
+    "infobox.about.bmi.point01": "మీ BMI మీ మొత్తం శరీర కొవ్వుకు మంచి సూచిక, ఇది మీకు సాధ్యమయినంత బరువు సమస్యలకు దారితీస్తుంది.",
+    "infobox.about.bmi.point02": "అధిక BMI తో, మీ మొత్తం శరీర కూర్పును గుర్తుంచుకోవడం ముఖ్యం. మీరు సూపర్ స్టార్ అథ్లెట్ లేదా బాడీబిల్డర్ అయితే మీకు సాధారణం కంటే ఎక్కువ BMI ఉండవచ్చు.",
+    "weightBmiModals.underweight": "తక్కువబరువు",
+    "weightBmiModals.normalweight": "సాధారణం",
+    "weightBmiModals.overweight": "అధికబరువు",
+    "weightBmiModals.obese": "ఊబకాయం",
+    "infobox.about.bmi.point03": "BMI పరిధులు",
+    "infobox.about.bmi.point04": "18.5 కంటే తక్కువ",
+    "infobox.about.bmi.point05": "18.5 నుండి 22.99",
+    "infobox.about.bmi.point06": "23 నుండి 27.5",
+    "infobox.about.bmi.point07": "27.5 మరియు అంతకంటే ఎక్కువ",
+    "infobox.about.bmi.point08": "ఈ చార్ట్ వ్యాధి నియంత్రణ మరియు నివారణ కేంద్రాల ద్వారా నిర్వచించబడిన బాడీ మాస్ ఇండెక్స్ వర్గాలను ప్రతిబింబిస్తుంది."
+}

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"  prefix="og: http://ogp.me/ns#" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <title>How to use Instascan an HTML5 QR scanner</title> -->
+	<link rel="shortcut icon" href="https://learncodeweb.com/demo/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/shutdown_hpod.css"/>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-131906273-1');
+	</script>
+</head>
+
+<body>
+	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+	<script src="js/vendor/jquery-1.9.0.min.js"></script>
+	<script src="js/instascan.min.js"></script>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3">
+				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				demo left sidebar
+				<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-6724419004010752"
+					 data-ad-slot="7706376079"
+					 data-ad-format="auto"
+					 data-full-width-responsive="true"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script> -->
+			</div>
+			
+			<div class="col">
+				<span class="shutdown_hpod_qrcode title">QR Code Scanner</span>
+				<div id="video" class="col-sm-6">
+					<video id="preview" class="p-1 border" style="width:80%; margin-left: 60px; margin-top: 50px"></video>
+				</div>
+				<div class="loader_img" id="loaderImg"></div>
+				<div class="loader_txt">
+					<span id="loaderTxt">Processing Please wait..</span>
+				</div>
+
+				<script type="text/javascript">
+					const instruction= document.getElementById("instruction");
+					const video = document.getElementById("video");
+					const loaderImg = document.getElementById("loaderImg");
+					const loaderTxt = document.getElementById("loaderTxt");
+
+					loaderImg.style.display = "none";
+					loaderTxt.style.display = "none";
+					video.style.display = "none";
+					var cameraInfo = '';
+
+					document.addEventListener('DOMContentLoaded', (event) => {
+						initiateCamera();
+        			});
+
+					var scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5, mirror: false });
+					scanner.addListener('scan',function(qrCodeMessage){
+						
+						video.style.display = "none";
+						video.style.marginTop = "0px";
+						loaderImg.style.display = "block";
+						loaderTxt.style.display = "block";
+						loaderTxt.style.marginTop = "150px";
+						window.parent.postMessage(qrCodeMessage, "*");
+						scanner.stop(cameraInfo[0]);
+					});
+
+					function initiateCamera() {
+						//instruction.style.display = "none";
+						loaderImg.style.display = "block";
+						loaderTxt.style.display = "block";
+						loaderTxt.style.marginTop = "-150px";
+						video.style.display = "block";
+						
+						Instascan.Camera.getCameras().then(function (cameras){
+							if (cameras.length>0) {
+								console.log(cameras);
+								cameraInfo = cameras;
+								loaderImg.style.display = "none";
+								loaderTxt.style.display = "none";
+								scanner.start(cameras[0]);
+							} else {
+								console.error('No cameras found.');
+								alert('No cameras found.');
+							}
+						}).catch(function(e){
+							console.error(e);
+							alert(e);
+						});
+					}
+				</script>
+			</div>
+			
+			
+			<div class="col-sm-3">
+				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				demo left sidebar
+				<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-6724419004010752"
+					 data-ad-slot="7706376079"
+					 data-ad-format="auto"
+					 data-full-width-responsive="true"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script> -->
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

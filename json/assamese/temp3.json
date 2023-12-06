@@ -1,0 +1,20 @@
+{
+    "temp3.results": "ফলাফলসমূহ",
+    "temp3.continue": "অব্যাহত ৰাখক",
+    "temp3.calibration": "কেলিব্ৰেচন",
+    "temp3.tempScale": "শৰীৰৰ উষ্ণতা স্কেল",
+    "temp3.status.healt": "সাধাৰণ",
+    "temp3.status.accep": "গ্ৰহণযোগ্য",
+    "temp3.status.fever": "জ্বৰ",
+    "temp3.status.highfever": "উচ্চ জ্বৰ",
+    "temp3.roomTemp": "কোঠা",
+    "temp3.wristTemp": "শৰীৰ",
+    "temp3.temperature": "উষ্ণতা",
+    "temp3.bodyTemp": "শৰীৰৰ উষ্ণতা",
+    "temp3.information": "তথ্য",
+    "temp3.parameter": "প্ৰাচল",
+    "temp3.yourscore": "আপোনাৰ নম্বৰ",
+    "temp3.OverallStatus": "সামগ্ৰিক স্থিতি",
+    "temp3.finalResult": "চূড়ান্ত ফলাফল",
+    "temp3.checkTempagain": "তাপমাত্ৰা পুনৰ পৰীক্ষা কৰক"
+}

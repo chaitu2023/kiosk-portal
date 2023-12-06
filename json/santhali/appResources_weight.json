@@ -1,0 +1,12 @@
+{
+
+    "weight01_audio01":"sounds/santhali/vo1_weight&bmi.wav",
+    "weight01_audio02":"sounds/santhali/voice2_weight&bmi.wav",
+    "weight01_audio03":"sounds/santhali/voice3_weight&bmi.wav",
+    "weight01_audio04":"sounds/santhali/startWeightTest.wav",
+    "weight01_audio05":"sounds/santhali/voice4_weight&bmi.wav",
+    "weight03_audio01":"sounds/santhali/results.wav",
+	"weight01_audiolap":"sounds/santhali/handsonLap.wav",
+    "weight03_audio10":"sounds/santhali/chkWeight&bmiAgain.wav"
+
+}

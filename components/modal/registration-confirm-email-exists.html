@@ -1,0 +1,9 @@
+<div class="email_exists_warning_modal">
+  <div class="message">
+    <div class="title" ng-bind-html="interfaceLabels[emailExistsWarning.title]"/>
+  </div>
+  <div class="buttons">
+    <a id="email_accept" ng-click="emailExistsWarning.editEmail()" class="accept {{langClass}}" ng-bind-html="interfaceLabels[emailExistsWarning.emailEdit]"/>
+    <a ng-click="emailExistsWarning.loginWithEmail()" class="decline {{langClass}}" ng-bind-html="interfaceLabels[emailExistsWarning.login]"/>
+  </div>
+</div>

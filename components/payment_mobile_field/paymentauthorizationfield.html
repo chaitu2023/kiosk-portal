@@ -1,0 +1,111 @@
+<style type="text/css">
+ .auth_mobile_login_input {
+    top: 100px;
+    left: 18px;
+    height: 55px !important;
+    padding-right: 90px !important;
+    padding-left: 10px !important;
+    border: 2px solid #808080d1;
+    color: #808080d1;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: 10px !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 415px !important;
+    display: block !important;
+    font-size: 18px !important;
+    position: absolute !important;
+    background: white !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
+
+ /*.auth_mobile_login_input {
+    top: 116px;
+    left: 20px;
+    width: 400px;
+    height: 48px;
+    border: 2px solid #27A3DD;
+    background: none repeat scroll 0 0 white;
+    color: #999;
+    display: block;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-radius: 3px;
+    padding-right: 16px;
+    padding-left: 20px;
+    outline: none;
+    text-indent: 0px;
+    box-sizing: border-box;
+    font-size: 22px;
+  }
+  .auth_mobile_login_input::-moz-selection {
+    background-color: #0261c2;  }
+  .auth_mobile_login_input::selection {
+   background-color: #0261c2;  }
+  .auth_mobile_login_input::-webkit-selection {
+   background-color: #0261c2; }
+  .auth_mobile_login_input:focus {
+    border: 3px solid #3F90E2; }
+  .auth_mobile_login_input {
+    padding-left: 15px;
+    text-indent: 0px; }*/
+
+ 
+ .auth_text_mobile_error {
+    color: red;
+    margin-left: 20px;
+    margin-top: 120px;
+  }
+
+/*.authmobiletextbox {
+  position: absolute;
+  top: 91px;
+  color: #1873A7;
+  font-family: "IntervalSansProMediumRegular";
+  font-size: 13px;
+  left: 20px;
+  width: 670px;
+  text-shadow: 0 1px 1px #FFFFFF;
+}*/
+
+.authmobiletextbox {
+  color: #4a4a4a;
+  font-size: 14px;
+  left: 20px;
+  position: absolute;
+  top: 65px;
+  font-family: 'LatoRegular';
+}
+
+.authorization_main_title{
+  font-size: 28px;
+  font-weight: 500;
+  color: #4a4a4a;
+  font-family: 'LatoItalic';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 668px;
+}
+</style>
+<div class="authorization_main_title">{{interfaceLabels[enterAuthorizationCodeText]}}
+    <i class="fa fa-close" style="position: absolute;right: 30px;top: 9px;color: #6d6d6d;font-size: 22px;" ng-click="authLogoutExit()">
+  </i>
+</div>
+<div class="authmobiletextbox">{{interfaceLabels[enterSixDigitAuthorizationCodeText]}}</div>
+
+<ng-form name="myForm" >
+    <div>
+      <input type="{{paymentauthorizationfield.type}}" name="code" ng-pattern="phoneNumbr" ng-model="paymentauthorizationfield.text" ng-focus="setIndex(paymentauthorizationfield.id);paymentauthorizationfield.focus()" id="{{paymentauthorizationfield.id}}"  class="auth_mobile_login_input  {{enabledCursor}} {{paymentauthorizationfield.text == '' ? 'blank' : ''}}"  ng-mouseup="clearSelected(paymentauthorizationfield.id);" ng-mousedown="startDrag(paymentauthorizationfield.id);" ng-disabled="disabledField(paymentauthorizationfield.id);"  />
+      <!-- <p class="auth_text_mobile_error" ng-show="myForm.code.$error.pattern">Authorization number must be 6 digit valid number</p> -->
+      <div class="reason_for_visit_disclaimer" style="top: 171px !important;">{{interfaceLabels[validAuthorizationCodeText]}}</div>
+    </div>
+</ng-form>

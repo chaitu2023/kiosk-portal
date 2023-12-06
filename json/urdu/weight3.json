@@ -1,0 +1,23 @@
+{
+  "weight3.results": "نتائج",
+  "weight3.information": "معلومات",
+  "weight3.parameter": "پیرامیٹر",
+  "weight3.yourscore": "آپ کا اسکور",
+  "weight3.OverallStatus": "مجموعی حیثیت",
+  "global.underweight": "کم وزن",
+  "global.normalweight": "ٹھیک",
+  "global.overweight": "زیادہ وزن",
+  "global.obese": "موٹاپا",
+  "weight3.weight": "وزن",
+  "weight3.height": "اونچائی",
+  "weight3.kgUnit": "in Kgs",
+  "weight3.feetUnit": "in feet",
+  "weight3.parameter.bmi.title": "BMI",
+  "weight3.body.mass.index": "جسمانی کمیت اشاریہ",
+  "weight3.bmi.scale": "جسمانی کمیت اشاریہ پیمانہ",
+  "weight3.underweight": "کم وزن",
+  "weight3.normalweight": "ٹھیک",
+  "weight3.overweight": "زیادہ وزن",
+  "weight3.obese": "موٹاپا",
+  "weight3.check.Again": " وزن اور BMI پھر سے چیک کریں"
+}

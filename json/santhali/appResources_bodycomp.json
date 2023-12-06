@@ -1,0 +1,10 @@
+{
+    
+    "bmc01_audio01" : "sounds/santhali/vo6_weight&bmi.wav",
+    "bmc01_audio02" : "sounds/santhali/hand_instructions1.wav",
+    "bmc01_audio03" : "sounds/santhali/hand_instructions2.wav",
+    "bmc01_audio04" : "sounds/santhali/voice9_weight &bmi.wav",
+    "bmc01_audio05":"sounds/santhali/chkBmcAgain.wav",
+    "bmc01_audio06" : "sounds/santhali/restyourlegsonfootrest.wav"
+    
+}

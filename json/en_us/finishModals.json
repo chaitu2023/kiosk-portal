@@ -1,0 +1,23 @@
+{
+    "emailresults.enter.email": "Enter your email address",
+    "emailresults.enter.email.to.send.results": "Enter your email address to send your results",
+    "emailresults.email.sent": "Check your email to get your results.",
+    "emailresults.by.clicking.send": "By emailing your results, you accept that your information may be saved.",
+    "global.send": "Send",
+    "finishModal.email.never.spam": "(We won't spam you. Promise!)",
+    "finishModal.printwarning": " Warning! ",
+    "finishModal.makesure": "Please do not block the printer area",
+    "finishModal.printinstruct": "Press 'PRINT RESULTS' button below to get the test results slip",
+    "finishModal.notavail": "Paper not available",
+    "finishModal.papernot": " Sorry, print paper is not available in Hpod",
+    "finishModal.refill": "We will refill shortly...",
+    "finishModal.printRes": "Print Results",
+    "finishModal.okayy": "Okay",
+    "finishModal.printEcgraph": "Print ECG Graph",
+    "global.requird.test": "No Test Results",
+
+    "emailresults.enter.email.to.send.abharesults": "Enter your Email Address to get your card",
+    "emailresults.by.clicking.abhasend": "By emailing your results, you accept that your card may be saved"
+
+
+}

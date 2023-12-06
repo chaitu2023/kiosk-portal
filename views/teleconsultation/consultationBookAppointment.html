@@ -1,0 +1,408 @@
+<style>
+
+.tele_consultation_main_inner_container{
+    width: 96%; height:100%; display: flex; margin-top: -10px; margin: auto;
+}
+.book_appointment_doctor_card{
+    width: 40%; padding: 10px;
+}
+.book_appointment_doctor_card_inner{
+    width: 100%; height: 310px; border-radius: 10px; text-align: center;
+    background-color: #e6e6e6;
+    box-shadow: 4px 4px 4px #AFAFAF, -3px -3px 1px white;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.book_appointment_doctor_info{
+    margin-top: -15px;
+}
+.book_appointment_doctor_name{
+    color: #208ad6;font-size: 18px;
+}
+.book_appointment_doctor_experience{
+    color: #828385;
+    margin-top: -10px;
+    font-family: LatoBold;
+}
+.book_appointment_doctor_speciality{
+    margin:0px; padding: 0px;
+}
+.book_appointment_doctor_fees{
+    color: #828385; font-family: LatoBold;
+}
+.image-cover {
+  width: 75px;
+  height: 75px;
+  margin: 10px;
+  /*border-radius: 50%;
+  border: 1px solid #579bcd;
+  box-shadow: 0px 0px 12px #fff;
+  object-fit: cover;
+  object-position: center right;*/
+}
+.speciality_background{
+    padding: 5px;
+    background-color: #828385;
+   border-radius: 6px;
+    color: #fdfdfd;
+    margin: 0px 0px 5px 5px;
+    text-align: center;
+    list-style: none;
+    display: inline-flex;
+    font-family: LatoItalic;
+    text-transform: capitalize;
+}
+.language_background{
+    padding: 5px;
+    background-color: #3d9ae2;
+    border-radius: 15px;
+    color: #fdfdfd;
+    margin: 0px 0px 5px 5px;
+    text-align: center;
+    list-style: none;
+    display: inline-flex;
+}
+.appointment_slot_container{
+    height: 265px;
+    border: 1px solid;
+}
+.slot-time{
+    background-color: #5297ca;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 6px;
+    /*box-shadow: 5px 0px 12px #fff;*/
+    list-style: none;
+    display: inline-flex;
+    font-size: 14px;
+}
+.oddSlots{
+    padding: 5px;
+}
+.evenSlots{
+    background-color: #c3c3c39c;padding: 5px;
+}
+.book_appointment_doctor_rating{
+    color: #208ad6;
+}
+.book_appointment_ava_slot_card{
+    width: 60%; padding: 10px;
+}
+.book_appointment_ava_slot_card_inner{
+    width: 100%; height: 310px; border-radius: 10px; text-align: center;
+    box-shadow: 4px 4px 4px #AFAFAF, -3px -3px 1px white;
+}
+.msg {
+    display: block;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+/*.book_appointment_ava_slot_title{
+            width: 100%;
+            display: flex; 
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden; 
+            text-align: center;
+            pointer-events: auto;
+}
+.book_appointment_ava_slot_title::-webkit-scrollbar {
+            width: 0;
+}*/
+
+#book_appointment_title_container {
+    overflow: scroll; 
+    width: 80%;
+    /*margin-left:30px;*/
+    margin: auto;
+}
+
+#book_appointment_title_container::-webkit-scrollbar {
+    display:none;
+}
+
+#book_appointment_title_container::-webkit-scrollbar-track {
+    display:none;
+}
+ 
+#book_appointment_title_container::-webkit-scrollbar-thumb {
+    display:none;
+}
+
+#book_appointment_title_content {
+    white-space: nowrap;
+}
+
+.book_appointment_ava_slot_title button {
+            display: inline-block;
+            min-width: 130px;
+            height: auto;
+            background-color: #5297ca;
+            color: #fff;
+            box-shadow: 2px 2px 2px #AFAFAF, -1px -1px 1px white;
+            padding: 5px;
+            border-radius: 5px;
+            border: none; 
+            text-transform: capitalize;
+            margin: 10px;
+            cursor: pointer;
+            overflow: hidden;
+            pointer-events: auto;
+            height: 30px;
+}
+
+.bookAppointment_date_btn_active {
+            background-color: #115088 !important;
+}
+
+.book_appointment_ava_slot_title button:disabled {
+    background-color: #d3d3d3;
+    color: #000;
+}
+.book_appointment_ava_slot_title_left_arrow{
+    float: left;
+}
+.book_appointment_ava_slot_title_right_arrow{
+    float: right;
+}
+.book_appointment_ava_slot{
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 271px;
+    border-radius: 0px 0px 10px 10px;
+}
+.ava_slots{
+    padding:5px;
+    text-transform: capitalize;
+}
+.time_slot_container{
+    margin: 0px; padding: 0px;
+}
+.unava_slots{
+    margin: 10px; color: #02426f; font-family: LatoItalic;
+}
+.tele_consultation_book_appointment_slots_time_slot_active{
+    background-color: #115088;    
+}
+
+.book_appointment_ava_slot{
+    height:228px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+#book_appointment_ava_slot_scroll{
+    padding: 0px 0px;
+    box-sizing: border-box;
+    width:100%;
+    padding-bottom: 30px;
+    margin-bottom:10px;
+}
+
+.left-arrow{
+    float: left;
+    margin-left: 20px;
+    margin-top: 8px;
+    color: grey;
+}
+
+.right-arrow{
+    float: right;
+    margin-right: 20px;
+    margin-top: 8px;
+    color: grey;
+}
+
+</style>
+<div class="tele_header_container">
+    <img class="tele_header_image" src="./images/telmed.png">
+    <span class="tele_header_text"> Book Appointment </span> 
+</div>
+
+<div class="tele_main_container">
+    <div class="tele_consultation_main_inner_container" ng-show="showMsg == false">  
+            <div class="book_appointment_doctor_card"> 
+                <div class="book_appointment_doctor_card_inner"> 
+                    <img src="images/teleconsultation/user-md.png" class="image-cover">
+                    <div class="book_appointment_doctor_info">
+                        <p class="book_appointment_doctor_name"> {{(selectedDoctor['name'])?selectedDoctor['name'] : 'N/A'}} &nbsp; {{selectedDoctor['qualification']}} </p>
+                        <p class="book_appointment_doctor_experience"> Experience : {{(selectedDoctor['experience'])? selectedDoctor['experience'] : 'N/A'}} </p>
+                        <ul class="book_appointment_doctor_speciality"> <li class="speciality_background"  ng-repeat="speciality in selectedDoctor['consultant_speciality']"> {{speciality}} </li> </ul>
+                        <p ng-if="selectedTeleconsultationService != 'Member Service'" class="book_appointment_doctor_fees"> Consultation Fees: <img src="./images/Indian_Rupee_symbol.png" width = "10px" /> {{(selectedDoctor['consultation_fees']) ? selectedDoctor['consultation_fees'] : '0'}}  </p>
+                        <p ng-if="selectedTeleconsultationService == 'Member Service'" class="book_appointment_doctor_fees"> Consultation Fees: <img src="./images/Indian_Rupee_symbol.png" width = "10px" /> {{(selectedDoctor.affilation_excusive_data.affilation_array[0].affilation_price) ? selectedDoctor.affilation_excusive_data.affilation_array[0].affilation_price : '0'}}  </p>
+                        <div class="book_appointment_doctor_rating">   
+                            <span ng-repeat="x in doctorRatingsArray track by $index">
+                                <i 
+                                ng-class="{'fa fa-star':(x == 1) , 'fa fa-star-o':(x == 0) ,'fa fa-star-half-o':(x == 0.5)}"
+                                ></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="book_appointment_ava_slot_card"> 
+                <div class="book_appointment_ava_slot_card_inner"> 
+                    <i class="fa fa-2x fa-angle-left left-arrow" aria-hidden="true" ng-click="slideBackClick()" ng-show = "selectedDoctorTimeSlots.length > 2"></i>
+                    <i class="fa fa-2x fa-angle-right right-arrow" aria-hidden="true" ng-click="slideFrontClick()" ng-show = "selectedDoctorTimeSlots.length > 2"></i>
+                    <div id= "book_appointment_title_container" class="book_appointment_ava_slot_title"> 
+                        <div id="book_appointment_title_content">
+                           <!--<i class="fa fa-arrow-left book_appointment_ava_slot_title_left_arrow" aria-hidden="true"ng-show="showTimeSlotsLeftArrow == true"
+                            ng-click="selectedDoctorTimeSlotsMoveLeft()"></i>-->
+                            <button ng-disabled="bookAppointment.time_slots.morning.length == 0 && bookAppointment.time_slots.afternoon.length == 0 && bookAppointment.time_slots.evening.length == 0 && bookAppointment.time_slots.night.length == 0" ng-click="selectAppointmentDate(bookAppointment)" ng-repeat="bookAppointment in selectedDoctorTimeSlots" ng-class="{'bookAppointment_date_btn_active':(selectedDateBtn == bookAppointment['date_title'])}"> {{bookAppointment['date_title']}} </button> 
+
+                            <p style = "color: #4d4d4d;" ng-show = "selectedDoctorTimeSlots.length == 0"> No Slots Available </p>  
+                            <!--<i class="fa fa-arrow-right book_appointment_ava_slot_title_right_arrow" aria-hidden="true" ng-show="showTimeSlotsRightArrow == true" ng-click="selectedDoctorTimeSlotsMoveRight()"></i>--> 
+                        </div>
+                        
+                    </div>
+                    <hr/>
+                    <div id="book_appointment_ava_slot" class="book_appointment_ava_slot">
+                        <div id="book_appointment_ava_slot_scroll"> 
+
+                            <div class="ava_slots" ng-repeat="slot_type in  ['morning','afternoon','evening','night']" ng-class="{'oddSlots': slot_type == 'morning' || slot_type == 'evening', 'evenSlots':slot_type == 'afternoon' || slot_type == 'night'}">
+                                <span>{{slot_type}}</span>
+                                <div  ng-if="selectedDoctorTimeSlots[currentSelectedDoctorTimeSlotsIndex]['time_slots'][slot_type].length > 0">
+                                    <ul class="time_slot_container"> 
+                                        <li class="slot-time" ng-repeat="time_slot in selectedDoctorTimeSlots[currentSelectedDoctorTimeSlotsIndex]['time_slots'][slot_type]"
+                                        ng-click="selectTimeSlot(time_slot)" ng-class="{'tele_consultation_book_appointment_slots_time_slot_active':(selectedDateIndex == currentSelectedDoctorTimeSlotsIndex && selectedTime == time_slot )}"> 
+                                            {{time_slot}}
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="unava_slots"  ng-if="selectedDoctorTimeSlots[currentSelectedDoctorTimeSlotsIndex]['time_slots'][slot_type].length == 0">
+                                    No Slots Available
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Doctor Card -->
+            <!-- <div class="tele_consultation_book_appointment_doctor_card_container">
+                <div class="tele_consultation_book_appointment_doctor_card_image_container">
+                    <div class="tele_consultation_book_appointment_doctor_card_image_inner_container">
+                       <img src="images/teleconsultation/doctor.png" style="height:100%;">
+                    </div>
+                </div>
+                
+                <div class="tele_consultation_book_appointment_doctor_card_doctor_name">
+                    {{selectedDoctor['name']}} &nbsp; {{selectedDoctor['qualification']}}
+                </div>
+
+                <div class="tele_consultation_book_appointment_doctor_card_doctor_experience">
+                    Experience: {{selectedDoctor['experience']}}
+                </div>
+
+                <div class="tele_consultation_book_appointment_doctor_card_speciality" >
+                    <span 
+                    style="margin:5px 10px"
+                    ng-repeat="speciality in selectedDoctor['consultant_speciality']">{{speciality}}</span>
+                </div>
+
+                <div class="tele_consultation_book_appointment_doctor_card_language">
+                    <span 
+                    style="margin:5px 10px"
+                    ng-repeat="language in selectedDoctor['languages_spoken']">{{language}}</span>
+                </div>
+
+                <div class="tele_consultation_book_appointment_doctor_card_consultation_fee" >
+                    Rs 400 Consultation Fee
+                </div>
+
+                <div class="tele_consultation_book_appointment_doctor_card_rating_stars">
+                    
+                    <span ng-repeat="x in getStars()">
+                        <i class="fa fa-star"></i>
+                    </span>
+                    <span ng-if="isPartialStar() == true">
+                        <i class="fa fa-star-half-o"></i>
+                    </span>
+                    <br>
+                    <span>24 Reviews</span>
+                </div>
+
+            </div> -->
+            <!-- Doctor Card ends -->
+
+            <!-- Book appointment slots -->
+            
+            <!-- <div class="tele_consultation_book_appointment_slots_main_container" ng-show="selectedDoctorTimeSlots.length != 0">
+                
+                <div  class="tele_consultation_book_appointment_slots_date_container">
+                    <div class="tele_consultation_book_appointment_slots_date_left_arrow" 
+                    ng-show="showTimeSlotsLeftArrow == true"
+                    ng-click="selectedDoctorTimeSlotsMoveLeft()"
+                    >
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    </div>
+                    <div  class="tele_consultation_book_appointment_slots_date_title">
+                        {{ selectedDoctorTimeSlots[currentSelectedDoctorTimeSlotsIndex]['date_title'] }}
+                    </div>
+                    <div  class="tele_consultation_book_appointment_slots_date_right_arrow"
+                    ng-show="showTimeSlotsRightArrow == true"
+                    ng-click="selectedDoctorTimeSlotsMoveRight()">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
+                <div class="tele_consultation_book_appointment_slots_time_main_container">
+                    
+                    <div ng-repeat="slot_type in  ['morning','afternoon','evening','night']" style="padding:5px 10px">
+                        <div class="tele_consultation_book_appointment_slots_time_title">{{slot_type}}</div>
+                        
+                        <div class="tele_consultation_book_appointment_slots_time_inner_container">
+                            <span 
+                            ng-if="selectedDoctorTimeSlots[currentSelectedDoctorTimeSlotsIndex]['time_slots'][slot_type].length != 0"
+                            ng-repeat="time_slot in selectedDoctorTimeSlots[currentSelectedDoctorTimeSlotsIndex]['time_slots'][slot_type]"
+                            ng-click="selectTimeSlot(time_slot)"
+                            ng-class="{'tele_consultation_book_appointment_slots_time_slot_active':(selectedDateIndex == currentSelectedDoctorTimeSlotsIndex && selectedTime == time_slot )}"
+                            class="tele_consultation_book_appointment_slots_time">
+                                <div class="tele_consultation_book_appointment_slots_time_block_1">
+                                    <div class="tele_consultation_book_appointment_slots_time_block_2">
+                                        <div style="display: inline-block;" >
+                                            {{time_slot}}
+                                        </div>
+                                    </div>
+
+                                </div>    
+                            
+                            </span>
+                            <span
+                            ng-if="selectedDoctorTimeSlots[currentSelectedDoctorTimeSlotsIndex]['time_slots'][slot_type].length == 0"
+                            style="display:inline-block;"
+                            >
+                            No Slots Available
+                            </span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div> -->
+            <!-- Book appointment slots ends -->
+    </div>
+    <div class="tele_consultation_main_inner_container" ng-show="showMsg == true">
+        <div class="msg">{{containerMessage}}</div>
+    </div>
+</div>
+
+<a class="global_previous_page_button"
+    ng-class="{'button-enter-left' : prevIsVisible, 'button-exit-left' : !prevIsVisible}" ng-show="prevIsVisible"
+    ng-click="prevButtonClick()">
+    <span class="global_previous_page_text">Back</span>
+</a>
+
+
+<a class="global_continue_next_button"
+    ng-class="{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible"
+    ng-click="nextButtonClick()">
+    <span class="global_continue_next_button_text"> Continue </span>
+</a>

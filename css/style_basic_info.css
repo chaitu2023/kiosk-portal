@@ -1,0 +1,711 @@
+.height-title, .gender-title, .age-title {
+    position: absolute;
+    width: 800px;
+    left: 0px;
+    top: 98px;
+    /* font-family: "IntervalSansProBold"; */
+    text-align: center;
+    font-size: 28px;
+    color: #4a4a4a;
+    color: #0261c2;
+    font-family: Lato,"Open sans";
+}
+.height-title span.current-of-total, .gender-title span.current-of-total, .age-title span.current-of-total {
+    font-size: 18px;
+    font-family: "IntervalSansProLightRegular";
+    color: #6d6d6d; }
+
+    #male_btn {
+      /* with transgender*/
+    /*position: absolute;
+    top: 146px;
+    left: 160px;
+    width: 228px;
+    height: 290px;
+    background: url(../images/gender/Icons-18.png) top left no-repeat;
+    background-size: contain;*/
+    /* without transgender*/
+    position: absolute;
+    top: 146px;
+    left: 240px;
+    width: 108px;
+    height: 290px;
+    background: url(../images/gender/Icons-18.png) top left no-repeat;
+    background-size: contain;
+}
+#female_btn {
+  /*with transgender*/
+    /*position: absolute;
+    top: 146px;
+    left: 334px;
+    width: 228px;
+    height: 290px;
+    background: url(../images/gender/Icons-19.png) top left no-repeat;
+    background-size: contain;*/
+    /*without transgender*/
+    position: absolute;
+    top: 146px;
+    left: 420px;
+    width: 135px;
+    height: 290px;
+    background: url(../images/gender/Icons-19.png) top left no-repeat;
+    background-size: contain;
+}
+#transgender_btn {
+  position: absolute;
+  top: 146px;
+  left: 518px;
+  width: 228px;
+  height: 290px;
+  background: url("../images/gender/Icons-20.png") top left no-repeat;
+  background-size: contain;
+  }
+#transgender_btn::before {
+  position: absolute;
+  top: 296px;
+  left: 14px;
+  font-size:24px;
+  content: 'Transgender';
+  }
+#male_btn::before {
+  position: absolute;
+  top: 296px;
+  left: 30px;
+  font-size:24px;
+  content: attr(data-before);
+  }
+#female_btn::before {
+  position: absolute;
+  top: 296px;
+  left: 31px;
+  font-size:24px;
+  content: attr(data-before);
+  }
+
+#male_btn.active{
+  background-image: url("../images/gender/Icons-38.png");
+  background-size: contain;
+}
+#female_btn.active{
+  background-image: url("../images/gender/Icons-37.png");
+  background-size: contain;
+}
+#transgender_btn.active{
+  background-image: url("../images/gender/Icons-36.png");
+  background-size: contain;
+}
+/* } */
+#numpad_error {
+    font-size: 18px;
+    color: #d90000;
+    position: absolute;
+    top: 450px;
+    width: 800px;
+    text-align: center;
+    font-family: "IntervalSansProCondSemiBoldRg";
+}
+#age_component_container {
+    overflow: hidden;
+    height: 304px;
+    width: 370px;
+    left: 215px;
+    position: absolute;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: rgb(232,232,232);
+    top: 140px;
+}
+#age_component_container #numpad_entry {
+    width: 470px;
+    left: 0px;
+    top: 5px;
+    padding: 0px;
+    background: none;
+    box-shadow: none;
+}
+#numpad_entry #age_dd.active, #numpad_entry #age_mm.active, #numpad_entry #age_yyyy.active {
+    color: #0261c2;
+    box-shadow: none;
+    border: 1px solid #0261c2;
+    background-color: #FFF;
+    background-image: url(../images/green-arrow-bottom.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+#numpad_entry #age_mm, #numpad_entry #age_dd, #numpad_entry #age_yyyy {
+    color: #afafaf;
+    text-shadow: 0px 1px #fff;
+    text-transform: uppercase;
+}#numpad_entry #age_mm, #numpad_entry #age_dd, #numpad_entry #age_yyyy {
+  color: #afafaf;
+  text-shadow: 0px 1px #fff;
+  text-transform: uppercase; }
+
+#entry_help_mm, #entry_help_dd, #entry_help_yyyy {
+  height: 67px;
+  margin-right: 8px;
+  margin-top: 13px;
+  position: relative;
+  width: 122px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 62px;
+  color: #afafaf;
+  text-shadow: 0px 1px #fff;
+  text-transform: uppercase;
+  position: absolute;
+  display: block;
+  z-index: 5;
+  pointer-events: none; }
+   #numpad_entry #age_dd.valid, #numpad_entry #age_mm.valid, #numpad_entry #age_yyyy.valid {
+      color: #0261c2;
+      box-shadow: none;
+      border: 1px solid #0261c2;
+      background-color: #FFF;
+      background-image: none;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      text-shadow: 0px -1px 1px #999;
+      font-family: 'IntervalSansProSemiBoldItalic';
+      font-family: Lato, Open sans;
+       }
+  #numpad_entry #age_mm {
+    left: 130px; }
+  #numpad_entry #age_dd {
+    left: 12px; }
+  #numpad_entry #age_yyyy {
+    left: 249px; }
+  #numpad_entry #height_ft, #numpad_entry #height_in, #numpad_entry #height_cms {
+    float: left;
+    height: 68px;
+    width: 130px;
+    margin-right: 8px;
+    top: 13px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 48px;
+    border: 0px;
+    outline: none;
+    position: absolute;
+    border: 1px solid #CFCFCF;
+    border-radius: 4px;
+    color: #999;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    text-shadow: 0px -1px 1px #999; }
+    #numpad_entry #height_ft.active, #numpad_entry #height_in.active, #numpad_entry #height_cms.active {
+      font-size: 24px;
+      line-height: 18px;
+      color: #0261c2;
+      font-family: Lato, "Open sans";
+      box-shadow: none;
+      border: 1px solid #0261c2;
+      background-color: #FFF;
+      background-position: bottom center;
+      background-repeat: no-repeat; }
+    #numpad_entry #height_ft.valid, #numpad_entry #height_in.valid {
+      color: #0261c2;
+      box-shadow: none;
+      border: 1px solid #0261c2;
+      background-color: #FFF;
+      background-image: none;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      font-family: 'IntervalSansProSemiBoldItalic';
+      font-family: Lato, "Open sans";
+       }
+  #numpad_entry #height_ft {
+    left: 85px; }
+  #numpad_entry #height_in {
+    left: 255px; }
+  #numpad_entry label {
+    font-size: 18px;
+    position: absolute;
+    bottom: 22px;
+    color: #0261c2;
+    text-align: center;
+    text-transform: capitalize;
+     }
+    #numpad_entry label.height_ft_label {
+      left: 85px;
+      width: 130px; }
+    #numpad_entry label.height_in_label {
+      left: 255px;
+      width: 130px; }
+      #numpad li.nextfield {
+  background: transparent url("../images/numpad_next_btn20120501.png") top left no-repeat;
+  background: none; }
+
+#numpad li.nextfield.off {
+  opacity: .2;
+  pointer-events: none; }
+
+#numpad li.nextfield span {
+  display: none; }
+
+#numpad li:active {
+  background-position: bottom left !important; }
+
+#numpad_entry {
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #FFF;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  height: 50px;
+  left: 194px;
+  padding-left: 17px;
+  position: absolute;
+  top: 120px;
+  width: 470px; }
+  #numpad_entry #age_mm, #numpad_entry #age_dd, #numpad_entry #age_yyyy {
+    background-image: -moz-linear-gradient(90deg, #efefef 0%, #f6f6f6 100%);
+    background-image: -webkit-linear-gradient(90deg, #efefef 0%, #f6f6f6 100%);
+    background-image: -ms-linear-gradient(90deg, #efefef 0%, #f6f6f6 100%);
+    border: 1px solid #CFCFCF;
+    border-radius: 10px;
+    color: #0261c2;
+    text-shadow: 0px -1px 1px #999;
+    float: left;
+    height: 52px;
+    width: 110px;
+    margin-right: 8px;
+    top: 13px;
+    position: absolute;
+    text-align: center;
+    font-size: 28px;
+    line-height: 48px;
+    outline: none;
+    box-sizing: border-box;
+    padding-top: 1px; }
+    #numpad .row_one,
+#numpad .row_two,
+#numpad .row_three,
+#numpad .row_four {
+  clear: left;
+  width: 400px;
+  padding-left: 2px; }
+
+#numpad li {
+  float: left;
+  margin: 0 0px 0px 0;
+  width: 100px;
+  /*height: 75px;*/
+  /*line-height: 75px;*/
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+#numpad li > span {
+  /*font-size: 35px;*/
+  color: #0261c2;
+  /*text-shadow: 0 -1px 0px rgba(200, 200, 200, 0.5), -1px -1px 1px rgba(77, 166, 67, 0.8), 0px -1px 0px rgba(60, 60, 60, 0.5);*/
+  display: block;
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*float: left;*/
+  margin: 0 0px 0px 0;
+  /*width: 130px;*/
+  /*height: 75px;*/
+  /*line-height: 75px;*/
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  #numpad li > span:active {
+    background: transparent url("../images/numpad_key_btn20120501.png") bottom left no-repeat; }
+
+#numpad li a {
+  font-size: 35px;
+  /*color: #0261c2;*/
+  color: black;
+  text-shadow: 0 -1px 0px rgba(200, 200, 200, 0.5), -1px -1px 1px rgba(77, 166, 67, 0.8), 0px -1px 0px rgba(60, 60, 60, 0.5);
+  display: block;
+  width: 100%;
+  height: 100%;
+  float: left;
+  margin: 0 0px 0px 0;
+  width: 130px;
+  height: 75px;
+  background: transparent url("../images/numpad_key_btn20120501.png") top left no-repeat;
+  background-size: cover;
+  line-height: 75px;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /*font-style: italic;*/
+  text-shadow: 0px -1px 1px #999; }
+  #numpad li a:active {
+    background: transparent url("../images/numpad_key_btn20120501.png") bottom left no-repeat; }
+
+#numpad li.clear span {
+  font-size: 26px;
+  background: none;
+  color: #a7a7a7;
+  text-shadow: 1px 0 1px #fff;
+  font-weight: bold; }
+
+#numpad li.clear.off span {
+  background: none;
+  point-events: none; }
+  #numpad {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #FFF;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 232px;
+  left: 194px;
+  padding-top: 11px;
+  padding-left: 11px; }
+   #age_component_container #numpad {
+    width: 100%;
+    top: 85px;
+    left: 34px;
+    padding: 0px;
+    background: none;
+    box-shadow: none; }
+    #age_component_container #numpad .row_one, #age_component_container #numpad .row_two, #age_component_container #numpad .row_three, #age_component_container #numpad .row_four {
+      width: 100%; }
+      #age_component_container #numpad .row_one.feet-row, #age_component_container #numpad .row_two.feet-row, #age_component_container #numpad .row_three.feet-row, #age_component_container #numpad .row_four.feet-row {
+        padding-left: 0px; }
+        #age_component_container #numpad .row_one.feet-row li, #age_component_container #numpad .row_two.feet-row li, #age_component_container #numpad .row_three.feet-row li, #age_component_container #numpad .row_four.feet-row li {
+          /*margin-left: 40px;*/ }
+    #age_component_container #numpad .row_one.feet-row {
+      padding-top: 00px; }
+    #age_component_container #numpad li {
+      margin-left: 0px;
+      /*margin-bottom: 18px;*/
+      height: 55px; }
+      #age_component_container #numpad li a {
+        /*font-family: 'IntervalSansProSemiBold';*/
+        /*font-style: italic;*/
+        background-color: rgb(194,194,194) !important;
+        /*font-size: 36px;*/
+        font-size: 20px;
+        height:38px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #cfcfcf;
+        border-radius: 10px;
+        background-image: unset;
+        /*background-image: -moz-linear-gradient(90deg, #efefef 0%, #f6f6f6 100%);*/
+        /*background-image: -webkit-linear-gradient(90deg, #efefef 0%, #f6f6f6 100%);*/
+        /*background-image: -ms-linear-gradient(90deg, #efefef 0%, #f6f6f6 100%);*/
+        /*box-shadow: 0px 2px 1px 0px white;*/
+        position: absolute;
+        width: 90px;
+        /*height: 67px;*/
+        line-height: 45px;
+        text-shadow: 0px -1px 1px #999;
+        box-shadow: 0px 3px rgb(147,147,147);
+         }
+        #age_component_container #numpad li a.clear {
+          color: #CCC;
+          background-image: -moz-linear-gradient(90deg, #e5e5e5 0%, #e8e8e8 14%, #f0f0f0 67%, #f8f8f8 100%);
+          background-image: -webkit-linear-gradient(90deg, #e5e5e5 0%, #e8e8e8 14%, #f0f0f0 67%, #f8f8f8 100%);
+          background-image: -ms-linear-gradient(90deg, #e5e5e5 0%, #e8e8e8 14%, #f0f0f0 67%, #f8f8f8 100%);
+          font-size: 30px;
+          font-family: "IntervalSansProLightRegular"; }
+          #age_component_container #numpad li a.clear:active {
+            background-image: -moz-linear-gradient(90deg, whitesmoke 0%, #f4f4f4 14%, #eaeaea 67%, #e4e4e4 100%);
+            background-image: -webkit-linear-gradient(90deg, whitesmoke 0%, #f4f4f4 14%, #eaeaea 67%, #e4e4e4 100%);
+            background-image: -ms-linear-gradient(90deg, whitesmoke 0%, #f4f4f4 14%, #eaeaea 67%, #e4e4e4 100%); }
+        #age_component_container #numpad li a.nextfield {
+          color: #FFF;
+          background-image: -moz-linear-gradient(90deg, #7dc014 0%, #89d51b 100%);
+          background-image: -webkit-linear-gradient(90deg, #7dc014 0%, #89d51b 100%);
+          background-image: -ms-linear-gradient(90deg, #7dc014 0%, #89d51b 100%); }
+          #age_component_container #numpad li a.nextfield.inactive {
+            background-image: -moz-linear-gradient(90deg, #e5e5e5 0%, #e8e8e8 14%, #f0f0f0 67%, #f8f8f8 100%);
+            background-image: -webkit-linear-gradient(90deg, #e5e5e5 0%, #e8e8e8 14%, #f0f0f0 67%, #f8f8f8 100%);
+            background-image: -ms-linear-gradient(90deg, #e5e5e5 0%, #e8e8e8 14%, #f0f0f0 67%, #f8f8f8 100%);
+            pointer-events: none; }
+          #age_component_container #numpad li a.nextfield:active {
+            background-image: -moz-linear-gradient(90deg, #649e28 0%, #65a028 14%, #6eb02a 81%, #71b329 100%);
+            background-image: -webkit-linear-gradient(90deg, #649e28 0%, #65a028 14%, #6eb02a 81%, #71b329 100%);
+            background-image: -ms-linear-gradient(90deg, #649e28 0%, #65a028 14%, #6eb02a 81%, #71b329 100%);
+            border: 1px solid #6dc553;
+            -webkit-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+            -moz-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+            box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important; }
+        #age_component_container #numpad li a .precious {
+          font-size: 30px;
+          padding-left: 5px;
+          font-style: normal; }
+        #age_component_container #numpad li a:active {
+          border-style: solid;
+          border-width: 1px;
+          box-shadow: none; 
+        }
+
+        #age_cancel_keys {
+          box-shadow: 0px 3px rgb(147,147,147) !important;
+        }
+
+        #age_cancel_keys:active{
+          box-shadow: none !important;
+        }
+        .age_delete_line1 {
+    bottom: 16px;
+    right: 70px;
+}
+.age_delete_line1{
+  bottom: 16px;
+  right: 70px;
+}
+.age_delete_line2{
+  bottom: 4px;
+  right: 70px;
+}
+.age_delete_ref button{
+  position: absolute;
+  top:7px;
+} 
+.line_for_delete{
+    width: 0px;
+    height: 16px;
+    border-bottom: 1px solid #cfcfcf;
+    border-left: 1px solid black;
+    position: absolute;
+    bottom: 16px;
+    right: 70px;
+    -webkit-transform: rotate(33deg) !important;
+    z-index: 9999;
+    background-color: white;
+}
+.line2_for_delete{
+    width: 0px;
+    height: 16px;
+    border-bottom: 1px solid #cfcfcf;
+    border-left: 1px solid black;
+    position: absolute;
+    bottom: 3px;
+    right: 70px;
+    -webkit-transform: rotate(152deg) !important;
+    z-index: 9999;
+}
+.height_ft_del button {
+    width: 45px !important;
+    height: 30px !important;
+    /* margin-left: 22px; */
+    border: 1px solid black;
+    border-left: none !important;
+    border-radius: 4px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 3px;
+    left: 25px;
+}
+.close_thin_icon {
+    font-size: 2.30em !important;
+    color: black;
+    width: 21px;
+    height: 30px;
+}
+.fa-times-thin:before {
+    content: '\00d7';
+}
+#numpad_entry #height_ft {
+    left: 14px;
+}
+select.height_category{
+  -webkit-appearance: none;
+    width: 130px;
+    height: 68px;
+    border: 1px solid #CFCFCF;
+    border-radius: 4px;
+    background-image: -webkit-linear-gradient(90deg, #efefef 0%, #f6f6f6 100%);
+    color: #999;
+    position: absolute;
+    top: 13px;
+    right: 24px;
+    font-size: 24px;
+    font-weight: bold;
+    text-indent: 20px;
+}
+#numpad_entry #height_ft {
+    left: 14px;
+}
+#numpad_entry label.height_ft_label {
+    left: 22px;
+    width: 130px;
+}
+#numpad_entry #height_in {
+    left: 138px;
+}
+#numpad_entry label.height_in_label {
+    left: 167px;
+    width: 130px;
+}
+#row2_feet{
+  clear: none !important;
+}
+#row1_feet li:nth-child(1) {
+}
+#row1_feet li:nth-child(2) {
+}
+#row2_feet li:nth-child(1) {
+}
+#row2_feet li:nth-child(2) {
+    margin-left: 101px !important;
+}
+.cm_del_add{
+  margin-top: 2px;
+  right: 68px;
+}
+.cm_line2_add{
+  transform: rotate(146deg);
+  right: 68px;
+  bottom:3px;
+}
+.cm_ft_add{
+}
+
+.cm_zero{
+}
+li.delete_for_feet{
+    margin-top: 145px !important;
+    margin-left: 18px !important;
+}
+.feet_del_btn{
+  width: 45px !important;
+  height: 30px !important;
+  margin-left: 22px;
+  border: 1px solid black;
+  border-left: none !important;
+  border-radius: 4px;
+  background-color: transparent;
+  position: absolute;
+  bottom: 3px;
+  left:2px;
+}
+.line_feet_delete{
+  width: 0px;
+    height: 15px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    position: absolute;
+    bottom: 18px;
+    right: 68px;
+    -webkit-transform: rotate(33deg) !important;
+    z-index: 9999;
+    background-color: white;
+}
+.line2_feet_delete{
+  width: 0px;
+    height: 15px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    position: absolute;
+    bottom: 3px;
+    right: 68px;
+    -webkit-transform: rotate(152deg) !important;
+    z-index: 9999;
+}
+li.delete_for_inches{
+  margin-top: 2px;
+}
+#height_cm{
+  border-radius: 4px;
+  border: 1px solid #cfcfcf;
+  padding-bottom: 18px;
+  padding-top: 0px;
+  text-align: center;
+  font-size: 30px;
+  color: #0261c2;
+  border: 1px solid #0261C2;
+  position: absolute;
+  left:129px;
+  top:12px;
+  box-sizing: border-box;
+  display: none;
+}
+.cm_input_active{
+  display: block !important;
+}
+.height_cms_label_active{
+  display: block;
+  margin-left: 180px;
+  margin-bottom: -4px;
+}
+.height_cms_label{
+  top:26px;
+  left:38px;
+  text-transform:lowercase;
+  font-size: 20px;
+  display: block;
+  text-transform: lowercase;
+}
+.height_cms_label.hi_in{
+  top:26px;
+  left:38px;
+  text-transform:lowercase;
+  font-size: 15px;
+  display: block;
+  text-transform:lowercase;
+}
+.outer_for_dropdown {
+    width: 175px;
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    right: -41px;
+}
+.ft_caret_dropdown:before{
+  content: "\f0d7";
+  position: relative;
+  top: 34px;
+  left: 107px;
+  font-size: 28px;
+  color: grey;
+}
+.element_none{
+  display: none;
+}
+.height_cm_active_png{
+  position: relative;
+  left: 180px;
+  top: 40px;
+}
+.height_cm_valid{
+  position: relative; 
+  top: -7px; 
+  left: 1px; 
+  font-size: 13px; 
+  color: #D90000; 
+  font-family: IntervalSansProCondSemiBoldRg;
+}
+.height_cm_valid.hi_in{
+    position: relative;
+    top: -5px;
+    left: 92px;
+    font-size: 15px;
+    color: #D90000;
+    font-family: IntervalSansProCondSemiBoldRg;
+    }
+.height_inch_valid{
+  position: relative; 
+  top: -7px; 
+  left: 1px; 
+  font-size: 13px; 
+  color: #D90000; 
+  font-family: IntervalSansProCondSemiBoldRg;
+}

@@ -1,0 +1,259 @@
+<!--<div id="slide_title">{{interfaceLabels[slideTitle]}}</div>
+<div id="slide_subtitle" class="weight02_subtitle">{{interfaceLabels[slideSubTitle]}}</div>
+<div class="higi_top_container"></div>
+<weight-guage promisename="weightgaugeready"></weight-guage>
+-->
+<!-- <style>
+    .weight_count_down_container{
+	margin: 16% 20% 0 20%;
+    font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.weight_count_down_logo{
+	width: 75px;
+	margin: 0% 0% 0% 45%;
+}
+
+.weight_count_down_heading{
+	font-size: 30px;
+	font-weight: 500;
+	text-align: center;
+	margin: 10px 0px 0px 0px;
+	font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.weight_count_down_sub_heading{
+	color: gray;
+	font-size: 23px;
+	font-weight: 500;
+	text-align: center;
+	margin: 10px 0px 0px 0px;
+	font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.weight_count_down_start_test{
+	color: #808080b8;
+    font-size: 19px;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.weight_count_down_timer{
+	text-align: center;
+    color: #3887b2;
+    font-weight: 500;
+    font-size: 72px;
+    margin: 0px;
+}
+
+.weight_instructions_header_container {
+	margin-top: 11%;
+    margin-left: 42%;
+    max-width: 100%;
+}
+
+.weight_instructions_header_image {
+	float: left ;
+	width: 35px;
+}
+
+.weight_instructions_header_text {
+	padding-left: 31px;
+   	font-size: 30px;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #4a4a4a;
+    font-family: "IntervalSansProMediumRegular";
+}
+
+.replay_button_container{
+    margin-top: 2%;
+    margin-left: 37%;
+    width: 225px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: white;
+    border: 2px solid dodgerblue;
+}
+
+.replay_button_container:active{
+    background-color: gainsboro;
+}
+
+.replay_button_logo{
+    float: left ;
+    width: 35px;
+    margin-top: 1px;
+}
+
+.replay_button_text{
+    padding-left: 31px;
+   	font-size: 20px;
+    font-weight: 500;
+    margin-top: 4px;
+    color: #4a4a4a;
+    font-family: "IntervalSansProMediumRegular";
+}
+
+.weight_instructions_main_container{
+	height: 360px;
+    margin-top: -23px;
+    background-color: #ebebeb;
+}
+
+.weight_instructions_heading{
+	text-align: center;
+    font-size: 24px;
+    color: #4a4a4a;
+    padding-top: 10px;
+}
+
+
+.weight_gauge_main_container{
+    height: 360px;
+    margin-top: -23px;
+    background-color: #ebebeb;
+}
+
+.weight-gauge{
+    top: 12px;
+}
+
+#weight02_pane {
+  background-color: #E6E6E6;
+  position: absolute;
+  top: 140px;
+  left: 0;
+  width: 800px;
+  height: 400px; }
+
+#weightgauge_arc_gauge {
+  position: absolute;
+  top: -2px;
+  left: -4px;
+  z-index: 5;
+  -webkit-transform: rotate(-122deg); }
+
+#weightgauge_top.en_us {
+  background: url("images/weightgauge_top20120515.png") no-repeat;
+  z-index: 10;
+  height: 284px;
+  width: 285px;
+  position: relative;
+  top: 30px;
+  left: 255px; }
+
+#weightgauge_top {
+  background: url("images/weightgauge_top_es.png") no-repeat;
+  z-index: 10;
+  height: 284px;
+  width: 285px;
+  position: relative;
+  top: 30px;
+  left: 255px; }
+
+#weightgauge_top.es_us {
+  background: url("images/weightgauge_top_es.png") no-repeat;
+  z-index: 10;
+  height: 284px;
+  width: 285px;
+  position: relative;
+  top: 30px;
+  left: 255px; }
+
+#weightgauge_bottom.en_us {
+  background: url("images/weightgauge_bottom20120504.png") no-repeat scroll 0 0 transparent;
+  left: 255px;
+  position: absolute;
+  top: 30px;
+  width: 800px;
+  height: 600px; }
+  @media (min-width: 801px) {
+    #weightgauge_bottom.en_us {
+      width: 1280px;
+      height: 1024px; } }
+
+#weightgauge_bottom.es_us {
+  background: url("images/weightgauge_bottom_es.png") no-repeat scroll 0 0 transparent;
+  left: 255px;
+  position: absolute;
+  top: 30px;
+  width: 800px;
+  height: 600px; }
+  @media (min-width: 801px) {
+    #weightgauge_bottom.es_us {
+      width: 1280px;
+      height: 1024px; } }
+
+#weightgauge_text {
+  display: block;
+  position: absolute;
+  top: 140px;
+  left: 297px;
+  color: #fff;
+  z-index: 15; }
+
+#weightgauge_textnum {
+  display: block;
+  font-size: 70px;
+  text-align: center;
+  line-height: 70px;
+  width: 200px;
+  font-family: 'IntervalSansProCondSemiBoldRg';
+  text-shadow: 0px 1px 2px #000; }
+
+#weightgauge_lbs {
+  display: block;
+  font-size: 34px;
+  text-align: center;
+  width: 200px;
+  font-family: 'IntervalSansProCondSemiBoldRg';
+  text-shadow: 0px 1px 2px #000;
+  line-height: 25px; }
+
+#weight_unit{
+    top: 185px;
+}
+
+#bottom_text_div_id{
+    margin-top: 360px;
+}
+
+#weight_gauge_bottom_text{
+    padding-left: 180px;
+   	font-size: 30px;
+    font-weight: 500;
+    margin-top: 50px;
+    color: #4a4a4a;
+    font-family: "IntervalSansProMediumRegular";
+}
+
+</style>
+
+<div class="weight_instructions_header_container">
+    <img class="weight_instructions_header_image" src="./images/Icons-28.png">
+    <p class="weight_instructions_header_text">Weight</p> 
+</div>
+<div>
+    <weight-guage promisename="weightgaugeready"></weight-guage>
+    
+</div>
+<div id="bottom_text_div_id">
+    <p id="weight_gauge_bottom_text">Weight measurement in progress...</p>
+</div> -->
+
+<div class="weight_instructions_header_container">
+    <img class="weight_instructions_header_image" src="./images/Icons-28.png">
+    <span class="weight_instructions_header_text">{{interfaceLabels[slideTitle]}}</span> 
+</div>
+
+<div class="weight_instructions_main_container">
+   <weight-guage promisename="weightgaugeready"></weight-guage>    
+  <p class="weight_inprogress_bottom_heading">{{interfaceLabels[slideSubTitle]}}</p>
+</div>
+
+<a id="weight_skip_button" class= "global_skip_button" ng-show="skipTestInFullTest" ng-click="skipTestCheck()">
+  <span class="global_skip_button_text" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}}</span>
+</a>

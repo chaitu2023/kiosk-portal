@@ -1,0 +1,84 @@
+<div class="{{mehtaUserModal.sectionClass}}">
+	<div class="mehta_mobile_division" ng-if="mehtaUserModal.showMobileNumberSection">
+		<p class="mehta_mobile_heading">{{interfaceLabels[mobilenumber]}}</p>
+		<higi-text-field field="mehtaUserModal.fields[0]" class="mehta_mobile_input_box"></higi-text-field>
+		<span id="mobile_server_error" ng-if="mehtaUserModal.mobileServerIssue">Unable to connect server..</span>
+		<div class="mehta_mobile_validation_loader" ng-if="mehtaUserModal.showMobileLoader"></div>   
+		<a id="mehta_mobile_submit_btn" class="mehta_mobile_submission_btn {{mehtaUserModal.mobileSubmitBtnActive}}" ng-click="mehtaUserModal.getPatientData()" ng-hide="mehtaUserModal.submitting" >
+			<span>{{interfaceLabels[mehtaUserModal.globalSubmit]}}</span>
+		</a>
+	</div> 
+	<div class="pincode_division {{mehtaUserModal.pinCodeSection}}" ng-if="mehtaUserModal.showPinCodeSection">
+		<p class="pincode_heading">{{interfaceLabels[pincode]}}</p>
+		<higi-text-field field="mehtaUserModal.fields[1]" class="pincode_input_box"></higi-text-field>
+		<span id="pincode_server_error" ng-if="mehtaUserModal.pinCodeServerIssue">Unable to connect server..</span>
+		<div class="mehta_pincode_validation_loader" ng-if="mehtaUserModal.showPinCodeLoader"></div>
+		<p id="pincode_error" ng-if="mehtaUserModal.invalidPincode"> Invalid pincode </p>
+		<p id="pincode_error" ng-if="mehtaUserModal.noAreaAvailable"> No area available </p>
+		<a id="pincode_submit_btn" class="pincode_submission_btn {{mehtaUserModal.pinSubmitBtnActive}}" ng-click="mehtaUserModal.startTest('')" ng-hide="mehtaUserModal.submitting" >
+			<span>{{interfaceLabels[mehtaUserModal.globalSubmit]}}</span>
+		</a>
+	</div>
+	<div class="pincode_area_dropdown" ng-if="mehtaUserModal.showAreaListDropdown">
+		<div id="pincode_area_dropdown_main_container">
+			<div id="pincode_area_dropdown_main_container_scroll">
+				<div id="pincode_area_list" ng-style="Dt.isSelected && {'color':'#000', 'background-color': '#48acf596'} || {'color': '#808080'}"  ng-repeat="Dt in mehtaUserModal.areaList" ng-click="mehtaUserModal.selectArea(Dt.AREAID)">{{Dt['AREAID']}} - {{Dt['AREANM']}} <i class="fa fa-check" ng-if="Dt.isSelected"></i></div>
+			</div>
+		</div>
+	</div>
+	<div class="mehta_loader_section" ng-if="mehtaUserModal.mobileValidationLoader">
+		<div class="mehta_loader_visible"></div>
+		<span>{{interfaceLabels[mehtaUserModal.plswaitLoader]}}</span>
+	</div>   
+</div>
+
+<div class="mehta_header_container" ng-if="mehtaUserModal.showPatientListSection">
+	<span class="mehta_header_text">Confirm your account which matches with Mehta's Hospitals</span>
+</div>
+
+<div class="mehta_main_container" ng-if="mehtaUserModal.showPatientListSection">
+	<div id="mehta_patient_main_container">
+		<div id="mehta_patient_main_container_scroll">
+			<div class="mehta_patient_main_box" ng-repeat="patientData in mehtaUserModal.patientList" style="text-align: initial;">
+				<div class="mehta_patient_main_box_title" style="text-align: left; height: 20px;">
+					<b style="font-family: 'latoRegular';color: #4d4d4d; text-transform: capitalize;">
+						<span ng-bind-html="mehtaUserModal.fineTunePatientName(patientData['PATIENT_NAME'])"></span>
+					</b>
+				</div>
+				<div class="mehta_patient_details">
+					<div class="mehta_patient_details_image_container">
+						<img ng-src='images/profileimage.png'
+							class="mehta_patient_details_image_container_img">
+					</div>
+					<div class="mehta_patient_details_container">
+						<p>
+							<span class="mehta_patient_details_container_title">MRNO: </span> 
+							<span class="mehta_patient_details_container_label">
+								{{patientData['MRNO']}}
+							</span>
+						</p>
+						<p>
+							<span class="mehta_patient_details_container_title">AGE: </span> 
+							<span class="mehta_patient_details_container_label">
+								{{patientData['AGE']}}
+							</span>
+						</p>
+						<p>
+							<span class="mehta_patient_details_container_title">Gender: </span> 
+							<span class="mehta_patient_details_container_label" >
+								{{patientData['GENDER']}}
+							</span>
+						</p>
+					</div>
+				</div>
+				<hr>
+				<div>
+					<button class="call_doctor_button_class" ng-click="mehtaUserModal.startTest(patientData['MRNO'])">Confirm</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a class="mehta_continue_button" ng-if="mehtaUserModal.showNoneOfTheAbove" ng-click="mehtaUserModal.showPinCodePage()">
+		<span class="mehta_continue_button_text">None of the above</span>
+	</a>
+</div>

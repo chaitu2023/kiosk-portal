@@ -1,0 +1,74 @@
+<div id="keyboard_back_btn" class="active_btn" ng-show="registerModal.loginPasswordSection"><a ng-click="registerModal.backToEmailSection()">{{interfaceLabels[registerModal.globalBack]}}  <i class="fa fa-reply"></i></a></div>
+<div id="keyboard_create">
+    <div id="login_credentials" class="{{registerModal.createConfirmClass}}">
+    <div id="login_title">{{interfaceLabels[registerModal.loginTitle]}}</div>
+        <div id="login_username" ng-show="registerModal.loginEmailSection" class="{{registerModal.loginEmailSectionClass}}">
+            <div id="login_title_email" ng-if="!registerModal.loginUsernameError && !registerModal.loginServerErrorVisible"><span>{{interfaceLabels[registerModal.loginTitleEmail]}}</span> <span id="login_title_note">{{interfaceLabels[registerModal.loginTitleEmailSpam]}}</span></div>
+            <div class="login_username_error" ng-if="registerModal.loginUsernameError">{{interfaceLabels[registerModal.loginEmailAddressError]}}</div>
+            <div class="login_username_error" ng-if="registerModal.loginServerErrorVisible">{{interfaceLabels[registerModal.loginServerError]}}</div>
+            <higi-text-field field="registerModal.fields[0]"></higi-text-field>
+
+            <div id="login_username_loading" class="keyboard_dialog_loading"></div>
+
+            <div id="login_username_warning"><span></span></div>
+            <div id="login_create_account_btn" class="dialog_function_btn" ng-click="registerModal.showLoginModal()"><span higi_resource_html="">{{interfaceLabels[registerModal.loginHaveAccount]}}</span></div>
+            <div id="login_username_submit_btn" class="keyboard_submit_btn {{registerModal.nextBtnActive}}" ng-click="registerModal.emailExistsCheck(registerModal.fields[0])" ng-hide="registerModal.submitting"><span>{{interfaceLabels[registerModal.globalNext]}}</span></div>
+        </div>
+
+        <div id="register_password" ng-show="registerModal.loginPasswordSection"  class="{{registerModal.loginPasswordSectionClass}}">
+            <div id="login_title_password" ng-if="!registerModal.loginServerErrorVisible">
+                <span>{{interfaceLabels[registerModal.loginPassword]}}</span>
+                <span id="login_password_note">{{interfaceLabels[registerModal.loginPasswordNote]}}</span>
+            </div>
+            <div class="confirm-reg" ng-if="registerModal.loginServerErrorVisible">{{interfaceLabels[registerModal.loginServerError]}} </div>
+            <div id="login_password_hint"></div>
+            <div id="login_password_loading" class="keyboard_dialog_loading"></div>
+            <higi-text-field field="registerModal.fields[1]"></higi-text-field>
+            <div id="login_password_input"></div>
+            <div id="login_show_password_btn" ng-click="registerModal.showPasswordToggle(registerModal.fields[1])" class="{{registerModal.showPasswordClass}} create-show-password"></div>
+            <div id="login_show_password_note">{{interfaceLabels[registerModal.loginShowPassword]}}</div>
+            <div id="login_password_submit_btn" class="keyboard_submit_btn {{registerModal.loginBtnActive}}" ng-click="registerModal.showCreateConfirmSection()" ng-hide="registerModal.submitting"><span>{{interfaceLabels[registerModal.globalNext]}}</span></div>
+        </div>
+
+        <div id="login_create_account" ng-show="registerModal.loginCreateConfirmSection" class="{{registerModal.loginCreateConfirmSectionClass}}">
+            <div id="keyboard_back_btn"><span></span></div>
+
+
+                <div id="login_title" higi_resource_html="login.confirm.account.details"></div>
+                <div id="login_standard_create_details">
+                    <div class="login_password_error confirm-reg" ng-if="registerModal.loginServerErrorVisible">{{interfaceLabels[registerModal.loginServerError]}} </div>
+                    <div id="login_create_account_email_title" class="{{registerModal.confirmEmailExistsErrorClass}}">{{interfaceLabels[registerModal.loginEmailAddress]}} <span ng-show="registerModal.confirmEmailExistsError" ng-bind-html="interfaceLabels[registerModal.loginEmailAddressError]" class="confirm-error"></span></div>
+                    <div class="confirm-email {{registerModal.confirmEmailExistsErrorClass}}">
+                        <higi-text-field field="registerModal.fields[0]"></higi-text-field>
+                    </div>
+                    <div id="login_create_account_password_title" class="{{registerModal.confirmPasswordErrorClass}}">{{interfaceLabels[registerModal.loginConfirmPassword]}} <span class="password-note">{{interfaceLabels[registerModal.loginPasswordNote]}}</span></div>
+                    <div class="confirm-password {{registerModal.confirmPasswordErrorClass}}">
+                        <higi-text-field field="registerModal.fields[1]"></higi-text-field>
+                    </div>
+                    <div id="login_create_show_password_btn" ng-click="registerModal.showPasswordToggle(registerModal.fields[1])" class="{{registerModal.showPasswordClass}}"></div>
+                    <div id="login_create_show_password_note">{{interfaceLabels[registerModal.loginShowPassword]}}</div>
+
+                </div>
+                <div id="login_create_loading" class="keyboard_dialog_loading" ng-show="registerModal.submitting"></div>
+                <div id="login_create_submit_btn" class="keyboard_submit_btn confirm {{registerModal.emailValid && registerModal.passwordValid ? registerModal.registerButtonClass : ''}}" ng-click="registerModal.register()" ng-hide="registerModal.submitting"><span class="{{langClass}}">{{interfaceLabels[registerModal.globalSignup]}}</span>
+                </div>
+                <a id="login_account_disclaimer_btn"  class="{{registerModal.registerButtonClass}}" ng-click="registerModal.toggleTermsAcceptance()"></a>
+                <div id="cbox-glow" ng-hide="registerModal.termsAccepted"></div>
+
+
+                <div id="login_account_disclaimer" ng-bind-html="interfaceLabels[registerModal.registerDisclaimer]">
+
+                </div>
+
+                <div id="login_tos_privacy">
+                    <div id="login_tos_privacy_wrapper">
+                        <div class="terms_container" ng-bind-html="registerModal.termsOfServicePpol">
+
+                        </div>
+                    </div>
+                </div>
+
+
+        </div>
+    </div>
+</div>

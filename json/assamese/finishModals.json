@@ -1,0 +1,20 @@
+{
+    "emailresults.enter.email": "আপোনাৰ ই-মেইল ঠিকনা প্ৰবিষ্ট কৰক",
+    "emailresults.enter.email.to.send.results": "আপোনাৰ ফলাফল প্ৰেৰণ কৰিবলৈ আপোনাৰ ই-মেইল ঠিকনা প্ৰবিষ্ট কৰক",
+    "emailresults.email.sent": "আপোনাৰ ফলাফল প্ৰাপ্ত কৰিবলৈ আপোনাৰ ই-মেইল পৰীক্ষা কৰক।",
+    "emailresults.by.clicking.send": "আপোনাৰ ফলাফল ই-মেইল কৰি, আপুনি এইয়া স্বীকাৰ কৰে যে আপোনাৰ তথ্য সংৰক্ষণ কৰিব পৰা যায়।",
+    "global.send": "প্ৰেৰণ কৰক",
+    "finishModal.email.never.spam": "(আমি আপোনাক স্পাম নকৰোঁ। প্ৰতিশ্ৰুতি!)",
+    "finishModal.printwarning": " সতৰ্ক বাৰ্তা! ",
+    "finishModal.makesure": "অনুগ্ৰহ কৰি প্ৰিন্টাৰৰ ক্ষেত্ৰ অৱৰোধ নকৰিব",
+    "finishModal.printinstruct": "পৰীক্ষাৰ ফলাফল পিছলি যাবলৈ তলত প্ৰিণ্ট বুটাম টিপক",
+    "finishModal.notavail": "কাগজ উপলব্ধ নহয়",
+    "finishModal.papernot": " দুঃখিত, Hpod ত প্ৰিণ্ট কাগজ উপলব্ধ নহয়",
+    "finishModal.refill": "আমি সোনকালেই পুনৰ পূৰ কৰিম...",
+    "finishModal.printRes": "ফলাফল প্ৰিন্ট কৰক",
+    "finishModal.okayy": "হ'ব",
+    "finishModal.printEcgraph": "ECG গ্ৰাফ প্ৰিন্ট কৰক",
+    "global.requird.test": "No Test Results",
+    "emailresults.enter.email.to.send.abharesults": "Enter your Email Address to get your card",
+    "emailresults.by.clicking.abhasend": "By emailing your results, you accept that your card may be saved"
+}

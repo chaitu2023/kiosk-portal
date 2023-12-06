@@ -1,0 +1,13 @@
+{
+    "fullbodybmc1.title": "বিএমসি",
+    "text.instructions": "নির্দেশাবলী",
+    "fullbodybmc1.holdhands": "আলতো করে হাতল ধরে রাখুন",
+    "fullbodybmc1.restwristt": "ইলেক্ট্রোডের উপর আপনার কব্জি বিশ্রাম",
+    "fullbodybmc1.restLegsOnfootPads": "ফুটরেস্টের প্যাডে আপনার পা দুটি রেখে দিন",
+    "fullbodybmc1.will.beginBefore": "আপনার হাত সঠিক অবস্থানে রাখার পরে এই পরীক্ষা শুরু হবে",
+    "fullbodybmc1.will.begin": "আপনার হাত জায়গায় হলে পরীক্ষা শুরু হবে",
+    "fullbodybmc1.skip": "এড়িয়ে যান",
+    "fullbodybmc1.startTest": "পরীক্ষা শুরু করুন",
+    "fullbodybmc1.bmc.progress": "বিএমসি পরীক্ষা চলছে...",
+    "weight04.bmc.hands.removed.warning": "মনে হচ্ছে কিছু একটা সমস্যা হয়েছে। আবার চেষ্টা করা যাক।"
+}

@@ -1,0 +1,74 @@
+/*{
+    "start01.bmc.weight.and.bmc":"Check my<br/><span class='splash_test_title'>Weight &amp;<br/>Body Fat Percentage</span>",
+    "start01.bmc.weight.and.bmc_with_spo2_temp":"<span class='splash_test_title'>Weight &amp;<br/>Body Fat Percentage</span>",
+
+    "weight05.body.fat":"Body Fat",
+    "weight05.body.fat.scale" : "Body Fat Percentage Scale",
+    "weight03.body.fat.percent":"%",
+    "weight04.bmc.body.composition" : "Body Fat Percentage",
+
+
+    "weight04.bmc.place.hands" : "1. Wrap your hands around both handles in front of you, covering the green line.",
+    "weight04.bmc.still.hands" : "2. Keep your hands in place until your results are displayed.",
+    "weight04.bmc.test.will.begin" : "This test will begin when your hands are in place",
+    "weight04.bmc.test.remain.still" :"Remain still with your hands on the handles until your results are displayed​",
+    "weight04.bmc.hands.removed.warning" : "It looks like something went wrong. Let’s try again.",
+    "global.bmc.your.body":"Your Body",
+    "global.bmc.essential.fat":"Essential Fat",
+    "global.bmc.athletes":"Athletes",
+    "global.bmc.fitness":"Fitness",
+    "global.bmc.average":"Average",
+    "global.bmc.obese":"Obese",
+    "global.bmc.body.fat.percentage":"Body Fat Percentage",
+    "global.bmc.body.fat":"Body Fat",
+    "global.bmc.body.fat.percentage.description":"Your body fat percentage is the percentage of fat your body contains. If you weigh 150 pounds and have 10% body fat, it means that your body is made up of 15 pounds fat and 135 pounds lean mass.",
+    "global.bmc.lean.mass":"Lean Mass",
+    "global.bmc.lean.mass.description":"Lean mass is everything else your body is made up of other than fat. This includes things like your bones, muscle, organs, etc.",
+
+
+    "global.ekg.title":"ECG",
+    "global.ekg.subtitle" : "Instructions",
+
+     
+    "global.class":"Classification",
+    "global.percent":"% fat",
+
+    "bmc01_audio01" : "sounds/telugu/vo_bmc_audio_one.wav",
+    "bmc01_audio02" : "sounds/telugu/vo_bmc_place_hands_higi.wav",
+    "bmc01_audio03" : "sounds/telugu/vo_bmc_still_hands_higi.wav",
+    "bodycomp.begin" : "Before we begin...",
+    "bodycomp.error" : "Just to be safe, we don’t recommend you take the body fat test at this time.",
+    "bodycomp.error.button" : "Skip",
+    "bodycomp.question.one" : "Are you pregnant?",
+    "bodycomp.question.two" : "Do you have an implanted medical device (i.e. pacemaker)?",
+
+    "weight05.bmc.hardstop.message" : "Your height or weight falls outside the ranges shown to the right, making it difficult for us to provide accurate body fat results.",
+    "weight05.bmc.hardstop.height.range" : "Height range",
+    "weight05.bmc.hardstop.weight.range" : "Weight range",
+
+    "weight05.bmc.hardstop.height.range.bottom.female" : "4&rsquo;11&rsquo;&rsquo;",
+    "weight05.bmc.hardstop.height.range.top.female" : "7&rsquo;0&rsquo;&rsquo;",
+    "weight05.bmc.hardstop.weight.range.bottom.female" : "97",
+    "weight05.bmc.hardstop.weight.range.top.female" : "485",
+
+    "weight05.bmc.hardstop.height.range.bottom.male" : "5&rsquo;3&rsquo;&rsquo;",
+    "weight05.bmc.hardstop.height.range.top.male" : "7&rsquo;0&rsquo;&rsquo;",
+    "weight05.bmc.hardstop.weight.range.bottom.male" : "113",
+    "weight05.bmc.hardstop.weight.range.top.male" : "575",
+
+    "infobox.about.bmc":"What is body fat percentage and lean mass?",
+    "infobox.about.bmc.subtitle":"<p>Body mass composition is the fancy way of looking at what makes up your body weight. Put simply, your body is made up of fat and lean mass. Have you ever heard someone say they want to “lose weight”? What they usually mean is that they want to lose fat and not lean mass. By tracking these numbers, you’ll know what kind of weight you’re losing or gaining which is key in long-term weight loss and maintenance.</p>",
+  "infobox.about.bmc.body.fat.percentage" : "Body Fat Percentage",
+  "infobox.about.bmc.title.mini.male":"Male body fat percentage categories",
+    "infobox.about.bmc.title.mini.female":"Female body fat percentage categories",
+    "infobox.about.bmc.subtitle.mini":"This chart below gives you an idea of what  percentages are considered healthy. Keep<br/>in mind the percentages considered healthy are different for men and women.",
+    "infobox.about.bmc.point01":"< 18",
+    "infobox.about.bmc.point02":"18 - 25",
+    "infobox.about.bmc.point03":"> 25",
+    "infobox.about.bmc.point04":"< 25",
+    "infobox.about.bmc.point05":"25 - 32",
+    "infobox.about.bmc.point06":"> 32",
+
+    "infobox.about.bmc.citation":"This chart reflects the body fat percentage categories defined by the American Council on Exercise (2003) ACE Personal Trainer Manual, 3rd Ed., Ch. 6, Pg. 188, Table 6.14, General Body Fat Percentage Categories"
+
+}*/

@@ -1,0 +1,14 @@
+{
+  "zugEcg1.singleLeadecgtitledisp": "ईसीजी - सिंगल लीड",
+  "zugEcg1.threeLeadecgtitledisp": "ईसीजी - तीन लीड",
+  "zugEcg1.sixLeadecgtitledisp": "ईसीजी - छह लीड",
+  "zugEcg1.sitStraight": "सीधे बैठें",
+  "zugEcg1.restWrist": "अपनी कलाई को हैंडल पर टिकाएं",
+  "zugEcg1.placeleftleg": "अपना बायां पैर पेडल में रखें",
+  "zugEcg1.placebothleg": "अपने दोनों पैरों पर क्लैंप रखें",
+  "zugEcg1.skipTest": "छोड़ें",
+  "zugEcg1.startTest": "परीक्षण शुरू करें",
+  "zugEcg1.EcgTestWillBegin": "यह परीक्षण तब शुरू होगा जब आपके हाथ और पैर निर्धारित स्थान पर होंगे",
+  "zugEcg1.keepHandsProper": "कृपया अपने हाथ ठीक से रखें",
+  "zugEcg1.keepLegsProper": "कृपया अपना पैर ठीक से रखें"
+}

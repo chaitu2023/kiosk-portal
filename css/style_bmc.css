@@ -1,0 +1,1678 @@
+.BMCHealth_instructions_header_container {
+	margin-top: 11%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.BMCHealth_instructions_header_image {
+    width: 45px;    
+    position: relative;
+    top: 5px;
+}
+
+.BMCHealth_instructions_header_text {
+	padding-left: 10px;
+    font-weight: 500;
+    margin-top: 0px;
+    font-family: 'LatoItalic';
+    font-size: 34px;
+    color: #4d4d4d;
+}
+
+.BMCHealth_instructions_main_container{
+	margin-top: -23px;    
+    box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;
+    background-color: #dddddd;
+    height: 345px;
+}
+
+/* slides Forward ------------------------ */
+.slide.ng-leave, .bmc-instruction-container.ng-leave, .bmc-test-container.ng-leave {
+    -webkit-animation: slideOutLeft 0.5s both ease-in;
+    -moz-animation: slideOutLeft 0.5s both ease-in;
+    animation: slideOutLeft 0.5s both ease-in; 
+}
+
+.slide.ng-enter, .bmc-instruction-container.ng-enter, .bmc-test-container.ng-enter {
+    -webkit-animation: slideInRight 0.5s both ease-in;
+    -moz-animation: slideInRight 0.5s both ease-in;
+    animation: slideInRight 0.5s both ease-in; 
+}
+
+.bmc-instruction-container.back.ng-leave, .bmc-test-container.back.ng-leave {
+    -webkit-animation: slideOutRight 0.5s both ease-in;
+    -moz-animation: slideOutRight 0.5s both ease-in;
+    animation: slideOutRight 0.5s both ease-in; 
+}
+
+.bmc-instruction-container.back.ng-enter, .bmc-test-container.back.ng-enter {
+    -webkit-animation: slideInLeft 0.5s both ease-in;
+    -moz-animation: slideInLeft 0.5s both ease-in;
+    animation: slideInLeft 0.5s both ease-in; 
+}
+
+.bmc-instruction-container.bmc-leave, .bmc-test-container.bmc-leave {
+    -webkit-animation: slideOutLeft 0.5s both ease-in;
+    -moz-animation: slideOutLeft 0.5s both ease-in;
+    animation: slideOutLeft 0.5s both ease-in; 
+}
+
+.bmc-instruction-container.bmc-enter, .bmc-test-container.bmc-enter {
+    -webkit-animation: slideInRight 0.5s both ease-in;
+    -moz-animation: slideInRight 0.5s both ease-in;
+    animation: slideInRight 0.5s both ease-in; 
+}
+
+.bmc-instruction-container.back.bmc-leave, .bmc-test-container.back.bmc-leave {
+    -webkit-animation: slideOutRight 0.5s both ease-in;
+    -moz-animation: slideOutRight 0.5s both ease-in;
+    animation: slideOutRight 0.5s both ease-in; 
+}
+
+.bmc-instruction-container.back.bmc-enter, .bmc-test-container.back.bmc-enter {
+    -webkit-animation: slideInLeft 0.5s both ease-in;
+    -moz-animation: slideInLeft 0.5s both ease-in;
+    animation: slideInLeft 0.5s both ease-in; 
+}
+
+.BMCHealth_instructions_heading{
+	text-align: center;
+    font-size: 24px;
+    color: #4a4a4a;
+    margin-left: 9px;
+    padding-top: 10px;
+    font-family: 'LatoSemibold';
+}
+
+.BMCHealth_instructions_circle_container_1 {
+	top: 40px;
+    left: 121px;
+    opacity: 0.6;
+    position: absolute;
+}
+
+.BMCHealth_instructions_circle_container_2 {
+	top: 40px;
+    left: 455px;
+    opacity: 0.6;
+    position: absolute;
+}
+
+.BMCHealth_instructions_circle_place_overlays {
+	background: transparent url(../images/tests_instruction_circle20121009_transparent.png) top left no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: block;
+    height: 224px;
+    width: 224px;
+    background-size: cover;
+}
+
+#BMCHealth_instructions_circle1_place_frames {
+	background: transparent url(../images/hands-sprite-15-3-18-higi.png) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+#BMCHealth_instructions_circle2_place_frames {
+    background: transparent url(../images/sitting-sprite-2015-03-18-higi.png) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+.BMCHealth_instructions_text_1{
+	top: 270px;
+    font-size: 15px;
+    color: #6d6d6de8;
+    font-weight: 500;
+    left: 121px;
+    text-align: center;
+    width: 224px;
+    height: 70px;
+    position: absolute;
+    font-family: 'LatoRegular';
+}
+
+.BMCHealth_instructions_text_2{
+	top: 270px;
+    font-size: 15px;
+    color: #6d6d6de8;
+    font-weight: 500;
+    left: 455px;
+    text-align: center;
+    width: 224px;
+    height: 70px;
+    position: absolute;
+    font-family: 'LatoRegular';
+}
+
+.BMCHealth_instructions_before_begin_text{
+	top: 300px;
+    font-size: 19px;
+    color: #585858;
+    margin-left: 259px;
+    padding-top: 15px;
+    position: absolute;
+    font-family: 'LatoSemibold';
+}
+
+.bmc-test-container {
+    position: absolute;
+    width: 800px;
+    height: 600px; 
+}
+
+.bmc-test-container .instruction {
+    position: absolute;
+    top: 140px;
+    color: #4A4A4A;
+    left: 182.5px;
+    width: 435px;
+    text-align: center;
+    font-family: "IntervalSansProBoldItalic";
+    font-size: 20px; 
+}
+
+/*.bmc-test-container .bmc-gauge-container {
+    overflow: hidden;
+    height: 331.1px;
+    width: 308px;
+    position: absolute;
+    top: 200px;
+    left: 246px; 
+}*/
+
+.bmc-test-container .bmc-gauge-container .bmc-gauge-bg-wave-container {
+    width: 380px;
+    height: 380px;
+    position: absolute;
+    overflow: hidden;
+    top: 380px; 
+}
+
+.bmc-test-container .bmc-gauge-container .bmc-gauge-bg-wave-container img.bmc-gauge-bg-wave {
+    width: 380px;
+    height: 380px;
+    position: absolute;
+    left: 0px;
+    top: 0px; 
+}
+
+.bmc-test-container .bmc-gauge-container img.bmc-gauge-mask {
+    height: 101%;
+    width: 101%; 
+}
+
+.bmc-test-container {
+    position: absolute;
+    width: 1280px;
+    height: 1024px; 
+    top: 0px;
+}
+
+.bmc-test-container .instruction {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    text-align: center;
+    font-family: "IntervalSansProCondSemiBoldRg";
+    font-size: 30px;
+    left: 0px; 
+}
+
+/*.bmc-test-container .bmc-gauge-container {
+    overflow: hidden;
+    height: 430px;
+    width: 400px;
+    position: absolute;
+    top: 300px;
+    left: 440px; 
+}*/
+
+.bmc-test-container .bmc-gauge-container .bmc-gauge-bg-wave-container {
+    width: 380px;
+    height: 380px;
+    position: absolute;
+    overflow: hidden;
+    top: 380px; 
+}
+
+.bmc-test-container .bmc-gauge-container .bmc-gauge-bg-wave-container img.bmc-gauge-bg-wave {
+    width: 380px;
+    height: 380px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index : 999 !important;
+}
+
+.bmc-gauge-container-new{
+    overflow: hidden;
+    height: 331.1px;
+    width: 301px;
+    position: absolute;
+    top: 10px;
+    left: 246px;
+}
+
+.BMCHealth_test_in_progress{
+    text-align: center;
+    font-family: 'LatoRegular';
+    color: #4a4a4a;
+    font-size: 18px;
+    top: 315px;
+    position: absolute;
+    left: 182.5px;
+    width: 435px;
+}
+
+.BMCHealth_results_main_container{
+    height: 360px;
+    margin-top: 130px;
+    background-color: #dddddd;
+    box-shadow: 0px 5px 7px #afafaf;
+}
+
+.BMCHealth_results_header_container{
+    margin-left: 26px;
+    padding-top: 15px;
+}
+
+.BMCHealth_results_header_image{
+    float: left;
+    width: 45px;
+}
+
+.BMCHealth_results_header_text{
+    padding-left: 58px;
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #4a4a4a;
+    font-family: 'LatoItalic';
+}
+
+.BMCHealth_results_small_text{
+    color: #797979;
+    font-family: 'latoItalic';
+}
+
+/*.BMCHealth_results_tab {
+    display: inline-flex;
+    width: 94.1%;
+    margin-left: 24px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: -16px;
+    overflow: hidden;
+    height: 42px;
+    background-color: #f2f2f2;
+}*/
+
+/*.BMCHealth_results_tab button {
+    color: #3887b25c;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    float: left;
+    padding: 11px 39px;
+    transition: 0.3s;
+    font-weight: 0;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'IntervalSansProMediumRegular';
+    height: 42px;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    border-right: 2px solid #999999cf;
+    box-shadow: 0 0 60px 1px #999999ba inset;*/
+    /*box-shadow: 0 0 70px 1px #999999ba inset;*/
+    /*box-shadow: 0 0 45px 3px #999999ba inset;*/
+/*}*/
+
+.childs_active {
+    font-weight: 600 !important;
+    color: #3887b2e6 !important;
+    background-color: #ffffff !important;
+    border: none !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    z-index: 1;
+    /*box-shadow: 0px 10px 0px #f2f2f2, 1px 1px 6px #AFAFAF, -1px 0px 6px #AFAFAF !important;*/
+    box-shadow: 0 -5px 5px -5px #999;
+}
+
+
+.BMCHealth_results_tabcontent {
+    margin-top: -17px;
+    display: none;
+    padding: 10px;
+    border-top: none;
+    width: 733px;
+    margin-left: 25px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #ffffff;
+    outline: none;
+    height: 210px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+}
+
+.first_tab_content{
+    /*display: block;*/
+    border-top-right-radius: 10px;
+    width: 738px;
+}
+
+.BMCHealth_tab1{
+    top: -16px;
+    margin-left: 25px;
+    color: #696969;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 11px 30px;
+    /*transition: 0.3s;*/
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'LatoRegular';
+    height: 42px;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: 2px solid #999999cf;
+    /*box-shadow: 0 0 60px 1px #999999ba inset;*/
+    /*box-shadow: 0 0 80px 1px #999999ba inset;*/
+    background: rgb(190,190,190);
+    position: relative;
+    border-top-left-radius: 10px;
+}
+
+.BMCHealth_tab2{
+    top: -16px;
+    margin-left: -4px;
+    color: #696969;
+    outline: none;
+    cursor: pointer;
+    padding: 11px 30px;
+    /*transition: 0.3s;*/
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'LatoRegular';
+    height: 42px;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: 2px solid #999999cf;
+    /*box-shadow: 0 0 60px 1px #999999ba inset;*/
+    /*box-shadow: 0 0 80px 1px #999999ba inset;*/
+    background: rgb(190,190,190);
+    position: relative;
+}
+
+.BMCHealth_tab3{
+    top: -16px;
+    margin-left: -4px;
+    color: #696969;
+    outline: none;
+    cursor: pointer;
+    padding: 11px 29.5px;
+    /*transition: 0.3s;*/
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'LatoRegular';
+    height: 42px;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: 2px solid #999999cf;
+    /*box-shadow: 0 0 60px 1px #999999ba inset;*/
+    /*box-shadow: 0 0 80px 1px #999999ba inset;*/
+    background: rgb(190,190,190);
+    position: relative;
+}
+
+.BMCHealth_tab4{
+    top: -16px;
+    margin-left: -5px;
+    color: #696969;
+    outline: none;
+    cursor: pointer;
+    padding: 11px 27px;
+    /*transition: 0.3s;*/
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'LatoRegular';
+    height: 42px;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    /*box-shadow: 0 0 60px 1px #999999ba inset;*/
+    /*box-shadow: 0 0 80px 1px #999999ba inset;*/
+    background: rgb(190,190,190);
+    position: relative;
+    border: none;
+    border-top-right-radius: 10px;
+}
+
+.BMCHealth_tab4.childs_active{
+    font-weight: 600 !important;
+    padding: 11px 26px;
+    color: #3887b2e6 !important;
+    background-color: #ffffff !important;
+    border: none !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    z-index: 1;
+    /*box-shadow: 0px 10px 0px #f2f2f2, 1px 1px 6px #AFAFAF, -1px 0px 6px #AFAFAF !important;*/
+    box-shadow: 0 -5px 5px -5px #999;
+}
+
+.button_anchor1::before,
+.button_anchor1::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    position: absolute;
+    top: 91px;
+}
+
+.button_anchor1::before{
+    background: rgb(190,190,190);
+    background: transparent;
+    left: 4px;
+}
+
+.button_anchor1::after{
+    background: transparent;
+    right: 562px;
+}
+
+.button_anchor1.parent_active::before{
+    background: transparent;
+    left: 4px;
+}
+
+.button_anchor1.parent_active::after{
+    background: rgb(190,190,190);
+    right: 564px;
+}
+
+.button_anchor2::before,
+.button_anchor2::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    position: absolute;
+    top: 91px;
+}
+
+.button_anchor2::before{
+    background: transparent;
+    left: 196px;
+}
+
+.button_anchor2::after{
+    background: transparent;
+    right: 352px;
+}
+
+.button_anchor2.parent_active::before{
+    background: rgb(190,190,190);
+    left: 198px;
+}
+
+.button_anchor2.parent_active::after{
+    background: rgb(190,190,190);
+    /*right: 355px;*/
+    right: 335px;
+}
+
+.button_anchor3::before,
+.button_anchor3::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    position: absolute;
+    top: 91px;
+}
+
+.button_anchor3::before{
+    background: transparent;
+    left: 406px;
+}
+
+.button_anchor3::after{
+    background: transparent;
+    right: 163px;
+}
+
+.button_anchor3.parent_active::before{
+    background: rgb(190,190,190);
+    /*left: 407px;*/
+    left: 420px;
+}
+
+.button_anchor3.parent_active::after{
+    background: rgb(190,190,190);
+    right: 164px;
+}
+
+.button_anchor4::before,
+.button_anchor4::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    position: absolute;
+    top: 91px;
+}
+
+.button_anchor4::before{
+    background: transparent;
+    left: 596px;
+}
+
+.button_anchor4::after{
+    background: #dddddd;
+    right: 2px;
+}
+
+.button_anchor4.parent_active::before{
+    background: rgb(190,190,190);
+    left: 597px;
+}
+
+.button_anchor4.parent_active::after{
+    background: transparent;
+    right: 2px;
+}
+
+.BMCHealth_tab1.childs_active::before,
+.BMCHealth_tab1.childs_active::after{
+    z-index: 1;
+    background: #ffffff;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+}
+
+.BMCHealth_tab1.childs_active::before{
+    left: -10px;
+    background: transparent;
+}
+
+.BMCHealth_tab1.childs_active::after{
+    right: -10px;
+}
+
+.BMCHealth_tab2.childs_active::before,
+.BMCHealth_tab2.childs_active::after{
+    z-index: 1;
+    background: #ffffff;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+}
+
+.BMCHealth_tab2.childs_active::before{
+    left: -10px;
+}
+
+.BMCHealth_tab2.childs_active::after{
+    right: -10px;
+}
+
+.BMCHealth_tab3.childs_active::before,
+.BMCHealth_tab3.childs_active::after{
+    z-index: 1;
+    background: #ffffff;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+}
+
+.BMCHealth_tab3.childs_active::before{
+    left: -10px;
+}
+
+.BMCHealth_tab3.childs_active::after{
+    right: -10px;
+}
+
+.BMCHealth_tab4.childs_active::before,
+.BMCHealth_tab4.childs_active::after{
+    z-index: 1;
+    background: #ffffff;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+}
+
+.BMCHealth_tab4.childs_active::before{
+    left: -10px;
+}
+
+.BMCHealth_tab4.childs_active::after{
+    right: -10px;
+    background: transparent;
+}
+
+.BMCHealth_results_fatAnalysis_title_container{
+    background-color: #E6E6E6;
+    height: 210px;
+    width: 103px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.BMCHealth_results_fatAnalysis_parameter_title{
+    margin-top: 0px;
+    font-size: 14px;
+    color: gray;
+    background-color: #f2f2f2;
+    padding: 30px 0px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.BMCHealth_results_fatAnalysis_yourscore_title{
+    color: gray;
+    margin-top: 40px;
+    font-size: 14px;
+    background-color: #e6e6e6;
+    padding: 0px 0px;
+    position: relative;
+    top: -18px;
+}
+
+.BMCHealth_results_fatAnalysis_status_title{
+    color: gray;
+    margin-top: -20px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    padding: 10px 0px;
+}
+
+.BMCHealth_results_fatAnalysis_nrg_title{
+    margin-top: 18px;
+    color: gray;
+    font-size: 14px;
+}
+
+.datas_container_1{
+    left: 115px;
+    background-color: transparent;
+}
+
+.datas_container_2{
+    left: 242px;
+    background-color: #E6E6E6;
+}
+
+.datas_container_3{
+    left: 369px;
+    background-color: transparent;
+}
+
+.datas_container_4{
+    left: 496px;
+    background-color: #E6E6E6;
+}
+
+.datas_container_5{
+    left: 623px;
+    background-color: transparent;
+}
+
+.BMCHealth_results_fatAnalysis_datas_container {
+    width: 125px;
+    height: 210px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.BMCHealth_results_fatAnalysis_datas_title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #4a4a4ac4;
+    margin-top: 11px;
+    margin-bottom: 0px;
+    font-family: 'LatoBold';
+}
+
+.BMCHealth_results_fatAnalysis_datas_sub_title {
+    margin: -1px;
+    color: #808080bf;
+    font-size: 14px;
+    text-align: center;
+}
+
+.datas_value3{
+   margin-top: 18px !important;
+}
+
+
+.BMCHealth_results_fatAnalysis_datas_value {
+    margin-top: 33px;
+    font-size: 30px;
+    font-family: 'LatoHeavy';
+    margin-left: 6px;
+    margin-bottom: 0px;
+}
+
+.BMCHealth_results_fatAnalysis_datas_units {
+    color: #4a4a4ae3;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.BMCHealth_results_fatAnalysis_datas_live_status{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a4a4ac4;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: 'LatoHeavy';
+}
+
+.BMCHealth_results_fatAnalysis_datas_Normal_range{    
+    color: #808080bf;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'LatoRegular';
+    position: relative;
+    top: 10px;
+}
+
+.BMCHealth_results_massAnalysis_title_container {
+    background-color: #E6E6E6;
+    height: 210px;
+    width: 103px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.BMCHealth_results_massAnalysis_parameter_title {
+    margin-top: 25px;
+    font-size: 14px;
+    color: gray;
+}
+
+.BMCHealth_results_massAnalysis_yourscore_title {
+    color: gray;
+    margin-top: 54px;
+    font-size: 14px;
+}
+
+.BMCHealth_results_massAnalysis_status_title {
+    color: gray;
+    margin-top: 26px;
+    font-size: 14px;
+}
+
+.BMCHealth_results_massAnalysis_nrg_title {
+    margin-top: 15px;
+    color: gray;
+    font-size: 14px;
+}
+
+.BMCHealth_results_massAnalysis_datas_container {
+    width: 180px;
+    height: 210px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.ma_datas_container_1 {
+    left: 145px;
+    background-color: #ebebeb;
+}
+
+.ma_datas_container_2 {
+    left: 355px;
+    background-color: #E6E6E6;
+}
+
+.ma_datas_container_3{
+    left: 560px;
+    background-color: #ebebeb;
+}
+
+.BMCHealth_results_massAnalysis_datas_title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #4a4a4ac4;
+    margin-top: 11px;
+    margin-bottom: 0px;
+    font-family: 'LatoBold';
+}
+
+.BMCHealth_results_massAnalysis_datas_sub_title {
+    margin: 0px;
+    color: #808080bf;
+    font-size: 14px;
+    text-align: center;
+}
+
+.BMCHealth_results_massAnalysis_datas_value {
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: 'LatoHeavy';
+    margin-left: 0px;
+    color: gray;
+    margin-bottom: 0px;
+}
+
+.BMCHealth_results_massAnalysis_datas_units {
+    padding-left: 3px;
+    font-family: 'LatoRegular';
+    color: #4a4a4ae3;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.BMCHealth_results_massAnalysis_datas_live_status {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a4a4ac4;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: 'LatoHeavy';
+}
+
+.BMCHealth_results_massAnalysis_datas_Normal_range {
+    color: #808080bf;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'LatoRegular';
+    position: relative;
+    top: 10px;
+}
+
+.BMCHealth_results_waterAnalysis_title_container {
+    background-color: #E6E6E6;
+    height: 210px;
+    width: 103px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.BMCHealth_results_waterAnalysis_parameter_title {
+    margin-top: 25px;
+    font-size: 14px;
+    color: gray;
+}
+
+.BMCHealth_results_waterAnalysis_yourscore_title {
+    color: gray;
+    margin-top: 54px;
+    font-size: 14px;
+}
+
+.BMCHealth_results_waterAnalysis_status_title {
+    color: gray;
+    margin-top: 26px;
+    font-size: 14px;
+}
+
+.BMCHealth_results_waterAnalysis_nrg_title {
+    margin-top: 15px;
+    color: gray;
+    font-size: 14px;
+}
+
+.BMCHealth_results_waterAnalysis_datas_container {
+    width: 180px;
+    height: 210px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+
+.wa_datas_container_1 {
+    left: 145px;
+    background-color: #ebebeb;
+}
+
+.wa_datas_container_2 {
+    left: 355px;
+    background-color:#E6E6E6;
+}
+
+
+.BMCHealth_results_waterAnalysis_datas_title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #4a4a4ac4;
+    margin-top: 11px;
+    margin-bottom: 0px;
+    font-family: 'LatoBold';
+}
+
+.BMCHealth_results_waterAnalysis_datas_sub_title {
+    margin: 0px;
+    color: #808080bf;
+    font-size: 17px;
+    text-align: center;
+}
+
+.BMCHealth_results_waterAnalysis_datas_value {
+    font-size: 30px;
+    font-family: 'LatoHeavy';
+    margin-left: 0px;
+    color: gray;
+    margin-bottom: 0px;
+}
+
+.BMCHealth_results_waterAnalysis_datas_units {
+    padding-left: 3px;
+    font-family: 'LatoRegular';
+    color: #4a4a4ae3;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.BMCHealth_results_waterAnalysis_datas_live_status {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a4a4ac4;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: 'LatoHeavy';
+}
+
+.BMCHealth_results_waterAnalysis_datas_Normal_range {
+    color: #808080bf;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'LatoRegular';
+    position: relative;
+    top: 5px;
+}
+
+.BMCHealth_results_miscellaneous_title_container{
+    background-color: #E6E6E6;
+    height: 210px;
+    width: 103px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.BMCHealth_results_miscellaneous_parameter_title{
+    margin-top: 25px;
+    font-size: 14px;
+    color: gray;
+}
+
+.BMCHealth_results_miscellaneous_yourscore_title{
+    color: gray;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.BMCHealth_results_miscellaneous_status_title{
+    color: gray;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.BMCHealth_results_miscellaneous_nrg_title{
+    margin-top: 15px;
+    color: gray;
+    font-size: 14px;
+}
+
+.mi_datas_container_1{
+    left: 116px;
+    background-color: transparent;
+}
+
+.mi_datas_container_2{
+    left: 274px;
+    background-color: #E6E6E6;
+}
+
+.mi_datas_container_3{
+    left: 432px;
+    background-color: transparent;
+}
+
+.mi_datas_container_4{
+    left: 590px;
+    background-color: #87C427;
+}
+
+
+.BMCHealth_results_miscellaneous_datas_container {
+    width: 156px;
+    height: 210px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.BMCHealth_results_miscellaneous_datas_title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #4a4a4ac4;
+    margin-top: 11px;
+    margin-bottom: 0px;
+    font-family: 'LatoBold';
+}
+
+.BMCHealth_results_miscellaneous_datas_sub_title {
+    margin: 0px;
+    color: #808080bf;
+    font-size: 14px;
+    text-align: center;
+}
+
+.BMCHealth_results_miscellaneous_datas_value {
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: 'LatoHeavy';
+    margin-left: 0px;
+    color: gray;
+}
+
+.BMCHealth_results_miscellaneous_datas_units {
+    margin: -30px;
+    font-family: 'LatoRegular';
+    color: #4a4a4ae3;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.BMCHealth_results_miscellaneous_datas_live_status{
+    margin-top: -10px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a4a4ac4;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: 'LatoHeavy';
+}
+
+.BMCHealth_results_miscellaneous_datas_Normal_range{
+    margin: 25px;
+    color: #808080bf;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'LatoRegular';
+}
+
+.BMCHealth_results_miscellaneous_results_container {
+    width: 156px;
+    height: 210px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.BMCHealth_results_miscellaneous_over_alls_status_titles {
+    font-size: 22px;
+    color: #4a4a4aa8;
+    margin-top: 6px;
+    /* font-family: 'IntervalSansProCondSemiBoldRg'; */
+    font-weight: 500;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: 'LatoBold';
+}
+
+.BMCHealth_results_miscellaneous_over_alls_status_sub_titles {
+    font-size: 22px;
+    color: #4a4a4aa8;
+    /* font-family: 'IntervalSansProCondSemiBoldRg'; */
+    margin: -4px;
+    text-align: center;
+    font-family: 'LatoBold';
+}
+
+.BMCHealth_results_miscellaneous_over_alls_status_small_titles {
+    margin-top: 8px;
+    font-size: 15px;
+    color: #6d6d6de8;
+}
+
+.BMCHealth_results_miscellaneous_over_alls_status_status_value {
+    font-size: 23px;
+    margin-top: -4px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.6px;
+    font-family: 'LatoBold';
+}
+
+.BMCHealth_results_miscellaneous_over_alls_status_status_icons {
+    width: 55px;
+    margin-top: -15px;
+}
+
+.bmc_instruction_place_text {
+  text-align: center;
+  top: 155px;
+  width: 224px;
+  height: 70px;
+  position: absolute;
+  font-size: 21px;
+  font-weight: bold;
+  color: #4a4a4a;
+  font-family: 'IntervalSansProMediumRegular'; }
+  .bmc_instruction_place_text {
+  left: 121px; }
+
+.bmc_instruction_place{
+  width: 224px;
+  height: 224px;
+  position: absolute;
+  top: 240px; }
+
+  .bmc_instruction_place {
+  left: 121px; }
+  .bmc_instruction_circle_overlay {
+  background: transparent url("../images/tests_instruction_circle20121009_transparent.png") top left no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: block;
+  height: 224px;
+  width: 224px; 
+  background-size: cover;}
+#bmc_instruction_place_frames {
+  background: transparent url("../images/hands-sprite-15-3-18-higi.png") top left no-repeat;
+  background-size: cover;
+  height: 224px;
+  width: 224px;
+  display: block;
+  z-index: 5; }
+  .bmc_instruction_still_text {
+  text-align: center;
+  top: 155px;
+  width: 224px;
+  height: 70px;
+  position: absolute;
+  font-size: 21px;
+  font-weight: bold;
+  color: #4a4a4a;
+  font-family: 'IntervalSansProMediumRegular'; }
+  .bmc_instruction_still_text {
+  left: 455px; }
+  .bmc_instruction_still {
+  width: 224px;
+  height: 224px;
+  position: absolute;
+  top: 240px; }
+  .bmc_instruction_still {
+  left: 455px; }
+  #bmc_instruction_still_frames {
+  background: transparent url("../images/sitting-sprite-2015-03-18-higi.png") top left no-repeat;
+  background-size: cover;
+  height: 224px;
+  width: 224px;
+  display: block;
+  z-index: 5; }
+
+
+
+
+/* Existing BMC local result page style start */
+.existing_bmc_results_sub_container{
+    width: 92%;
+    margin: auto;
+    background-color: #fff;
+    height: 260px;    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+    padding: 10px;
+    margin-top: -20px;
+}
+
+.existing_bmc_results_title_container{
+    height: 135px;
+    width: 100px;    
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;    
+    background-color: #E6E6E6;
+}
+.existing_bmc_results_parameter_title{
+    background-color: #f2f2f2;
+    padding: 20px 0px;
+    margin-top: 0px;
+    border-radius: 10px 10px 0px 0px;
+    font-size: 14px;
+    color: #383838;
+}
+.existing_bmc_results_yourscore_title{
+    color: #383838;
+    font-size: 14px;    background-color: #e6e6e6;
+    padding: 20px 0px;
+    margin-top: -14px;
+}
+.existing_bmc_results_param1_container{
+    height: 135px; 
+    background-color: #fff; 
+    left:115px; 
+    width: 155px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+.existing_bmc_results_param1_title, .existing_bmc_results_param2_title, .existing_bmc_results_param3_title{
+    font-size: 24px;
+    font-weight: 500;
+    color: #4a4a4ae3;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: LatoBold;
+}
+.existing_bmc_results_parm1_sub_title, .existing_bmc_results_parm2_sub_title, .existing_bmc_results_parm3_sub_title{
+    font-size: 14px; 
+    color: #6d6d6de8; 
+    position-top: 0px; 
+    font-family: LatoRegular;
+    text-align: center;
+    margin:0px;
+}
+.existing_bmc_results_parm1_value, .existing_bmc_results_parm2_value, .existing_bmc_results_parm3_value{
+    margin-top: 20px;
+    font-size: 32px;
+    margin-left: 6px;
+    color: gray;
+    font-family: LatoHeavy;
+    margin-bottom: 0px;
+}
+.existing_bmc_results_param2_container{
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+    height: 135px; 
+    background-color: #e6e6e6; 
+    left:275px; 
+    width: 155px;
+}
+.existing_bmc_results_param3_container{
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+    height: 135px; 
+    background-color: #fff; 
+    left:435px; 
+    width: 155px;
+}
+.existing_bmc_results_over_all_status_container{
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 15px;
+    text-align: center;
+    left:595px; 
+    width: 155px; 
+    height: 260px; 
+    background-color: #e6e6e6;
+}
+
+.existing_bmc_results_over_all_status_titles{
+    font-size: 20px;
+    color: #4a4a4aa8;
+    margin-top: 6px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: LatoBold;
+    width: 90%
+}
+.existing_bmc_results_overall_sub_title{
+    font-size: 14px; 
+    color: #6d6d6de8; 
+    position-top: 0px; 
+    font-family: LatoRegular;
+    text-align: center;
+    margin:10px;
+}
+.existing_bmc_overall_status_txt{
+    font-size: 17px;
+    color: #fff;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: LatoHeavy;
+}
+.existing_bmc_results_status_bar_container {
+    margin-top: 138px;
+    height: 120px;
+    width: 580px;
+    background-color: #E6E6E6;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+.existing_bmc_results_bodyfat_scale{
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 120px;
+}
+.existing_bmc_results_status_bar_heading{
+    text-align: center;
+    margin: 0px;
+    margin-top: 4px;
+    color: gray;
+}
+#existing_bmc_bodyfat_scale {
+    left: 36px;
+    top: 50px;
+    width: 90%;
+    /*height: 55px;*/
+    height: 61px;
+    margin: auto;}
+
+.weight_scale_m {
+    background: url(../images/bmc_scale_male_wide.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 520px 50px;
+    background-position: 0px 10px;
+}
+.weight_scale_f{
+    background: url(../images/bmc_scale_female_wide.png);
+    background-repeat: no-repeat;
+    background-size: 520px 50px;
+    background-position: 0px 10px;
+}
+
+  #existing_bmc_bodyfat_scale div[id*='bmc_'] {
+      top: 72px; }
+    #existing_bmc_bodyfat_scale #existing_bmc_01 {
+      left: 40px;  top:47px;}
+    #existing_bmc_bodyfat_scale #existing_bmc_02 {
+      left: 200px; top:47px;}
+    #existing_bmc_bodyfat_scale #existing_bmc_03 {
+      left: 375px;  top:47px;}
+    #existing_bmc_bodyfat_scale #existing_bmc_04 {
+      left: 270px;  top:47px;}
+    #existing_bmc_bodyfat_scale #existing_bmc_05 {
+      left: 365px;  top:47px;}
+
+.existing_bmc_scale_text {
+    color: #383838;
+    height: 30px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    padding-top: 5px;
+    width: 100px;
+    font-size: 13px;
+}
+.existing_bmc_scale_text span{ 
+    /*top: 10px;*/
+    top: 15px;
+    position: relative;
+}
+.existing_bmc_arrow-up i{
+    color: #000;
+    font-size: 25px;
+    position: relative;
+    /*top: -30px;*/
+    top: -20px;
+}
+.existing_bmc_bg_color1{
+    background-color: #83d501;
+}
+.existing_bmc_bg_color2{
+    background-color: #ef940f;
+}
+.existing_bmc_bg_color3{
+    background-color: #ac0404;
+}
+.existing_bmc_bg_color3 p:first-child, 
+.existing_bmc_bg_color3 p:nth-child(2) {
+    color: #d1b8b8;
+}
+.existing_bmc_overall_ststus_icon{
+    margin-top: -5px;
+    width: 90px;
+    margin-bottom: 5px;
+}
+
+#hardStopMessage {
+  background: url("../images/bmc_notice_higi.png") no-repeat;
+  background-size: cover;
+  height: 72px;
+  width: 719px;
+  position: absolute;
+  top: 400px;
+  color: #7c7c7c;
+  left: 40.5px;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 4px; }
+  #hardStopMessage .message, #hardStopMessage #bodycomp_warning_modal .error, #bodycomp_warning_modal #hardStopMessage .error {
+    left: 20px;
+    top: 28px;
+    font-size: 11px;
+    width: 340px;
+    line-height: 13px;
+    position: absolute; }
+  #hardStopMessage .weight-range {
+    position: absolute;
+    left: 400px;
+    top: 44px;
+    font-size: 12px; }
+  #hardStopMessage .height-range {
+    left: 400px;
+    top: 20px;
+    font-size: 12px;
+    position: absolute; }
+  #hardStopMessage .height-range-bottom {
+    position: absolute;
+    top: 21px;
+    font-size: 11px;
+    left: 500px; }
+  #hardStopMessage .height-range-top {
+    position: absolute;
+    top: 21px;
+    font-size: 11px;
+    left: 607px; }
+  #hardStopMessage .weight-range-bottom {
+    position: absolute;
+    top: 46px;
+    font-size: 11px;
+    left: 500px; }
+  #hardStopMessage .weight-range-top {
+    position: absolute;
+    top: 21px;
+    top: 46px;
+    font-size: 11px;
+    left: 607px; }
+
+  .high_color{
+    color: #FC3030;
+  }
+  .normal_color{
+    color: #87C427;
+  }
+  .acceptable_color{
+    color: #ef940f;
+  }
+  .low_color{
+    color: #e4ef0f;
+  }
+  #BMCHealth_instructions_circle3_place_frames {
+    background: transparent url(../images/leg.png) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+  }
+  .BMCHealth_instructions_circle_container_3 {
+    top: 40px;
+    left: 560px;
+    opacity: 0.6;
+    position: absolute;
+  }
+  .BMCHealth_instructions_text_3{
+    top: 270px;
+    font-size: 15px;
+    color: #6d6d6de8;
+    font-weight: 500;
+    left: 559px;
+    text-align: center;
+    width: 224px;
+    height: 70px;
+    position: absolute;
+    font-family: 'LatoRegular';
+}
+
+.BMCHealth_results_fatAnalysis_datas_container_without_VF {
+    width: 150px;
+    height: 210px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+
+.datas_container_6 {
+    left: 260px;
+    background-color: #E6E6E6;
+}
+.datas_container_7 {
+    left: 420px;
+    background-color: transparent;
+}
+.datas_container_8 {
+    left: 585px;
+    background-color: #E6E6E6;
+}
+.FullBodyBMCHealth_instructions_text_2{
+    top: 270px;
+    font-size: 15px;
+    color: #6d6d6de8;
+    font-weight: 500;
+    left: 290px;
+    text-align: center;
+    width: 224px;
+    height: 70px;
+    position: absolute;
+    font-family: 'LatoRegular';
+}
+.FullBodyBMCHealth_instructions_text_1{
+    top: 270px;
+    font-size: 15px;
+    color: #6d6d6de8;
+    font-weight: 500;
+    left: -10px;
+    text-align: center;
+    width: 292px;
+    height: 70px;
+    position: absolute;
+    font-family: 'LatoRegular';
+}
+.FullBodyBMCHealth_instructions_circle_container_1 {
+    top: 40px;
+    left: 15px;
+    opacity: 0.6;
+    position: absolute;
+}
+
+.FullBodyBMCHealth_instructions_circle_container_2 {
+    top: 40px;
+    left: 292px;
+    opacity: 0.6;
+    position: absolute;
+}
+
+#bmc2-nav-tab-container {
+    width: 780px; 
+    display: flex;
+}
+
+#bmc2-nav-tab-container > a {
+    width: 25%;
+}
+
+#bmc2-nav-tab-container a > button {
+    width: 100%;
+    overflow: hidden;
+}

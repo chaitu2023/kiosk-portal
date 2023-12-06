@@ -1,0 +1,91 @@
+<!-- <div id="slide_title" ng-hide="bpAd.showInteractiveForm">{{interfaceLabels[slideTitle]}}</div>
+<div id="slide_subtitle" class="bloodpressure02_subtitle {{bpClassOverride}}" ng-hide="bpAd.showInteractiveForm" >{{interfaceLabels[slideSubTitle]}}</div>
+
+<div id="bloodpressure_cancel_pane" class="adFadeIn" ng-show="testCanceled">
+    <div id="bloodpressure_cancel_icon"></div>
+    <div id="bloodpressure_cancel_text"><span >{{interfaceLabels[bpCancelText]}}</span></div>
+</div>
+
+<div id="bloodpressure_pane" ng-hide="testCanceled" ng-class="fadeOutCancel">
+    <div id="bpgauge_stop_button_message" ng-hide="bpAd.showInteractiveForm"></div>
+    <div id="bloodpressure_ad" ng-show="bpAd.adVisible" class="{{bpAd.adTransitionClass}}" >
+        <div class="ad-container" >
+            <img id="finalresults_ad_image" height="100%" ng-show="bpAd.adVisibleImage"  ng-src="{{bpAd.adImageSrc}}"/>
+            <div id="bpad-video-wrapper" class="video-wrapper" ng-show="bpAd.adVisibleVideo">
+
+            </div>
+        </div>
+        <a class="replay-video {{langClass}}" ng-show="bpAd.replayVideoButtonVisible && bpTestDone" ng-click="bpAd.replayAdVideo()" ng-bind-html="interfaceLabels[bpAd.replayVideo]"></a>
+        <div class="timer" ng-if="bpAd.showTimer">{{bpAd.adVideoInfo.remaining}}</div>
+    </div>
+    <div class="ad-cta slideInUp" ng-if="bpAd.isInteractive && bpAd.interactiveButtonsVisible && bpTestDone">
+        <a class="accept" ng-click="bpAd.loadInteractiveForm()">{{bpAd.acceptLabel}}</a>
+        <a class="skip {{bpAd.activeClass}}" ng-click="bpAd.declineAd()">{{bpAd.skipLabel}}</a>
+    </div>
+    <bp-gauge promisename="bpGaugeReady" ng-hide="bpAd.interactiveButtonsVisible && bpTestDone"></bp-gauge>
+</div>
+<interactive-ad-form ng-if="bpAd.showInteractiveForm" adobject="bpAd"></interactive-ad-form>
+<a id="higi_control_left_btn" class="left_control_btn {{langClass}} {{redoTransitionStyle}}" ng-show="redoVisible" ng-click="redoBp()">
+    <span class="{{langClass}}">{{interfaceLabels[redoSlideText]}}</span>
+</a> -->
+
+
+
+
+
+
+<div class="bp_instructions_header_container">
+    <img class="bp_instructions_header_image" src="./images/Icons-32.png">
+    <h1 class="bp_instructions_header_text">{{interfaceLabels[slideTitle]}}</h1> 
+</div>
+
+<div id="bloodpressure_cancel_pane" class="adFadeIn" ng-show="testCanceled" style="z-index: 1;
+    top: 190px;     height: 290px;">
+    <div id="bloodpressure_cancel_icon"></div>
+    <div data-ng-if="!zugBPavaliable" id="bloodpressure_cancel_text" style="height: 90px;"><span >BP Vital test has been Stopped successfully</span></div>
+    <div data-ng-if="zugBPavaliable" id="bloodpressure_cancel_text" style="height: 90px;"><span > Blood pressure test is cancelled </span></div>
+</div>
+
+<div class="bp_instructions_main_container">
+    <p class="bp_cancel_instructions_txt" style="">{{interfaceLabels[slideSubTitle]}}</p>
+    <div id="bloodpressure_pane" ng-hide="testCanceled" ng-class="fadeOutCancel">
+        <div id="bpgauge_stop_button_message" ng-hide="bpAd.showInteractiveForm"></div>
+        <div id="bloodpressure_ad" ng-show="bpAd.adVisible" class="{{bpAd.adTransitionClass}}" >
+            <div class="ad-container" >
+                <img id="finalresults_ad_image" height="100%" ng-show="bpAd.adVisibleImage"  ng-src="{{bpAd.adImageSrc}}"/>
+                <div id="bpad-video-wrapper" class="video-wrapper" ng-show="bpAd.adVisibleVideo">
+
+                </div>
+            </div>
+            <a class="replay-video {{langClass}}" ng-show="bpAd.replayVideoButtonVisible && bpTestDone" ng-click="bpAd.replayAdVideo()" ng-bind-html="interfaceLabels[bpAd.replayVideo]"></a>
+            <div class="timer" ng-if="bpAd.showTimer">{{bpAd.adVideoInfo.remaining}}</div>
+        </div>
+        <div class="ad-cta slideInUp" ng-if="bpAd.isInteractive && bpAd.interactiveButtonsVisible && bpTestDone">
+            <a class="accept" ng-click="bpAd.loadInteractiveForm()">{{bpAd.acceptLabel}}</a>
+            <a class="skip {{bpAd.activeClass}}" ng-click="bpAd.declineAd()">{{bpAd.skipLabel}}</a>
+        </div>
+        <bp-gauge promisename="bpGaugeReady" ng-hide="bpAd.interactiveButtonsVisible && bpTestDone" style="position: relative; top: -115px;"></bp-gauge>
+    </div>
+
+    <a id="bpStop" class="bpEmergencyStop" ng-show="emergencyBtnShow && zugBPavaliable" ng-click="stopBP()">
+        <span class="global_skip_button_text" style="color:red"> {{interfaceLabels[emergencyBtnText]}} </span>
+    </a>
+</div>
+
+<interactive-ad-form ng-if="bpAd.showInteractiveForm" adobject="bpAd"></interactive-ad-form>
+
+<!-- <a class= "global_redo_button" ng-show="redoVisible" ng-click="redoBp()" ng-show="redoVisible">
+    <span class="global_redo_button_text">{{interfaceLabels[bpTestAgain]}}</span>
+</a> -->
+
+<div class="global_redo_button" ng-show="redoVisible" ng-click="redoBp()"  style="left: -36px;">
+    <div class="global_redo_outer_line">
+        <img src="images/Icons-27.png" class="global_redo_button_icon">
+        <small class="global_redo_button_small_text">{{interfaceLabels[bpTestAgain]}}</small>
+    </div>
+</div>
+
+<a id="bmc_skip" ng-show="redoVisible" class="global_skip_button" ng-click="skipBP()" style="left: 630px;">
+    <span class="global_skip_button_text"> Skip BP</span>
+</a>
+

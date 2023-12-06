@@ -1,0 +1,15 @@
+{
+  "infobox.about.spo2": "परिचय SpO<sub>2</sub>",
+  "infobox.about.spo2.subtitle": "आपका बॉडी पल्स ऑक्सीमीटर, जिसे  SpO<sub>2</sub> भी कहा जाता है.",
+  "infobox.about.spo2.point03": "SpO<sub>2</sub> सीमाएं",
+  "infobox.about.spo2.point04": "\n95 >",
+  "infobox.about.spo2.point05": "91 से 95",
+  "infobox.about.spo2.point06": "70 से 90",
+  "infobox.about.spo2.point07": "70 <",
+  "spo2.status.healthy": "स्वस्थ",
+  "spo2.status.acceptable": "स्वीकार्य",
+  "spo2.status.atrisk": "जौखिम में",
+  "spo2.status.low": "निम्न",
+  "infobox.about.spo2.point08": "यह चार्ट रोग नियंत्रण और रोकथाम केंद्रों द्वारा परिभाषित SpO<sub>2</sub> श्रेणियां दर्शाता है।",
+  "infobox.about.spo2.point09": "below 95"
+}

@@ -1,0 +1,26 @@
+{
+
+    "global.lead1comp":"Lead I complete",
+    "global.move2":"Moving to Lead II",
+    "global.keepsame":"Keep your hands in same position",
+    "global.lead2comp":"Lead II complete",
+    "global.move3":"Moving to Lead III",
+    "global.lead3comp":"Lead III complete",
+    "global.movres": "Processing Results. Please wait...",
+    "global.movres2":"Now you can release your hands",
+    "global.ecgreccom":"ECG recording complete",
+    "global.movcomm":"Moving to Results Now you can release your hands",    
+        
+    "ecg.mode": "Identifying ECG Mode.. Please wait..",
+    "ecg.legmessage": "Please Keep your Legs properly",
+    "ecg.handmessage": "Please keep your Hands properly",    
+    "global.somwrong":"Something Went Wrong!",
+    "global.keepproper":"please place your hand properly",
+    "global.reggret":"we regret!",
+    "global.ecgtestfail":"ECG test failed due to technical issues",
+    "global.plugjack":"Please plug the Jacks on your Legs",
+    "global.poors":"Poor Signal",
+    "global.unableconclude":"Unable to conclude the result",
+    "global.sixleadcomp":"ECG Recording complete",
+    "global.ecgskipped": "ECG test skipped"
+}

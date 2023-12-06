@@ -1,0 +1,12 @@
+{
+
+    "weight01_audio01":"sounds/dogri/vo1_weight&bmi.wav",
+    "weight01_audio02":"sounds/dogri/voice2_weight&bmi.wav",
+    "weight01_audio03":"sounds/dogri/voice3_weight&bmi.wav",
+    "weight01_audio04":"sounds/dogri/startWeightTest.wav",
+    "weight01_audio05":"sounds/dogri/voice4_weight&bmi.wav",
+    "weight03_audio01":"sounds/dogri/results.wav",
+	"weight01_audiolap":"sounds/dogri/handsonLap.wav",
+    "weight03_audio10":"sounds/dogri/chkWeight&bmiAgain.wav"
+
+}

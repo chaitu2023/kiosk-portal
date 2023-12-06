@@ -1,0 +1,189 @@
+ <!--<div id="slide_title">{{interfaceLabels[slideTitle]}}</div>
+        <div id="slide_subtitle">{{interfaceLabels[slideSubTitle]}}</div>
+        <div class="higi_top_container"></div>
+
+
+        <weight-instruction-one promisename="weightInstructionAnimationOneReady" class="weight-instructions"></weight-instruction-one>
+        <weight-instruction-two promisename="weightInstructionAnimationTwoReady" class="weight-instructions"></weight-instruction-two>
+        <weight-instruction-three promisename="weightInstructionAnimationThreeReady" class="weight-instructions"></weight-instruction-three>
+
+        <div class="skip_test">
+            <button id = "weight_skip_button" class="skip_test_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}}</button>
+        </div>
+
+        <a id="higi_control_right_ng_btn" class="right_control_btn {{langClass}} {{(nextVisible) ? buttonEnterRight : buttonExitRight}}" ng-show="nextVisible" ng-click="nextButtonOut()">
+            <span class="{{langClass}} {{interfaceLabels[nextSlideText]}}">{{interfaceLabels[nextSlideText]}}</span>
+        </a>
+    -->
+   
+<!-- <style>
+    .weight_count_down_container{
+	margin: 16% 20% 0 20%;
+    font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.weight_count_down_logo{
+	width: 75px;
+	margin: 0% 0% 0% 45%;
+}
+
+.weight_count_down_heading{
+	font-size: 30px;
+	font-weight: 500;
+	text-align: center;
+	margin: 10px 0px 0px 0px;
+	font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.weight_count_down_sub_heading{
+	color: gray;
+	font-size: 23px;
+	font-weight: 500;
+	text-align: center;
+	margin: 10px 0px 0px 0px;
+	font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.weight_count_down_start_test{
+	color: #808080b8;
+    font-size: 19px;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.weight_count_down_timer{
+	text-align: center;
+    color: #3887b2;
+    font-weight: 500;
+    font-size: 72px;
+    margin: 0px;
+}
+
+.weight_instructions_header_container {
+	margin-top: 11%;
+    margin-left: 42%;
+    max-width: 100%;
+}
+
+.weight_instructions_header_image {
+	float: left ;
+	width: 35px;
+}
+
+.weight_instructions_header_text {
+	padding-left: 31px;
+   	font-size: 30px;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #4a4a4a;
+    font-family: "IntervalSansProMediumRegular";
+}
+
+.replay_button_container{
+    margin-top: 2%;
+    margin-left: 35%;
+    width: 225px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: white;
+    border: 2px solid dodgerblue;
+}
+
+.replay_button_container:active{
+    background-color: gainsboro;
+}
+
+.replay_button_logo{
+    float: left ;
+    width: 35px;
+    margin-top: 1px;
+}
+
+.replay_button_text{
+    padding-left: 31px;
+   	font-size: 20px;
+    font-weight: 500;
+    margin-top: 4px;
+    color: #4a4a4a;
+    font-family: "IntervalSansProMediumRegular";
+}
+
+.weight_instructions_main_container{
+	height: 360px;
+    margin-top: -23px;
+    background-color: #ebebeb;
+}
+
+.weight_instructions_heading{
+	text-align: center;
+    font-size: 24px;
+    color: #4a4a4a;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+
+.weight_instruction_circle{
+    border-radius: 115px;
+    border: 3px solid dodgerblue;
+}
+
+</style>
+   
+<div class="weight_instructions_header_container">
+    <img class="weight_instructions_header_image" src="./images/Icons-28.png">
+    <p class="weight_instructions_header_text">Weight</p> 
+</div>
+
+<div class="weight_instructions_main_container" >
+    <p class="weight_instructions_heading">Instructions</p>
+
+        <weight-instruction-one promisename="weightInstructionAnimationOneReady" class="weight-instructions"></weight-instruction-one>
+        <weight-instruction-two promisename="weightInstructionAnimationTwoReady" class="weight-instructions"></weight-instruction-two>
+        <weight-instruction-three promisename="weightInstructionAnimationThreeReady" class="weight-instructions"></weight-instruction-three>
+</div>
+
+<div>
+    <button  class="replay_button_container" ng-click="replayWeightAnimation()">
+        <img class="replay_button_logo" ng-src="images/Icons-27.png">
+        <p class="replay_button_text">Repeat Animation</p>
+    </button>
+</div>
+
+<div class="skip_test">
+    <button id = "weight_skip_button" class="skip_test_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}}</button>
+</div>
+
+<a id="higi_control_right_ng_btn" class="right_control_btn {{langClass}} {{(nextVisible) ? buttonEnterRight : buttonExitRight}}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="{{langClass}} {{interfaceLabels[nextSlideText]}}">{{interfaceLabels[nextSlideText]}}</span>
+</a> -->
+
+
+<div class="weight_instructions_header_container">
+    <img class="weight_instructions_header_image" src="./images/Icons-28.png">
+    <span class="weight_instructions_header_text">{{interfaceLabels[slideTitle]}}</span> 
+</div>
+
+<div class="weight_instructions_main_container">
+    <p class="weight_instructions_heading" >{{interfaceLabels[slideSubTitle]}}</p>
+
+    <weight-instruction-one promisename="weightInstructionAnimationOneReady" class="weight-instructions"></weight-instruction-one>
+    <weight-instruction-two promisename="weightInstructionAnimationTwoReady" class="weight-instructions"></weight-instruction-two>
+    <weight-instruction-three promisename="weightInstructionAnimationThreeReady" class="weight-instructions"></weight-instruction-three>
+    
+    <p class="weight_instructions_bottom_heading"> {{interfaceLabels[clickInstruction]}}</p>
+</div>
+
+<!-- <div class="skip_test">
+    <button id = "weight_skip_button" class="skip_test_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}}</button>
+</div> -->
+
+<a id="weight_skip_button" class= "global_skip_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()">
+    <span class="global_skip_button_text" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}}</span>
+</a>
+
+<a id="weight_continue_next_button" class= "global_continue_next_button" ng-class = "{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[checkweightbuttonText]}}</span>
+</a>

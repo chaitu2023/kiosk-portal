@@ -1,0 +1,15 @@
+{
+    "infobox.about.spo2": "SpO<sub>2</sub> વિશે",
+    "infobox.about.spo2.subtitle": "તમારા શરીરના ધબકારાનું ઓક્સિમીટર, જેને SpO<sub>2</sub> પણ કહેવાય છે.",
+    "infobox.about.spo2.point03": "SpO<sub>2</sub>ની શ્રેણીઓ",
+    "infobox.about.spo2.point04": "95 થી ઉપર",
+    "infobox.about.spo2.point05": "91 થી 95",
+    "infobox.about.spo2.point06": "70 થી 90",
+    "infobox.about.spo2.point07": "70 થી નીચે",
+    "spo2.status.healthy": "સ્વસ્થ",
+    "spo2.status.acceptable": "સ્વીકાર્ય",
+    "spo2.status.atrisk": "જોખમમાં",
+    "spo2.status.low": "નીચું",
+    "infobox.about.spo2.point08": "આ ચાર્ટ રોગ નિયંત્રણ અને નિવારણ કેન્દ્રો દ્વારા વ્યાખ્યાયિત SpO<sub>2</sub> શ્રેણીઓને પ્રતિબિંબિત કરે છે.",
+    "infobox.about.spo2.point09": "below 95"
+}

@@ -1,0 +1,146 @@
+<style>
+    .teleconsultation_summary_ratings_modal_container{
+        padding:20px; 
+        height:100%;
+        width:100%; 
+        box-sizing: border-box;
+    }
+    .teleconsultation_summary_ratings_modal_inner_container{
+        background: #dbdbdb;
+        border-radius: 10px;
+        padding: 7px;
+    }
+    .teleconsultation_summary_ratings_modal_title{
+        font-family: 'LatoItalic';
+        color: #4a4a4a;
+        text-align: left;
+        text-shadow: 0 1px 1px white;
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .teleconsultation_summary_rating_reason_input_container input{
+        top: 100px;
+        left: 18px;
+        height: 54px;
+        padding-right: 90px !important;
+        padding-left: 10px !important;
+        border: 2px solid #808080d1;
+        color: #808080d1;
+        font-weight: 500 !important;
+        font-family: 'LatoRegular' !important;
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
+        border-radius: 10px !important;
+        outline: none !important;
+        text-indent: 0px !important;
+        box-sizing: border-box !important;
+        width: 415px !important;
+        display: block !important;
+        font-size: 18px !important;
+        position: initial !important;
+        background: white !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+    .teleconsultation_summary_rating_button_active{
+        background: linear-gradient(to bottom,#5aa4d9,#3989c3, #0261c2) !important;
+        box-shadow: 0px 4px 4px #4a4a4ae0 !important;
+        border-top: 2px solid #5dbcff !important;
+        border-left: 2px solid #5fa4d4bf !important;
+        border-bottom: 2px solid #50a4e0bf !important;
+        border-right: 2px solid #50a4e0bf !important;
+    }
+    .teleconsultation_summary_rating_button_container{
+        margin-left: 20px;
+        /* height: 54px; */
+        margin-top: -1px;
+        right:0;
+        width: 190px !important;
+        text-align: center !important;
+        border: 1px solid #cecece !important;
+        border-radius: 7px !important;
+        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+        background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%);
+    }
+    .teleconsultation_summary_rating_button{
+        color: #fff !important;
+        font-size: 22px !important;
+        text-align: center !important;
+        text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2) !important;
+        line-height: 50px !important;
+        height: 54px !important;
+        display: inline-block !important;
+        opacity: .9 !important;
+        pointer-events: none !important;
+    }
+    .tele_summmary_loader {
+        top: 10px;
+        left: 438px;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        z-index: -1;
+        pointer-events: none !important;
+        background: transparent url(./images/keyboard_dialog_loading_icon06222012.png) top left no-repeat;
+        -webkit-animation: rotate360 1.3s linear infinite;  
+    }
+    </style>
+    
+    <div class="teleconsultation_summary_ratings_modal_container"style="">
+    
+        <div class="teleconsultation_summary_ratings_modal_inner_container">
+            <div class="teleconsultation_summary_ratings_modal_title">Rate your Doctor (Optional)</div>
+            
+            <div style="display: flex;margin:12px;">
+                <higi-text-field field="ratings.fields[0]" class="teleconsultation_summary_rating_reason_input_container"></higi-text-field>
+
+                <div ng-hide ="summaryDisabled" ng-class="{'teleconsultation_summary_rating_button_active':(validInput == true)}"
+                class="teleconsultation_summary_rating_button_container"
+                ng-click="validInput == true && sumbitRatingResponse()">
+                    <span class="teleconsultation_summary_rating_button">Submit</span>
+                </div>
+                <div class="tele_summmary_loader"></div>
+            </div>
+            
+<!-- 
+              
+            <div style="display: block;text-align:center">
+                <span style="color:#4a4a4a; font-size:14px;font-family: 'LatoRegular';">
+                    Minimum 4 characters and maximum 200 characters are allowed
+                </span>
+            </div> -->
+
+
+            <div style="display: flex;justify-content: space-between;align-items: center;margin:10px 20px;">
+                <div style="font-size:30px;color:#2a76c4">
+                    <i 
+                    ng-class="{'fa fa-star':ratingsStarArray[0] == 1, 'fa fa-star-o':ratingsStarArray[0] == 0}" 
+                    ng-click="updateRatingsStar(1)"></i>
+                    <i 
+                    ng-class="{'fa fa-star':ratingsStarArray[1] == 1, 'fa fa-star-o':ratingsStarArray[1] == 0}" 
+                    ng-click="updateRatingsStar(2)"></i>
+                    <i 
+                    ng-class="{'fa fa-star':ratingsStarArray[2] == 1, 'fa fa-star-o':ratingsStarArray[2] == 0}" 
+                    ng-click="updateRatingsStar(3)"></i>
+                    <i 
+                    ng-class="{'fa fa-star':ratingsStarArray[3] == 1, 'fa fa-star-o':ratingsStarArray[3] == 0}" 
+                    ng-click="updateRatingsStar(4)"></i>
+                    <i 
+                    ng-class="{'fa fa-star':ratingsStarArray[4] == 1, 'fa fa-star-o':ratingsStarArray[4] == 0}" 
+                    ng-click="updateRatingsStar(5)"></i>
+                </div>
+
+            </div>
+            
+            
+            <div style="display: block;text-align:center">
+                <span style="color:#4a4a4a; font-size:14px;font-family: 'LatoRegular';">
+                    Minimum 4 characters and maximum 200 characters are allowed
+                </span>
+            </div>
+
+        </div>
+    
+    </div>

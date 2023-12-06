@@ -1,0 +1,65 @@
+
+<style type="text/css">
+	.card_main_container{    
+		margin-top: -23px;
+	    box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;
+	    background-color: #dddddd;
+	    height: 345px;
+
+	}
+	.card_header_text{    
+		padding-left: 10px;
+	    font-weight: 500;
+	    margin-top: 0px;
+	    font-family: 'LatoItalic';
+	    font-size: 34px;
+	    color: #4d4d4d;
+	    position: relative;
+	    top: -5px;
+	}
+	.card_header_container{    
+		margin-top: 11%;
+	    text-align: center;
+	    margin-bottom: 30px;
+	}
+	.card_header_image{
+		position: relative;
+    	top: 6px;    
+    	width: 44px;
+	}
+</style>
+
+<div class="card_header_container">
+    <img class="card_header_image" src="./images/card-icon.png" >
+    <span class="card_header_text"> {{ interfaceLabels[cardPayInterfaceLabels.title] }}  </span> 
+</div>
+
+
+<div class="card_main_container">
+	
+
+	<div style="margin-top: 40px;margin-left: 250px;">
+		<p style="font-family: 'LatoRegular';color: #0261C2;font-size: 22px;margin-left: 10px;">
+			{{ interfaceLabels[cardPayInterfaceLabels.instruction_1] }}
+		</p>
+		<span>
+			<img style="width: 44%" src="images/card.png">
+		</span>
+	</div>
+
+   <!-- <button ng-click="enterpin()">Enter PIN</button> -->
+
+	<div>
+		<p style="font-family: 'LatoRegular';color: #6d6d6d;font-size: 21px;
+		margin-top: 10px; margin-left: 100px;">
+			{{ interfaceLabels[cardPayInterfaceLabels.instruction_2] }}
+		</p>
+	</div>
+
+</div>
+
+
+
+
+
+

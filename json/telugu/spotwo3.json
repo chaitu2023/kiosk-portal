@@ -1,0 +1,20 @@
+{
+    "spo2three.spo2": "Spo2",
+    "spo2three.results": "ఫలితాలు",
+    "spo2three.continue": "కొనసాగండి",
+    "spo2three.spo2.percent": "%",
+    "spo2three.spo2level": "SpO2 ఆక్సిజన్ స్ధాయి",
+    "spo2three.checkSpo2again": "SpO2 మళ్లీ చెక్ చేయండి",
+    "spo2three.information": "సమాచారం",
+    "spo2three.parameter": "పారామీటర్",
+    "spo2three.yourscore": "మీ స్కోర్",
+    "spo2three.OverallStatus": "మొత్తంమీద స్థితి",
+    "spo2three.spo22scale": "SpO<sub>2</sub> స్కేల్",
+    "spo2three.finalResult": "తుది ఫలితం",
+    "spo2three.status.healthy": "ఆరోగ్యంగా",
+    "spo2three.status.acceptable": "అంగీకరించతగినది",
+    "spo2three.status.atrisk": "ప్రమాదంలో",
+    "spo2three.status.low": "తక్కువ",
+    "spo2two.in.progress": "SpO2 is in Progress...",
+    "spo2three.status.spo2_check_healthcare_provider": "Check With Healthcare Provider"
+}

@@ -1,0 +1,11 @@
+<div class="bodycomp_warning_modal pregnant {{pregnantTransitionClass}}">
+  <div class="message">
+    <div class="title">{{interfaceLabels[bcWarningPregnant.begin]}}</div>
+    <div class="sub-title">{{interfaceLabels[bcWarningPregnant.questionOne]}}</div>
+  </div>
+  <div class="buttons">
+    <a ng-click="bmcConfirmSkipTest('preg')" class="accept" ng-bind-html="interfaceLabels[bcWarningPregnant.yes]"></a>
+    <a ng-if="bcWarningPregnant.selectedVitalIsBMC" ng-click="bmcNoPregranent('preg')" class="decline" ng-bind-html="interfaceLabels[bcWarningPregnant.no]"></a>
+    <a ng-if="!bcWarningPregnant.selectedVitalIsBMC" ng-click="bmcConfirmModalAccept('preg')" class="decline" ng-bind-html="interfaceLabels[bcWarningPregnant.no]"></a>
+  </div>
+</div>

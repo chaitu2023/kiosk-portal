@@ -1,0 +1,20 @@
+<div class="ecg_instructions_header_container">
+    <img class="ecg_instructions_header_image" src="./images/Icons-30.png">
+    <span class="ecg_instructions_header_text {{langClass}}"> ECG procedure  </span>
+</div>
+
+
+<div class="ecg_instructions_main_container">
+    <p class="ecg_instructions_heading"> </p>
+</div>
+
+
+
+<div class="bmc-modal {{modalFadeClass}}" ng-show="showWarning">
+    <div class="bmc-modal-box">
+        <bc-warning-implant-modal ng-show="showImplantTest"></bc-warning-implant-modal>
+        <bc-warning-pregnant-modal ng-show="showPregTest"></bc-warning-pregnant-modal>
+        <bc-warning-error-modal ng-show="showSkipTest"></bc-warning-error-modal>
+    </div>
+    <a class="higi_overlay_mask"></a>
+</div>

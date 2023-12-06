@@ -1,0 +1,107 @@
+<div class="san_login_modal_main_container">
+    <div ng-show="loginESanjeevaniModal.loginEmailSection" class="login_modal_input_field_container {{loginESanjeevaniModal.EmailAndPasswordDivisionClass}}">
+        <div id="san_login_mobile" ng-click ="loginESanjeevaniModal.disableQuickLoginOptionSection('san_login_mobile','login_modal_userId_section')">
+            <higi-text-field field="loginESanjeevaniModal.fields[0]" class="login_esan_modal_email_input_box"></higi-text-field>
+            <!-- <div id="san_login_mobile_loading_new" class="email_validation_loader"></div> -->
+            <p id="register-first-screen-text"></p>
+            <p id="login_mobile_error"></p>
+            <p id="san_login_mobile_empty_error" ng-if="loginESanjeevaniModal.mobilefieldIsEmpty"> {{interfaceLabels[loginESanjeevaniModal.requiredInputField]}} </p>
+            <p id="san_login_mobile_error" ng-if="loginESanjeevaniModal.invalidMobileNumber"> {{interfaceLabels[loginESanjeevaniModal.invalidMobNum]}} </p>
+            <p id="san_login_error" ng-if="loginESanjeevaniModal.invalidOperator"> {{interfaceLabels[loginESanjeevaniModal.invalidOperator]}} </p>
+            <p id="san_login_error" ng-if="loginESanjeevaniModal.noPatientForOperator"> {{interfaceLabels[loginESanjeevaniModal.noPatientAvail]}} </p>
+            <p id="login_username_error_newest3"></p>
+            <div id="login_username_error" ng-if="loginESanjeevaniModal.loginServerErrorVisible">{{interfaceLabels[loginESanjeevaniModal.loginServerError]}}
+            </div>
+        </div>
+
+        <div id="login_password" ng-click ="loginESanjeevaniModal.disableQuickLoginOptionSection('login_password','login_modal_passwrd_section')">
+            <higi-text-field field="loginESanjeevaniModal.fields[1]" class="login_modal_password_input_box"></higi-text-field>
+            <div id="login_password_loading" class="password_validation_loader"></div>
+            <div class="login_modal_password_input_field_error" id="error_message_login" ng-if="loginESanjeevaniModal.loginPasswordError">
+                {{interfaceLabels[loginESanjeevaniModal.loginPasswordErrorMessage]}}
+            </div>
+            <p id="errorMessageFinalPageLogin" class="login_modal_password_server_error">{{interfaceLabels[loginESanjeevaniModal.sevrerr]}}</p>
+            <p id="errorMessageForLoginAccount" class="login_modal_account_credetial_error">{{interfaceLabels[loginESanjeevaniModal.otheraccCred]}}</p>
+            <div ng-click="loginESanjeevaniModal.showPasswordToggle(loginESanjeevaniModal.fields[1])" class="login_modal_password_eyes_images {{loginESanjeevaniModal.showPasswordClass}}"></div>
+            <a id="login_password_submit_btn" class="login_modal_password_submission_btn {{loginESanjeevaniModal.loginBtnActive}}" ng-click="loginESanjeevaniModal.esanjeevaniOperatorLogin()" ng-hide="loginESanjeevaniModal.submitting" >
+                <span>{{interfaceLabels[loginESanjeevaniModal.globalLogin]}}</span>
+            </a>
+        </div>
+    </div>
+    <div class="san-success-msg" ng-if="loginESanjeevaniModal.showSuccessMsg">
+        <i class="fa fa-check"></i>
+        {{interfaceLabels[loginESanjeevaniModal.sentNewPass]}}
+    </div>
+    <div class="login_modal_buttons_container ">
+        <div id="login_password_loading" class="password_validation_loader" ng-if="loginESanjeevaniModal.showForgotLoader"></div>
+        <a ng-class = "{'button-enter-right' : loginESanjeevaniModal.forgotVisible, 'button-exit-right' : !loginESanjeevaniModal.forgotVisible}" class="login_modal_register_forgot_password_button" ng-click="loginESanjeevaniModal.esanjeevaniOperatorForgotPassword()">
+            <span class="login_modal_register_forgot_password_button_text">{{interfaceLabels[loginESanjeevaniModal.ForgetPass]}}
+                <i class="fa fa-key login_modal_QRCode_option_button_icon"></i>
+            </span>
+        </a>
+    </div>
+    <div class="san_header_container" ng-if="loginESanjeevaniModal.showPatientList">
+        <img class="san_header_image" src="./images/profileimage.png">
+        <span class="san_header_text"> {{interfaceLabels[patientListText]}} </span> 
+    </div>
+</div>
+
+<div class="san_main_container" ng-if="loginESanjeevaniModal.showPatientList">
+    <div id="san_patient_main_container">
+        <div id="san_patient_main_container_scroll">
+            <div class="san_patient_main_box" ng-repeat="patientData in loginESanjeevaniModal.patientList" style="text-align: initial;">
+
+                <div class="san_patient_main_box_title" style="text-align: left; height: 20px;">
+                    <b class="consultant-name-text" style="font-family: 'latoRegular';color: #4d4d4d; text-transform: capitalize;">
+                        <span ng-bind-html="loginESanjeevaniModal.fineTunePatientName(patientData['firstName'])"></span>
+                    </b>
+                </div>
+                <div class="san_patient_details">
+                    <div class="san_patient_details_image_container">
+                        <img ng-src='images/profileimage.png'
+                            class="san_patient_details_image_container_img">
+                    </div>
+                    <div class="san_patient_details_container">
+                        <p>
+                            <span class="san_patient_details_container_title">{{interfaceLabels[loginESanjeevaniModal.patientIdText]}} </span> 
+                            <span class="san_patient_details_container_domain">
+                                {{patientData['externalPatientId']}}
+                            </span>
+                        </p>
+                        <p>
+                            <span class="san_patient_details_container_title">{{interfaceLabels[loginESanjeevaniModal.dobText]}} </span> 
+                            <span class="san_patient_details_container_domain">
+                                {{patientData['dob']}}
+                            </span>
+                        </p>
+                        <p>
+                            <span class="san_patient_details_container_title">{{interfaceLabels[loginESanjeevaniModal.genderText]}} </span> 
+                            <span class="san_patient_details_container_domain" >
+                                {{patientData['gender']}}
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <button class="call_doctor_button_class" ng-click="loginESanjeevaniModal.startTest(patientData['externalPatientId'])">Start Test</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sas_main_container">
+    <div ng-show="loginESanjeevaniModal.showTestList" class="san_test_section_main_container" >
+        <div class="san_test_section_main_title" ng-bind-html="'Test need to be taken'"></div>
+        <div id="san_test_request_details">
+            <div class="san-test-details" ng-repeat="Dt in loginESanjeevaniModal.testList">
+                <input class="san-test-checkbox" type="checkbox" ng-checked="Dt.isSelected" disabled="true">
+                <span class="san_test_name" ng-bind-html="Dt.name" ng-style="Dt.isSelected && {'color':'#000'} || {'color': '#808080'}"></span>
+            </div>
+        </div>
+        <a class="san_test_continue_next_button button-enter-right" ng-click="loginESanjeevaniModal.continueTest()">
+            <span class="san_test_continue_next_button_text">{{interfaceLabels[loginESanjeevaniModal.continueText]}}</span>
+        </a>
+    </div>
+</div>

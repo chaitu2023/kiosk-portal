@@ -1,0 +1,112 @@
+
+<div id="exit_confirm_dialog">
+
+    <div id="exit_confirmss25" ng-click="ecgDisplay.Redo()" >
+        <div id="exit_confirm_text1"><span>Something Went Wrong!</span></div>       
+        <div id="ecg_confirm_text"><span> please place your hand properly </span></div>
+      
+    </div>
+    <div id="save_results" ng-click="ecgDisplay.Redo()" >
+		<div id="save_confirm_text1"><span>Results Not Saved!</span></div>       
+		<div id="save_confirm_text"><span> please check your internet connection </span></div>
+      
+    </div>
+    <div id="ecg_regret_exit_confirm">
+        <div id="ecg_regret_exit_confirm_text1"><span>we regret!</span></div>       
+        <div id="ecg_regret_confirm_text"><span> ECG test failed due to technical issues </span></div>
+      
+    </div>
+   
+ </div>
+
+ <style>
+
+ #exit_confirm_cancel_btn2 , #exit_confirm_cancel_btn5 , #exit_confirm_cancel_btn3 {
+    background: url(./images/exit_confirm_cancel_btn_20120719.png);
+    left: 320px;
+}
+#exit_confirm_text1 {
+    color: #DC143C;
+    text-align: center;
+    position: relative;
+    top: 115px;
+    font-size: 40px;
+}
+
+
+
+#ecg_regret_confirm_text {
+    
+    color: #4a4a4a;
+    text-align: center;
+    position: relative;
+    top: 146px;
+    font-size: 30px;
+    
+}
+#ecg_regret_exit_confirm_text1 {
+    color: #DC143C;
+    text-align: center;
+    position: relative;
+    top: 115px;
+    font-size: 40px;
+}
+
+
+#ecg_confirm_text {
+    
+    color: #4a4a4a;
+    text-align: center;
+    position: relative;
+    top: 146px;
+    font-size: 30px;
+    
+}
+#save_confirm_text1 {
+    color: #DC143C;
+    text-align: center;
+    position: relative;
+    top: 115px;
+    font-size: 40px;
+}
+#save_confirm_text {
+    
+    color: #4a4a4a;
+    text-align: center;
+    position: relative;
+    top: 146px;
+    font-size: 30px;
+    
+}
+
+#exit_confirm_cancel_btn2 , #exit_confirm_cancel_btn5, #exit_confirm_cancel_btn3 {
+    height: 75px;
+    width: 242px;
+    position: absolute;
+    top: 180px;
+    text-align: center;
+    top: 180px;
+    line-height: 70px;
+    color: #fff;
+    font-size: 30px;
+}
+#exit_confirm_cancel_btn2:active {
+    background-position: bottom right;
+
+}
+
+
+ </style>
+   
+
+
+
+<!--
+<div id="rating_reason_box" style="display: none; width: 100%; height: 100%; "><span> 
+ <div align="center" >
+
+ng-click="exitConfirm.exitSession()"
+-->
+
+
+

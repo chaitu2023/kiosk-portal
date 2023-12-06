@@ -1,0 +1,13 @@
+
+<div class="san_test_section_main_container" >
+	<div class="san_test_section_main_title" ng-bind-html="'Test need to be taken'"></div>
+	<div id="san_test_request_details">
+	    <div class="san-test-details" ng-repeat="Dt in eSanjjevaniTestReq">
+	        <input class="san-test-checkbox" type="checkbox" ng-checked="Dt.isSelected" disabled="true">
+	        <span class="san_test_name" ng-bind-html="Dt.label" ng-style="Dt.isSelected && {'color':'#000'} || {'color': '#808080'}"></span>
+	    </div>
+	</div>
+	<a class="san_test_continue_next_button button-enter-right" ng-click="continueTest()">
+	    <span class="san_test_continue_next_button_text">Continue</span>
+	</a>
+</div>

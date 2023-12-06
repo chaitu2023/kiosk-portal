@@ -1,0 +1,20 @@
+{
+    "emailresults.enter.email": "ଆପଣଙ୍କ ଇମେଲ୍‍ ଠିକଣା ପ୍ରବେଶ କରନ୍ତୁ",
+    "emailresults.enter.email.to.send.results": "ଆପଣଙ୍କର ଫଳାଫଳ ପଠାଇବାକୁ ଇମେଲ୍ ଠିକଣା |",
+    "emailresults.email.sent": "ଆପଣଙ୍କର ଫଳାଫଳ ପାଇବା ପାଇଁ ଆପଣଙ୍କର ଇମେଲ୍ ଯାଞ୍ଚ କରନ୍ତୁ।",
+    "emailresults.by.clicking.send": "ଆପଣଙ୍କର ଫଳାଫଳ ଇମେଲ କରିବା ଦ୍ୱାରା, ଆପଣ ସ୍ୱୀକାର କରନ୍ତି ଯେ ଆପଣଙ୍କ ସୂଚନା ସଞ୍ଚୟ କରାଯାଇପାରେ।",
+    "global.send": "ପଠାନ୍ତୁ",
+    "finishModal.email.never.spam": "(ଆମେ ଆପଣଙ୍କୁ ସ୍ପାମ' କରିବୁ ନାହିଁ। ଶପଥ!)",
+    "finishModal.printwarning": " ସତର୍କ ସୂଚନା! ",
+    "finishModal.makesure": "ପ୍ରିଣ୍ଟର କ୍ଷେତ୍ର ଅବରୋଧ କରନ୍ତୁ ନାହିଁ।",
+    "finishModal.printinstruct": "ପରୀକ୍ଷା ଫଳାଫଳ ସ୍ଲିପ ପାଇବାକୁ ନିମ୍ନରେ ପ୍ରିଣ୍ଟ ବଟନ ଦବାନ୍ତୁ",
+    "finishModal.notavail": "ପେପର୍ ଉପଲ‍ବ୍ଧ ନାହିଁ",
+    "finishModal.papernot": " କ୍ଷମା କରିବେ, ଏଚପଡରେ ପ୍ରିଣ୍ଟ ପେପର ଉପଲବ୍ଧ ନାହିଁ",
+    "finishModal.refill": "ଆମେ ଖୁବ ଶୀଘ୍ର ପରିପୂରଣ କରିବୁ..",
+    "finishModal.printRes": "ଫଳାଫଳ ପ୍ରିଣ୍ଟ୍ କରନ୍ତୁ",
+    "finishModal.okayy": "ଠିକ୍ ଅଛି",
+    "finishModal.printEcgraph": "ଇସିଜି ଗ୍ରାଫ୍ ପ୍ରିଣ୍ଟ କରନ୍ତୁ",
+    "global.requird.test": "No Test Results",
+    "emailresults.enter.email.to.send.abharesults": "Enter your Email Address to get your card",
+    "emailresults.by.clicking.abhasend": "By emailing your results, you accept that your card may be saved"
+}

@@ -1,0 +1,9 @@
+{
+    "temp1_audio01": "sounds/tm_in/voice1_temp.wav",
+    "temp1_audio02": "sounds/tm_in/voice2_temp.wav",
+    "temp2_audio03": "sounds/tm_in/voice3_temp.wav",
+    "temp3_audio04": "sounds/tm_in/results.wav",
+    "temp3_audio05": "sounds/tm_in/chkTempAgain.wav",
+    "temp1_forhead_audio06": "sounds/tm_in/voice1_temp_forehead.wav",
+    "temp2_forhead_audio07": "sounds/tm_in/voice2_temp_forehead.wav"
+}

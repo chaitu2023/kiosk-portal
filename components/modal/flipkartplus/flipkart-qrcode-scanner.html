@@ -1,0 +1,40 @@
+<iframe ng-if="!registrationFlow" src="qr-code-scanner-latest.html" style="width: 100%; height: 100%"></iframe>
+
+<div ng-if="registrationFlow" class="{{registerModal.loginNameSectionClass}}">
+	<div class="signup_modal_first_name_division">
+		<p class="signup_modal_first_name_heading">{{interfaceLabels[frnme]}}</p>
+		<small class="signup_modal_first_name_small_hint {{langClass}}">{{interfaceLabels[validatename]}}</small>
+		<higi-text-field field="registerModal.fields[0]" class="signup_modal_first_name_input_box_fkplus"></higi-text-field>   
+	</div> 
+
+	<div class="signup_modal_last_name_division">
+		<p class="signup_modal_last_name_heading">{{interfaceLabels[lnnme]}}</p>
+		<small class="signup_modal_last_name_small_hint {{langClass}}">{{interfaceLabels[validatename]}}</small>
+		<higi-text-field field="registerModal.fields[1]" class="signup_modal_last_name_input_box_fkplus"></higi-text-field>   
+	</div> 
+
+	<div class="signup_modal_create_account_button_container_fkplus" >
+		<small class="signup_modal_create_account_Terms_button_text">{{interfaceLabels[tnCpP1]}}</small>
+	   <a class="signup_modal_create_account_Terms_cond_button" ng-click="termsAndConditions()">
+			<span class="signup_modal_create_account_Terms_cond_button_span"><b>{{interfaceLabels[tnCpP2]}}</b><br> {{interfaceLabels[tnCpP3]}}<b> {{interfaceLabels[tnCpP4]}}</b></span>
+		</a>
+
+		<a class="signup_terms_accept_check_box {{registerModal.registerTermsAcceptanceClass}}" ng-click="registerModal.toggleTermsAcceptance()"></a>
+
+		<a class="signup_modal_create_account_submission_btn {{registerModal.signupfinalSubmitButtonClass}}" ng-click="registerModal.registerFlipKartUserIntoHPod()">
+			<span>{{interfaceLabels[registerModal.globalSignup]}}</span>
+		</a> 
+		<span ng-if = "isLoadingSignup" id="login_username_loading_new" class="email_validation_loader" style="left: 202px!important;display: block;top: 94px!important;"></span> 
+		<p ng-if = "signupError" class="createAccountSignupError">Technical Issue, Something went wrong</p>
+	</div>
+
+	<div id="login_tos_privacy" style="top: 230px;left: 11px;">
+		<div id="login_tos_privacy_wrapper">
+			<div id="terms_main_container">
+				<div class="terms_container" ng-bind-html="registerModal.termsOfServicePpol">
+
+				</div>
+			</div>
+		</div>
+	</div> 
+</div>

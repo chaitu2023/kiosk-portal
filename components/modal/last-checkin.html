@@ -1,0 +1,1635 @@
+<div class="keyboard_lastcheckin" ng-show="lastCheckin.checkinDataVisible">
+    <div id="keyboard_lastcheckin_header" ng-show="lastCheckin.noLastCheckin">
+        <div class="keyboard_lastcheckin_title">{{interfaceLabels[lastCheckin.joinChallengeNoLastcCheckinTitle]}}</div>
+    </div>
+    <div id="keyboard_lastcheckin_header" ng-hide="lastCheckin.noLastCheckin">
+        <!--<div id="keyboard_lastcheckin_title"><span></span></div>-->
+        <!-- <div id="keyboard_lastcheckin_logout_btn" class="higi_exit_btn top_nav_btn" ng-click="lastCheckin.logout()"><span>{{interfaceLabels[lastCheckin.logoutLabel]}}</span></div> -->
+        <div id="keyboard_lastcheckin_summary">
+            <div id="finalresults_higiscore_panel">
+                <div id="keyboard-point-wrapper"> <img id="keyboard-user-img" ng-src="{{lastCheckin.userImg}}" />
+                    <div id="keyboard-point-guage"><span ng-show="lastCheckin.nameShow">{{(" " + lastCheckin.firstName + " " + lastCheckin.lastName) | characters: 30}}</span></div>
+                </div>
+            </div>
+            <div id="keyboard_lastcheckin_email"> <span>{{interfaceLabels[lastCheckin.title]}}!</span> </div> <span id="keyboard_lastcheckin_higiscore_title" class="{{langClass}}">{{interfaceLabels[lastCheckin.higiScoreTitle]}}</span> <span id="keyboard_lastcheckin_higiscore_score">{{lastCheckin.higiScore}}</span>
+            <!--<div id="keyboard_lastcheckin_points_panel" ng-show="lastCheckin.earnditPointsVisible">-->
+            <!--<div id="keyboard_lastcheckin_points_panel_pts"><i class="icon-higi"></i>{{lastCheckin.earnditPoints | number}}<span class="label">pts</span></div>-->
+            <!--</div>-->
+            <div id="keyboard_lastcheckin_aboutyou">
+                <div id="keyboard_lastcheckin_box_gender" class="keyboard_lastcheckin_editbox" ng-click="lastCheckin.showEditSex()"> <span class="keyboard_lastcheckin_editbox_title">{{interfaceLabels[lastCheckin.aboutYouSex]}}</span> <span id="keyboard_lastcheckin_gender" class="keyboard_lastcheckin_editbox_data" ng-show="lastCheckin.showGender" ng-bind-html="interfaceLabels[lastCheckin.gender]" style="font-size: 15px;"></span> </div>
+                <div id="keyboard_lastcheckin_box_height" class="keyboard_lastcheckin_editbox" ng-click="lastCheckin.showEditHeight()"> <span class="keyboard_lastcheckin_editbox_title">{{interfaceLabels[lastCheckin.aboutYouHeight]}}</span> <span id="keyboard_lastcheckin_height" class="keyboard_lastcheckin_editbox_data" ng-bind-html="lastCheckin.height" style="font-size: 17px;"></span> </div>
+                <div id="keyboard_lastcheckin_box_height" class="keyboard_lastcheckin_editbox" ng-click="lastCheckin.showEditWaistCircumference()"> <span class="keyboard_lastcheckin_editbox_title">{{interfaceLabels[waist_cir_title]}}<span style="font-size: 10px;">{{interfaceLabels[waist_cir_title_small]}}</span></span> <span id="keyboard_lastcheckin_height" class="keyboard_lastcheckin_editbox_data" style="font-size: 17px;">{{lastCheckin.waistCircumference | number : 2}}</span></span>
+                </div>
+                <!-- <div id="keyboard_lastcheckin_box_age" class="keyboard_lastcheckin_editbox_empty"> <span class="keyboard_lastcheckin_editbox_title">{{interfaceLabels[lastCheckin.ageTitle]}}</span> <span class="keyboard_lastcheckin_editbox_data">{{lastCheckin.age}}</span> </div> -->
+                <div id="keyboard_lastcheckin_box_fingerprint" class="keyboard_lastcheckin_editbox" ng-if="hardwareAvailability['Fingerprint'] == true" ng-show="lastCheckin.fingerprintThereNot3" ng-click="lastCheckin.showAddFingerprint()"> 
+                    <span class="keyboard_lastcheckin_editbox_title" style="top: 1px;" ng-bind-html="interfaceLabels[addfinge]"></span> 
+                    <span id="keyboard_lastcheckin_fingerprint" class="keyboard_lastcheckin_editbox_data" ng-bind-html="lastCheckin.fingerprint"></span> 
+                    <img src="./images/last_checkin_fingerprint.png" class="last_checkin_fingerprint_class"> 
+                </div>
+                <!-- Abha enable Code start -->
+                <div ng-show="abhaflowEnable" id="keyboard_lastcheckin_box_abhaEnable" class="keyboard_lastcheckin_abha" ng-click="lastCheckin.showAbhaVerfy()"> <span class="keyboard_lastcheckin_abha_title">{{interfaceLabels[abhaTitleText]}}</span> </div>
+                <!-- Abha end -->
+                <div ng-show="hasChallenge" id="keyboard_lastcheckin_box_settings" class="keyboard_lastcheckin_edit_section_button {{lastCheckin.messagesActiveClass}}" ng-click="lastCheckin.showSection('messages')"> <span class="keyboard_lastcheckin_editbox_title">{{interfaceLabels[lastCheckin.messagesTab]}}</span> <span class="keyboard_lastcheckin_editbox_data"><i class="fa fa-envelope-o"></i></span> </div>
+                <!-- <div id="keyboard_lastcheckin_box_fingerprint" ng-if="hardwareAvailability['Fingerprint'] == true" class="keyboard_lastcheckin_editbox" style="border: 1px solid dodgerblue;" ng-show="lastCheckin.fingerprintThereNot3" ng-click="lastCheckin.showAddFingerprint()"> <span id="keyboard_lastcheckin_fingerprint_text" class="keyboard_lastcheckin_editbox_title" ng-bind-html="interfaceLabels[addfinge]"></span> <span id="keyboard_lastcheckin_fingerprint" class="keyboard_lastcheckin_editbox_data" ng-bind-html="lastCheckin.fingerprint"></span> </div> -->
+                <div id="keyboard_lastcheckin_box_affiliate" style="border: 1px solid dodgerblue;" ng-show="affiliationShow && updateAffiliate" class="keyboard_lastcheckin_editbox" ng-click="lastCheckin.showAffiliate()"> <span id="keyboard_lastcheckin_box_affiliate_text" class="keyboard_lastcheckin_editbox_title" style="font-size: 13px; top: 17px;color: black;" ng-bind-html="interfaceLabels[selectAffiliate]"></span> </div>
+                <p id="fingerprintAddError" style="display: none; text-align: center; color: red; position: relative; top: -80px;"></p>
+                <div id="keyboard_lastcheckin_box_fingerprint" class="keyboard_lastcheckin_editbox" style="display: none !important;" ng-click="lastCheckin.showEditProfile()"> <span class="keyboard_lastcheckin_editbox_title" style="font-size: 13px; top: 17px;">{{interfaceLabels[edprofile]}}</span> <span id="keyboard_lastcheckin_fingerprint" class="keyboard_lastcheckin_editbox_data" ng-bind-html="lastCheckin.fingerprint"></span> </div>
+                <div id="keyboard_lastcheckin_box_fingerprint2" style="display: none !important;" class="keyboard_lastcheckin_editbox" ng-show="lastCheckin.fingerprintThereNot4"> </div>
+                <div class="keyboard_lastcheckin_edit_section_button_divider" ng-show="hasChallenge" />
+                <div ng-show="hasChallenge" id="keyboard_lastcheckin_box_messages" class="keyboard_lastcheckin_edit_section_button {{lastCheckin.resultsActiveClass}} results_btn" ng-click="lastCheckin.showSection('results')"> <span class="keyboard_lastcheckin_editbox_title">{{interfaceLabels[lastCheckin.resultsTab]}}</span> <span class="keyboard_lastcheckin_editbox_data"><i class="icon-higi-graph"></i></span> </div>
+            </div>
+        </div>
+        <style type="text/css">
+        .historyBtnActive {
+            background: white;
+            padding: 7px 7px 2px 7px;
+            border-radius: 10px 10px 0px 0px;
+            margin-right: 10px;
+            box-shadow: inset 0px 0px 4px 0px #c8c8c8;
+            box-sizing: border-box;
+            border-top: 1px solid #c8c8c8;
+        }
+        
+        .historyBtn {
+            background: #e6e6e6;
+            padding: 7px 7px 2px 7px;
+            border-radius: 10px 10px 0px 0px;
+            margin-right: 10px;
+            box-shadow: inset 0px 0px 4px 0px #c8c8c8;
+            box-sizing: border-box;
+            border-top: 1px solid #c8c8c8;
+        }
+        
+        .lastCheckinBtn {
+            float: right;
+            position: relative;
+            top: 25px;
+            left: -27px;
+        }
+        </style>
+        <div class="lastCheckinBtn" data-ng-if="!isMEBOrg">
+            <button style="outline: none;border: none;" data-ng-click="showCheckIn('last_checkin')" data-ng-class="last_checkin ? 'historyBtnActive' : 'historyBtn'"> {{interfaceLabels[last_checkin_title]}} </button>
+            <button style="outline: none;border: none;" data-ng-click="showCheckIn('all_checkin')" data-ng-class="all_checkin ? 'historyBtnActive' : 'historyBtn'"> {{interfaceLabels[last_checkin_vital_history_title]}} </button>
+            <button style="outline: none;border: none;" data-ng-click="showCheckIn('last_medication')" data-ng-class="last_medication ? 'historyBtnActive' : 'historyBtn'"> {{interfaceLabels[last_checkin_medication_history_title]}} </button>
+        </div>
+    </div>
+    <div>
+        <div id="keyboard_lastcheckin_content_scroll">
+            <div class="lastcheckin_message" ng-show="lastCheckin.messagesVisible">
+                <challenge-get challengeid="{{lastCheckin.challengeId}}"></challenge-get>
+            </div>
+            <div data-ng-show="last_checkin" id="last_checkin_id" style="overflow-y: auto; overflow-x: hidden;">
+                <div id="keyboard_lastcheckin_results" ng-show="lastCheckin.resultsVisible">
+                    <div id="keyboard_lastcheckin_lastcheck_title"><span id="keyboard_lastcheckin_lastcheck_title_text" style="color: #353535; font-size: 16px;">{{interfaceLabels[lastCheckin.loginLast]}}</span> <span id="keyboard_lastcheckin_lastcheck_datetime" ng-show="lastCheckin.resultsShow">{{lastCheckin.resultsDateTime}}</span> </div>
+                    <div id="keyboard_lastcheckin_lastcheck_results" ng-bind-html="interfaceLabels[lastCheckin.yourResults]"></div>
+                    <ul id="keyboard_lastcheckin_ul" class="keyboard_lastcheckin_lastcheck_list" style="margin-left: -25px;">
+                        <li id="lastcheck_list_dengue" ng-show="lastCheckin.resultsShowDengue">
+                            <div class="lastcheck_in_dengue_logo"> <img id="lastcheck_in_dengue_logo_img" src="images/invasive/dengue-test-off.png"> </div>
+                            <div class="lastcheck_in_dengue_title {{langClass}}"> <span class="lastcheck_list_title">Dengue</span> </div>
+                            <div class="lastcheck_in_dengue_attr">
+                                <p>Dengue IgG</p>
+                                <p>Dengue IgM</p>
+                            </div>
+                            <div class="lastcheck_list_data_dengue">
+                                <p class="lastcheck_list_dengue {{ lastCheckin.resultsRiskClassDengueIgg }}"><span id="lastcheck_list_number_dengue">{{lastCheckin.dengue_IgG}}</span></p>
+                                <p class="lastcheck_list_dengue {{ lastCheckin.resultsRiskClassDengueIgm }}"><span id="lastcheck_list_number_dengue">{{lastCheckin.dengue_IgM}}</span></p>
+                            </div>
+                            <div id="lastcheck_list_rating_dengue_div" class="lastcheck_list_rating" style="padding-top: 30px;"> <span id="lastcheck_list_rating_dengue" class="lastcheck_list_rating_value {{lastCheckin.overAllResultsClassDengue}}">{{lastCheckin.resultsRiskLabelDengue}}</span> </div>
+                        </li>
+                        <li id="lastcheck_list_malaria" ng-show="lastCheckin.resultsShowMalaria">
+                            <div class="lastcheck_in_malaria_logo"> <img id="lastcheck_in_malaria_logo_img" src="images/invasive/malaria-test-off.png"> </div>
+                            <div class="lastcheck_in_malaria_title {{langClass}}"> <span class="lastcheck_list_title">Malaria</span> </div>
+                            <div class="lastcheck_in_malaria_attr">
+                                <p>Malaria Pv</p>
+                                <p>Malaria Pf</p>
+                            </div>
+                            <div class="lastcheck_list_data_malaria">
+                                <p class="lastcheck_list_malaria {{ lastCheckin.resultsRiskClassMalariaPv }}"><span id="lastcheck_list_number_malaria">{{lastCheckin.malaria_p_v}}</span></p>
+                                <p class="lastcheck_list_malaria {{ lastCheckin.resultsRiskClassMalariaPf }}"><span id="lastcheck_list_number_malaria">{{lastCheckin.malaria_p_f}}</span></p>
+                            </div>
+                            <div id="lastcheck_list_rating_malaria_div" class="lastcheck_list_rating" style="padding-top: 30px;"> <span id="lastcheck_list_rating_malaria" class="lastcheck_list_rating_value {{lastCheckin.overAllResultsClassMalaria}}">{{lastCheckin.resultsRiskLabelMalaria}}</span> </div>
+                        </li>
+                        <li id="lastcheck_list_hiv" ng-show="lastCheckin.resultsShowHiv">
+                            <div class="lastcheck_in_hiv_logo"> <img id="lastcheck_in_hiv_logo_img" src="images/invasive/hiv-off.png"> </div>
+                            <div class="lastcheck_in_hiv_title {{langClass}}"> <span class="lastcheck_list_title">HIV</span> </div>
+                            <div class="lastcheck_in_hiv_attr">
+                                <p>HIV I</p>
+                                <p>HIV II</p>
+                            </div>
+                            <div class="lastcheck_list_data_hiv">
+                                <p class="lastcheck_list_hiv {{ lastCheckin.resultsRiskClassHivI }}"><span id="lastcheck_list_number_hiv">{{lastCheckin.hiv_I}}</span></p>
+                                <p class="lastcheck_list_hiv {{ lastCheckin.resultsRiskClassHivII }}"><span id="lastcheck_list_number_hiv">{{lastCheckin.hiv_II}}</span></p>
+                            </div>
+                            <div id="lastcheck_list_rating_hiv_div" class="lastcheck_list_rating" style="padding-top: 30px;"> <span id="lastcheck_list_rating_hiv" class="lastcheck_list_rating_value {{lastCheckin.overAllResultsClassHiv}}">{{lastCheckin.resultsRiskLabelHiv}}</span> </div>
+                        </li>
+                        <li id="lastcheck_list_hcv" ng-show="lastCheckin.resultsShowHcv">
+                            <div class="lastcheck_in_hcv_logo"> <img id="lastcheck_in_hcv_logo_img" src="images/invasive/hcv-test-off.png"> </div>
+                            <div class="lastcheck_in_hcv_title {{langClass}}"> <span class="lastcheck_list_title">HCV</span> </div>
+                            <div class="lastcheck_in_hcv_attr">
+                                <p>HCV</p>
+                            </div>
+                            <div class="lastcheck_list_data_hcv"> <span class="lastcheck_list_hcv {{ lastCheckin.resultsRiskClassHcv }}"><span id="lastcheck_list_number_hcv">{{lastCheckin.hcv}}</span></span>
+                            </div>
+                        </li>
+                        <li id="lastcheck_list_preg" ng-show="lastCheckin.resultsShowPreg">
+                            <div class="lastcheck_in_preg_logo"> <img id="lastcheck_in_preg_logo_img" src="images/invasive/pregnant-test-off.png"> </div>
+                            <div class="lastcheck_in_preg_title {{langClass}}"> <span class="lastcheck_list_title">Pregnancy</span> </div>
+                            <div class="lastcheck_in_preg_attr">
+                            <p>Pregnant</p>
+                            </div>
+                            <div class="lastcheck_list_data_preg"> <span class="lastcheck_list_preg {{ lastCheckin.resultsRiskClassPreg }}"><span id="lastcheck_list_number_preg">{{lastCheckin.pregnancy}}</span></span>
+                            </div>
+                        </li>
+                        <li id="lastcheck_list_trop" ng-show="lastCheckin.resultsShowTrop">
+                            <div class="lastcheck_in_trop_logo"> <img id="lastcheck_in_trop_logo_img" src="images/invasive/troponin-test-off.png"> </div>
+                            <div class="lastcheck_in_trop_title {{langClass}}"> <span class="lastcheck_list_title">Troponin</span> </div>
+                            <div class="lastcheck_in_trop_attr">
+                            <p>Troponin</p>
+                            </div>
+                            <div class="lastcheck_list_data_trop"> <span class="lastcheck_list_trop {{ lastCheckin.resultsRiskClassTrop }}"><span id="lastcheck_list_number_trop">{{lastCheckin.troponin}}</span></span>
+                            </div>
+                        </li>
+                        <li id="lastcheck_list_syp" ng-show="lastCheckin.resultsShowSyp">
+                            <div class="lastcheck_in_syp_logo"> <img id="lastcheck_in_syp_logo_img" src="images/invasive/syphilis-test-off.png"> </div>
+                            <div class="lastcheck_in_syp_title {{langClass}}"> <span class="lastcheck_list_title">Syphilis</span> </div>
+                            <div class="lastcheck_in_syp_attr">
+                            <p>Syphilis</p>
+                            </div>
+                            <div class="lastcheck_list_data_syp"> <span class="lastcheck_list_syp {{ lastCheckin.resultsRiskClassSyp }}"><span id="lastcheck_list_number_syp">{{lastCheckin.syphilis}}</span></span>
+                            </div>
+                        </li>
+                        <li id="lastcheck_list_glc" ng-show="lastCheckin.resultsShowGlc">
+                            <div class="lastcheck_in_glc_logo"> <img id="lastcheck_in_glc_logo_img" src="images/invasive/sugar-blood-level-off.png"> </div>
+                            <div class="lastcheck_in_glc_title {{langClass}}"> <span class="lastcheck_list_title">Glucose</span> </div>
+                            <div class="lastcheck_in_glc_attr">
+                                <p>{{ lastCheckin.glucose_option }}</p>
+                            </div>
+                            <div class="lastcheck_list_data_glc"> <span class="lastcheck_list_number"><span id="lastcheck_list_number_glc">{{lastCheckin.glucose}}</span><span class="lastcheck_list_number_unit">mg/dL</span></span>
+                            </div>
+                            <div id="lastcheck_list_rating_glc_div" class="lastcheck_list_rating" style="padding-top: 30px;"> <span id="lastcheck_list_rating_glc" class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassGlc}}">{{lastCheckin.resultsRiskClassGlcText}}</span> </div>
+                        </li>
+                        <li id="lastcheck_list_heamo" ng-show="lastCheckin.resultsShowHeamo">
+                            <div class="lastcheck_in_heamo_logo"> <img id="lastcheck_in_heamo_logo_img" src="images/invasive/heamo-test-off.png"> </div>
+                            <div class="lastcheck_in_heamo_title {{langClass}}"> <span class="lastcheck_list_title">Heamoglobin</span> </div>
+                            <div class="lastcheck_in_heamo_attr">
+                                <p>Heamoglobin Result</p>
+                            </div>
+                            <div class="lastcheck_list_data_heamo"> <span class="lastcheck_list_number"><span id="lastcheck_list_number_heamo">{{lastCheckin.heamoglobin}}</span><span class="lastcheck_list_number_unit">g/dL</span></span>
+                            </div>
+                            <div id="lastcheck_list_rating_heamo_div" class="lastcheck_list_rating" style="padding-top: 30px;"> <span id="lastcheck_list_rating_heamo" class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassHeamo}}">{{lastCheckin.resultsRiskClassHeamoText}}</span> </div>
+                        </li>
+                        <li id="lastcheck_list_lip" ng-show="lastCheckin.resultsShowLipid">
+                            <div class="lastcheck_in_lip_logo"> <img id="lastcheck_in_lip_logo_img" src="images/invasive/lipid-test-off.png"> </div>
+                            <div class="lastcheck_in_lip_title {{langClass}}"> <span class="lastcheck_list_title">Lipid profile</span> </div>
+                            <div class="lastcheck_in_lip_attr">
+                                <p>Total Cholesterol</p>
+                                <p>HDL</p>
+                                <p>Triglycerides</p>
+                                <p>LDL</p>
+                            </div>
+                            <div class="lastcheck_list_data_lip">
+                                <p class="lastcheck_list_lip"><span id="lastcheck_list_number_lip">{{lastCheckin.lipid_profile_tc}} mg/dL</span></p>
+                                <p class="lastcheck_list_lip"><span id="lastcheck_list_number_lip">{{lastCheckin.lipid_profile_hg}} mg/dL</span></p>
+                                <p class="lastcheck_list_lip"><span id="lastcheck_list_number_lip">{{lastCheckin.lipid_profile_tg}} mg/dL</span></p>
+                                <p class="lastcheck_list_lip"><span id="lastcheck_list_number_lip">{{lastCheckin.lipid_profile_ldl}} mg/dL</span></p>
+                            </div>
+                            <div id="lastcheck_list_rating_lip_div" class="lastcheck_list_rating" style="padding-top: 30px;"> <span id="lastcheck_list_rating_lip" class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassLipTc}}">{{lastCheckin.resultsRiskLabelLipTc}}</span> </div>
+                            <div id="lastcheck_list_rating_lip_div" class="lastcheck_list_rating" style="padding-top: 23px;"> <span id="lastcheck_list_rating_lip" class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassLipHg}}">{{lastCheckin.resultsRiskLabelLipHg}}</span> </div>
+                            <div id="lastcheck_list_rating_lip_div" class="lastcheck_list_rating" style="padding-top: 22px;"> <span id="lastcheck_list_rating_lip" class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassLipTg}}">{{lastCheckin.resultsRiskLabelLipTg}}</span> </div>
+                            <div id="lastcheck_list_rating_lip_div" class="lastcheck_list_rating" style="padding-top: 20px;"> <span id="lastcheck_list_rating_lip" class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassLipLdl}}">{{lastCheckin.resultsRiskLabelLipLdl}}</span> </div>
+                        </li>
+                        <li id="lastcheck_list_urn" ng-show="lastCheckin.resultsShowUrn">
+                            <div class="lastcheck_in_urn_logo"> <img id="lastcheck_in_urn_logo_img" src="images/invasive/urine-test-off.png"> </div>
+                            <div class="lastcheck_in_urn_title {{langClass}}"> <span class="lastcheck_list_title">Urine Test</span> </div>
+                            <div class="lastcheck_in_urn_attr">
+                                <p>Leukocytes</p>
+                                <p>Nitrite</p>
+                                <p>Urobilinogen</p>
+                                <p>Protein</p>
+                                <p>pH</p>
+                                <p>Blood</p>
+                                <p>Specific Gravity</p>
+                                <p>Ketone</p>
+                                <p>Bilirubin</p>
+                                <p>Glucose</p>
+                            </div>
+                            <div class="lastcheck_list_data_urn">
+                                <p class="lastcheck_list_urn"><span id="lastcheck_list_number_urn">{{lastCheckin.urine_leukocytes}} Leu/&mu;L</span></p>
+                                <p class="lastcheck_list_urn"><span id="lastcheck_list_number_urn">{{lastCheckin.urine_nitrite}}</span></p>
+                                <p class="lastcheck_list_urn"><span id="lastcheck_list_number_urn">{{lastCheckin.urine_urobilinogen}} mg/dL</span></p>
+                                <p class="lastcheck_list_urn"><span id="lastcheck_list_number_urn">{{lastCheckin.urine_protein}} mg/dL</span></p>
+                                <p class="lastcheck_list_urn"><span id="lastcheck_list_number_urn">{{lastCheckin.urine_ph}}</span></p>
+                                <p class="lastcheck_list_urn"><span id="lastcheck_list_number_urn">{{lastCheckin.urine_blood}} Ery/&mu;L</span></p>
+                                <p class="lastcheck_list_urn"><span id="lastcheck_list_number_urn">{{lastCheckin.urine_specific_gravity}}</span></p>
+                                <p class="lastcheck_list_urn"><span id="lastcheck_list_number_urn">{{lastCheckin.urine_ketone}} mg/dL</span></p>
+                                <p class="lastcheck_list_urn"><span id="lastcheck_list_number_urn">{{lastCheckin.urine_bilirubin}} mg/dL</span></p>
+                                <p class="lastcheck_list_urn"><span id="lastcheck_list_number_urn">{{lastCheckin.urine_glucose}} mg/dL</span></p>
+                            </div>
+                        </li>
+                        <li id="lastcheck_list_bodyFat" ng-show="(lastCheckin.resultsShowFatRatio)">
+                            <div class="lastcheck_in_bodyFat_logo"> <img id="lastcheck_in_bodyFat_logo_img" src="images/Icons-29.png" style="height: 50px;position: relative; top: 10px;"> </div>
+                            <div class="lastcheck_in_bodyFat_title"> <span class="lastcheck_list_title">{{interfaceLabels[lastCheckin.bodyFat]}}<span
+                                class="lastcheck_list_higipoints"></span></span>
+                            </div>
+                            <div class="lastcheck_in_bodyFat_attr">
+                                <p>{{interfaceLabels[lastCheckin.bodyFatPercentage]}}</p>
+                            </div>
+                            <div class="lastcheck_list_data"> <span class="lastcheck_list_number"><span id="lastcheck_list_number_bmc">{{lastCheckin.fatRatioNumber}}</span><span class="lastcheck_list_number_unit">{{interfaceLabels[lastCheckin.abbvPercent]}}</span></span>
+                            </div>
+                            <div class="lastcheck_list_rating"> <span id="lastcheck_list_rating_bmc" class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassFatRatio}}" ng-bind-html="interfaceLabels[lastCheckin.resultsRiskLabelFatRatio]"></span> </div>
+                        </li>
+                        <li id="lastcheck_new_bodyFat_list_bodyFat" ng-show="(lastCheckin.resultsShowFullBodyBmcFatValues)">
+                            <div class="lastcheck_in_bodyFat_logo"> <img id="lastcheck_in_bodyFat_logo_img" src="images/Icons-29.png" style="height: 60px;"> </div>
+                            <div class="lastcheck_in_bodyFat_title"> <span class="lastcheck_list_title">{{interfaceLabels[lastCheckin.bodyFat]}}<span
+                                class="lastcheck_list_higipoints"></span></span>
+                            </div>
+                            <div class="lastcheck_in_new_bodyFat_attr">
+                                <p class="lastcheck_in_new_bodyFat_atrr_list">{{interfaceLabels[lastCheckin.BodyFatMass]}} </p>
+                                <p class="lastcheck_in_new_bodyFat_atrr_list">{{interfaceLabels[lastCheckin.PercentBodyFat]}} </p>
+                                <p class="lastcheck_in_new_bodyFat_atrr_list">{{interfaceLabels[lastCheckin.SkeletalMuscleMass]}} </p>
+                                <p class="lastcheck_in_new_bodyFat_atrr_list">{{interfaceLabels[lastCheckin.BodyCellMass]}} </p>
+                                <p class="lastcheck_in_new_bodyFat_atrr_list">{{interfaceLabels[lastCheckin.VisceralFat]}} </p>
+                                <p class="lastcheck_in_new_bodyFat_atrr_list">{{interfaceLabels[lastCheckin.BoneMineralContent]}} </p>
+                                <p class="lastcheck_in_new_bodyFat_atrr_list">{{interfaceLabels[lastCheckin.ProteinContent]}} </p>
+                                <p class="lastcheck_in_new_bodyFat_atrr_list">{{interfaceLabels[lastCheckin.MineralContent]}} </p>
+                                <p class="lastcheck_in_new_bodyFat_atrr_list">{{interfaceLabels[lastCheckin.IntraCellularWater]}} </p>
+                                <p class="lastcheck_in_new_bodyFat_atrr_list">{{interfaceLabels[lastCheckin.ExtraCellularWater]}} </p>
+                                <p class="lastcheck_in_new_bodyFat_atrr_list">{{interfaceLabels[lastCheckin.WaistToHipRatio]}} </p>
+                                <p class="lastcheck_in_new_bodyFat_atrr_list">{{interfaceLabels[lastCheckin.WaistToHeightRatio]}} </p>
+                                <p class="lastcheck_in_new_bodyFat_atrr_list">{{interfaceLabels[lastCheckin.BasalMetabolicRate]}} </p>
+                            </div>
+                            <div class="lastcheck_new_bodyFat_list_data"> <span class="lastcheck_new_bodyFat_list_number">
+                                <span>{{lastCheckin.bodyFatMassValue}}</span> <span class="lastcheck_new_bodyFat_list_number_unit">{{interfaceLabels[lastCheckin.abbvPounds]}}
+                                </span> </span> <span class="lastcheck_new_bodyFat_list_number">
+                                <span>{{lastCheckin.percentBodyFatValue}}</span> <span class="lastcheck_new_bodyFat_list_number_unit">{{interfaceLabels[lastCheckin.abbvPercent]}}
+                                </span> </span> <span class="lastcheck_new_bodyFat_list_number">
+                                <span>{{lastCheckin.skeletalMuscleMassValue}}</span> <span class="lastcheck_new_bodyFat_list_number_unit">{{interfaceLabels[lastCheckin.abbvPounds]}}
+                                </span> </span> <span class="lastcheck_new_bodyFat_list_number">
+                                <span>{{lastCheckin.bodyCellMassValue}}</span> <span class="lastcheck_new_bodyFat_list_number_unit">{{interfaceLabels[lastCheckin.abbvPounds]}}
+                                </span> </span> <span class="lastcheck_new_bodyFat_list_number">
+                                <span>{{lastCheckin.visceralFatValue}}</span> <span class="lastcheck_new_bodyFat_list_number_unit">cm.sq
+                                </span> </span> <span class="lastcheck_new_bodyFat_list_number">
+                                <span>{{lastCheckin.boneMineralContentValue}}</span> <span class="lastcheck_new_bodyFat_list_number_unit">{{interfaceLabels[lastCheckin.abbvPounds]}}
+                                </span> </span> <span class="lastcheck_new_bodyFat_list_number">
+                                <span>{{lastCheckin.protienValue}}</span> <span class="lastcheck_new_bodyFat_list_number_unit">{{interfaceLabels[lastCheckin.abbvPounds]}}
+                                </span> </span> <span class="lastcheck_new_bodyFat_list_number">
+                                <span>{{lastCheckin.mineralValue}}</span> <span class="lastcheck_new_bodyFat_list_number_unit">{{interfaceLabels[lastCheckin.abbvPounds]}}
+                                </span> </span> <span class="lastcheck_new_bodyFat_list_number">
+                                <span>{{lastCheckin.intraCellularWaterValue}}</span> <span class="lastcheck_new_bodyFat_list_number_unit">ltr
+                                </span> </span> <span class="lastcheck_new_bodyFat_list_number">
+                                <span>{{lastCheckin.extraCellularWaterValue}}</span> <span class="lastcheck_new_bodyFat_list_number_unit">ltr
+                                </span> </span> <span class="lastcheck_new_bodyFat_list_number">
+                                <span>{{lastCheckin.waistHipRatioValue}}</span> <span class="lastcheck_new_bodyFat_list_number_unit">NA
+                                </span> </span> <span class="lastcheck_new_bodyFat_list_number">
+                                <span>{{lastCheckin.waistHeightRatioValue}}</span> <span class="lastcheck_new_bodyFat_list_number_unit">NA
+                                </span> </span> <span class="lastcheck_new_bodyFat_list_number">
+                                <span>{{lastCheckin.basalMetabolicRateValue}}</span> <span class="lastcheck_new_bodyFat_list_number_unit">kcal
+                                </span> </span>
+                            </div>
+                            <div class="lastcheck_new_bodyFat_list_rating"> <span class="lastcheck_new_bodyFat_list_rating_value" ng-class="{'low_color' : lastCheckin.bodyFatMassStatus == 'Low' , 'normal_color' : lastCheckin.bodyFatMassStatus == 'Normal', 'acceptable_color' : lastCheckin.bodyFatMassStatus == 'Acceptable' , 'high_color' : lastCheckin.bodyFatMassStatus == 'High'}">
+                            <!-- {{lastCheckin.bodyFatMassStatus}} -->
+                            {{ interfaceLabels[lastCheckin.fullBodyBmcStatus.get('bodyFatMassStatus')]}}
+                            </span> <span class="lastcheck_new_bodyFat_list_rating_value" ng-class="{'low_color' : lastCheckin.percentBodyFatStatus == 'Low' , 'acceptable_color' : lastCheckin.percentBodyFatStatus == 'Acceptable' , 'normal_color' : lastCheckin.percentBodyFatStatus == 'Normal', 'high_color' : lastCheckin.percentBodyFatStatus == 'High'}">
+                                <!-- {{lastCheckin.percentBodyFatStatus}} -->
+                            {{ interfaceLabels[lastCheckin.fullBodyBmcStatus.get('percentBodyFatStatus')]}}
+                            </span> <span class="lastcheck_new_bodyFat_list_rating_value" ng-class="{'low_color' : lastCheckin.skeletalMuscleMassStatus == 'Low' , 'normal_color' : lastCheckin.skeletalMuscleMassStatus == 'Normal'}">
+                            <!-- {{lastCheckin.skeletalMuscleMassStatus}} -->
+                            {{ interfaceLabels[lastCheckin.fullBodyBmcStatus.get('skeletalMuscleMassStatus')]}}
+                            </span> <span class="lastcheck_new_bodyFat_list_rating_value" ng-class="{'low_color' : lastCheckin.bodyCellMassStatus == 'Low' , 'normal_color' : lastCheckin.bodyCellMassStatus == 'Normal'}">
+                            <!-- {{lastCheckin.bodyCellMassStatus}} -->
+                            {{ interfaceLabels[lastCheckin.fullBodyBmcStatus.get('bodyCellMassStatus')]}}
+                            </span> <span class="lastcheck_new_bodyFat_list_rating_value" ng-class="{'normal_color' : lastCheckin.visceralFatStatus == 'Normal' , 'acceptable_color' : lastCheckin.visceralFatStatus == 'Acceptable' , 'high_color' : lastCheckin.visceralFatStatus == 'High'}">
+                            <!-- {{lastCheckin.visceralFatStatus}} -->
+                            {{ interfaceLabels[lastCheckin.fullBodyBmcStatus.get('visceralFatStatus')]}}
+                            </span> <span class="lastcheck_new_bodyFat_list_rating_value" ng-class="{'low_color' : lastCheckin.boneMineralContentStatus == 'Low' , 'normal_color' : lastCheckin.boneMineralContentStatus == 'Normal'}">
+                            <!-- {{lastCheckin.boneMineralContentStatus}} -->
+                            {{ interfaceLabels[lastCheckin.fullBodyBmcStatus.get('boneMineralContentStatus')]}}
+                            </span> <span class="lastcheck_new_bodyFat_list_rating_value" ng-class="{'low_color' : lastCheckin.protienStatus == 'Low' , 'normal_color' : lastCheckin.protienStatus == 'Normal'}"><!-- {{lastCheckin.protienStatus}} -->
+                                {{ interfaceLabels[lastCheckin.fullBodyBmcStatus.get('protienStatus')]}}
+                            </span> <span class="lastcheck_new_bodyFat_list_rating_value" ng-class="{'low_color' : lastCheckin.mineralStatus == 'Low' , 'normal_color' : lastCheckin.mineralStatus == 'Normal'}">
+                            <!-- {{lastCheckin.mineralStatus}} -->
+                            {{ interfaceLabels[lastCheckin.fullBodyBmcStatus.get('mineralStatus')]}}
+                            </span> <span class="lastcheck_new_bodyFat_list_rating_value" ng-class="{'low_color' : lastCheckin.intraCellularWaterStatus == 'Low' , 'normal_color' : lastCheckin.intraCellularWaterStatus == 'Normal' , 'high_color' : lastCheckin.intraCellularWaterStatus == 'High'}">
+                            <!-- {{lastCheckin.intraCellularWaterStatus}} -->
+                            {{ interfaceLabels[lastCheckin.fullBodyBmcStatus.get('intraCellularWaterStatus')]}}
+                            </span> <span class="lastcheck_new_bodyFat_list_rating_value" ng-class="{'low_color' : lastCheckin.extraCellularWaterStatus == 'Low' , 'normal_color' : lastCheckin.extraCellularWaterStatus == 'Normal', 'high_color' : lastCheckin.extraCellularWaterStatus == 'High'}">
+                            <!-- {{lastCheckin.extraCellularWaterStatus}} -->
+                            {{ interfaceLabels[lastCheckin.fullBodyBmcStatus.get('extraCellularWaterStatus')]}}
+                            </span> <span class="lastcheck_new_bodyFat_list_rating_value" ng-class="{'low_color' : lastCheckin.waistHipRatioStatus == 'Low' , 'normal_color' : lastCheckin.waistHipRatioStatus == 'Normal', 'high_color' : lastCheckin.waistHipRatioStatus == 'High'}"><!-- {{lastCheckin.waistHipRatioStatus}} -->
+                            {{ interfaceLabels[lastCheckin.fullBodyBmcStatus.get('waistHipRatioStatus')]}}
+                            </span> <span class="lastcheck_new_bodyFat_list_rating_value" ng-class="{'low_color' : lastCheckin.waistHeightRatioStatus == 'Low' , 'normal_color' : lastCheckin.waistHeightRatioStatus == 'Normal', 'high_color' : lastCheckin.waistHeightRatioStatus == 'High'}">
+                            <!-- {{lastCheckin.waistHeightRatioStatus}} -->
+                            {{ interfaceLabels[lastCheckin.fullBodyBmcStatus.get('waistHeightRatioStatus')]}}
+                            </span>
+                             <!-- <span class="lastcheck_new_bodyFat_list_rating_value" ng-class="{'low_color' : lastCheckin.basalMetabolicRateStatus == 'Low' , 'normal_color' : lastCheckin.basalMetabolicRateStatus == 'Normal'}">
+                           {{ interfaceLabels[lastCheckin.fullBodyBmcStatus.get('basalMetabolicRateStatus')]}}
+                           </span>  -->
+                    </div>
+                        </li>
+                        <li id="lastcheck_list_spo2" ng-show="lastCheckin.resultsShowSpO2">
+                            <div class="lastcheck_in_spo2_logo"> <img id="lastcheck_in_spo2_logo_img" src="images/spo2/Icons-35.png"> </div>
+                            <div class="lastcheck_in_spo2_title {{langClass}}"> <span class="lastcheck_list_title" ng-bind-html="interfaceLabels[lastCheckin.SpO2]"></span> </div>
+                            <div class="lastcheck_in_spo2_attr">
+                                <p>{{interfaceLabels[lastCheckin.oxyLevel]}}</p>
+                            </div>
+                            <div class="lastcheck_list_data"> <span class="lastcheck_list_number"><span id="lastcheck_list_number_spo2">{{lastCheckin.lastCheckSpO2Number}}</span><span class="lastcheck_list_number_unit">{{interfaceLabels[lastCheckin.abbvPercent]}}</span></span>
+                            </div>
+                            <div id="lastcheck_list_rating_spo2_div" class="lastcheck_list_rating" style="padding-top: 30px;"> <span id="lastcheck_list_rating_spo2" class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassSpO2}}">{{interfaceLabels[lastCheckin.resultsRiskLabelSpO2]}}</span> </div>
+                        </li>
+                        <li id="lastcheck_list_bp" ng-show="lastCheckin.resultsShowBp">
+                            <div class="lastcheck_in_bp_logo"> <img id="lastcheck_in_bp_logo_img" src="images/Icons-32.png" style="height: 60px;"> </div>
+                            <div class="lastcheck_in_bp_title"> <span class="lastcheck_list_title" style="position: relative; left: -36px;">{{interfaceLabels[lastCheckin.bp]}}</span> </div>
+                            <div class="lastcheck_in_bp_attr">
+                                <p>{{interfaceLabels[lastCheckin.sysDia]}}</p>
+                            </div>
+                            <div class="lastcheck_list_data"> <span class="lastcheck_list_number"><span id="lastcheck_list_number_bp">{{lastCheckin.lastCheckBpNumber}}</span> <span class="lastcheck_list_number_unit"><p id="bp_para" style="margin-top: 0px;">{{interfaceLabels[lastCheckin.mmhg]}}</p></span></span>
+                            </div>
+                            <div class="lastcheck_list_rating"> <span id="lastcheck_list_rating_bp" class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClass}}">{{interfaceLabels[lastCheckin.resultsRiskLabel]}}</span> </div>
+                        </li>
+                        <li id="lastcheck_list_pulse" ng-show="lastCheckin.resultsShowPulse">
+                            <div class="lastcheck_in_pulse_logo"> <img id="lastcheck_in_pulse_logo_img" src="images/Icons-33.png" style="height: 60px;"> </div>
+                            <div class="lastcheck_in_pulse_title"> <span class="lastcheck_list_title">{{interfaceLabels[lastCheckin.pulse]}}<span
+                                class="lastcheck_list_higipoints"></span></span>
+                            </div>
+                            <div class="lastcheck_in_pulse_attr">
+                                <p>{{interfaceLabels[lastCheckin.pulserate]}}</p>
+                            </div>
+                            <div class="lastcheck_list_data"> <span class="lastcheck_list_number"><span
+                                    id="lastcheck_list_number_pulse">{{lastCheckin.lastCheckPulseNumber}}</span><span class="lastcheck_list_number_unit">{{interfaceLabels[lastCheckin.bpm]}}</span></span>
+                            </div>
+                            <div id="lastcheck_list_rating_pulse_div" class="lastcheck_list_rating" style="padding-top: 30px;"> <span id="lastcheck_list_rating_pulse" class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassPulse}}">{{interfaceLabels[lastCheckin.resultsRiskLabelPulse]}}</span> </div>
+                        </li>
+                        <li id="lastcheck_list_ECG" ng-show="lastCheckin.resultsShowECG">
+                            <div class="lastcheck_in_ECG_logo"> <img id="lastcheck_in_ECG_logo_img" src="images/Icons-30.png" style="height: 60px;width: 80px;"> </div>
+                            <div class="lastcheck_in_ECG_title"> <span class="lastcheck_list_title"> {{interfaceLabels[lastCheckin.ECG]}}<span
+                                class="lastcheck_list_higipoints"></span></span>
+                            </div>
+                            <div class="lastcheck_in_ECG_attr">
+                                <p>{{interfaceLabels[lastCheckin.heartrate]}}</p>
+                            </div>
+                            <div class="lastcheck_list_data"> <span class="lastcheck_list_number"><span id="lastcheck_list_number_ecg">{{lastCheckin.ECGBpm}}</span><span class="lastcheck_list_number_unit">{{interfaceLabels[lastCheckin.ECGBpmUnit]}}</span></span>
+                            </div>
+                            <!-- <div class="lastcheck_list_rating"> <span id="lastcheck_list_rating_ECG" class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassECG}}">{{interfaceLabels[lastCheckin.resultsRiskLabelECG]}}</span> </div> -->
+                        </li>
+                        <li id="lastcheck_list_temp" ng-show="lastCheckin.resultsShowTemp">
+                            <div class="lastcheck_in_temp_logo"> <img id="lastcheck_in_temp_logo_img" src="images/Icons-34.png" style="height: 60px;"> </div>
+                            <div class="lastcheck_in_temp_title"> <span class="lastcheck_list_title">{{interfaceLabels[lastCheckin.temp]}}</span> </div>
+                            <div class="lastcheck_in_temp_attr">
+                                <p>{{interfaceLabels[lastCheckin.Bodytemp]}}</p>
+                            </div>
+                            <div class="lastcheck_list_data"> <span class="lastcheck_list_number"><span id="lastcheck_list_number_temp">{{lastCheckin.lastCheckTempNumber}}</span><span class="lastcheck_list_number_unit">{{interfaceLabels[lastCheckin.tempUnit]}} °F</span></span>
+                            </div>
+                            <div id="lastcheck_list_rating_temp_div" class="lastcheck_list_rating" style="padding-top: 30px;"> <span id="lastcheck_list_rating_temp" class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassTemp}}">{{interfaceLabels[lastCheckin.resultsRiskLabelTemp]}}</span> </div>
+                        </li>
+                        <li id="lastcheck_list_weight" ng-show="lastCheckin.resultsShowWeight">
+                            <div class="lastcheck_in_weight_logo"> <img id="lastcheck_in_weight_logo_img" src="images/Icons-28.png" style="height: 60px;"> </div>
+                            <div class="lastcheck_in_weight_title"> <span id="lastcheck_in_weight_title_text" class="lastcheck_list_title" style="font-size: 16px;">
+                                {{interfaceLabels[lastCheckin.weight]}} & {{interfaceLabels[lastCheckin.bmi]}}
+                            </span> </div>
+                            <div class="lastcheck_in_weight_attr">
+                                <p>{{interfaceLabels[lastCheckin.weight]}}</p>
+                                <p>{{interfaceLabels[lastCheckin.BodyMassindexTitle]}}</p>
+                            </div>
+                            <div id="lastcheck_in_weight_data_div" class="lastcheck_list_data" style="padding-top: 25px; "> <span id="lastcheck_in_number_weight_span" class="lastcheck_list_number" style="display:block; margin-bottom:14px;"><span
+                                    id="lastcheck_list_number_weight">{{lastCheckin.lastCheckWeightNumber}}</span><span class="lastcheck_list_number_unit">{{interfaceLabels[lastCheckin.abbvPounds]}}</span> </span> <span class="lastcheck_list_number"><span id="lastcheck_list_number_bmi">{{lastCheckin.lastCheckBmiNumber}}</span><span class="lastcheck_list_number_unit"></span> </span>
+                            </div>
+                            <div id="lastcheck_list_rating_bmi_div" class="lastcheck_list_rating" style="padding-top: 60px;"> <span id="lastcheck_list_rating_bmi" class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassBmi}}">{{interfaceLabels[lastCheckin.resultsRiskLabelBmi]}}</span> </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-ng-show="all_checkin" id="all_checkin_id" style="overflow-y: auto; overflow-x: hidden;">
+                <div data-ng-show="loadingImg" style="text-align: center; margin: 20px;">
+                    <div style="padding: 20px;">{{interfaceLabels[progress_message]}}</div>
+                    <div class="email_validation_loader vitalDataLoader"></div>
+                </div>
+                <style type="text/css">
+                .accordion,
+                .medicationAccordion {
+                    background-color: #eee;
+                    color: #444;
+                    cursor: pointer;
+                    padding: 18px;
+                    width: 100%;
+                    border: none;
+                    text-align: left;
+                    outline: none;
+                    font-size: 15px;
+                    /*transition: 0.4s;*/
+                    box-shadow: inset 0px 0px 4px 0px #c8c8c8;
+                    box-sizing: border-box;
+                    border-top: 1px solid #c8c8c8;
+                }
+                
+                .active {
+                    background-color: #ccc;
+                }
+                
+                .panel,
+                .medicationPanel {
+                    padding: 0 18px;
+                    display: none;
+                    /*background-color: white;*/
+                    background-color: #f9f9f9;
+                    overflow: hidden;
+                }
+                
+                .vitalParm {
+                    color: black;
+                    font-size: 18px;
+                    font-family: 'LatoSemiBold';
+                    text-transform: capitalize;
+                }
+                
+                .accordionIcon {
+                    float: right;
+                    position: relative;
+                    left: -27px;
+                }
+                
+                .vitalTitle {
+                    width: 25%;
+                    position: relative;
+                    float: left;
+                    color: black;
+                    font-size: 18px;
+                    display: block;
+                    font-family: 'LatoSemiBold';
+                    text-transform: capitalize;
+                }
+                
+                .vitalValue {
+                    width: 20%;
+                    position: relative;
+                    float: left;
+                    font-family: 'LatoBold';
+                    font-size: 18px;
+                    color: black;
+                    font-weight: bold;
+                }
+                
+                .vitalPrintBtn {
+                    border-radius: 10px;
+                    border-top: 2px solid #5dbcff;
+                    border-left: 2px solid #5fa4d4bf;
+                    border-bottom: 2px solid #50a4e0bf;
+                    border-right: 2px solid #50a4e0bf;
+                    color: white;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    box-shadow: 0px 4px 4px #4a4a4ae0;
+                    background: linear-gradient(to bottom, #5aa4d9, #3989c3, #0261c2);
+                    text-shadow: none;
+                    font-family: 'LatoRegular';
+                    font-weight: 500;
+                    pointer-events: all;
+                    float: right;
+                    /*width: 72px;*/
+                    text-align: center;
+                    padding: 5px;
+                    margin: 20px 0px;
+                }
+                
+                .vitalPrintBtn:active {
+                    box-shadow: none !important;
+                }
+                
+                .vitalDataLoader {
+                    width: 35px;
+                    height: 35px;
+                    z-index: 18;
+                    -webkit-animation: rotate360 1.3s linear infinite;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block !important;
+                    position: static !important;
+                }
+                </style>
+                <div data-ng-show="!loadingImg">
+                    <div id="keyboard_lastcheckin_lastcheck_title"><span id="keyboard_lastcheckin_lastcheck_title_text" style="color: #353535; font-size: 16px;">{{interfaceLabels[your_vital_history]}}</span> </div>
+                    <div data-ng-repeat="checkinData in allCheckinData">
+                        <button class="accordion" id="accordion_$index" ng-click="accordionClick($index)"> <span>
+                    <span data-ng-repeat="param in checkinData.vitalParam">
+                        {{interfaceLabels[param]}}<span ng-show="$index != (checkinData.vitalParam.length-1)">,</span> </span> {{' '+interfaceLabels[test_taken_on_title]+' '}} {{checkinData.checkInDate}} <span class="accordionIcon"><img id="vital_accordion_image_{{$index}}" src="images/bmi_scale_arrow20120509_WIDE.png"/></span> </span>
+                        </button>
+                        <div class="panel" id="panel_{{$index}}">
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.dengue_IgG != undefined || checkinData.dengue_IgM != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/dengue-test-off.png" />Dengue Parameters</th>
+                                </tr>
+                                <tr>
+                                    <th>Dengue IgG</th>
+                                    <td> N/A </td>
+                                    <td class="{{dengueIgGClassName}}" style="text-transform: capitalize;">{{checkinData.dengue_IgG}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Dengue IgM</th>
+                                    <td> N/A </td>
+                                    <td class="{{dengueIgMClassName}}" style="text-transform: capitalize;">{{checkinData.dengue_IgM}}</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.malaria_p_f != undefined || checkinData.malaria_p_v != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/malaria-test-off.png" />Malaria Parameters</th>
+                                </tr>
+                                <tr>
+                                    <th>Malaria PF</th>
+                                    <td> N/A </td>
+                                    <td class="{{malariaPfClassName}}" style="text-transform: capitalize;">{{checkinData.malaria_p_f}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Malaria PV</th>
+                                    <td> N/A </td>
+                                    <td class="{{malariaPvClassName}}" style="text-transform: capitalize;">{{checkinData.malaria_p_v}}</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.hiv_I != undefined || checkinData.hiv_II != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/hiv-off.png" />HIV Parameters</th>
+                                </tr>
+                                <tr>
+                                    <th>HIV I</th>
+                                    <td> N/A </td>
+                                    <td class="{{hivIClassName}}" style="text-transform: capitalize;">{{checkinData.hiv_I}}</td>
+                                </tr>
+                                <tr>
+                                    <th>HIV II</th>
+                                    <td> N/A </td>
+                                    <td class="{{hivIIClassName}}" style="text-transform: capitalize;">{{checkinData.hiv_II}}</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.hcv != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/hcv-test-off.png" />HCV Parameter</th>
+                                </tr>
+                                <tr>
+                                    <th>HCV</th>
+                                    <td> N/A </td>
+                                    <td class="{{hcvStatusClassName}}" style="text-transform: capitalize;">{{hcvStatus}}</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.pregnancy != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/pregnant-test-off.png" />Pregnancy Parameter</th>
+                                </tr>
+                                <tr>
+                                    <th>Pregnancy</th>
+                                    <td> N/A </td>
+                                    <td class="{{pregStatusClassName}}" style="text-transform: capitalize;">{{pregStatus}}</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.troponin != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/troponin-test-off.png" />Troponin Parameter</th>
+                                </tr>
+                                <tr>
+                                    <th>Troponin</th>
+                                    <td> N/A </td>
+                                    <td class="{{tropStatusClassName}}" style="text-transform: capitalize;">{{tropStatus}}</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.syphilis != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/syphilis-test-off.png" />Syphilis Parameter</th>
+                                </tr>
+                                <tr>
+                                    <th>Syphilis</th>
+                                    <td> N/A </td>
+                                    <td class="{{syphStatusClassName}}" style="text-transform: capitalize;">{{syphStatus}}</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.glucose_random_class != undefined || checkinData.glucose_fasting_class != undefined || checkinData.glucose_prandial_class != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/sugar-blood-level-off.png" />Glucose Parameter</th>
+                                </tr>
+                                <tr>
+                                    <th>{{glcResultText}}</th>
+                                    <td>{{glcResult}} mg/dL</td>
+                                    <td class="{{glcStatusClassName}}" style="text-transform: capitalize;">{{glcStatus}}</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.heamoglobin_class != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/heamo-test-off.png" />Heamoglobin Parameter</th>
+                                </tr>
+                                <tr>
+                                    <th>Heamoglobin</th>
+                                    <td>{{checkinData.heamoglobin}} g/dL</td>
+                                    <td class="{{heamoStatusClassName}}" style="text-transform: capitalize;">{{heamoStatus}}</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.lipid_profile_tc_class != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/lipid-test-off.png" />Lipid Profile</th>
+                                </tr>
+                                <tr>
+                                    <th>Total Cholesterol</th>
+                                    <td>{{checkinData.lipid_profile_tc}} mg/dL</td>
+                                    <td class="{{lipTcStatusClassName}}" style="text-transform: capitalize;">{{lipTcStatus}}</td>
+                                </tr>
+                                <tr>
+                                    <th>HDL</th>
+                                    <td>{{checkinData.lipid_profile_hg}} mg/dL</td>
+                                    <td class="{{lipHgStatusClassName}}" style="text-transform: capitalize;">{{lipHgStatus}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Triglycerides</th>
+                                    <td>{{checkinData.lipid_profile_tg}} mg/dL</td>
+                                    <td class="{{lipTgStatusClassName}}" style="text-transform: capitalize;">{{lipTgStatus}}</td>
+                                </tr>
+                                <tr>
+                                    <th>LDL</th>
+                                    <td>{{checkinData.lipid_profile_ldl}} mg/dL</td>
+                                    <td class="{{lipLdlStatusClassName}}" style="text-transform: capitalize;">{{lipLdlStatus}}</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.urine_leukocytes != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/urine-test-off.png" />Urine Parameters</th>
+                                </tr>
+                                <tr>
+                                    <th>Leukocytes</th>
+                                    <td>{{urineTestValueFineTune(checkinData.urine_leukocytes)}}  Leu/&mu;L</td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <th>Nitrite</th>
+                                    <td>{{urineTestValueFineTune(checkinData.urine_nitrite)}}</td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <th>Urobilinogen</th>
+                                    <td>{{urineTestValueFineTune(checkinData.urine_urobilinogen)}} mg/dL</td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <th>Protein</th>
+                                    <td>{{urineTestValueFineTune(checkinData.urine_protein)}} mg/dL</td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <th>pH</th>
+                                    <td>{{urineTestValueFineTune(checkinData.urine_ph)}} mg/dL</td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <th>Blood</th>
+                                    <td>{{urineTestValueFineTune(checkinData.urine_blood)}} Ery/&mu;L</td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <th>Specific Gravity</th>
+                                    <td>{{urineTestValueFineTune(checkinData.urine_specific_gravity)}}</td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <th>Ketone</th>
+                                    <td>{{urineTestValueFineTune(checkinData.urine_ketone)}} mg/dL</td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <th>Bilirubin</th>
+                                    <td>{{urineTestValueFineTune(checkinData.urine_bilirubin)}} mg/dL</td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <th>Glucose</th>
+                                    <td>{{urineTestValueFineTune(checkinData.urine_glucose)}} mg/dL</td>
+                                    <td>N/A</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.bpClass != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/Icons-32.png" />{{interfaceLabels[blood_pressure_title]}}</th>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[blood_pressure_sub_title]}}</th>
+                                    <td>{{checkinData.systolic}} / {{checkinData.diastolic}} mmHg</td>
+                                    <td class="{{bpStatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[bp_status_info]}}</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.bpClass != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/Icons-33.png" />{{interfaceLabels[pulse_title]}}</th>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[pulse_sub_title]}}</th>
+                                    <td>{{checkinData.pulseBpm}} bpm</td>
+                                    <td class="{{checkinData.pulseStatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[checkinData.pulse_status_info]}}</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.spo2Class != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/spo2/Icons-35.png" />{{interfaceLabels[spo2_title]}}<sub>2</sub></th>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[spo2_sub_title]}}</th>
+                                    <td>{{checkinData.spo2}} %</td>
+                                    <td class="{{spo2StatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[spo2_status_info]}}</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.temperatureClass != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/Icons-34.png" />{{interfaceLabels[temperature_title]}}</th>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[temperature_sub_title]}}</th>
+                                    <td>{{checkinData.temperatureInFaranheit}} &#176;F</td>
+                                    <td class="{{tempStatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[temperature_status_info]}}</td>
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.body_fat_mass != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/Icons-29.png" />{{interfaceLabels[body_fat_title]}}</th>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[body_fat_sub_title_1]}}</th>
+                                    <td>{{checkinData.body_fat_mass | number:2}} kg</td>
+                                    <td ng-class="{'low_color' : vitalHistorybodyFatMassStatus == 'Low' , 'normal_color' : vitalHistorybodyFatMassStatus == 'Normal', 'acceptable_color' : vitalHistorybodyFatMassStatus == 'Acceptable' , 'high_color' : vitalHistorybodyFatMassStatus == 'High'}">{{interfaceLabels[body_fat_mass_status_info]}}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[body_fat_sub_title_2]}}</th>
+                                    <td>{{checkinData.percent_body_fat | number:2}} %</td>
+                                    <td ng-class="{'low_color' : vitalHistorypercentBodyFatStatus == 'Low' , 'acceptable_color' : vitalHistorypercentBodyFatStatus == 'Acceptable', 'normal_color' : vitalHistorypercentBodyFatStatus == 'Normal', 'high_color' : vitalHistorypercentBodyFatStatus == 'High'}">{{interfaceLabels[percent_body_fat_status_info]}}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[body_fat_sub_title_3]}}</th>
+                                    <td>{{checkinData.skeletal_muscle_mass | number:2}} kg</td>
+                                    <td ng-class="{'low_color' : vitalHistoryskeletalMuscleMassStatus == 'Low' , 'normal_color' : vitalHistoryskeletalMuscleMassStatus == 'Normal'}">{{interfaceLabels[skeletal_muscle_mass_status_info]}}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[body_fat_sub_title_4]}}</th>
+                                    <td>{{checkinData.body_cell_mass | number:2}} kg</td>
+                                    <td ng-class="{'low_color' : vitalHistorybodyCellMassStatus == 'Low' , 'normal_color' : vitalHistorybodyCellMassStatus == 'Normal'}">{{interfaceLabels[body_cell_mass_status_info]}}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[body_fat_sub_title_5]}}</th>
+                                    <td>{{checkinData.visceral_fat | number:2}} kg</td>
+                                    <td ng-class="{'normal_color' : vitalHistoryvisceralFatStatus == 'Normal' , 'acceptable_color' : vitalHistoryvisceralFatStatus == 'Acceptable' , 'high_color' : vitalHistoryvisceralFatStatus == 'High'}">{{interfaceLabels[visceral_fat_status_info]}}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[body_fat_sub_title_6]}}</th>
+                                    <td>{{checkinData.bone_mineral_content | number:2}} kg</td>
+                                    <td ng-class="{'low_color' : vitalHistoryboneMineralContentStatus == 'Low' , 'normal_color' : vitalHistoryboneMineralContentStatus == 'Normal'}">{{interfaceLabels[bone_mineral_content_status_info]}}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[body_fat_sub_title_7]}}</th>
+                                    <td>{{checkinData.protien | number:2}} kg</td>
+                                    <td ng-class="{'low_color' : vitalHistoryprotienStatus == 'Low' , 'normal_color' : vitalHistoryprotienStatus == 'Normal'}">{{interfaceLabels[protien_status_info]}}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[body_fat_sub_title_8]}}</th>
+                                    <td>{{checkinData.mineral | number:2}} kg</td>
+                                    <td ng-class="{'low_color' : vitalHistorymineralStatus == 'Low' , 'normal_color' : vitalHistorymineralStatus == 'Normal'}">{{interfaceLabels[mineral_status_info]}}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[body_fat_sub_title_9]}}</th>
+                                    <td>{{checkinData.intra_cellular_water | number:2}} Ltr</td>
+                                    <td ng-class="{'low_color' : vitalHistoryintraCellularWaterStatus == 'Low' , 'normal_color' : vitalHistoryintraCellularWaterStatus == 'Normal' , 'high_color' : vitalHistoryintraCellularWaterStatus == 'High'}">{{interfaceLabels[intra_cellular_water_status_info]}}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[body_fat_sub_title_10]}}</th>
+                                    <td>{{checkinData.extra_cellular_water | number:2}} Ltr</td>
+                                    <td ng-class="{'low_color' : vitalHistoryextraCellularWaterStatus == 'Low' , 'normal_color' : vitalHistoryextraCellularWaterStatus == 'Normal', 'high_color' : vitalHistoryextraCellularWaterStatus == 'High'}">{{interfaceLabels[extra_cellular_water_status_info]}}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[body_fat_sub_title_11]}}</th>
+                                    <td>{{checkinData.waist_hip_ratio | number:2}} </td>
+                                    <td ng-class="{'low_color' : vitalHistorywaistHipRatioStatus == 'Low' , 'normal_color' : vitalHistorywaistHipRatioStatus == 'Normal', 'high_color' : vitalHistorywaistHipRatioStatus == 'High'}">{{interfaceLabels[waist_hip_ratio_status_info]}}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[body_fat_sub_title_12]}}</th>
+                                    <td>{{checkinData.waist_height_ratio | number:2}} </td>
+                                    <td ng-class="{'low_color' : vitalHistorywaistHeightRatioStatus == 'Low' , 'normal_color' : vitalHistorywaistHeightRatioStatus == 'Normal', 'high_color' : vitalHistorywaistHeightRatioStatus == 'High'}">{{interfaceLabels[waist_height_ratio_status_info]}}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[body_fat_sub_title_13]}}</th>
+                                    <td>{{checkinData.basal_metabolic_rate}} Kcal</td>
+                                    <td>N/A</td>
+                                    <!-- <td ng-class="{'low_color' : vitalHistorybasalMetabolicRateStatus == 'Low' , 'normal_color' : vitalHistorybasalMetabolicRateStatus == 'Normal'}">{{interfaceLabels[basal_metabolic_rate_status_info]}}</td> -->
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.ECGBpm != undefined && checkinData.ECGBpm != '0'">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/Icons-30.png" />{{interfaceLabels[ecg_title]}}</th>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[ecg_sub_title]}}</th>
+                                    <td>{{checkinData.ECGBpm}} bpm</td>
+                                    <td data-ng-if="ecgadvice == ''">N/A</td>
+                                    <!-- <td class="{{ecgStatusClassName}}" data-ng-if="ecgadvice != ''" style="text-transform: capitalize;">{{ecgadvice}}</td> -->
+                                </tr>
+                            </table>
+                            <table class="vitalHistoryTable" data-ng-if="checkinData.bmiClass != undefined">
+                                <tr>
+                                    <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/Icons-28.png" />{{interfaceLabels[weight_bmi_title]}}</th>
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[bmi_sub_title]}}</th>
+                                    <td>{{checkinData.bmi | number:2}}</td>
+                                    <td class="{{bmiStatusClassName}}" style="text-transform: capitalize;">
+                                        <span ng-if="!interfaceLabels[bmi_status_info]">N/A</span>
+                                        <span ng-if="interfaceLabels[bmi_status_info]">{{interfaceLabels[bmi_status_info]}}</span>
+                                    </td>                                
+                                </tr>
+                                <tr>
+                                    <th>{{interfaceLabels[weight_sub_title]}}</th>
+                                    <td>{{checkinData.weightKG | number : 2}} kg</td>
+                                    <td>N/A</td>
+                                </tr>
+                            </table>   
+                            <!-- old code starts here
+                                <table border="0">
+                                <tr data-ng-if="checkinData.dengue_IgG != undefined">
+                                    <td><img width="30px" src="images/invasive/dengue-test-off.png" /></td>
+                                    <th>Dengue</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.dengue_IgG != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Dengue IgG</th>
+                                    <th class="{{dengueIgGClassName}}">{{checkinData.dengue_IgG}}</th>
+                                    <td class="{{dengueStatusClassName}}" style="text-transform: capitalize;">{{dengueStatus}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.dengue_IgM != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Dengue IgM</th>
+                                    <th class="{{dengueIgMClassName}}">{{checkinData.dengue_IgM}}</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.malaria_p_f != undefined">
+                                    <td><img width="30px" src="images/invasive/malaria-test-off.png" /></td>
+                                    <th>Malaria</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.malaria_p_f != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Malaria PF</th>
+                                    <th class="{{malariaPfClassName}}">{{checkinData.malaria_p_f}}</th>
+                                    <td class="{{malariaStatusClassName}}" style="text-transform: capitalize;">{{malariaStatus}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.malaria_p_f != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Malaria PV</th>
+                                    <th class="{{malariaPvClassName}}">{{checkinData.malaria_p_v}}</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.hiv_I != undefined">
+                                    <td><img width="30px" src="images/invasive/hiv-off.png" /></td>
+                                    <th>HIV</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.hiv_I != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>HIV I</th>
+                                    <th class="{{hivIClassName}}">{{checkinData.hiv_I}}</th>
+                                    <td class="{{hivStatusClassName}}" style="text-transform: capitalize;">{{hivStatus}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.hiv_II != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>HIV II</th>
+                                    <th class="{{hivIIClassName}}">{{checkinData.hiv_II}}</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.hcv != undefined">
+                                    <td><img width="30px" src="images/invasive/hcv-test-off.png" /></td>
+                                    <th>HCV</th>
+                                    <td>HCV</td>
+                                    <th class="{{hcvStatusClassName}}" style="text-transform: capitalize;">{{hcvStatus}}</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.pregnancy != undefined">
+                                    <td><img width="30px" src="images/invasive/pregnant-test-off.png" /></td>
+                                    <th>Pregnancy</th>
+                                    <td>Pregnant</td>
+                                    <th class="{{pregStatusClassName}}" style="text-transform: capitalize;">{{pregStatus}}</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.troponin != undefined">
+                                    <td><img width="30px" src="images/invasive/troponin-test-off.png" /></td>
+                                    <th>Troponin</th>
+                                    <td>Troponin</td>
+                                    <th class="{{tropStatusClassName}}" style="text-transform: capitalize;">{{tropStatus}}</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.syphilis != undefined">
+                                    <td><img width="30px" src="images/invasive/syphilis-test-off.png" /></td>
+                                    <th>Syphilis</th>
+                                    <td>Syphilis</td>
+                                    <th class="{{syphStatusClassName}}" style="text-transform: capitalize;">{{syphStatus}}</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.glucose_random_class != undefined || checkinData.glucose_fasting_class != undefined || checkinData.glucose_prandial_class != undefined">
+                                    <td><img width="30px" src="images/invasive/sugar-blood-level-off.png" /></td>
+                                    <th>Glucose</th>
+                                    <td>{{glcResultText}}</td>
+                                    <th>{{glcResult}} mg/dL</th>
+                                    <td class="{{glcStatusClassName}}" style="text-transform: capitalize;">{{glcStatus}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.heamoglobin_class != undefined">
+                                    <td><img width="30px" src="images/invasive/heamo-test-off.png" /></td>
+                                    <th>Heamoglobin</th>
+                                    <td>Heamoglobin Result</td>
+                                    <th>{{checkinData.heamoglobin}} mg/dL</th>
+                                    <td class="{{heamoStatusClassName}}" style="text-transform: capitalize;">{{heamoStatus}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.lipid_profile_tc_class != undefined">
+                                    <td><img width="30px" src="images/invasive/lipid-test-off.png" /></td>
+                                    <th>Lipid Profile</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.lipid_profile_tc_class != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Total Cholesterol</th>
+                                    <th>{{checkinData.lipid_profile_tc}} mg/dL</th>
+                                    <td class="{{lipTcStatusClassName}}" style="text-transform: capitalize;">{{lipTcStatus}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.lipid_profile_tc_class != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>HDL</th>
+                                    <th>{{checkinData.lipid_profile_hg}} mg/dL</th>
+                                    <td class="{{lipHgStatusClassName}}" style="text-transform: capitalize;">{{lipHgStatus}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.lipid_profile_tc_class != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Triglycerides</th>
+                                    <th>{{checkinData.lipid_profile_tg}} mg/dL</th>
+                                    <td class="{{lipTgStatusClassName}}" style="text-transform: capitalize;">{{lipTgStatus}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.lipid_profile_tc_class != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>LDL</th>
+                                    <th>{{checkinData.lipid_profile_ldl}} mg/dL</th>
+                                    <td class="{{lipLdlStatusClassName}}" style="text-transform: capitalize;">{{lipLdlStatus}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.urine_leukocytes != undefined">
+                                    <td><img width="30px" src="images/invasive/urine-test-off.png" /></td>
+                                    <th>Urine Test</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.urine_leukocytes != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Leukocytes</th>
+                                    <th>{{checkinData.urine_leukocytes}} Leu/&mu;L</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.urine_leukocytes != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Nitrite</th>
+                                    <th>{{checkinData.urine_nitrite}}</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.urine_leukocytes != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Urobilinogen</th>
+                                    <th>{{checkinData.urine_urobilinogen}} mg/dL</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.urine_leukocytes != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Protein</th>
+                                    <th>{{checkinData.urine_protein}} mg/dL</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.urine_leukocytes != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>pH</th>
+                                    <th>{{checkinData.urine_ph}}</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.urine_leukocytes != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Blood</th>
+                                    <th>{{checkinData.urine_blood}} Ery/&mu;L</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.urine_leukocytes != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Specific Gravity</th>
+                                    <th>{{checkinData.urine_specific_gravity}}</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.urine_leukocytes != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Ketone</th>
+                                    <th>{{checkinData.urine_ketone}} mg/dL</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.urine_leukocytes != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Bilirubin</th>
+                                    <th>{{checkinData.urine_bilirubin}} mg/dL</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.urine_leukocytes != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>Glucose</th>
+                                    <th>{{checkinData.urine_glucose}} mg/dL</th>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.bpClass != undefined">
+                                    <td><img width="30px" src="images/Icons-32.png" /></td>
+                                    <th>{{interfaceLabels[blood_pressure_title]}}</th>
+                                    <td>{{interfaceLabels[blood_pressure_sub_title]}}</td>
+                                    <th>{{checkinData.systolic}} / {{checkinData.diastolic}} mmhg</th>
+                                    <td class="{{bpStatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[bp_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.bpClass != undefined">
+                                    <td><img width="30px" src="images/Icons-33.png" /></td>
+                                    <th>{{interfaceLabels[pulse_title]}}</th>
+                                    <td>{{interfaceLabels[pulse_sub_title]}}</td>
+                                    <th>{{checkinData.pulseBpm}} bpm</th>
+                                    <td class="{{checkinData.pulseStatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[checkinData.pulse_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.fatClass != undefined">
+                                    <td><img width="30px" src="images/Icons-29.png" /></td>
+                                    <th>{{interfaceLabels[body_fat_title]}}</th>
+                                    <td>{{interfaceLabels[body_fat_sub_title]}}</td>
+                                    <th>{{checkinData.fatRatio}} %</th>
+                                    <td class="{{bmcStatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[bmcstatusInfo]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.spo2Class != undefined">
+                                    <td><img width="30px" src="images/spo2/Icons-35.png" /></td>
+                                    <th>{{interfaceLabels[spo2_title]}}<sub>2</sub></th>
+                                    <td>{{interfaceLabels[spo2_sub_title]}}</td>
+                                    <th>{{checkinData.spo2}} %</th>
+                                    <td class="{{spo2StatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[spo2_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.temperatureClass != undefined">
+                                    <td><img width="30px" src="images/Icons-34.png" /></td>
+                                    <th>{{interfaceLabels[temperature_title]}}</th>
+                                    <td>{{interfaceLabels[temperature_sub_title]}}</td>
+                                    <th>{{checkinData.temperatureInFaranheit}} &#176;F</th>
+                                    <td class="{{tempStatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[temperature_status_info]}} </td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td><img width="30px" src="images/Icons-29.png" /></td>
+                                    <th>{{interfaceLabels[body_fat_title]}}</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[body_fat_sub_title_1]}}</th>
+                                    <th>{{checkinData.body_fat_mass | number:2}} kg</th>
+                                    <td ng-class="{'low_color' : vitalHistorybodyFatMassStatus == 'Low' , 'normal_color' : vitalHistorybodyFatMassStatus == 'Normal', 'acceptable_color' : vitalHistorybodyFatMassStatus == 'Acceptable' , 'high_color' : vitalHistorybodyFatMassStatus == 'High'}">{{interfaceLabels[body_fat_mass_status_info]}}</td>                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[body_fat_sub_title_2]}}</th>
+                                    <th>{{checkinData.percent_body_fat | number : 2}} %</th>
+                                    <td ng-class="{'low_color' : vitalHistorypercentBodyFatStatus == 'Low' , 'acceptable_color' : vitalHistorypercentBodyFatStatus == 'Acceptable', 'normal_color' : vitalHistorypercentBodyFatStatus == 'Normal', 'high_color' : vitalHistorypercentBodyFatStatus == 'High'}">{{interfaceLabels[percent_body_fat_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[body_fat_sub_title_3]}}</th>
+                                    <th>{{checkinData.skeletal_muscle_mass | number : 2}} kg</th>
+                                    <td ng-class="{'low_color' : vitalHistoryskeletalMuscleMassStatus == 'Low' , 'normal_color' : vitalHistoryskeletalMuscleMassStatus == 'Normal'}">{{interfaceLabels[skeletal_muscle_mass_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[body_fat_sub_title_4]}}</th>
+                                    <th>{{checkinData.body_cell_mass | number : 2}} kg</th>
+                                    <td ng-class="{'low_color' : vitalHistorybodyCellMassStatus == 'Low' , 'normal_color' : vitalHistorybodyCellMassStatus == 'Normal'}">{{interfaceLabels[body_cell_mass_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[body_fat_sub_title_5]}}</th>
+                                    <th>{{checkinData.visceral_fat | number : 2}} cm.sq</th>
+                                    <td ng-class="{'normal_color' : vitalHistoryvisceralFatStatus == 'Normal' , 'acceptable_color' : vitalHistoryvisceralFatStatus == 'Acceptable' , 'high_color' : vitalHistoryvisceralFatStatus == 'High'}">{{interfaceLabels[visceral_fat_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[body_fat_sub_title_6]}}</th>
+                                    <th>{{checkinData.bone_mineral_content | number : 2}} kg</th>
+                                    <td ng-class="{'low_color' : vitalHistoryboneMineralContentStatus == 'Low' , 'normal_color' : vitalHistoryboneMineralContentStatus == 'Normal'}">{{interfaceLabels[bone_mineral_content_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[body_fat_sub_title_7]}}</th>
+                                    <th>{{checkinData.protien | number : 2}} kg</th>
+                                    <td ng-class="{'low_color' : vitalHistoryprotienStatus == 'Low' , 'normal_color' : vitalHistoryprotienStatus == 'Normal'}">{{interfaceLabels[protien_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[body_fat_sub_title_8]}}</th>
+                                    <th>{{checkinData.mineral | number : 2}} kg</th>
+                                    <td ng-class="{'low_color' : vitalHistorymineralStatus == 'Low' , 'normal_color' : vitalHistorymineralStatus == 'Normal'}">{{interfaceLabels[mineral_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[body_fat_sub_title_9]}}</th>
+                                    <th>{{checkinData.intra_cellular_water | number : 2}} ltr</th>
+                                    <td ng-class="{'low_color' : vitalHistoryintraCellularWaterStatus == 'Low' , 'normal_color' : vitalHistoryintraCellularWaterStatus == 'Normal'}">{{interfaceLabels[intra_cellular_water_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[body_fat_sub_title_10]}}</th>
+                                    <th>{{checkinData.extra_cellular_water | number : 2}} ltr</th>
+                                    <td ng-class="{'low_color' : vitalHistoryextraCellularWaterStatus == 'Low' , 'normal_color' : vitalHistoryextraCellularWaterStatus == 'Normal', 'high_color' : vitalHistoryextraCellularWaterStatus == 'High'}">{{interfaceLabels[extra_cellular_water_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[body_fat_sub_title_11]}}</th>
+                                    <th>{{checkinData.waist_hip_ratio | number : 2}} NA</th>
+                                    <td ng-class="{'low_color' : vitalHistorywaistHipRatioStatus == 'Low' , 'normal_color' : vitalHistorywaistHipRatioStatus == 'Normal', 'high_color' : vitalHistorywaistHipRatioStatus == 'High'}">{{interfaceLabels[waist_hip_ratio_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[body_fat_sub_title_12]}}</th>
+                                    <th>{{checkinData.waist_height_ratio | number : 2}} NA</th>
+                                    <td ng-class="{'low_color' : vitalHistorywaistHeightRatioStatus == 'Low' , 'normal_color' : vitalHistorywaistHeightRatioStatus == 'Normal', 'high_color' : vitalHistorywaistHeightRatioStatus == 'High'}">{{interfaceLabels[waist_height_ratio_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[body_fat_sub_title_13]}}</th>
+                                    <th>{{checkinData.basal_metabolic_rate }} Kcal</th>
+                                    <td ng-class="{'low_color' : vitalHistorybasalMetabolicRateStatus == 'Low' , 'normal_color' : vitalHistorybasalMetabolicRateStatus == 'Normal'}">{{interfaceLabels[basal_metabolic_rate_status_info]}}</td>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.body_fat_mass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.ECGBpm != undefined">
+                                    <td><img width="30px" src="images/Icons-30.png" /></td>
+                                    <th>{{interfaceLabels[ecg_title]}}</th>
+                                    <td>{{interfaceLabels[ecg_sub_title]}}</td>
+                                    <th>{{checkinData.ECGBpm}} bpm</th>
+                                    <td class="{{ecgStatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[ecgadvice]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.bmiClass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.bmiClass != undefined">
+                                    <td><img width="27px" src="images/Icons-28.png" /></td>
+                                    <th>{{interfaceLabels[weight_bmi_title]}}</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-ng-if="checkinData.bmiClass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[bmi_sub_title]}}</th>
+                                    <th>{{checkinData.bmi | number:2}}</th>
+                                    <td class="{{bmiStatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[bmi_status_info]}}</td>
+                                </tr>
+                                <tr data-ng-if="checkinData.bmiClass != undefined">
+                                    <td></td>
+                                    <td></td>
+                                    <th>{{interfaceLabels[weight_sub_title]}}</th>
+                                    <th>{{checkinData.weightKG | number : 2}} kg</th>
+                                    <td></td>
+                                </tr>
+                            </table> 
+                            old code ends here-->
+                            <div style="width: 72px;" class="vitalPrintBtn" ng-click="lastCheckin.collectPrintDetails(checkinData)"> {{interfaceLabels[print_vital]}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-ng-show="last_medication" id="last_medication_id" style="overflow-y: auto; overflow-x: hidden;">
+                <div data-ng-show="medicationLoadingImg && !medAPIerror" style="text-align: center; margin: 20px;">
+                    <div style="padding: 20px;">{{interfaceLabels[progress_message]}}</div>
+                    <div class="email_validation_loader vitalDataLoader"></div>
+                </div>
+                <div data-ng-show="!medicationLoadingImg && medAPIerror" style="text-align: center; margin: 20px;">
+                    <div style="padding: 20px; color: #b30000;">{{interfaceLabels[progress_failure_message]}}</div>                    
+                </div>
+                <div data-ng-show="!medicationLoadingImg && !medAPIerror">
+                    <div id="keyboard_lastcheckin_lastcheck_title"><span id="keyboard_lastcheckin_lastcheck_title_text" style="color: #353535; font-size: 16px;">{{interfaceLabels[your_consult_history]}}</span> </div>
+                    <div data-ng-if="medicationData.length > 0" data-ng-repeat="medication in medicationData">
+                        <button class="medicationAccordion" id="medicationAccordion_$index" ng-click="medicationAccordionClick($index, medication.appointment_details.appointment_id)"> <span>{{interfaceLabels[consult_history_subtitle_1]}}<span ng-show="medication.consultant_details.vendor_id.toUpperCase() === 'IHL'">{{interfaceLabels[consult_history_subtitle_2]}}</span>
+                            <!-- <span ng-show="medication.consultant_details.vendor_id.toUpperCase() !== 'IHL'">Dr.</span> -->{{medication.consultant_details.consultant_name}} on {{medication.appointment_details.appointment_start_time[2]}}-{{medication.appointment_details.appointment_start_time[1]}}-{{medication.appointment_details.appointment_start_time[3]}} / {{medication.appointment_details.start_time}}</span> <span class="accordionIcon">
+                                <img  src="images/bmi_scale_arrow20120509_WIDE.png" id="med_accordion_image_{{$index}}">
+                            </span> </button>
+                        <div class="medicationPanel" id="medicationPanel_{{$index}}">
+                            <div data-ng-if="userinfo_loading && !consultantApiDataErr" style="text-align:center;margin: 10px auto;">
+                                <div style="padding: 10px;">{{interfaceLabels[progress_message_2]}}</div>
+                                <div class="email_validation_loader vitalDataLoader"></div>
+                            </div>
+                            <div data-ng-if="!userinfo_loading && consultantApiDataErr" style="text-align:center;margin: 10px auto;">
+                                <div style="padding: 10px; color: #b30000;">{{interfaceLabels[consult_history_subtitle_3]}}</div>                                
+                            </div>
+                            <div data-ng-if="!userinfo_loading && !consultantApiDataErr">
+                                <table border="1" style="text-align: left;width: 100%;margin: 10px auto;border: 1px solid lightgray !important;">
+                                    <tr>
+                                        <th>Dr./Consultant Name</th>
+                                        <th>Speciality Name</th>
+                                        <th>Consultation Fees</th>
+                                    </tr>
+                                    <tr>
+                                        <td>{{medication.consultant_details.consultant_name}}</td>
+                                        <td>{{medication.consultant_details.specality}}</td>
+                                        <td ng-show="medication.call_details.consultation_fees == 0">Free Consultation</td>
+                                        <td ng-show="medication.call_details.consultation_fees != 0">&#8377;{{medication.call_details.consultation_fees}}</td>
+                                    </tr>
+                                </table>
+                                <div data-ng-show="medication.consultant_notes.medication.length != 0">
+                                    <table border="1" style="text-align: left;width: 100%;margin: 20px auto 10px auto;border: 1px solid lightgray !important;">
+                                        <tr>
+                                            <th>Medicine Name</th>
+                                            <th>Frequency</th>
+                                            <th>Instruction</th>
+                                            <th>Quantity</th>
+                                            <th>No. of Days</th>
+                                        </tr>
+                                        <tr data-ng-repeat="obj in medication.consultant_notes.medication">
+                                            <td>{{obj.drug_name}}</td>
+                                            <td>{{obj.SIG}}</td>
+                                            <td>{{obj.direction_of_use}}</td>
+                                            <td>{{obj.quantity}}</td>
+                                            <td>{{obj.days}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div data-ng-show="(medication.consultant_notes.advice_to_patient != undefined || medication.consultant_notes.diagnosis != undefined) && medication.consultant_details.vendor_id.toUpperCase() === 'IHL'">
+                                    <table border="1" style="text-align: left;width: 100%;margin: 20px auto 10px auto;border: 1px solid lightgray !important;" data-ng-show="medication.consultant_notes.advice_to_patient != '' || medication.consultant_notes.diagnosis != ''">
+                                        <tr>
+                                            <th>Consultation Advice Notes</th>
+                                            <th>Diagnosis</th>
+                                        </tr>
+                                        <tr>
+                                            <td>{{medication.consultant_notes.advice_to_patient}}</td>
+                                            <td>{{medication.consultant_notes.diagnosis}}</td>
+                                        </tr>
+                                    </table>
+                                </div>                                
+                                <div data-ng-show="medication.consultant_notes.reason_for_visit != ''">
+                                    <table border="1" style="text-align: left;width: 100%;margin: 20px auto 10px auto;border: 1px solid lightgray !important;">
+                                        <tr>
+                                            <th>Reason For Visit</th>
+                                        </tr>
+                                        <tr>
+                                            <td>{{medication.consultant_notes.reason_for_visit}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div data-ng-show="medication.lab.length != 0">
+                                    <table border="1" style="text-align: left;width: 100%;margin: 10px auto;border: 1px solid lightgray !important;">
+                                        <tr>
+                                            <!-- <th>Date Prescribed</th> -->
+                                            <th>Lab Test List</th>
+                                            <th>Test Notes</th>
+                                        </tr>
+                                        <tr  data-ng-repeat="LabTestDetails in medication.lab">
+                                            <!-- <td>{{LabTestDetails.test_prescribed_on}}</td> -->
+                                            <td>{{LabTestDetails.test_name}}</td>
+                                            <td>{{LabTestDetails.test_name}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div data-ng-show="medication.diagnosis.length != 0">
+                                    <table border="1" style="text-align: left;width: 100%;margin: 10px auto;border: 1px solid lightgray !important;">
+                                        <tr>
+                                            <th>Diagnosis Name</th>
+                                            <th>Diagnosis Note</th>
+                                        </tr>
+                                        <tr  data-ng-repeat="DiagnosisDetails in medication.diagnosis">
+                                            <td>{{DiagnosisDetails.diagnosis_name}}</td>
+                                            <td>{{DiagnosisDetails.diagnosis_note}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div data-ng-show="medication.radiology.length != 0">
+                                    <table border="1" style="text-align: left;width: 100%;margin: 10px auto;border: 1px solid lightgray !important;">
+                                        <tr>
+                                            <!-- <th>Date Prescribed</th> -->
+                                            <th>Radiology Test List</th>
+                                            <th>Notes</th>
+                                        </tr>
+                                        <tr  data-ng-repeat="radiologyDetails in medication.radiology">
+                                            <!-- <td>{{radiologyDetails.test_prescribed_on}}</td> -->
+                                            <td>{{radiologyDetails.test_name}}</td>
+                                            <td>{{radiologyDetails.radiology_note}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <!-- <div data-ng-show="medication.consultant_notes.notes.length != ''" style="width:100%;display: flex;justify-content: center;align-items: center; padding:10px 0px;">
+                                    <div style="width:100%;margin-left: 10px;font-weight: bold;" class="tele_consultation_summary_heading_color">
+                                    Instructions: <p style="color: #4d4d4d;word-break: break-all;margin-left: 20px;">{{medication.consultant_notes.notes}}</p>
+                                    </div>
+                                </div> -->
+                                
+                                <div data-ng-show="!medication.hidePrintBtn" class="vitalPrintBtn" ng-click="lastCheckin.printPresOrConsultationNotes()"> {{interfaceLabels[medication.printBtnLabel]}} </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-ng-if="medicationData.length == 0" style="text-align: center; margin: 20px;">
+                        <div style="padding: 20px;"> {{interfaceLabels[consult_history_subtitle_3]}} </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="keyboard_lastcheckin_footer">
+        <div ng-show="lastCheckin.messagesVisible">
+            <div ng-show="earnditEnabled && lastCheckin.joinedChallenge==false">
+                <a class="login_account_disclaimer_btn {{lastCheckin.registerButtonClass}}" ng-click="lastCheckin.toggleChallengeTermsAcceptance()"></a>
+                <div class="cbox-glow" ng-hide="lastCheckin.termsAccepted"></div>
+                <div class="login_account_disclaimer  challenge_optin_label"> {{interfaceLabels[lastCheckin.registerDisclaimer]}}
+                    <a ng-click="lastCheckin.viewChallengeTerms()" ng-bind-html="interfaceLabels[lastCheckin.officialRules]"></a>. </div>
+            </div>
+            <div class="keyboard_lastcheckin_continue_btn keyboard_submit_btn" ng-show="lastCheckin.joinedChallenge" style="border-radius:10px;box-shadow:0px 3px 5px 1px grey;"><span ng-bind-html="interfaceLabels[lastCheckin.alreadyJoined]"></span></div>
+            <div class="login_accept_challenge_terms" ng-show="lastCheckin.submitting" />
+            <div class="keyboard_lastcheckin_continue_btn keyboard_submit_btn {{lastCheckin.registerButtonClass}}" ng-click="lastCheckin.joinChallenge()" ng-show="!lastCheckin.joinedChallenge && !lastCheckin.submitting"><span>{{interfaceLabels[lastCheckin.joinButton]}}</span></div>
+        </div>
+        <div ng-show="lastCheckin.resultsVisible">
+            <!-- <div id="keyboard_lastcheckin_backtotop_btn" class="keyboard_grey_btn active_btn" ng-click="lastcheckinScrollToTop()" ><span style="line-height: 32px;font-size: 16px;"><i class="fa fa-lg fa-angle-up" aria-hidden="true" style="color: dodgerblue;"></i> {{interfaceLabels[lastCheckin.backToTop]}}</span></div> -->
+            <div class="keyboard_lastcheckin_continue_btn keyboard_submit_btn active_btn" ng-click="lastCheckin.checkPaymentFlow()" style="top: 8px;"><span>{{interfaceLabels[lastCheckin.continue]}}</span></div>
+            <!--  <div class="keyboard_lastcheckin_continue_btn keyboard_submit_btn active_btn" ng-click="lastCheckin.continueCloseLastCheckin()" style="border-radius: 10px;box-shadow: 0px 2px 5px 2px grey"><span>{{interfaceLabels[lastCheckin.continue]}}</span></div> --></div>
+    </div>
+</div>
+<div class="keyboard_lastcheckin" ng-show="lastCheckin.checkinEditSexVisible">
+    <div id="gender-select" class="login_title edit-user-title" ng-bind-html="interfaceLabels[lastCheckin.guyOrGal]"></div>
+    <sex-select genderset="checkinEditSexButtonActive"></sex-select>
+    <div class="back_sex_btn keyboard_narrow_submit_btn active_btn" ng-click="lastCheckin.backToCheckinModal()"><span>Back</span> </div>
+    <div style="letter-spacing: 1px;" class="save_sex_btn keyboard_narrow_submit_btn {{lastCheckin.checkinEditSexButtonActiveClass}}" ng-click="lastCheckin.saveUpdatedSex()"><span>{{interfaceLabels[lastCheckin.confirm]}}</span> </div>
+</div>
+<div class="keyboard_lastcheckin" ng-if="lastCheckin.checkinEditHeightVisible">
+    <div id="height-pad" class="login_title edit-user-title" ng-bind-html="interfaceLabels[lastCheckin.howTall]"></div>
+    <height-numpad heightset="checkinEditHeightButtonActive" useparent="true"></height-numpad>
+    <div class="back_btn_cms keyboard_narrow_submit_btn active_btn" ng-click="lastCheckin.backToCheckinModal()"><span>Back</span> </div>
+<div style="letter-spacing: 1px;" id="confirm_btn_cms" class="save_height_btn keyboard_narrow_submit_btn {{lastCheckin.checkinEditHeightButtonActiveClass}}" ng-click="lastCheckin.saveUpdatedHeight()"><span>{{interfaceLabels[lastCheckin.confirm]}}</span> </div>
+</div>
+<div class="keyboard_lastcheckin" ng-if="lastCheckin.checkinEditWaistCircumferenceVisible">
+    <div id="waist-circumference-height-pad" class="login_title edit-user-title">{{interfaceLabels[waist_cir_question]}}
+        <br><span style="font-size: 16px; margin-left: 52px">{{interfaceLabels[waist_cir_question_sub_title]}}</span></div>
+    <waist-circumference-numpad waistCircumferenceset="checkinEditWaistCircumferenceButtonActive" useparent="true"></waist-circumference-numpad>
+    <div class="back_btn_waist keyboard_narrow_submit_btn active_btn" ng-click="lastCheckin.backToCheckinModal()"><span>Back</span> </div>
+    <div style="letter-spacing: 1px;" id="confirm_btn_cms" class="save_height_btn keyboard_narrow_submit_btn {{lastCheckin.checkinEditWaistCircumferenceButtonActiveClass}}" ng-click="lastCheckin.saveUpdatedWaistCircumference()"><span>{{interfaceLabels[lastCheckin.confirm]}}</span> </div>
+</div>
+
+<!-- Abha flow -->
+<!-- <div class="keyboard_lastcheckin" ng-if="lastCheckin.checkinAbhaEnable">
+    <p class="checkin_abha_verify_heading">Do you have an ABHA to link?</p>
+    <div id="abha_card_dummy" ng-show="true"></div>
+
+    <a class="abha_verify_Section_yes_btn {{lastCheckin.abhaVerifyButtonClass}}" ng-click="lastCheckin.abhaVerifySection('Yes')">
+        <span>Yes</span>
+    </a>
+
+    <a class="abha_verify_Section_no_btn {{lastCheckin.abhaVerifyButtonClass}}" ng-click="lastCheckin.abhaVerifySection('No')">
+        <span>No</span>
+    </a>
+
+
+</div> -->
+
+<div class="keyboard_lastcheckin" style="text-align:center;" ng-if="lastCheckin.checkinAbhaCardShow">
+    <p ng-if="lastCheckin.abhaNoCardToshow" class="abha_linked_card_heading">Your ABHA card is linked with IHL account</p>
+    <p ng-if="lastCheckin.abhaNoCardToshow" class="abha_linked_address_heading">Your ABHA address: {{ abhaAddressFetched }}</p>
+    <p ng-if="lastCheckin.abhaNoCardToshow" class="checkin_abha_card_authMode_title">Get ABHA card</p>
+    <div ng-if="lastCheckin.abhaNoCardToshow" class="abha_card_dropDown_division">
+        <!-- <select id="abhaCardSelect" class="abha_card_dropDown_input" ng-model="abhaCardDropvalue" ng-change="onAbhaCardAuthChange(abhaCardDropvalue)" ng-click ="onAbhaCardAuthClickEvent()">
+            <option value="" disabled selected>Select verification model</option>
+            <option ng-repeat= "option in abhaLinkDropOptions">{{option.auth}}</option>
+        </select> -->
+        <div style="padding-left:10px;top:-10px" class="abha_auth_radio_division">
+            <label>
+                <input type="radio" name="otpMode" value="Mobile OTP" ng-model="abhaLinkDropvalue" ng-click="onAbhaCardAuthChange(abhaLinkDropvalue)">
+                &nbsp;&nbsp;&nbsp;&nbsp;Mobile OTP
+            </label>
+            <label>
+                <input type="radio" name="otpMode" value="Aadhaar OTP" ng-model="abhaLinkDropvalue" ng-click="onAbhaCardAuthChange(abhaLinkDropvalue)">
+                &nbsp;&nbsp;&nbsp;&nbsp;Aadhaar OTP
+            </label>
+            <label>
+                <input type="radio" name="otpMode" value="Do it Later" ng-model="abhaLinkDropvalue" ng-click="onAbhaCardAuthChange(abhaLinkDropvalue)">
+                &nbsp;&nbsp;&nbsp;&nbsp;Do it Later
+            </label>
+        </div>        
+    </div>
+    <p ng-if="!lastCheckin.abhaNoCardToshow" class="abha_card_heading">Your ABHA card</p>
+    <div ng-if="!lastCheckin.abhaNoCardToshow" class="abha_card_section">
+        <img src="{{ lastCheckin.abhaCard }}">
+    </div>
+    <div id = "abha_authModeEnd_loader" class="last_checkin_abha_demo_auth_mode_end_loader"></div>
+    <div ng-if="!lastCheckin.abhaNoCardToshow" class="keyboard_lastcheckin_continue_btn keyboard_submit_btn active_btn" ng-click="lastCheckin.checkPaymentFlow()" style="top: 405px;"><span>{{interfaceLabels[lastCheckin.continue]}}</span></div>
+    <!-- <div ng-if="lastCheckin.abhaNoCardToshow" class="keyboard_lastcheckin_continue_btn keyboard_submit_btn active_btn" ng-click="lastCheckin.getAbhaCard()" style="top: 405px;"><span>Get Card</span></div> -->
+    <a ng-if="lastCheckin.abhaNoCardToshow" class="abha_close_continue {{abhaFinishcontinueBtn}}" ng-click="lastCheckin.getAbhaCard()">
+        <span>Continue</span>
+    </a>
+</div>
+
+<div ng-show="lastCheckin.abhaCardOTPSection">
+
+    <p style="font-size: x-large;color: #000000c7;font-style: oblique;font-family: 'LatoSemibold';margin-left: 10px; margin-top: 17px;">{{cardOtpSectionTitle}}</p>
+
+    <p class="checkin_abha_otp_title">Please enter the correct OTP</p>
+    <higi-text-field field="lastCheckin.fields[6]" class="last_checkin_otp_input"></higi-text-field>
+        <div id = "otp_val_loader" class="otp_validation_loader" style="top: 95px"></div>
+        <div id = "otp_no_error" class="abha_otp_no_not_exist" style="top: 95px">Invalid OTP</div>
+        <div id = "otp_no_srv" class="otp_srv_err" style="top: 85px">Something went wrong</div><!--style="top: -64px;"-->
+        <div id = "otp_no_resend" class="otp_resend" style="top: 105px">OTP Sent</div>                
+        <div id = "otp_no_later" class="otp_srv_try_later" style="top: 95px">Please try again later</div>
+        <!-- <small ng-hide="newMobileNumAddAbha" class="otpSection_text_resend"><a ng-click="abhaVerifyReg.resendOTP()" style="color: #0261c2;">Resend</a> the OTP code</small> -->
+
+    <!-- <p class="abha_link_success_response">ABHA has been linked with IHL successfully</p> -->
+    <a class="checkin_abhaCardOtp_submit_btn {{ lastCheckin.abhaCardOtpSubmit }}" ng-click="lastCheckin.abhaCardSubmitOTP()">
+        <span>Submit</span>
+    </a>
+
+</div>
+<!--  -->
+
+<div class="keyboard_lastcheckin" ng-show="lastCheckin.checkinEditNameVisible && hasChallenge">
+    <div class="login_title edit-user-title" ng-bind-html="interfaceLabels[lastCheckin.yourName]"></div>
+    <name-entry ng-attr-challengeid="lastCheckin.challengeId" ng-if="hasChallenge && lastCheckin.loggedIn && lastCheckin.checkinEditNameVisible"></name-entry>
+</div>
+<div class="keyboard_lastcheckin" ng-show="lastCheckin.checkinAffiliateVisible">
+    <div class="login_title edit-user-title" ng-bind-html="interfaceLabels[lastCheckin.selectYourAffiliate]"></div>
+    <affiliate-org></affiliate-org>
+    <div id="confirm_btn_aff" class="last_checkin_affiliate_button" ng-click="lastCheckin.saveUpdatedAffiliate()"> <span>{{interfaceLabels[lastCheckin.confirm]}}</span> </div>
+</div>
+<div id="fingerprint_section_login_lastCheck" ng-show="lastCheckin.loginCreateFingerprintSection" class="{{lastCheckin.loginCreateFingerprintSectionClass}}">
+    <canvas id="myFinalOutput" width="145px" height="188px" style="display: none;"></canvas>
+    <div id="finger_scan_instruction_lastCheck">{{interfaceLabels[addleftthumb]}}</div>
+    <div id="fingerprint_instruction_image">
+        <!-- background image -->
+    </div>
+    <div id="finger_scan_instruction2_lastCheck">{{interfaceLabels[scanwill]}}</div>
+    <!-- <div id="skip_fingerprint_new_lastCheck"> <button ng-click="lastCheckin.skipFingerprint()">{{interfaceLabels[canc]}}</button> </div> --></div>
+<div id="fingerprint_capturing_animation_section" ng-show="lastCheckin.loginCreateFingerprintCapturingSection" class="{{lastCheckin.loginCreateFingerprintCapturingSectionClass}}"> <img src="./images/fingerprint.gif" alt="" id="fingerprint_animation_lastCheckin"> </div>
+<div id="fingerprint_not_matched_regret_message_new" ng-show="lastCheckin.fingerprintRegretSection" class="{{lastCheckin.fingerprintRegretSectionClass}}">
+    <div id="success_add_fp"></div>
+    <!-- <span id="fingerprint_regret">Sorry..! we are unable to found..!!!</span> --><span id="fingerprint_regret_newsucess">{{interfaceLabels[successadfp]}}</span> </div>
+<div id="fingerprint_not_matched_regret_message" ng-show="lastCheckin.fingerprintRegretSectionNew" class="{{lastCheckin.fingerprintRegretSectionNewClass}}">
+    <!-- <span id="fingerprint_regret">Sorry..! we are unable to found..!!!</span> --><span id="fingerprint_regret">{{interfaceLabels[youarealread]}}</span>
+    <div id="skip_fingerprint_new_lastCheck2">
+        <button ng-click="lastCheckin.goCapture()">{{interfaceLabels[proce]}}</button>
+    </div>
+</div>
+<div id="keyboard_lastcheckin_box_fingerprint_animation" ng-show="lastCheckin.showLoadingAnimationFingerprint" class="{{lastCheckin.showLoadingAnimationFingerprintClass}}">
+    <!-- <img src="./images/sandtimerpngg.png" alt="" id="fingerprint_animation_fornow" ng-show="lastCheckin.AnimationFingerprintPng" class="{{lastCheckin.AnimationFingerprintPngClass}}" style="position: absolute;
+        left: 250px;
+        top: 100px;
+        width: 200px;
+        height: 200px;"> -->
+    <svg width="93px" height="93px" viewBox="0 0 14 18" id="fingerprint_animation_fornow" ng-show="lastCheckin.AnimationFingerprintPng" class="{{lastCheckin.AnimationFingerprintPngClass}}" style="position: absolute;
+        left: 250px;
+        top: 100px;
+        width: 200px;
+        height: 200px;">
+        <g id="sandclock" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+            <path d="M13.0986667,16.465 L12.7226667,16.465 C12.6796667,16.031 12.5996667,15.6073333 12.4886667,15.1963333 C12.084,13.6953333 11.269,12.3646667 10.352,11.3396667 C9.52833333,10.4183333 8.623,9.74333333 7.859,9.41433333 C7.859,9.41433333 7.56766667,9.20133333 7.56766667,8.97866667 C7.56766667,8.75633333 7.859,8.54533333 7.859,8.54533333 C9.687,7.74033333 12.3786667,4.93333333 12.7223333,1.50133333 L13.0986667,1.50133333 C13.5006667,1.50133333 13.8266667,1.17533333 13.8266667,0.773666667 C13.8266667,0.371666667 13.5006667,0.0456666667 13.0986667,0.0456666667 L0.776,0.0456666667 C0.374,0.0456666667 0.048,0.371666667 0.048,0.773666667 C0.048,1.17533333 0.374,1.50133333 0.776,1.50133333 L1.152,1.50133333 C1.49233333,4.93666667 4.15866667,7.745 6.00533333,8.54733333 C6.00533333,8.54733333 6.31133333,8.737 6.31133333,8.97866667 C6.31133333,9.22033333 6.01566667,9.421 6.01566667,9.421 C5.26233333,9.75266667 4.36333333,10.4246667 3.54166667,11.3396667 C2.62066667,12.3646667 1.79833333,13.6953333 1.389,15.1963333 C1.277,15.6073333 1.196,16.031 1.15266667,16.465 L0.776,16.465 C0.374,16.465 0.048,16.791 0.048,17.1926667 C0.048,17.5946667 0.374,17.9206667 0.776,17.9206667 L13.0986667,17.9206667 C13.5006667,17.9206667 13.8266667,17.5946667 13.8266667,17.1926667 C13.8263333,16.791 13.5006667,16.465 13.0986667,16.465 L13.0986667,16.465 Z M2.47033333,16.4923333 L1.892,16.4923333 C1.92166667,16.023 1.97666667,15.5933333 2.053,15.1963333 C2.273,14.054 2.67366667,13.1896667 3.18666667,12.4753333 C3.47733333,12.0703333 3.80133333,11.6873333 4.14033333,11.3396667 C4.80733333,10.6553333 5.88879069,10.1021427 6.19133333,9.82066667 C6.49387598,9.53919067 6.65833333,9.39266667 6.65833333,8.997 C6.65833333,8.60133333 6.45611593,8.47363293 6.03570577,8.2112428 C5.61529562,7.94885266 4.034,6.69966667 3.17433333,5.49566667 C2.488,4.53433333 2.00533333,3.328 1.891,1.50166667 L11.982,1.50166667 C11.8663333,3.322 11.378,4.52866667 10.687,5.49133333 C9.82466667,6.69266667 8.52740499,7.75976575 7.89733907,8.12268078 C7.26727316,8.48559582 7.22133333,8.61 7.22133333,8.98333333 C7.22133333,9.35666667 7.41784912,9.52330154 7.89733907,9.82066691 C8.37682903,10.1180323 9.08133333,10.6486667 9.75266667,11.3393333 C10.0873333,11.6833333 10.4066667,12.0626667 10.6933333,12.4633333 C11.2053333,13.179 11.6043333,14.0463333 11.823,15.196 C11.8983333,15.5926667 11.9523333,16.0223333 11.9816667,16.492 L11.4053333,16.492 C4.14033338,16.4920002 5.86059567,16.4920002 2.47033333,16.4923333 Z" id="Shape" fill="#7c7c7c"></path>
+            <g id="sand">
+                <path d="M7.00695799,10.3484497 C7.00695799,10.3484497 6.27532958,10.4129639 7.00695799,10.3484497 C7.73858641,10.2839355 7.00695799,10.3484497 7.00695799,10.3484497 C7.00695799,10.3484497 7.78173827,9.99768063 7.09265135,10.548584 C6.40356444,11.0994873 7.09265137,10.548584 7.09265137,10.548584 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,10.548584 C6.80957031,10.548584 7.1925659,10.737854 6.87243651,10.548584 C6.37234656,10.2529159 7.00695799,10.3484497 7.00695799,10.3484497 Z;
+                      " id="Path-26" fill="#00ccff" sketch:type="MSShapeGroup">
+                    <animate attributeName="d" dur="2s" repeatCount="indefinite" keyTimes="0; .01; .2; .4; .7; .8; .99; 1" values="M2.33630371,3.07006836 C2.33630371,3.07006836 5.43261719,3.33813477 6.80957031,3.33813477 C8.18652344,3.33813477 11.3754883,3.07006836 11.3754883,3.07006836 C11.3754883,3.07006836 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,8.35028076 L7.09265137,8.46459961 L6.87243652,8.46459961 L6.87243652,8.35028076 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.33630371,3.07006836 2.33630371,3.07006836 Z;
+ 
+                     M2.375,3.11462402 C2.375,3.11462402 5.71569824,3.44421387 7.09265137,3.44421387 C8.46960449,3.44421387 11.4150391,3.31262207 11.4150391,3.31262207 C11.4150391,3.31262207 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,15.5496216 L7.09265137,16.47052 L6.87243652,16.47052 L6.87243652,15.5496216 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.375,3.11462402 2.375,3.11462402 Z;
+                                         
+                     M2.49230957,3.31262207 C2.49230957,3.31262207 5.71569824,3.66851807 7.09265137,3.66851807 C8.46960449,3.66851807 11.3153076,3.53222656 11.3153076,3.53222656 C11.3153076,3.53222656 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,15.149231 L7.9152832,16.47052 L6.10144043,16.47052 L6.87243652,15.149231 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.49230957,3.31262207 2.49230957,3.31262207 Z;
+                                
+                     M2.98474121,4.37164307 C2.98474121,4.37164307 5.49548338,4.7074585 6.87243651,4.7074585 C8.24938963,4.7074585 10.8119509,4.64428711 10.8119509,4.64428711 C10.8119509,4.64428711 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,12.5493774 L9.36248779,16.47052 L4.5581665,16.47052 L6.87243652,12.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.98474121,4.37164307 2.98474121,4.37164307 Z;
+                                         
+                      M4.49743651,6.36560059 C4.49743651,6.36560059 5.63000487,6.72412109 7.00695799,6.72412109 C8.38391112,6.72412109 9.56188963,6.36560059 9.56188963,6.36560059 C9.56188963,6.36560059 9.48870848,6.54571533 8.79962157,7.09661865 C8.11053465,7.64752197 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 6.01727463,8.16043491 4.82800292,6.81622307 C4.42932128,6.36560059 4.49743651,6.36560059 4.49743651,6.36560059 Z;
+                                         
+                      M5.87017821,7.51904297 C5.87017821,7.51904297 6.14080809,7.70904542 6.87243651,7.64453126 C7.60406493,7.5800171 7.47180174,7.51904297 7.47180174,7.51904297 C7.47180174,7.51904297 8.51336669,7.23876953 7.82427977,7.78967285 C7.13519286,8.34057617 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 6.66632079,8.14239502 6.34619139,7.953125 C5.84610144,7.65745695 5.87017821,7.51904297 5.87017821,7.51904297 Z;
+                                         
+                      M7.00695799,8.06219482 C7.00695799,8.06219482 6.27532958,8.12670898 7.00695799,8.06219482 C7.73858641,7.99768066 7.00695799,8.06219482 7.00695799,8.06219482 C7.00695799,8.06219482 7.78173827,7.71142576 7.09265135,8.26232908 C6.40356444,8.8132324 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 7.1925659,8.45159912 6.87243651,8.2623291 C6.37234656,7.96666105 7.00695799,8.06219482 7.00695799,8.06219482 Z;
+                                         
+                      M7.00695799,10.3484497 C7.00695799,10.3484497 6.27532958,10.4129639 7.00695799,10.3484497 C7.73858641,10.2839355 7.00695799,10.3484497 7.00695799,10.3484497 C7.00695799,10.3484497 7.78173827,9.99768063 7.09265135,10.548584 C6.40356444,11.0994873 7.09265137,10.548584 7.09265137,10.548584 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,10.548584 C6.80957031,10.548584 7.1925659,10.737854 6.87243651,10.548584 C6.37234656,10.2529159 7.00695799,10.3484497 7.00695799,10.3484497 Z;" />
+                    <animate attributeName="fill" dur="2s" repeatCount="indefinite" keyTimes="0; .5; 1" values="#0066ff;  #33ccff; #3399ff;" /> </path>
+            </g>
+        </g>
+    </svg>
+    <h2 style="text-align: center;color: #6f7475;padding-top: 310px;">{{interfaceLabels[loadpleaswait]}}</h2> </div>
+<div id="fingerprint_not_matched_regret_message_wrong" ng-show="lastCheckin.somethingWentWrong" class="{{lastCheckin.fingerprintRegretSectionNewClass}}">
+    <div id="failed_add_fp"></div>
+    <!-- <span id="fingerprint_regret">Sorry..! we are unable to found..!!!</span> -->
+    <span id="fingerprint_regret_somethingWentWrong">{{interfaceLabels[somewrong]}}</span> 
+    <a ng-show="lastCheckin.fingerprintBackbutton" class="fingerprintBackbuttonClass button-enter-left" ng-click="lastCheckin.fingerprintWentback()">
+        <span class="global_previous_page_text">Back</span>
+    </a>
+</div>
+<div id="fingerprint_not_matched_regret_message_2fp" ng-show="lastCheckin.fingerprintRegretSection2fp" class="{{lastCheckin.fingerprintRegretSection2fpClass}}">
+    <div id="fingerprint_not_recognized3"></div> <span id="fingerprint_regret_not_recognized4">{{interfaceLabels[alreadregister]}}</span> </div>
+</div>
+</div>
+<div id="login_username2323" ng-show="lastCheckin.loginEmailSection" class="{{lastCheckin.loginEmailSectionClass}}">
+    <higi-text-field field="lastCheckin.fields[0]"></higi-text-field>
+    <p id="Aadhaar_validating_messege" style="color: #1D659E;
+            font-family: 'IntervalSansProMediumRegular';
+            font-size: 16px;
+            top: 8px;
+            left: 13px;
+            width: 779px;
+            position: absolute;
+            text-shadow: 0 1px 1px #FFFFFF;"></p>
+    <higi-text-field field="lastCheckin.fields[1]"></higi-text-field>
+    <p id="Email_validating_messege" style="color: #1D659E;
+            font-family: 'IntervalSansProMediumRegular';
+            font-size: 16px;
+            top: 200px;
+            left: 133px;
+            width: 779px;
+            position: absolute;
+            text-shadow: 0 1px 1px #FFFFFF;"></p>
+    <higi-text-field field="lastCheckin.fields[2]"></higi-text-field>
+    <p id="MobileNo_validating_messege" style="color: #1D659E;
+            font-family: 'IntervalSansProMediumRegular';
+            font-size: 16px;
+            top: 8px;
+            left: 13px;
+            width: 779px;
+            position: absolute;
+            text-shadow: 0 1px 1px #FFFFFF;"></p>
+    <higi-text-field field="lastCheckin.fields[3]"></higi-text-field>
+    <p id="FirstName_validating_messege" style="color: #1D659E;
+            font-family: 'IntervalSansProMediumRegular';
+            font-size: 16px;
+            top: 380px;
+            left: 133px;
+            width: 779px;
+            position: absolute;
+            text-shadow: 0 1px 1px #FFFFFF;"></p>
+    <higi-text-field field="lastCheckin.fields[4]"></higi-text-field>
+    <p id="LastName_validating_messege" style="color: #1D659E;
+            font-family: 'IntervalSansProMediumRegular';
+            font-size: 16px;
+            top: 470px;
+            left: 133px;
+            width: 779px;
+            position: absolute;
+            text-shadow: 0 1px 1px #FFFFFF;"></p>
+    <!-- <div id="login_username_loading_new5" class="keyboard_dialog_loading"></div>
+            <div id="login_username_loading_new8" class="keyboard_dialog_loading"></div>
+            
+            <div id="login_username_loading_new5" class="keyboard_dialog_loading"></div>
+            <div id="login_username_loading_new8" class="keyboard_dialog_loading"></div>
+            <div id="login_username_loading_new5" class="keyboard_dialog_loading"></div> --><span class="ng-binding" id="emailId_title">{{interfaceLabels[emaill]}}
+            </span> <span class="ng-binding" id="login_mobile_title">{{interfaceLabels[mobno]}}
+            </span> <span class="ng-binding" id="login_aadhaar_title">{{interfaceLabels[aadhno]}}
+            </span> <span class="ng-binding" id="login_fname_title">{{interfaceLabels[firstnames]}}
+            </span> <span class="ng-binding" id="login_lname_title">{{interfaceLabels[lastnames]}}
+            </span>
+    <p id="login_username_error_new"></p>
+    <p id="login_username_error_new2"></p>
+    <div id="login_editSubmission_loading" class="keyboard_dialog_loading"></div>
+    <div id="login_username_warning"><span></span></div>
+    <div id="loginsubmit_btn" class="save_sex_btn keyboard_narrow_submit_btn  active_btn" ng-click="lastCheckin.SubmitSection()" ng-hide="registerModal.submitting"><span>{{interfaceLabels[sub]}}</span></div>
+</div>

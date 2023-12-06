@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'custom_icons';
+  src:  url('fonts/custom_icons.eot?nvzaan');
+  src:  url('fonts/custom_icons.eot?nvzaan#iefix') format('embedded-opentype'),
+    url('fonts/custom_icons.ttf?nvzaan') format('truetype'),
+    url('fonts/custom_icons.woff?nvzaan') format('woff'),
+    url('fonts/custom_icons.svg?nvzaan#custom_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.fac {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'custom_icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-ayurvedic:before {
+  content: "\e903";
+}
+.fa-gym-treadmill:before {
+  content: "\e909";
+}
+.fa-boxing:before {
+  content: "\e90f";
+}
+.fa-zumba:before {
+  content: "\e911";
+}
+.fa-yoga:before {
+  content: "\e913";
+}
+.fa-diet:before {
+  content: "\e914";
+}
+.fa-fitness:before {
+  content: "\e919";
+}
+.fa-spine:before {
+  content: "\e900";
+}
+.fa-bacteria:before {
+  content: "\e901";
+}
+.fa-cosmetology:before {
+  content: "\e902";
+}
+.fa-ent:before {
+  content: "\e904";
+}
+.fa-intensivist:before {
+  content: "\e905";
+}
+.fa-geriatric:before {
+  content: "\e906";
+}
+.fa-pregnancy:before {
+  content: "\e907";
+}
+.fa-homoeopathy:before {
+  content: "\e908";
+}
+.fa-head:before {
+  content: "\e90a";
+}
+.head:before {
+  content: "\e90a";
+}
+.fa-kidney:before {
+  content: "\e90c";
+}
+.fa-knee:before {
+  content: "\e90d";
+}
+.fa-gender:before {
+  content: "\e90e";
+}
+.fa-ventilator:before {
+  content: "\e910";
+}
+.fa-skin:before {
+  content: "\e912";
+}
+.fa-stethoscope:before {
+  content: "\e915";
+}
+.fa-stomach:before {
+  content: "\e916";
+}
+.fa-endocrinology .path1:before {
+  content: "\e917";
+  color: rgb(216, 69, 62);
+}
+.fa-endocrinology .path2:before {
+  content: "\e918";
+  margin-left: -1.3115234375em;
+  color: rgb(0, 0, 0);
+}
+.fa-diabetology:before {
+  content: "\e90b";
+}

@@ -1,0 +1,16 @@
+{	
+	"fullbodybmc1.title":"बीएमसी",
+    "text.instructions":"सूचना",
+	"fullbodybmc1.holdhands":"आपल्या हातांनी अलगद हँडल्स पकडा",
+    "fullbodybmc1.restwristt":"आपले निकाल दिसेपर्यंत आपले मनगट इलेक्ट्रोडवर ठेवा",
+    "fullbodybmc1.restLegsOnfootPads":"फूटरेस्टच्या पॅडवर आपले पाय ठेवा",
+    "fullbodybmc1.will.beginBefore" : "ही तपासणी आपले हात जागेवर असल्यावर सुरू होईल",
+    "fullbodybmc1.will.begin" : "Click 'Start Test' when your Hand & leg are placed as shown",
+    "fullbodybmc1.skip": "वगळा",
+    "fullbodybmc1.startTest": "तपासणी सुरु करा",
+    "fullbodybmc1.bmc.progress" : "बीएमसी तपासणी सुरु आहे...",
+
+    
+    "weight04.bmc.hands.removed.warning" : "काहीतरी गडबड झाली असावी. आपण पुन्हा प्रयत्न करूया"
+    
+}

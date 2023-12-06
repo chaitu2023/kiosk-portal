@@ -1,0 +1,10 @@
+{
+  "spo2one.spo2": "SpO2",
+  "text.instructions": "ہدایات",
+  "spo2one.skip": "ہٹائیں",
+  "spo2one.placeYourFingerProbably": "اپنی انگلی مناسب طریقے سے رکھیں",
+  "spo2one.insertfinger": "اپنے دائیں ہاتھ کی انگلی کو SpO<sub>2</sub> الیکٹروڈ کے اندر مضبوطی سے داخل کریں",
+  "spo2one.instruct":"Place your finger gently and rest your palm here",
+  "spo2one.fingerinplaceBefore": " یہ ٹیسٹ اس وقت شروع ہوگا جب آپ کی انگلی جگہ پر ہو",
+	"spo2one.fingerinplace":" Click 'Start Test' when your Finger is placed as shown"
+}

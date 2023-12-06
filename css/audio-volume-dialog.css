@@ -1,0 +1,278 @@
+#higi_audio_box {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1000; }
+
+
+#higi_audio_dialog {
+    width: 540px;
+    height: 60px;
+    z-index: 0;
+    position: absolute;
+    top: 72px;
+    left: 207px; }
+
+/* 
+    #higi_audio_dialog {
+        left: 403px;
+        top: 100px; } */
+        #higi_audio_dialog.move_left {
+          left: 173px; }
+          #higi_audio_dialog.move_left .audio_slider_bkg_arrow {
+            left: 570px; }
+            #higi_audio_dialog.move_left .audio_slider_bkg_arrow.logged-in {
+              left: 677px; }
+        #higi_audio_dialog .audio_slider_bkg_arrow.logged-in {
+          left: 448px; }
+
+          
+.audio_slider_bkg_arrow {
+    background: url("../images/audio_slider_bkg_arrow20120524.png") no-repeat;
+    height: 23px;
+    width: 25px;
+    position: absolute;
+    top: -17px;
+    left: 379px;
+    display: none;
+    /* z-index: 1; */ }
+    .audio_slider_bkg_arrow.logged-in {
+      left: 463px; }
+  
+  .move_left .audio_slider_bkg_arrow {
+    left: 410px; }
+    .move_left .audio_slider_bkg_arrow.logged-in {
+      left: 463px; }
+  
+      
+.audio_slider_container {
+    /* background: url("../images/audio_slider_bkg20120524.png") no-repeat; */
+    background: url("../images/audio-volume-dialog/2.png") no-repeat;
+    background-size: 568px 70px;
+    /* background-position:220px 0px; */
+    background-position:0px 0px;
+    /* height: 144px; */
+    height: 70px;
+    position: relative;
+    width: 568px; }
+
+@media (min-width: 801px) {
+    .audio_slider_container {
+        height: 144px;
+        width: 768px; }
+    }
+     
+
+    #audio_slider_tick_container {
+        position: absolute;
+        top: 47px;
+        left: 120px; }
+      
+        
+#audio_slider {
+    /* z-index: 1; */
+    /* top: 50px; */
+    /* left: 174px; */
+    z-index: 1;
+      position: absolute;
+      top: 12px;
+      left: 73px;
+      width: 385px;
+      height: 40px;
+  }
+
+  .sliderbar {
+    width: 500px;
+    /*border:         1px solid #CCC;*/
+    height: 50px;
+      /*
+  border-radius:      4px;
+  background:       #EEE;
+      */ }
+    
+      
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+.noUi-target,
+.noUi-target * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.noUi-target {
+  position: relative; }
+
+.noUi-base {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.noUi-origin {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+.noUi-handle {
+  position: relative;
+  z-index: 1; }
+
+.noUi-stacking .noUi-handle {
+  /* This class is applied to the lower origin when
+     its values is > 50%. */
+  z-index: 10; }
+
+.noUi-stacking + .noUi-origin {
+  /* Fix stacking order in IE7, which incorrectly
+     creates a new context for the origins. */
+  *z-index: -1; }
+
+.noUi-state-tap .noUi-origin {
+  -webkit-transition: left 0.3s, top 0.3s;
+  transition: left 0.3s, top 0.3s; }
+
+.noUi-state-drag * {
+  cursor: inherit !important; }
+
+/* Painting and performance;
+ * Browsers can paint handles in their own layer.
+ */
+.noUi-base {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+/* Slider size and handle placement;
+ */
+.noUi-horizontal {
+  height: 60px; }
+
+.noUi-horizontal .noUi-handle {
+  /* z-index: 5; */
+  /* width: 123px; */
+  /* height: 73px; */
+  /* position: absolute; */
+  /* top: -8px; */
+  /* left: -64px; */
+  /* background-image: url("../images/audio_slider_btn20120425.png"); */
+  /* background-image: url("../images/audio-volume-dialog/1.png"); */
+  z-index: 5;
+    width: 123px;
+    height: 100px;
+    /* position: absolute; */
+    top: -5px;
+    left: 0px;
+    background-image: url(../images/audio-volume-dialog/1.png);
+    background-repeat: no-repeat;
+    background-size: 25px 47px;
+
+    width: 30px;
+    height: 50px;
+ }
+
+.noUi-vertical {
+  width: 18px; }
+
+.noUi-vertical .noUi-handle {
+  width: 28px;
+  height: 34px;
+  left: -6px;
+  top: -17px; }
+
+/* Styling;
+ */
+.noUi-connect {
+  background: #3FB8AF;
+  box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
+  -webkit-transition: background 450ms;
+  transition: background 450ms; }
+
+.noUi-origin {
+  border-radius: 2px; }
+
+.noUi-target {
+  border-radius: 4px;
+  border: 0px solid #D3D3D3; }
+
+.noUi-target.noUi-connect {
+  box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45), 0 3px 6px -5px #BBB; }
+
+/* Handles and cursors;
+ */
+.noUi-dragable {
+  cursor: w-resize; }
+
+.noUi-vertical .noUi-dragable {
+  cursor: n-resize; }
+
+.noUi-handle
+ {
+  z-index: 5;
+  width: 123px;
+  height: 73px;
+  position: absolute;
+  top: -36px;
+  left: -64px;
+  background-image: url("../images/audio_slider_btn20120425.png"); }
+
+/* Handle stripes;
+ */
+.noUi-handle:before,
+.noUi-handle:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 14px;
+  width: 1px;
+  background: #E8E7E6;
+  left: 14px;
+  top: 6px; }
+
+.noUi-handle:after {
+  left: 17px; }
+
+.noUi-vertical .noUi-handle:before,
+.noUi-vertical .noUi-handle:after {
+  width: 14px;
+  height: 1px;
+  left: 6px;
+  top: 14px; }
+
+.noUi-vertical .noUi-handle:after {
+  top: 17px; }
+
+/* Disabled state;
+ */
+[disabled].noUi-connect,
+[disabled] .noUi-connect {
+  background: #B8B8B8; }
+
+[disabled] .noUi-handle {
+  cursor: not-allowed; }
+
+.audio_mute_btn_left{    
+  background: url(../images/audio-volume-dialog/Icons-26.png) no-repeat;
+  background-size: 35px 40px;
+  background-position: 10px 5px;
+  height: 45px;
+  width: 55px;
+  position: relative;
+  top: 5px;
+  left: 20px;
+}  
+.audio_mute_btn_right{    
+  background: url(../images/audio-volume-dialog/speaker-icon-09.png) no-repeat;
+  background-size: 30px 30px;
+  background-position: 10px 10px;
+  height: 45px;
+  width: 50px;
+  position: relative;
+  top: -40px;
+  left: 485px;
+}

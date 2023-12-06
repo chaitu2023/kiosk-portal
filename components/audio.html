@@ -1,0 +1,8 @@
+<div id="bloodpressure02_testing_audio">
+    <audio ng-repeat="audioFile in audioFiles" id="{{audioFile.id}}" preload="auto" class="higi-audio" ng-if="audioFile.autoplay" autoplay="autoplay">
+        <source ng-src="{{interfaceLabels[audioFile.filename]}}" />
+    </audio>
+    <audio ng-repeat="audioFile in audioFiles" id="{{audioFile.id}}" preload="auto" class="higi-audio" ng-if="!audioFile.autoplay">
+        <source ng-src="{{interfaceLabels[audioFile.filename]}}" />
+    </audio>
+</div>

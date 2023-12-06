@@ -1,0 +1,23 @@
+{
+  "weight3.results": "ಫಲಿತಾಂಶಗಳು",
+  "weight3.information": "ಮಾಹಿತಿ",
+  "weight3.parameter": "ಪ್ಯಾರಾಮೀಟರ್",
+  "weight3.yourscore": "ನಿಮ್ಮ ಸ್ಕೋರ್",
+  "weight3.OverallStatus": "ಒಟ್ಟಾರೆ ಸ್ಥಿತಿ",
+  "global.underweight": "ಕಡಿಮೆ ತೂಕ",
+  "global.normalweight": "ಸಾಮಾನ್ಯ",
+  "global.overweight": "ಅಧಿಕ ತೂಕ",
+  "global.obese": "ಬೊಜ್ಜು",
+  "weight3.weight": "ತೂಕ",
+  "weight3.height": "ಎತ್ತರ",
+  "weight3.kgUnit": "in Kgs",
+  "weight3.feetUnit": "in feet",
+  "weight3.parameter.bmi.title": "ಬಿಎಂಐ",
+  "weight3.body.mass.index": "ಬಾಡಿ ಮಾಸ್ ಇಂಡೆಕ್ಸ್",
+  "weight3.bmi.scale": "ಬಾಡಿ ಮಾಸ್ ಇಂಡೆಕ್ಸ್ ಸ್ಕೇಲ್",
+  "weight3.underweight": "ಕಡಿಮೆ ತೂಕ",
+  "weight3.normalweight": "ಸಾಮಾನ್ಯ",
+  "weight3.overweight": "ಅಧಿಕ ತೂಕ",
+  "weight3.obese": "ಬೊಜ್ಜು",
+  "weight3.check.Again": "ಮತ್ತೊಮ್ಮೆ ಬಿಎಂಐ ಪರಿಶೀಲಿಸಿ"
+}

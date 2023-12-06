@@ -1,0 +1,844 @@
+.weight_instructions_header_container {
+    margin-top: 11%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.weight_instructions_header_image{
+    width: 40px;    
+    position: relative;
+    top: 5px;
+}
+.weight_instructions_header_text{
+    padding-left: 10px;
+    font-weight: 500;
+    margin-top: 0px;
+    font-family: 'LatoItalic';
+    font-size: 34px;
+    color: #4d4d4d;
+}
+.weight_instructions_main_container{
+    margin-top: -23px;    
+    box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;
+    background-color: #dddddd;
+    height: 345px;
+}
+.weight_instructions_heading{
+    text-align: center;
+    font-size: 24px;
+    margin-left: 9px;
+    padding-top: 10px;
+    font-family: 'LatoSemibold';
+    color: #333333;
+}
+.weight_instructions_bottom_heading{
+    font-family: 'LatoSemibold';
+    color: #585858; 
+    position: relative; 
+    top: 255px; 
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Weight Instructions */
+  #weight_instruction_seat, #weight_instruction_feet {
+    position: absolute;
+    width: 224px;
+    height: 224px;
+    left: 45px; 
+    top:45px;
+    opacity: 0.4;
+}
+ .weight_instruction_circle_overlay {
+  background: transparent url("../images/tests_instruction_circle20121009_transparent.png") top left no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: block;
+  height: 224px;
+  width: 224px; }
+.weight_instruction_circle {
+  width: 224px;
+  height: 224px;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  top: auto; }
+#weight_instruction_seat_frames {
+  background: transparent url("../images/weight_instruction_seatcenter_sequence20121015.png") top left no-repeat;
+  height: 224px;
+  width: 224px;
+  display: block;
+  z-index: 5; }
+
+.weight_instruction_text {
+    position: absolute;
+    top: 270px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 274px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}
+
+#weight_instruction_sit {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 450px;
+  left: 0px; }
+#weight_instruction_seat_text {
+  left: 15px; }
+
+#weight_instruction_feet{
+    left: 290px; top:45px;
+} 
+#weight_instruction_feet_text {
+  left: 270px; }
+#weight_instruction_feet_frames {
+  background: transparent url("../images/weight_instruction_feetbar_sequence20121015.png") top left no-repeat;
+  height: 224px;
+  width: 224px;
+  display: block;
+  z-index: 5; }
+
+#weight_instruction_feet2 {    
+    opacity: 0.4;
+    left: 530px;
+    top: 45px;
+}
+#weight_instruction_feet2_text {
+    left: 510px;
+}
+#weight_instruction_feet_frames2 {
+    background: transparent url(../images/hand_wrongs.png) top left no-repeat;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+}
+
+/* Weight Inprogress */
+.weight_inprogress_bottom_heading{
+    font-family: 'LatoSemibold';
+    color: #585858; 
+    position: relative; 
+    top: 10px; 
+    font-size: 20px;
+    text-align: center;     
+}
+#weight02_pane {}
+#weightgauge_text {
+  display: block;
+  position: absolute;
+  top: 130px;
+  left: 297px;
+  color: #fff;
+  z-index: 15; }
+  #weightgauge_textnum {
+  display: block;
+  font-size: 70px;
+  text-align: center;
+  line-height: 70px;
+  width: 200px;
+  font-family: 'IntervalSansProCondSemiBoldRg';
+  text-shadow: 0px 1px 2px #000; }
+#weightgauge_lbs {
+  display: block;
+  font-size: 34px;
+  text-align: center;
+  width: 200px;
+  font-family: 'IntervalSansProCondSemiBoldRg';
+  text-shadow: 0px 1px 2px #000;
+  line-height: 25px; }
+#weightgauge_top {
+  background: url("../images/weightgauge_top20120515.png") no-repeat;
+  z-index: 10;
+  height: 284px;
+  width: 285px;
+  position: relative;
+  top: 25px;
+  left: 255px; }
+#weight_unit{
+  color:white;
+  z-index:20; 
+  position:absolute;
+  left:387px;
+  top:170px;
+  font-size:26px;
+}
+#weightgauge_arc_gauge {
+  position: absolute;
+  top: -138px;
+  left: -4px;
+  z-index: 5;
+  -webkit-transform: rotate(-122deg); }
+  #weightgauge_bottom {
+  background: url("../images/weightgauge_bottom20120504.png") no-repeat scroll 0 0 transparent;
+  left: 255px;
+  position: absolute;
+  top: 25px;
+  width: 800px;
+  height: 600px; }
+
+/* Weight Result */
+
+.weight_results_main_container{
+    height: 370px; margin-top: 115px; box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;     background-color: #dddddd; 
+}
+.weight_results_header_container{
+    padding-top: 15px;
+    margin-left: 20px;
+}
+.weight_results_header_image{
+    margin-right: 15px;
+    width: 40px;
+    float: left;
+}
+.weight_results_header_text{
+    padding-left: 31px;
+    font-weight: 500;
+    margin-top: 0px;    
+    font-size: 34px;
+    color: #4d4d4d;
+    margin-bottom: 15px;
+    font-family: 'LatoItalic';
+}
+.weight_results_small_text {
+    color: #797979;
+    font-family: latoItalic;
+    font-size: 26px;
+}
+.weight_results_sub_container{
+    width: 92%;
+    margin: auto;
+    background-color: #fff;
+    height: 260px;    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+    padding: 10px;
+}
+.weight_results_title_container{
+    height: 135px;
+    width: 100px;    
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;    
+    background-color: #E6E6E6;
+}
+.weight_results_parameter_title{
+    background-color: #f2f2f2;
+    padding: 20px 0px;
+    margin-top: 0px;
+    border-radius: 10px 10px 0px 0px;
+    font-size: 14px;
+    color: #383838;
+}
+.weight_results_yourscore_title{
+    color: #383838;
+    font-size: 14px;    background-color: #e6e6e6;
+    padding: 20px 0px;
+    margin-top: -14px;
+}
+.weight_results_param1_container{
+    height: 135px; 
+    background-color: #fff; 
+    left:115px; 
+    width: 155px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+.weight_results_param1_title, .weight_results_param2_title, .weight_results_param3_title{
+    font-size: 24px;
+    font-weight: 500;
+    color: #4a4a4ae3;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: LatoBold;
+}
+.weight_results_parm1_sub_title, .weight_results_parm2_sub_title, .weight_results_parm3_sub_title{
+    font-size: 14px; 
+    color: #6d6d6de8; 
+    position-top: 0px; 
+    font-family: LatoRegular;
+    text-align: center;
+    margin:0px;
+}
+.weight_results_parm1_value, .weight_results_parm2_value, .weight_results_parm3_value{
+    margin-top: 20px;
+    font-size: 32px;
+    margin-left: 6px;
+    color: gray;
+    font-family: LatoHeavy;
+    margin-bottom: 0px;
+}
+.weight_results_param2_container{
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+    height: 135px; 
+    background-color: #e6e6e6; 
+    left:275px; 
+    width: 155px;
+}
+.weight_results_param3_container{
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+    height: 135px; 
+    background-color: #fff; 
+    left:435px; 
+    width: 155px;
+}
+.weight_results_over_all_status_container{
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 15px;
+    text-align: center;
+    left:595px; 
+    width: 155px; 
+    height: 260px; 
+    background-color: #e6e6e6;
+}
+
+.weight_results_over_all_status_titles{
+    font-size: 20px;
+    color: #4a4a4aa8;
+    margin-top: 6px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: LatoBold;
+    width: 90%
+}
+.weight_results_overall_sub_title{
+    font-size: 14px; 
+    color: #6d6d6de8; 
+    position-top: 0px; 
+    font-family: LatoRegular;
+    text-align: center;
+    margin:10px;
+}
+.weight_results_status_bar_container{
+    margin-top: 138px;
+    height: 120px;
+    width: 580px;
+    background-color: #E6E6E6;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+.weight_results_status_bar_heading{
+    text-align: center;
+    margin: 0px;
+    margin-top: 4px;
+}
+.bmi_display_arrow_pos1 {
+    left: 69px;
+}
+
+.bmi_display_arrow_pos2 {
+    left: 224px;
+}
+
+.bmi_display_arrow_pos3 {
+    left: 280px;
+}
+
+.bmi_display_arrow_pos4 {
+    left: 382px;
+}
+.weight_arrow_text_design {
+    top: 15px;
+    font-size: 12px;
+    height: 22px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 140px;
+}
+.weight_arrow_scale_pos {
+    transition: all .1s ease-in-out;
+    -webkit-animation: scalebounce 2s 1;
+    -moz-animation: scalebounce 2s 1;
+    animation: scalebounce 2s 1;
+    top: 23px;
+    height: 40px;
+}
+.weight_arrow_scale_pos .weight_arrow_size_pos {
+    display: block;
+}
+.weight_results_status_bar_image{
+    width: 412px;
+    text-align: center;
+    margin-top: 25px;
+    height: 40px;
+}
+
+.weight_results_status_bar_image_underweight{
+    position: absolute;
+    top: 90px;
+    left: 125px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #383838;
+    letter-spacing: 1.5px;
+}
+
+.weight_results_status_bar_image_underweight.hi_in{
+    position: absolute;
+    top: 90px;
+    left: 110px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #383838;
+    letter-spacing: 1.5px;
+}
+
+.weight_results_status_bar_image_normal{
+    position: absolute;
+    top: 90px;
+    left: 268px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #383838;
+}
+
+.weight_results_status_bar_image_normal.hi_in{
+    position: absolute;
+    top: 90px;
+    left: 210px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #383838;
+}
+
+.weight_results_status_bar_image_overweight{
+    position: absolute;
+    top: 90px;
+    left: 290px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #383838;
+    letter-spacing: 1.5px;
+}
+
+.weight_results_status_bar_image_overweight.hi_in{
+    position: absolute;
+    top: 90px;
+    left: 310px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #383838;
+    letter-spacing: 1.5px;
+}
+
+.weight_results_status_bar_image_obese{
+    position: absolute;
+    top: 90px;
+    left: 437px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #383838;
+}
+
+.weight_results_status_bar_image_obese.hi_in{
+    position: absolute;
+    top: 90px;
+    left: 435px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #383838;
+}
+
+.bmi_arrow_pos{
+    width: 20px;
+    position: relative;
+    top: 15px;
+}
+.weight_bg_color1{
+    background-color: #ef940f;
+}
+
+.weight_bg_color2{
+    background-color: #83d501;
+}
+
+.weight_bg_color3{
+    background-color: #ef940f;
+}
+
+.weight_bg_color4{
+    background-color: #ac0404;
+}
+
+.weight_bg_color4 p:first-child, 
+.weight_bg_color4 p:nth-child(2) {
+    color: #d1b8b8;
+}
+
+.weight_overall_status_txt{
+    font-size: 17px;
+    color: #fff;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: LatoHeavy;
+}
+.weight_overall_ststus_icon{
+    margin-top: -5px;
+    width: 90px;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.weight_count_down_container{
+	margin: 16% 20% 0 20%;
+    font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.weight_count_down_logo{
+	width: 75px;
+	margin: 0% 0% 0% 45%;
+}
+
+.weight_count_down_heading{
+	font-size: 30px;
+	font-weight: 500;
+	text-align: center;
+	margin: 10px 0px 0px 0px;
+	font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.weight_count_down_sub_heading{
+	color: gray;
+	font-size: 23px;
+	font-weight: 500;
+	text-align: center;
+	margin: 10px 0px 0px 0px;
+	font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.weight_count_down_start_test{
+	color: #808080b8;
+    font-size: 19px;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.weight_count_down_timer{
+	text-align: center;
+    color: #3887b2;
+    font-weight: 500;
+    font-size: 72px;
+    margin: 0px;
+}
+
+.weight_instructions_header_container {
+	margin-top: 11%;
+    margin-left: 42%;
+    max-width: 100%;
+}
+
+.weight_instructions_header_image {
+	float: left ;
+	width: 35px;
+}
+
+.weight_instructions_header_text {
+	padding-left: 31px;
+   	font-size: 30px;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #4a4a4a;
+    font-family: "IntervalSansProMediumRegular";
+}
+
+.replay_button_container{
+    margin-top: 2%;
+    margin-left: 37%;
+    width: 225px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: white;
+    border: 2px solid dodgerblue;
+}
+
+.replay_button_container:active{
+    background-color: gainsboro;
+}
+
+.replay_button_logo{
+    float: left ;
+    width: 35px;
+    margin-top: 1px;
+}
+
+.replay_button_text{
+    padding-left: 31px;
+   	font-size: 20px;
+    font-weight: 500;
+    margin-top: 4px;
+    color: #4a4a4a;
+    font-family: "IntervalSansProMediumRegular";
+}
+
+.weight_instructions_main_container{
+	height: 360px;
+    margin-top: -23px;
+    background-color: #ebebeb;
+}
+
+.weight_instructions_heading{
+	text-align: center;
+    font-size: 24px;
+    color: #4a4a4a;
+    padding-top: 10px;
+}
+
+.weight_instructions_footer{
+    text-align: center;
+    font-size: 24px;
+    color: #4a4a4a;
+    padding-top: 10px;
+    top: 320px;
+    margin-top: 280px;
+}
+
+.weight_instructions_circle_container_1 {
+	top: 50px;
+    left: 30px;
+    position: absolute;
+    margin-top: -60px;
+}
+
+.weight_instructions_circle_container_2 {
+	top: 50px;
+    left: 284px;
+    position: absolute;
+    margin-top: -60px;
+}
+
+.weight_instructions_circle_container_3 {
+	top: 50px;
+    left: 538px;
+    position: absolute;
+    margin-top: -60px;
+}
+
+.weight_instructions_circle_place_overlays {
+	background: transparent url(../images/tests_instruction_circle20121009_transparent.png) top left no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: block;
+    height: 224px;
+    width: 224px;
+    background-size: cover;
+    border-radius: 115px;
+    border: 2px solid dodgerblue;
+}
+
+#weight_instructions_circle1_place_frames {
+	background: transparent url("images/weight_instruction_seatcenter_sequence20121015.png") top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+#weight_instructions_circle2_place_frames {
+    background: transparent url("images/weight_instruction_feetbar_sequence20121015.png") top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+#weight_instructions_circle3_place_frames {
+    background: transparent url("images/hand_wrongs.png") top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+.weight_instructions_text_1{
+	top: 280px;
+    font-size: 15px;
+    color: #6d6d6de8;
+    font-weight: 500;
+    left: 30px;
+    text-align: center;
+    width: 224px;
+    height: 70px;
+    margin-top: -60px;
+    position: absolute;
+    font-family: 'IntervalSansProMediumRegular';
+}
+
+.weight_instructions_text_2{
+	top: 280px;
+    font-size: 15px;
+    color: #6d6d6de8;
+    font-weight: 500;
+    left: 284px;
+    text-align: center;
+    width: 224px;
+    height: 70px;
+    margin-top: -60px;
+    position: absolute;
+    font-family: 'IntervalSansProMediumRegular';
+}
+
+.weight_instructions_text_3{
+	top: 280px;
+    font-size: 15px;
+    color: #6d6d6de8;
+    font-weight: 500;
+    left: 538px;
+    text-align: center;
+    width: 224px;
+    height: 70px;
+    margin-top: -60px;
+    position: absolute;
+    font-family: 'IntervalSansProMediumRegular';
+}
+
+#weight02_pane {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 600px; }
+  
+  #weightgauge_arc_gauge {
+    position: absolute;
+    top: -2px;
+    left: -4px;
+    z-index: 5;
+    -webkit-transform: rotate(-122deg); }
+  
+  #weightgauge_top.en_us {
+    background: url("../images/weightgauge_top20120515.png") no-repeat;
+    z-index: 10;
+    height: 284px;
+    width: 285px;
+    position: relative;
+    top: 160px;
+    left: 255px; }
+  
+  #weightgauge_top.es_us {
+    background: url("../images/weightgauge_top_es.png") no-repeat;
+    z-index: 10;
+    height: 284px;
+    width: 285px;
+    position: relative;
+    top: 160px;
+    left: 255px; }
+  
+  #weightgauge_bottom.en_us {
+    background: url("../images/weightgauge_bottom20120504.png") no-repeat scroll 0 0 transparent;
+    left: 255px;
+    position: absolute;
+    top: 160px;
+    width: 800px;
+    height: 600px; }
+    @media (min-width: 801px) {
+      #weightgauge_bottom.en_us {
+        width: 1280px;
+        height: 1024px; } }
+  
+  #weightgauge_bottom.es_us {
+    background: url("../images/weightgauge_bottom_es.png") no-repeat scroll 0 0 transparent;
+    left: 255px;
+    position: absolute;
+    top: 160px;
+    width: 800px;
+    height: 600px; }
+    @media (min-width: 801px) {
+      #weightgauge_bottom.es_us {
+        width: 1280px;
+        height: 1024px; } }
+  
+  #weightgauge_text {
+    display: block;
+    position: absolute;
+    top: 270px;
+    left: 297px;
+    color: #fff;
+    z-index: 15; }
+  
+  #weightgauge_textnum {
+    display: block;
+    font-size: 70px;
+    text-align: center;
+    line-height: 70px;
+    width: 200px;
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    text-shadow: 0px 1px 2px #000; }
+  
+  #weightgauge_lbs {
+    display: block;
+    font-size: 34px;
+    text-align: center;
+    width: 200px;
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    text-shadow: 0px 1px 2px #000;
+    line-height: 25px; }
+  
+  #weight_guage_bottom_text{
+      padding-left: 180px;
+         font-size: 30px;
+      font-weight: 500;
+      margin-top: 180px;
+      color: #4a4a4a;
+      font-family: "IntervalSansProMediumRegular";
+  }
+  */

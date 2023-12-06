@@ -1,0 +1,593 @@
+<style type="text/css">
+.logoRight{
+	width: 23%;
+    position: relative;
+    left: 550px;
+    margin-top: 10px;
+}
+.paymentBtn{
+	border: 1px solid;
+    border-radius: 15px;
+    padding: 15px;
+    width: 250px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+
+
+.paymentBtn{
+    color: rgb(2, 97, 194);
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bolder;
+    background-image: linear-gradient(#E6E6E6 55%, #FFFFFF);
+    background-color: #FEFEFE;
+    background-image: -webkit-linear-gradient(#FEFEFE 55%, #E6E6E6);
+    background-image: linear-gradient(#FEFEFE 55%, #E6E6E6);
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    line-height: 55px;
+    text-align: center;
+    color: #0261c2;
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    text-shadow: 0px -1px 1px #fff;
+    background-color: white;
+    width: 175px;
+    height: 100px;
+}
+
+
+.paymentBtn span{
+  padding: 0px 15px;
+}
+
+.paymentBtn:focus {
+  outline:none;
+}
+
+.paymentBtn:active{
+	opacity: 0.5;
+}
+
+.vitalCheckBox{
+	height: 200px;
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 15px;
+    border: 1px solid #eaeaea;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;    
+  margin-left: 12px;
+}
+
+li {
+  	display: inline-block;
+  	width: 120px;
+	margin-left: -18px;
+	margin-right: -5px;
+	margin-top: -40px;
+}
+
+input[type="checkbox"][id^="checkbox_bp"], input[type="checkbox"][id^="checkbox_bpw"], input[type="checkbox"][id^="checkbox_bmi"], input[type="checkbox"][id^="checkbox_bmc"], input[type="checkbox"][id^="checkbox_ecg"], input[type="checkbox"][id^="checkbox_spo2"], input[type="checkbox"][id^="checkbox_temp"] {
+  display: none;
+}
+
+#checkbox_bpw_label {    
+	border: 1px solid #e2e2e2;
+    padding: 5px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    background: transparent url(images/splash_bp_weight_test_20141030_wide_btn_en-us2.png) no-repeat;
+    background-position: center -20px;
+    background-size: 190px;
+    height: 189px;
+    border-radius: 10px 0px 0px 10px;
+    width: 147px;
+}
+
+#checkbox_ecg_label{    
+	border: 1px solid #e2e2e2;
+    padding: 5px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    background: transparent url(images/ekg.png) no-repeat;
+    background-position: center 10px;
+    background-size: 64px;
+    height: 87px;
+    width: 147px;
+}
+
+#checkbox_bp_label{    
+	border: 1px solid #e2e2e2;
+    padding: 5px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    background: transparent url(images/splash_bp_test_20141030_wide_btn.png) no-repeat;    
+    background-position: center -22px;
+    background-size: 135px;
+    height: 87px;
+    width: 147px;
+}
+#checkbox_bmi_label{    
+	border: 1px solid #e2e2e2;
+    padding: 5px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    background: transparent url(images/splash_scale.png) no-repeat;   
+    background-position: center -45px;
+    background-size: 130px;
+    height: 87px;
+    width: 147px;
+    border-radius: 0px 10px 0px 0px;
+}
+#checkbox_bmc_label{    
+	border: 1px solid #e2e2e2;
+    padding: 5px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    background: transparent url(images/bmcpreview.png) no-repeat;   
+    background-position: center 7px;
+    background-size: 50px;
+    height: 87px;
+    width: 147px;
+}
+#checkbox_spo2_label{    
+	border: 1px solid #e2e2e2;
+    padding: 5px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    background: transparent url(images/O2.png) no-repeat;    
+    background-position: center 10px;
+    background-size: 45px;
+    height: 87px;
+    width: 147px;
+}
+#checkbox_temp_label{    
+	border: 1px solid #e2e2e2;
+    padding: 5px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    background: transparent url(images/temperature.png) no-repeat;    
+    background-position: center 10px;
+    background-size: 25px;
+    height: 87px;
+    width: 147px;
+    border-radius: 0px 0px 10px 0px;
+}
+
+
+
+
+#checkbox_bpw_label > img, #checkbox_ecg_label > img, #checkbox_bp_label > img, #checkbox_bmi_label > img, #checkbox_bmc_label > img, #checkbox_temp_label > img, #checkbox_spo2_label > img{
+    height: 100px;
+    width: 100px;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+}
+
+#checkbox_bpw_label:before, #checkbox_ecg_label:before, #checkbox_bp_label:before, #checkbox_bmi_label:before, #checkbox_bmc_label:before, #checkbox_spo2_label:before, #checkbox_temp_label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #4295d1 !important;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+
+
+:checked + #checkbox_bpw_label, :checked + #checkbox_ecg_label, :checked + #checkbox_bp_label,, :checked + #checkbox_bmi_label,, :checked + #checkbox_bmc_label,, :checked + #checkbox_spo2_label,, :checked + #checkbox_temp_label, {
+  border-color: #0261c2 !important;
+}
+
+:checked + #checkbox_bpw_label:before, :checked + #checkbox_ecg_label:before, :checked + #checkbox_bp_label:before, :checked + #checkbox_bmi_label:before, :checked + #checkbox_bmc_label:before, :checked + #checkbox_spo2_label:before, :checked + #checkbox_temp_label:before {
+  content: "✓";
+  background-color: #0261c2 !important;
+  transform: scale(1);
+}
+
+:checked + #checkbox_bpw_label img, :checked + #checkbox_ecg_label img, :checked + #checkbox_bp_label img, :checked + #checkbox_bmi_label img, :checked + #checkbox_bmc_label img, :checked + #checkbox_spo2_label img, :checked + #checkbox_temp_label img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
+}
+.price_label_bp, .price_label_bpw, .price_label_bmi, .price_label_bmc, .price_label_ecg, .price_label_spo2, .price_label_temp {
+	width: 40%;
+    position: relative;
+    top: 30px;
+    left: 50px;
+}
+
+
+.price_text_bp, .price_text_bpw, .price_text_bmc, .price_text_bmi, .price_text_ecg, .price_text_spo2, .price_text_temp {
+	position: relative;
+    color: #0261c2;
+    font-weight: 600;
+    top: 15px;
+    left: 5px;
+}
+
+#checkbox_bpw_amt {
+	position: relative; 
+	top: 105px; 
+	font-size: 15px;
+    font-family: 'IntervalSansProLightBold'; 
+    color: #0261c2
+}
+#checkbox_bpw_title{
+	position: relative; 
+	top: 115px; 
+	font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'IntervalSansProLightBold';    
+    font-weight: bolder;
+    color: #0261c2
+}
+#checkbox_bmc_amt {
+	position: relative; 
+	top: 25px; 
+	font-size: 15px;
+    font-family: 'IntervalSansProLightBold'; 
+    color: #0261c2
+}
+#checkbox_bmc_title{
+	position: relative; 
+	top: 40px; 
+	font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'IntervalSansProLightBold';
+    font-weight: bolder;
+    color: #0261c2
+}
+#checkbox_spo2_amt {
+	position: relative; 
+	top: 25px; 
+	font-size: 15px;
+    font-family: 'IntervalSansProLightBold'; 
+    color: #0261c2
+}
+#checkbox_spo2_title{
+	position: relative; 
+	top: 40px; 
+	font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'IntervalSansProLightBold';
+    font-weight: bolder;
+    color: #0261c2
+}
+#checkbox_temp_amt {
+	position: relative; 
+	top: 25px; 
+	font-size: 15px;
+    font-family: 'IntervalSansProLightBold'; 
+    color: #0261c2
+}
+#checkbox_temp_title{
+	position: relative; 
+	top: 40px; 
+	font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'IntervalSansProLightBold';
+    font-weight: bolder;
+    color: #0261c2
+}
+#checkbox_bmi_amt {
+	position: relative; 
+	top: 25px; 
+	font-size: 15px;
+    font-family: 'IntervalSansProLightBold'; 
+    color: #0261c2
+}
+#checkbox_bmi_title{
+	position: relative; 
+	top: 40px; 
+	font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'IntervalSansProLightBold';
+    font-weight: bolder;
+    color: #0261c2
+}
+
+#checkbox_ecg_amt {    
+	position: relative;
+    top: 25px;
+    font-size: 15px;
+    font-family: 'IntervalSansProLightBold';
+    color: #0261c2
+}
+#checkbox_ecg_title{    
+	position: relative;
+    top: 40px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'IntervalSansProLightBold';
+    font-weight: bolder;
+    color: #0261c2
+}
+#checkbox_bp_amt {    
+	position: relative;
+    top: 25px;
+    font-size: 15px;
+    font-family: 'IntervalSansProLightBold';
+    color: #0261c2
+}
+#checkbox_bp_title{    
+	position: relative;
+    top: 40px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'IntervalSansProLightBold';
+    font-weight: bolder;
+    color: #0261c2
+}
+
+.vitalCheckBox_bpw{
+	border:1px solid #eaeaea; 
+	height: 200px; 
+	width: 160px; 
+	border-radius: 15px 0px 0px 15px;
+}
+.vitalCheckBox_ecg{
+	border: 1px solid #eaeaea;
+    height: 100px;
+    width: 160px;
+    position: relative;
+    top: -202px;
+    left: 160px;
+}
+.vitalCheckBox_bp{
+	border:1px solid #eaeaea; 
+	height: 100px;
+	width: 160px; 
+	position: relative; 
+	top: -204px; 
+	left: 160px;
+}
+
+.vitalCheckBox_bmc{
+	border:1px solid #eaeaea; 
+	height: 100px;
+	width: 160px; 
+	position: relative; 
+	top: -406px; 
+	left: 320px;
+}
+.vitalCheckBox_spo2{
+	border:1px solid #eaeaea; 
+	height: 100px;
+	width: 160px; 
+	position: relative; 
+	top: -408px; 
+	left: 320px;
+}
+.vitalCheckBox_bmi{
+	border:1px solid #eaeaea; 
+	height: 100px;
+	width: 160px; 
+	position: relative;
+    top: -610px; 
+    left: 480px; 
+    border-radius: 0px 15px 0px 0px
+}
+.vitalCheckBox_temp{
+	border:1px solid #eaeaea; 
+	height: 100px;
+	width: 160px; 
+	position: relative;
+    top: -612px; 
+    left: 480px; 
+    border-radius: 0px 0px 15px 0px
+}
+.payemntInfoTitle{
+	font-size: 30px; color: #717171; font-family: 'IntervalSansProLightBold';
+}
+
+.payemntInfoTitleHighlighted {
+	font-size: 30px; color: #0261c2; font-family: 'IntervalSansProLightBold';
+}
+
+    .count {
+        color: #0261c2;
+        margin-left:30px;
+        font-size:25px;
+        margin-left: 0px;
+    }
+    .paymentContainer{
+        text-align: center;
+        margin-top: 0px;
+    }
+    .paymentBoxContainer{
+        border: 1px solid #e2e2e2; 
+        height: 155px; 
+        width: 80%; 
+        margin: auto; 
+        padding: 0px 5px;
+        margin-top: 15px; 
+        border-radius: 15px;
+    }
+    .payTextContainer{
+        height: 30px; 
+        width: 90%; 
+        margin: auto; 
+        padding: 10px 10px; 
+        border-radius: 15px; 
+        text-align: center;
+    }
+    .payText{
+        font-size: 26px; 
+        font-family: 'IntervalSansProCondSemiBoldRg'; 
+        color: #7d7e80;
+    }
+    .payTextImg{
+        width: 12px; 
+        position: relative; 
+        top: 5px;
+    }
+    .payTextFinalChar{
+        color: #0261c2;
+    }
+    .debitCardContainer{
+        position: relative; 
+        top: -15px; 
+        width: 210px;
+    }
+</style>
+
+<div>
+	<div> 
+		<img class="logoRight" src="images/smart-50.png" />
+	</div>
+	<div class="paymentContainer">
+		
+		<div> 
+			<p class="payemntInfoTitle"> 
+				Please select required  
+				<span class="payemntInfoTitleHighlighted"> vital test for you </span> 
+			</p>
+		</div>
+
+		<div class="vitalCheckBox"> 
+			<div class="vitalCheckBox_bpw">
+			    <input type="checkbox" id="checkbox_bpw" ng-click="checkedVital('bpw')"/>
+			    <label for="checkbox_bpw" id="checkbox_bpw_label">
+			    	<p id="checkbox_bpw_title"> Complete All test </p> 
+    				<p id="checkbox_bpw_amt"> <img style="width: 7px;" src="images/Indian_Rupee_symbol.png" /> {{vitalCost.AllTest}} /- </p>
+			    </label>
+			</div>
+			<div class="vitalCheckBox_ecg">
+			    <input type="checkbox" id="checkbox_ecg" ng-click="checkedVital('ecg')"/>
+			    <label for="checkbox_ecg" id="checkbox_ecg_label">
+			    	<p id="checkbox_ecg_title"> ecg </p> 
+    				<p id="checkbox_ecg_amt"> <img style="width: 7px;" src="images/Indian_Rupee_symbol.png" /> {{vitalCost.ECG}} /- </p>
+			    </label>
+			</div>
+			<div class="vitalCheckBox_bp">
+			    <input type="checkbox" id="checkbox_bp" ng-click="checkedVital('bp')"/>
+			    <label for="checkbox_bp" id="checkbox_bp_label">
+			    	<p id="checkbox_bp_title"> BP </p> 
+    				<p id="checkbox_bp_amt"> <img style="width: 7px;" src="images/Indian_Rupee_symbol.png" /> {{vitalCost.BloodPressure}} /- </p>
+			    </label>
+			</div>
+			
+			<div class="vitalCheckBox_bmc">
+			    <input type="checkbox" id="checkbox_bmc" ng-click="checkedVital('bmc')"/>
+			    <label for="checkbox_bmc" id="checkbox_bmc_label">
+			    	<p id="checkbox_bmc_title"> BCA </p> 
+    				<p id="checkbox_bmc_amt"> <img style="width: 7px;" src="images/Indian_Rupee_symbol.png" /> {{vitalCost.BMC}} /- </p>
+			    </label>
+			</div>
+			
+			<div class="vitalCheckBox_spo2">
+			    <input type="checkbox" id="checkbox_spo2" ng-click="checkedVital('spo2')"/>
+			    <label for="checkbox_spo2" id="checkbox_spo2_label">
+			    	<p id="checkbox_spo2_title"> SpO2 </p> 
+    				<p id="checkbox_spo2_amt"> <img style="width: 7px;" src="images/Indian_Rupee_symbol.png" /> {{vitalCost.SPO2}} /- </p>
+			    </label>
+			</div>
+			
+			<div class="vitalCheckBox_bmi">
+			    <input type="checkbox" id="checkbox_bmi" ng-click="checkedVital('bmi')"/>
+			    <label for="checkbox_bmi" id="checkbox_bmi_label">
+			    	<p id="checkbox_bmi_title"> WEIGHT & BMI </p> 
+    				<p id="checkbox_bmi_amt"> <img style="width: 7px;" src="images/Indian_Rupee_symbol.png" /> {{vitalCost.Weight}} /- </p>
+			    </label>
+			</div>
+			
+			<div class="vitalCheckBox_temp">
+			    <input type="checkbox" id="checkbox_temp" ng-click="checkedVital('temp')"/>
+			    <label for="checkbox_temp" id="checkbox_temp_label">
+			    	<p id="checkbox_temp_title"> TEMPERATURE </p> 
+    				<p id="checkbox_temp_amt">  <img style="width: 7px;" src="images/Indian_Rupee_symbol.png" /> {{vitalCost.Tempeature}} /- </p>
+			    </label>
+			</div>
+		</div>
+		
+<style type="text/css">
+    .debitCardImg{
+        width: 50px; 
+        position: relative; 
+        left: 5px; 
+        top: -5px;
+    }
+    .debitCardTxt{
+        position: relative;
+        top: -37px;
+    }
+    .upiContainer{
+      position: relative; 
+      top: -8px; 
+      width: 210px;  
+    }
+    .upiImg{
+        width: 120px; 
+        position: relative; 
+        top:-5px
+    }
+    .upiTxt{
+        position: relative;
+        top: -45px;
+    }
+    .cashContainer{
+        width : 210px; 
+        position: relative; 
+        top: -3px;
+    }
+    .cashImg{
+        width: 60px; 
+        position: relative; 
+        left: 5px; 
+        top: -10px;
+    }
+    .cashTxt{
+        position: relative;
+        top: -50px;
+    }
+    .hardwaredisabled{
+        opacity: 0.5;
+        color: darkgrey;
+    }
+</style>
+  
+    	<div class="paymentBoxContainer"> 
+            <div class="payTextContainer"> 
+                <span class="payText"> Pay <img class="payTextImg" src="images/Indian_Rupee_symbol.png" />  <span class="count">0</span> <span class="payTextFinalChar"> /- </span> </span>
+            </div>
+    		<div> 	
+    	        <button class="paymentBtn debitCardContainer {{disableClass}}" ng-click="card_paymentButtonClick()" ng-disabled="cardPaymentDisable"> 
+    	        	<img class="debitCardImg" src="images/cash_card.png" /> <br>
+    	          	<span class="debitCardTxt" style=""> Pay by Card   </span> 
+    	        </button> 
+    	        <button class="paymentBtn upiContainer" ng-click="upi_paymentButtonClick()"> 
+    	        	<img class="upiImg" src="images/upi_cash.png" /> <br>
+    	          	<span class="upiTxt"> Pay by UPI QR  </span> 
+    	        </button> 
+    	        <button class="paymentBtn cashContainer" ng-click="cash_paymentButtonClick()"> 
+    	        	<img class="cashImg" src="images/cash_in_hand.png" /> <br>
+    	          	<span class="cashTxt"> Pay by Cash or Skip  </span> 
+    	        </button> 
+    		</div>
+    	</div>
+         
+	</div>
+</div>

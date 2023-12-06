@@ -1,0 +1,20 @@
+{
+    "spo2three.spo2": "ଏସପିଓ2",
+    "spo2three.results": "ଫଳାଫଳଗୁଡ଼ିକ",
+    "spo2three.continue": "ଜାରି ରଖନ୍ତୁ",
+    "spo2three.spo2.percent": "%",
+    "spo2three.spo2level": "ଏସପିଓ2 ଅକ୍ସିଜେନ ସ୍ତର",
+    "spo2three.checkSpo2again": "ପୁନର୍ବାର ଏସପିଓ2 ଚେକ୍ କରନ୍ତୁ",
+    "spo2three.information": "ସୂଚନା",
+    "spo2three.parameter": "ମାନକ",
+    "spo2three.yourscore": "ଆପଣଙ୍କର ସ୍କୋର୍",
+    "spo2three.OverallStatus": "ସାମଗ୍ରିକ ସ୍ଥିତି",
+    "spo2three.spo22scale": "ଏସପିଓ<sub>2</sub> ସ୍କେଲ୍",
+    "spo2three.finalResult": "ଚୂଡ଼ାନ୍ତ ଫଳାଫଳ",
+    "spo2three.status.healthy": " ସ୍ୱାସ୍ଥ୍ୟକର",
+    "spo2three.status.acceptable": "ଗ୍ରହଣୀୟ",
+    "spo2three.status.atrisk": "ବିପଦରେ ରହିଛନ୍ତି",
+    "spo2three.status.low": "କମ୍",
+    "spo2two.in.progress": "SpO2 is in Progress...",
+    "spo2three.status.spo2_check_healthcare_provider": "Check With Healthcare Provider"
+}

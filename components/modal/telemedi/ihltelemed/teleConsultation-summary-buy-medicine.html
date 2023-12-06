@@ -1,0 +1,155 @@
+<style>
+.teleconsultation_summary_buy_medicine_modal_container{
+    padding:20px; 
+    height:100%;
+    width:100%; 
+    box-sizing: border-box;
+}
+.teleconsultation_summary_buy_medicine_modal_inner_container{
+
+}
+.teleconsultation_summary_buy_medicine_modal_title{
+    font-family: 'LatoSemiBold';
+    color: #0261c2;
+    text-align: center;
+    text-shadow: 0 1px 1px white;
+    font-size: 28px;
+    margin-top: 20px;
+    line-height: 36px;
+}
+.teleconsultation_summary_buy_medicine_modal_description_container{
+    text-align:center; 
+    margin:20px 0px 10px 0px;
+}
+.teleconsultation_summary_buy_medicine_modal_description_image_container{
+    margin:15px 0px;
+}
+.teleconsultation_summary_buy_medicine_modal_description_image{
+    height:120px;
+}
+.teleconsultation_summary_buy_medicine_modal_button_container{
+    text-align: center;
+    margin:15px 0px;
+}
+.teleconsultation_summary_buy_medicine_modal_button{
+    width: 300px;
+    color: white;
+    box-shadow: 4px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#5aa4d9d1,#3989c3de, #0261c2f2);
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 0;
+    font-size: 16px;
+    display:block;
+    margin:auto;
+}
+
+#terms_condition_container {
+    margin: 50px auto 50px 65px;
+}
+
+#terms_condition_checkbox {
+    height: 43px;
+    width: 43px;
+    position: absolute;
+    margin-left: -55px;
+    margin-top: -10px;
+    border: 2px solid #808080d1;
+    border-radius: 9px;
+    background-color: white;
+}
+
+#terms_condition_link {
+    /*border: 2px solid #208ad6bf;
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);*/
+    color: #0261c2;
+    text-decoration: underline;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.disable_buymed_btn {
+    color: gray;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%) !important;
+    border: 1px solid gray; !important;
+    pointer-events: none !important;
+}
+
+#show_med_UI_btn {
+    margin-top: 10px;
+    /*margin-left: 455px;*/
+    pointer-events: all;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #208ad6bf;
+    border-radius: 10px;
+    text-align: center;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+}
+
+#terms_condition_mainUI {
+    background-color: #a7a4a42b;
+    height: 410px;
+    overflow: auto;
+    border-radius: 5px;
+    padding: 5px;
+}
+</style>
+
+<div class="teleconsultation_summary_buy_medicine_modal_container">
+
+    <div class="teleconsultation_summary_buy_medicine_modal_inner_container" ng-show="showByMedUI">
+        <div class="teleconsultation_summary_buy_medicine_modal_title">Purchase Medicine</div>
+        
+        <div class="teleconsultation_summary_buy_medicine_modal_description_container">
+            Get your medicine
+            delivered at your door step
+            <div class="teleconsultation_summary_buy_medicine_modal_description_image_container">
+                <img ng-src="{{buyMedLabAndMedicationPartnerObj['medication_partner_logo']}}" class="teleconsultation_summary_buy_medicine_modal_description_image">
+            </div>
+            You will get a call from {{buyMedLabAndMedicationPartnerObj['medication_partner_name']}}
+            to process your prescription
+            <div id="terms_condition_container">
+                <input id="terms_condition_checkbox" type="checkbox" ng-model="terms_condition" ng-click="termsAcceptDeclineCheckbox(terms_condition)"/><span>I agree with all the&nbsp;&nbsp;<a id="terms_condition_link" ng-click="showTermsAndConditionUI()">Terms, Conditions & Privacy Policy</a></span>
+            </div>
+        </div>
+        <div class="teleconsultation_summary_buy_medicine_modal_button_container">
+            <a id="buy_med_btn" ng-show="showButton" ng-click="sharePerscription()" class="teleconsultation_summary_buy_medicine_modal_button disable_buymed_btn">
+                Yes Share<br>
+                My  Prescription to {{buyMedLabAndMedicationPartnerObj['medication_partner_name']}}
+            </a>
+            <div ng-show="showLoader" class="vital-fetch-spinner" style="top: 10px;left:315px;display: block;" id="hideProcessLoader"></div>
+            <h3 ng-show="showSuccessMsg"  style="color: green;text-transform: capitalize;">
+            Your prescription shared successfully.
+            </h3>
+            <h3 ng-show="showFailureMsg" style="color: red;text-transform: capitalize;">
+            Sorry something went wrong.
+            </h3>
+        </div>
+    </div>
+
+    <!-- terms & condition UI -->
+    <div id="terms_condition_main_container" ng-show="!showByMedUI">
+        <div id="terms_condition_mainUI">
+            <div id="terms_condition_wrapper">
+                <div class="terms_container" ng-bind-html="termsOfServicePpolHTML"></div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <button id="show_med_UI_btn" ng-click="closeTermsAndConditionUI()">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;<span>Purchase Medicine</span>
+            </button>
+        </div>
+    </div>
+
+</div>

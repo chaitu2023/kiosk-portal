@@ -1,0 +1,30 @@
+ <div id="login_credentials">
+        <div id="login_create_account" class="{{nameEntry.loginCreateConfirmSectionClass}}">
+                <div id="login_standard_create_details">
+                    <div class="login_password_error confirm-reg" ng-if="nameEntry.loginServerErrorVisible">{{interfaceLabels[nameEntry.loginServerError]}} </div>
+                    <div id="login_create_account_email_title">{{interfaceLabels[nameEntry.firstName]}}</div>
+                    <div class="confirm-email {{nameEntry.confirmEmailExistsErrorClass}}">
+                        <higi-text-field field="nameEntry.fields[0]"></higi-text-field>
+                    </div>
+                    <div id="login_create_account_password_title">{{interfaceLabels[nameEntry.lastName]}}</div>
+                    <div class="confirm-password {{nameEntry.confirmPasswordErrorClass}}">
+                        <higi-text-field field="nameEntry.fields[1]"></higi-text-field>
+                    </div>
+                </div>
+                <div id="login_create_loading" class="keyboard_dialog_loading" ng-show="nameEntry.submitting"></div>
+                <div id="login_create_submit_btn" class="keyboard_submit_btn confirm {{(nameEntry.fields[0].text != '' && nameEntry.fields[1].text != '' && nameEntry.termsAccepted) ? 'active_btn' : ''}} update-name-button" ng-click="nameEntry.saveName()" ng-hide="nameEntry.submitting"><span class="{{langClass}}">{{interfaceLabels[nameEntry.joinButton]}}</span>
+                </div>
+                <a id="login_account_disclaimer_btn"  class="{{nameEntry.registerButtonClass}}" ng-click="nameEntry.toggleTermsAcceptance()"></a>
+                <div id="cbox-glow" class="cbox-glow-name-entry" ng-hide="nameEntry.termsAccepted"></div>
+                <div id="login_account_disclaimer" class="update-name-disclaimer">
+                    {{interfaceLabels[nameEntry.registerDisclaimer]}} <a ng-click="nameEntry.viewTerms()">{{interfaceLabels[nameEntry.officialRules]}}</a>.
+                </div>
+                <div id="login_tos_privacy" class="challenge_terms">
+                    <div id="join_challenge_terms_wrapper">
+                        <div class="terms_container">
+                            <img ng-src="{{nameEntry.termsPath}}" />
+                        </div>
+                    </div>
+                </div>
+        </div>
+ </div>

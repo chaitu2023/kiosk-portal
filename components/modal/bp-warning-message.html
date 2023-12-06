@@ -1,0 +1,15 @@
+<div class="bp_warning_modal_box_main_container {{bpwarningModalBoxEnterExit}}">
+  <div class="bp_warning_modal_box_message_container">
+    	<!-- <div class="bp_warning_modal_box_message_title">{{interfaceLabels[bpWarningMessageModal.warning]}}</div> -->
+    	<div class="bp_warning_modal_box_message_content {{langClass}} ">{{interfaceLabels[bpWarningMessageModal.contents]}}</div>
+  </div>
+
+  <div class="bp_warning_modal_box_button_container">
+	    <a class="bp_warning_modal_box_button_skip" ng-click="bpWarningModalButtonClicked('skipTest')">
+	    	<span ng-bind-html="interfaceLabels[bpWarningMessageModal.skip]"></span>
+	    </a>
+	    <a class="bp_warning_modal_box_button_continue" ng-click="bpWarningModalButtonClicked('continueTest')">
+	    	<span ng-bind-html="interfaceLabels[bpWarningMessageModal.continue]"></span>
+	    </a>
+  </div>
+</div>

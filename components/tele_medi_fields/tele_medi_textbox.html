@@ -1,0 +1,97 @@
+<style>
+	/*#text_box_placeholder.tele_regMailid{
+  position: relative; !important;
+  top: 10px !important;
+  left: 100px !important;
+}*/
+
+.tele_login_input {
+  background: none repeat scroll 0 0 white;
+  border: 1px solid #ccc;
+  color: #999;
+  display: block;
+  font-size: 22px;
+  height: 56px;
+  position: relative;
+  text-indent: 15px;
+  top: 20px;
+  left: 20px;
+  width: 440px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-radius: 3px;
+  padding-right: 16px;
+  padding-left: 20px;
+  outline: none;
+  text-indent: 0px;
+  box-sizing: border-box; }
+  .tele_login_input::-moz-selection {
+    background-color: #0261c2;  }
+  .tele_login_input::selection {
+   background-color: #0261c2;  }
+  .tele_login_input::-webkit-selection {
+   background-color: #0261c2; }
+  .tele_login_input:focus {
+    border: 3px solid #3F90E2; }
+  .tele_login_input {
+    padding-left: 15px;
+    text-indent: 0px; }
+
+.tele_login_input {
+    width: 550px;
+    left: 80px; }
+
+  .tele_login_input{
+  top: 20px;
+  left: 18px;
+  /*width: 328px;*/
+  width: 400px;
+  height: 48px;
+  border: 2px solid #27A3DD;
+}
+
+.tele_placeholder {
+  color: #CCC; }
+
+  div.tele_placeholder {
+  color: #A6A6A6;
+  display: block;
+  font-size: 22px;
+  height: 50px;
+  left: 20px;
+  line-height: 50px;
+  position: absolute;
+  text-indent: 16px;
+  top: 50px;
+  width: 350px;
+  border-radius: 3px;
+  z-index: 10;
+  pointer-events: none; }
+
+
+/*.tele_regMailid{
+  position: absolute !important;
+left: 130px !important;
+top: 78px !important;
+}*/
+/*.tele_regMailid{
+  margin-top: 0px;
+  margin-left: 9px;
+  font-size: 17px;
+  text-indent: 43px;
+}*/
+.tele_text_date_questions{
+  margin-top: 82px;
+  margin-left: 20px;
+  font-family: IntervalSansProMediumRegular;
+  font-size: 28px;
+  color: #4a4a4a;
+}
+</style>
+
+<div class="tele_text_date_questions">{{telefield.name}}</div>
+
+<input ng-focus="setIndex(telefield.id);telefield.focus()" placeholder="{{telefield.placeholder}}" id="{{telefield.id}}" type="{{telefield.type}}" name="{{telefield.id}}" ng-model="telefield.text" class="tele_login_input {{telefield.selectedClass}} {{enabledCursor}} {{telefield.text == '' ? 'blank' : ''}}" ng-mouseup="clearSelected(telefield.id);" ng-mousedown="startDrag(telefield.id);" ng-disabled="disabledField(telefield.id);" ng-required="{{telefield.is_required}}"/>
+
+
+<div id="text_box_placeholder" class="tele_placeholder" ng-show="telefield.text == ''">{{interfaceLabels[telefield.defaultText]}}</div>

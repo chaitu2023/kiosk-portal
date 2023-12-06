@@ -1,0 +1,10 @@
+{
+    
+    "bmc01_audio01" : "sounds/maithili/vo6_weight&bmi.wav",
+    "bmc01_audio02" : "sounds/maithili/hand_instructions1.wav",
+    "bmc01_audio03" : "sounds/maithili/hand_instructions2.wav",
+    "bmc01_audio04" : "sounds/maithili/voice9_weight &bmi.wav",
+    "bmc01_audio05":"sounds/maithili/chkBmcAgain.wav",
+    "bmc01_audio06" : "sounds/maithili/restyourlegsonfootrest.wav"
+    
+}

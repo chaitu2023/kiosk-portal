@@ -1,0 +1,138 @@
+<!-- <div class="bodycomp_warning_modal waistCir {{waistCirTransitionClass}}">
+  <div class="message">
+    <div class="title">{{interfaceLabels[bcWaistCircumstance.questionThree]}}</div>
+     <higi-text-field class="bmc-waist-cir-inputBox" field="bcWaistCircumstance.fields[0]"></higi-text-field>  -->
+    <!-- <div class="sub-title">{{interfaceLabels[bcWaistCircumstance.questionThree]}}</div> -->
+     <!-- <telemedi-mobile-text-field style ="position: relative;
+    top: -100px;
+    left: 75px;" mobilefield="mobileNumber.fields[0]"></telemedi-mobile-text-field>  -->
+  <!-- </div>
+  <div class="buttons">
+    <a ng-click="bmcConfirmSkipTest('waistCir')" class="decline" ng-bind-html="interfaceLabels[bcWaistCircumstance.skip]"></a> 
+    <a ng-click="bmcGetWaistValue('waistCir')" class="accept" ng-bind-html="interfaceLabels[bcWaistCircumstance.next]"></a>
+  </div>
+</div> -->
+
+
+
+
+<style type="text/css">
+    .telemedi_mobile_slide_container{
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 710px;
+        height: 520px;
+    }
+    .telemedi_mobile_slide_title1{
+        font-size: 31px;
+        color: #0261c2;
+        font-family: "IntervalSansProCondSemiBoldRg";
+        position: absolute;
+        top: 45px;
+        left: 20px;
+        width: 670px;
+    }
+    .genix_telemedicine_submits{
+     pointer-events: all;
+     width: 150px;
+     background-color: #2a76c4;
+     border: 1px solid #0261c2;
+     border-radius: 3px;
+     background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+     top: 185px;
+     left: 390px;
+     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+     height: 50px;
+     position: absolute;
+
+    }
+    .genix_telemedicine_submits1{
+     pointer-events: all;
+     width: 150px;
+     background-color: #2a76c4;
+     border: 1px solid #0261c2;
+     border-radius: 3px;
+     background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+     top: 185px;
+     left: 20px;
+     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+     height: 50px;
+     position: absolute;
+
+    }
+    .genix_telemedicine_submits span {
+     color: #fff;
+     font-size: 22px;
+     text-align: center;
+     font-family: 'IntervalSansProMediumRegular';
+     text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2);
+     line-height: 50px;
+     height: 54px;
+     display: inline-block;
+     opacity: .9;
+     margin-left: 49px;
+    }
+    .genix_telemedicine_submits1 span {
+     color: #fff;
+     font-size: 22px;
+     text-align: center;
+     font-family: 'IntervalSansProMediumRegular';
+     text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2);
+     line-height: 50px;
+     height: 54px;
+     display: inline-block;
+     opacity: .9;
+     margin-left: 49px;
+    }
+    .mob_disabled_next{
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #cecece;
+    pointer-events: none;
+    }
+    .disable{
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #cecece;
+    	pointer-events: none;
+    }
+
+    .not-disable{
+    	pointer-events: all;	
+    }
+</style>
+
+<div class="telemedi_mobile_slide_container">
+  <div class="telemedi_mobile_slide_title1" >{{interfaceLabels[bcWaistCircumstance.questionThree]}}</div> 
+  <!-- <telemedi-mobile-text-field  mobilefield="mobileNumber.fields[0]"></telemedi-mobile-text-field> -->
+  
+  	<higi-text-field  id="waistvalueInput" field="bcWaistCircumstance.fields[0]">{{interfaceLabels[bcWaistCircumstance.Unit]}}</higi-text-field> 
+  
+  
+  
+  <div style="top: 115px;left: 21px;position: relative;" id="cmerrorTxt"></div>
+  <div style="top: 115px;left: 21px;position: relative;" id="incherrorTxt"></div>
+
+  <div class="outer_for_dropdown" style="height: auto">
+    		<div class="switch">
+				<input type="checkbox" ng-checked="cmChecked" ng-click="bcWaistCircumstance.CmInchSlide()">
+				<label style="top:32px;right: 160px; height: 48px; line-height: 45px;width:100px; display: flex;border-radius: 10px;color:rgb(103,103,103);">
+				   	<!-- <span class="fontawesome-ok"></span> -->
+                    <span style="width:50px;height: 100%;text-align: center;pointer-events: all;display: inline-block;box-sizing: border-box;border-right:1px solid black; border-radius: 10px 0px 0px 10px;text-transform: lowercase;background-color: rgb(146,146,146);color:rgb(103,103,103);" 
+                        ng-style="cmChecked == false && {'background-image':'linear-gradient(rgb(2,72,116), rgb(94,164,215))','color':'white'}" ng-click="bcWaistCircumstance.CmInchSlide()"> {{interfaceLabels[bcWaistCircumstance.INCH]}} </span>
+                    <span style="width:50px;height: 100%;background-color: white;text-align: center;pointer-events: all;display: inline-block;box-sizing: border-box;text-transform:lowercase;border-radius: 0px 10px 10px 0px;background-color: rgb(146,146,146);"
+                        ng-style="cmChecked == true && {'background-image':'linear-gradient(rgb(2,72,116), rgb(94,164,215))','color':'white'}" ng-click="bcWaistCircumstance.CmInchSlide()"> {{interfaceLabels[bcWaistCircumstance.CM]}} </span>
+				   	<!-- <span class="fontawesome-remove"></span> -->
+				   	<!-- <div></div> -->
+				</label>
+				<!-- <span class="{{FtClass}}"> {{interfaceLabels[heightNumberPad.FT]}} </span>  -->
+				<!-- <span class="{{CmClass}}"> {{interfaceLabels[heightNumberPad.CM]}} </span> -->
+			</div>
+    	</div>
+  <!-- <p class="tele_text_mobile_error">{{interfaceLabels[mobvalidmessage]}}</p>
+  <p class="tele_text_mobile_error" id="MobileNoAlreadyExists">{{interfaceLabels[MobileNoAlreadyExists]}}</p> -->
+  <a id="genix_next_buttons" ng-class="{'disable': disabled, 'not-disable': !disabled }" class="genix_telemedicine_submits {{disable_next}}" ng-click="nextButton()"><span>{{interfaceLabels[bcWaistCircumstance.next]}}</span></a>
+  <a id="genix_next_buttons" class="genix_telemedicine_submits1 {{disable_next}}" ng-click="skipButton()"><span>{{interfaceLabels[bcWaistCircumstance.skip]}}</span></a>
+</div>
+

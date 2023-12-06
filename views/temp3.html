@@ -1,0 +1,137 @@
+<div class="temperature_results_main_container">
+   <div class="temperature_results_header_container">
+        <img class="temperature_results_header_image" src="./images/Icons-34.png">
+        <p class="temperature_results_header_text">{{interfaceLabels[slideTitle]}}<small class="temperature_results_small_text">{{interfaceLabels[slideSubTitle]}}</small></p> 
+
+        <div class= "global_info_button" ng-click="showInfoboxThermometer()">
+            <img class= "global_info_button_icon" src="images/icons8-info-32.png">
+            <span class= "global_info_button_text">{{interfaceLabels[tempInformation]}}</span>
+        </div>
+    </div> 
+
+    <div class="temperature_results_sub_container">
+        <span class="temperature_results_title_container">
+            <p class="temperature_results_parameter_title">{{interfaceLabels[tempParameter]}}</p>
+            <p class="temperature_results_yourscore_title">{{interfaceLabels[tempYourscore]}}</p>
+        </span>
+
+        <span class="temperature_results_room_temp_container">
+            <p class="temperature_results_room_temp_title">{{interfaceLabels[roomTemp]}}</p>
+            <p class="temperature_results_room_temp_sub_title">{{interfaceLabels[temperature]}}</p>
+            <p class="temperature_results_room_temp_value">{{roomTemperature}}
+                <small class="temperature_results_room_temp_units">°F</small>
+            </p>
+        </span>
+
+        <span class="temperature_results_body_temp_container">
+            <p class="temperature_results_body_temp_title">{{interfaceLabels[wristTemp]}}</p>
+            <p class="temperature_results_body_temp_sub_title">{{interfaceLabels[temperature]}}</p>
+            <p class="temperature_results_body_temp_value">{{temperatur}}
+                <small class="temperature_results_body_temp_units">°F</small>
+            </p>
+        </span>
+
+        <span ng-class="{'back_color1' : temperaturStatus == 'Normal' , 'back_color2' : temperaturStatus == 'Acceptable' || temperaturStatus == 'Low', 'back_color3' : temperaturStatus == 'Fever' , 'back_color4' : temperaturStatus == 'High Fever' || temperaturStatus == 'High'}" class="temperature_results_over_all_status_container">            <p class="temperature_results_over_all_status_titles">{{interfaceLabels[bodytemperature]}}</p>
+            <p class="temperature_results_over_all_status_small_titles">{{interfaceLabels[tempOverallStatus]}}</p>
+            <img ng-if="temperaturStatus == 'Fever' || temperaturStatus == 'Low'" class="temperature_results_over_all_status_status_icons" src="./images/vital_status/vital_status_low.png">            <img ng-if=" temperaturStatus == 'Normal' || temperaturStatus == 'Acceptable'" class="temperature_results_over_all_status_status_icons" src="./images/vital_status/vital_status_normal.png">
+            <img ng-if="temperaturStatus == 'High Fever' || temperaturStatus == 'High'" class="temperature_results_over_all_status_status_icons" src="./images/vital_status/vital_status_risk.png">            <p class="temperature_results_over_all_status_status_value">{{interfaceLabels[bodyTempCalc]}}</p>
+        </span>
+
+        <span class="temperature_results_status_bar_container">
+            <p class="temperature_results_status_bar_heading">{{interfaceLabels[slideTitleScale]}}</p>
+            <div ng-class="{'display_arrow_pos1' : temperaturStatus == 'Low' , 'display_arrow_pos5' : temperaturStatus == 'Normal' , 'display_arrow_pos4' : temperaturStatus == 'Fever' || temperaturStatus == 'High'}" class="temp_arrow_text_design temp_arrow_scale_pos">
+                <div class="temp_arrow_size_pos"></div>
+            </div>
+            <!-- <img class="temperature_results_status_bar_image" src="images/thermometer_progress_bar.png">
+            <span class="temperature_results_status_bar_image_normal">{{interfaceLabels[tempStatus1]}}</span>
+            <span class="temperature_results_status_bar_image_accept">{{interfaceLabels[tempStatus2]}}</span>
+            <span class="temperature_results_status_bar_image_fever">{{interfaceLabels[tempStatus3]}}</span>
+            <span class="temperature_results_status_bar_image_high_fever">{{interfaceLabels[tempStatus4]}}</span> -->
+            <div id="temp-ref-chart">
+                <div style="padding-left: 20px;">{{interfaceLabels[tempStatus5]}}</div>
+                <div style="padding-left: 20px;">{{interfaceLabels[tempStatus1]}}</div>
+                <div style="padding-right: 20px;">{{interfaceLabels[tempStatus6]}}</div>
+                <!-- <div style="padding-right: 20px;">{{interfaceLabels[tempStatus3]}}</div> -->            
+            </div>
+        </span>
+    </div>
+</div>
+
+<!-- <a class= "global_redo_button" ng-show="redoVisible" ng-click="redoWeight()">
+    <span class="global_redo_button_text"><b>Do</b> Temperature Test <b>Again</b></span>
+</a> -->
+
+<div class="global_redo_button" ng-show="redoVisible" ng-click="redoTemperature()">
+    <div class="global_redo_outer_line">
+        <img src="images/Icons-27.png" class="global_redo_button_icon">
+        <small class="global_redo_button_small_text">{{interfaceLabels[checkTempagain]}} </small>
+    </div>
+</div>
+
+<a class= "global_continue_next_button" ng-class = "{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[nextSlideText]}}</span>
+</a>
+
+
+<!-- <div id="slide_title">{{interfaceLabels[slideTitle]}}</div>
+<div id="slide_subtitle" class="weight02_subtitle">{{interfaceLabels[slideSubTitle]}}</div>
+<div class="higi_top_container"></div>
+
+<div id="weight03_pane" class="ng-scope">
+    <div id="tempr_03_results">
+        <div id="#tempr_03_results_spo2">
+            <div class="info_btn" style="right: 655px; top: 15px" ng-click="showInfoboxThermometer()"></div>
+            <div style="width: 100%;">
+                <div style="display: inline-block;; width: 48%">
+                    <div class="result_title en_us"> {{interfaceLabels[roomTemp]}} </div>
+                    <div class="result testFadeIn" ng-show="true" style="">
+                        <span class="value ng-binding"> {{roomTemperature}}<span class="en_us" style="font-size: 32px;">°F</span> </span>
+                    </div>               
+                </div>
+                <div style="display: inline-block;width: 42%">
+                    <div class="result_title en_us" style="position: relative;top: 20px"> {{interfaceLabels[wristTemp]}}:</div><span id="result_risk_bp" style="position: relative; left: 229px;font-size: 17px;text-transform: uppercase;top:-1px" class=" result_risk {{bpRiskClass}}">{{interfaceLabels[bodyTempCalc]}}</span>
+                    
+                    <div class="result testFadeIn" ng-show="true" style="">
+                        <span class="value ng-binding"> {{temperatur}}<span class="en_us" style="font-size: 32px;">°F</span> </span>
+                    </div>
+                </div>
+            </div>
+            <span style="margin-left: 430px; position: relative; top: -8px; color:#7c7c7c;font-size: 15px">{{interfaceLabels[temperatureAccuracy]}}</span>
+        </div>
+        <div id="weight03_results_bmi_scale">
+            <div class="result_title en_us ng-binding"> {{interfaceLabels[tempScale]}} </div>
+            <div id="temperature_scale">
+                <div style="">                    
+                    <div data-ng-if="temperaturStatus == 'Normal'" id="thermometer_01" class="thermometer_scale_text   thermometer_scale_selected">
+                        <div class="thermometer_arrow"></div>
+                    </div>
+                    <div data-ng-if="temperaturStatus == 'Acceptable'" id="thermometer_02" class="thermometer_scale_text   thermometer_scale_selected">
+                        <div class="thermometer_arrow"></div>
+                    </div>
+                    <div data-ng-if="temperaturStatus == 'Fever'" id="thermometer_03" class="thermometer_scale_text   thermometer_scale_selected">
+                        <div class="thermometer_arrow"></div>
+                    </div>
+                    <div data-ng-if="temperaturStatus == 'High Fever'" id="thermometer_04" class="thermometer_scale_text   thermometer_scale_selected">
+                        <div class="thermometer_arrow"></div>
+                    </div>
+                    
+                    
+                    <div style="position: relative;">
+                        <img src="images/thermometer_progress_bar.png" style="display: block; margin-left: auto; margin-right: auto;"/>
+                        <span class="tempscale1">{{interfaceLabels[tempStatus1]}}</span>
+                        <span class="tempscale2">{{interfaceLabels[tempStatus2]}}</span>
+                        <span class="tempscale3">{{interfaceLabels[tempStatus3]}}</span>
+                        <span class="tempscale4">{{interfaceLabels[tempStatus4]}}</span>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
+
+<a id="higi_control_left_btn" class="left_control_btn {{langClass}} {{(redoVisible) ? buttonEnterLeft : buttonExitLeft}}" ng-show="redoVisible" ng-click="redoWeight()">
+    <span class="{{langClass}}">{{interfaceLabels[redoSlideText]}}</span>
+</a>
+<a id="higi_control_right_ng_btn" class="right_control_btn {{langClass}} {{(nextVisible) ? buttonEnterRight : buttonExitRight}}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="{{langClass}} {{interfaceLabels[nextSlideText]}}">{{interfaceLabels[nextSlideText]}}</span>
+</a> background: linear-gradient(to bottom,#5aa4d9d1,#3989c3db, #0261c2f2);-->

@@ -1,0 +1,822 @@
+{
+    "consultation_platfrom_data":{
+    "consult_type":[
+    {
+    "consultation_type_name":"Medical Consultation",
+    "consultation_type_image_url":"images/teleconsultation/doctor1.png",
+    "specality":[
+    {
+    "specality_name":"Cardiology",
+    "speciality_image_url":"images/teleconsultation/doctor1.png",
+    "consultant_list":[
+    {
+    "RMP_ID":"RM2345323",
+    "vendor_id":"GENIX",
+    "ihl_consultant_id":"34234",
+    "name":"Dr Marimuthu",
+    "email":"drMarimuthu@gmail.com",
+    "contact_number":"9012345678",
+    "age":"56",
+    "languages_spoken":[
+    "english",
+    "tamil"
+    ],
+    "consultant_speciality":[
+        "General",
+        "cardiology"
+         ],
+    "description":"this is breif description about this doctor Marimuthu .Dr Marimuthu is cardiology speciality in Appolo Hospital",
+    "gender":"Male",
+    "type":"medical",
+    "qualification":"MBBS MS",
+    "experience":"13 years",
+    "ratings":"4.2",
+    "consultant_next_30_days_availablity":[
+        {
+        "today":[
+        ]
+        },
+        {
+        "tomorrow":[
+           
+        ]
+        },
+        {
+        "18th June":[
+            "9:00 AM",
+            "9:30 AM",
+            "10:30 AM",
+            "12:30 PM",
+            "1:00 PM",
+            "1:30 PM",
+            "2:00 PM",
+            "2:20 PM",
+            "2:30 PM",
+            "3:00 PM",
+            "3:30 PM",
+            "4:00 PM",
+            "4:30 PM",
+            "5:00 PM",
+            "5:30 PM",
+            "6:00 PM",
+            "7:00 PM",
+            "8:00 PM",
+            "8:15 PM",
+            "8:30 PM",
+            "9:00 PM"
+        ]
+        },
+        {
+        "19th June":[
+            "9:00 AM",
+            "9:30 AM",
+            "10:30 AM",
+            "12:30 PM",
+            "1:00 PM",
+            "1:30 PM",
+            "2:00 PM",
+            "2:20 PM",
+            "2:30 PM",
+            "3:00 PM",
+            "3:30 PM",
+            "4:00 PM",
+            "4:30 PM",
+            "5:00 PM",
+            "5:30 PM",
+            "6:00 PM",
+            "7:00 PM",
+            "8:00 PM",
+            "8:15 PM",
+            "8:30 PM",
+            "9:00 PM"
+        ]
+        },
+        {
+        "20th June":[
+            "9:00 AM",
+            "9:30 AM",
+            "10:30 AM",
+            "12:30 PM",
+            "1:00 PM",
+            "1:30 PM",
+            "2:00 PM",
+            "2:20 PM",
+            "2:30 PM",
+            "3:00 PM",
+            "3:30 PM",
+            "4:00 PM",
+            "4:30 PM",
+            "5:00 PM",
+            "5:30 PM",
+            "6:00 PM",
+            "7:00 PM",
+            "8:00 PM",
+            "8:15 PM",
+            "8:30 PM",
+            "9:00 PM"
+        ]
+        },
+        {
+        "21st June":[
+            "9:00 AM",
+            "9:30 AM",
+            "10:30 AM",
+            "12:30 PM",
+            "1:00 PM",
+            "1:30 PM",
+            "2:00 PM",
+            "2:20 PM",
+            "2:30 PM",
+            "3:00 PM",
+            "3:30 PM",
+            "4:00 PM",
+            "4:30 PM",
+            "5:00 PM",
+            "5:30 PM",
+            "6:00 PM",
+            "7:00 PM",
+            "8:00 PM",
+            "8:15 PM",
+            "8:30 PM",
+            "9:04 PM"
+        ]
+        }
+        ]
+    },
+    {
+    "RMP_ID":"RM2345334",
+    "vendor_id":"GENIX",
+    "ihl_consultant_id":"34134",
+    "name":"Dr Arvind Samy",
+    "email":"Arvindsamy@gmail.com",
+    "contact_number":"9012345678",
+    "age":"56",
+    "languages_spoken":[
+    "english",
+    "tamil",
+    "hindi"
+    ],
+    "consultant_speciality":[
+       "General",
+       "cardiology"
+        ],
+    "description":"this is breif description about this doctor maximum up to 4000 characters",
+    "gender":"Female",
+    "type":"medical",
+    "qualification":"MBBS MS",
+    "experience":"15 years",
+    "ratings":"3",
+    "consultant_next_30_days_availablity":[
+        {
+        "22nd june":[
+        "7:04 AM",
+        "7:30 AM",
+        "8:30 AM",
+        "5:00 PM",
+        "5:30 PM",
+        "5:40 PM",
+        "5:50 PM",
+        "6:00 PM",
+        "7:00 PM",
+        "8:00 PM",
+        "8:15 PM",
+        "8:30 PM",
+        "9:00 PM"
+        ]
+        },
+        {
+        "23rd june":[
+        ]
+        }
+        ]
+    },
+    {
+        "RMP_ID":"RM2345323",
+        "vendor_id":"GENIX",
+        "ihl_consultant_id":"34334",
+        "name":"Dr Ranganathan",
+        "email":"Ranganathan@gmail.com",
+        "contact_number":"9012345678",
+        "age":"80",
+        "languages_spoken":[
+        "english",
+        "tamil",
+        "telugu"
+        ],
+        "consultant_speciality":[
+            "General",
+            "cardiology"
+             ],
+        "description":"this is breif description about this doctor Ranganathan .Dr Ranganathan is cardiology speciality in cauvery Hospital.He is a dean of cauvery hospital and also for collloge",
+        "gender":"Male",
+        "type":"medical",
+        "qualification":"MBBS MS",
+        "experience":"30 years",
+        "ratings":"3.74",
+        "consultant_next_30_days_availablity":[
+            {
+                "24th june":[
+                "9:00 AM",
+                "9:30 AM",
+                "10:30 AM",
+    
+                "4:30 PM",
+                "5:00 PM",
+                "5:30 PM",
+                "6:00 PM"
+                ]
+                },
+                {
+                "25th june":[
+                    "9:00 AM",
+                    "9:30 AM",
+                    "10:30 AM",
+                    "12:30 PM",
+                    "1:00 PM",
+                    "1:30 PM",
+                    "2:00 PM",
+                    "2:20 PM",
+                    "2:30 PM",
+                    "3:00 PM",
+                    "3:30 PM",
+                    "4:00 PM",
+                    "4:30 PM",
+                    "5:00 PM",
+                    "5:30 PM",
+                    "6:00 PM",
+                    "7:00 PM",
+                    "8:00 PM",
+                    "8:15 PM",
+                    "8:30 PM",
+                    "9:00 PM"
+                ]
+                },
+                {
+                "26th June":[
+                    
+                ]
+                },
+                {
+                "27th June":[
+                    "9:00 AM",
+                    "9:30 AM",
+                    "10:30 AM"
+                ]
+                },
+                {
+                "28th June":[
+                    "9:00 AM",
+                    "9:30 AM",
+                    "10:30 AM"
+                ]
+                }
+            ]
+        },
+    
+        {
+            "RMP_ID":"RM2345323",
+            "vendor_id":"GENIX",
+            "ihl_consultant_id":"34034",
+            "name":"Dr Gopala Krishnan",
+            "email":"GopalaKrishnan@gmail.com",
+            "contact_number":"9012345678",
+            "age":"80",
+            "languages_spoken":[
+            "english",
+            "tamil",
+            "malayalam",
+            "kannada"
+            ],
+            "consultant_speciality":[
+                "General",
+                "cardiology"
+                 ],
+            "description":"this is breif description about this doctor GopalaKrishnan .Dr GopalaKrishnan is cardiology speciality in cauvery Hospital.He is a dean of cauvery hospital and also for collloge",
+            "gender":"Male",
+            "type":"medical",
+            "qualification":"MBBS MS",
+            "experience":"20 years",
+            "ratings":"1.3",
+            "consultant_next_30_days_availablity":[
+
+                ]
+            }
+    ]
+    },
+    {
+    "specality_name":"General Medicine",
+    "speciality_image_url":"images/teleconsultation/doctor1.png",
+    "consultant_list":[
+    {
+    "RMP_ID":"RM2345343",
+    "vendor_id":"GENIX",
+    "ihl_consultant_id":"34534",
+    "name":"Dr general1",
+    "email":"dremail3@gmail.com",
+    "contact_number":"9012345678",
+    "age":"56",
+    "languages_spoken":[
+    "english",
+    "tamil",
+    "hindi",
+    "kannada"
+    ],
+    "consultant_speciality":[
+        "General"
+         ],
+    "description":"this is breif description about this doctor maximum up to 4000 characters",
+    "gender":"Male",
+    "type":"medical",
+    "qualification":"MBBS",
+    "experience":"13 years",
+    "ratings":"4.2"
+    },
+    {
+    "RMP_ID":"RM2345233",
+    "vendor_id":"GENIX",
+    "ihl_consultant_id":"34834",
+    "name":"Dr general2",
+    "email":"dremail4@gmail.com",
+    "contact_number":"9012345678",
+    "age":"56",
+    "languages_spoken":[
+    "english",
+    "kannada",
+    "telugu"
+    ],
+    "consultant_speciality":[
+        "General"
+         ],
+    "description":"this is breif description about this doctor maximum up to 4000 characters",
+    "gender":"Male",
+    "type":"medical",
+    "qualification":"MBBS",
+    "experience":"13 years",
+    "ratings":"2.0",
+    "consultant_next_30_days_availablity":[
+    {
+    "today":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "tomorrow":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "18th June":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "19th June":[
+
+    ]
+    },
+    {
+    "20th June":[
+    
+    ]
+    },
+    {
+    "21st June":[
+    "2:30 PM",
+    "3:00 PM",
+    "6:00 PM",
+    "6:30 PM"
+    ]
+    }
+    ]
+    }
+    ]
+    }
+    ]
+    },
+    {
+    "consultation_type_name":"Ayurvedic Consultation",
+    "consultation_type_image_url":"images/teleconsultation/doctor1.png",
+    "specality":[
+    {
+    "specality_name":"Ayurvedic Consultation",
+    "speciality_image_url":"images/teleconsultation/doctor1.png",
+    "consultant_list":[
+    {
+    "name":"Dr ayurvedic 1",
+    "type":"ayurvedic",
+    "qualification":"BS Ayurveda",
+    "RMP_ID":"N/A",
+    "vendor_id":"GENIX",
+    "ihl_consultant_id":"34724",
+    "email":"dremail5@gmail.com",
+    "contact_number":"9012345678",
+    "age":"56",
+    "languages_spoken":[
+    "tamil"
+    ],
+    "consultant_speciality":[
+        "Ayurveda"
+    ],
+    "description":"this is breif description about this doctor maximum up to 4000 characters",
+    "gender":"Male",
+    "experience":"10 years",
+    "ratings":"3.2",
+    "consultant_next_30_days_availablity":[
+    {
+    "today":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "tomorrow":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "18th June":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "19th June":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "20th June":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    }
+    ]
+    },
+    {
+    "name":"Dr ayurvedic 2",
+    "type":"ayurvedic",
+    "qualification":"BS Ayurveda",
+    "RMP_ID":"N/A",
+    "vendor_id":"GENIX",
+    "ihl_consultant_id":"34674",
+    "email":"dremail6@gmail.com",
+    "contact_number":"9012345678",
+    "age":"56",
+    "languages_spoken":[
+    "english",
+    "tamil",
+    "hindi",
+    "telugu"
+    ],
+    "consultant_speciality":[
+        "Ayurveda"
+    ],
+    "description":"this is breif description about this doctor maximum up to 4000 characters",
+    "gender":"Male",
+    "experience":"10 years",
+    "ratings":"5.0",
+    "consultant_next_30_days_availablity":[
+    {
+    "today":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "tomorrow":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "19th June":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "20th June":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "21st June":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    }
+    ]
+    }
+    ]
+    }
+    ]
+    },
+    {
+    "consultation_type_name":"Diet Consultation",
+    "consultation_type_image_url":"images/teleconsultation/doctor1.png",
+    "specality":[
+    {
+    "specality_name":"Diet Consultation",
+    "speciality_image_url":"images/teleconsultation/doctor1.png",
+    "consultant_list":[
+    {
+    "name":"Pooja Malhotra",
+    "type":"Diet Consultation",
+    "qualification":"(Masters in food and diet)",
+    "RMP_ID":"N/A",
+    "vendor_id":"GENIX",
+    "ihl_consultant_id":"34239",
+    "email":"dremail4@gmail.com",
+    "contact_number":"9012345678",
+    "age":"56",
+    "languages_spoken":[
+    "english",
+    "hindi",
+    "punjabi"
+    ],
+    "consultant_speciality":[
+        "Diet Consultation"
+    ],
+    "description":"this is breif description about this doctor maximum up to 4000 characters",
+    "gender":"Female",
+    "experience":"10 years",
+    "ratings":"4.5",
+    "consultant_next_30_days_availablity":[
+    {
+    "today":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "tomorrow":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "18th June":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "20th June":[
+    "2:30 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM"
+    ]
+    },
+    {
+    "31st July":[
+    "10:30 AM",
+    "3:00 PM",
+    "7:00 PM",
+    "8:30 PM"
+    ]
+    }
+    ]
+    }
+    ]
+    }
+    ]
+    }
+    ]
+    },
+    "consultation_user_data":{
+    "appointments":[
+    {
+    "booked_date_time":"Tue, 16 Jun 2020 05:43:34",
+    "user_ihl_id":"jkhdjh34j34hjh43",
+    "consultant_name":"Dr Abc",
+    "vendor_consultant_id":"2342",
+    "ihl_consultant_id":"23424",
+    "vendor_id":"GENIX",
+    "consultant_type":"medical",
+    "specality":"General Medcine",
+    "consultation_fees":"300",
+    "mode_of_payment":"razorpay",
+    "alergy":"alery to paracetomol",
+    "kiosk_checkin_history":{
+    },
+    "appointment_start_time":"Tue, 16 Jun 2020 05:00 PM",
+    "appointment_end_time":"Tue, 16 Jun 2020 05:30 PM",
+    "appointment_duration":"30 Min",
+    "appointment_status":"requested"
+    },
+    {
+    "booked_date_time":"Tue, 16 Jun 2020 05:43:34",
+    "user_ihl_id":"jkhdjh34j34hjh43",
+    "consultant_name":"Dr Abc",
+    "vendor_consultant_id":"2342",
+    "ihl_consultant_id":"23424",
+    "vendor_id":"GENIX",
+    "consultant_type":"medical",
+    "specality":"General Medcine",
+    "consultation_fees":"300",
+    "mode_of_payment":"razorpay",
+    "alergy":"alery to paracetomol",
+    "kiosk_checkin_history":{
+    },
+    "appointment_start_time":"Tue, 16 Jun 2020 05:00 PM",
+    "appointment_end_time":"Tue, 16 Jun 2020 05:30 PM",
+    "appointment_duration":"30 Min",
+    "appointment_status":"requested"
+    }
+    ],
+    "followup":[
+    {
+    "booked_date_time":"Tue, 16 Jun 2020 05:43:34",
+    "user_ihl_id":"jkhdjh34j34hjh43",
+    "consultant_name":"Dr Abc",
+    "vendor_consultant_id":"2342",
+    "ihl_consultant_id":"23424",
+    "vendor_id":"GENIX",
+    "consultation_fees":"FREE",
+    "mode_of_payment":"none",
+    "alergy":"alery to paracetomol",
+    "kiosk_checkin_history":{
+    },
+    "appointment_start_time":"Tue, 16 Jun 2020 05:00 PM",
+    "appointment_end_time":"Tue, 16 Jun 2020 05:30 PM",
+    "appointment_duration":"30 Min",
+    "appointment_status":"requested"
+    }
+    ],
+    "consultation_history":[
+    {
+    "call_details":{
+    "call_type":"appointment",
+    "call_started_at":"Tue, 16 Jun 2020 05:00 PM",
+    "call_ended_at":"Tue, 16 Jun 2020 05:23 PM",
+    "consultation_fees":"300",
+    "mode_of_payment":"razorpay",
+    "follow_up_availability_book_before":"Tue, 16 Jun 2020 05:00 PM",
+    "follow_up_cost":"FREE"
+    },
+    "consultant_details":{
+    "consultant_name":"Dr Abc",
+    "vendor_consultant_id":"2342",
+    "ihl_consultant_id":"23424",
+    "vendor_id":"GENIX",
+    "consultant_type":"medical",
+    "specality":"General Medcine"
+    },
+    "user_data":{
+    "user_ihl_id":"jkhdjh34j34hjh43",
+    "allergy":"alery to paracetomol",
+    "kiosk_checkin_history":{
+    }
+    },
+    "appointment_details":{
+    "appointment_start_time":"Tue, 16 Jun 2020 05:00 PM",
+    "appointment_end_time":"Tue, 16 Jun 2020 05:30 PM",
+    "appointment_duration":"30 Min"
+    },
+    "consultant_notes":{
+    "reason_for_visit":"",
+    "diagnosis":"",
+    "advice_to_patient":"",
+    "lab_tests":[
+    {
+    "test_name":"",
+    "additional_notes":""
+    },
+    {
+    "test_name":"",
+    "additional_notes":""
+    },
+    {
+    "test_name":"",
+    "additional_notes":""
+    }
+    ],
+    "medication":[
+    {
+    "medcicine_name":"Dolo 650",
+    "dosage":"650 mg",
+    "frequency":"1-0-1",
+    "medication_start_date":"16 Jun 2020",
+    "medication_end_date":"18 Jun 2020",
+    "refill_allowed":false
+    },
+    {
+    "medcicine_name":"crocin",
+    "dosage":"100 mg",
+    "frequency":"1-0-1",
+    "medication_start_date":"16 Jun 2020",
+    "medication_end_date":"18 Jun 2020",
+    "refill_allowed":false
+    }
+    ]
+    }
+    },
+    {
+    "call_details":{
+    "call_type":"appointment",
+    "call_started_at":"Tue, 16 Jun 2020 05:00 PM",
+    "call_ended_at":"Tue, 16 Jun 2020 05:23 PM",
+    "consultation_fees":"300",
+    "mode_of_payment":"razorpay",
+    "follow_up_availability_book_before":"Tue, 22 Jun 2020 05:00 PM",
+    "follow_up_cost":"FREE"
+    },
+    "consultant_details":{
+    "consultant_name":"Dr Abc",
+    "vendor_consultant_id":"2342",
+    "ihl_consultant_id":"23424",
+    "vendor_id":"GENIX",
+    "consultant_type":"medical",
+    "specality":"General Medcine"
+    },
+    "user_data":{
+    "user_ihl_id":"jkhdjh34j34hjh43",
+    "allergy":"alery to paracetomol",
+    "kiosk_checkin_history":{
+    }
+    },
+    "appointment_details":{
+    "appointment_start_time":"Tue, 16 Jun 2020 05:00 PM",
+    "appointment_end_time":"Tue, 16 Jun 2020 05:30 PM",
+    "appointment_duration":"30 Min"
+    },
+    "consultant_notes":{
+    "reason_for_visit":"",
+    "diagnosis":"",
+    "advice_to_patient":"",
+    "lab_tests":[
+    {
+    "test_name":"",
+    "additional_notes":""
+    },
+    {
+    "test_name":"",
+    "additional_notes":""
+    },
+    {
+    "test_name":"",
+    "additional_notes":""
+    }
+    ],
+    "medication":[
+    {
+    "medcicine_name":"Dolo 650",
+    "dosage":"650 mg",
+    "frequency":"1-0-1",
+    "medication_start_date":"16 Jun 2020",
+    "medication_end_date":"18 Jun 2020",
+    "refill_allowed":false
+    },
+    {
+    "medcicine_name":"Crocin",
+    "dosage":"100 mg",
+    "frequency":"1-0-1",
+    "medication_start_date":"16 Jun 2020",
+    "medication_end_date":"18 Jun 2020",
+    "refill_allowed":false
+    }
+    ]
+    }
+    }
+    ]
+    }
+    }

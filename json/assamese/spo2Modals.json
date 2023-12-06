@@ -1,0 +1,15 @@
+{
+    "infobox.about.spo2": "SpO<sub>2</sub> সম্পৰ্কে",
+    "infobox.about.spo2.subtitle": "আপোনাৰ শৰীৰৰ পালচ অক্সিমিটাৰ, যাক SpO<sub>2</sub> বুলিও কোৱা হয়।",
+    "infobox.about.spo2.point03": "SpO<sub>2</sub> পৰিসৰ",
+    "infobox.about.spo2.point04": " 95 ৰ ওপৰৰ",
+    "infobox.about.spo2.point05": "91 ৰ পৰা 95",
+    "infobox.about.spo2.point06": "70 ৰ পৰা 90",
+    "infobox.about.spo2.point07": "70-ৰ তলত",
+    "spo2.status.healthy": "স্বাস্থ্যকৰ",
+    "spo2.status.acceptable": "গ্ৰহণযোগ্য",
+    "spo2.status.atrisk": "বিপদাশংকাত",
+    "spo2.status.low": "নিম্ন",
+    "infobox.about.spo2.point08": "এই চাৰ্টখনে ৰোগ নিয়ন্ত্ৰণ আৰু প্ৰতিৰোধ কেন্দ্ৰৰ দ্বাৰা নিৰ্ধাৰিত SpO<sub>2</sub> শ্ৰেণী প্ৰতিফলিত কৰে।",
+    "infobox.about.spo2.point09": "below 95"
+}

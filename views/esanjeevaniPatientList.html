@@ -1,0 +1,160 @@
+<style type="text/css">
+	.esanjeevani_header_image {
+	    width: 27px;
+    	position: relative;
+    	top: 15px
+    }
+
+.esanjeevani_header_container{
+    margin-top: 7%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.esanjeevani_header_text {
+    padding-left: 10px;
+    font-weight: 500;
+    margin-top: 0px;
+    font-family: 'LatoItalic';
+    font-size: 34px;
+    color: #4d4d4d;
+}
+
+.esanjeevani_main_container{
+	box-shadow: 0px 5px 9px #afafaf, 0px 0px 10px #999;
+    background-color: #e6e6e6;
+    height: 345px;
+    margin-top: -15px;
+}
+.esanjeevani_heading {
+    text-align: center;
+    font-size: 24px;
+    margin-left: 9px;
+    padding-top: 10px;
+    font-family: 'LatoSemibold';
+    color: #333333;
+}
+.esanjeevani_refresh_btn{
+
+}
+
+.esanjeevani_refresh_button {
+    right: 20px;
+    position: absolute;
+    width: 150px;
+    outline: none;
+    border: 2px solid #208ad6bf;
+    box-shadow: 0px 4px 4px #6d6d6d;
+    background: linear-gradient(to bottom,#ebebeb, #dbdbdb , #c1c1c1);
+    top: 115px;
+    height: 30px;
+    border-radius: 9px 9px 9px 10px;
+}
+.esanjeevani_refresh_button_icon {
+    width: 22px;
+    margin-left: 10px;
+    margin-top: 3.5px;
+    margin-right: 5px;
+}.
+.esanjeevani_refresh_button_text {
+    color: #4e4e4e;
+    margin-left: 11px;
+    position: absolute;
+    font-size: 16px;
+    font-family: LatoRegular;
+    font-weight: 500;
+    margin-top: 4.6px;
+}
+.esanjeevani_login_error{
+    width: 100%;
+    font-size: 18px;
+    font-family: 'LatoBold';
+    color: #dd0000e0;
+    position: relative;
+    top: 140px;
+}
+.esanjeevaniLoaderRotate {
+  animation: esanjeevaniLoaderRotation 2s infinite linear;
+}
+@keyframes esanjeevaniLoaderRotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.esanjeevaniLoader{
+	margin-top: 130px;
+}
+</style>
+
+
+<div class="esanjeevani_header_container">
+    <img class="esanjeevani_header_image" src="./images/ESanjeevani_logo.png">
+    <span class="esanjeevani_header_text">{{interfaceLabels[eSanPatientList]}}</span></span> 
+</div>
+
+<!-- <div class= "esanjeevani_refresh_button" ng-click="eSanjeevaniTestRequestList()">
+    <img class= "esanjeevani_refresh_button_icon" src="images/refresh.png">
+    <span class= "esanjeevani_refresh_button_text" style="position:relative; top:-5px;">Fetch Patient</span>
+</div> -->
+<div class="esanjeevani_main_container">
+    <div id="san_patient_main_container">
+        <div id="san_patient_main_container_scroll">
+        	<div data-ng-if="loadingForDataFetch">
+        		<div class="esanjeevaniLoader"> 
+        			<img class="esanjeevaniLoaderRotate" src="images/keyboard_dialog_loading_icon06222012.png" />
+        			<p> {{interfaceLabels[fetchPatientListText]}} </p>
+        		</div>        		
+        	</div>
+            <div data-ng-if="!loadingForDataFetch" class="san_patient_main_box" ng-repeat="patientData in patientList" style="text-align: initial;">
+
+                <div class="san_patient_main_box_title" style="text-align: left; height: 20px;">
+                    <b class="consultant-name-text" style="font-family: 'latoRegular';color: #4d4d4d;">
+                        <span> {{patientData['firstName']}} </span>
+                    </b>
+                </div>
+                <div class="san_patient_details">
+                    <div class="san_patient_details_image_container">
+                        <img ng-src='images/profileimage.png'
+                            class="san_patient_details_image_container_img">
+                    </div>
+                    <div class="san_patient_details_container">
+                        <p>
+                            <span class="san_patient_details_container_title">{{interfaceLabels[patientIdText]}} </span> 
+                            <span class="san_patient_details_container_domain">
+                                {{patientData['esanjeevaniPatientId']}}
+                            </span>
+                        </p>
+                        <p>
+                            <span class="san_patient_details_container_title">{{interfaceLabels[dobText]}} </span> 
+                            <span class="san_patient_details_container_domain">
+                                {{patientData['dob']}}
+                            </span>
+                        </p>
+                        <p>
+                            <span class="san_patient_details_container_title">{{interfaceLabels[genderText]}} </span> 
+                            <span class="san_patient_details_container_domain" >
+                                {{patientData['gender']}}
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <button class="call_doctor_button_class" ng-click="startTest(patientData['externalPatientId'])">{{interfaceLabels[startTestText]}}</button>
+                </div>
+            </div>
+            <div data-ng-if="patientList.length <= 0"> 
+        		<p class="esanjeevani_login_error" ng-if="noPatientForOperator"> {{interfaceLabels[noPatientAvail]}} </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="global_redo_button" ng-show="true" ng-click="eSanjeevaniTestRequestList()">
+    <div class="global_redo_outer_line">
+        <img src="images/Icons-27.png" class="global_redo_button_icon">
+        <small class="global_redo_button_small_text"> {{interfaceLabels[refreshPatientListText]}} </small>
+    </div>
+</div>

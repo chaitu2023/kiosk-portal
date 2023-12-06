@@ -1,0 +1,42 @@
+​<style>
+.tele_text_area_input{
+   border: 1px solid #27A3DD;
+   resize: none;
+   outline:none;
+   border-radius: 3px;
+   padding-right: 16px;
+   padding-left: 20px;
+   margin-top: 20px;
+   margin-left: 20px;
+   width: 300px;
+   height: 73px;
+   overflow: hidden;
+  
+}
+.tele_text_area_input::-moz-selection {
+   background-color: #0261c2;  }
+.tele_text_area_input::selection {
+   background-color: #0261c2;  }
+.tele_text_area_input::-webkit-selection {
+   background-color: #0261c2; }
+.tele_text_area_input:focus {
+   border: 3px solid #3F90E2; }
+.tele_text_area_input {
+   padding-left: 15px;
+   text-indent: 0px; }
+
+.tele_text_area_questions{
+  margin-top: 82px;
+  margin-left: 20px;
+  font-family: IntervalSansProMediumRegular;
+  font-size: 28px;
+  color: #4a4a4a;
+}
+</style>
+<body>
+<div class="tele_text_area_questions">{{teletextarea.name}}</div>
+
+
+<textarea ng-focus="setIndex(teletextarea.id);teletextarea.focus()" placeholder="{{teletextarea.placeholder}}" type="{{teletextarea.input_type}}" id="{{teletextarea.id}}" ng-model="teletextarea.text" class="tele_text_area_input {{teletextarea.selectedClass}} {{enabledCursor}} {{teletextarea.text == '' ? 'blank' : ''}}" ng-mouseup="clearSelected(teletextarea.id);" ng-mousedown="startDrag(teletextarea.id);" ng-disabled="disabledField(teletextarea.id);" ng-change="lengthMonitor(teletextarea.text)" ng-required="{{teletextarea.is_required}}"></textarea>
+
+<!-- <input ng-focus="setIndex(telefield.id);telefield.focus()" placeholder="{{telefield.placeholder}}" id="{{telefield.id}}" type="{{telefield.type}}" name="{{telefield.id}}" ng-model="telefield.text" class="tele_login_input {{telefield.selectedClass}} {{enabledCursor}} {{telefield.text == '' ? 'blank' : ''}}" ng-mouseup="clearSelected(telefield.id);" ng-mousedown="startDrag(telefield.id);" ng-disabled="disabledField(telefield.id);" ng-required="{{telefield.is_required}}"/> -->

@@ -1,0 +1,19 @@
+{
+    
+    "bloodpressure01_audio01":"sounds/bodo/vo1_bloodpressure1.wav",
+    "bloodpressure01_audio02":"sounds/bodo/vo2_bloodpressure1.wav",
+    "bloodpressure01_audio03":"sounds/bodo/voice3_bp1.wav",
+    "bloodpressure01_audio04":"sounds/bodo/vo4_bloodpressure1.wav",
+    "bloodpressure01_audio05":"sounds/bodo/startBpTest.wav",
+    "bloodpressure02_cancel_warning":"sounds/bodo/voice1_bp2.wav",
+    "bloodpressure02_audio01":"sounds/bodo/vo_2_bloodpressure2.wav",
+    "bloodpressure02_audio02":"sounds/bodo/voice3_bp2.wav",
+    "bloodpressure02_audio03":"sounds/bodo/vo4_bloodpressure2.wav",
+    "bloodpressure02_audio04":"sounds/bodo/vo4_bloodpressure1.wav",
+    "bloodpressure02_audio05":"sounds/bodo/vo6_bloodpressure2.wav",
+    "bloodpressure02_audio06":"sounds/bodo/vo7_bloodpressure2.wav",
+    "bloodpressure02_audio07":"sounds/bodo/vo8_bloodpressure2.wav",
+    "bloodpressure02_audio09":"sounds/bodo/vo2_bloodpressure2.wav",
+    "bloodpressure03_audio01":"sounds/bodo/results.wav",
+    "bloodpressure03_audio10":"sounds/bodo/chkBpAgain.wav"
+}

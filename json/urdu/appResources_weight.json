@@ -1,0 +1,12 @@
+{
+
+    "weight01_audio01":"sounds/urdu/vo1_weight&bmi.wav",
+    "weight01_audio02":"sounds/urdu/voice2_weight&bmi.wav",
+    "weight01_audio03":"sounds/urdu/voice3_weight&bmi.wav",
+    "weight01_audio04":"sounds/urdu/startWeightTest.wav",
+    "weight01_audio05":"sounds/urdu/voice4_weight&bmi.wav",
+    "weight03_audio01":"sounds/urdu/results.wav",
+	"weight01_audiolap":"sounds/urdu/handsonLap.wav",
+    "weight03_audio10":"sounds/urdu/chkWeight&bmiAgain.wav"
+
+}

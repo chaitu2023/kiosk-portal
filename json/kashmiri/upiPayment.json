@@ -1,0 +1,11 @@
+{
+    "upiPayment.title": "UPI Payment",
+    "upiPayment.instruction_1": "Scan and Pay with any BHIM UPI app from your mobile",
+    "upiPayment.instruction_2": "Your transaction will expire in",
+    "upiPayment.timeout_msg_1": "Payment Timeout!",
+    "upiPayment.timeout_msg_2": "We did not received any payment yet. Please wait for few seconds until <br /> we confirm any payment exists.",
+    "upiPayment.success_msg_1": "Payment Successful.",
+    "upiPayment.success_msg_2": "Please wait you are connecting to doctor...",
+    "upiPayment.failure_msg_1": "Payment Failed!",
+    "upiPayment.failure_msg_2": "Sorry, your transaction was not succeeded. If you made payment then <br /> it will be refunded within 1 business day ."
+}

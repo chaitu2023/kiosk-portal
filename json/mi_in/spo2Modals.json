@@ -1,0 +1,16 @@
+{
+
+	"infobox.about.spo2":"एसपीओ<sub>२ बद्दल</sub>",
+    "infobox.about.spo2.subtitle":"आपलं बॉडी पल्स ऑक्सिमीटरला एसपीओ<sub>२</sub> म्हणूनही ओळखतात.",
+    "infobox.about.spo2.point03":"एसपीओ<sub>२</sub> मर्यादा",
+    "infobox.about.spo2.point04":"९५ च्या वर",
+    "infobox.about.spo2.point05":"९१ ते ९५",
+    "infobox.about.spo2.point06":"७० ते ९०",
+    "infobox.about.spo2.point07":"७० च्या खाली",
+    "spo2.status.healthy" : "पौष्टिक",
+    "spo2.status.acceptable" : "स्वीकार्य ",
+    "spo2.status.atrisk" : "धोका जाणवतोय",
+    "spo2.status.low": "कमी",
+    "infobox.about.spo2.point08":"हा तक्ता रोग नियंत्रण आणि प्रतिबंध केंद्रांनी परिभाषित केलेल्या एसपीओ<sub>२</sub> प्रवर्ग दर्शवितो.",
+    "infobox.about.spo2.point09": "below 95"
+}

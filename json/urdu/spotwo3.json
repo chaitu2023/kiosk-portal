@@ -1,0 +1,19 @@
+{
+  "spo2three.spo2": "SpO2",
+  "spo2three.results": "نتائج",
+  "spo2three.continue": "جاری",
+  "spo2three.spo2.percent": "%",
+  "spo2three.spo2level": "SpO2 آکسیجن کی سطح",
+  "spo2three.checkSpo2again": "SpO2 پھر سے چیک کرہں",
+  "spo2three.information": "معلومات",
+  "spo2three.parameter": "پیرامیٹر",
+  "spo2three.yourscore": "آپ کا اسکور",
+  "spo2three.OverallStatus": "مجموعی حیثیت",
+  "spo2three.spo22scale": "SpO<sub>2</sub> پیمانہ",
+  "spo2three.finalResult": "حتمی نتیجہ",
+  "spo2three.status.healthy": "صحت مند",
+  "spo2three.status.acceptable": "قابل قبول",
+  "spo2three.status.atrisk": "خطرے میں",
+  "spo2three.status.low": "کم",
+  "spo2three.status.spo2_check_healthcare_provider": "Check With Healthcare Provider"
+}

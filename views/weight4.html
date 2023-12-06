@@ -1,0 +1,70 @@
+<div class="BMCHealth_instructions_header_container">
+    <img class="BMCHealth_instructions_header_image" src="./images/Icons-29.png">
+    <span class="BMCHealth_instructions_header_text">{{interfaceLabels[slideTitle]}} </span> 
+</div>
+
+<div class="BMCHealth_instructions_main_container">
+    <div class="bmc-instruction-container {{bmcInstructionTransition}}">
+        <p class="BMCHealth_instructions_heading">{{interfaceLabels[slideSubTitle]}}</p>
+        <bmc-instruction-one promisename="bmcInstructionAnimationOneReady" ng-show="showInstructions"></bmc-instruction-one>
+        <bmc-instruction-two promisename="bmcInstructionAnimationTwoReady" ng-show="showInstructions"></bmc-instruction-two>
+        <div class="BMCHealth_instructions_before_begin_text">
+            {{interfaceLabels[bmcTestWillBegin]}}
+        </div>
+    </div>
+
+    <div class="bmc-test-container {{bmcTestTransition}}" ng-if="bmcTestVisible">
+        <bmc-guage promisename="bmcgaugeready" progress="bmcTestProgressValue"></bmc-guage>
+        <div class= "BMCHealth_test_in_progress">{{interfaceLabels[bmcTestProgress]}}</div>
+    </div>
+</div>
+
+<!-- <div id="slide_title" class="{{langClass}}">{{interfaceLabels[slideTitle]}} </div>
+<div id="slide_subtitle" ng-if="!bmcTestVisible">{{interfaceLabels[slideSubTitle]}}</div>
+<div id="slide_subtitle" ng-if="bmcTestVisible">{{interfaceLabels[slideSubTitleInProgress]}}</div>
+<div class="higi_top_container"></div>
+
+<div class="bmc-instruction-container {{bmcInstructionTransition}}">
+    <div class="instruction warning" ng-bind-html="interfaceLabels[bmcHandsRemovedWarning]" ng-if="retesting"></div>
+    <bmc-instruction-one promisename="bmcInstructionAnimationOneReady" class="weight-instructions" ng-show="showInstructions"></bmc-instruction-one>
+    <bmc-instruction-two promisename="bmcInstructionAnimationTwoReady" class="weight-instructions"  ng-show="showInstructions"></bmc-instruction-two>
+    <div class="instruction begin">
+        {{interfaceLabels[bmcTestWillBegin]}}
+    </div>
+	
+
+</div>
+
+<div class="skip_for_BMC" id="bmc_skip" ng-click="skipBMCOnly()">
+
+		<a href="javascript:void(0)">{{interfaceLabels[skipbm]}}</a>
+</div>
+
+<div class="bmc-test-container {{bmcTestTransition}}" ng-if="bmcTestVisible">
+    <div class="instruction" ng-bind-html="interfaceLabels[bmcRemainStill]"></div>
+    <bmc-guage promisename="bmcgaugeready" progress="bmcTestProgressValue"></bmc-guage>
+</div>
+
+<a id="higi_control_right_ng_btn" class="right_control_btn {{langClass}} {{nextTransitionStyle}}" ng-show="nextVisible" ng-click="nextButtonOut()" href="{{nextSlide}}">
+    <span class="{{langClass}}">{{interfaceLabels[nextSlideText]}}</span>
+</a> -->
+
+<!-- <div class="skip_for_BMC" id="bmc_skip" ng-click="skipBMCOnly()">
+    <a href="javascript:void(0)">{{interfaceLabels[skipbm]}}</a>
+</div> -->
+
+<a id="bmc_skip" class="global_skip_button" ng-click="skipBMCOnly()">
+    <span class="global_skip_button_text" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}}</span>
+</a>
+<a class="global_continue_next_button" ng-class = "{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible" ng-click="takeTestButton()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[startTest]}}</span>
+</a>
+
+<div class="bmc-modal {{modalFadeClass}}" ng-show="showWarning">
+    <div class="bmc-modal-box">
+        <bc-warning-implant-modal ng-show="showImplantTest"></bc-warning-implant-modal>
+        <bc-warning-pregnant-modal ng-show="showPregTest"></bc-warning-pregnant-modal>
+        <bc-warning-error-modal ng-show="showSkipTest"></bc-warning-error-modal>
+    </div>
+    <a class="higi_overlay_mask"></a>
+</div>

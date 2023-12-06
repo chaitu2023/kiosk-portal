@@ -1,0 +1,80 @@
+<style type="text/css">
+
+.affiliate_radio_container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-top: 80px;
+    margin-left: 20px;
+  cursor: pointer;
+  font-size: 22px;
+   color: #4a4a4a;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* Hide the browser's default radio button */
+.affiliate_radio_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+/* Create a custom radio button */
+.affiliate_radio_checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+}
+
+
+/* On mouse-over, add a grey background color */
+.affiliate_radio_container:hover input ~ .affiliate_radio_checkmark {
+  background-color: #ccc;
+}
+
+
+/* When the radio button is checked, add a blue background */
+.affiliate_radio_container input:checked ~ .affiliate_radio_checkmark {
+  background-color: #2196F3;
+}
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.affiliate_radio_checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.affiliate_radio_container input:checked ~ .affiliate_radio_checkmark:after {
+  display: block;
+}
+
+
+/* Style the indicator (dot/circle) */
+.affiliate_radio_container .affiliate_radio_checkmark:after {
+ 	top: 8px;
+	left: 8px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+</style>
+
+<label ng-repeat="affiliate in overallAffiliates" class="affiliate_radio_container" >{{affiliate}}
+  <input type="radio" name="affiliateClick" ng-model="radioValue" id={{affiliate}} value="{{affiliate}}"  data-ng-click="submitResult(radioValue)">
+  <span class="affiliate_radio_checkmark"></span> <br>
+</label>

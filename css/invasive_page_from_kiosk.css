@@ -1,0 +1,380 @@
+#invasive_dashboard_btn_box_ng{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    padding-top: 5px;
+    /* width: 75%;
+    height: 280px;
+    top: 26px;
+    border: 1px solid 1px rgba(153, 153, 153, 0.4);
+    border-radius: 8px;
+    margin-left: 20px; */
+    /* margin: auto; */
+    /* position: relative; */
+}
+
+#invasive_btn_box_ng{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    /* width: 75%;
+    height: 280px;
+    top: 26px;
+    border: 1px solid 1px rgba(153, 153, 153, 0.4);
+    border-radius: 8px;
+    margin-left: 20px; */
+    /* margin: auto; */
+    /* position: relative; */
+}
+
+.invasive_header_container {
+    margin-top: 50px;
+    margin-left: 321px;
+    /* max-width: 100%; */
+}
+.invasive_dashboard_header_container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.invasive_dashboard_header_container_text{
+    padding-left: 31px;
+    font-weight: 500;
+    margin-top: 0px;
+    font-family: 'LatoItalic';
+    font-size: 34px;
+    color: #4d4d4d;
+    margin-bottom: 30px;    
+    position: relative;
+    top: -10px;
+}
+
+
+.invasive_header_container_text{
+    padding-left: 31px;
+    font-weight: 500;
+    margin-top: 0px;
+    font-family: 'LatoItalic';
+    font-size: 34px;
+    color: #4d4d4d;
+    margin-bottom: 30px;
+}
+
+.buttons_in_grid{
+    padding: 40px;
+}
+
+.invasive_btn_style{
+    padding: 7px;
+    /* padding-top: 2px; */
+}
+
+.invasive_dashboard_main_container{
+    margin-top: 15px;    
+    box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;
+    background-color: #dddddd;
+    height: 360px;
+}
+
+.invasive_main_container{
+    margin-top: 15px;    
+    box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;
+    background-color: #dddddd;
+    height: 368px;
+}
+.invasive_dashboard_header_container_subText{
+    margin-top: -5px;
+    margin-left: 152px;
+}
+
+.invasive_header_container_subText{
+    margin-top: 13px;
+    margin-left: 152px;
+}
+
+.invasive_dashboard_header_container_logo{
+    /*float: left;*/ 
+    margin-right: -30px; 
+    width: 35px;
+}
+
+.invasive_header_container_logo{
+    float: left; 
+    margin-right: -29px; 
+    width: 35px;
+}
+
+.invasive_dashboard_header_container_logo{
+    margin-right: -30px; 
+    width: 35px;
+}
+
+#glucose_ivt_btn .buttonBorder, #urine_ivt_btn .buttonBorder, #hcv_ivt_btn .buttonBorder, #pregnancy_ivt_btn .buttonBorder, #dengue_ivt_btn .buttonBorder, #troponin_ivt_btn .buttonBorder, #heamoglobin_ivt_btn .buttonBorder, #malaria_ivt_btn .buttonBorder, #syphilis_ivt_btn .buttonBorder, #lipid_ivt_btn .buttonBorder, #hiv_ivt_btn .buttonBorder{
+    border-radius: 5px;
+    /* border: 2px solid #48acf5; */
+    height: 70px;
+    width: 210px;
+    margin-left: 3px;
+    margin-top: 3px;
+    box-shadow: 0px 0px 6px #bdbdbd, 0px 0px 5px #888;
+    background: white;
+}
+
+#glucose_ivt_btn_active .buttonBorder, #urine_ivt_btn_active .buttonBorder, #hcv_ivt_btn_active .buttonBorder, #pregnancy_ivt_btn_active .buttonBorder, #dengue_ivt_btn_active .buttonBorder, #troponin_ivt_btn_active .buttonBorder, #heamoglobin_ivt_btn_active .buttonBorder, #malaria_ivt_btn_active .buttonBorder, #syphilis_ivt_btn_active .buttonBorder, #lipid_ivt_btn_active .buttonBorder, #hiv_ivt_btn_active .buttonBorder{
+    border-radius: 5px;
+    /* border: 2px solid #48acf5; */
+    height: 70px;
+    width: 210px;
+    margin-left: 3px;
+    margin-top: 3px;
+    box-shadow: 0px 0px 6px #bdbdbd, 0px 0px 5px #888;
+    background: #208ad6;
+}
+
+.invasive_btn_icon{
+    margin-left: 20px;
+    margin-top: 15px;
+    height: 40px;
+    width: 40px;
+}
+
+#glucose_ivt_btn_active .buttonBorder .glucose_ivt_btn{
+    content: url(../images/invasive/sugar-blood-level-on.png);
+}
+
+#urine_ivt_btn_active .buttonBorder .urine_ivt_btn{
+    content: url(../images/invasive/urine-test-on.png);
+}
+
+#hcv_ivt_btn_active .buttonBorder .hcv_ivt_btn{
+    content: url(../images/invasive/hcv-test-on.png);
+}
+
+#pregnancy_ivt_btn_active .buttonBorder .pregnancy_ivt_btn{
+    content: url(../images/invasive/pregnant-test-on.png);
+}
+
+#dengue_ivt_btn_active .buttonBorder .dengue_ivt_btn{
+    content: url(../images/invasive/dengue-test-on.png);
+}
+
+#troponin_ivt_btn_active .buttonBorder .troponin_ivt_btn{
+    content: url(../images/invasive/troponin-test-on.png);
+}
+
+#heamoglobin_ivt_btn_active .buttonBorder .heamoglobin_ivt_btn{
+    content: url(../images/invasive/heamo-test-on.png);
+}
+
+#malaria_ivt_btn_active .buttonBorder .malaria_ivt_btn{
+    content: url(../images/invasive/malaria-test-on.png);
+}
+
+#syphilis_ivt_btn_active .buttonBorder .syphilis_ivt_btn{
+    content: url(../images/invasive/syphilis-test-on.png);
+}
+
+#lipid_ivt_btn_active .buttonBorder .lipid_ivt_btn{
+    content: url(../images/invasive/lipid-test-on.png);
+}
+
+#hiv_ivt_btn_active .buttonBorder .hiv_ivt_btn{
+    content: url(../images/invasive/hiv-on.png);
+}
+
+
+
+
+#glucose_ivt_btn_active .buttonBorder .invasive_btn_text{
+    color: white;
+}
+
+#urine_ivt_btn_active .buttonBorder .invasive_btn_text{
+    color: white;
+}
+
+#hcv_ivt_btn_active .buttonBorder .invasive_btn_text{
+    color: white;
+}
+
+#pregnancy_ivt_btn_active .buttonBorder .invasive_btn_text{
+    color: white;
+}
+
+#dengue_ivt_btn_active .buttonBorder .invasive_btn_text{
+    color: white;
+}
+
+#troponin_ivt_btn_active .buttonBorder .invasive_btn_text{
+    color: white;
+}
+
+#heamoglobin_ivt_btn_active .buttonBorder .invasive_btn_text{
+    color: white;
+}
+
+#malaria_ivt_btn_active .buttonBorder .invasive_btn_text{
+    color: white;
+}
+
+#syphilis_ivt_btn_active .buttonBorder .invasive_btn_text{
+    color: white;
+}
+
+#lipid_ivt_btn_active .buttonBorder .invasive_btn_text{
+    color: white;
+}
+
+#hiv_ivt_btn_active .buttonBorder .invasive_btn_text{
+    color: white;
+}
+
+.glucose_ivt_btn{
+    content: url(../images/invasive/sugar-blood-level-off.png);
+}
+
+.urine_ivt_btn{
+    content: url(../images/invasive/urine-test-off.png);
+}
+
+.hcv_ivt_btn{
+    content: url(../images/invasive/hcv-test-off.png);
+}
+
+.pregnancy_ivt_btn{
+    content: url(../images/invasive/pregnant-test-off.png);
+}
+
+.dengue_ivt_btn{
+    content: url(../images/invasive/dengue-test-off.png);
+}
+
+.troponin_ivt_btn{
+    content: url(../images/invasive/troponin-test-off.png);
+}
+
+.heamoglobin_ivt_btn{
+    content: url(../images/invasive/heamo-test-off.png);
+}
+
+.malaria_ivt_btn{
+    content: url(../images/invasive/malaria-test-off.png);
+}
+
+.syphilis_ivt_btn{
+    content: url(../images/invasive/syphilis-test-off.png);
+}
+
+.lipid_ivt_btn{
+    content: url(../images/invasive/lipid-test-off.png);
+}
+
+.hiv_ivt_btn{
+    content: url(../images/invasive/hiv-off.png);
+}
+
+.invasive_dashboard_back_button{
+    position: fixed;
+    top: 454px;
+    left: 0px;
+    width: 180px;
+    height: 50px;
+    border-top: 3px solid #208ad6bf;
+    border-bottom: 3px solid #208ad6bf;
+    border-right: 3px solid #208ad6bf;
+    border-left: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: right;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+}
+
+.invasive_back_button{
+    position: fixed;
+    top: 528px;
+    left: 0px;
+    width: 180px;
+    height: 50px;
+    border-top: 3px solid #208ad6bf;
+    border-bottom: 3px solid #208ad6bf;
+    border-right: 3px solid #208ad6bf;
+    border-left: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: right;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+}
+.invasive_continue_next_button{
+    top: 528px;
+    right: 0px;
+    position: fixed;
+    height: 50px;
+    border-top: 3px solid #5dbcff;
+    border-left: 3px solid #5fa4d4bf;
+    border-bottom: 3px solid #50a4e0bf;
+    width: 180px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+    box-shadow: 4px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#5aa4d9d1,#3989c3de, #0261c2f2);
+}
+
+
+.invasive_dashboard_continue_next_button{
+    top: 454px;
+    right: 0px;
+    position: fixed;
+    height: 50px;
+    border-top: 3px solid #5dbcff;
+    border-left: 3px solid #5fa4d4bf;
+    border-bottom: 3px solid #50a4e0bf;
+    width: 180px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+    box-shadow: 4px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#5aa4d9d1,#3989c3de, #0261c2f2);
+}
+
+.invasive_previous_page_text{
+	font-size: 20px;
+    text-align: right;
+    position: relative;
+    top: 14px;
+    right: 20px
+}
+
+.invasive_continue_next_button_text{
+	left: 20px;
+    font-size: 20px;
+    text-align: left;
+    position: fixed;
+    top: 14px;
+}
+
+.invasive_btn_text{
+    left: 80px;
+    font-size: 18px;
+    text-align: left;
+    position: fixed;
+    top: 25px;
+}
+
+.button-enter-right {
+    -webkit-animation: slideInRight 0.5s both ease-in;
+    -moz-animation: slideInRight 0.5s both ease-in;
+    animation: slideInRight 0.5s both ease-in;
+}
+
+.button-exit-right {
+    -webkit-animation: slideOutRight 0.5s both ease-in;
+    -moz-animation: slideOutRight 0.5s both ease-in;
+    animation: slideOutRight 0.5s both ease-in; 
+}

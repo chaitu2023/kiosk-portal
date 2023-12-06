@@ -1,0 +1,23 @@
+<div class="spo2_instructions_header_container">
+    <img class="spo2_instructions_header_image" src="./images/spo2/Icons-35.png">
+    <span class="spo2_instructions_header_text"> {{interfaceLabels[slideTitle]}}</span></span> 
+</div>
+
+<div class="spo2_instructions_main_container">
+	<div style="text-align: center;">
+		<spo2-in-progress></spo2-in-progress> 
+	</div>
+	<p class="spo2_inprogress_bottom_heading">{{interfaceLabels[slideSubTitle]}}</p>
+</div>
+
+<a class= "global_skip_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()">
+    <span class="global_skip_button_text" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}}</span>
+</a>
+
+<!-- <div id="slide_title" ng-bind-html="interfaceLabels[slideTitle]"></div>
+<div id="slide_subtitle" class="weight02_subtitle">{{interfaceLabels[slideSubTitle]}}</div>
+<div class="higi_top_container"></div>
+
+<div style="margin-top: 85px; text-align: center;">
+	<spo2-in-progress></spo2-in-progress> 
+</div> -->

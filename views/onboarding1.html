@@ -1,0 +1,14 @@
+<!-- <div id="slide_title">{{interfaceLabels[slideTitle]}} </div> -->
+
+<div class="gender-title">{{interfaceLabels[slideSubTitle]}} <span class="current-of-total">{{interfaceLabels[currentOfTotal]}}</span></div>
+<div ng-class="(directiveClickable) ? '' : 'no-click'">
+    <sex-select genderset="nextVisible" onboardingredo="finishingOnboarding"></sex-select>
+</div>
+
+<a  class="global_continue_next_button {{nextTransitionStyle}}" ng-show="nextVisible && editMode" ng-click="nextButtonOut()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[nextSlideText]}}</span>
+</a>
+
+<!-- <a id="higi_control_right_ng_btn" class="right_control_btn {{langClass}} {{nextTransitionStyle}}" ng-show="nextVisible && editMode" ng-click="nextButtonOut()">
+    <span class="{{langClass}} {{interfaceLabels[nextSlideText]}}">{{interfaceLabels[nextSlideText]}}</span>
+</a> -->

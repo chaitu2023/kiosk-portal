@@ -1,0 +1,13 @@
+{
+    "fullbodybmc1.title": "বিএমচি",
+    "text.instructions": "নিৰ্দেশনাসমূহ",
+    "fullbodybmc1.holdhands": "হেণ্ডেলবোৰ আপোনাৰ হাতেৰে লাহেকৈ ধৰি ৰাখক",
+    "fullbodybmc1.restwristt": "ফলাফল না আসা পর্যন্ত আপনার কব্জিকে ইলেক্ট্রোডে বিশ্রাম দিন",
+    "fullbodybmc1.restLegsOnfootPads": "আপোনাৰ ভৰি ফুটৰেষ্টৰ পেডত ৰাখক",
+    "fullbodybmc1.will.beginBefore": "আপোনাৰ হাত স্থানত থাকিলে এই পৰীক্ষা আৰম্ভ হ'ব",
+    "fullbodybmc1.will.begin": "আপোনাৰ হাত স্থানত থাকিলে এই পৰীক্ষা আৰম্ভ হ'ব",
+    "fullbodybmc1.skip": "বাদ দিয়ক",
+    "fullbodybmc1.startTest": "শুরু পরীক্ষা",
+    "fullbodybmc1.bmc.progress": "বিএমচি পৰীক্ষা চলি আছে...",
+    "weight04.bmc.hands.removed.warning": "এনেকুৱা লাগিছে যেন কিবা ভুল হৈছে। পুনৰ চেষ্টা কৰোঁ আহক।"
+}

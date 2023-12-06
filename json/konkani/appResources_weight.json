@@ -1,0 +1,12 @@
+{
+
+    "weight01_audio01":"sounds/konkani/vo1_weight&bmi.wav",
+    "weight01_audio02":"sounds/konkani/voice2_weight&bmi.wav",
+    "weight01_audio03":"sounds/konkani/voice3_weight&bmi.wav",
+    "weight01_audio04":"sounds/konkani/startWeightTest.wav",
+    "weight01_audio05":"sounds/konkani/voice4_weight&bmi.wav",
+    "weight03_audio01":"sounds/konkani/results.wav",
+	"weight01_audiolap":"sounds/konkani/handsonLap.wav",
+    "weight03_audio10":"sounds/konkani/chkWeight&bmiAgain.wav"
+
+}

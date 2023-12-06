@@ -1,0 +1,20 @@
+{
+    "emailresults.enter.email": "உங்கள் மின்னஞ்சல் முகவரியை உள்ளிடவும்",
+    "emailresults.enter.email.to.send.results": "உங்கள் முடிவுகளை அனுப்பு உங்கள் மின்னஞ்சல் முகவரியை உள்ளிடவும்",
+    "emailresults.email.sent": "உங்கள் முடிவுகளைப் பெற உங்கள் மின்னஞ்சலை சரிபார்க்கவும்.",
+    "emailresults.by.clicking.send": "உங்கள் முடிவுகளை மின்னஞ்சல் மூலம் அனுப்பும்போது உங்கள் முடிவுகள் சேமிக்கப்படலாம் என்பதை நீங்கள் ஏற்றுகொள்கிறீர்கள்.",
+    "global.send": "அனுப்பு",
+    "finishModal.email.never.spam": "(நாங்கள் உங்களை ஸ்பேமில் போடமாட்டோம். உறுதி!)",
+    "finishModal.printwarning": " எச்சரிக்கை! ",
+    "finishModal.makesure": "தயவுசெய்து பிரிண்டர் ஏரியாவை பிளாக் செய்யவேண்டாம்",
+    "finishModal.printinstruct": "முடிவுகள் ஸ்லிப்பைப் பெற கீழே உள்ள பிரிண்ட் பட்டனை அழுத்தவும்",
+    "finishModal.notavail": "காகிதம் இல்லை",
+    "finishModal.papernot": " மன்னிக்கவும், ஹைச்பாடில் அச்சுக் காகிதம் இல்லை",
+    "finishModal.refill": "நாங்கள் சீக்கிரம் மீண்டும் நிரப்புவோம்...",
+    "finishModal.printRes": "அச்சு",
+    "finishModal.okayy": "சரி",
+    "finishModal.printEcgraph": "அச்சு வரைபடம்",
+    "global.requird.test": "No Test Results",
+    "emailresults.enter.email.to.send.abharesults": "Enter your Email Address to get your card",
+    "emailresults.by.clicking.abhasend": "By emailing your results, you accept that your card may be saved"
+}

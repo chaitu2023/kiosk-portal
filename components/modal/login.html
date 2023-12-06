@@ -1,0 +1,244 @@
+<div class="login_modal_main_container">
+    <div ng-show="loginModal.loginEmailSection" class="login_modal_input_field_container {{loginModal.EmailAndPasswordDivisionClass}}">
+        <div id="login_username" ng-click ="loginModal.disableQuickLoginOptionSection('login_username','login_modal_userId_section')">
+            <higi-text-field field="loginModal.fields[0]" class="login_modal_email_input_box"></higi-text-field>
+            <div id="login_username_loading_new" class="email_validation_loader"></div>
+            <p id="register-first-screen-text"></p>
+            <p id="login_username_error_newest3"></p>
+            <p id="login_username_went_wrong"></p>
+            <div id="login_username_error" ng-if="loginModal.loginServerErrorVisible">{{interfaceLabels[loginModal.loginServerError]}}
+            </div>
+        </div>
+
+        <div id="login_password" ng-click ="loginModal.disableQuickLoginOptionSection('login_password','login_modal_passwrd_section')">
+            <higi-text-field field="loginModal.fields[1]" class="login_modal_password_input_box"></higi-text-field>
+            <div id="login_password_loading" class="password_validation_loader"></div>
+            <div class="login_modal_password_input_field_error" id="error_message_login" ng-if="loginModal.loginPasswordError">
+                {{interfaceLabels[loginModal.loginPasswordErrorMessage]}}
+            </div>
+            <p id="errorMessageFinalPageLogin" class="login_modal_password_server_error">{{interfaceLabels[loginModal.sevrerr]}}</p>
+            <p id="errorMessageForLoginAccount" class="login_modal_account_credetial_error">{{interfaceLabels[loginModal.otheraccCred]}}</p>
+            <div ng-click="loginModal.showPasswordToggle(loginModal.fields[1])" class="login_modal_password_eyes_images {{loginModal.showPasswordClass}}"></div>
+            <!-- <div id="login_forgot_password_btn" class="dialog_function_btn en_us" ng-click="loginModal.resetPassword()"><span>{{interfaceLabels[loginModal.loginForgotPassword]}}</span></div> -->
+            <a id="login_password_submit_btn" class="login_modal_password_submission_btn {{loginModal.loginBtnActive}}" ng-click="loginModal.login()" ng-hide="loginModal.submitting" >
+                <span>{{interfaceLabels[loginModal.globalLogin]}}</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="login_modal_buttons_container ">
+        <a ng-show = "loginModal.quickOptionButton" ng-class = "{'button-enter-up' : loginModal.quickOptionButton, 'button-exit-down' : !loginModal.quickOptionButton}" class="login_modal_quick_option_button" ng-click="loginModal.quickLoginOptionSelected()">
+            <span class="login_modal_quick_option_button_text">{{interfaceLabels[loginModal.quickLoginOp]}}
+                <i class="fa fa-plus login_modal_quick_option_button_icon"></i>
+            </span>
+        </a>
+        <!-- <a ng-show = "loginModal.accountVisible"> //flow works fine but hided & changed as per requirement
+            <p class="login_modal_register_forgot_indicator_text">
+               {{interfaceLabels[loginModal.CreatAcc]}}
+            </p>
+            <img class="login_modal_register_forgot_indicator_icon" src="./images/Icons-08.png"> 
+        </a> -->
+        <a ng-show = "loginModal.quickOptionButton" class="login_modal_QRCode_option_button" ng-class = "{'button-enter-up' : loginModal.quickOptionButton, 'button-exit-down' : !loginModal.quickOptionButton}" ng-click="loginModal.ssoUserLogin()">
+            <span class="login_modal_QRCode_option_button_text">{{interfaceLabels[loginModal.ssoLogin]}}
+                <i class="fa fa-qrcode login_modal_QRCode_option_button_icon"></i>
+            </span>
+        </a>
+
+        <a ng-show = "loginModal.accountVisible" ng-class = "{'button-enter-up' : loginModal.accountVisible, 'button-exit-down' : !loginModal.accountVisible}" class="login_modal_register_forgot_password_button" ng-click="loginModal.createNewIHLAccount(loginModal.fields[0])">
+            <span class="login_modal_register_forgot_password_button_text">{{interfaceLabels[loginModal.CreatAccbuttonTxt]}}
+                <i class="fa fa-user login_modal_QRCode_option_button_icon"></i>
+            </span>
+        </a>
+
+        <!-- <a ng-show = "loginModal.forgotVisible"> //flow works fine but hided & changed as per requirement
+            <p class="login_modal_register_forgot_indicator_text" style="right: 198px;">
+                {{interfaceLabels[loginModal.reserPass]}}
+            </p>
+            <img class="login_modal_register_forgot_indicator_icon" src="./images/Icons-08.png"> 
+        </a> -->
+
+        <a ng-show = "loginModal.forgotVisible" ng-class = "{'button-enter-right' : loginModal.forgotVisible, 'button-exit-right' : !loginModal.forgotVisible}" class="login_modal_register_forgot_password_button" ng-click="loginModal.resetPassword()">
+            <span class="login_modal_register_forgot_password_button_text">{{interfaceLabels[loginModal.ForgetPass]}}
+                <i class="fa fa-key login_modal_QRCode_option_button_icon"></i>
+            </span>
+        </a>
+    </div>
+
+    <div ng-show = "loginModal.quickLoginOptions" class="login_modal_quick_options_container">
+        <p class="login_modal_quick_options_header_text">{{interfaceLabels[loginModal.quickLoginOp]}}</p>
+        <!-- <div class="login_modal_quick_options_sso_login_container"> //flow works fine but hided & changed as per requirement
+            <img src="./images/guestuser.jpg" class="login_modal_quick_options_image_class"> 
+            <a class="login_modal_quick_options_button_class" ng-click="loginModal.ssoUserLogin()">
+                 <span class="login_modal_quick_options_button_text_class">{{interfaceLabels[loginModal.ssoLogin]}}</span>
+            </a>
+         </div> -->
+        <div class="login_modal_quick_options_fingerprint_container">
+           <img src="./images/Icons-12.png" class="login_modal_quick_options_image_class"> 
+           <a id = "fingerprintLogin" class="login_modal_quick_options_button_class" ng-click="proceedFingerPrintLogin()">
+                <span class="login_modal_quick_options_button_text_class">{{interfaceLabels[loginModal.scanFinger]}}</span>
+           </a>
+        </div>
+           <p id="fp-not-connect" style="color: red; text-align: center; font-size: 18px; position: relative;top: 180px; left:-105px;"> {{interfaceLabels[loginModal.devicenotConn]}}</p>
+        <div class="login_modal_quick_options_guest_user_container {{IHLTeleConsultSelected || isGuestUserFlowDisable ? 'disable_guest_user_button' : 'enable_guest_user_button'}}">
+           <img src="./images/guestuser.jpg" class="login_modal_quick_options_image_class"> 
+           <a class="login_modal_quick_options_button_class" ng-click="loginModal.guestUserLogin()">
+                <span class="login_modal_quick_options_button_text_class">{{interfaceLabels[loginModal.guestUser]}}</span>
+           </a>
+        </div>
+    </div>
+
+
+    <!---fingerprint flow starts, Old UI flow, no new ui flow is worked for this-->
+    <div id="fingerprint_capturing_animation_section" ng-show="loginModal.loginCreateFingerprintCapturingSection" class="{{loginModal.loginCreateFingerprintCapturingSectionClass}}">
+        <img src="./images/fingerprint.gif" alt="" id="fingerprint_animation_fornow">  
+    </div>
+    <canvas id="myFinalOutput" width="145px" height="188px" style="display: none;"></canvas>
+    <div id="finalImage" width="200px" height="200px" style="display: none"></div>
+
+    <div id="fingerprint_section_login" ng-show="loginModal.loginCreateFingerprintSection" class="{{loginModal.loginCreateFingerprintSectionClass}}" style="top:-20px !important; margin-top: -30px;">
+        <div id="finger_scan_instruction">{{interfaceLabels[leftthumblogin]}}</div>
+        <div id="fingerprint_instruction_image"></div>
+        <div id="finger_scan_instruction2">{{interfaceLabels[pleasewait]}}</div>
+        <div id="skip_fingerprint"> </div>   
+    </div>
+
+    <div id="fingerprint_not_matched_regret_message" ng-show="loginModal.fingerprintRegretSection" class="{{loginModal.fingerprintRegretSectionClass}}">
+
+        <div id="fingerprint_not_recognized"></div>
+        <span id="fingerprint_regret_not_recognized">{{interfaceLabels[loginFingerprintError]}}</span>    
+    </div>
+    <!---fingerprint flow ends-->         
+</div>
+
+
+
+
+<!-- <div id="keyboard_back_btn" class="active_btn" ng-show="loginModal.loginPasswordSection"><a ng-click="loginModal.backToEmailSection()">{{interfaceLabels[loginModal.globalBack]}}  <i class="fa fa-reply"></i></a></div>
+<div id="keyboard_login">
+    <div id="login_credentials" >
+            <div id="fingerprint_capturing_animation_section" ng-show="loginModal.loginCreateFingerprintCapturingSection" class="{{loginModal.loginCreateFingerprintCapturingSectionClass}}">
+            
+
+                
+                    
+                    <img src="./images/fingerprint.gif" alt="" id="fingerprint_animation_fornow">
+                       
+        
+                </div>
+                <canvas id="myFinalOutput" width="145px" height="188px" style="display: none;"></canvas>
+        
+              <div id="finalImage" width="200px" height="200px" style="display: none"></div>
+                
+    <div id="login_title" >{{interfaceLabels[loginModal.loginTitle]}}</div>
+    <form id="higiForm" name="higiForm">
+
+        <div id="login_username"  ng-show="loginModal.loginEmailSection" class="{{loginModal.loginEmailSectionClass}}">
+            <div id="login_title_email" ng-if="!loginModal.loginUsernameError && !loginModal.loginServerErrorVisible"><span >{{interfaceLabels[loginModal.loginTitleEmail]}}</span></div>
+            <div id="login_username_error" ng-if="loginModal.loginUsernameError">{{interfaceLabels[loginModal.loginEmailAddressError]}}</div>
+            <div id="login_username_error" ng-if="loginModal.loginServerErrorVisible">{{interfaceLabels[loginModal.loginServerError]}}</div>
+            <p id="login_username_error_newest3" style="top: 175px;"></p>
+            <higi-text-field field="loginModal.fields[0]" style= "font-size: 13px;"></higi-text-field>
+            <p id="register-first-screen-text" style="color: #1D659E;
+            font-family: 'IntervalSansProMediumRegular';
+            font-size: 16px;
+            top: 153px;
+            left: 20px;
+            width: 779px;
+            position: absolute;
+            text-shadow: 0 1px 1px #FFFFFF;"></p>
+            <div id="login_username_loading_new" class="keyboard_dialog_loading"></div>
+
+            <div id="login_username_loading" class="keyboard_dialog_loading"></div>
+
+            <div id="login_username_warning" ><span ></span></div>
+
+
+            
+            <a id="login_username_submit_btn" class="keyboard_submit_btn {{loginModal.nextBtnActive}}" ng-click="loginModal.emailExistsCheck(loginModal.fields[0])" ng-hide="loginModal.submitting"><span>{{interfaceLabels[loginModal.globalNext]}}</span></a>
+            
+        </div>
+
+        <div id="login_password"  ng-show="loginModal.loginPasswordSection" class="{{loginModal.loginPasswordSectionClass}}">
+            <div id="login_title_password" ng-if="!loginModal.loginPasswordError && !loginModal.loginServerErrorVisible">
+                <span>{{interfaceLabels[loginModal.loginPassword]}}</span>
+                <span id="login_password_note" >{{interfaceLabels[loginModal.loginPasswordNote]}}</span>
+            </div>
+            <div class="login_password_error" id="error_message_login" ng-if="loginModal.loginPasswordError">{{interfaceLabels[loginModal.loginPasswordErrorMessage]}}</div>
+            <div class="login_password_error" id="error_message_login_new" ng-if="loginModal.loginServerErrorVisible">{{interfaceLabels[loginModal.loginServerError]}}</div>
+            <div id="login_password_hint" ></div>
+            <div id="login_password_loading" class="keyboard_dialog_loading en_us"></div>
+                <higi-text-field field="loginModal.fields[1]"></higi-text-field>
+            <div ng-click="loginModal.showPasswordToggle(loginModal.fields[1])" class="login_show_password_btn {{loginModal.showPasswordClass}}"></div>
+            <div id="login_show_password_note">{{interfaceLabels[Showpass]}}</div>
+            <div id="login_forgot_password_btn" class="dialog_function_btn en_us" ng-click="loginModal.resetPassword()"><span>{{interfaceLabels[loginModal.loginForgotPassword]}}</span></div>
+
+            <p style="position: relative;top: 155px;text-align: center;color: red;display: none;" id="errorMessageFinalPageLogin">There is a problem connecting the server</p>
+
+            <a id="login_password_submit_btn" class="keyboard_submit_btn en_us {{loginModal.loginBtnActive}}" ng-click="loginModal.login()" ng-hide="loginModal.submitting"><span>{{interfaceLabels[loginModal.globalLogin]}}</span></a>
+        </div>
+                  
+          <div ng-show="loginModal.selectLogin"
+                class="{{loginModal.selectLoginClass}}" style="margin-left: 180px;">
+                 <span style="    position: absolute;
+    top: 100px;
+    left: -30px;
+    font-size: 19px;
+    color: #D84A4A;
+    width: 400px;
+    text-align: center;">{{interfaceLabels[loginModal.loginType]}}</span>
+    <img style = "width: 155px;height: 200px;background-color: #e6e6e6;top: 150px;position: absolute;left: -41px;" src="./images/mail.png" alt="">
+                <button id = "credentialLogin" style="    position: absolute;
+    top: 350px;
+    left: -50px;
+    width: 170px;
+    height: 55px;
+    border: none;
+    background-color: #0B66C9;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;" ng-click="loginModal.showEmailSection()()">{{interfaceLabels[loginModal.emailTypeLogin]}}</button>
+<img style = "width: 146px;height: 200px;background-color: #e6e6e6;top: 150px;position: absolute;left: 238px;" src="./images/loginfingerprint.png" alt="">
+    
+
+                <button id = "fingerprintLogin" style="    position: absolute;
+    top: 350px;
+    left: 230px;
+    width: 170px;
+    height: 55px;
+    border: none;
+    background-color: #0B66C9;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;" ng-click="proceedFingerPrintLogin()">{{interfaceLabels[loginModal.fingerPrintTypeLogin]}}</button>
+
+           
+            </div>
+
+         <div id="fingerprint_section_login" ng-show="loginModal.loginCreateFingerprintSection" class="{{loginModal.loginCreateFingerprintSectionClass}}">
+
+            <div id="finger_scan_instruction">{{interfaceLabels[leftthumblogin]}}</div>
+
+            <div id="fingerprint_instruction_image">
+                
+            </div>
+
+            <div id="finger_scan_instruction2">{{interfaceLabels[pleasewait]}}</div>
+
+            <div id="skip_fingerprint"> 
+               
+            </div>
+            
+        </div>
+
+        
+
+        <div id="fingerprint_not_matched_regret_message" ng-show="loginModal.fingerprintRegretSection" class="{{loginModal.fingerprintRegretSectionClass}}">
+
+            <div id="fingerprint_not_recognized"></div>
+            <span id="fingerprint_regret_not_recognized">{{interfaceLabels[loginFingerprintError]}}</span>
+            
+        </div>
+
+    </div>
+    </form>
+</div> -->

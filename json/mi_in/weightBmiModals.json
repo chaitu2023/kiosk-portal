@@ -1,0 +1,16 @@
+{
+    "infobox.about.bmi": "बीएमआय म्हणजे काय?",
+    "infobox.about.bmi.subtitle": "आपले बॉडी मास इंडेक्स म्हणजेच बीएमआय, आपल्या वजन आणि उंचीवरून मोजलं जातं. काल्पनिक सूत्र असे आहे:",
+    "infobox.about.bmi.point01": "आपलं बीएमआय आपल्या शरीरातील एकूण चरबीचे एक चांगलं सूचक आहे जे आपल्याला वजनामुळे होणाऱ्या संभाव्य समस्येविषयी आधी सूचना देऊ शकतं.",
+    "infobox.about.bmi.point02": "उच्च बीएमआयसह, आपले एकूण शरीर संघटन लक्षात घेणं महत्वाचं आहे. आपण एक सुपरस्टार खेळाडू किंवा बॉडीबिल्डर असल्यास आपलं बीएमआय सामान्यपेक्षा जास्त असू शकतं.",
+    "weightBmiModals.underweight": "कमी वजन ",
+    "weightBmiModals.normalweight": "सामान्य",
+    "weightBmiModals.overweight": "जास्त वजन",
+    "weightBmiModals.obese": "लठ्ठ",
+    "infobox.about.bmi.point03": "बीएमआयची मर्यादा",
+    "infobox.about.bmi.point04": "१८.५ च्या खाली",
+    "infobox.about.bmi.point05": "१८.५ ते २२.९९",
+    "infobox.about.bmi.point06": "२३ ते २७.५",
+    "infobox.about.bmi.point07": "२७.५ आणि त्यापेक्षा जास्त",
+    "infobox.about.bmi.point08": "हा तक्ता रोग नियंत्रण आणि प्रतिबंध केंद्रांनी परिभाषित केलेल्या बॉडी मास इंडेक्सचे प्रवर्ग दर्शवितो."
+}

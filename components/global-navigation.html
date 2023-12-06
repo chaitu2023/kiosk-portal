@@ -1,0 +1,114 @@
+<div class="higi_top_nav_ng {{isLoggedInLangClass}}">
+    <!-- new language button start-->
+    <a  ng-click="langToggle()" ng-show="isVisibleLanguageButton && languageEnable" class="global_language_button {{langClass}} ">
+        <img src="images/language/Icons-03-2.png" style="height:20px"> &nbsp;&nbsp;
+        <span class="global_language_button_text">{{interfaceLabels[language_]}}</span> &nbsp;&nbsp;
+        <img src="images/language/Down_Arrow144.png" style="width: 18px; position: relative; top: 2px;">
+    </a> 
+
+    <div id="higi_language_box_ang" ng-show="isVisibleLanguage && languageEnable" class="global_language_button_clicked_container">
+        
+        <div class="global_language_button_clicked_container_dark_background" ng-click="closeLanguageDropdown()"></div>
+        
+        <a  class="global_language_button global_language_button_clicked" ng-click="closeLanguageDropdown()">
+            <img src="images/language/Icons-03-1.png" style="height:20px"> &nbsp;&nbsp;
+            <span class="global_language_button_text">{{interfaceLabels[language_]}}</span>
+        </a>
+
+        <div id="higi_language_dialog" class=" {{welcomeLangSelectClass}} global_language_button_clicked_drop_down_container">
+            <div id="higi_language_content" class="dropdown-content">
+                <p ng-repeat="button in languages"  id="{{button.buttonId}}" class="langDropdown global_language_button_clicked_drop_down_container_block">
+                   <span> <img src="images/language/Tick-144.png" style="width: 25px; margin-left: -20px;" ng-show="button.label == currentlanguage"/></span> <a ng-click="setLanguageClicked(button)">{{button.displayLabel}}</a>
+                </p>
+            </div>
+        </div>
+    </div> 
+
+    <!-- new language button end-->
+    
+    <!-- <div class="higi_homeobutton" id="mybackhomebutton" ng-show="homeButtonShow" ng-click="homeButtonClick()" ><span>{{interfaceLabels[homeLabel]}}</span></div> -->
+    
+    <!-- <div class="higi_audio_btn top_nav_btn" ng-show="isVisibleAudio" ng-click="toggleAudioSlider()"><span></span></div> -->
+
+    
+    <!-- <div class="higi_exit_btn top_nav_btn" id="telemedicineButton" ng-if="telemedicineButtonAvailable" ng-show="telemedicineButtonAvailable && telemediSetting && telemediApiVendor!= null" ng-click="telemedicineclick()" >
+        <span style="color: #0261c2">{{interfaceLabels[telemedicinebuttontitle]}}</span>
+    </div> -->
+
+    <!-- <div class="higi_exit_btn {{langClass}}" ng-show="isVisibleExit && loggedIn && showExitButton" ng-click="exitButtonClick()"><span>{{interfaceLabels[logoutLabel]}}</span></div> -->
+
+    <!-- <div class="higi_login_btn_profile" ng-show="isVisibleProfileImage" id="profileButtonInWelcomePage">
+        <div class="higi_login_profile_btn higi_language_btn_overlay" ng-click="showLastCheckin()">
+            <div class="higi_login_profile_overlay">
+            </div>
+            <div class="higi_login_profile_image_pane">
+                <img ng-src="{{lastCheckin.userImg}}">
+            </div>
+        </div>
+    </div> -->
+
+    <div class="global_profile_button {{disableExitLogout ? 'profile_btn_disabled' : 'profile_btn_enabled'}}" ng-show="isVisibleProfileImage && loggedIn" ng-click="showLastCheckin()">
+        <span>
+            <img ng-show ="disableExitLogout == false" ng-src="{{lastCheckin.userImg}}" class="global_profile_button_icon">
+            <img ng-show ="disableExitLogout == true" ng-src="{{disabledUserProfile}}" class="global_profile_button_icon">
+            <small class="global_profile_button_small_text">{{interfaceLabels[profile_]}}</small>
+        </span>
+    </div>
+
+    <div class="global_exit_button {{disableExitLogout ? 'exit_logout_disabled' : 'exit_logout_enabled'}}" id="exitButtonOnTheTop" ng-show="isVisibleExit && !loggedIn && showExitButton" ng-click="exitButtonClick()">
+        <span>
+            <img class="global_exit_button_icon {{langClass}} ">
+            <small class="global_exit_button_small_text {{langClass}} ">{{interfaceLabels[exitLabel]}}</small>
+        </span>
+    </div>
+
+    <div class="global_logout_button {{disableExitLogout ? 'exit_logout_disabled' : 'exit_logout_enabled'}}" ng-show="isVisibleExit && loggedIn && showExitButton" ng-click="exitButtonClick()" style="width: unset;padding-left: 15px;padding-right: 15px;">
+        <span>
+            <img class="global_logout_button_icon">
+            <!-- <small class="global_logout_button_small_text {{langClass}}">{{interfaceLabels[logoutLabel]}}</small> -->
+        </span>
+    </div>
+
+    <div class="global_home_button" ng-show="homeButtonShow" ng-click="homeButtonClick()">
+        <span>
+            <img src="images/Icons-05.png" class="global_home_button_icon">
+            <small class="global_home_button_small_text">{{interfaceLabels[homeLabel]}}</small>
+        </span>
+    </div>
+
+    <div class="global_sanjeevani_button" ng-if="enableESanjeevani && !IHLTeleConsultSelected && hideESanjeevaniBtn" ng-click="sanjeevaniButtonClick()">
+        <span>
+            <img class="global_sanjeevani_button_icon" src="images/ESanjeevani_logo.png">
+            <small class="global_sanjeevani_button_text">{{interfaceLabels[sanjeevaniLabel]}}</small>
+        </span>
+    </div>
+
+    <div class="global_printer_button {{userNotTakenTest ? 'global_printer_button_disabled' : 'global_printer_button_enabled'}}" ng-show="showPrintButton" ng-click="printCheckinResults()">
+        <img style="margin-top: 4px;" src="images/printer_icon.png" class="global_printer_button_icon">
+    </div>
+
+    <div class="global_mail_button {{userNotTakenTest ? 'global_mail_button_disabled' : 'global_mail_button_enable'}}" ng-show="showEmailButton" ng-click="emailCheckinResults()">
+        <img style="margin-top: 4px;" src="images/email_icon.png" class="global_mail_button_icon">
+    </div>
+    
+    <div class="global_volume_button {{disableExitLogout ? 'volume_btn_disabled' : 'volume_btn_enabled'}}" ng-show="isVisibleAudio" ng-click="toggleAudioSlider()">
+        <img class="global_volume_button_icon">
+    </div>
+
+    <!-- <div class="higi_exit_btn {{langClass}}" ng-show="showECGEmergencyStopButton" ng-click = "ZugECGemergencyStop()"><span>{{interfaceLabels[skipp]}}</span></div> -->
+
+    <div class="higi_top_nav_bubble" ng-show="newUserNoLastCheckinVisible">
+        <div class="top_nav_bubble_text {{langClass}}">{{interfaceLabels[completeCheckin]}}</div>
+    </div>
+    <!-- <div class="higi_top_nav_bubble_wide" ng-show="apiNotAvailableTipVisible">
+        <div class="top_nav_bubble_text {{langClass}}"><i class="icon-offlinecloud"></i> {{interfaceLabels[apiOffline]}}</div>
+    </div> -->
+
+    <div class="higi_login_btn top_nav_btn {{(apiAvailable ? '' : 'disabled')}}" id="getTheseHands" ng-show="isVisibleLogin" ng-click="loginButtonClick()" onclick="getTheseHands()"  style="display: none;">
+        <span class="{{langClass}}" ng-bind-html="interfaceLabels[loginLabel]"></span>
+    </div>
+    <div  class="higi_register_btn top_nav_btn {{(apiAvailable ? '' : 'disabled')}}" id="getTheseHands2" ng-show="isVisibleReg" ng-click="registerButtonClick()" style="display: none;">
+        <span class="en_us" ng-bind-html="interfaceLabels[registerLabel]">Register</span>
+    </div>
+
+</div>

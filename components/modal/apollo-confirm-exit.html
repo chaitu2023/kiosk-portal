@@ -1,0 +1,21 @@
+<div id="apollo_confirm_exit_dialog" ng-show="!apolloCofirmGoHomeButtonClicked">
+   <img src="images/auth_failure20120727.png" class = "book_appointment_modal_image_container">
+    <p class = "book_appointment_modal_text_container">{{interfaceLabels[apolloConfirmExit.consultationEndText]}}<br><small style="padding: 10px;"><i>{{interfaceLabels[apolloConfirmExit.goHomePageText]}}</i></small></p> 
+    <a class="book_appointment_modal_button_exit" ng-click="apolloConfirmExit.stayInCall()">
+        <span>{{interfaceLabels[apolloConfirmExit.wishToContinuePreviousSessionButtonNo]}}</span>
+    </a>
+    <a class="book_appointment_modal_button_home" ng-click="homeButtonClick(); apolloConfirmExit.noGoHome();">
+        <span>{{interfaceLabels[apolloConfirmExit.wishToContinuePreviousSessionButtonYes]}}</span>
+    </a>
+</div>
+
+<div id="apollo_confirm_exit_dialog" ng-show="apolloCofirmGoHomeButtonClicked">
+   <img src="images/auth_failure20120727.png" class = "book_appointment_modal_image_container">
+    <p class = "book_appointment_modal_text_container">{{interfaceLabels[apolloConfirmExit.LastconsultationNotEndText]}}<br><small style="padding: 10px;"><i>{{interfaceLabels[apolloConfirmExit.wishToContinuePreviousConsultationText]}}</i></small></p> 
+    <a class="book_appointment_modal_button_exit" ng-click="apolloConfirmExit.noStartNewConsultation()">
+        <span>{{interfaceLabels[apolloConfirmExit.wishToContinuePreviousSessionButtonNo]}}</span>
+    </a>
+    <a class="book_appointment_modal_button_home" ng-click=" apolloConfirmExit.yesCotinuePreviousConsultation();">
+        <span>{{interfaceLabels[apolloConfirmExit.wishToContinuePreviousSessionButtonYes]}}</span>
+    </a>
+</div>

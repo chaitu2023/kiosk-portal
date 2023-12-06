@@ -1,0 +1,23 @@
+{
+    "weight3.results": "ফলাফলসমূহ",
+    "weight3.information": "তথ্য",
+    "weight3.parameter": "প্ৰাচল",
+    "weight3.yourscore": "আপোনাৰ নম্বৰ",
+    "weight3.OverallStatus": "সামগ্ৰিক স্থিতি",
+    "global.underweight": "কম ওজনৰ",
+    "global.normalweight": "সাধাৰণ",
+    "global.overweight": "অত্যাধিক ওজন",
+    "global.obese": "মেদবহুল",
+    "weight3.weight": "ওজন",
+    "weight3.height": "উচ্চতা",
+    "weight3.kgUnit": "in Kgs",
+    "weight3.feetUnit": "in feet",
+    "weight3.parameter.bmi.title": "BMI",
+    "weight3.body.mass.index": "শৰীৰৰ ভৰ সূচক",
+    "weight3.bmi.scale": "বডী মাচ ইণ্ডেক্স স্কেল",
+    "weight3.underweight": "কম ওজনৰ",
+    "weight3.normalweight": "সাধাৰণ",
+    "weight3.overweight": "অত্যাধিক ওজন",
+    "weight3.obese": "মেদবহুল",
+    "weight3.check.Again": "আবার পরীক্ষা করুন"
+}

@@ -1,0 +1,16 @@
+{
+    "infobox.about.bmi": "BMI কি?",
+    "infobox.about.bmi.subtitle": "আপোনাৰ শৰীৰ ভৰ সূচক, যাক BMI বুলিও কোৱা হয়, আপোনাৰ ওজন আৰু উচ্চতাৰ পৰা গণনা কৰা হয়। ইয়াত আকৰ্ষণীয় সূত্ৰ আছে:",
+    "infobox.about.bmi.point01": "আপোনাৰ BMI হৈছে আপোনাৰ মুঠ শৰীৰৰ চৰ্বিৰ এক ভাল সূচক যি আপোনাক সাম্ভাব্য ওজনৰ সমস্যাৰ বাবে মূৰ দাঙি ধৰিব পাৰে।",
+    "infobox.about.bmi.point02": "উচ্চ BMIৰ সৈতে, আপোনাৰ সামগ্ৰিক শৰীৰৰ গঠন মনত ৰখাটো গুৰুত্বপূৰ্ণ। যদি আপুনি এজন চুপাৰষ্টাৰ এথলীট বা বডিবিল্ডাৰ হয় তেন্তে আপোনাৰ BMI স্বাভাৱিকতকৈ বেছি হ'ব পাৰে।",
+    "weightBmiModals.underweight": "কম ওজনৰ",
+    "weightBmiModals.normalweight": "সাধাৰণ",
+    "weightBmiModals.overweight": "অত্যাধিক ওজন",
+    "weightBmiModals.obese": "মেদবহুল",
+    "infobox.about.bmi.point03": "BMI পৰিসৰ",
+    "infobox.about.bmi.point04": "18.5-ৰ তলত",
+    "infobox.about.bmi.point05": "18.5 ৰ পৰা 22.99",
+    "infobox.about.bmi.point06": "23 ৰ পৰা 27.5",
+    "infobox.about.bmi.point07": "27.5 আৰু অধিক",
+    "infobox.about.bmi.point08": "এই সাৰণীখনে ৰোগ নিয়ন্ত্ৰণ আৰু প্ৰতিৰোধ কেন্দ্ৰৰ দ্বাৰা নিৰ্ধাৰিত শৰীৰ ভৰ সূচকৰ শ্ৰেণীবোৰ প্ৰতিফলিত কৰে।"
+}

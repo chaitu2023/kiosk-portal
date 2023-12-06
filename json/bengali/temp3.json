@@ -1,0 +1,20 @@
+{
+    "temp3.results": "ফলাফল",
+    "temp3.continue": "চালিয়ে যান",
+    "temp3.calibration": "ক্যালিব্রেশন",
+    "temp3.tempScale": "দেহের তাপমাত্রার স্কেল",
+    "temp3.status.healt": "স্বাভাবিক",
+    "temp3.status.accep": "গ্রহণযোগ্য",
+    "temp3.status.fever": "জ্বর",
+    "temp3.status.highfever": "বেশী জ্বর",
+    "temp3.roomTemp": "ঘরের",
+    "temp3.wristTemp": "দেহের",
+    "temp3.temperature": "তাপমাত্রা",
+    "temp3.bodyTemp": "দেহের তাপমাত্রা",
+    "temp3.information": "তথ্য",
+    "temp3.parameter": "বিচার্য বিষয়",
+    "temp3.yourscore": "আপনার স্কোর",
+    "temp3.OverallStatus": "সামগ্রিক অবস্থা",
+    "temp3.finalResult": "চূড়ান্ত ফলাফল",
+    "temp3.checkTempagain": "আবার তাপমাত্রা পরীক্ষা করুন"
+}

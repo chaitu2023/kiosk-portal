@@ -1,0 +1,14 @@
+{
+    "zugEcg1.singleLeadecgtitledisp": "இசிஜி - ஒற்றை லீட்",
+    "zugEcg1.threeLeadecgtitledisp": "இசிஜி - மூன்று லீட்",
+    "zugEcg1.sixLeadecgtitledisp": "இசிஜி - ஆறு லீட்",
+    "zugEcg1.sitStraight": "நேராக உட்காரவும்",
+    "zugEcg1.restWrist": "உங்கள் மணிக்கட்டை கைப்பிடிகளில் வைக்கவும்",
+    "zugEcg1.placeleftleg": "உங்கள் இடது காலை பெடலில் வைக்கவும்",
+    "zugEcg1.placebothleg": "கிளாம்புகளை உங்கள் இரு கால்களிலும் வைக்கவும்",
+    "zugEcg1.skipTest": "தவிர்",
+    "zugEcg1.startTest": "தொடங்கு",
+    "zugEcg1.EcgTestWillBegin": "உங்கள் கைகளும் கால்களும் சரியாக வைக்கப்பட்டவுடன் இந்தப் பரிசோதனை தொடங்கும்",
+    "zugEcg1.keepHandsProper": "தயவுசெய்து உங்கள் கைகளைச் சரியாக வைக்கவும்",
+    "zugEcg1.keepLegsProper": "தயவுசெய்து உங்கள் கால்களைச் சரியாக வைக்கவும்"
+}

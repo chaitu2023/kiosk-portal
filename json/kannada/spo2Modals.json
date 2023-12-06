@@ -1,0 +1,15 @@
+{
+    "infobox.about.spo2": "SpO<sub>2</sub> ಬಗ್ಗೆ",
+    "infobox.about.spo2.subtitle": "ನಿಮ್ಮ ದೇಹದ ಪಲ್ಸ್ ಆಕ್ಸಿಮೀಟರ್, ಇದನ್ನು SpO<sub>2</sub>ಎಂದೂ ಕರೆಯುತ್ತಾರೆ.",
+    "infobox.about.spo2.point03": "SpO<sub>2</sub> ರೇಂಜ್‌ಗಳು",
+    "infobox.about.spo2.point04": "95 ಮೇಲೆ",
+    "infobox.about.spo2.point05": "91 ರಿಂದ 95",
+    "infobox.about.spo2.point06": "70 ರಿಂದ 90",
+    "infobox.about.spo2.point07": "70 ಕ್ಕಿಂತ ಕಡಿಮೆ",
+    "spo2.status.healthy": "ಆರೋಗ್ಯಕರ",
+    "spo2.status.acceptable": "ಸ್ವೀಕಾರಾರ್ಹ",
+    "spo2.status.atrisk": "ಅಪಾಯದಲ್ಲಿ",
+    "spo2.status.low": "ಕಡಿಮೆ",
+    "infobox.about.spo2.point08": "ಈ ಚಾರ್ಟ್ ರೋಗ ನಿಯಂತ್ರಣ ಮತ್ತು ತಡೆಗಟ್ಟುವಿಕೆ ಕೇಂದ್ರಗಳಿಂದ ವ್ಯಾಖ್ಯಾನಿಸಲಾದ SpO<sub>2</sub> ವರ್ಗಗಳನ್ನು ಪ್ರತಿಬಿಂಬಿಸುತ್ತದೆ.",
+    "infobox.about.spo2.point09": "below 95"
+}

@@ -1,0 +1,12 @@
+{
+	"temp1.title":"शरीराचे तापमान",
+    "temp1.instructions":"सूचना",
+    "temp1.startTest": "तपासणी सुरु करा",
+    "temp1.skip":"वगळा",
+	"temp1.holdhands":"आपल्या हातांनी अलगद हँडल्स पकडा",
+    "temp1.restwristt":"आपले निकाल दिसेपर्यंत आपले मनगट इलेक्ट्रोडवर ठेवा",
+    "temp1.testWillBeginBefore":"ही तपासणी आपले हात जागेवर असल्यावर सुरू होईल",
+    "temp1.testWillBegin":"Click 'Start Test' when your Hand is placed as shown",
+    "temp1.tempForeheadText1": "Place your face inside the red circle",
+    "temp1.tempForeheadText2": "once you start the test"
+}

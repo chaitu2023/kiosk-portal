@@ -1,0 +1,392 @@
+.abha_header{
+    display: flex;
+    padding: 5px;
+}
+
+.abha_care_context_img{
+    width: 15%;
+    padding: 5px 45px;
+}
+
+.abha_care_context_heading{
+    font-size: x-large !important;
+    font-family: LatoSemibold !important;
+    color: #3e8dc7 !important;
+    position: absolute;
+    top: 18px;
+    left: 175px;
+}
+
+.abha_care_context_table{
+    width: 80%;
+}
+.abha_care_context_table .abhaCheckBox {
+    width: 20%;
+    text-align: center;
+    padding: 6px;
+}
+.abha_care_context_table .abhaDateTime{
+    width: 60%;
+    padding: 6px;
+    font-size: 20px;
+}
+.abhaCheckBox input{
+    width: 20px;
+    height: 19px;
+    border: 3px solid #808080d1;
+    border-radius: 9px;
+    background-color: white;
+    text-align: center;
+}
+
+.abhaCcAccordionIcon {
+    float: right;
+    position: relative;
+    left: -50px;
+}
+
+.abhaCheckBoxinput{
+    display: inline-block;
+    padding: 12px;
+    border: 3px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 15px 20px;
+    text-align: center;
+    top: 286px;
+    position: relative;
+}
+
+#abha_care_context_scroll{
+    height: 310px;
+    width: 680px;
+    z-index: 40;
+    background-color: white;
+    left: 15px;
+    border-radius: 10px;
+    overflow: hidden auto;
+    position: absolute;
+    box-shadow: inset 0px 0px 4px 2px #c8c8c8;
+    box-sizing: border-box;
+    border: 1px solid #c8c8c8;
+    top: 120px;
+}
+
+.abha_care_context_count_box {
+    width: 50px;
+    height: 30px;
+    /* display: inline; */
+    background-color: #e6e6e6;
+    float: left;
+    left: 177px;
+    margin-right: 25px;
+    /* border: 1px solid #eaeaea; */
+    /* border: 1px solid #1e90ff; */
+    border-radius: 10px;
+    /* box-shadow: 4px 4px 4px #AFAFAF, -3px -3px 1px #efefef; */
+    top: -7px;
+    position: relative;
+}
+
+.abha_care_context_count_num {
+    color: dodgerblue;
+    font-size: 17px;
+    position: absolute;
+    top: 5px;
+    text-transform: uppercase;
+    width: 100%;
+    font-family: 'LatoRegular';
+    text-align: center;
+}
+
+@media (pointer: fine) {
+    #abha_care_context_scroll::-webkit-scrollbar 
+    {
+        width: 15px;
+    }
+
+    #abha_care_context_scroll::-webkit-scrollbar-track
+     {
+        display:none;
+    }
+ 
+    #abha_care_context_scroll::-webkit-scrollbar-thumb{
+        background-color: grey;
+        border-radius: 5px;
+    }
+}
+
+.abhaTotalCount{
+    position: relative;
+    top: 223px;
+    left: 480px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.abhaTitle{
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+    color: #888d8b;
+}
+#abhaSelectAllVitalText{
+    top: -7px;
+    position: relative;
+    /* margin: 15px 0px; */
+    display: inline;
+    font-size: 17px;
+    left: 190px;
+    font-family: 'LatoBold';
+}
+
+#abhaSelectAllVital{
+    top: -7px;
+    position: relative;
+    /* margin: 15px 0px; */
+    display: inline;
+    font-size: 17px;
+    left: 190px;
+    font-family: 'LatoBold';
+}
+
+#abha_careContext_data_header {
+    padding-top: 20px;
+    position: relative;
+    /* left: 370px; */
+    /* right: -124px; */
+    color: #494949;
+}
+
+.abha_verify_and_continue_btn {
+    position: absolute;
+    right: 250px;
+    top: 436px;
+    background-image: -moz-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%);
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%);
+    background-image: -ms-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%);
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #cecece;
+    border-radius: 9px;
+    width: 200px;
+    pointer-events: none;
+    text-align: center;
+    font-family: "IntervalSansProCondSemiBoldRg";
+    z-index: 15;
+    line-height: 60px;
+    font-size: 20px;
+    color: white;
+}
+
+.abha_verify_and_continue_btn.active_btn{
+    border-radius: 10px;
+    border-top: 2px solid #5dbcff;
+    border-left: 2px solid #5fa4d4bf;
+    border-bottom: 2px solid #50a4e0bf;
+    border-right: 2px solid #50a4e0bf;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0px 4px 4px #4a4a4ae0;
+    background: linear-gradient(to bottom,#5aa4d9,#3989c3, #0261c2);
+    pointer-events: all;
+    font-size: 20px;
+}
+
+.abhaVitalDataLoader {
+    width: 35px;
+    height: 35px;
+    z-index: 18;
+    margin-left: auto;
+    margin-right: auto;
+    display: block !important;
+    position: static !important;
+    background: transparent url(../images/keyboard_dialog_loading_icon06222012.png) top left no-repeat;
+    -webkit-animation: rotate360 1.3s linear infinite;
+}
+
+#abha_Logo{
+    width: 150px;
+    height: 150px;
+    left: 285px;
+    position: fixed;
+    top: 180px;
+}
+
+.abha_cc_info_button{
+    width: 93px;
+    outline: none;
+    border: 2px solid #208ad6bf;
+    box-shadow: 0px 4px 4px #6d6d6d;
+    background: linear-gradient(to bottom,#ebebeb, #dbdbdb , #c1c1c1);
+    top: 135px;
+    height: 30px;
+    border-radius: 9px 9px 9px 10px;
+    position: absolute;
+    right: 50px;
+}
+
+.abha_careCon_Section_no_btn{
+    top: 360px !important;
+    position: absolute !important;
+    height: 54px !important;
+    left: 400px !important;
+    width: 125px !important;
+    pointer-events: none !important;
+    text-align: center !important;
+    font-family: "LatoRegular" !important;
+    line-height: 60px !important;
+    border: 1px solid #cecece !important;
+    border-radius: 7px !important;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%) !important;
+}
+
+.abha_careCon_Section_no_btn span{
+    position: relative !important;
+    top: -3px !important;
+    color: #fff !important;
+    font-size: 22px !important;
+    text-align: center !important; 
+    text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2) !important;
+    line-height: 50px !important;
+    height: 50px !important;
+    display: inline-block !important;
+    opacity: .9 !important;
+    pointer-events: none !important;
+}
+
+.abha_careCon_Section_no_btn.abha_careCon_active_btn{
+    top: 360px !important;
+    position: absolute !important;
+    height: 54px !important;
+    left: 400px !important;
+    border-radius: 10px !important;
+    border-right: 2px solid #50a4e0bf !important;
+    width: 125px !important;
+    color: white !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    background: linear-gradient(to bottom,#5AA4D9,#3989c3, #0261c2) !important;
+    text-shadow: none !important;
+    font-family: 'LatoRegular' !important;
+    font-weight: 500 !important;
+    box-shadow: 0px 3px 1px #3989c3, -1px 2px 1px #3989c3 !important;
+    pointer-events: auto !important;
+    text-align: unset !important;
+    line-height: 60px !important;
+    border: none !important;
+}
+
+.abha_careCon_Section_no_btn.abha_careCon_active_btn span{
+    font-size: 21px !important;
+    text-align: center !important;
+    position: relative !important;
+    /* top: -4px !important; */
+    font-family: LatoRegular !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+    left: 49px !important;
+    pointer-events: auto !important;
+}
+
+.abha_careCon_Section_no_btn.abha_careCon_active_btn:active{
+    box-shadow: none !important;
+}
+
+.abha_careCon_Section_yes_btn{
+    top: 360px !important;
+    position: absolute !important;
+    height: 54px !important;
+    left: 210px !important;
+    width: 125px !important;
+    pointer-events: none !important;
+    text-align: center !important;
+    font-family: "LatoRegular" !important;
+    line-height: 60px !important;
+    border: 1px solid #cecece !important;
+    border-radius: 7px !important;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%) !important;
+}
+
+.abha_careCon_Section_yes_btn span{
+    position: relative !important;
+    top: -3px !important;
+    color: #fff !important;
+    font-size: 22px !important;
+    text-align: center !important; 
+    text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2) !important;
+    line-height: 50px !important;
+    height: 50px !important;
+    display: inline-block !important;
+    opacity: .9 !important;
+    pointer-events: none !important;
+}
+
+.abha_careCon_Section_yes_btn.abha_careCon_active_btn{
+    top: 360px !important;
+    position: absolute !important;
+    height: 54px !important;
+    left: 210px !important;
+    border-radius: 10px !important;
+    border-right: 2px solid #50a4e0bf !important;
+    width: 125px !important;
+    color: white !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    background: linear-gradient(to bottom,#5AA4D9,#3989c3, #0261c2) !important;
+    text-shadow: none !important;
+    font-family: 'LatoRegular' !important;
+    font-weight: 500 !important;
+    box-shadow: 0px 3px 1px #3989c3, -1px 2px 1px #3989c3 !important;
+    pointer-events: auto !important;
+    text-align: unset !important;
+    line-height: 60px !important;
+    border: none !important;
+}
+
+.abha_careCon_Section_yes_btn.abha_careCon_active_btn span{
+    font-size: 21px !important;
+    text-align: center !important;
+    position: relative !important;
+    /* top: -4px !important; */
+    font-family: LatoRegular !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+    left: 49px !important;
+    pointer-events: auto !important;
+}
+
+.abha_careCon_Section_yes_btn.abha_careCon_active_btn:active{
+    box-shadow: none !important;
+}
+
+#abha_cc_info_container{
+    width: 670px;
+    height: 420px;
+    font-size: 14px;
+    color: #6d6d6d;
+    text-shadow: 1px 0 1px #fff;
+    position: absolute;
+}
+#abha_cc_info_container #abha_cc_info_container_scroll {
+    width: 671px;
+    background-image: none;
+    height: 420px;
+    overflow: hidden;
+}

@@ -1,0 +1,12 @@
+{
+
+    "weight01_audio01":"sounds/nepali/vo1_weight&bmi.wav",
+    "weight01_audio02":"sounds/nepali/voice2_weight&bmi.wav",
+    "weight01_audio03":"sounds/nepali/voice3_weight&bmi.wav",
+    "weight01_audio04":"sounds/nepali/startWeightTest.wav",
+    "weight01_audio05":"sounds/nepali/voice4_weight&bmi.wav",
+    "weight03_audio01":"sounds/nepali/results.wav",
+	"weight01_audiolap":"sounds/nepali/handsonLap.wav",
+    "weight03_audio10":"sounds/nepali/chkWeight&bmiAgain.wav"
+
+}

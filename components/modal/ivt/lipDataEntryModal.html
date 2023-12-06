@@ -1,0 +1,129 @@
+<style type="text/css">
+    .lip_slide_container{
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 710px;
+        height: 520px;
+    }
+    .lip_slide_title{
+        font-size: 31px;
+        color: #0261c2;
+        font-family: "IntervalSansProCondSemiBoldRg";
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 670px;
+    }
+    .lip_submits{
+     pointer-events: all;
+     width: 150px;
+     background-color: #2a76c4;
+     border: 1px solid #0261c2;
+     border-radius: 3px;
+     background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+     height: 50px;
+     position: absolute;    
+     left: 545px;
+     top: 175px;
+    }
+    .lip_submits span {
+     color: #fff;
+     font-size: 22px;
+     text-align: center;
+     font-family: 'IntervalSansProMediumRegular';
+     text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2);
+     line-height: 50px;
+     height: 54px;
+     display: inline-block;
+     opacity: .9;
+     margin-left: 49px;
+    }
+    .lip_disabled_next{
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #cecece;
+    pointer-events: none;
+    }
+    .lipData_error{
+        color: red;
+        margin-left: 20px !important;
+        margin-top: 20px !important;
+        width: 400px;
+    }
+    .tc{
+        position: relative;
+        top: 45px;
+        left: 20px;
+        height: 90px;
+        width: 270px;
+    }
+    .tg{
+        position: relative;
+        top: -60px;
+        left: 290px;
+        height: 90px;
+        width: 270px;
+    }
+    .hdl{
+        position: relative;
+        top: -180px;
+        left: 290px;
+        height: 90px;
+        width: 270px;
+    }
+    .ldl{
+        position: relative;
+        top: -75px;
+        left: 20px;
+        height: 90px;
+        width: 270px;
+    }
+
+    .lipInputPos {
+        position: relative;
+        top: -96px
+    }
+    #tgData, #ldlData, #hdlData{
+        top: -75px !important;
+    }
+    .lip_error{
+        position: relative;
+        top: -125px;
+        left: 165px;
+        color: red;
+    }
+</style>
+
+<div class="lip_slide_container" >
+  <div class="lip_slide_title" > {{interfaceLabels[lipSlideText]}}</div> 
+
+  <div class="tc"> 
+    <p> {{interfaceLabels[lipTcText]}}</p>
+    <lip-text-field class="lipInputPos"  mobilefield="lipData.fields[0]"></lip-text-field>
+    <p class="lip_error" data-ng-if="!tcValid">{{interfaceLabels[lipErrorText]}}</p>
+  </div>
+  <div class="tg"> 
+    <p> {{interfaceLabels[lipTgText]}}</p>
+    <lip-text-field  mobilefield="lipData.fields[1]"></lip-text-field>
+    <p class="lip_error" data-ng-if="!tgValid">{{interfaceLabels[lipErrorText]}}</p>
+  </div>
+  <div class="ldl"> 
+    <p> {{interfaceLabels[lipLdlText]}}</p>
+    <lip-text-field  mobilefield="lipData.fields[2]"></lip-text-field>
+    <p class="lip_error" data-ng-if="!ldlValid">{{interfaceLabels[lipErrorText]}}</p>
+  </div>
+  <div class="hdl"> 
+    <p> {{interfaceLabels[lipHdlText]}}</p>
+    <lip-text-field  mobilefield="lipData.fields[3]"></lip-text-field>
+    <p class="lip_error" data-ng-if="!hdlValid">{{interfaceLabels[lipErrorText]}}</p>
+  </div>
+
+
+  <a id="genix_next_buttons" class="lip_submits {{disable_next}}" ng-click="lipValue()"><span>NEXT</span></a>
+
+  <!-- <glc-text-field  mobilefield="lipData.fields[0]"></glc-text-field>
+  <p class="lipData_error" data-ng-if="disable_next=='glc_disabled_next'">Enter the valid value</p>
+  <a id="genix_next_buttons" class="genix_telemedicine_submits {{disable_next}}" ng-click="lipValue()"><span>NEXT</span></a> -->
+</div>

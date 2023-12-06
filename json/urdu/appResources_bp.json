@@ -1,0 +1,19 @@
+{
+    
+    "bloodpressure01_audio01":"sounds/urdu/vo1_bloodpressure1.wav",
+    "bloodpressure01_audio02":"sounds/urdu/vo2_bloodpressure1.wav",
+    "bloodpressure01_audio03":"sounds/urdu/voice3_bp1.wav",
+    "bloodpressure01_audio04":"sounds/urdu/vo4_bloodpressure1.wav",
+    "bloodpressure01_audio05":"sounds/urdu/startBpTest.wav",
+    "bloodpressure02_cancel_warning":"sounds/urdu/voice1_bp2.wav",
+    "bloodpressure02_audio01":"sounds/urdu/vo_2_bloodpressure2.wav",
+    "bloodpressure02_audio02":"sounds/urdu/voice3_bp2.wav",
+    "bloodpressure02_audio03":"sounds/urdu/vo4_bloodpressure2.wav",
+    "bloodpressure02_audio04":"sounds/urdu/vo4_bloodpressure1.wav",
+    "bloodpressure02_audio05":"sounds/urdu/vo6_bloodpressure2.wav",
+    "bloodpressure02_audio06":"sounds/urdu/vo7_bloodpressure2.wav",
+    "bloodpressure02_audio07":"sounds/urdu/vo8_bloodpressure2.wav",
+    "bloodpressure02_audio09":"sounds/urdu/vo2_bloodpressure2.wav",
+    "bloodpressure03_audio01":"sounds/urdu/results.wav",
+    "bloodpressure03_audio10":"sounds/urdu/chkBpAgain.wav"
+}

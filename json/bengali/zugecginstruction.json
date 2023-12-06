@@ -1,0 +1,14 @@
+{
+    "zugEcg1.singleLeadecgtitledisp": "ইসিজি - একক লীড",
+    "zugEcg1.threeLeadecgtitledisp": "ইসিজি - তিনটি লীড",
+    "zugEcg1.sixLeadecgtitledisp": "ইসিজি - ছটি লীড",
+    "zugEcg1.sitStraight": "সোজা হয়ে বসুন",
+    "zugEcg1.restWrist": "আপনার কবজি হ্যান্ডেলের উপরে রাখুন",
+    "zugEcg1.placeleftleg": "আপনার বাঁ পা প্যাডেলে রাখুন",
+    "zugEcg1.placebothleg": "উভয় পায়ে ক্ল্যাম্প বসান",
+    "zugEcg1.skipTest": "এড়িয়ে যান",
+    "zugEcg1.startTest": "পরীক্ষা শুরু করুন",
+    "zugEcg1.EcgTestWillBegin": "আপনার হাত ও পা সঠিক অবস্থায় রাখার পরে এই পরীক্ষা শুরু হবে",
+    "zugEcg1.keepHandsProper": "অনুগ্রহ করে আপনার হাত যথাযথভাবে রাখুন",
+    "zugEcg1.keepLegsProper": "অনুগ্রহ করে আপনার পা যথাযথভাবে রাখুন"
+}

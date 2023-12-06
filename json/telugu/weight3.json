@@ -1,0 +1,23 @@
+{
+    "weight3.results": "ఫలితాలు",
+    "weight3.information": "సమాచారం",
+    "weight3.parameter": "పారామీటర్",
+    "weight3.yourscore": "మీ స్కోర్",
+    "weight3.OverallStatus": "మొత్తంమీద స్థితి",
+    "global.underweight": "తక్కువబరువు",
+    "global.normalweight": "సాధారణం",
+    "global.overweight": "అధికబరువు",
+    "global.obese": "ఊబకాయం",
+    "weight3.weight": "బరువు",
+    "weight3.height": "ఎత్తు",
+    "weight3.kgUnit": "in Kgs",
+    "weight3.feetUnit": "in feet",
+    "weight3.parameter.bmi.title": "BMI",
+    "weight3.body.mass.index": "బాడీ మాస్ ఇండెక్స్",
+    "weight3.bmi.scale": "బాడీ మాస్ ఇండెక్స్ స్కేల్",
+    "weight3.underweight": "తక్కువబరువు",
+    "weight3.normalweight": "సాధారణం",
+    "weight3.overweight": "అధికబరువు",
+    "weight3.obese": "ఊబకాయం",
+    "weight3.check.Again": "బరువు & BMI మళ్లీ చెక్ చేయండి"
+}

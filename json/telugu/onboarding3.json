@@ -1,0 +1,11 @@
+{
+    "onboarding.2.of.3": "(3 లో 2)",
+    "age01.how.young": "మీ పుట్టిన తేదీ ఏమిటి?",
+    "age01.numpad.next": "తర్వాత",
+    "age01.numpad.clear": "క్లియర్",
+    "age01.error": "చెల్లుబాటయ్యే తేదీని నమోదు చేయండి",
+    "age01.warning.under13": "దయచేసి మీ పుట్టిన తేదీని మళ్లీ నమోదు చేయండి.",
+    "age01.dd": "(DD)",
+    "age01.mm": "(MM)",
+    "age01.yyyy": "(YYYY)"
+}

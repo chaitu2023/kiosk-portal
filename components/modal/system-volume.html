@@ -1,0 +1,18 @@
+<div class="no-press-events" ng-show="systemVolumeVisible" >
+    <div class="higi_keyboard_dialog system-volume">
+        <div id="login_title">{{systemVolume.title}} {{systemVolume.formattedVolume}}</div>
+      <div id="higi_audio_box">
+          <div id="higi_audio_dialog" >
+              <div class="audio_slider_container">
+
+                  <div id="audio_slider_tick_container">
+                      <div id="{{tick.id}}" class="{{tick.class}} {{tick.onClass}}" ng-repeat="tick in systemVolume.dialogPoints"></div>
+                  </div>
+                  <div id="system_audio_slider" class="sliderbar"></div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <a class="higi_overlay_mask" ng-if="systemVolumeVisible" ng-mousedown="systemVolume.hideSystemVolume();"></a>
+</div>
+<a class="system-audio-button" ng-mousedown="systemVolume.startSystemAudioPress()" ng-mouseup="systemVolume.endSystemAudioPress()"></a>

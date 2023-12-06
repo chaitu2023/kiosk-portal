@@ -1,0 +1,1663 @@
+<!DOCTYPE HTML>
+<!-- Version 6.14.0.0 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>IHL</title>
+    <link rel="stylesheet" href="css/ecg_animation.css" />
+    <link rel="stylesheet" href="css/height_ft_cm_btn.css" />
+    <link rel="stylesheet" href="css/vendor/font-awesome.min.css" />
+    <link rel="stylesheet" href="custom_icons.css" type="text/css" />
+    <link rel="stylesheet" href="fa5_fas_custom_icons.css" type="text/css" />
+    <link rel="stylesheet" href="fa5_far_custom_icons.css" type="text/css" />
+    <script src="js/vendor/raphael.min.js"></script>
+    <script src="js/vendor/jquery-1.9.0.min.js"></script>
+    <script src="machine_id.js"></script>
+    <script src="machine_info.js"></script>
+
+    <script src="js/vendor/angular.js"></script>
+    <script src="js/jkiosk-Mock.js"></script>
+    <!-- <script src="js/jkiosk.js"></script> -->
+
+    <script src="js/higiKiosk.js"></script>
+    <script src="js/higiapi.js"></script>
+    <script src="js/ihlLogo.js"></script>
+    <script src="js/ahbaApi.js"></script>
+    <script src="js/vendor/angular-route.min.1.3.js"></script>
+
+    <!-- RSA encryption -->
+    <script src="js/jsencrypt.js"></script>
+
+    <script src="js/vendor/angular-animate.min.1.3.js"></script>
+
+    <script src="js/vendor/truncate.js"></script>
+    <script src="js/vendor/angular-sanitize.js"></script>
+    <script src="js/vendor/jquery.transit.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.easing.compatibility.js"></script>
+    <!-- <script src="js/iscroll.js"></script>
+    <script src="js/jquery.iscroll.js"></script> -->
+    <script src='js/ftscroller.js'></script>
+    <script src="js/date.format.js"></script>
+    <script src="js/jquery.spritely-0.6.js"></script>
+    <script src="js/jquery.effects.core.js"></script>
+    <script src="js/jquery.effects.bounce.js"></script>
+    <script src="js/vendor/countUp.min.js"></script>
+    <script src="js/jquery.nouislider.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script src="js/dietjson.js"></script>
+
+    <script type="text/javascript" src="calendar_ui/jquery-ui.min.js"/></script>
+    <link rel="stylesheet" type="text/css" href="calendar_ui/jquery-ui.structure.min.css"/>
+    <link rel="stylesheet" type="text/css" href="calendar_ui/jquery-ui.theme.min.css">
+    <link rel="stylesheet" type="text/css" href="calendar_ui/jquery-ui.min.css"/>
+
+
+
+
+    <script src="js/lib/jquery-ui-widget.min.js"></script>
+    <script src="js/lib/d3.min.js"></script>
+
+    <script src="js/jke-d3-ecg.js"></script>
+    <script src="js/datasource2.js"></script>
+
+    <script src="js/vendor/angular-qrcode/qrcode.js"></script>
+    <script src="js/vendor/angular-qrcode/qrcode_UTF8.js"></script>
+    <script src="js/vendor/angular-qrcode/angular-qrcode.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/autobahn/20.1.1/autobahn.min.js"></script> -->
+    <script src="js/autobahn.min.js"></script>
+    <!-- <script src="https://meet.jit.si/external_api.js"></script> -->
+    <script src="js/jitsi-meet.js"></script>
+    <script type="text/javascript" src="js/qr-code-styling.js"></script>
+    <script src="js/crypto-aes.js"></script>
+    <script src="js/crossbar.js"></script>
+
+    <!--New Multi-Printer Functionality Service-->
+    <script src="js/printerService.js"></script>
+    <script src="js/printConstants.js"></script>
+    <script type="text/javascript" src="js/printPrescriptionConstants.js"></script>
+
+    <!--Genix Teleconsultation Service-->
+    <script src="js/genixConstantsService.js"></script>
+    
+    <script src="js/controllers/controller-base.js"></script>
+    <script src="js/controllers/controller-welcome.js"></script>
+    <script src="js/controllers/controller-invasiveTest.js"></script>
+    <script src="js/controllers/ivt/controller-ivt-instruction.js"></script>
+    <script src="js/controllers/ivt/controller-ivt-process.js"></script>
+    <script src="js/controllers/ivt/controller-ivt-result.js"></script>
+    <script src="js/controllers/bp/controller-bp-1.js"></script>
+    <script src="js/controllers/bp/controller-bp-2.js"></script>
+    <script src="js/controllers/bp/controller-bp-3.js"></script>
+    <script src="js/controllers/onboarding/controller-onboard-1.js"></script>
+    <script src="js/controllers/onboarding/controller-onboard-2.js"></script>
+    <script src="js/controllers/onboarding/controller-onboard-3.js"></script>
+    <script src="js/controllers/onboarding/controller-onboard-4.js"></script>
+    <script src="js/controllers/onboarding/controller-waist-circumference.js"></script>
+    <script src="js/controllers/weight/controller-weight-1.js"></script>
+    <script src="js/controllers/weight/controller-weight-2.js"></script>
+    <script src="js/controllers/weight/controller-weight-3.js"></script>
+    <script src="js/controllers/bmc/controller-bmc-1.js"></script>
+    <script src="js/controllers/bmc/controller-bmc-2.js"></script>
+    <script src="js/controllers/fullbodybmc/controller-fullbody-bmc1.js"></script>
+    <script src="js/controllers/fullbodybmc/controller-fullbody-bmc2.js"></script>
+    <script src="js/controllers/spo2/controller-spo2-1.js"></script>
+    <script src="js/controllers/spo2/controller-spo2-2.js"></script>
+    <script src="js/controllers/spo2/controller-spo2-3.js"></script>
+    <script src="js/controllers/temp/controller-temp-count-down.js"></script>
+    <script src="js/controllers/temp/controller-temp-0.js"></script>
+    <script src="js/controllers/temp/controller-temp-1.js"></script>
+    <script src="js/controllers/temp/controller-temp-2.js"></script>
+    <script src="js/controllers/temp/controller-temp-3.js"></script>
+    <script src="js/controllers/controller-finish.js"></script>
+    <script src="js/controllers/controller-comebacksoon.js"></script>
+    <script src="js/controllers/controller-emptyexit.js"></script>
+
+    <script src="js/controllers/zugecg/zugmodecontroller.js"></script>
+    <script src="js/controllers/zugecg/zuginstructioncontroller.js"></script>
+    <script src="js/controllers/zugecg/zugecgprogresscontroller.js"></script>
+    <script src="js/controllers/zugecg/zugECGInterimResultController.js"></script>
+
+    <script src="js/controllers/mvm/MvmController.js"></script>
+    <script src="js/controllers/teleMedicine/gem3s/controller-telemeddoctorlist.js"></script>
+    <script src="js/controllers/teleMedicine/gem3s/controller-telemedspecialist.js"></script>
+    <script src="js/controllers/telemedicine/gem3s/telemedicineprescription.js"></script>
+    <script src="js/controllers/telemedicine/genix/controller-telemedgenixspecialist.js"></script>
+    <script src="js/controllers/telemedicine/genix/controller-telemedgenixdoctorlist.js"></script>
+    <script src="js/controllers/telemedicine/genix/telemedicinegenixprescription.js"></script>
+    <script src="js/controllers/payment/mosambee/mosambeePaymentController.js"></script>
+
+    <script src="js/controllers/payment/mosambee/card-payment-controller.js"></script>
+    <script src="js/controllers/payment/mosambee/upi-payment-controller.js"></script>
+    <script src="js/controllers/payment/mosambee/enter-pin-controller.js"></script>
+    <script src="js/controllers/payment/razorPay/razorPay-upi-paymet-controller.js"></script>
+
+    <!-- ihl tele consultation -->
+    <script src="js/controllers/teleconsultation/controller-teleconsultationLayout.js"></script>
+    <script src="js/controllers/teleconsultation/controller-teleconsultationDashboard.js"></script>
+    <script src="js/controllers/teleconsultation/controller-teleconsultationMainDashboard.js"></script>
+    <script src="js/controllers/teleconsultation/controller-teleconsultationMemberService.js"></script>
+    <script src="js/controllers/teleconsultation/controller-teleconsultationConsultationType.js"></script>
+    <script src="js/controllers/teleconsultation/controller-teleconsultationSpeciality.js"></script>
+    <script src="js/controllers/teleconsultation/controller-teleconsultationDoctorList.js"></script>
+    <script src="js/controllers/teleconsultation/controller-teleconsultationVideoCall.js"></script>
+    <script src="js/controllers/teleconsultation/controller-teleconsultationBookAppointment.js"></script>
+    <script src="js/controllers/teleconsultation/controller-teleconsultationSubscribeClass.js"></script>
+    <script src="js/controllers/teleconsultation/controller-teleconsultationSummary.js"></script>
+    <script src="js/controllers/teleconsultation/controller-teleconsultationMyConsultant.js"></script>
+    <script src="js/controllers/teleconsultation/controller-teleconsultationClassList.js"></script>
+    <script src="js/controllers/teleconsultation/controller-teleconsultationApolloVideoCall.js"></script>
+    <script src="js/controllers/teleconsultation/controller-teleconsultationGenixVideoCall.js"></script>
+    <script src="js/controllers/controller-esanjeevaniPatientList.js"></script>
+    <script src="js/controllers/flipkartplus/controller-flipkart-instruction.js"></script>
+
+    <script src="js/controllers/developerTestingPageController.js"></script>
+    <script src="js/controllers/controller-ssouserflow.js"></script>
+    <!-- <script src="js/controllers/controller-esanjeevaniflow.js"></script> -->
+    <script type="text/javascript" src="html2canvas.js"></script>
+
+    <!--ch -->
+
+    <script src="js/services/kiosk-flow.js"></script>
+    <script src="js/services/kiosk-higiapi.js"></script>
+    <script src="js/services/kiosk-jkiosk.js"></script>
+    <script src="js/services/kiosk-utilities.js"></script>
+    <script src="js/services/kiosk-storage.js"></script>
+    <script src="js/services/kiosk-user.js"></script>
+    <script src="js/services/kiosk-animations.js"></script>
+    <script src="js/services/kiosk-testing.js"></script>
+    <script src="js/services/kiosk-vitalreference.js"></script>
+
+
+    <script src="js/directives/onboarding/heightScroller.js"></script>
+    <script src="js/directives/onboarding/heightNumpad.js"></script>
+    <script src="js/directives/onboarding/ageNumpad.js"></script>
+    <script src="js/directives/onboarding/sexSelect.js"></script>
+    <script src="js/directives/onboarding/nameEntry.js"></script>
+    <script src="js/directives/onboarding/affiliateOrg.js"></script>
+   <script src="js/directives/onboarding/waistCircumferencenumpad.js"></script>
+    <script src="js/directives/weight/weightAnimations.js"></script>
+
+    <script src="js/directives/bp/bpAnimations.js"></script>
+
+    <script src="js/directives/ecg/ecgAnimations.js"></script>
+    <script src="js/directives/spo2/spo2Animation.js"></script>
+
+
+    <script src="js/directives/modal/modal.js"></script>
+    <script src="js/directives/modal/modalLoading.js"></script>
+    <script src="js/directives/modal/loginFingerprint.js"></script>
+    <script src="js/directives/modal/medibuddy/login.js"></script>
+    <script src="js/directives/modal/registerFingerprint.js"></script>
+    <script src="js/directives/modal/terms/confirmTerms.js"></script>
+    <script src="js/directives/modal/lastcheckin.js"></script>
+    <script src="js/directives/modal/emailResults.js"></script>
+    <script src="js/directives/modal/regprompt.js"></script>
+    <script src="js/directives/modal/passwordReset.js"></script>
+    <script src="js/directives/modal/infobox/weight.js"></script>
+    <script src="js/directives/modal/infobox/weightbodymasscomp.js"></script>
+    <script src="js/directives/modal/infobox/spo2.js"></script>
+    <script src="js/directives/modal/infobox/thermometer.js"></script>
+    <script src="js/directives/modal/infobox/bp.js"></script>
+    <script src="js/directives/modal/infobox/bpHypertensive.js"></script>
+    <script src="js/directives/modal/infobox/bpmultipletests.js"></script>
+    <script src="js/directives/modal/infobox/points.js"></script>
+    <script src="js/directives/modal/infobox/higiscore.js"></script>
+    <script src="js/directives/modal/infobox/printer.js"></script>
+    <script src="js/directives/modal/exitConfirm.js"></script>
+    <script src="js/directives/modal/serviceProvider.js"></script>
+    <script src="js/directives/modal/apolloConfirmExitModal.js"></script>
+    <script src="js/directives/modal/ecgDisplay.js"></script>
+    <script src="js/directives/modal/ecgDisplay2.js"></script>
+    <script src="js/directives/modal/thirdPartyData.js"></script>
+    <script src="js/directives/modal/mobileNumber.js"></script>
+    <script src="js/directives/modal/telemedi/gem3s/telemedicinequestionnaire.js"></script>
+    <script src="js/directives/modal/telemedi/gem3s/telemedicinestart.js"></script>
+    <script src="js/directives/modal/telemedi/genix/genixtelemedicinequestionnaire.js"></script>
+    <script src="js/directives/modal/payment/mosambee/paymentStart.js"></script>
+
+    <script src="js/directives/modal/sessionTimeout.js"></script>
+    <script src="js/directives/modal/bcWarningError.js"></script>
+    <script src="js/directives/modal/bcWarningPregnant.js"></script>
+    <script src="js/directives/modal/registrationConfirmEmailExists.js"></script>
+    <script src="js/directives/modal/bcWarningImplant.js"></script>
+    <script src="js/directives/modal/bcWarningDisclaimer.js"></script>
+    <script src="js/directives/modal/bcWaistCircumstance.js"></script>
+    <script src="js/directives/modal/systemVolume.js"></script>
+    <script src="js/directives/modal/uiTesting.js"></script>
+
+    <script src="js/directives/modal/ihlmembershipModal.js"></script>
+    <script src="js/directives/modal/challengeGet.js"></script>
+    <script src="js/directives/modal/accountCreatedChallenge.js"></script>
+    <script src="js/directives/modal/qrModal.js"></script>
+    <script src="js/directives/modal/guestUserFlow.js"></script>
+    <script src="js/directives/modal/bpWarningMessage.js"></script>
+    <script src="js/directives/modal/telemedi/ihltelemed/reasonForVisit.js"></script>
+    <script src="js/directives/modal/telemedi/ihltelemed/teleConsultationSummaryBuyMedicine.js"></script>
+    <script src="js/directives/modal/telemedi/ihltelemed/teleConsultationSummaryLabOrder.js"></script>
+    <script src="js/directives/modal/telemedi/ihltelemed/teleConsultationSummaryRatings.js"></script>
+    <script src="js/directives/modal/ssoUserFlow.js"></script>
+    <script src="js/directives/modal/ivtDashboard.js"></script>
+    <script src="js/directives/modal/ivt/heamoDataEntryModal.js"></script>
+    <script src="js/directives/modal/esanjeevaniFlow.js"></script>
+    <script src="js/directives/modal/eSanjeevaniReqTestListModal.js"></script>
+    <script src="js/directives/ivt-fields/heamoTextField.js"></script>
+    <script src="js/directives/modal/ivt/glcDataEntryModal.js"></script>
+    <script src="js/directives/ivt-fields/glcTextField.js"></script>
+    <script src="js/directives/modal/ivt/lipDataEntryModal.js"></script>
+    <script src="js/directives/ivt-fields/lipTextField.js"></script>
+    <script src="js/directives/modal/ivt/urnDataEntryModal.js"></script>
+    <script src="js/directives/ivt-fields/urnTextField.js"></script>
+    <script src="js/directives/modal/ivt/ivtTwoParaDataEntryModal.js"></script>
+    <script src="js/directives/finalresults/finalResultsAd.js"></script>
+    <script src="js/directives/finalresults/wavingguy.js"></script>
+    <script src="js/directives/finalresults/rewardtiles.js"></script>
+    <script src="js/directives/finalresults/higiscoregauge.js"></script>
+    <script src="js/directives/modal/abhaVerifyRegModal.js"></script>
+    <script src="js/directives/modal/abhaCareContextModal.js"></script>
+    <script src="js/directives/modal/temperatureTechnicalIssueMessage.js"></script>
+
+    <script src="js/directives/interfacesounds.js"></script>
+    <script src="js/directives/interactiveAdForm.js"></script>
+    <script src="js/directives/globalNavigation.js"></script>
+    <script src="js/directives/audioVolumeDialog.js"></script>
+    <script src="js/directives/notificationbar.js"></script>
+    <script src="js/directives/keyboard.js"></script>
+    <script src="js/directives/higiTextField.js"></script>
+    <script src="js/directives/maintenance.js"></script>
+    <script src="js/directives/platformhandlers.js"></script>
+    <script src="js/directives/utils.js"></script>
+
+    <script src="js/directives/tele_medi_fields/telemediTextField.js"></script>
+    <script src="js/directives/tele_medi_fields/telemediRadioField.js"></script>
+    <script src="js/directives/tele_medi_fields/telemediCheckField.js"></script>
+    <script src="js/directives/tele_medi_fields/telemediTextArea.js"></script>
+    <script src="js/directives/tele_medi_fields/telemediDateField.js"></script>
+	<script src="js/directives/modal/ivtWarningMessage.js"></script>
+    <script src="js/directives/tele_medi_fields/genixtelemediRadioList.js"></script>
+    <script src="js/directives/tele_medi_fields/genixtelemediCheckList.js"></script>
+    <script src="js/directives/modal/infobox/telemedi/gem3s/telemedicine.js"></script>
+    <script src="js/directives/tele_medi_fields/telemediMobileText.js"></script>
+    <script src="js/directives/payment_mobile_field/paymentMobileField.js"></script>
+    <script src="js/directives/payment_mobile_field/paymentAuthorizationCode.js"></script>
+    <script src="js/directives/payment_mobile_field/paymentCouponField.js"></script>
+    <script src="js/directives/modal/flipkartplus/flipKartQRCodeScannerModal.js"></script>
+    <script src="js/directives/modal/mehta/mehtaUserModal.js"></script>
+    <script src="js/directives/modal/shutDownHPodModal.js"></script>
+    <!-- <script src="js/factory/eventFactory.js"></script> -->
+
+    <script type="text/javascript" src="wz_jsgraphics.js"></script>
+    <script type="text/javascript" src="canvasjs.min.js"></script>
+    <script src="canvas2image.js"></script>
+    <script src="rickshaw.js"></script>
+    <link rel="stylesheet" href="rickshaw.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style_common.css">
+    <link rel="stylesheet" type="text/css" href="css/invasive_page.css">
+    <link rel="stylesheet" type="text/css" href="css/invasive_instruction.css">
+    <link rel="stylesheet" type="text/css" href="css/invasive_process.css">
+    <link rel="stylesheet" type="text/css" href="css/invasive_result.css">
+    <link rel="stylesheet" type="text/css" href="css/style_temp.css">
+    <link rel="stylesheet" type="text/css" href="css/style_bmi.css">
+    <link rel="stylesheet" type="text/css" href="css/style_spo2.css">
+    <link rel="stylesheet" type="text/css" href="css/ecg.css">
+    <link rel="stylesheet" type="text/css" href="css/style_bmc.css">
+    <link rel="stylesheet" type="text/css" href="css/style_bp.css">
+    <link rel="stylesheet" type="text/css" href="css/css_final_result.css">
+    <link rel="stylesheet" type="text/css" href="css/style_login_register.css">
+    <link rel="stylesheet" type="text/css" href="css/style_login_register_meb.css">
+    <link rel="stylesheet" type="text/css" href="css/last-checkin.css">
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
+    <link rel="stylesheet" type="text/css" href="css/sex-select.css">
+    <link rel="stylesheet" type="text/css" href="css/style_basic_info.css">
+    <link rel="stylesheet" type="text/css" href="css/style_keyboard.css">
+    <link rel="stylesheet" type="text/css" href="css/welcome_page.css">
+    <link rel="stylesheet" type="text/css" href="css/goodbye.css">
+    <link rel="stylesheet" type="text/css" href="css/audio-volume-dialog.css">
+    <link rel="stylesheet" type="text/css" href="css/tele-consultation.css">
+    <link rel="stylesheet" type="text/css" href="css/style_email_my_results.css">
+    <link rel="stylesheet" type="text/css" href="css/style_reason_for_visit.css">
+    <link rel="stylesheet" type="text/css" href="css/style_e_sanjeevani.css">
+    <link rel="stylesheet" type="text/css" href="css/style_login_register_flipkart_plus.css">
+    <link rel="stylesheet" type="text/css" href="css/style_abha_verify_reg.css">
+    <link rel="stylesheet" type="text/css" href="css/style_abha_care_context.css">
+    <link rel="stylesheet" type="text/css" href="css/style_mehta.css">
+    <link rel="stylesheet" type="text/css" href="css/style_ihl_membership.css">
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/angularfire.min.js"></script>
+
+    <!-- <script src="js/lib/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script> -->
+    <script src="js/firestore.js"></script>
+    <script src="js/firestore-config.js"></script>
+    <script src="js/html5-qrcode.min.js"></script>
+
+    <!-- <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB6W59KO6bzwhTLeIG9g35Ds0a8pgk4nDQ",
+            authDomain: "mobilepasscode-d9295.firebaseapp.com",
+            databaseURL: "https://mobilepasscode-d9295.firebaseio.com",
+            projectId: "mobilepasscode-d9295",
+            storageBucket: "mobilepasscode-d9295.appspot.com",
+            messagingSenderId: "156263319448"
+        };
+        firebase.initializeApp(config);
+
+        if (localStorage.getItem("fromInitPage") != "true") {
+            localStorage.setItem("fromInitPage", "undefined");
+        }
+
+    </script> -->
+    <script src="js/mfs100-9.0.2.6.js"></script>
+
+    <script>
+
+        angular.element(document).ready(function () {
+            angular.bootstrap(document, ['higiKioskUi']);
+        });
+
+
+
+
+
+
+
+
+        currentPart = 0;
+        y = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        );
+        baseline = 201;
+        total = 0;
+        temp = y.length;
+        while (temp > 0) {
+            temp = temp - 2000;
+            total++;
+        }
+        auto = 0;
+        jg = new jsGraphics("Canvas");
+        //jg.setPrintable(true);
+
+
+
+
+        function draw(arrs, timestamp, high, low) {
+            console.log(arrs);
+            high = 0;
+            low = 0;
+
+            for (var z = 0; z < arrs.length; z++) {
+                var m = parseInt(arrs[z]);
+                if (m > high) {
+                    high = m;
+                }
+            }
+
+            for (var y = 0; y < arrs.length; y++) {
+                var n = parseInt(arrs[y]);
+                if (n < low) {
+                    low = n;
+                }
+            }
+
+            high = (high + 5) * 4.88;
+            low = (low - 5) * 4.88;
+
+            var inter_high = high / 12;
+            var inter_low = low / 55;
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title: {},
+                interactivityEnabled: false,
+                axisX: {
+                    gridColor: "#3a89da",
+                    valueFormatString: " ",
+                    lineThickness: 1,
+                    tickThickness: 0,
+                    interval: 160,
+                    intervalType: "millisecond",
+                    gridThickness: 1
+                },
+
+                axisY: {
+                    interval: 15,
+                    gridColor: "#3a89da",
+                    valueFormatString: " ",
+                    gridThickness: 1,
+                    tickThickness: 0,
+                    interval: 30,
+                    tickLength: 0,
+                    lineThickness: 0,
+                    minimum: low, maximum: high
+                },
+
+                data: [
+                    {
+                        type: "line",
+                        legendText: "no marker",
+                        lineThickness: 1,
+                        dataPoints: []
+                    }
+                ]
+            });
+
+            chart.render();
+
+
+            var second = 0; var range = 0;
+            for (var i = 0; i < 530; i++) {
+                range = range + 8.33;
+                var val = arrs[i] * 4.88;
+                if (i % 120 == 0) { second++; range = 0; }
+
+
+                chart.options.data[0].dataPoints.push({ x: new Date(2012, 1, 1, 10, 25, second, range), y: val, lineColor: "white", mouseover: onMouseover });
+
+            }
+            //#161616
+
+            chart.render();
+
+            //newly added 4-12-2017 for ECG graph printing using dataURL
+            var can1 = document.getElementsByTagName("canvas");
+            var ECG_dataURL = can1[0].toDataURL();
+
+            console.log("dataURL: " + ECG_dataURL);
+
+            return ECG_dataURL;
+
+            function onMouseover(e) {
+            }
+
+            //==========================================================
+            var can = document.getElementById('chartContainer');
+            html2canvas(can).then(function (canvas) {
+
+                // document.body.appendChild(canvas);
+                // var res6;
+
+                var dataURL = canvas.toDataURL();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: 'http://apps.indiahealthlink.com/higi_php_api/script.php',
+                    data: { name: dataURL, user: timestamp },
+                }).done(function (msg) {
+
+                });
+
+            });
+
+
+
+
+        }
+
+
+
+
+
+        function drawNext() {
+            if (currentPart + 1 < total) {
+                currentPart++;
+            } else {
+                if (auto = 1) {
+                    currentPart = 0;
+                } else {
+                    return;
+                }
+            }
+            jg.clear();
+            jg.paint();
+            start = currentPart * 2000;
+            var x = 0;
+            jg.setColor("black");
+            jg.drawString("Lead II", 40, 5);
+            jg.drawString("HR 80 per min", 40, 25);
+            jg.drawString("");
+            jg.setColor("blue");
+            jg.drawLine(x, y[start] + baseline, x, y[start] + baseline);
+
+            for (i = start; i < y.length; i++) {
+                x = x + 0.5;
+                jg.drawLine(x - 1, 0 - y[i - 1] + baseline, x, 0 - y[i] + baseline);
+                if (x == 1000) { break; }
+            }
+            jg.paint();
+            document.getElementById("pages").value = (currentPart + 1) + "/" + total;
+            return;
+        }
+
+    </script>
+
+</head>
+<style type="text/css">
+
+    /*low speed internet model box*/
+    #low_speed_internet_text, #apollo_coupon_code_text {
+        text-align: justify;
+        font-size: 22px;
+        font-family: 'LatoRegular';
+        color: #4d4d4d;
+        margin-top: 25px;
+        line-height: 40px;
+        padding: 20px;
+    }
+    #apollo_coupon_code_text {
+        text-align: center;
+    }
+
+    /* ecg warning model box css */
+    .ecg_warning_txt, .fp_warning_txt{
+        color: #4a4a4a;
+        text-align: center;
+        position: relative;
+        top: 95px;
+        font-size: 30px;
+    }
+
+    .bmc_warning_txt{
+        color: #4a4a4a;
+        position: relative;
+        top:67px;
+        width:85%;
+        margin: auto;
+        font-size: 21px;
+        text-align: justify;
+    }
+
+    .ecg_warning_title_txt {
+        color: #DC143C;
+        text-align: center;
+        position: relative;
+        top: 65px;
+        font-size: 40px;
+    }
+
+    .bmc_warning_title_txt {
+        color: #DC143C;
+        text-align: center;
+        position: relative;
+        font-size: 33px;
+        top: 37px;
+    }
+
+    .teleMed_warning_txt {
+        color: #4a4a4a;
+        text-align: center;
+        position: relative;
+        top: 30px;
+        font-size: 30px;
+    }
+
+    .ekg-modal-box .buttons {
+        border-top: 1px solid #dcdcdc;
+        position: absolute;
+        top: 158px;
+        width: 100%;
+        background: none;
+        height: 85px;
+    }
+
+    .ekg-modal-box .buttons .accept {
+        width: 100px;
+        left: 150px
+    }
+
+    .ekg-modal-box .buttons a {
+        position: absolute;
+        top: 20px;
+        color: #FFF;
+        width: 55px;
+        height: 42px;
+        padding-top: 9px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 3px;
+        font-size: 20px;
+        text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2);
+        background-image: -moz-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        background-image: -ms-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        border-style: solid;
+        border-width: 1px;
+        border-color: #2a76c4;
+        text-shadow: 0px -1px 0px #828282;
+        border-radius: 3px;
+        -webkit-box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+        -moz-box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+        box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+        left: 250px !important
+    }
+
+    .teleMed_warning_title_txt {
+        color: #DC143C;
+        text-align: center;
+        position: relative;
+        top: 25px;
+        font-size: 40px;
+    }
+
+    .ekg-modal-box {
+        border-radius: 8px;
+        -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+        width: 600px;
+        height: 245px;
+        background: -webkit-linear-gradient(top, #f1f1f1 65%, #f1f1f1 65%);
+        z-index: 3;
+        position: fixed;
+        top: 177.5px;
+        left: 100px;
+        overflow: hidden;
+    }
+
+    .ekg-modal {
+        height: 120%;
+        width: 100%;
+        position: absolute;
+        z-index: 11;
+        top: -40px;
+    }
+
+    .ekg-legmodal {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 11;
+        top: -40px;
+    }
+
+    .leg-modal-box {
+        border-radius: 8px;
+        -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+        width: 237px;
+        height: 230px;
+        background: -webkit-linear-gradient(top, #f1f1f1 65%, #f1f1f1 65%);
+        z-index: 3;
+        position: fixed;
+        top: 177.5px;
+        left: 245px;
+        overflow: hidden;
+    }
+
+    .load-modal-box {
+        border-radius: 8px;
+        -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+        width: 710px;
+        height: 530px;
+        background: -webkit-linear-gradient(top, #f1f1f1 65%, #f1f1f1 65%);
+        z-index: 3;
+        position: fixed;
+        top: 76px;
+        left: 46px;
+        overflow: hidden;
+    }
+
+    .load {
+        height: 500%;
+        width: 500%;
+        position: absolute;
+        z-index: 11;
+        top: -40px;
+    }
+
+    .vital-price-list-button, .lowSpdInt-ok-button, .apollo-coupon-print-button{
+        position: absolute;
+        top: 200px;
+        color: #FFF;
+        width: 100px;
+        height: 41px;
+        padding-top: 9px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 3px;
+        font-size: 20px;
+        text-shadow: 1px 1px 1px rgb(10 10 10 / 20%);
+        background-image: -moz-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        background-image: -ms-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        border-style: solid;
+        border-width: 1px;
+        border-color: #2a76c4;
+        text-shadow: 0px -1px 0px #828282;
+        border-radius: 3px;
+        -webkit-box-shadow: inset 0px 1px 1px 1px rgb(255 255 255 / 20%);
+        -moz-box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+        box-shadow: inset 0px 1px 1px 1px rgb(255 255 255 / 20%);
+        left: 250px !important;
+    }
+    .apollo-iframe-button {
+        bottom: 25px;
+        display: block;
+        position: absolute;
+        /* top: 5px; */
+        left: 25px;
+        z-index: 100009;
+        border: none;
+        background: white;
+        font-size: 16px;
+        padding: 7px;
+        border-radius: 5px;
+        box-shadow: rgb(0 0 0 / 24%) 0px 2px 5px;
+        cursor: pointer;
+        color: black;
+    }
+
+    .printer_select_popup_header{
+        text-align: center;
+        position: relative;
+        display: block;
+        margin: auto;
+        padding: 20px;
+        font-size: 25px;
+        color: #DC143C;
+        font-weight: bold;
+        font-family: 'LatoRegular';
+       
+    }
+
+    .printer_select_popup_text{
+        font-size: 22px;
+        color: #4a4a4a;
+        position: relative;
+        padding: 5px 10px 0px 10px;
+        margin: 0px !important;
+        font-family: 'LatoRegular';
+        font-weight: 500;
+    }
+
+    .printer_select_popup_label{
+        display: block;
+        font-size: 20px;
+        position: relative;
+        left: 25px;
+        top: 10px;
+        color: #4a4a4a;
+        margin: 15px;
+        font-family: 'LatoRegular';
+        width: fit-content;
+    }
+
+    .printer_select_popup_input{
+        height: 25px;
+        width: 25px;
+        top: 5px;
+        position: relative;
+        margin: 0px;
+    }
+
+    .esan-modal-box {
+        border-radius: 8px;
+        -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+        width: 600px;
+        height: 270px;
+        background: -webkit-linear-gradient(top, #f1f1f1 65%, #f1f1f1 65%);
+        z-index: 3;
+        position: fixed;
+        top: 177.5px;
+        left: 100px;
+        overflow: hidden;
+    }
+
+
+</style>
+
+<body ng-controller="HigiKioskBaseController">
+
+    <div class="ekg-modal {{modalFadeClass}}" id="ekgHnot">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[somrong]}}</span></div>
+            <div class="ecg_warning_txt"><span> {{interfaceLabels[keepproper]}} </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="bmcsignallost">
+        <div class="ekg-modal-box">
+            <div class="bmc_warning_title_txt"><span>{{interfaceLabels[BMCretryMsg]}}</span></div>
+            <div class="bmc_warning_txt"><span>{{interfaceLabels[infoboxReasonMsgBMC]}}</span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="bmcconcluderesult">
+        <div class="ekg-modal-box">
+            <div class="bmc_warning_title_txt"><span>{{interfaceLabels[BMCskipMsg]}}</span></div>
+            <div class="bmc_warning_txt"><span>{{interfaceLabels[infoboxReasonMsgBMC]}}</span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="teleMedWait">
+        <div class="ekg-modal-box" style="text-align: center;">
+            <div class="" style="margin-top: 33px;">
+                <!-- <img src="./images/sandtimerpngg.png" style="margin-top:15px;width: 80px;"> -->
+                <svg width="93px" height="93px" viewBox="0 0 14 18" style="margin-top:10px;width: 80px;">
+                    <g id="sandclock" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                        sketch:type="MSPage">
+                        <path
+                            d="M13.0986667,16.465 L12.7226667,16.465 C12.6796667,16.031 12.5996667,15.6073333 12.4886667,15.1963333 C12.084,13.6953333 11.269,12.3646667 10.352,11.3396667 C9.52833333,10.4183333 8.623,9.74333333 7.859,9.41433333 C7.859,9.41433333 7.56766667,9.20133333 7.56766667,8.97866667 C7.56766667,8.75633333 7.859,8.54533333 7.859,8.54533333 C9.687,7.74033333 12.3786667,4.93333333 12.7223333,1.50133333 L13.0986667,1.50133333 C13.5006667,1.50133333 13.8266667,1.17533333 13.8266667,0.773666667 C13.8266667,0.371666667 13.5006667,0.0456666667 13.0986667,0.0456666667 L0.776,0.0456666667 C0.374,0.0456666667 0.048,0.371666667 0.048,0.773666667 C0.048,1.17533333 0.374,1.50133333 0.776,1.50133333 L1.152,1.50133333 C1.49233333,4.93666667 4.15866667,7.745 6.00533333,8.54733333 C6.00533333,8.54733333 6.31133333,8.737 6.31133333,8.97866667 C6.31133333,9.22033333 6.01566667,9.421 6.01566667,9.421 C5.26233333,9.75266667 4.36333333,10.4246667 3.54166667,11.3396667 C2.62066667,12.3646667 1.79833333,13.6953333 1.389,15.1963333 C1.277,15.6073333 1.196,16.031 1.15266667,16.465 L0.776,16.465 C0.374,16.465 0.048,16.791 0.048,17.1926667 C0.048,17.5946667 0.374,17.9206667 0.776,17.9206667 L13.0986667,17.9206667 C13.5006667,17.9206667 13.8266667,17.5946667 13.8266667,17.1926667 C13.8263333,16.791 13.5006667,16.465 13.0986667,16.465 L13.0986667,16.465 Z M2.47033333,16.4923333 L1.892,16.4923333 C1.92166667,16.023 1.97666667,15.5933333 2.053,15.1963333 C2.273,14.054 2.67366667,13.1896667 3.18666667,12.4753333 C3.47733333,12.0703333 3.80133333,11.6873333 4.14033333,11.3396667 C4.80733333,10.6553333 5.88879069,10.1021427 6.19133333,9.82066667 C6.49387598,9.53919067 6.65833333,9.39266667 6.65833333,8.997 C6.65833333,8.60133333 6.45611593,8.47363293 6.03570577,8.2112428 C5.61529562,7.94885266 4.034,6.69966667 3.17433333,5.49566667 C2.488,4.53433333 2.00533333,3.328 1.891,1.50166667 L11.982,1.50166667 C11.8663333,3.322 11.378,4.52866667 10.687,5.49133333 C9.82466667,6.69266667 8.52740499,7.75976575 7.89733907,8.12268078 C7.26727316,8.48559582 7.22133333,8.61 7.22133333,8.98333333 C7.22133333,9.35666667 7.41784912,9.52330154 7.89733907,9.82066691 C8.37682903,10.1180323 9.08133333,10.6486667 9.75266667,11.3393333 C10.0873333,11.6833333 10.4066667,12.0626667 10.6933333,12.4633333 C11.2053333,13.179 11.6043333,14.0463333 11.823,15.196 C11.8983333,15.5926667 11.9523333,16.0223333 11.9816667,16.492 L11.4053333,16.492 C4.14033338,16.4920002 5.86059567,16.4920002 2.47033333,16.4923333 Z"
+                            id="Shape" fill="#7c7c7c"></path>
+
+                        <g id="sand">
+                            <path d="M7.00695799,10.3484497 C7.00695799,10.3484497 6.27532958,10.4129639 7.00695799,10.3484497 C7.73858641,10.2839355 7.00695799,10.3484497 7.00695799,10.3484497 C7.00695799,10.3484497 7.78173827,9.99768063 7.09265135,10.548584 C6.40356444,11.0994873 7.09265137,10.548584 7.09265137,10.548584 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,10.548584 C6.80957031,10.548584 7.1925659,10.737854 6.87243651,10.548584 C6.37234656,10.2529159 7.00695799,10.3484497 7.00695799,10.3484497 Z;
+                      " id="Path-26" fill="#00ccff" sketch:type="MSShapeGroup">
+
+                                <animate attributeName="d" dur="2s" repeatCount="indefinite"
+                                    keyTimes="0; .01; .2; .4; .7; .8; .99; 1"
+                                    values="M2.33630371,3.07006836 C2.33630371,3.07006836 5.43261719,3.33813477 6.80957031,3.33813477 C8.18652344,3.33813477 11.3754883,3.07006836 11.3754883,3.07006836 C11.3754883,3.07006836 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,8.35028076 L7.09265137,8.46459961 L6.87243652,8.46459961 L6.87243652,8.35028076 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.33630371,3.07006836 2.33630371,3.07006836 Z;
+ 
+                     M2.375,3.11462402 C2.375,3.11462402 5.71569824,3.44421387 7.09265137,3.44421387 C8.46960449,3.44421387 11.4150391,3.31262207 11.4150391,3.31262207 C11.4150391,3.31262207 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,15.5496216 L7.09265137,16.47052 L6.87243652,16.47052 L6.87243652,15.5496216 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.375,3.11462402 2.375,3.11462402 Z;
+                                         
+                     M2.49230957,3.31262207 C2.49230957,3.31262207 5.71569824,3.66851807 7.09265137,3.66851807 C8.46960449,3.66851807 11.3153076,3.53222656 11.3153076,3.53222656 C11.3153076,3.53222656 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,15.149231 L7.9152832,16.47052 L6.10144043,16.47052 L6.87243652,15.149231 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.49230957,3.31262207 2.49230957,3.31262207 Z;
+                                
+                     M2.98474121,4.37164307 C2.98474121,4.37164307 5.49548338,4.7074585 6.87243651,4.7074585 C8.24938963,4.7074585 10.8119509,4.64428711 10.8119509,4.64428711 C10.8119509,4.64428711 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,12.5493774 L9.36248779,16.47052 L4.5581665,16.47052 L6.87243652,12.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.98474121,4.37164307 2.98474121,4.37164307 Z;
+                                         
+                      M4.49743651,6.36560059 C4.49743651,6.36560059 5.63000487,6.72412109 7.00695799,6.72412109 C8.38391112,6.72412109 9.56188963,6.36560059 9.56188963,6.36560059 C9.56188963,6.36560059 9.48870848,6.54571533 8.79962157,7.09661865 C8.11053465,7.64752197 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 6.01727463,8.16043491 4.82800292,6.81622307 C4.42932128,6.36560059 4.49743651,6.36560059 4.49743651,6.36560059 Z;
+                                         
+                      M5.87017821,7.51904297 C5.87017821,7.51904297 6.14080809,7.70904542 6.87243651,7.64453126 C7.60406493,7.5800171 7.47180174,7.51904297 7.47180174,7.51904297 C7.47180174,7.51904297 8.51336669,7.23876953 7.82427977,7.78967285 C7.13519286,8.34057617 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 6.66632079,8.14239502 6.34619139,7.953125 C5.84610144,7.65745695 5.87017821,7.51904297 5.87017821,7.51904297 Z;
+                                         
+                      M7.00695799,8.06219482 C7.00695799,8.06219482 6.27532958,8.12670898 7.00695799,8.06219482 C7.73858641,7.99768066 7.00695799,8.06219482 7.00695799,8.06219482 C7.00695799,8.06219482 7.78173827,7.71142576 7.09265135,8.26232908 C6.40356444,8.8132324 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 7.1925659,8.45159912 6.87243651,8.2623291 C6.37234656,7.96666105 7.00695799,8.06219482 7.00695799,8.06219482 Z;
+                                         
+                      M7.00695799,10.3484497 C7.00695799,10.3484497 6.27532958,10.4129639 7.00695799,10.3484497 C7.73858641,10.2839355 7.00695799,10.3484497 7.00695799,10.3484497 C7.00695799,10.3484497 7.78173827,9.99768063 7.09265135,10.548584 C6.40356444,11.0994873 7.09265137,10.548584 7.09265137,10.548584 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,10.548584 C6.80957031,10.548584 7.1925659,10.737854 6.87243651,10.548584 C6.37234656,10.2529159 7.00695799,10.3484497 7.00695799,10.3484497 Z;" />
+
+                                <animate attributeName="fill" dur="2s" repeatCount="indefinite" keyTimes="0; .5; 1"
+                                    values="#0066ff;  #33ccff; #3399ff;" />
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+                <div class="ecg_warning_txt" style="top:15px;">
+                    <span style="color: #777777; font-size: 25px">{{interfaceLabels[docpreppresc]}}</span>
+                </div>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="teleMedClose">
+        <div class="ekg-modal-box" style="text-align: center;">
+            <div class="" style="margin-top: 23px;">
+                <!-- <img src="./images/sandtimerpngg.png" style="margin-top:15px;width: 80px;"> -->
+                <svg width="93px" height="93px" viewBox="0 0 14 18" style="margin-top:10px;width: 80px;">
+                    <g id="sandclock" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                        sketch:type="MSPage">
+                        <path
+                            d="M13.0986667,16.465 L12.7226667,16.465 C12.6796667,16.031 12.5996667,15.6073333 12.4886667,15.1963333 C12.084,13.6953333 11.269,12.3646667 10.352,11.3396667 C9.52833333,10.4183333 8.623,9.74333333 7.859,9.41433333 C7.859,9.41433333 7.56766667,9.20133333 7.56766667,8.97866667 C7.56766667,8.75633333 7.859,8.54533333 7.859,8.54533333 C9.687,7.74033333 12.3786667,4.93333333 12.7223333,1.50133333 L13.0986667,1.50133333 C13.5006667,1.50133333 13.8266667,1.17533333 13.8266667,0.773666667 C13.8266667,0.371666667 13.5006667,0.0456666667 13.0986667,0.0456666667 L0.776,0.0456666667 C0.374,0.0456666667 0.048,0.371666667 0.048,0.773666667 C0.048,1.17533333 0.374,1.50133333 0.776,1.50133333 L1.152,1.50133333 C1.49233333,4.93666667 4.15866667,7.745 6.00533333,8.54733333 C6.00533333,8.54733333 6.31133333,8.737 6.31133333,8.97866667 C6.31133333,9.22033333 6.01566667,9.421 6.01566667,9.421 C5.26233333,9.75266667 4.36333333,10.4246667 3.54166667,11.3396667 C2.62066667,12.3646667 1.79833333,13.6953333 1.389,15.1963333 C1.277,15.6073333 1.196,16.031 1.15266667,16.465 L0.776,16.465 C0.374,16.465 0.048,16.791 0.048,17.1926667 C0.048,17.5946667 0.374,17.9206667 0.776,17.9206667 L13.0986667,17.9206667 C13.5006667,17.9206667 13.8266667,17.5946667 13.8266667,17.1926667 C13.8263333,16.791 13.5006667,16.465 13.0986667,16.465 L13.0986667,16.465 Z M2.47033333,16.4923333 L1.892,16.4923333 C1.92166667,16.023 1.97666667,15.5933333 2.053,15.1963333 C2.273,14.054 2.67366667,13.1896667 3.18666667,12.4753333 C3.47733333,12.0703333 3.80133333,11.6873333 4.14033333,11.3396667 C4.80733333,10.6553333 5.88879069,10.1021427 6.19133333,9.82066667 C6.49387598,9.53919067 6.65833333,9.39266667 6.65833333,8.997 C6.65833333,8.60133333 6.45611593,8.47363293 6.03570577,8.2112428 C5.61529562,7.94885266 4.034,6.69966667 3.17433333,5.49566667 C2.488,4.53433333 2.00533333,3.328 1.891,1.50166667 L11.982,1.50166667 C11.8663333,3.322 11.378,4.52866667 10.687,5.49133333 C9.82466667,6.69266667 8.52740499,7.75976575 7.89733907,8.12268078 C7.26727316,8.48559582 7.22133333,8.61 7.22133333,8.98333333 C7.22133333,9.35666667 7.41784912,9.52330154 7.89733907,9.82066691 C8.37682903,10.1180323 9.08133333,10.6486667 9.75266667,11.3393333 C10.0873333,11.6833333 10.4066667,12.0626667 10.6933333,12.4633333 C11.2053333,13.179 11.6043333,14.0463333 11.823,15.196 C11.8983333,15.5926667 11.9523333,16.0223333 11.9816667,16.492 L11.4053333,16.492 C4.14033338,16.4920002 5.86059567,16.4920002 2.47033333,16.4923333 Z"
+                            id="Shape" fill="#7c7c7c"></path>
+
+                        <g id="sand">
+                            <path d="M7.00695799,10.3484497 C7.00695799,10.3484497 6.27532958,10.4129639 7.00695799,10.3484497 C7.73858641,10.2839355 7.00695799,10.3484497 7.00695799,10.3484497 C7.00695799,10.3484497 7.78173827,9.99768063 7.09265135,10.548584 C6.40356444,11.0994873 7.09265137,10.548584 7.09265137,10.548584 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,10.548584 C6.80957031,10.548584 7.1925659,10.737854 6.87243651,10.548584 C6.37234656,10.2529159 7.00695799,10.3484497 7.00695799,10.3484497 Z;
+                      " id="Path-26" fill="#00ccff" sketch:type="MSShapeGroup">
+
+                                <animate attributeName="d" dur="2s" repeatCount="indefinite"
+                                    keyTimes="0; .01; .2; .4; .7; .8; .99; 1"
+                                    values="M2.33630371,3.07006836 C2.33630371,3.07006836 5.43261719,3.33813477 6.80957031,3.33813477 C8.18652344,3.33813477 11.3754883,3.07006836 11.3754883,3.07006836 C11.3754883,3.07006836 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,8.35028076 L7.09265137,8.46459961 L6.87243652,8.46459961 L6.87243652,8.35028076 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.33630371,3.07006836 2.33630371,3.07006836 Z;
+ 
+                     M2.375,3.11462402 C2.375,3.11462402 5.71569824,3.44421387 7.09265137,3.44421387 C8.46960449,3.44421387 11.4150391,3.31262207 11.4150391,3.31262207 C11.4150391,3.31262207 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,15.5496216 L7.09265137,16.47052 L6.87243652,16.47052 L6.87243652,15.5496216 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.375,3.11462402 2.375,3.11462402 Z;
+                                         
+                     M2.49230957,3.31262207 C2.49230957,3.31262207 5.71569824,3.66851807 7.09265137,3.66851807 C8.46960449,3.66851807 11.3153076,3.53222656 11.3153076,3.53222656 C11.3153076,3.53222656 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,15.149231 L7.9152832,16.47052 L6.10144043,16.47052 L6.87243652,15.149231 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.49230957,3.31262207 2.49230957,3.31262207 Z;
+                                
+                     M2.98474121,4.37164307 C2.98474121,4.37164307 5.49548338,4.7074585 6.87243651,4.7074585 C8.24938963,4.7074585 10.8119509,4.64428711 10.8119509,4.64428711 C10.8119509,4.64428711 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,12.5493774 L9.36248779,16.47052 L4.5581665,16.47052 L6.87243652,12.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.98474121,4.37164307 2.98474121,4.37164307 Z;
+                                         
+                      M4.49743651,6.36560059 C4.49743651,6.36560059 5.63000487,6.72412109 7.00695799,6.72412109 C8.38391112,6.72412109 9.56188963,6.36560059 9.56188963,6.36560059 C9.56188963,6.36560059 9.48870848,6.54571533 8.79962157,7.09661865 C8.11053465,7.64752197 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 6.01727463,8.16043491 4.82800292,6.81622307 C4.42932128,6.36560059 4.49743651,6.36560059 4.49743651,6.36560059 Z;
+                                         
+                      M5.87017821,7.51904297 C5.87017821,7.51904297 6.14080809,7.70904542 6.87243651,7.64453126 C7.60406493,7.5800171 7.47180174,7.51904297 7.47180174,7.51904297 C7.47180174,7.51904297 8.51336669,7.23876953 7.82427977,7.78967285 C7.13519286,8.34057617 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 6.66632079,8.14239502 6.34619139,7.953125 C5.84610144,7.65745695 5.87017821,7.51904297 5.87017821,7.51904297 Z;
+                                         
+                      M7.00695799,8.06219482 C7.00695799,8.06219482 6.27532958,8.12670898 7.00695799,8.06219482 C7.73858641,7.99768066 7.00695799,8.06219482 7.00695799,8.06219482 C7.00695799,8.06219482 7.78173827,7.71142576 7.09265135,8.26232908 C6.40356444,8.8132324 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 7.1925659,8.45159912 6.87243651,8.2623291 C6.37234656,7.96666105 7.00695799,8.06219482 7.00695799,8.06219482 Z;
+                                         
+                      M7.00695799,10.3484497 C7.00695799,10.3484497 6.27532958,10.4129639 7.00695799,10.3484497 C7.73858641,10.2839355 7.00695799,10.3484497 7.00695799,10.3484497 C7.00695799,10.3484497 7.78173827,9.99768063 7.09265135,10.548584 C6.40356444,11.0994873 7.09265137,10.548584 7.09265137,10.548584 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,10.548584 C6.80957031,10.548584 7.1925659,10.737854 6.87243651,10.548584 C6.37234656,10.2529159 7.00695799,10.3484497 7.00695799,10.3484497 Z;" />
+
+                                <animate attributeName="fill" dur="2s" repeatCount="indefinite" keyTimes="0; .5; 1"
+                                    values="#0066ff;  #33ccff; #3399ff;" />
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="ecg_warning_txt" style="top:15px;">
+                <span style="color: #777777; font-size: 25px">{{interfaceLabels[Noprescthanksvisit]}}</span>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="teleMedLoad">
+        <div class="ekg-modal-box" style="text-align: center;">
+            <div class="" style="margin-top: 33px;">
+                <!-- <img src="./images/sandtimerpngg.png" style="margin-top:15px;width: 80px;"> -->
+                <svg width="93px" height="93px" viewBox="0 0 14 18" style="margin-top:10px;width: 80px;">
+                    <g id="sandclock" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                        sketch:type="MSPage">
+                        <path
+                            d="M13.0986667,16.465 L12.7226667,16.465 C12.6796667,16.031 12.5996667,15.6073333 12.4886667,15.1963333 C12.084,13.6953333 11.269,12.3646667 10.352,11.3396667 C9.52833333,10.4183333 8.623,9.74333333 7.859,9.41433333 C7.859,9.41433333 7.56766667,9.20133333 7.56766667,8.97866667 C7.56766667,8.75633333 7.859,8.54533333 7.859,8.54533333 C9.687,7.74033333 12.3786667,4.93333333 12.7223333,1.50133333 L13.0986667,1.50133333 C13.5006667,1.50133333 13.8266667,1.17533333 13.8266667,0.773666667 C13.8266667,0.371666667 13.5006667,0.0456666667 13.0986667,0.0456666667 L0.776,0.0456666667 C0.374,0.0456666667 0.048,0.371666667 0.048,0.773666667 C0.048,1.17533333 0.374,1.50133333 0.776,1.50133333 L1.152,1.50133333 C1.49233333,4.93666667 4.15866667,7.745 6.00533333,8.54733333 C6.00533333,8.54733333 6.31133333,8.737 6.31133333,8.97866667 C6.31133333,9.22033333 6.01566667,9.421 6.01566667,9.421 C5.26233333,9.75266667 4.36333333,10.4246667 3.54166667,11.3396667 C2.62066667,12.3646667 1.79833333,13.6953333 1.389,15.1963333 C1.277,15.6073333 1.196,16.031 1.15266667,16.465 L0.776,16.465 C0.374,16.465 0.048,16.791 0.048,17.1926667 C0.048,17.5946667 0.374,17.9206667 0.776,17.9206667 L13.0986667,17.9206667 C13.5006667,17.9206667 13.8266667,17.5946667 13.8266667,17.1926667 C13.8263333,16.791 13.5006667,16.465 13.0986667,16.465 L13.0986667,16.465 Z M2.47033333,16.4923333 L1.892,16.4923333 C1.92166667,16.023 1.97666667,15.5933333 2.053,15.1963333 C2.273,14.054 2.67366667,13.1896667 3.18666667,12.4753333 C3.47733333,12.0703333 3.80133333,11.6873333 4.14033333,11.3396667 C4.80733333,10.6553333 5.88879069,10.1021427 6.19133333,9.82066667 C6.49387598,9.53919067 6.65833333,9.39266667 6.65833333,8.997 C6.65833333,8.60133333 6.45611593,8.47363293 6.03570577,8.2112428 C5.61529562,7.94885266 4.034,6.69966667 3.17433333,5.49566667 C2.488,4.53433333 2.00533333,3.328 1.891,1.50166667 L11.982,1.50166667 C11.8663333,3.322 11.378,4.52866667 10.687,5.49133333 C9.82466667,6.69266667 8.52740499,7.75976575 7.89733907,8.12268078 C7.26727316,8.48559582 7.22133333,8.61 7.22133333,8.98333333 C7.22133333,9.35666667 7.41784912,9.52330154 7.89733907,9.82066691 C8.37682903,10.1180323 9.08133333,10.6486667 9.75266667,11.3393333 C10.0873333,11.6833333 10.4066667,12.0626667 10.6933333,12.4633333 C11.2053333,13.179 11.6043333,14.0463333 11.823,15.196 C11.8983333,15.5926667 11.9523333,16.0223333 11.9816667,16.492 L11.4053333,16.492 C4.14033338,16.4920002 5.86059567,16.4920002 2.47033333,16.4923333 Z"
+                            id="Shape" fill="#7c7c7c"></path>
+
+                        <g id="sand">
+                            <path d="M7.00695799,10.3484497 C7.00695799,10.3484497 6.27532958,10.4129639 7.00695799,10.3484497 C7.73858641,10.2839355 7.00695799,10.3484497 7.00695799,10.3484497 C7.00695799,10.3484497 7.78173827,9.99768063 7.09265135,10.548584 C6.40356444,11.0994873 7.09265137,10.548584 7.09265137,10.548584 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,10.548584 C6.80957031,10.548584 7.1925659,10.737854 6.87243651,10.548584 C6.37234656,10.2529159 7.00695799,10.3484497 7.00695799,10.3484497 Z;
+                      " id="Path-26" fill="#00ccff" sketch:type="MSShapeGroup">
+
+                                <animate attributeName="d" dur="2s" repeatCount="indefinite"
+                                    keyTimes="0; .01; .2; .4; .7; .8; .99; 1"
+                                    values="M2.33630371,3.07006836 C2.33630371,3.07006836 5.43261719,3.33813477 6.80957031,3.33813477 C8.18652344,3.33813477 11.3754883,3.07006836 11.3754883,3.07006836 C11.3754883,3.07006836 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,8.35028076 L7.09265137,8.46459961 L6.87243652,8.46459961 L6.87243652,8.35028076 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.33630371,3.07006836 2.33630371,3.07006836 Z;
+ 
+                     M2.375,3.11462402 C2.375,3.11462402 5.71569824,3.44421387 7.09265137,3.44421387 C8.46960449,3.44421387 11.4150391,3.31262207 11.4150391,3.31262207 C11.4150391,3.31262207 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,15.5496216 L7.09265137,16.47052 L6.87243652,16.47052 L6.87243652,15.5496216 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.375,3.11462402 2.375,3.11462402 Z;
+                                         
+                     M2.49230957,3.31262207 C2.49230957,3.31262207 5.71569824,3.66851807 7.09265137,3.66851807 C8.46960449,3.66851807 11.3153076,3.53222656 11.3153076,3.53222656 C11.3153076,3.53222656 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,15.149231 L7.9152832,16.47052 L6.10144043,16.47052 L6.87243652,15.149231 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.49230957,3.31262207 2.49230957,3.31262207 Z;
+                                
+                     M2.98474121,4.37164307 C2.98474121,4.37164307 5.49548338,4.7074585 6.87243651,4.7074585 C8.24938963,4.7074585 10.8119509,4.64428711 10.8119509,4.64428711 C10.8119509,4.64428711 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,12.5493774 L9.36248779,16.47052 L4.5581665,16.47052 L6.87243652,12.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.98474121,4.37164307 2.98474121,4.37164307 Z;
+                                         
+                      M4.49743651,6.36560059 C4.49743651,6.36560059 5.63000487,6.72412109 7.00695799,6.72412109 C8.38391112,6.72412109 9.56188963,6.36560059 9.56188963,6.36560059 C9.56188963,6.36560059 9.48870848,6.54571533 8.79962157,7.09661865 C8.11053465,7.64752197 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 6.01727463,8.16043491 4.82800292,6.81622307 C4.42932128,6.36560059 4.49743651,6.36560059 4.49743651,6.36560059 Z;
+                                         
+                      M5.87017821,7.51904297 C5.87017821,7.51904297 6.14080809,7.70904542 6.87243651,7.64453126 C7.60406493,7.5800171 7.47180174,7.51904297 7.47180174,7.51904297 C7.47180174,7.51904297 8.51336669,7.23876953 7.82427977,7.78967285 C7.13519286,8.34057617 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 6.66632079,8.14239502 6.34619139,7.953125 C5.84610144,7.65745695 5.87017821,7.51904297 5.87017821,7.51904297 Z;
+                                         
+                      M7.00695799,8.06219482 C7.00695799,8.06219482 6.27532958,8.12670898 7.00695799,8.06219482 C7.73858641,7.99768066 7.00695799,8.06219482 7.00695799,8.06219482 C7.00695799,8.06219482 7.78173827,7.71142576 7.09265135,8.26232908 C6.40356444,8.8132324 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 7.1925659,8.45159912 6.87243651,8.2623291 C6.37234656,7.96666105 7.00695799,8.06219482 7.00695799,8.06219482 Z;
+                                         
+                      M7.00695799,10.3484497 C7.00695799,10.3484497 6.27532958,10.4129639 7.00695799,10.3484497 C7.73858641,10.2839355 7.00695799,10.3484497 7.00695799,10.3484497 C7.00695799,10.3484497 7.78173827,9.99768063 7.09265135,10.548584 C6.40356444,11.0994873 7.09265137,10.548584 7.09265137,10.548584 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,10.548584 C6.80957031,10.548584 7.1925659,10.737854 6.87243651,10.548584 C6.37234656,10.2529159 7.00695799,10.3484497 7.00695799,10.3484497 Z;" />
+
+                                <animate attributeName="fill" dur="2s" repeatCount="indefinite" keyTimes="0; .5; 1"
+                                    values="#0066ff;  #33ccff; #3399ff;" />
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="ecg_warning_txt" style="top:15px;">
+                <span style="color: #777777; font-size: 21px">{{interfaceLabels[loadinginstrustion]}}</span>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="paymentForZeroCost">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[PayNotAllowedHeader]}}</span></div>
+            <div class="ecg_warning_txt"><span>{{interfaceLabels[PayNotAllowedMessage]}}</span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="fpWarning">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span> {{interfaceLabels[reggret]}} </span></div>
+            <div class="fp_warning_txt"><span> {{interfaceLabels[fpWarningTxt]}} </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="teleMedGem3sCallAgain">
+        <div class="ekg-modal-box">
+            <div class="teleMed_warning_title_txt">
+                <span style="color: #4a4a4a !important;">{{interfaceLabels[reggret]}}</span>
+            </div>
+            <div class="teleMed_warning_txt">
+                <span> {{interfaceLabels[doctorcallnotpickin]}} </span>
+            </div>
+            <div class="buttons">
+                <a style="margin-left: -90px; width: 140px; background-image: webkit-linear-gradient(90deg, #099c1e 0%, #099c1e 100%); border-color: #099c1e;"
+                    class="accept" data-ng-click="redirectedToDoctorListPage()">{{interfaceLabels[callagain]}}</a>
+                <a style="left: 324px !important; width: 140px;background-image: -webkit-linear-gradient(90deg, #DC143C 0%, #dc143c 100%);border-color: #dc143c;"
+                    class="accept" data-ng-click="homeButtonClick()"> {{interfaceLabels[cancel]}} </a>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="teleMedGem3sDoctorUnava">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[somrong]}}</span></div>
+            <div class="ecg_warning_txt"><span>{{interfaceLabels[techissuedoctorside]}} </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="teleMedGem3sMobileInputReq">
+        <div class="ekg-modal-box">
+            <div class="teleMed_warning_title_txt ">
+                <span>{{interfaceLabels[reggret]}}</span>
+            </div>
+            <div class="teleMed_warning_txt">
+                <span>{{interfaceLabels[mobreqtelemedi]}} </span>
+            </div>
+            <div class="buttons">
+                <a class="accept" data-ng-click="homeButtonClick()">{{interfaceLabels[OK]}}</a>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="footWearFoldedError">
+        <div class="ekg-modal-box">
+            <div class="teleMed_warning_title_txt ">
+                <span>{{interfaceLabels[reggret]}}</span>
+            </div>
+            <div class="teleMed_warning_txt">
+                <span ng-bind-html="interfaceLabels[bmcFootRestFoldedText]"></span>
+            </div>
+            <div class="buttons">
+                <a class="accept" data-ng-click="footrestButtonClick()">{{interfaceLabels[OK]}}</a>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="teleMedGem3sInternet">
+        <div class="ekg-modal-box">
+            <div class="teleMed_warning_title_txt ">
+                <span>{{interfaceLabels[reggret]}}</span>
+            </div>
+            <div class="teleMed_warning_txt">
+                <span> {{interfaceLabels[internetconn]}} </span>
+            </div>
+            <div class="buttons">
+                <a class="accept" data-ng-click="homeButtonClick()">{{interfaceLabels[OK]}}</a>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="teleMedGem3sServer">
+        <div class="ekg-modal-box">
+            <div class="teleMed_warning_title_txt">
+                <span>{{interfaceLabels[reggret]}}</span>
+            </div>
+            <div class="teleMed_warning_txt">
+                <span>{{interfaceLabels[tpserverntresp]}} </span>
+            </div>
+            <div class="buttons">
+                <a class="accept" data-ng-click="homeButtonClick()">{{interfaceLabels[OK]}}</a>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="teleMedHpodServer">
+        <div class="ekg-modal-box">
+            <div class="teleMed_warning_title_txt">
+                <span>{{interfaceLabels[reggret]}}</span>
+            </div>
+            <div class="teleMed_warning_txt">
+                <span> {{interfaceLabels[hpodseverntresp ]}} </span>
+            </div>
+            <div class="buttons">
+                <a class="accept" data-ng-click="homeButtonClick()">{{interfaceLabels[OK]}}</a>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="ekgRegret">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[reggret]}}</span></div>
+            <div class="ecg_warning_txt"><span>{{interfaceLabels[ecgtestfail]}}</span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="temperatureHnot">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[somrong]}}</span></div>
+            <div class="ecg_warning_txt"><span> {{interfaceLabels[keepproper]}} </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="temperatureRegret">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[reggret]}}</span></div>
+            <div class="ecg_warning_txt"><span> {{interfaceLabels[weareunable]}} </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="spo2Hnot">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[somrong]}}</span></div>
+            <div class="ecg_warning_txt"><span>{{interfaceLabels[gentleplace]}}</span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="spo2Regret">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[reggret]}}</span></div>
+            <div class="ecg_warning_txt"><span>{{interfaceLabels[weareunable]}}</span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="bmcRegret">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[reggret]}}</span></div>
+            <div class="ecg_warning_txt"><span> {{interfaceLabels[bmctechissue]}} </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="SpO2NotAvailable">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[reggret]}}</span></div>
+            <div class="ecg_warning_txt"><span> {{interfaceLabels[tempSelectedText]}} {{warningText}} {{interfaceLabels[testNotAvailText]}} </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="ECGNotAvailable">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[reggret]}}</span></div>
+            <div class="ecg_warning_txt"><span> {{interfaceLabels[techECG]}} </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-legmodal {{modalFadeClass}}" id="ecgLegMessageInstruction">
+        <div class="leg-modal-box">
+            <div style="top:10px"><img src="images/ECGNewLeg.png"></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="load" id="loadmodalbox" ng-show="showLoadScreen">
+        <div class="load-modal-box">
+            <!-- <img src="./images/sandtimerpngg.png" style="position: absolute;
+    left: 300px;
+    width: 80px;
+    height: 100px;
+    top: 170px"> -->
+            <svg width="93px" height="93px" viewBox="0 0 14 18" style="position: absolute;
+    left: 300px;
+    width: 80px;
+    height: 100px;
+    top: 170px">
+                <g id="sandclock" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <path
+                        d="M13.0986667,16.465 L12.7226667,16.465 C12.6796667,16.031 12.5996667,15.6073333 12.4886667,15.1963333 C12.084,13.6953333 11.269,12.3646667 10.352,11.3396667 C9.52833333,10.4183333 8.623,9.74333333 7.859,9.41433333 C7.859,9.41433333 7.56766667,9.20133333 7.56766667,8.97866667 C7.56766667,8.75633333 7.859,8.54533333 7.859,8.54533333 C9.687,7.74033333 12.3786667,4.93333333 12.7223333,1.50133333 L13.0986667,1.50133333 C13.5006667,1.50133333 13.8266667,1.17533333 13.8266667,0.773666667 C13.8266667,0.371666667 13.5006667,0.0456666667 13.0986667,0.0456666667 L0.776,0.0456666667 C0.374,0.0456666667 0.048,0.371666667 0.048,0.773666667 C0.048,1.17533333 0.374,1.50133333 0.776,1.50133333 L1.152,1.50133333 C1.49233333,4.93666667 4.15866667,7.745 6.00533333,8.54733333 C6.00533333,8.54733333 6.31133333,8.737 6.31133333,8.97866667 C6.31133333,9.22033333 6.01566667,9.421 6.01566667,9.421 C5.26233333,9.75266667 4.36333333,10.4246667 3.54166667,11.3396667 C2.62066667,12.3646667 1.79833333,13.6953333 1.389,15.1963333 C1.277,15.6073333 1.196,16.031 1.15266667,16.465 L0.776,16.465 C0.374,16.465 0.048,16.791 0.048,17.1926667 C0.048,17.5946667 0.374,17.9206667 0.776,17.9206667 L13.0986667,17.9206667 C13.5006667,17.9206667 13.8266667,17.5946667 13.8266667,17.1926667 C13.8263333,16.791 13.5006667,16.465 13.0986667,16.465 L13.0986667,16.465 Z M2.47033333,16.4923333 L1.892,16.4923333 C1.92166667,16.023 1.97666667,15.5933333 2.053,15.1963333 C2.273,14.054 2.67366667,13.1896667 3.18666667,12.4753333 C3.47733333,12.0703333 3.80133333,11.6873333 4.14033333,11.3396667 C4.80733333,10.6553333 5.88879069,10.1021427 6.19133333,9.82066667 C6.49387598,9.53919067 6.65833333,9.39266667 6.65833333,8.997 C6.65833333,8.60133333 6.45611593,8.47363293 6.03570577,8.2112428 C5.61529562,7.94885266 4.034,6.69966667 3.17433333,5.49566667 C2.488,4.53433333 2.00533333,3.328 1.891,1.50166667 L11.982,1.50166667 C11.8663333,3.322 11.378,4.52866667 10.687,5.49133333 C9.82466667,6.69266667 8.52740499,7.75976575 7.89733907,8.12268078 C7.26727316,8.48559582 7.22133333,8.61 7.22133333,8.98333333 C7.22133333,9.35666667 7.41784912,9.52330154 7.89733907,9.82066691 C8.37682903,10.1180323 9.08133333,10.6486667 9.75266667,11.3393333 C10.0873333,11.6833333 10.4066667,12.0626667 10.6933333,12.4633333 C11.2053333,13.179 11.6043333,14.0463333 11.823,15.196 C11.8983333,15.5926667 11.9523333,16.0223333 11.9816667,16.492 L11.4053333,16.492 C4.14033338,16.4920002 5.86059567,16.4920002 2.47033333,16.4923333 Z"
+                        id="Shape" fill="#7c7c7c"></path>
+
+                    <g id="sand">
+                        <path d="M7.00695799,10.3484497 C7.00695799,10.3484497 6.27532958,10.4129639 7.00695799,10.3484497 C7.73858641,10.2839355 7.00695799,10.3484497 7.00695799,10.3484497 C7.00695799,10.3484497 7.78173827,9.99768063 7.09265135,10.548584 C6.40356444,11.0994873 7.09265137,10.548584 7.09265137,10.548584 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,10.548584 C6.80957031,10.548584 7.1925659,10.737854 6.87243651,10.548584 C6.37234656,10.2529159 7.00695799,10.3484497 7.00695799,10.3484497 Z;
+                      " id="Path-26" fill="#00ccff" sketch:type="MSShapeGroup">
+
+                            <animate attributeName="d" dur="2s" repeatCount="indefinite"
+                                keyTimes="0; .01; .2; .4; .7; .8; .99; 1"
+                                values="M2.33630371,3.07006836 C2.33630371,3.07006836 5.43261719,3.33813477 6.80957031,3.33813477 C8.18652344,3.33813477 11.3754883,3.07006836 11.3754883,3.07006836 C11.3754883,3.07006836 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,8.35028076 L7.09265137,8.46459961 L6.87243652,8.46459961 L6.87243652,8.35028076 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.33630371,3.07006836 2.33630371,3.07006836 Z;
+ 
+                     M2.375,3.11462402 C2.375,3.11462402 5.71569824,3.44421387 7.09265137,3.44421387 C8.46960449,3.44421387 11.4150391,3.31262207 11.4150391,3.31262207 C11.4150391,3.31262207 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,15.5496216 L7.09265137,16.47052 L6.87243652,16.47052 L6.87243652,15.5496216 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.375,3.11462402 2.375,3.11462402 Z;
+                                         
+                     M2.49230957,3.31262207 C2.49230957,3.31262207 5.71569824,3.66851807 7.09265137,3.66851807 C8.46960449,3.66851807 11.3153076,3.53222656 11.3153076,3.53222656 C11.3153076,3.53222656 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,15.149231 L7.9152832,16.47052 L6.10144043,16.47052 L6.87243652,15.149231 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.49230957,3.31262207 2.49230957,3.31262207 Z;
+                                
+                     M2.98474121,4.37164307 C2.98474121,4.37164307 5.49548338,4.7074585 6.87243651,4.7074585 C8.24938963,4.7074585 10.8119509,4.64428711 10.8119509,4.64428711 C10.8119509,4.64428711 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,12.5493774 L9.36248779,16.47052 L4.5581665,16.47052 L6.87243652,12.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.98474121,4.37164307 2.98474121,4.37164307 Z;
+                                         
+                      M4.49743651,6.36560059 C4.49743651,6.36560059 5.63000487,6.72412109 7.00695799,6.72412109 C8.38391112,6.72412109 9.56188963,6.36560059 9.56188963,6.36560059 C9.56188963,6.36560059 9.48870848,6.54571533 8.79962157,7.09661865 C8.11053465,7.64752197 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 6.01727463,8.16043491 4.82800292,6.81622307 C4.42932128,6.36560059 4.49743651,6.36560059 4.49743651,6.36560059 Z;
+                                         
+                      M5.87017821,7.51904297 C5.87017821,7.51904297 6.14080809,7.70904542 6.87243651,7.64453126 C7.60406493,7.5800171 7.47180174,7.51904297 7.47180174,7.51904297 C7.47180174,7.51904297 8.51336669,7.23876953 7.82427977,7.78967285 C7.13519286,8.34057617 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 6.66632079,8.14239502 6.34619139,7.953125 C5.84610144,7.65745695 5.87017821,7.51904297 5.87017821,7.51904297 Z;
+                                         
+                      M7.00695799,8.06219482 C7.00695799,8.06219482 6.27532958,8.12670898 7.00695799,8.06219482 C7.73858641,7.99768066 7.00695799,8.06219482 7.00695799,8.06219482 C7.00695799,8.06219482 7.78173827,7.71142576 7.09265135,8.26232908 C6.40356444,8.8132324 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 7.1925659,8.45159912 6.87243651,8.2623291 C6.37234656,7.96666105 7.00695799,8.06219482 7.00695799,8.06219482 Z;
+                                         
+                      M7.00695799,10.3484497 C7.00695799,10.3484497 6.27532958,10.4129639 7.00695799,10.3484497 C7.73858641,10.2839355 7.00695799,10.3484497 7.00695799,10.3484497 C7.00695799,10.3484497 7.78173827,9.99768063 7.09265135,10.548584 C6.40356444,11.0994873 7.09265137,10.548584 7.09265137,10.548584 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,10.548584 C6.80957031,10.548584 7.1925659,10.737854 6.87243651,10.548584 C6.37234656,10.2529159 7.00695799,10.3484497 7.00695799,10.3484497 Z;" />
+
+                            <animate attributeName="fill" dur="2s" repeatCount="indefinite" keyTimes="0; .5; 1"
+                                values="#0066ff;  #33ccff; #3399ff;" />
+                        </path>
+                    </g>
+                </g>
+            </svg>
+            <h2 ng-hide="showEcgLeadMode" style="text-align: center;color: #6f7475;padding-top: 270px;">
+                {{interfaceLabels[loadinginstrustion]}}</h2>
+            <h2 ng-show="showEcgLeadMode" style="text-align: center;color: #6f7475;padding-top: 270px;">
+                {{interfaceLabels[ecgLeadMode]}}</h2>
+
+        </div>
+        <a class="higi_overlay_mask"></a>
+
+    </div>
+    <div class="ekg-legmodal {{modalFadeClass}}" id="ecgTestSkippedMessage">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[ECGSkipped]}}</span></div>
+            <div class="ecg_warning_txt"><span>{{interfaceLabels[plwait]}}</span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-legmodal {{modalFadeClass}}" id="ecgOnlyLegMessageInstruction">
+        <div class="leg-modal-box">
+            <div style="top:10px"><img src="images/ECGNewLeg.png"></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-legmodal {{modalFadeClass}}" id="ecgHandMessageInstruction">
+        <div class="leg-modal-box">
+            <div style="top:10px"><img src="images/ECGHand.png"></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="ZugEcgRegretMessage">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[poors]}}</span></div>
+            <div class="ecg_warning_txt"><span> {{interfaceLabels[unableconclude]}} </span></div>
+
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="ecgTestRedoMessageInstruction">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[poors]}}</span></div>
+            <div class="ecg_warning_txt"><span>{{interfaceLabels[letstry]}} </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="ecgLeadICompleteDialog">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[lead1comp]}}</span></div>
+            <div class="ecg_warning_txt"><span>{{interfaceLabels[move2]}} <br>
+                    {{interfaceLabels[keepsame]}} </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+
+    <div class="ekg-modal {{modalFadeClass}}" id="ecgLeadIICompleteDialog">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[lead2comp]}}</span></div>
+            <div class="ecg_warning_txt"><span>{{interfaceLabels[move3]}}<br>
+                    {{interfaceLabels[keepsame]}}</span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+
+    <div class="ekg-modal {{modalFadeClass}}" id="ecgLeadIIICompleteDialog">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[lead3comp]}} </span></div>
+            <div class="ecg_warning_txt"><span>{{interfaceLabels[movres2]}}<br>
+                    {{interfaceLabels[movres]}}
+                </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="ecgLeadCompleteDialog">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[sixleadcomp]}} </span></div>
+            <div class="ecg_warning_txt"><span>{{interfaceLabels[movres]}}<br>
+                    {{interfaceLabels[movres2]}}
+                </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="ecgRecordingComplete">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[ecgreccom]}}</span></div>
+            <div class="ecg_warning_txt"><span>{{interfaceLabels[movcomm]}}
+                </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+
+    <div class="ekg-modal {{modalFadeClass}}" id="ecgSwitchOnMessageInstruction">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[switchonecg]}}</span></div>
+            <div class="ecg_warning_txt"><span>{{interfaceLabels[plwait]}} </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <div class="ekg-modal {{modalFadeClass}}" id="affiliateUpdatingModal">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span ng-bind-html="interfaceLabels[affPlwait]"></span></div>
+            <div class="ecg_warning_txt"><span ng-bind-html="interfaceLabels[affilateUpdateProcess]"></span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+
+    <div class="ekg-modal {{modalFadeClass}}" id="ApolloCouponCode">
+        <div class="ekg-modal-box" style="height: 260px;">
+            <div id="apollo_coupon_code_text">
+                <span> 
+                    You got a discount coupon <br>  
+                    <b style="color: #3684d5;" id="couponCodeBind"> "123456789" </b> <br> 
+                    which is valid for next 7 days on the same speciality  
+                </span>
+            </div>
+            <a class="apollo-coupon-print-button" ng-click="couponPrintAndCloseModel()" style="line-height: 21px;font-size: 17px;"> Print </a>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+
+    <div class="ekg-modal {{modalFadeClass}}" id="couponCodeErrorModal">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span> Connecting to server </span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+
+    <!-- inject our views using ng-view -->
+    <!-- each angular controller applies a different class here -->
+    <maintenance-mode ng-if="higiMaintence"></maintenance-mode>
+    <loading-modal ng-if="loadingModalVisible"></loading-modal>
+
+    <div ng-hide="bodyHide">
+        <div data-ng-show="paymentGateway">
+            <!-- <iframe src="payment/payment.html" height="600" width="800" style="overflow: hidden;"></iframe> -->
+        </div>
+
+        <div data-ng-hide="paymentGateway">
+            <div class="slider" ng-hide="higiMaintence">
+                <div data-ng-show="teleMediDoctorcall">
+                    <div class="floatWindowBckGround">
+                        <div data-ng-hide="floatingWindowLoaded">
+                            <img class="floatingWindowLoadImg" src="images/sandtimerpngg.png" />
+                        </div>
+                        <div data-ng-show="floatingWindowLoaded">
+                            <div id="higi_keyboard_close_btn" ng-click="teleMediDoctorcallAbort()" ng-show="false">
+                                <div class=""></div>
+                                <span higi_resource_html="global.close">Close</span>
+                            </div>
+                            <div
+                                style='width: 762px; height: 570px; overflow: hidden;margin-top: 15px;margin-left: 20px;'>
+                                <iframe id="telemediIframe" src="" style="width: 780px;height: 570px;border: none;"
+                                    allow="geolocation ; camera ; microphone *"></iframe>
+                            </div>
+                            <!-- <iframe id="telemediIframe" src="" height="520" width="710" style="overflow: hidden; position: relative; top: 40px; left: 40px;" allow="geolocation *; camera *; microphone *"></iframe> -->
+                        </div>
+                    </div>
+                </div>
+                <div data-ng-hide="teleMediDoctorcall">
+
+                    <!-- teleconsultation video call screen -->
+                    <div 
+                        style="position: absolute; top:21px; left:21px; z-index:100001; background-color: rgba(0, 0, 0, 0.2);"
+                        ng-style="{'width':teleConsultationVideoCallData['screen_width'], 'height':teleConsultationVideoCallData['screen_height']}" 
+                        ng-show="teleConsultationNamespace.teleConsulationVideoCallToggle == true">
+                        <div style="width:100%; height:90%;" id="teleConsultationVideoCallFrame">
+
+                            <!-- <iframe id="tele-consultation-video-call-url" src="" width="100%" height="100%"></iframe> -->
+                        </div>
+                        <div style="width:100%; height:10%;">
+                            <button ng-click="teleConsulationVideoCallTakeTest()" style="display: none;">Take test</button>
+                            <!-- <button ng-click="teleConsulationVideoCallStartEnd()">End Call</button> -->
+                        </div>
+                    </div>
+                    <!-- teleconsultation video call screen ends -->
+
+                    <!--Apollo teleconsultation video call screen -->
+                    <div id="apolloMainIframeContainer" ng-if="apolloTeleConsultationPopup.videoCallIframe == true" style="position: absolute;z-index: 100001;visibility: visible;background-color: rgba(0,0,0,0.5);">
+                         <button class="apollo-iframe-button" ng-click="openApolloConfirmExitModal()">
+                             <i class="fa fa-home" aria-hidden="true" style="font-size: 20px;"></i> Home
+                         </button>
+                        <button class="apollo-iframe-button" ng-click="teleConsulationVideoCallTakeTest()" style="display: block; left:117px"><i class="fa fa-medkit" aria-hidden="true" style="font-size: 20px; display: none;"></i> Take test</button>
+                        <iframe ng-src="{{apolloTeleConsultationSourceDetails.apolloTeleConsultationVideoCallUrl}}" allow="camera *;microphone *"  height="600px" width="800px" frameborder="0"></iframe>
+                    </div>
+                    <!-- Apollo teleconsultation video call screen ends -->
+
+                    <!--Genix teleconsultation video call screen -->
+                    <div id="genixMainIframeContainer" ng-if="genixConstants.genixTeleConsultationVideoCallIframe == true" style="position: absolute;z-index: 100001;visibility: visible;background-color: rgba(0,0,0,0.5);">
+                         <button ng-if="genixConstants.homeButtonVisible" class="apollo-iframe-button" ng-click="genixConstants.redirectToHomePage()" style="padding-left: 20px;padding-right: 20px;padding-top: 10px;padding-bottom: 10px;bottom: 15px;">
+                             <i class="fa fa-home" aria-hidden="true" style="font-size: 20px;bottom: 20px !important;"></i> Home
+                         </button>
+                         <!-- <button ng-if="genixConstants.exitButtonVisible" class="apollo-iframe-button" ng-click="genixConstants.redirectionAfterConsultationEnd()" style="padding-left: 20px;padding-right: 20px;padding-top: 10px;padding-bottom: 10px;bottom: 15px;">
+                             <i class="fa fa-sign-out" aria-hidden="true" style="font-size: 20px;bottom: 20px !important;"></i> Exit
+                         </button> -->
+                        <iframe ng-src="{{trustSrcUrl(genixConstants.genixTeleConsultationVideoCallUrl)}}" allow="camera *;microphone *"  height="600px" width="800px" frameborder="0"></iframe>
+                    </div>
+                    <!-- Genix teleconsultation video call screen ends -->
+
+                    <!-- Genix SignalR Script Run to show call alert in genix portal  -->
+                    <div id="genixSignalRScript" ng-if="genixConstants.genixSignalRScriptRun == true" style="display: none !important;">
+                        <iframe ng-src="{{genixSignalRTrustSrcUrl(genixConstants.genixSignalRScriptRunUrl)}}"  height="0px" width="0px" frameborder="0" style="display: none !important"></iframe> 
+                    </div>
+                    <!--Genix SignalR Script Run to show call alert in genix portal ends -->
+                    
+                    <div class="higi_top_container {{slideInNav}}" ng-hide="higiTopNavHidden">
+                        <div id="splash_pane_selectlang_ng">
+                            <global-navigation></global-navigation>
+                        </div>
+                    </div>
+                    <!-- <div id="splash_logo" ng-show="isVisibleLogo" data-ng-click="shutdownHpod()"></div> -->
+                    <div id="global_splash_logo" ng-show="true" data-ng-click="shutdownHpod()">
+                        <img ng-if="kioskMachineLogo" src="{{kioskMachineLogo}}" style="width: 170px; object-fit: cover;">
+                    </div>
+                    <audio-volume-dialog ng-show="isVisibleAudioSlider" promisename="audiosliderpromise">
+                    </audio-volume-dialog>
+                    <div id="higi_slide_container">
+                        <div id="higi_slides">
+                            <div class="col-lg-10 page {{ pageClass }}" ng-view></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" ng-show="internetDropped">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt" style="font-size: 35px;">
+                <span>{{interfaceLabels[internetLostTitle]}}</span>
+            </div>
+            <div class="ecg_warning_txt" style="font-size: 25px;">
+                <span>{{interfaceLabels[internetLostInformation]}}</span>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="doctorAvailabilityCheck">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt" style="font-size: 35px;">
+                <span>{{interfaceLabels[checkingAvailabilitiyWait]}}</span>
+            </div>
+            <div class="ecg_warning_txt" style="font-size: 25px;">
+                <span>{{interfaceLabels[checkingAvailabilitiy]}}</span>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="kioskPaymentOfflineModal">
+        <div class="ekg-modal-box">
+            <div>
+                <span><img class="payment_offline_modal_image" src="images/auth_failure20120727.png"/></span>
+            </div>
+            <div class="payment_offline_modal_text">
+                <span>{{interfaceLabels[vitalNetworkConnectionLost]}}</span>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="kioskVitalPriceNotAvailableModal">
+        <div class="ekg-modal-box" style="height: 260px;">
+            <div>
+                <span><img class="payment_offline_modal_image" src="images/auth_failure20120727.png"/></span>
+            </div>
+            <div class="payment_offline_modal_text">
+                <span>{{interfaceLabels[vitalAmountNotFoundText]}}</span>
+            </div>
+            <div class="vital-fetch-spinner"></div>
+            <a class="vital-price-list-button" ng-hide="vitalPriceFetching == true" ng-click="listPriceForVitalTest()" style="line-height: 21px;font-size: 17px;">{{interfaceLabels[vitalAmountNotFoundRetryText]}}</a>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="lowSpeedInternetModal">
+        <div class="ekg-modal-box" style="height: 260px;">
+            <div id="low_speed_internet_text">
+                <span>{{interfaceLabels[lowSpeedInternetText]}}</span>
+            </div>
+            <a class="lowSpdInt-ok-button" ng-click="closeLowSpeedInternetModal()" style="line-height: 21px;font-size: 17px;">{{interfaceLabels[lowSpeedInternetTextOK]}}</a>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" ng-if="genixConstants.internetLostForGenixTeleconsultation">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt" style="font-size: 35px;">
+                <span>Your Network Lost!</span>
+            </div>
+            <div class="ecg_warning_txt" style="font-size: 25px;">
+                <span>Please Login & Try Again From Consultation Dashboard.</span>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" ng-if="genixConstants._isHomeButtonClicked">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt" style="font-size: 35px;top: 50px;">
+                <span>we regret!</span>
+            </div>
+            <div class="ecg_warning_txt" style="font-size: 24px;top: 75px;line-height: 38px;">
+                <span>If within time please click & continue with join call button available in consultation dashboard.</span>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="multiPrinterAvailabilityPopupVisible">
+        <div class="ekg-modal-box" style="width: 596px;height: 334px;background: #E5E5E5;border-radius: 8px;position: fixed;">
+            <b class="printer_select_popup_header">Select Printer</b>
+            <p class="printer_select_popup_text">Select any one of the printer which is mentioned below.</p>
+            <label class="printer_select_popup_label">
+                <input type="radio" name="printerType" value="a4" ng-model="printerService.printerTypeSelected" class="printer_select_popup_input"/>
+                External Printer
+            </label>
+            <label class="printer_select_popup_label">
+                <input type="radio" name="printerType" value="thermal" ng-model="printerService.printerTypeSelected"  class="printer_select_popup_input"/>
+                Kiosk Build-in Printer
+            </label>
+            <a style="top: 230px;" class="book_appointment_modal_button_exit" ng-click="printerService.closePopup()">
+                <span>Close</span>
+            </a>
+            <a style="top: 230px;" class="book_appointment_modal_button_home" ng-click="printerService.printSelectedContents()">
+                <span>Print</span>
+            </a>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" ng-if="errorGeneratingQr">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt" style="font-size: 35px;top: 50px;">
+                <span>{{interfaceLabels[weRegretText]}}</span>
+            </div>
+            <div class="ecg_warning_txt" style="font-size: 24px;top: 75px;line-height: 38px;">
+                <span>{{interfaceLabels[somethingWentWrongText]}}</span>
+            </div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="eSanTestRequestRegret">
+        <div class="ekg-modal-box">
+            <div class="ecg_warning_title_txt"><span>{{interfaceLabels[reggret]}}</span></div>
+            <div class="ecg_warning_txt"><span> {{interfaceLabels[eSanTestRequestText]}} </span></div>
+            <a class="lowSpdInt-ok-button" ng-click="closeTestRequestModal()" style="line-height: 21px;font-size: 17px;">{{interfaceLabels[eSanTestRequestTextOk]}}</a>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="eSanTestRequestSuccess">
+        <div class="esan-modal-box">
+            <img src="./images/auth_success20120518.png" style="margin-top:60px; width: 40px; margin-left: 20px">
+            <span class="esan-success-label">{{interfaceLabels[successText]}}</span>
+            <span class="esan-success-msg"> {{interfaceLabels[succSentResultText]}} {{eSanTestResultMsg}}</span>
+            <a class="lowSpdInt-ok-button" ng-click="closeTestRequestModal(false)" style="line-height: 21px;font-size: 17px; margin-left: 235px; margin-top: 20px;">{{interfaceLabels[eSanTestRequestTextOk]}}</a>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="eSanTestRequestFailed">
+        <div class="esan-modal-box">
+            <img src="./images/auth_failure20120518.png" style="margin-top:60px; width: 40px; margin-left: 20px">
+            <span class="esan-failed-label">{{interfaceLabels[failedText]}}</span>
+            <!-- <span class="esan-failed-msg"> Unable to take the vital due to Technical issue.</span> -->
+            <span class="esan-failed-msg"> {{interfaceLabels[dataSyncFailText]}}</span>
+            <a class="lowSpdInt-ok-button" ng-click="closeTestRequestModal(false)" style="line-height: 21px;font-size: 17px; margin-left: 235px; margin-top: 20px;">{{interfaceLabels[eSanTestRequestTextOk]}}</a>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="eSanTestRequestSuccessFailed">
+        <div class="esan-modal-box">
+            <img src="./images/auth_success20120518.png" style="margin-top:15px; width: 40px; margin-left: 20px">
+            <span class="esan-success-label-one">{{interfaceLabels[successText]}}</span>
+            <span class="esan-success-msg-one"> {{interfaceLabels[succSentResultText]}} {{eSanTestResultMsg}}</span>
+            <img src="./images/auth_failure20120518.png" style="margin-top:15px; width: 40px; margin-left: 20px">
+            <span class="esan-failed-label-one">{{interfaceLabels[failedText]}}</span>
+            <span class="esan-failed-msg-one"> {{interfaceLabels[unableToTakeVitalText]}}</span>
+            <a class="esan-more-details-button" style="margin-left: 75px; font-size: 20px;" ng-click="showTestResultInfo()">{{interfaceLabels[moreDetailText]}}</a>
+            <a class="lowSpdInt-ok-button" ng-click="closeTestRequestModal(false)" style="line-height: 21px;font-size: 17px; margin-left: 235px; margin-top: 20px;">{{interfaceLabels[eSanTestRequestTextOk]}}</a>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="eSanTestRequestFailedInfo">
+        <div class="esan-modal-box">
+            <ul class="san-test-checkboxes">
+                <li ng-repeat="Dt in testRequestList">
+                    <label>
+                        <img ng-if="Dt.isSuccess" src="./images/auth_success20120518.png" style="width: 25px; height: 25px;">
+                        <img ng-if="Dt.isFailed" src="./images/auth_failure20120518.png" style="width: 25px; height: 25px;">
+                        <span class="san_test_name" ng-bind-html="Dt.label" ng-style="Dt.isSelected && {'color':'#000'} || {'color': '#808080'}"></span>
+                    </label>
+                </li>
+            </ul>
+            <a class="lowSpdInt-ok-button" ng-click="closeTestRequestModal(false)" style="line-height: 21px;font-size: 17px; margin-left: 235px; margin-top: 20px;">{{interfaceLabels[eSanTestRequestTextOk]}}</a>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div class="ekg-modal {{modalFadeClass}}" id="eSanSendResponseModal">
+        <div class="esan-modal-box">
+            <span class="esan-wait-msg"> {{interfaceLabels[eSanPleasewait]}}</span>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+    <div id="timeout_dialog" ng-show="sessionExitConfirmVisible">
+        <session-exit-confirm-modal></session-exit-confirm-modal>
+    </div>
+    <div id="snackbar">{{snackBarAlertText}}</div>
+    <higi-modal ng-if="!loadingModalVisible" class="{{modalActive}}"></higi-modal>
+    <system-volume ng-if="onWelcomeScreen && !loadingModalVisible"></system-volume>
+    <ui-testing ng-if="uiTestingEnabled"></ui-testing>
+    <keyboard></keyboard>
+    <interface-sounds></interface-sounds>
+    <platform-handlers></platform-handlers>
+
+   <!--  <div style="    height: 100%;
+    border: 1px solid red;
+    position: fixed;
+    left: 0px;
+    width: 20px !important;
+    top: 0px;">
+    </div>
+    <div style="    height: 20px;
+    border: 1px solid red;
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    top: 0px;">
+    </div>
+    <div style="    height: 40px;
+    border: 1px solid red;
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    bottom: 0px;">
+    </div>
+    <div style="    height: 100%;
+    border: 1px solid red;
+    position: fixed;
+    width: 20px;
+    left: 780px;
+    top: 0px;">
+    </div> -->
+
+    <!--Vital Print Template(Includes a4, thermal, themal-ecg.Loaded Initially to avoid null/undefined errors)-->
+    <div ng-include src="'views/print/vitalsPrint.html'" style="display: none;"></div>
+    <div ng-include src="'views/print/NewThermalPrintoutforVitals.html'" style="display: none;"></div>
+    <div ng-include src="'views/print/kolorsTemplate.html'" style="display: none;"></div>
+    <div ng-include src="'views/print/A4Template_Without_Invasive.html'" style="display: none;"></div>
+    <div ng-include src="'views/print/A4Template_with_Invasive.html'" style="display: none;"></div>
+    <div ng-include src="'views/print/prescriptionOrInstructionPrint.html'" style="display: none;"></div>
+</body>
+
+</html>

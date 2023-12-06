@@ -1,0 +1,14 @@
+{
+    "zugEcg1.singleLeadecgtitledisp": "ઈસીજી-સિંગલ લીડ",
+    "zugEcg1.threeLeadecgtitledisp": "ઈસીજી-ડબલ લીડ",
+    "zugEcg1.sixLeadecgtitledisp": "ઈસીજી-છ લીડ",
+    "zugEcg1.sitStraight": "સીધા બેસો",
+    "zugEcg1.restWrist": "તમારા કાંડાને હેન્ડલ પર રાખો",
+    "zugEcg1.placeleftleg": "તમારો ડાબો પગ પેડલ પર મૂકો",
+    "zugEcg1.placebothleg": "તમારા બંને પગ પર ક્લેમ્પ મુકો",
+    "zugEcg1.skipTest": "સ્કિપ",
+    "zugEcg1.startTest": "પરીક્ષણ શરુ કરો",
+    "zugEcg1.EcgTestWillBegin": "જ્યારે તમારા હાથ અને પગ બરાબર જગ્યાએ હશે ત્યારે આ પરીક્ષણ શરૂ થશે",
+    "zugEcg1.keepHandsProper": "કૃપા કરીને તમારા હાથ સરખી રીતે રાખો",
+    "zugEcg1.keepLegsProper": "કૃપા કરીને તમારા પગ સરખી રીતે રાખો"
+}

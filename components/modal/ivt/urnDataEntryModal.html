@@ -1,0 +1,256 @@
+<style type="text/css">
+    .urn_slide_container{
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 710px;
+        height: 520px;
+    }
+    .urn_slide_title{
+        font-size: 31px;
+        color: #0261c2;
+        font-family: "IntervalSansProCondSemiBoldRg";
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 670px;
+    }
+    .urn_submits{
+     pointer-events: all;
+     width: 150px;
+     background-color: #2a76c4;
+     border: 1px solid #0261c2;
+     border-radius: 3px;
+     background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+     height: 50px;
+     position: absolute;    
+     left: 545px;
+     /* top: 175px; */
+     top: 433px;
+    }
+    .urn_submits span {
+     color: #fff;
+     font-size: 22px;
+     text-align: center;
+     font-family: 'IntervalSansProMediumRegular';
+     text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2);
+     line-height: 50px;
+     height: 54px;
+     display: inline-block;
+     opacity: .9;
+     margin-left: 49px;
+    }
+    .urn_disabled_next{
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #cecece;
+    pointer-events: none;
+    }
+    .urnData_error{
+        color: red;
+        margin-left: 20px !important;
+        margin-top: 20px !important;
+        width: 400px;
+    }
+    .leukocytes{
+        position: relative;
+        top: 45px;
+        left: 20px;
+        height: 90px;
+        width: 270px;
+    }
+    .nitrite{
+        position: relative;
+        top: -61px;
+        left: 290px;
+        height: 90px;
+        width: 270px;
+    }
+    .urobilinogen{
+        position: relative;
+        top: -75px;
+        left: 20px;
+        height: 90px;
+        width: 270px;
+    }
+    .protein{
+        position: relative;
+        top: -181px;
+        left: 290px;
+        height: 90px;
+        width: 270px;
+    }
+
+    .blood{
+        position: relative;
+        top: -196px;
+        left: 20px;
+        height: 90px;
+        width: 270px;
+    }
+    .ketone{
+        position: relative;
+        top: -302px;
+        left: 290px;
+        height: 90px;
+        width: 270px;
+    }
+    .bilirubin{
+        position: relative;
+        top: -315px;
+        left: 20px;
+        height: 90px;
+        width: 270px;
+    }
+    .glucose{
+        position: relative;
+        top: -420px;
+        left: 290px;
+        height: 90px;
+        width: 270px;
+    }
+
+    .urnInputPos {
+        position: relative;
+        /* top: -8px; */
+        top: -96px;
+    }
+    #specificGravityData{
+        top: -75px !important;
+    }
+    /*
+    #nitriteData, #urobilinogenData, #proteinData,#bloodData,#specificGravityData,#ketoneData,#glucoseData{
+        top: -75px !important;
+    }
+    */
+    .urn_error{
+        position: relative;
+        top: -125px;
+        left: 165px;
+        color: red;
+    }
+
+    .urn_test_result_status_input{
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        left: 0px ;
+        height: 48px ;
+        width: 230px;
+        border: 2px solid #27A3DD;
+        font-size: 18px;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-family: 'LatoRegular';
+        text-indent: 0px;
+        color: #808080d1;
+        outline: none;
+    }
+
+    .urn_test_result_status_input::-moz-selection {
+       background-color: #0261c2;  
+    }
+    .urn_test_result_status_input::selection {
+      background-color: #0261c2;  
+    }
+    .urn_test_result_status_input::-webkit-selection {
+      background-color: #0261c2; 
+    }
+    .urn_test_result_status_input:focus {
+       border: 3px solid #3F90E2; 
+    }
+</style>
+
+<div class="urn_slide_container">
+    <div class="urn_slide_title"> {{interfaceLabels[urnSlideTitle]}}</div>
+    <div ng-show="urnData.show_urn_parameter_data_set1" class="{{urnData_set1}}">
+        <div class="leukocytes">
+            <p> {{interfaceLabels[leukocytesLabel]}}</p>
+            <select class="urn_test_result_status_input" id="leukocytesData" ng-click="urnData.leukocytesDataCheck()">
+                <option>--{{interfaceLabels[selectInput]}}--</option>
+                <option value="0">{{interfaceLabels[absenceInput]}}</option>
+                <option value="1">{{interfaceLabels[presenceInput]}}</option>
+                <option value="2">{{interfaceLabels[nilInput]}}</option>
+            </select>
+        </div>
+        <div class="nitrite">
+            <p> {{interfaceLabels[nitriteLabel]}}</p>
+            <select class="urn_test_result_status_input" id="nitriteData" ng-click="urnData.nitriteDataCheck()">
+                <option>--{{interfaceLabels[selectInput]}}--</option>
+                <option value="0">{{interfaceLabels[absenceInput]}}</option>
+                <option value="1">{{interfaceLabels[presenceInput]}}</option>
+                <option value="2">{{interfaceLabels[nilInput]}}</option>
+            </select>
+        </div>
+        <div class="urobilinogen">
+            <p> {{interfaceLabels[urobilinogenLabel]}}</p>
+            <select class="urn_test_result_status_input" id="urobilinogenData" ng-click="urnData.urobilinogenDataCheck()">
+                <option>--{{interfaceLabels[selectInput]}}--</option>
+                <option value="0">{{interfaceLabels[absenceInput]}}</option>
+                <option value="1">{{interfaceLabels[presenceInput]}}</option>
+                <option value="2">{{interfaceLabels[nilInput]}}</option>
+            </select>
+        </div>
+        <div class="protein">
+            <p> {{interfaceLabels[proteinLabel]}}</p>
+            <select class="urn_test_result_status_input" id="proteinData" ng-click="urnData.proteinDataCheck()">
+                <option>--{{interfaceLabels[selectInput]}}--</option>
+                <option value="0">{{interfaceLabels[absenceInput]}}</option>
+                <option value="1">{{interfaceLabels[presenceInput]}}</option>
+                <option value="2">{{interfaceLabels[nilInput]}}</option>
+            </select>
+        </div>
+        <div class="blood">
+            <p> {{interfaceLabels[bloodLabel]}}</p>
+            <select class="urn_test_result_status_input" id="bloodData" ng-click="urnData.bloodDataCheck()">
+                <option>--{{interfaceLabels[selectInput]}}--</option>
+                <option value="0">{{interfaceLabels[absenceInput]}}</option>
+                <option value="1">{{interfaceLabels[presenceInput]}}</option>
+                <option value="2">{{interfaceLabels[nilInput]}}</option>
+            </select>
+        </div>
+        <div class="ketone">
+            <p> {{interfaceLabels[ketoneLabel]}}</p>
+            <select class="urn_test_result_status_input" id="ketoneData" ng-click="urnData.ketoneDataCheck()">
+                <option>--{{interfaceLabels[selectInput]}}--</option>
+                <option value="0">{{interfaceLabels[absenceInput]}}</option>
+                <option value="1">{{interfaceLabels[presenceInput]}}</option>
+                <option value="2">{{interfaceLabels[nilInput]}}</option>
+            </select>
+        </div>
+        <div class="bilirubin">
+            <p> {{interfaceLabels[bilirubinLabel]}}</p>
+            <select class="urn_test_result_status_input" id="bilirubinData" ng-click="urnData.bilirubinDataCheck()">
+                <option>--{{interfaceLabels[selectInput]}}--</option>
+                <option value="0">{{interfaceLabels[absenceInput]}}</option>
+                <option value="1">{{interfaceLabels[presenceInput]}}</option>
+                <option value="2">{{interfaceLabels[nilInput]}}</option>
+            </select>
+        </div>
+        <div class="glucose">
+            <p> {{interfaceLabels[glucoseLabel]}}</p>
+            <select class="urn_test_result_status_input" id="glucoseData" ng-click="urnData.glucoseDataCheck()">
+                <option>--{{interfaceLabels[selectInput]}}--</option>
+                <option value="0">{{interfaceLabels[absenceInput]}}</option>
+                <option value="1">{{interfaceLabels[presenceInput]}}</option>
+                <option value="2">{{interfaceLabels[nilInput]}}</option>
+            </select>
+        </div>
+        <a id="genix_next_buttons" class="urn_submits {{disable_next}}" ng-click="urnValue()"><span>{{interfaceLabels[urnNext]}}</span></a>
+    </div>
+
+    <div ng-show="urnData.show_urn_parameter_data_set2" class="{{urnData_set2}}">
+        <div class="leukocytes">
+            <p> {{interfaceLabels[pHLabel]}}</p>
+            <urn-text-field class="urnInputPos" mobilefield="urnData.fields[8]"></urn-text-field>
+            <p class="urn_error" data-ng-if="!pHValid">{{interfaceLabels[invalidText]}}</p>
+        </div>
+        <div class="nitrite">
+            <p> {{interfaceLabels[specificGravityLabel]}}</p>
+            <urn-text-field mobilefield="urnData.fields[9]"></urn-text-field>
+            <p class="urn_error" data-ng-if="!specificGravityValid">{{interfaceLabels[invalidText]}}</p>
+        </div>
+        <a id="genix_next_buttons" class="urn_submits {{disable_next}}" style="top: 165px;" ng-click="urnValue()"><span>{{interfaceLabels[urnNext]}}</span></a>
+    </div>
+</div>

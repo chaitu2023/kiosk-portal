@@ -1,0 +1,11 @@
+<div class="threeleadecg_instruction_leg_text threeleadecg_instruction_text" ng-show="threeleadleg" style = "left:550px;"><span>{{interfaceLabels[plleftleg]}}</span></div>
+<div class="threeleadecg_instruction_leg_text threeleadecg_instruction_text" ng-show="sixleadLeg" style = "left:550px;"><span>{{interfaceLabels[plbothleg]}}</span></div>
+<div class="threeleadecg_instruction_leg threeleadecg_instruction_circle" style = "left: 550px;">
+    <div class = "threeleadecg_instruction_circle_overlay"  ng-show="threeleadleg">
+    	<img src="images/ECGNewLeg.png" class="threeleadlegImgPos">
+    </div>
+     <div class = "threeleadecg_instruction_circle_overlay" ng-show="sixleadLeg">
+    	<img src="images/ECGNewLeg2.png" class="sixleadLegImgPos">
+    </div>
+    <div id="threeleadecg_instruction_leg_frames"></div>
+</div>

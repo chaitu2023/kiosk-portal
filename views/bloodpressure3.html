@@ -1,0 +1,160 @@
+<!-- <div id="slide_title" >{{interfaceLabels[slideTitle]}}</div>
+<div id="slide_subtitle" >{{interfaceLabels[slideSubTitle]}}</div>
+
+<div id="bloodpressure_results_pane">
+    <div id="bloodpressure_results">
+        <div class="info_btn" ng-click="showInfoboxBp()"></div>
+        <div id="bloodpressure_results_bp">
+            <div class="result_text">
+                <span id="result_title_bp" style="margin-left: 20PX;" class="result_title" >{{interfaceLabels[bp03BloodPressure]}}</span>
+                <span class="result_title">:</span>
+                <span id="result_risk_bp" class=" result_risk {{bpRiskClass}}">{{interfaceLabels[bpRisk]}}</span>
+            </div>
+            <div class="result_numbers testFadeIn" ng-show="showBp">
+                <span id="bloodpressure_result_bp_number" class=" value">{{systolic}}/{{diastolic}}</span></span><span class="unit" >{{interfaceLabels[bpUnits]}}</span>
+            </div>
+        </div>
+        <div id="bloodpressure_results_pulse">
+            <div class="result_text">
+                <span id="result_title_pulse" class="result_title" >{{interfaceLabels[bpPulse]}}</span>
+                <span class="result_title">:</span>
+                <span id="result_risk_pulse" class="result_risk {{pulseRiskClass}}">{{interfaceLabels[pulseRisk]}}</span>
+            </div>
+            <div class="result_numbers testFadeIn" ng-show="showPulse">
+                <span id="bloodpressure_result_pulse_number" class="value">{{pulse}}</span><span class="unit">{{interfaceLabels[bpBpm]}}</span>
+            </div>
+        </div>
+        <bp-gauge-systolic></bp-gauge-systolic>
+        <bp-gauge-diastolic></bp-gauge-diastolic>
+        <bp-gauge-pulse></bp-gauge-pulse>
+
+        <div id="bloodpressure_retake_hint" ng-hide="bpAverageIsVisible" >
+            <span id="bloodpressure_retake_calculate_average" class="adFadeIn" ng-bind-html="interfaceLabels[bp03WantAverage]" ng-show="redoVisible"></span>
+            <span id="bloodpressure_retake_tap_redo"  class="adFadeIn" ng-bind-html="interfaceLabels[bp03TapRedo]" ng-show="redoVisible"></span>
+        </div>
+    </div>
+
+    <div id="bloodpressure_average_optionsbar" ng-show="bpAverageIsVisible">
+        <div id="bloodpressure_average_checkbox_btn" ng-click="toggleAverage()" ><div id="bloodpressure_average_checkbox" class="{{averageButtonActive}}"></div><span class="{{langClass}}">{{interfaceLabels[bp03AverageMyResults]}}</span></div>
+        <div id="bloodpressure_average_showall_btn" ng-click="showAllBpResults();"><span  class="{{langClass}}">{{interfaceLabels[bp03ShowAllResults]}}</span></div>
+    </div>
+
+</div>
+
+<a id="higi_control_left_btn" class="left_control_btn {{langClass}} {{(redoVisible) ? buttonEnterLeft : buttonExitLeft}}" ng-show="redoVisible" ng-click="redoBp()">
+    <span class="{{langClass}}">{{interfaceLabels[redoSlideText]}}</span>
+</a>
+<a id="higi_control_right_ng_btn" class="right_control_btn {{langClass}} {{(nextVisible) ? buttonEnterRight : buttonExitRight}}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="{{langClass}} {{interfaceLabels[nextSlideText]}}">{{interfaceLabels[nextSlideText]}}</span>
+</a>
+ -->
+<!-- 
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,400;1,700&display=swap" rel="stylesheet"> -->
+
+<div class="bp_results_main_container">
+   <div class="bp_results_header_container">
+        <img class="bp_results_header_image" src="./images/Icons-32.png">
+        <p class="bp_results_header_text {{langClass}} "> {{interfaceLabels[slideTitle]}} <small class="bp_results_small_text {{langClass}} ">{{interfaceLabels[slideSubTitle]}}</small></p> 
+                  
+        <div class= "global_info_button" ng-click="showInfoboxBp()">
+            <img class= "global_info_button_icon" src="images/icons8-info-32.png">
+            <span class= "global_info_button_text">{{interfaceLabels[bpInformation]}}</span>
+        </div>
+    </div> 
+
+    <div class="bp_results_sub_container">
+        <span class="bp_results_title_container">
+            <p class="bp_results_parameter_title">{{interfaceLabels[bpParameter]}}</p>
+            <p class="bp_results_yourscore_title">{{interfaceLabels[bpYourscore]}}</p>
+            <p class="bp_results_status_title">{{interfaceLabels[bpSTATUS]}}</p>
+            <p class="bp_results_range_title">{{interfaceLabels[bpNormalrange ]}}</p>
+        </span>
+
+        <span class="bp_results_param1_container">
+            <p class="bp_results_param1_title">{{interfaceLabels[bpSystolic]}}</p>
+            <p class="bp_results_parm1_sub_title">mmHg</p>
+            <p class="bp_results_parm1_value"  ng-class="getSystolicClassName()"> {{systolic}}
+                <small class="bp_results_units">mmHg</small>
+            </p>
+            <p class="bp_results_param1_status" ng-if="systolic <= 129" style="margin-top: 34px;">{{interfaceLabels[bpNORMAL]}}</p>            
+            <p class="bp_results_param1_status" ng-if="systolic >= 130 && systolic <= 139" style="margin-top: 34px;">{{interfaceLabels[bpACCEPTABLE]}}</p>            
+            <p class="bp_results_param1_status" ng-if="systolic >= 140" style="font-size: 16px;margin-top: 37px;">{{interfaceLabels[recheck_consult_healthcare_provider]}}</p>          
+
+            <p class="bp_range_txt" style="width: 310px;"> systolic <= 129 </p>
+            <div class="bp_sys_arrow_size_pos" ng-class="getSystolicRange()"></div>
+            <div id="bp-ref-chart"></div>
+            <!-- <img src="./images/Systolic-Diasytolic.png" class="bp_status_bar"/> -->
+        </span>
+
+        <span class="bp_results_param2_container">
+            <div id="diastolic-title-value-container">
+                <p class="bp_results_param2_title">{{interfaceLabels[bpDiastolic]}}</p>
+                <p class="bp_results_param2_sub_title">mmHg</p>
+                <p class="bp_results_param2_value" ng-class="getDiastolicClassName()">
+                    {{diastolic}}
+                    <small class="bp_results_units">mmHg</small>
+                </p>
+            </div>            
+            
+            <!-- <p class="bp_results_param1_status" ng-if="diastolic < 80">{{interfaceLabels[bpNORMAL]}}</p>
+            <p class="bp_results_param1_status" ng-if="diastolic >= 80 && diastolic < 90">{{interfaceLabels[bpACCEPTABLE]}}</p>
+            <p class="bp_results_param1_status" ng-if="diastolic >= 90 && diastolic < 100" style="margin-top: 14px;font-size: 14px;">{{interfaceLabels[bp1stageHyper]}}</p>
+            <p class="bp_results_param1_status" ng-if="diastolic >= 100" style="margin-top: 14px;font-size: 14px;">{{interfaceLabels[bp2stageHyper]}}</p>
+
+            <p class="bp_range_txt"> 60 ~ 80  </p>    
+            <div class="bp_dia_arrow_size_pos" ng-class="getDiastolicRange()"></div>        
+            <img src="./images/Systolic-Diasytolic.png" class="bp_status_bar"/> -->
+        </span>
+
+        <span class="bp_results_param3_container">
+            <p class="bp_results_param3_title">{{interfaceLabels[bpPulse]}}</p>
+            <p class="bp_results_param3_sub_title">bpm</p>
+            <p class="bp_results_param3_value" ng-class="{'bp_status_high': (pulse >= 100), 'bp_status_acceptable': (pulse >= 60 && pulse <= 99 )} ">  {{pulse}}
+                <small class="bp_results_units">bpm</small>
+            </p>
+            <p class="bp_results_param3_status" style="margin-top: 34px;" ng-show="pulse < 60"> {{interfaceLabels[pulseRisk]}} </p>
+            <p class="bp_results_param3_status" style="margin-top: 34px;" ng-show="pulse >= 60 && pulse <= 99"> {{interfaceLabels[pulseRisk]}} </p>
+             <p class="bp_results_param3_status" style="margin-top: 34px;" ng-show="pulse >= 100"> {{interfaceLabels[pulseRisk]}} </p>
+            <p class="bp_range_txt"> 60 ~ 99 </p>            
+            <div class="bp_pulse_arrow_size_pos" pulseRiskClass ng-class="{'bp_pulse_status_high': (pulse >= 100), 'bp_pulse_new_status_normal': (pulse >= 60 && pulse <= 99 )} "></div>        
+            <!-- <img src="./images/Pulse.png"  class="bp_status_bar"/> -->
+            <div id="bp-ref-chart" style="width: 90%; margin: auto;"></div>
+        </span>
+
+
+        <span class="bp_results_over_all_status_container  {{bpRiskClass}}">
+            <p class="bp_results_over_all_status_titles">{{interfaceLabels[slideTitle]}}</p>
+            <p class="bp_results_overall_sub_title">{{interfaceLabels[bpOverallStatus]}}</p>
+            <p class="bp_results_overall_value"> {{systolic}}/{{diastolic}} </p>
+            <p class="bp_overall_results_units">mmHg</p>
+            <img  ng-if="bpRiskClass === 'result_risk normal' || bpRiskClass === 'result_risk bp_acceptable'" class="bp_overall_ststus_icon" src="./images/vital_status/vital_status_normal.png">
+            <img  ng-if="bpRiskClass === 'result_risk high' || bpRiskClass === 'result_risk atrisk'" class="bp_overall_ststus_icon" src="./images/vital_status/vital_status_risk.png">
+            <img  ng-if="bpRiskClass === 'result_risk low'" src="./images/vital_status/vital_status_low.png" style="width: 90px;">
+            <p class="bp_overall_status_txt" ng-style="bpRiskClass === 'result_risk high' && {'font-size':'14px'}"> {{interfaceLabels[bpRisk].toUpperCase()}} </p>
+        </span>
+    </div>
+</div>
+
+<!-- <a class= "global_redo_button" ng-show="redoVisible" ng-click="redoBp()">
+    <span class="global_redo_button_text"><b>Do</b> BP Test <b>Again</b></span>
+</a> -->
+
+<div class="global_redo_button" ng-show="redoVisible" ng-click="redoBp()">
+    <div class="global_redo_outer_line">
+        <img src="images/Icons-27.png" class="global_redo_button_icon">
+        <small class="global_redo_button_small_text">{{interfaceLabels[bpTestAgain]}}</small>
+    </div>
+</div>
+
+<a class= "global_continue_next_button" ng-class = "{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[nextSlideText]}}</span>
+</a>
+
+ <div id="bloodpressure_average_optionsbar" ng-show="bpAverageIsVisible" style="top:65px">
+        <div id="bloodpressure_average_checkbox_btn" ng-click="toggleAverage()" style="    height: 40px;
+    width: 200px;
+    left: 55px; border: 1px solid #5fa1d0;"><div id="bloodpressure_average_checkbox" class="{{averageButtonActive}}" style="    top: -6px;"></div><span class="{{langClass}}" style="    top: 12px;">{{interfaceLabels[bp03AverageMyResults]}}</span></div>
+        <div id="bloodpressure_average_showall_btn" ng-click="showAllBpResults();" style="height: 40px;
+    width: 160px;
+    border: 1px solid #5fa1d0;"><span  class="{{langClass}}" style="    top: 12px;">{{interfaceLabels[bp03ShowAllResults]}}</span></div>
+</div>

@@ -1,0 +1,15 @@
+{
+    "infobox.about.spo2": "এসপিও<sub>2</sub> সম্পর্কে",
+    "infobox.about.spo2.subtitle": "আপনার বডি পালস অক্সিমিটার, যা এসপিও<sub>2</sub> নামেও পরিচিত।",
+    "infobox.about.spo2.point03": "এসপিও<sub>2</sub> সীমা",
+    "infobox.about.spo2.point04": "95 বা তার বেশী",
+    "infobox.about.spo2.point05": "91 থেকে 95",
+    "infobox.about.spo2.point06": "70 থেকে 90",
+    "infobox.about.spo2.point07": "70 এর কম",
+    "spo2.status.healthy": "সুস্থ",
+    "spo2.status.acceptable": "গ্রহণযোগ্য",
+    "spo2.status.atrisk": "ঝুঁকিপূর্ণ",
+    "spo2.status.low": "কম",
+    "infobox.about.spo2.point08": "এই চার্টে রোগ নিয়ন্ত্রণ ও প্রতিরোধ কেন্দ্রের দ্বারা নির্ধারিত এসপিও<sub>2</sub> বিভাগগুলি দেখানো হয়েছে।",
+    "infobox.about.spo2.point09": "below 95"
+}

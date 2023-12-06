@@ -1,0 +1,96 @@
+<div class="infobox_content">
+
+    <div class="infobox_content_title" ng-bind-html="interfaceLabels[infoboxContentTitle]"></div>
+
+    <div class="infobox_bp_example"><span class="infobox_systolic">{{infoBoxSystolic}}</span> / <span class="infobox_diastolic">{{infoBoxDiastolic}}</span><span class="infobox_bp_unit"  ng-bind-html=" interfaceLabels[infoboxBpUnit]"></span></div>
+    <div class="infobox_bp_example_text"><span class="infobox_systolic" ng-bind-html="interfaceLabels[infoboxAboutSystolic]" ></span> <span class="infobox_diastolic" ng-bind-html="interfaceLabels[infoboxAboutDiastolic]"></span>
+    </div>
+    <div class="infobox_content_list">
+        <ul>
+            <li ng-bind-html="interfaceLabels[infoboxAboutBpPoint1]" ></li>
+            <li ng-bind-html="interfaceLabels[infoboxAboutBpPoint2]" ></li>
+            <li ng-bind-html="interfaceLabels[infoboxAboutBpPoint3]" ></li>
+            <li ng-bind-html="interfaceLabels[infoboxAboutBpPoint4]" ></li>
+        </ul>
+    </div>
+
+    <div class="infobox_content_break"></div>
+
+    <div class="infobox_content_title_mini" ng-bind-html="interfaceLabels[infoboxAboutBpPoint5]"></div>
+    <div class="infobox_content_subtitle" ng-bind-html="interfaceLabels[infoboxAboutBpPoint6]"></div>
+
+
+    <table class="infobox_bp_table">
+        <tr style="background-color: hsl(96deg 54% 53%);height: unset !important;">
+            <td class="infobox_bp_table_row_category" style="width: 25%;padding: 10px;text-shadow: none;" ng-bind-html="interfaceLabels[infoboxAboutBpPoint7]" ></td>
+            <td class="infobox_bp_table_row_systolic" style="width: 25%;padding: 10px;text-shadow: none;"ng-bind-html="interfaceLabels[infoBoxAboutSbpNormal]" ></td>            
+        </tr>   
+        <tr style="background-color: hsl(35.63deg 88.19% 49.8%);height: unset !important;">
+            <td class="infobox_bp_table_row_category" style="width: 25%;padding: 10px;text-shadow: none;" ng-bind-html="interfaceLabels[infoboxAboutBpPoint13]" ></td>
+            <td class="infobox_bp_table_row_systolic" style="width: 25%;padding: 10px;text-shadow: none;"ng-bind-html="interfaceLabels[infoBoxAboutSbpAcceptable]" ></td>            
+        </tr>
+        <!-- <tr style="background-color: hsl(42deg 98% 59%);height: unset !important;">
+            <td class="infobox_bp_table_row_category" style="width: 25%;padding: 10px;text-shadow: none;" ng-bind-html="interfaceLabels[infoboxAboutBpPoint13]"></td>
+            <td class="infobox_bp_table_row_systolic" style="width: 25%;padding: 10px;text-shadow: none;" ng-bind-html="interfaceLabels[infoBoxAboutSbpAcceptable]"></td>
+            <td style="width: 25%;padding: 10px;text-shadow: none;">
+                <div class="infobox_bp_table_row_binder" style="text-shadow: none;" ng-bind-html="interfaceLabels[infoBoxAboutBpAnd]"></div>
+            </td>
+            <td class="infobox_bp_table_row_diastolic" style="width: 25%;padding: 10px;text-shadow: none;" ng-bind-html="interfaceLabels[infoBoxAboutDbpAcceptable]"></td>
+        </tr> -->
+        <!-- isolated diastolic  -->
+        <!-- <tr>
+            <td class="infobox_bp_table_row_category" ng-bind-html="interfaceLabels[infoboxAboutBpPoint14]"></span>
+            </td>
+            <td class="infobox_bp_table_row_systolic" ng-bind-html="interfaceLabels[infoboxAboutBpData15]"></td>
+            <td>
+                <div class="infobox_bp_table_row_binder" ng-bind-html="interfaceLabels[infoBoxAboutBpAnd]"></div>
+            </td>
+            <td class="infobox_bp_table_row_diastolic" ng-bind-html="interfaceLabels[infoboxAboutBpData16]"></td>
+        </tr> -->
+        <!-- isolated systolic  -->
+         <!-- <tr>
+            <td class="infobox_bp_table_row_category" ng-bind-html="interfaceLabels[infoboxAboutBpPoint23]"></span>
+            </td>
+            <td class="infobox_bp_table_row_systolic" ng-bind-html="interfaceLabels[infoboxAboutBpData24]"></td>
+            <td>
+                <div class="infobox_bp_table_row_binder" ng-bind-html="interfaceLabels[infoBoxAboutBpAnd]"></div>
+            </td>
+            <td class="infobox_bp_table_row_diastolic" ng-bind-html="interfaceLabels[infoboxAboutBpData25]"></td>
+        </tr> -->
+        <!-- recheck or consult healthcare provider -->
+        <tr style="background-color: hsl(358deg 96% 44%);height: unset !important;">
+            <td class="infobox_bp_table_row_category" style="width: 25%;padding: 10px;text-shadow: none;" ng-bind-html="interfaceLabels[infoBoxAbout2_Recheck_Text]"></span>
+            </td>
+            <td class="infobox_bp_table_row_systolic" style="width: 25%;padding: 10px;text-shadow: none;" ng-bind-html="interfaceLabels[infoBoxAbout2_Recheck]"></td>
+        </tr>
+        <!-- 2nd stage hypertension -->
+         <!-- <tr style="background-color: hsl(358deg 96% 44%);height: unset !important;">
+            <td class="infobox_bp_table_row_category" style="width: 25%;padding: 10px;text-shadow: none;" ng-bind-html="interfaceLabels[infoBoxAbout2stageHyper]"></span>
+            </td>
+            <td class="infobox_bp_table_row_systolic" style="width: 25%;padding: 10px;text-shadow: none;" ng-bind-html="interfaceLabels[infoBoxAboutSbp2stageHyper]"></td>
+            <td style="width: 25%;padding: 10px;text-shadow: none;">
+                <div class="infobox_bp_table_row_binder" style="text-shadow: none;" ng-bind-html="interfaceLabels[infoBoxAboutBpAnd]" ></div>
+            </td>
+            <td class="infobox_bp_table_row_diastolic" style="width: 25%;padding: 10px;text-shadow: none;" ng-bind-html="interfaceLabels[infoBoxAboutDbp2stageHyper]"></td>
+        </tr> -->
+        <!-- <tr>
+            <td class="infobox_bp_table_row_category" ng-bind-html="interfaceLabels[infoboxAboutBpPoint10]"></span>
+            </td>
+            <td class="infobox_bp_table_row_systolic" ng-bind-html="interfaceLabels[infoboxAboutBpData7]"></td>
+            <td>
+                <div class="infobox_bp_table_row_binder" ng-bind-html="interfaceLabels[infoBoxAboutBpOr]"></div>
+            </td>
+            <td class="infobox_bp_table_row_diastolic" ng-bind-html="interfaceLabels[infoboxAboutBpData8]"></td>
+        </tr>
+        <tr>
+            <td class="infobox_bp_table_row_category" ng-bind-html="interfaceLabels[infoboxAboutBpPoint11]"></span>
+            </td>
+            <td class="infobox_bp_table_row_systolic" ng-bind-html="interfaceLabels[infoboxAboutBpData9]"></td>
+            <td>
+                <div class="infobox_bp_table_row_binder" ng-bind-html="interfaceLabels[infoBoxAboutBpOr]"></div>
+            </td>
+            <td class="infobox_bp_table_row_diastolic" ng-bind-html="interfaceLabels[infoboxAboutBpData10]"></td>
+        </tr> -->
+    </table>
+    <div class="infobox_content_text bpBlockBottom" ng-bind-html="interfaceLabels[infoboxAboutBpPoint12]"></div>
+</div>

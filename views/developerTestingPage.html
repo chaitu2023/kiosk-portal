@@ -1,0 +1,129 @@
+<style type="text/css">
+.book_appointment_ava_slot_test{
+    height:271px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+#book_appointment_ava_slot_scroll_test{
+    padding: 0px 0px;
+    box-sizing: border-box;
+    width:100%;
+    padding-bottom: 30px;
+    margin-bottom:10px;
+}
+
+.test_scroll_bar,
+.test_scroll_barV{
+  position: absolute;
+  z-index: 100;
+  width: 7px;
+  bottom: 2px;
+  top: 2px;
+  /* right: 1px; */
+  /*right: 0px;*/
+  pointer-events: none;
+  -webkit-transition: opacity 0ms 0ms;
+  overflow: hidden;
+  opacity: 1;
+}
+
+
+.test_scroll_barV div,
+{
+  border-radius: 10px;
+  background: #333;
+  opacity: .5;
+}
+
+</style>
+
+<div style="margin-top: 180px;"> </div>
+
+<!-- <div id="book_appointment_ava_slot_test" class="book_appointment_ava_slot_test" style="margin-top: 90px; width: 100px; margin:auto;border:1px solid red">
+    <div id="book_appointment_ava_slot_scroll_test" > 
+        <div style="">  vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper </div>
+        <div style="">  vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper </div>
+        <div style="">  vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper </div>
+        <div style="">  vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper </div>
+        <div style="">  vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper </div>
+        <div style="">  vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper </div>
+        <div style="">  vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper </div>
+        <div style="">  vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper </div>
+        <div style="">  vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper </div>
+        <div style="">  vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper </div>
+        <div style="">  vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper </div>
+        <div style="">  vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper </div>
+        <div style="">  vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper </div>
+        <div style="">  vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrapper vScrollbarWrappervScrollbarWrapper vScrollbarWrapper vScrollbarWrapper </div>
+
+    </div>
+</div> -->
+
+<style type="text/css">
+	
+./*limit{
+	width: 500px;
+	max-width: 500px;
+	height: 250px;
+	
+	background-color: black;
+	overflow-x: auto;
+}
+
+.content{
+	width: 2500px;
+	height: 50px;
+	background-image: linear-gradient(45deg, teal, orange);
+}*/
+</style>
+
+<!-- <div class="limit" d-scroll-horizontally="250">
+		<div class="content">
+			example horizontal scroll
+		</div>
+	</div>
+
+	<button type="button" ng-click="scrollToLeft()">left</button>
+	<button type="button" ng-click="scrollToRight()">right</button> -->
+
+
+<style type="text/css">
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  .card {
+    display: inline-block;
+  }
+}
+.scrolling-wrapper {
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .card {
+    flex: 0 0 auto;
+  }
+}
+
+</style>
+
+
+<div class="scrolling-wrapper-flexbox">
+  <div class="card"><h2>Card Card Card Card Card Card Card Card Card Card Card Card Card Card Card card e</h2></div>
+  <div class="card"><h2>Card Card Card Card Card Card Card Card Card Card Card Card Card Card Card card</h2></div>
+  <div class="card"><h2>Card Card Card Card Card Card Card Card Card Card Card Card Card Card Card card</h2></div>
+  <div class="card"><h2>Card Card Card Card Card Card Card Card Card Card Card Card Card Card Card card</h2></div>
+  <div class="card"><h2>Card Card Card Card Card Card Card Card Card Card Card Card Card Card Card card</h2></div>
+  <div class="card"><h2>Card Card Card Card Card Card Card Card Card Card Card Card Card Card Card card</h2></div>
+  <div class="card"><h2>Card Card Card Card Card Card Card Card Card Card Card Card Card Card Card card</h2></div>
+  <div class="card"><h2>Card Card Card Card Card Card Card Card Card Card Card Card Card Card Card card</h2></div>
+  <div class="card"><h2>Card Card Card Card Card Card Card Card Card Card Card Card Card Card Card card</h2></div>
+</div>

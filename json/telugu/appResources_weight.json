@@ -1,0 +1,11 @@
+{
+    "weight01_audio01": "sounds/telugu/vo1_weight&bmi.wav",
+    "weight01_audio02": "sounds/telugu/voice2_weight&bmi.wav",
+    "weight01_audio03": "sounds/telugu/voice3_weight&bmi.wav",
+    "weight01_audio04": "sounds/telugu/startWeightTest.wav",
+    "weight01_audio05": "sounds/telugu/voice4_weight&bmi.wav",
+    "weight03_audio01": "sounds/telugu/results.wav",
+    "weight01_audiolap": "sounds/telugu/handsonLap.wav",
+    "weight03_audio10": "sounds/telugu/chkWeight&bmiAgain.wav",
+    "weight03_audio11": "sounds/telugu/chkBmcAgain.wav"
+}

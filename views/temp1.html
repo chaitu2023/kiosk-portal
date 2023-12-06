@@ -1,0 +1,79 @@
+<div class="temperature_instructions_header_container">
+	<img class="temperature_instructions_header_image" src="./images/Icons-34.png">
+	<p class="temperature_instructions_header_text">{{interfaceLabels[slideTitle]}}</p> 
+</div>
+
+<div data-ng-if="temperatureModuleName == 'Wrist'" class="temperature_instructions_main_container">
+	<p class="temperature_instructions_heading">{{interfaceLabels[slideSubTitle]}}</p>
+	<div class="temperature_instructions_circle_container_1">
+	    <div class="temperature_instructions_circle_place_overlays"></div>
+	    <div id="temperature_instructions_circle1_place_frames"></div>
+	</div>
+
+	<div class="temperature_instructions_text_1">
+		<span>{{interfaceLabels[gentleholdha]}}</span>
+	</div>
+
+
+	<div class="temperature_instructions_circle_container_2">
+	    <div class="temperature_instructions_circle_place_overlays"></div>
+	    <div id="temperature_instructions_circle2_place_frames"></div>
+	</div>
+
+	<div class="temperature_instructions_text_2">
+		<span>{{interfaceLabels[restwritt]}}</span>
+	</div>
+	<p class="temperature_instructions_bottom_heading"> {{interfaceLabels[slideIntructionFour]}} </p>
+</div>
+
+<div data-ng-if="temperatureModuleName != 'Wrist'" class="temperature_instructions_main_container_forehead">
+	<p class="temperature_instructions_heading">{{interfaceLabels[slideSubTitle]}}</p>
+
+	<div class="temperature_instructions_circle_container_1_forehead">
+	    <div class="temperature_instructions_circle_place_overlays"></div>
+	    <div id="temperature_instructions_circle1_place_frames_forehead"></div>
+	</div>
+
+	<div class="temperature_instructions_text_1_forehead">
+		<!-- <span> Please place the face inside the red line and  <br> wait till it turns green</span> -->
+		<span>{{interfaceLabels[tempForeheadText1]}} <br> {{interfaceLabels[tempForeheadText2]}}</span>
+	</div>
+	<p class="temperature_instructions_bottom_heading"></p>
+</div>
+
+<a class= "global_skip_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()">
+    <span class="global_skip_button_text" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}}</span>
+</a>
+<a class="global_continue_next_button" ng-class = "{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible" ng-click="takeTestButton()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[start]}}</span>
+</a>
+
+
+<!-- <div id="slide_title">{{interfaceLabels[slideTitle]}}</div>
+<div id="slide_subtitle">{{interfaceLabels[slideSubTitle]}}</div>
+<div class="higi_top_container"></div>
+
+
+<div class="bmc-instruction-container">
+	
+    <div class="bmc_instruction_place_text bmc_instruction_text"><span>{{interfaceLabels[gentleholdha]}}</span></div>
+	<div class="bmc_instruction_place bmc_instruction_circle">
+	    <div class="bmc_instruction_circle_overlay"></div>
+	    <div id="bmc_instruction_place_frames"></div>
+	</div>
+
+	<div class="bmc_instruction_still_text bmc_instruction_text"><span>{{interfaceLabels[restwritt]}}</span></div>
+	<div class="bmc_instruction_still bmc_instruction_circle">
+	    <div class="bmc_instruction_circle_overlay"></div>
+	    <div id="bmc_instruction_still_frames"></div>
+	</div>
+
+    <div class="instruction begin">
+        {{interfaceLabels[bmcTestWillBegin]}}
+    </div>
+</div>
+
+
+<div class="skip_test" style=" z-index: 10001;">
+	<button class="skip_test_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()" ng-bind="interfaceLabels[skipTest]"></button>
+</div> -->

@@ -1,0 +1,20 @@
+{
+    "spo2three.spo2": "এসপিও2",
+    "spo2three.results": "ফলাফল",
+    "spo2three.continue": "চালিয়ে যান",
+    "spo2three.spo2.percent": "%",
+    "spo2three.spo2level": "এসপিও2 অক্সিজেন মাত্রা",
+    "spo2three.checkSpo2again": "আবার SpO2 চেক করুন",
+    "spo2three.information": "তথ্য",
+    "spo2three.parameter": "বিচার্য বিষয়",
+    "spo2three.yourscore": "আপনার স্কোর",
+    "spo2three.OverallStatus": "সামগ্রিক অবস্থা",
+    "spo2three.spo22scale": "এসপিও<sub>2</sub> স্কেল",
+    "spo2three.finalResult": "চূড়ান্ত ফলাফল",
+    "spo2three.status.healthy": "সুস্থ",
+    "spo2three.status.acceptable": "গ্রহণযোগ্য",
+    "spo2three.status.atrisk": "ঝুঁকিপূর্ণ",
+    "spo2three.status.low": "কম",
+    "spo2two.in.progress": "SpO2 is in Progress...",
+    "spo2three.status.spo2_check_healthcare_provider": "Check With Healthcare Provider"
+}

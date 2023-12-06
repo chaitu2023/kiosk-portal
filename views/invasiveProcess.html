@@ -1,0 +1,30 @@
+<div class="invasive_process_header_container">
+	<img class="invasive_process_header_image {{ instructionHeaderImage }}" src="">
+	<p class="invasive_process_header_text">{{ interfaceLabels[instructionHeader] }}</p> 
+</div>
+
+<div class="invasive_process_main_container">
+	<p class="invasive_process_heading">{{interfaceLabels[processing]}}</p>
+
+	<div class="invasive_loading_box">
+		<div ng-show="while_processing_partOne" class="invasive_process_loader"></div>
+		<div ng-show="!while_processing_partOne" class="invasive_process_loader_onTimer"></div>
+		<p class="invasive_process_box_text">{{ interfaceLabels[waitProcess] }}</p>
+	</div>
+</div>
+
+<a class= "global_skip_button" ng-click="skipTestClick()">
+    <span class="global_skip_button_text">{{interfaceLabels[skipTest]}}</span>
+</a>
+
+<div ng-show="!while_processing_partOne" class="process_timer">
+	<span class="process_timer_text"
+	 id="clockdiv"></span>
+</div>
+
+<div class="ivt_warning_modal {{ ivtModalFadeClass }}" ng-show="openIvtModal">
+    <div class="ivt_warning_modal_box">
+        <ivt-warning-modal-box ng-show="showIvtWarningModalBox"></ivt-warning-modal-box>
+    </div>
+    <a class="higi_overlay_mask"></a>
+</div>

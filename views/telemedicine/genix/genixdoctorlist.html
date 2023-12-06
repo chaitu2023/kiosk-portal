@@ -1,0 +1,223 @@
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+
+.column {
+  float: left;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+  .column {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.doctor_details{
+  margin-top: 2px;
+    margin-left: 110px;
+    font-weight:bold;
+    font-size: 14px;
+    text-shadow: 0px -1px 1px #fff;
+    font-family: IntervalSansProCondSemiBoldRg;
+  }
+
+.doctor_details_span{
+ color: black;
+ font-size: 14px;
+ font-family: IntervalSansProCondSemiBoldRg;
+}
+.call_doctor_button{
+   width: 140px;
+   height: 38px;
+   color: white;
+   margin-left: 163px;
+   top: 62px;
+   position: absolute;
+   text-transform: uppercase;
+   text-align: center;
+   font-size: 16px; 
+   font-family: ''IntervalSansProMediumRegular'';  
+   border-style: solid;
+   border-radius: 13px;
+   letter-spacing: 1px;
+        
+}
+.call_doctor_button:focus {
+  outline: none;
+} 
+.StarRatings{
+  font-size: 18px;
+  margin-top: 11px;
+  margin-left: 9px;
+}
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  background-color: #dbdbdb;
+  text-align: center;
+  border-radius: 15px;
+  width: 200px;
+  height: 200px;
+   margin-left: 5px;
+}
+.doctor_card {
+  box-shadow: 0 6px 3px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 15px;
+  width: 325px;
+  height: 105px;
+  margin-left: 20px;
+  margin-right: -10px;
+  background-color: #e0e0e0;
+}
+.doctor_name{
+    font-family: 'IntervalSansProMediumRegular';
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -6px;
+    margin-bottom: 6px;
+    margin-left: 140px;
+    color: black;
+}
+::-webkit-scrollbar { 
+}
+.speciality_name{
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -8px;
+    margin-bottom: 2px;
+}
+
+.container {
+  background-size: cover;
+  background: rgb(226,226,226); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(226,226,226,1)), color-stop(50%,rgba(219,219,219,1)), color-stop(51%,rgba(209,209,209,1)), color-stop(100%,rgba(254,254,254,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Chrome10+,Safari5.1+ */
+  padding: 20px;
+}
+
+.led-box {
+  float: left;
+  margin-top: -26px;
+  margin-right: -5px;
+}
+
+.led-box p {
+  font-size: 12px;
+  text-align: center;
+  margin: 1em;
+}
+
+.led-red {
+  margin: auto;
+  width: 14px;
+  height: 14px;
+  background-color: #F00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+  -webkit-animation: blinkRed 1s infinite;
+  -moz-animation: blinkRed 1s infinite;
+  -ms-animation: blinkRed 1s infinite;
+  -o-animation: blinkRed 1s infinite;
+  animation: blinkRed 1s infinite;
+}
+
+@-webkit-keyframes blinkRed {
+    from { background-color: #F00; }
+    50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+    to { background-color: #F00; }
+}
+
+.led-green {
+  margin: auto;
+  width: 14px;
+  height: 14px;
+  background-color: #ABFF00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+  -webkit-animation: blinkGreen 0.5s infinite;
+  -moz-animation: blinkGreen 1s infinite;
+  -ms-animation: blinkGreen 1s infinite;
+  -o-animation: blinkGreen 1s infinite;
+  animation: blinkGreen 1s infinite;
+}
+@-webkit-keyframes blinkGreen {
+    from { background-color: #ABFF00; }
+    50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px; }
+    to { background-color: #ABFF00; }
+}
+.checked {
+  color: #2a76c4;
+}
+.doctor_busy{
+  background-color: darkgrey;
+}
+.doctor_notbusy{
+ background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+}
+.vl {
+  border-left: 2px solid #999; /*#c1c1c1*/
+  height: 87px;
+  position: relative;
+  top: -121px;
+  margin-left: 128px;
+}
+</style>
+<div>
+  <div id="slide_title" style = "position: absolute;">TeleMedicine</div>
+  <div id="slide_subtitle" > {{ specialistsName }} Specialists</div>
+  <!-- List of Doctors starts !-->
+  <div id ="doctor_list" class="row {{doctorLists}} scrollbar" style="height: 488px;width: 745px;margin-top: 15px;margin-left: 20px;padding-bottom: 20px">
+
+  
+    <div ng-repeat = "doctors_lists in doctorLists" ng-if="doctorLists.length != 0">
+      <div class="column" style = "margin-top: 15px">
+        <div class="doctor_card">
+          <p class = "doctor_name">{{doctors_lists.Name}}</p>
+
+          <div class="led-box">
+            <div ng-class ="{'led-green': doctors_lists.OnlineStatus == true,
+                 'led-red': doctors_lists.OnlineStatus == false}">
+            </div>
+          </div>
+
+           <div style = "width: 100px;text-align: center;">
+            <img src="images/Doctor1.png" alt="Avatar" style="width:150px; height: 150px;margin-top: -60px;margin-left: -16px;">
+          </div>  
+
+          <div class="vl"></div>
+
+          <!-- <button class="call_doctor_button doctor_busy" ng-if="doctors_lists.OnlineStatus == false" ng-disabled="doctors_lists.OnlineStatus == false" ng-click="CallDoctorsinList()">call doctor</button> -->
+          <button class="call_doctor_button doctor_notbusy" ng-if="doctors_lists.OnlineStatus == true" ng-click="CallDoctorsinList(doctors_lists.Id)">call doctor</button>
+          </div>
+        </div>
+      </div>
+      <div ng-if="doctorLists.length == 0">
+        <p style="font-size: 22px;margin-left: 50px;margin-top: 200px;font-weight: bold;font-family: Aerial">No Doctor is Available Right Now. Please try again after some time.</p>
+        <button class="call_doctor_button doctor_notbusy" style="margin-left: 295px" ng-click="Gohome()">Go Home</button>
+      </div>
+    </div>
+  </div>
+</div>

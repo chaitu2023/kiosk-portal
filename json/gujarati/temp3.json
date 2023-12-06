@@ -1,0 +1,20 @@
+{
+    "temp3.results": "પરિણામો",
+    "temp3.continue": "ચાલુ રાખો",
+    "temp3.calibration": "માપાંકન",
+    "temp3.tempScale": "શારીરિક તાપમાનનું ધોરણ",
+    "temp3.status.healt": "સામાન્ય",
+    "temp3.status.accep": "સ્વીકાર્ય",
+    "temp3.status.fever": "તાવ",
+    "temp3.status.highfever": "ઉચ્ચ તાવ",
+    "temp3.roomTemp": "રૂમ",
+    "temp3.wristTemp": "શરીર",
+    "temp3.temperature": "તાપમાન",
+    "temp3.bodyTemp": "શરીરનું તાપમાન",
+    "temp3.information": "માહિતી",
+    "temp3.parameter": "પરિમાણ",
+    "temp3.yourscore": "તમારો સ્કોર",
+    "temp3.OverallStatus": "એકંદર સ્થિતિ",
+    "temp3.finalResult": "અંતિમ પરિણામ",
+    "temp3.checkTempagain": "ફરીથી તાપમાન તપાસો"
+}

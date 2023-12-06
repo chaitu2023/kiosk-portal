@@ -1,0 +1,11 @@
+{	
+    "spo2one.spo2":"एसपीओ२",
+	"text.instructions":"सूचना",
+	"spo2one.skip":"वगळा",
+	"spo2one.startTest": "तपासणी सुरु करा",
+	"spo2one.placeYourFingerProbably":"आपली बोटं योग्य प्रकारे ठेवा",
+	"spo2one.insertfinger":"एसपीओ<sub>२</sub> इलेक्ट्रोडमध्ये आपल्या उजव्या हाताची तर्जनी घाला",
+	"spo2one.instruct":"Place your finger gently and rest your palm here",
+	"spo2one.fingerinplaceBefore":" आपले बोट जागेवर असल्यावर ही तपासणी सुरू होईल",
+	"spo2one.fingerinplace":" Click 'Start Test' when your Finger is placed as shown"
+}

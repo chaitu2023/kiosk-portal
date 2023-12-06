@@ -1,0 +1,21 @@
+<div class="ssousermodal_main_container" ng-show="!qrCodeMobileDownload">
+	<p class="ssousermodal_heading">{{interfaceLabels[ssoUserModal.qrCodeMsg]}}</p>
+    <p class="login_alert_msg" ng-if="showLoginAlertMsg">{{interfaceLabels[ssoUserModal.loginAlertMsg]}}</p>
+	<div id="canvas" style="margin: 50px 0px 0px 235px"></div>
+	<a  class="ssousermodal_install_app_ssouser_button button-enter-right" ng-click="ssoUserModal.showMobileApp()">
+        <span class="guestusermodal_continue_guestuser_button_text">{{interfaceLabels[ssoUserModal.installApp]}}</span>
+    </a>
+	<a class="ssousermodal_back_button button-enter-left" ng-click="loginButtonClick()">
+        <span class="ssousermodal_back_button_text {{langClass}} ">{{interfaceLabels[ssoUserModal.backToLogin]}}</span>
+    </a>
+</div>
+<div class="ssousermodal_main_container" ng-show="qrCodeMobileDownload">
+    <div class="row">
+        <div class="ihl_qrcode">
+            <img src="images/ihl-qr-code.png">
+        </div>
+    </div>
+    <a class="ssousermodal_back_button button-enter-left" ng-click="ssoUserModal.backToQrCodePage()">
+        <span class="ssousermodal_back_button_text {{langClass}} ">{{interfaceLabels[ssoUserModal.backToLogin]}}</span>
+    </a>
+</div>

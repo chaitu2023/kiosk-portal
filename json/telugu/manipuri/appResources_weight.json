@@ -1,0 +1,12 @@
+{
+
+    "weight01_audio01":"sounds/manipuri/vo1_weight&bmi.wav",
+    "weight01_audio02":"sounds/manipuri/voice2_weight&bmi.wav",
+    "weight01_audio03":"sounds/manipuri/voice3_weight&bmi.wav",
+    "weight01_audio04":"sounds/manipuri/startWeightTest.wav",
+    "weight01_audio05":"sounds/manipuri/voice4_weight&bmi.wav",
+    "weight03_audio01":"sounds/manipuri/results.wav",
+	"weight01_audiolap":"sounds/manipuri/handsonLap.wav",
+    "weight03_audio10":"sounds/manipuri/chkWeight&bmiAgain.wav"
+
+}

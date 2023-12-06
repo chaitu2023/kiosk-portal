@@ -1,0 +1,46 @@
+.keyboard_lastcheckin #gender_component_container #female_btn {
+    /*with transgender*/
+    /*top: 100px;
+    left: 290px; */
+    /*without transgender*/
+    top: 100px;
+    left: 400px;
+}
+.keyboard_lastcheckin #gender_component_container #male_btn {
+    /*with transgender*/
+    /*top: 100px;
+    left: 75px; */
+    top: 100px;
+    left: 180px;
+}
+
+.keyboard_lastcheckin #gender_component_container #transgender_btn {
+    position: absolute;
+    top: 100px;
+    left: 518px;
+    width: 228px;
+    height: 290px;
+    background: url("../images/gender/Icons-20.png") top left no-repeat;
+    background-size: contain;
+    /*background: url("../images/gender_female_btn20120425.png") top left no-repeat;*/
+    }
+
+.keyboard_lastcheckin #age_component_container{
+    top: 100px;
+    left:170px;
+    background: lightgray;
+}
+
+.keyboard_lastcheckin #age_component_container #numpad #row2_feet #feet_6{
+    left: -100px;
+}
+
+.keyboard_lastcheckin #age_component_container #numpad #row2_feet #feet_7{
+    left: 200px;
+    top: -64px;
+}
+
+.keyboard_lastcheckin #gender_component_container #transgender_btn.active{
+    background-image: url("../images/gender/Icons-36.png");
+    background-size: contain;
+  }

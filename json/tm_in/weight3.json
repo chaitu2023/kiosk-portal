@@ -1,0 +1,23 @@
+{
+    "weight3.results": "முடிவுகள்",
+    "weight3.information": "தகவல்",
+    "weight3.parameter": "அளவுரு",
+    "weight3.yourscore": "உங்கள் மதிப்பெண்",
+    "weight3.OverallStatus": "ஒட்டுமொத்த நிலை",
+    "global.underweight": "குறை எடை",
+    "global.normalweight": "இயல்பானது",
+    "global.overweight": "அதிகஎடை",
+    "global.obese": "உடல் பருமன்",
+    "weight3.weight": "எடை",
+    "weight3.height": "உயரம்",
+    "weight3.kgUnit": "in Kgs",
+    "weight3.feetUnit": "in feet",
+    "weight3.parameter.bmi.title": "பிஎம்ஐ",
+    "weight3.body.mass.index": "உடல் நிறை அட்டவணை",
+    "weight3.bmi.scale": "உடல் நிறை அட்டவணை அளவுகோல்",
+    "weight3.underweight": "குறை எடை",
+    "weight3.normalweight": "இயல்புநிலை",
+    "weight3.overweight": "மிகை எடை",
+    "weight3.obese": "உடல்பருமன்",
+    "weight3.check.Again": "மீண்டும் சரிபார்க்கவும்"
+}

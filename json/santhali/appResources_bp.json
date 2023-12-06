@@ -1,0 +1,19 @@
+{
+    
+    "bloodpressure01_audio01":"sounds/santhali/vo1_bloodpressure1.wav",
+    "bloodpressure01_audio02":"sounds/santhali/vo2_bloodpressure1.wav",
+    "bloodpressure01_audio03":"sounds/santhali/voice3_bp1.wav",
+    "bloodpressure01_audio04":"sounds/santhali/vo4_bloodpressure1.wav",
+    "bloodpressure01_audio05":"sounds/santhali/startBpTest.wav",
+    "bloodpressure02_cancel_warning":"sounds/santhali/voice1_bp2.wav",
+    "bloodpressure02_audio01":"sounds/santhali/vo_2_bloodpressure2.wav",
+    "bloodpressure02_audio02":"sounds/santhali/voice3_bp2.wav",
+    "bloodpressure02_audio03":"sounds/santhali/vo4_bloodpressure2.wav",
+    "bloodpressure02_audio04":"sounds/santhali/vo4_bloodpressure1.wav",
+    "bloodpressure02_audio05":"sounds/santhali/vo6_bloodpressure2.wav",
+    "bloodpressure02_audio06":"sounds/santhali/vo7_bloodpressure2.wav",
+    "bloodpressure02_audio07":"sounds/santhali/vo8_bloodpressure2.wav",
+    "bloodpressure02_audio09":"sounds/santhali/vo2_bloodpressure2.wav",
+    "bloodpressure03_audio01":"sounds/santhali/results.wav",
+    "bloodpressure03_audio10":"sounds/santhali/chkBpAgain.wav"
+}

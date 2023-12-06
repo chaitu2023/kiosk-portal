@@ -1,0 +1,19 @@
+<div class="infobox_content">
+    <div class="infobox_content_title" >{{interfaceLabels[infoboxContentTitle]}}</div>
+    <div class="infobox_content_subtitle" >{{interfaceLabels[infoboxContentSubTitle]}}</div>
+    <div class="infobox_bp_example"><span class="infobox_systolic">120</span> / <span class="infobox_diastolic">80</span><span class="infobox_bp_unit">{{interfaceLabels[infoboxBpUnit]}}</span></div>
+    <div class="infobox_bp_example_text"><span class="infobox_systolic">{{interfaceLabels[infoboxAboutSystolic]}}</span> <span class="infobox_diastolic" >{{interfaceLabels[infoboxAboutDiastolic]}}</span>
+    </div>
+    <div class="infobox_content_text_left no-left-margin" ng-bind-html="interfaceLabels[infoboxAboutBpPoint1]"></div>
+    <div class="infobox_content_list">
+        <ul>
+            <li ng-bind-html="interfaceLabels[infoboxAboutBpPoint2]"></li>
+            <br/>
+            <div ng-bind-html="interfaceLabels[infoboxAboutBpPoint3]"></div>
+            <br/>
+            <li ng-bind-html="interfaceLabels[infoboxAboutBpPoint4]"></li>
+        </ul>
+    </div>
+    <div class="infobox_content_break"></div>
+    <div class="infobox_content_text_disclaimer bpBlockBottom" ng-bind-html="interfaceLabels[infoboxAboutBpHcDisclaimer]"></div>
+</div>

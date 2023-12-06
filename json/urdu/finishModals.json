@@ -1,0 +1,17 @@
+{
+  "emailresults.enter.email": "آپ کا ای میل پتہ درج کریں",
+  "emailresults.enter.email.to.send.results": "اپنے نتائج بھیجنے کے لیے اپنا ای میل پتہ درج کریں",
+  "emailresults.email.sent": "اپنے نتائج حاصل کرنے کے لئے اپنا ای میل چیک کریں۔",
+  "emailresults.by.clicking.send": "اپنے نتائج ای میل کرکے، آپ قبول کرتے ہیں کہ آپ کی معلومات محفوظ کی جا سکتی ہیں۔",
+  "global.send": "بھیجیں",
+  "finishModal.email.never.spam": "(ہم آپ کو سپیم نہیں کریں گے۔ وعدہ ہے!)",
+  "finishModal.printwarning": " انتباہ! ",
+  "finishModal.makesure": "براہ کرم پرنٹر ایریا کو بلاک نہ کریں",
+  "finishModal.printinstruct": "ٹیسٹ کے نتائج کی پرچی حاصل کرنے کے لیے نیچے پرنٹ بٹن دبائیں",
+  "finishModal.notavail": "کاغذ دستیاب نہیں",
+  "finishModal.papernot": " معذرت، پرنٹ پیپر Hpod میں دستیاب نہیں ہے",
+  "finishModal.refill": "ہم جلد ہی ریفئل کرینگے...",
+  "finishModal.printRes": "نتائج پرنٹ کریں",
+  "finishModal.okayy": "ٹھیک ہے",
+  "finishModal.printEcgraph": "ECG گراف پرنٹ کریں"
+}

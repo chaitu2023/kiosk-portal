@@ -1,0 +1,23 @@
+{
+    "weight3.results": "निकाल",
+    "weight3.information": "माहिती",
+    "weight3.parameter": "घटक",
+    "weight3.yourscore": "आपले गुण",
+    "weight3.OverallStatus": "एकंदरीत स्थिती",
+    "global.underweight": "कमी वजन",
+    "global.normalweight": "सामान्य",
+    "global.overweight": "जास्त वजन",
+    "global.obese": "लठ्ठ",
+    "weight3.weight": "वजन",
+    "weight3.height": "उंची",
+    "weight3.kgUnit": "in Kgs",
+    "weight3.feetUnit": "in feet",
+    "weight3.parameter.bmi.title": "बीएमआय",
+    "weight3.body.mass.index": "बॉडी मास इंडेक्स",
+    "weight3.bmi.scale": "बॉडी मास इंडेक्स स्केल",
+    "weight3.underweight": "कमी वजन",
+    "weight3.normalweight": "सामान्य",
+    "weight3.overweight": "जास्त वजन",
+    "weight3.obese": "लठ्ठ",
+    "weight3.check.Again": "वजन आणि बीएमआय पुन्हा तपासा"
+}

@@ -1,0 +1,914 @@
+.bp_instructions_header_container {
+    margin-top: 11%;
+    margin-left: 33.4%;
+    max-width: 100%;
+}
+.bp_instructions_header_image{
+float: left; margin-right: 15px; width: 34px;
+}
+.bp_instructions_header_text{
+    padding-left: 31px;
+    font-weight: 500;
+    margin-top: 0px;
+    font-family: 'LatoItalic';
+    font-size: 34px;
+    color: #4d4d4d;
+    margin-bottom: 30px;
+}
+
+.bp_instructions_main_container{
+    margin-top: -23px;    
+    box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;
+    background-color: #dddddd;
+    height: 345px;
+}
+
+.bp_instructions_heading{
+    text-align: center;
+    font-size: 24px;
+    margin-left: 9px;
+    padding-top: 10px;
+    font-family: 'LatoSemibold';
+    color: #333333;
+}
+.bp_instructions_bottom_heading{
+	font-family: 'LatoSemibold';
+	color: #585858; 
+	position: relative; 
+	top: 255px; 
+	font-size: 18px;
+	text-align: center;
+}
+
+#bp_instruction_palm, #bp_instruction_palm_text {
+    left: 290px;
+}
+
+
+#bp_instruction_relax, #bp_instruction_relax_text {
+    top: -25px;
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+  	left: 540px; 
+}
+#bp_instruction_relax_text {
+    top: 200px;
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+    left: 540px}
+
+.bp_instruction_text {
+  position: absolute;
+  top: 200px;
+  font-size: 18px;
+  text-shadow: 0 1px 1px #fff;
+  text-align: center;
+  width: 224px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+
+}
+  #bloodpressure_ad {
+  z-index: 0;
+  position: absolute;
+  top: 100px;
+  text-align: center;
+  height: 400px;
+  width: 680px;
+  left: 60px;
+  position: absolute;
+  overflow: hidden;
+  background: none; }
+  #bloodpressure_ad .ad-container {
+    height: 400px;
+    background: none; }
+    #bloodpressure_ad .ad-container .video-wrapper {
+      padding: 20px;
+      width: 680px;
+      height: 400px;
+      background: none;
+      box-sizing: border-box; }
+    #bloodpressure_ad .ad-container video {
+      max-width: 640px;
+      max-height: 360px;
+      width: 640px;
+      height: 360px; }
+  #bloodpressure_ad a.replay-video {
+    border-radius: 4px;
+    background-image: -moz-linear-gradient(90deg, #dbdbdb 0%, #e0e0e0 14%, #e8e8e8 91%, #eaeaea 93%, #ebebeb 100%);
+    background-image: -webkit-linear-gradient(90deg, #dbdbdb 0%, #e0e0e0 14%, #e8e8e8 91%, #eaeaea 93%, #ebebeb 100%);
+    background-image: -ms-linear-gradient(90deg, #dbdbdb 0%, #e0e0e0 14%, #e8e8e8 91%, #eaeaea 93%, #ebebeb 100%);
+    border: 1px solid #dbdbdb;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    height: 53px;
+    width: 145px;
+    position: absolute;
+    left: 267.5px;
+    top: 153.5px;
+    color: #999;
+    text-align: left;
+    border-radius: 4px;
+    padding-left: 1em; }
+    #bloodpressure_ad a.replay-video i {
+      font-size: 22px;
+      margin-top: 15px; }
+    #bloodpressure_ad a.replay-video span {
+      display: inline-block;
+      left: 45px;
+      position: absolute;
+      top: 15px;
+      font-size: 18px; }
+    #bloodpressure_ad a.replay-video.es_us {
+      width: 175px;
+      font-size: 14px;
+      left: 252.5px; }
+  #bloodpressure_ad div.timer {
+    color: #333;
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+    position: absolute;
+    top: 383px;
+    box-sizing: border-box;
+    font-size: 13px; }
+
+#bloodpressure_direction_pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: url("../images/bp_direction_pane_bkg20120503.png") no-repeat; }
+
+.bp_instruction_circle {
+  width: 224px;
+  height: 224px;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  top:-25px;}
+
+.bp_instruction_circle div {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
+.bp_instruction_circle_overlay {
+  background: transparent url("../images/tests_instruction_circle20121009_transparent.png") top left no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20; }
+
+
+#bp_instruction_disclaimer {
+  position: absolute;
+  top: 522px;
+  left: 140px;
+  color: #6d6d6d;
+  font-family: 'IntervalSansProMediumRegular';
+  font-size: 12px;
+  text-shadow: 0 1px 1px #fff;
+  text-align: center;
+  width: 500px; }
+
+#bp_instruction_palm, #bp_instruction_arm, #bp_instruction_relax {
+  opacity: 0.4; }
+
+#bp_instruction_arm, #bp_instruction_arm_text {
+  left: 36px; }
+
+#bp_instruction_arm_frames {
+  background: transparent url("../images/bp_instruction_arm_sequence20121016.png") top left no-repeat;
+  height: 224px;
+  width: 224px;
+  display: block;
+  z-index: 5; }
+
+
+#bp_instruction_palm_hand {
+  background: transparent url("../images/bp_instruction_palm_hand20121009.png") top left no-repeat;
+  position: absolute;
+  top: 0px !important;
+  height: 224px;
+  width: 224px;
+  display: block;
+  background-position: -6496px 0%;
+  z-index: 5;
+}
+
+#bp_instruction_palm_background {
+  background: transparent url("../images/bp_instruction_palm_background20121009.png") top left no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 0; }
+
+
+#bp_instruction_relax_higiguy {
+  background: transparent url("../images/bp_instruction_relax_higiguy20121009.png") top left no-repeat;
+  top: 0;
+  left: 0;
+  z-index: 15; }
+
+#bp_instruction_relax_umbrella {
+  background: transparent url("../images/bp_instruction_relax_umbrella20121009.png") top left no-repeat;
+  top: 30px;
+  left: 80px;
+  z-index: 10;
+  height: 131px;
+  width: 112px; }
+
+#bp_instruction_relax_beach {
+  background: transparent url("../images/bp_instruction_relax_beach20121009.png") top left no-repeat;
+  top: 0;
+  left: 0;
+  z-index: 0; }
+
+
+/*local result page*/
+.bp_results_main_container{
+	height: 370px; margin-top: 115px; box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;     background-color: #dddddd; 
+}
+
+.bp_results_header_container{
+	padding-top: 15px;
+	margin-left: 20px;
+}
+.bp_results_header_image{
+	margin-right: 15px;
+    width: 34px;
+    float: left;
+}
+.bp_results_header_text{
+	padding-left: 31px;
+    font-weight: 500;
+    margin-top: 0px;    
+    font-size: 34px;
+    color: #4d4d4d;
+    margin-bottom: 15px;
+    font-family: 'LatoItalic';
+}
+.bp_results_small_text {
+    color: #797979;
+    font-family: latoItalic;
+    font-size: 26px;
+}
+.bp_results_sub_container{
+	width: 92%;
+    margin: auto;
+    background-color: #fff;
+    height: 260px;    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+    padding: 10px;
+}
+.bp_results_title_container{
+	height: 260px; 
+	width: 100px;    
+	position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;    
+    background-color: #E6E6E6;
+}
+
+.bp_results_parameter_title{
+	background-color: #f2f2f2;
+    padding: 20px 0px;
+    margin-top: 0px;
+    border-radius: 10px 10px 0px 0px;
+    font-size: 14px;
+    color: #383838;
+}
+.bp_results_yourscore_title{
+	color: #383838;
+    font-size: 14px;    background-color: #e6e6e6;
+    padding: 20px 0px;
+    margin-top: -14px;
+}
+.bp_results_status_title{
+	background-color: #f2f2f2;
+    padding: 20px 0px;
+    margin-top: -10px;    
+    font-size: 14px;
+    color: #383838;
+}
+.bp_results_range_title{
+	margin-top: 15px;
+	color: #383838;
+    font-size: 14px;
+}
+
+.bp_results_param1_container{
+	height: 260px; 
+	background-color: #e6e6e6; 
+	left:115px; 
+	width: 155px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+.bp_results_param1_title, .bp_results_param2_title, .bp_results_param3_title{
+	font-size: 24px;
+    font-weight: 500;
+    color: #4a4a4ae3;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: LatoBold;
+}
+.bp_results_parm1_sub_title, .bp_results_param2_sub_title, .bp_results_param3_sub_title{
+	font-size: 14px; 
+	color: #6d6d6de8; 
+	position-top: 0px; 
+	font-family: LatoRegular;
+	text-align: center;
+	margin:0px;
+}
+.bp_results_parm1_value, .bp_results_param2_value, .bp_results_param3_value{
+	margin-top: 20px;
+    font-size: 32px;
+    margin-left: 6px;
+    color: gray;
+    font-family: LatoHeavy;
+	margin-bottom: 0px;
+}
+.bp_results_param1_status, .bp_results_param2_status, .bp_results_param3_status{
+	margin-top: 25px;
+    font-size: 18px;
+    font-family: LatoHeavy;	   
+    margin-bottom: 0px;
+    text-align: center;
+    font-weight: 500;
+    color: #454545;
+    text-transform: uppercase;
+}
+.bp_results_param1_status {
+  width: 310px !important;
+}
+.bp_range_txt{
+	font-size: 14px;
+    margin-top: 25px;
+    color: #5a5a5a;
+}
+.bp_results_units{
+    font-size: 14px;
+    color: #6d6d6de8;
+    position-top: 0px;
+    font-family: LatoRegular;
+    text-align: center;
+    margin: 0px;	
+}
+.bp_results_param2_container{
+	position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+	height: 260px; 
+	background-color: #e6e6e6; 
+	left:250px;
+  padding-left: 25px; 
+	width: 155px;
+  z-index: -1;
+}
+.bp_status_bar{
+	width: 90%; 
+	position: relative; 
+	top:15px;
+}
+.bp_results_param3_container{
+	position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+	height: 260px; 
+	background-color: #fff; 
+	left:435px; 
+	width: 155px;
+}
+
+.bp_results_over_all_status_container{
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 15px;
+    text-align: center;
+	left:595px; 
+	width: 155px; 
+	height: 260px; 
+	background-color: #e6e6e6;
+}
+
+.bp_results_over_all_status_titles{
+	font-size: 20px;
+    color: #4a4a4aa8;
+    margin-top: 6px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: LatoBold;
+}
+.bp_results_overall_sub_title{
+	font-size: 14px; 
+	color: #6d6d6de8; 
+	position-top: 0px; 
+	font-family: LatoRegular;
+	text-align: center;
+	margin:10px;
+}
+.bp_results_overall_value{
+	margin-bottom: 0px;
+    color: #fff;
+    font-size: 26px;
+    margin-top: 0px;
+    font-family: LatoHeavy;
+    text-align: center;
+}
+.bp_overall_results_units{
+	margin-top: 10px; 
+	font-size: 15px; 
+	color: #6d6d6de8; 
+	position-top: 0px; 
+	margin-top: 0px; 
+	font-family: LatoRegular; 
+	color: #fff;
+}
+.bp_overall_ststus_icon{
+	margin-top: -5px;
+    width: 55px;
+    margin-bottom: 5px;
+}
+.bp_overall_status_txt{
+	  font-size: 17px;
+    color: #fff;
+    font-size: lato;
+    position: relative;
+    width: 99%;
+    width: 80%;
+    margin: auto;
+}
+.bp_sys_arrow_size_pos {
+    background: url(../images/bmi_scale_arrow20120509.png) no-repeat;
+    display: block;
+    height: 15px;
+    width: 25px;
+    position: absolute;
+    top: 220px;
+    left: 25px;
+    background-size: 20px;
+}
+.bp_dia_arrow_size_pos {
+    background: url(../images/bmi_scale_arrow20120509.png) no-repeat;
+    display: block;
+    height: 15px;
+    width: 25px;
+    position: absolute;
+    top: 215px;
+    left: 25px;
+    background-size: 20px;
+}
+.bp_pulse_arrow_size_pos {
+    background: url(../images/bmi_scale_arrow20120509.png) no-repeat;
+    display: block;
+    height: 15px;
+    width: 25px;
+    position: absolute;
+    top: 220px;
+    left: 25px;
+    background-size: 20px;
+}
+
+.bp_results_over_all_status_container.atrisk, .bp_results_over_all_status_container.high, .bp_results_over_all_status_container.low {
+    background-color: #ac0404;
+}
+
+.bp_results_over_all_status_container.atrisk p:first-child, 
+.bp_results_over_all_status_container.atrisk p:nth-child(2),
+.bp_results_over_all_status_container.high p:first-child, 
+.bp_results_over_all_status_container.high p:nth-child(2) {
+    color: #d1b8b8;
+}
+
+.bp_results_over_all_status_container.normal, .bp_results_over_all_status_container.bp_acceptable{
+	background-color: #83d501;
+}
+/*.bp_results_over_all_status_container.bp_acceptable{
+	background-color: #ef940f;
+}*/
+.bp_status_high, .bp_status_low{
+  color: #fe3232;
+}
+
+.bp_status_normal, .bp_status_acceptable{
+  color: #87c427; 
+}
+.bp_sys_status_acceptable, .bp_dia_status_acceptable, .bp_pulse_status_normal{
+  left: 70px;
+}
+.bp_pulse_new_status_normal {
+  left: 20px;
+}
+.bp_sys_status_normal, .bp_dia_status_normal, .bp_pulse_status_low{
+  left: 25px;
+}
+.bp_sys_status_high, .bp_dia_status_high, .bp_pulse_status_high{
+  left: 120px;
+}
+.bp_new_status_acceptable {
+  left: 25px;
+}
+.bp_new_status_neutral {
+  left: 150px;
+}
+.bp_new_status_recheck {
+  left: 270px;
+}
+.bp_cancel_instructions_txt{
+   text-align: center;
+    margin-left: 9px;
+    padding-top: 10px;
+    color: red;
+    font-family: LatoRegular;
+    font-size: 22px;
+}
+
+
+#bloodpressure_retake_hint {
+  height: 38px;
+  position: relative;
+  top: 400px;
+  width: 532px;
+  left: 86px;
+  z-index: 20;
+  text-align: center;
+  color: #6D6D6D;
+  font-family: "IntervalSansProCondSemiBoldRg";
+  font-size: 16px; }
+
+#bloodpressure_retake_calculate_average {
+  font-size: 20px;
+  color: #4a4a4a;
+  padding-left: 23px;
+  background: transparent url("../images/bp_results_arrow20130129.png") top left no-repeat;
+  font-family: 'IntervalSansProBold';
+  display: block;
+  width: 420px;
+  margin: 0 auto;
+  height: 30px;
+  line-height: 26px;
+  text-shadow: 0 1px 1px #fff; }
+
+#bloodpressure_retake_tap_redo {
+  color: #4a4a4a;
+  font-size: 16px;
+  display: block;
+  margin: 4px auto 0;
+  text-shadow: 0 1px 1px #fff;
+  width: 400px; }
+
+#bloodpressure_physician_disclaimer {
+  height: 38px;
+  position: relative;
+  top: 325px;
+  width: 480px;
+  left: 110px;
+  z-index: 20;
+  text-align: center;
+  color: #7c7c7c;
+  font-family: "IntervalSansProCondSemiBoldRg";
+  font-size: 12px; }
+
+#bloodpressure_instructional_text {
+  color: #7c7c7c;
+  font-size: 20px;
+  height: 200px;
+  position: relative;
+  top: 150px;
+  width: 310px;
+  left: 400px;
+  z-index: 20; }
+
+#bloodpressure_cancel_pane {
+  height: 400px;
+  width: 800px;
+  text-align: center;
+  position: absolute;
+  top: 110px; }
+
+#bloodpressure_cancel_icon {
+  position: relative;
+  width: 800px;
+  height: 150px;
+  background: url("../images/bp_cancel_icon20120530.png") center no-repeat;
+  top: 10px; }
+
+#bloodpressure_cancel_text {
+  position: relative;
+  width: 800px;
+  height: 150px;
+  top: 40px;
+  color: #7c7c7c;
+  font-family: "IntervalSansProCondSemiBoldRg";
+  font-size: 35px; }
+
+#bloodpressure_pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 800px;
+  height: 600px; }
+
+#bloodpressure_instructions_pane .instruction {
+  position: absolute;
+  top: 225px;
+  width: 100%;
+  text-align: center;
+  font-family: "IntervalSansProCondSemiBoldRg";
+  font-size: 20px; }
+  #bloodpressure_instructions_pane .instruction.begin {
+    top: 520px;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    color: #4a4a4a; }
+#bloodpressure_instructions_pane .warning {
+  color: #ee0b0b; }
+
+#bpgauge_arc_gauge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  -webkit-transform: translate3d(0, 0, 1px);}
+
+#bpgauge_container {
+  -webkit-transform-style: preserve-3d; }
+
+#bpgauge_container_cover_top, #bpgauge_container_cover_bottom {
+  border-radius: 100%;
+  position: absolute;
+  -webkit-transform: translateZ(-1px);
+  -webkit-transform-style: preserve-3d;
+  height: 280px;
+  left: 260px;
+  position: absolute;
+  top: 164px;
+  width: 280px; }
+
+#bpgauge_container_cover_bottom {
+  -webkit-transform: translateZ(-19px); }
+
+#bpgauge_container_cover_edge {
+  bottom: 0;
+  position: absolute;
+  z-index: -10;
+  -webkit-transform: rotateY(-90deg);
+  -webkit-transform-origin: 100% 50%;
+  -webkit-transform-style: preserve-3d;
+  left: 386px;
+  top: 164px;
+  width: 20px;
+  height: 282px; }
+
+.bpgauge_container_3d_element {
+  background: #333 -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.9)); }
+
+#bpgauge_container_back {
+  background: transparent url("../images/bp_gauge_instruction_background_20121017.png") top left no-repeat;
+  border-radius: 100%;
+  position: absolute;
+  -webkit-transform: translateZ(-20px);
+  -webkit-transform-style: preserve-3d;
+  height: 283px;
+  left: 259px;
+  position: absolute;
+  top: 163px;
+  width: 282px; }
+
+#bpgauge_instruction_mask {
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
+#bpgauge_instruction_overlay {
+  background: transparent url("../images/bp_gauge_instruction_overlay_20121017.png") top left no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: 5; }
+
+#bpgauge_instruction_hand {
+  background: transparent url("../images/bp_gauge_instruction_hand20121017.png") top left no-repeat;
+  position: absolute;
+  top: 200px;
+  left: 98px;
+  display: block;
+  height: 139px;
+  width: 61px; }
+
+#bpgauge_top {
+  background: url("../images/bpgauge_top20120425.png") no-repeat;
+  z-index: 10;
+  height: 288px;
+  width: 288px;
+  position: relative;
+  top: 160px;
+  left: 255px;
+  -webkit-transform: translate3d(0, 0, 2px);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden; }
+
+#bpgauge_bottom {
+  background: url("../images/bpgauge_bottom20120425.png") no-repeat scroll 0 0 transparent;
+  left: 255px;
+  position: absolute;
+  top: 160px;
+  width: 800px;
+  height: 600px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;}
+
+#bpgauge_text {
+  display: block;
+  position: absolute;
+  top: 250px;
+  left: 300px;
+  color: #fff;
+  -webkit-transform: translate3d(0, 0, 3px);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  }
+
+#bpgauge_textnum {
+  display: block;
+  font-size: 100px;
+  text-align: center;
+  line-height: 70px;
+  width: 200px;
+  font-family: 'IntervalSansProCondSemiBoldRg';
+  text-shadow: 0px 1px 2px #000;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  }
+
+#bpgauge_mmhg {
+  display: block;
+  font-size: 34px;
+  text-align: center;
+  width: 200px;
+  font-family: 'IntervalSansProCondSemiBoldRg';
+  text-shadow: 0px 1px 2px #000;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  }
+
+
+#bloodpressure_average_optionsbar {
+  position: absolute;
+  top: 490px;
+  width: 500px;
+  left: 150px; }
+
+#bloodpressure_average_checkbox_btn {
+  width: 210px;
+  height: 52px;
+  position: absolute;
+  left: 35px;
+  border-radius: 4px;
+  background-image: -moz-linear-gradient(90deg, #dbdbdb 0%, #e0e0e0 14%, #e8e8e8 91%, #eaeaea 93%, #ebebeb 100%);
+  background-image: -webkit-linear-gradient(90deg, #dbdbdb 0%, #e0e0e0 14%, #e8e8e8 91%, #eaeaea 93%, #ebebeb 100%);
+  background-image: -ms-linear-gradient(90deg, #dbdbdb 0%, #e0e0e0 14%, #e8e8e8 91%, #eaeaea 93%, #ebebeb 100%);
+  border: 1px solid #dbdbdb;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2); }
+
+#bloodpressure_average_checkbox_btn:active {
+  border-radius: 4px;
+  background-image: -moz-linear-gradient(90deg, #c1c1c1 0%, #cccccc 14%, #c2c2c2 91%, #c2c2c2 93%, #c1c1c1 100%);
+  background-image: -webkit-linear-gradient(90deg, #c1c1c1 0%, #cccccc 14%, #c2c2c2 91%, #c2c2c2 93%, #c1c1c1 100%);
+  background-image: -ms-linear-gradient(90deg, #c1c1c1 0%, #cccccc 14%, #c2c2c2 91%, #c2c2c2 93%, #c1c1c1 100%);
+  border: 1px solid #dbdbdb;
+  -webkit-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+  -moz-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important; }
+
+#bloodpressure_average_checkbox {
+  width: 53px;
+  height: 53px;
+  background: transparent url("../images/login_show_password_btn20120622.png") top left no-repeat;
+  position: absolute; }
+
+#bloodpressure_average_checkbox_btn span {
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: 52px;
+  color: #7C7C7C;
+  text-shadow: 0 1px 1px white;
+  text-align: left;
+  font-size: 15px; }
+  #bloodpressure_average_checkbox_btn span.es_us {
+    top: 19px;
+    font-size: 13px; }
+
+#bloodpressure_average_checkbox.active_btn {
+  background-position: bottom left; }
+
+#bloodpressure_average_showall_btn {
+  position: absolute;
+  left: 270px;
+  width: 190px;
+  height: 52px;
+  border-radius: 4px;
+  background-image: -moz-linear-gradient(90deg, #dbdbdb 0%, #e0e0e0 14%, #e8e8e8 91%, #eaeaea 93%, #ebebeb 100%);
+  background-image: -webkit-linear-gradient(90deg, #dbdbdb 0%, #e0e0e0 14%, #e8e8e8 91%, #eaeaea 93%, #ebebeb 100%);
+  background-image: -ms-linear-gradient(90deg, #dbdbdb 0%, #e0e0e0 14%, #e8e8e8 91%, #eaeaea 93%, #ebebeb 100%);
+  border: 1px solid #dbdbdb;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  position: absolute; }
+
+#bloodpressure_average_showall_btn:active {
+  border-radius: 4px;
+  background-image: -moz-linear-gradient(90deg, #c1c1c1 0%, #cccccc 14%, #c2c2c2 91%, #c2c2c2 93%, #c1c1c1 100%);
+  background-image: -webkit-linear-gradient(90deg, #c1c1c1 0%, #cccccc 14%, #c2c2c2 91%, #c2c2c2 93%, #c1c1c1 100%);
+  background-image: -ms-linear-gradient(90deg, #c1c1c1 0%, #cccccc 14%, #c2c2c2 91%, #c2c2c2 93%, #c1c1c1 100%);
+  border: 1px solid #dbdbdb;
+  -webkit-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+  -moz-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important; }
+
+#bloodpressure_average_showall_btn span {
+  display: block;
+  position: absolute;
+  top: 18px;
+  color: #7C7C7C;
+  text-shadow: 0 1px 1px white;
+  text-align: left;
+  font-size: 15px;
+  width: 100%;
+  text-align: center; }
+  #bloodpressure_average_showall_btn span.es_us {
+    top: 19px;
+    font-size: 13px; }
+
+
+#bp-ref-chart {
+    border: 1px solid black;
+    height: 18px;
+    border-radius: 5px;
+    display: flex;
+    width: 300px;
+    margin-left: 5px;
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(to right, #37bd46, #7ea700, #ac8b00, #d16400, #eb1f12);
+    top: 10px;
+}
+
+#diastolic-title-value-container {
+    background: #fff;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.bpEmergencyStop {
+  position: fixed;
+    height: 45px;
+    width: 180px;
+    top: 365px;
+    left: 310px;
+    border: 2px solid red;
+    border-radius: 10px;
+    text-align: center;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+}

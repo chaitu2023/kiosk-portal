@@ -1,0 +1,17 @@
+{
+    "zuginstruction01_audio01": "sounds/gujarati/threelead.wav",
+    "zuginstruction01_audio02": "sounds/gujarati/hand_instructions1.wav",
+    "zuginstruction01_audio03": "sounds/gujarati/hand_instructions2.wav",
+    "zuginstruction01_audio04": "sounds/gujarati/singlelead.wav",
+    "zuginstruction01_audio05": "sounds/gujarati/keephands.wav",
+    "zuginstruction01_audio06": "sounds/gujarati/keepleg.wav",
+    "zuginstruction01_audio07": "sounds/gujarati/LeginstructionEcg.wav",
+    "zuginstruction01_audio08": "sounds/gujarati/sixleadjack.wav",
+    "zuginstruction01_audio09": "sounds/gujarati/vo_sixleadECG.wav",
+    "zugprogression01_audio01": "sounds/gujarati/reading_lead1.wav",
+    "zugprogression01_audio02": "sounds/gujarati/reading_lead2.wav",
+    "zugprogression01_audio03": "sounds/gujarati/reading_lead3.wav",
+    "zugprogression01_audio04": "sounds/gujarati/readingallsixlead.wav",
+    "zugresults01_audio01": "sounds/gujarati/results.wav",
+    "zugresults01_audio02": "sounds/gujarati/chkEcgAgain.wav"
+}

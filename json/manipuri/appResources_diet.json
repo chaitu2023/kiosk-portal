@@ -1,0 +1,405 @@
+{
+    "print.exercise":"* Recommended Exercise:",
+    "print.restriction":"* Restriction:",
+    "print.recommendations":"* Recommendations:",
+    "print.disclaimer":"The IHL kiosk is intended to be used by individuals of 18 years or older, individuals under 18 years can check the weight and BMI as guest user under direct supervision of guardian. IHL does not give medical advice. The IHL service may provide helpful information about you, such as vitals. The information and materials available through the IHL service are for informational and educational purposes only and not intended to constitute professional advice, diagnosis or treatment, or to substitute for your judgment. The Body Data and other information in your account may not always be accurate, complete, or up-to-date and should be used for informational purposes only. You assume full risk and responsibility for the use of information you obtain from or through the IHL Service. In addition, we do not recommend or endorse any provider of health care or health-related products, items, or services.",
+
+    "print.intense.40min" : "Intense activity for 30-40 minutes per day",
+    "print.moderate.30min" : "Moderate activity for 30 minutes per day",
+    "print.light.15min" : "Light activity for 15-30 minutes per day",
+
+    "print.intens" : "Intense activity",
+    "print.moderat" : "Moderate activity",
+    "print.ligh" : "Light activity",
+    "print.energyneeded" : "DAILY ENERGY NEEDED",
+
+    "print.male.light.exercise":"walking,Gardening, Basic yoga etc.",
+    "print.male.moderate.exercise":"Cardiovascular exercise like walking, cycling, swimming etc.",
+    "print.male.intense.exercise":"Jogging, Running , Aerobics,Badminton, Jumping rope Etc.",  
+
+    "print.female.light.exercise":"Like Slow walk, Gardening, Mild stretching Etc.",
+    "print.female.moderate.exercise":"Cardiovascular exercsie like walking, cycling, swimming,Golf Etc.",
+    "print.female.intense.exercise":"Running, Jogging,Badminton, Walking upsatirs,Bicycling, Jumping rope etc.", 
+
+    
+
+
+
+
+
+
+    "print.male.common.daily.2000kcal":"DAILY ENERGY NEEDED 2000 Kcal:",
+    "print.male.common.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 4 serving a day <br> Vegetables ---- 4-5 serving a day <br> Low fat and fat free dairy products ---- 2-3 serving a day <br> Nuts,seeds,beansa nd legumes ---- 5 servings per week <br> Fats and oil ---- 2 tsp./ day <br> Polutry and eggs ---- 2 or less serving per day",
+    "print.male.common.restriction":"Saturated fats,cholesterol and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake, Processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+    "print.male.common.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+
+    "print.female.common.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.female.common.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 2-4Serving a day<br> Vegetables ---- 3-5 serving a day<br> Low fat dairy products ---- 2-3 serving a day <br> Beans,Nuts,Lean meat ---- 4-5 serving a day <br> Oil ---- 2 tsp/day",
+    "print.female.common.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+    "print.female.common.recommended":"Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+
+
+
+
+
+
+    "print.male.bp.high.daily.2000kcal":"DAILY ENERGY NEEDED 2000 Kcal:",
+    "print.male.bp.high.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 4-5  serving a day <br> Vegetables ---- 4-5 serving a day <br> Low fat and fat free dairy products ---- 2-3  serving a day <br> Nuts seeds and legumes ---- 5 servings per week <br> Fat and oil ---- 2 tsp./ day",
+    "print.male.bp.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake, processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+
+    "print.female.bp.high.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.female.bp.high.energy":"(Cereals/ Whole grains ---- 6  serving a day <br>Whole fruits ---- 2-4 serving a day <br>Vegetables ---- 3-5  serving a day <br>Low fat dairy products ---- 2-3  serving a day <br>Beans,Nuts and lean meats ---- 4-5 serving a day <br>Oil ---- 2 tsp. a day",
+    "print.female.bp.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake, processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+    "print.female.bp.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+
+    "print.male.bp.acceptable.daily.2000kcal":"DAILY ENERGY NEEDED 2000 Kcal:",
+    "print.male.bp.acceptable.energy":"Cereals/ Whole grains ---- 6 serving a day <br>Whole fruits ---- 4 serving a day <br>Vegetables ----  4-5 serving a day <br>Low fat and fat free dairy products ---- 2-3  serving a day <br>Nuts,seeds,beansa nd legumes ---- 5 servings per week <br>Fats and oil ---- 2 tsp./ day <br>Polutry and eggs ---- 2 or less serving per day",
+    "print.male.bp.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.acceptable.restriction":"Saturated fats,cholesterol and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake, Processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+
+    "print.female.bp.acceptable.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.female.bp.acceptable.energy":"(Cereals/ Whole grains ---- 6  serving a day <br>Whole fruits ---- 2-4 serving a day <br>Vegetables ---- 3-5  serving a day <br>Low fat dairy products ---- 2-3  serving a day <br>Beans,Nuts and lean meats ---- 4-5 serving a day <br>Oil ---- 2 tsp. a day",
+    "print.female.bp.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake, processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+    "print.female.bp.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+
+
+    "print.male.pulse.acceptable.daily.2000kcal":"DAILY ENERGY NEEDED 2000 Kcal:",
+    "print.male.pulse.acceptable.energy":"Cereals/ Whole grains ---- 6 serving a day <br>Whole fruits ---- 4-5  serving a day <br>Vegetables ---- 4-5 serving a day <br>Low fat and fat free dairy products ---- 2-3  serving a day <br>Nuts seeds and legumes ---- 5 servings per week <br>Fat and oil ---- 2 tsp./ day",
+    "print.male.pulse.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.pulse.acceptable.restriction":"Saturated fats,cholesterol and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake, Processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+
+    "print.female.pulse.acceptable.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.female.pulse.acceptable.energy":"(Cereals/ Whole grains ---- 6  serving a day <br>Whole fruits ---- 2-4 serving a day <br>Vegetables ---- 3-5  serving a day <br>Low fat dairy products ---- 2-3  serving a day <br>Beans,Nuts and lean meats ---- 4-5 serving a day <br>Oil ---- 2 tsp. a day",
+    "print.female.pulse.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake, processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+    "print.female.pulse.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+
+
+    "print.male.pulse.low.daily.2000kcal":"DAILY ENERGY NEEDED 2000 Kcal:",
+    "print.male.pulse.low.energy":"Cereals/ Whole grains ---- 6 serving a day <br>Whole fruits ---- 4 serving a day <br>Vegetables ---- 4-5 serving a day <br>Low fat and fat free dairy products ---- 2-3  serving a day <br>Nuts seeds and legumes ---- 5 servings per week <br>Fat and oil ---- 2 tsp./ day <br> Polutry and eggs ---- 2 or less serving per day",
+    "print.male.pulse.low.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.pulse.low.restriction":"N/A",
+
+    "print.female.pulse.low.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.female.pulse.low.energy":"Cereals/ Whole grains ---- 6  serving a day <br>Whole fruits ---- 2-4 serving a day <br>Vegetables ---- 3-5  serving a day <br>Low fat dairy products ---- 2-3  serving a day <br>Beans,Nuts and lean meats ---- 4-5 serving a day <br>Oil ---- 2 tsp. a day",
+    "print.female.pulse.low.restriction":"N/A",
+    "print.female.pulse.low.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+
+    "print.male.pulse.normal.daily.2200kcal":"DAILY ENERGY NEEDED 2200 Kcal:",
+    "print.male.pulse.normal.energy":"Cereals/ Whole grains ---- 6-8 servings a day <br> Whole fruits ---- 4-5 serving a day <br> Vegetables ---- 4-5  serving a day <br> Dairy products ---- 3-4 Serving a day <br> oil ---- 2 tsp./day<br> Pulses and Legumes ---- 4-6 servings a day",
+    "print.male.pulse.normal.recommended":"N/A",
+    "print.male.pulse.normal.restriction":"N/A",
+
+    "print.female.pulse.normal.daily.2000kcal":"DAILY ENERGY NEEDED 2000 Kcal:",
+    "print.female.pulse.normal.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 4-5 serving a day <br> Vegetables ---- 4-5 serving a day <br> Dairy products ---- 3 serving a day <br> Polutry / eggs ---- 7-8servings per week <br> Fats and oil ---- 2 tsp./day <br> Nuts , seeds,beans and legumes ---- 5 servings per week",
+    "print.female.pulse.normal.restriction":"N/A",
+    "print.female.pulse.normal.recommended":"N/A",
+
+    "print.male.pulse.high.daily.2000kcal":"DAILY ENERGY NEEDED 2000 Kcal:",
+    "print.male.pulse.high.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 4-5  serving a day <br> Vegetables ---- 4-5 serving a day <br> Low fat and fat free dairy products ---- 2-3  serving a day <br> Nuts seeds and legumes ---- 5 servings per week <br> Fat and oil ---- 2 tsp./ day",
+    "print.male.pulse.high.recommended":"Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.pulse.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake, processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+
+    "print.female.pulse.high.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.female.pulse.high.energy":"Cereals/ Whole grains ---- 6 <br> serving a day Whole fruits ---- 2-4 serving a day <br> Vegetables ---- 3-5  serving a day <br> Low fat dairy products ---- 2-3  serving a day <br> Beans,Nuts and lean meats ---- 4-5 serving a day <br> Oil 2 tsp. a day",
+    "print.female.pulse.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake,  processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+    "print.female.pulse.high.recommended": "Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+
+    "print.male.bp.high.pulse.high.bmi.obese.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.male.bp.high.pulse.high.bmi.obese.energy":"Cereals/ Whole grains ---- 4-6 serving a day <br> Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day<br> Low fat dairy products ---- 4-5 serving a day<br>oil ---- 2 tsp./ day",    
+    "print.male.bp.high.pulse.high.bmi.obese.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.high.pulse.high.bmi.obese.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+    "print.female.bp.high.pulse.high.bmi.obese.daily.1400kcal":"DAILY ENERGY NEEDED 1400 Kcal:",
+    "print.female.bp.high.pulse.high.bmi.obese.energy":"Cereals/ Whole grains ---- 4-5 serving a day<br> Whole fruits ---- 2 serving a day <br> Vegetables ---- 4 serving a day<br> Low fat dairy products ---- 2-3 serving a day<br>oil ---- 2 tsp./ day",    
+    "print.female.bp.high.pulse.high.bmi.obese.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bp.high.pulse.high.bmi.obese.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+    "print.male.bp.high.pulse.high.bmi.overweight.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.male.bp.high.pulse.high.bmi.overweight.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 2-4 serving a day <br> Vegetables ---- 3-5 serving a day<br> Low fat dairy products ---- 2-3 serving a day<br> Beans,Nuts,Lean meat ---- 4-5 serving a day<br>oil ---- 2 tsp./ day</p>",    
+    "print.male.bp.high.pulse.high.bmi.overweight.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.high.pulse.high.bmi.overweight.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+    "print.female.bp.high.pulse.high.bmi.overweight.daily.1400kcal":"DAILY ENERGY NEEDED 1400 Kcal:",
+    "print.female.bp.high.pulse.high.bmi.overweight.energy":"Cereals/ Whole grains ---- 4-6 serving a day <br> Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day<br> Low fat dairy products ---- 4-5 serving a day<br>oil ---- 2 tsp./ day",    
+    "print.female.bp.high.pulse.high.bmi.overweight.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bp.high.pulse.high.bmi.overweight.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+    "print.male.bp.acceptable.pulse.high.bmi.obese.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.male.bp.acceptable.pulse.high.bmi.obese.energy":"Cereals/ Whole grains ---- 4-6 serving a day <br> Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day<br> Low fat dairy products ---- 4-5 serving a day<br>oil ---- 2 tsp./ day",    
+    "print.male.bp.acceptable.pulse.high.bmi.obese.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.acceptable.pulse.high.bmi.obese.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+    "print.female.bp.acceptable.pulse.high.bmi.obese.daily.1400kcal":"DAILY ENERGY NEEDED 1400 Kcal:",
+    "print.female.bp.acceptable.pulse.high.bmi.obese.energy":"Cereals/ Whole grains ---- 4-5 serving a day<br> Whole fruits ---- 2 serving a day<br> Vegetables ---- 4 serving a day<br>Low fat dairy products ---- 2-3 serving a day<br>oil ---- 2 tsp./ day",    
+    "print.female.bp.acceptable.pulse.high.bmi.obese.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bp.acceptable.pulse.high.bmi.obese.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+    "print.male.bp.acceptable.pulse.high.bmi.overweight.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.male.bp.acceptable.pulse.high.bmi.overweight.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 2-4 serving a day<br> Vegetables ---- 3-5 serving a day<br> Low fat dairy products ---- 2-3 serving a day<br>Beans,Nuts,Lean meat ---- 4-5 serving a day <br>oil ---- 2 tsp./ day",    
+    "print.male.bp.acceptable.pulse.high.bmi.overweight.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.acceptable.pulse.high.bmi.overweight.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+    "print.female.bp.acceptable.pulse.high.bmi.overweight.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.female.bp.acceptable.pulse.high.bmi.overweight.energy":"Cereals/ Whole grains ---- 4-6 serving a day<br> Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day<br> Low fat dairy products ---- 4-5 serving a day<br>oil ---- 2 tsp./ day",    
+    "print.female.bp.acceptable.pulse.high.bmi.overweight.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bp.acceptable.pulse.high.bmi.overweight.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+
+
+
+
+
+
+
+
+
+    "print.male.bp.normal.daily.2200kcal":"DAILY ENERGY NEEDED 2200 Kcal:",
+    "print.male.bp.normal.energy":"Cereals/ Whole grains ---- 6-8 servings a day <br> Whole fruits ---- 4-5 serving a day<br> Vegetables ---- 4-5 serving a day<br>Dairy products ---- 3-4 Serving a day<br>oil ---- 2 tsp./day <br> Pulses and Legumes ---- 4-6 servings a day",
+    "print.male.bpnormal..recommended":"",
+    "print.male.bp.normal.restriction":"",
+
+    "print.male.bp.acceptable.daily.2000kcal":"DAILY ENERGY NEEDED 2000 Kcal:",
+    "print.male.bp.acceptable.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 4 serving a day<br> Vegetables ---- 4-5 serving a day <br>Low fat and fat free dairy products ---- 2-3  serving a day <br> Nuts,seeds,beansa nd legumes ---- 5 servings per week <br> Fats and oil ---- 2 tsp./ day <br> Polutry and eggs ---- 2 or less serving per day",
+    "print.male.bp.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.acceptable.restriction":"Saturated fats, cholesterol and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake, Processed and packaged foodSodium 1,500 mg/day (about 2/3 tsp of salt)",
+
+    "print.male.bp.high.daily.2000kcal":"DAILY ENERGY NEEDED 2000 Kcal:",
+    "print.male.bp.high.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 4-5  serving a day <br> Vegetables ---- 4-5 serving a day<br> Low fat and fat free dairy products ---- 2-3  serving a day <br> Nuts seeds and legumes ---- 5 servings per week <br> Fat and oil ---- 2 tsp./ day",
+    "print.male.bp.high.recommended":"Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake, processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+
+    "print.female.bp.normal.daily.2000kcal":"DAILY ENERGY NEEDED 2000 Kcal:",
+    "print.female.bp.normal.energy":"Cereals/ Whole grains ----  6 serving a day<br> Whole fruits ---- 4-5 serving a day<br> Vegetables ---- 4-5 serving a day <br> Dairy products ----  3 serving a day <br> Polutry / eggs ---- 7-8servings per week <br> Fats and oil ---- 2 tsp./day<br> Nuts , seeds,beans and legumes ---- 5 servings per week",
+    "print.female.bp.normal.recommended":"",
+    "print.female.bp.normal.restriction":"",
+
+    "print.female.bp.acceptable.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.female.bp.acceptable.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 2-4Serving a day <br> Vegetables ---- 3-5 serving a day<br> Low fat dairy products ---- 2-3 serving a day<br> Beans,Nuts,Lean meat ---- 4-5 serving a day <br> Oil ---- 2 tsp/day ",
+    "print.female.bp.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+    "print.female.bp.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+
+    "print.female.bp.high.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.female.bp.high.energy":"Cereals/ Whole grains ---- 6  serving a day <br> Whole fruits ---- 2-4 serving a day<br> Vegetables ---- 3-5  serving a day <br> Low fat dairy products ---- 2-3  serving a day<br> Beans,Nuts and lean meats ---- 4-5 serving a day <br> Oil ---- 2 tsp. a day ",
+    "print.female.bp.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bp.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake, processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+
+    
+
+
+
+    "print.male.bp.high.pulse.high.daily.2000kcal":"DAILY ENERGY NEEDED 2000 Kcal:",
+    "print.male.bp.high.pulse.high.energy":"Cereals/ Whole grains ---- 6 serving a day<br> Whole fruits ---- 4-5  serving a day <br> Vegetables ---- 4-5 serving a day <br> Low fat and fat free dairy products ---- 2-3  serving a day<br> Nuts seeds and legumes ---- 5 servings per week <br> Polutry/ Eggs ----  8-9 servings per week <br> Fat and oil ---- 2 tsp./ day ",
+    "print.male.bp.high.pulse.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.high.pulse.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake,  processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+
+    "print.female.bp.high.pulse.high.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.female.bp.high.pulse.high.energy":"Cereals/ Whole grains ---- 6  serving a day<br> Whole fruits ---- 4 serving a day<br> Vegetables ---- 4-5  serving a day <br>Low fat dairy products ---- 2-3  serving a day <br> Beans,Nuts and lean meats ---- 5 serving a day <br>Oil ---- 2 tsp. a day",
+    "print.female.bp.high.pulse.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bp.high.pulse.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake,  processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+
+
+    "print.male.bp.acceptable.pulse.high.daily.2000kcal":"DAILY ENERGY NEEDED 2000 Kcal:",
+    "print.male.bp.acceptable.pulse.high.energy":"Cereals/ Whole grains ---- 6  serving a day <br> Whole fruits ---- 4 serving a day <br> Vegetables ---- 4-5  serving a day <br> Low fat dairy products ---- 2-3  serving a day <br> Beans,Nuts and lean meats ---- 5 serving a day <br>Oil ---- 2 tsp. a day",
+    "print.male.bp.acceptable.pulse.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.acceptable.pulse.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake,  processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+
+    "print.female.bp.acceptable.pulse.high.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.female.bp.acceptable.pulse.high.energy":"Cereals/ Whole grains ---- 6  serving a day <br> Whole fruits ---- 2-4 serving a day<br> Vegetables ---- 3-5  serving a day <br> Low fat dairy products ---- 2-3  serving a day <br> Beans,Nuts and lean meats ---- 4-5 serving a day <br>Oil ---- 2 tsp. a day",
+    "print.female.bp.acceptable.pulse.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bp.acceptable.pulse.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Caffieine intake,  processed and packaged food Sodium 1,500 mg/day (about 2/3 tsp of salt)",
+
+
+
+
+    "print.male.bmc.high.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.male.bmc.high.energy":"Cereals/ Whole grains ---- 4-6 serving a day <br> Whole fruits ---- 3 serving a day  <br>Vegetables ---- 3-5 serving a day  <br> Low fat dairy products ---- 4-5 serving a day <br> oil ---- 2 tsp.",
+    "print.male.bmc.high.recommended":"Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bmc.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.female.bmc.high.daily.1400kcal":"DAILY ENERGY NEEDED 1400 Kcal:",
+    "print.female.bmc.high.energy":"Cereals/ Whole grains ---- 4-5 serving a day <br> Whole fruits ---- 2 serving a day <br> Vegetables ---- 4 serving a day <br> Low fat dairy products ---- 2-3  serving a day <br> Oil ---- 2 tsp./day",
+    "print.female.bmc.high.recommended":"Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bmc.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+
+    "print.male.bmc.acceptable.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.male.bmc.acceptable.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 2-4Serving a day <br>Vegetables ---- 3-5 serving a day  <br> Low fat dairy products ---- 2-3 serving a day <br>Beans,Nuts,Lean meat ---- 4-5 serving a day <br>Oil ---- 2 tsp/day",
+    "print.male.bmc.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bmc.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+    "print.female.bmc.acceptable.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.female.bmc.acceptable.energy":"Cereals/ Whole grains ---- 4-6 serving a day <br> Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day <br> Low fat dairy products ---- 4-5 serving a day <br> Oil ---- 2 tsp./day",
+    "print.female.bmc.acceptable.recommended":"Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bmc.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+
+
+
+
+    "print.male.bmi.underweight.daily.2200kcal":"DAILY ENERGY NEEDED 2200 Kcal:",
+    "print.male.bmi.underweight.energy":"Cereals/ Whole grains ---- 8 servings a day <br>Whole fruits ---- 6 serving a day <br>Vegetables ---- 4  serving a day <br> Dairy products ---- 5 Serving a day <br>oil ---- 4 tsp./day <br>Pulses and Legumes ---- 6 servings a day",
+    "print.male.bmi.underweight.recommended":" Protein shakes, Red meat , Nuts and nut butter, Whole-grain breads, Other starches includes Potaoes, Corn , Sweet Potatoes,Legumes  Dried fruits, Avocados,Dark chocolate, Eggs,Cheese,Yogurt , Banana, Healthy dessert",
+    "print.male.bmi.underweight.restriction":"N/A",
+
+    "print.female.bmi.underweight.daily.2000kcal":"DAILY ENERGY NEEDED 2000 Kcal:",
+    "print.female.bmi.underweight.energy":"Cereals/ Whole grains ---- 6 serving a day <br>Whole fruits ---- 5 serving a day <br>Vegetables ---- 4-5 serving a day <br> Dairy products ---- 4 serving a day <br>Polutry / eggs ---- 7-8servings per week <br>Fats and oil ---- 3 tsp./day <br>Nuts , seeds,beans and legumes ---- 5-7 servings per week",
+    "print.female.bmi.underweight.recommended":" Protein shakes, Red meat , Nuts and nut butter, Whole-grain breads, Other starches includes Potaoes, Corn , Sweet Potatoes,Legumes  Dried fruits, Avocados,Dark chocolate, Eggs,Cheese,Yogurt , Banana, Healthy dessert",
+    "print.female.bmi.underweight.restriction":"N/A",
+
+    "print.male.bmi.normal.daily.2200kcal":"DAILY ENERGY NEEDED 2200 Kcal:",
+    "print.male.bmi.normal.energy":"Cereals/ Whole grains ---- 6-8 servings a day <br> Whole fruits ---- 4-5 serving a day<br> Vegetables ---- 4-5 serving a day<br>Dairy products ---- 3-4 Serving a day <br> oil ---- 2 tsp./day <br> Pulses and Legumes ---- 4-6 servings a day ",
+    "print.male.bmi.normal.recommended":"",
+    "print.male.bmi.normal.restriction":"",
+
+    "print.male.bmi.overweight.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.male.bmi.overweight.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 2-4Serving a day <br> Vegetables ---- 3-5 serving a day <br> Low fat dairy products ---- 2-3 serving a day <br>Beans,Nuts,Lean meat ---- 4-5 serving a day <br> Oil ---- 2 tsp/day",
+    "print.male.bmi.overweight.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bmi.overweight.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+    "print.male.bmi.obese.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.male.bmi.obese.energy":"Cereals/ Whole grains ---- 4-6 serving a day <br> Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day <br>Low fat dairy products ---- 4-5 serving a day<br> oil ---- 2 tsp.",
+    "print.male.bmi.obese.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bmi.obese.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.female.bmi.normal.daily.2000kcal":"DAILY ENERGY NEEDED 2000 Kcal:",
+    "print.female.bmi.normal.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 4 serving a day <br> Vegetables ---- 5 serving a day <br> Low fat and fat free dairy products ---- 2-3  serving a day <br> Nuts,seeds,beansa nd legumes ---- 5 servings per week <br> Fats and oil ---- 2 tsp./day <br> Polutry and eggs ---- 8-9 serving per week",
+    "print.female.bmi.normal.recommended":"",
+    "print.female.bmi.normal.restriction":"",
+
+    "print.female.bmi.overweight.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.female.bmi.overweight.energy":"Cereals/ Whole grains ---- 4-6 serving a day <br> Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day <br> Low fat dairy products ---- 4-5 serving a day <br> oil ---- 2 tsp./ day",
+    "print.female.bmi.overweight.recommended":"Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bmi.overweight.restriction":"Saturated fats , cholesterol and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.female.bmi.obese.daily.1400kcal":"DAILY ENERGY NEEDED 1400 Kcal:",
+    "print.female.bmi.obese.energy":"Cereals/ Whole grains ---- 4-5 serving a day<br> Whole fruits ---- 2 serving a day <br> Vegetables ---- 4 serving a day <br> Low fat dairy products ---- 2-3  serving a day <br> Oil ---- 2 tsp./day",
+    "print.female.bmi.obese.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bmi.obese.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+
+
+
+
+
+    "print.male.bmi.overweight.bmc.acceptable.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.male.bmi.overweight.bmc.acceptable.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 2-4Serving a day <br> Vegetables ---- 3-5 serving a day<br>Low fat dairy products ---- 2-3 serving a day <br> Beans,Nuts,Lean meat ---- 4-5 serving a day <br> Oil ---- 2 tsp/day",
+    "print.male.bmi.overweight.bmc.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bmi.overweight.bmc.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+    "print.male.bmi.obese.bmc.high.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.male.bmi.obese.bmc.high.energy":"Cereals/ Whole grains ---- 4-6 serving a day <br> Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day<br> Low fat dairy products ---- 4-5 serving a day<br>oil ---- 2 tsp./ day",    
+    "print.male.bmi.obese.bmc.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bmi.obese.bmc.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+    "print.male.bmi.overweight.bmc.high.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.male.bmi.overweight.bmc.high.energy":"Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 2-4Serving a day <br> Vegetables ---- 3-5 serving a day <br>Low fat dairy products ---- 2-3 serving a day <br> Beans,Nuts,Lean meat ---- 4-5 serving a day <br> Oil ---- 2 tsp/day",
+    "print.male.bmi.overweight.bmc.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bmi.overweight.bmc.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+   
+    "print.male.bmi.obese.bmc.acceptable.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.male.bmi.obese.bmc.acceptable.energy":"Cereals/ Whole grains ---- 4-6 serving a day <br> Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day<br> Low fat dairy products ---- 4-5 serving a day<br>oil ---- 2 tsp./ day",    
+    "print.male.bmi.obese.bmc.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bmi.obese.bmc.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+    "print.female.bmi.overweight.bmc.acceptable.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.female.bmi.overweight.bmc.acceptable.energy":"Cereals/ Whole grains ---- 4-6 serving a day <br> Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day<br> Low fat dairy products ---- 4-5 serving a day<br>oil ---- 2 tsp./ day",    
+    "print.female.bmi.overweight.bmc.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bmi.overweight.bmc.acceptable.restriction":"Saturated fats, cholesterol and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.female.bmi.obese.bmc.high.daily.1400kcal":"DAILY ENERGY NEEDED 1400 Kcal:",
+    "print.female.bmi.obese.bmc.high.energy":"Cereals/ Whole grains ---- 4-5 serving a day <br> Whole fruits ---- 2 serving a day <br> Vegetables ---- 4 serving a day <br>Low fat dairy products ---- 2-3  serving a day <br> Oil ---- 2 serving a day",
+    "print.female.bmi.obese.bmc.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bmi.obese.bmc.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+    "print.female.bmi.overweight.bmc.high.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.female.bmi.overweight.bmc.high.energy":"Cereals/ Whole grains ---- 4-6 serving a day <br> Whole fruits ---- 3 serving a day<br> Vegetables ---- 3-5 serving a day <br> Low fat dairy products ---- 4-5 serving a day <br> oil ---- 2 tsp./ day",
+    "print.female.bmi.overweight.bmc.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bmi.overweight.bmc.high.restriction":"Saturated fats , cholesterol and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+   
+    "print.female.bmi.obese.bmc.acceptable.daily.1400kcal":"DAILY ENERGY NEEDED 1400 Kcal:",
+    "print.female.bmi.obese.bmc.acceptable.energy":"Cereals/ Whole grains ---- 4-5 serving a day <br> Whole fruits ---- 2 serving a day <br> Vegetables ---- 4 serving a day<br> Low fat dairy products ---- 2-3 serving a day<br>oil ---- 2 tsp./ day",    
+    "print.female.bmi.obese.bmc.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bmi.obese.bmc.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged food",
+
+
+
+
+
+
+
+    "print.male.bp.high.pulse.high.bmi.obese.bmc.high.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.male.bp.high.pulse.high.bmi.obese.bmc.high.energy":"  Cereals/ Whole grains ---- 4-6 serving a day <br>Whole fruits ---- 3 serving a day <br>Vegetables ---- 3-5 serving a day <br>Low fat dairy products ---- 4-5 serving a day<br> oil ---- 2 tsp./day ",
+    "print.male.bp.high.pulse.high.bmi.obese.bmc.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.high.pulse.high.bmi.obese.bmc.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.female.bp.high.pulse.high.bmi.obese.bmc.high.daily.1400kcal":"DAILY ENERGY NEEDED 1400 Kcal:",
+    "print.female.bp.high.pulse.high.bmi.obese.bmc.high.energy":"  Cereals/ Whole grains ---- 4-5 serving a day <br> Whole fruits ---- 2 serving a day <br> Vegetables ---- 4 serving a day <br> Low fat dairy products ---- 2-3 serving a day <br> oil ---- 2 tsp./day ",
+    "print.female.bp.high.pulse.high.bmi.obese.bmc.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bp.high.pulse.high.bmi.obese.bmc.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.male.bp.acceptable.pulse.high.bmi.overweight.bmc.acceptable.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.male.bp.acceptable.pulse.high.bmi.overweight.bmc.acceptable.energy":"  Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 2-4 serving a day <br>Vegetables ---- 3-5 serving a day <br>Low fat dairy products ---- 2-3 serving a day <br> Beans,Nuts,Lean meat ---- 4-5 serving a day <br> oil ---- 2 tsp./day ",
+    "print.male.bp.acceptable.pulse.high.bmi.overweight.bmc.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.acceptable.pulse.high.bmi.overweight.bmc.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+    
+    "print.female.bp.acceptable.pulse.high.bmi.overweight.bmc.acceptable.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.female.bp.acceptable.pulse.high.bmi.overweight.bmc.acceptable.energy":"  Cereals/ Whole grains ---- 4-6 serving a day <br> Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day <br> Low fat dairy products ---- 4-5 serving a day<br>oil ---- 2 tsp./ day ",
+    "print.female.bp.acceptable.pulse.high.bmi.overweight.bmc.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bp.acceptable.pulse.high.bmi.overweight.bmc.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+    
+    "print.male.bp.acceptable.pulse.high.bmi.overweight.bmc.high.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.male.bp.acceptable.pulse.high.bmi.overweight.bmc.high.energy":" Cereals/ Whole grains ---- 6 serving a day <br> Whole fruits ---- 2-4 serving a day <br> Vegetables ---- 3-5 serving a day<br>Low fat dairy products ---- 2-3 serving a day<br> Beans,Nuts,Lean meat ---- 4-5 serving a day <br>oil ---- 2 tsp./ day ",
+    "print.male.bp.acceptable.pulse.high.bmi.overweight.bmc.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.acceptable.pulse.high.bmi.overweight.bmc.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.female.bp.acceptable.pulse.high.bmi.overweight.bmc.high.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.female.bp.acceptable.pulse.high.bmi.overweight.bmc.high.energy":" Cereals/ Whole grains ---- 4-6 serving a day<br> Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day <br> Low fat dairy products ---- 4-5 serving a day<br>oil ---- 2 tsp./ day ",
+    "print.female.bp.acceptable.pulse.high.bmi.overweight.bmc.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bp.acceptable.pulse.high.bmi.overweight.bmc.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.male.bp.acceptable.pulse.high.bmi.obese.bmc.acceptable.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.male.bp.acceptable.pulse.high.bmi.obese.bmc.acceptable.energy":"  Cereals/ Whole grains ---- 4-6 serving a day <br> Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day <br> Low fat dairy products ---- 4-5 serving a day<br>oil ---- 2 tsp./ day ",
+    "print.male.bp.acceptable.pulse.high.bmi.obese.bmc.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.acceptable.pulse.high.bmi.obese.bmc.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.female.bp.acceptable.pulse.high.bmi.obese.bmc.acceptable.daily.1400kcal":"DAILY ENERGY NEEDED 1400 Kcal:",
+    "print.female.bp.acceptable.pulse.high.bmi.obese.bmc.acceptable.energy":"  Cereals/ Whole grains ---- 4-5 serving a day <br> Whole fruits ---- 2 serving a day <br> Vegetables ---- 4 serving a day <br> Low fat dairy products ---- 2-3 serving a day<br>oil ---- 2 tsp./ day ",
+    "print.female.bp.acceptable.pulse.high.bmi.obese.bmc.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bp.acceptable.pulse.high.bmi.obese.bmc.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.male.bp.high.pulse.high.bmi.overweight.bmc.acceptable.daily.1800kcal":"DAILY ENERGY NEEDED 1800 Kcal:",
+    "print.male.bp.high.pulse.high.bmi.overweight.bmc.acceptable.energy":" Cereals/ Whole grains ---- 6 serving a day<br>Whole fruits ---- 2-4 serving a day <br>Vegetables ---- 3-5 serving a day <br> Low fat dairy products ---- 2-3 serving a day<br> Beans,Nuts,Lean meat ---- 4-5 serving a day <br>oil ---- 2 tsp./ day",
+    "print.male.bp.high.pulse.high.bmi.overweight.bmc.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.high.pulse.high.bmi.overweight.bmc.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.female.bp.high.pulse.high.bmi.overweight.bmc.acceptable.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.female.bp.high.pulse.high.bmi.overweight.bmc.acceptable.energy":"  Cereals/ Whole grains ---- 4-6 serving a day<br> Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day <br> Low fat dairy products ---- 2-3 serving a day<br> Beans,Nuts,Lean meat ---- 4-5 serving a day <br>oil ---- 2 tsp./ day ",
+    "print.female.bp.high.pulse.high.bmi.overweight.bmc.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bp.high.pulse.high.bmi.overweight.bmc.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.male.bp.high.pulse.high.bmi.overweight.bmc.high.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.male.bp.high.pulse.high.bmi.overweight.bmc.high.energy":"  Cereals/ Whole grains ---- 4-6 serving a day <br> Whole fruits ---- 3 serving a day<br> Vegetables ---- 3-5 serving a day <br> Low fat dairy products ---- 4-5 serving a day<br>oil ---- 2 tsp./ day ",
+    "print.male.bp.high.pulse.high.bmi.overweight.bmc.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.high.pulse.high.bmi.overweight.bmc.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.female.bp.high.pulse.high.bmi.overweight.bmc.high.daily.1400kcal":"DAILY ENERGY NEEDED 1400 Kcal:",
+    "print.female.bp.high.pulse.high.bmi.overweight.bmc.high.energy":"  Cereals/ Whole grains ---- 4-5 serving a day <br> Whole fruits ---- 2 serving a day <br> Vegetables ---- 4 serving a day<br> Low fat dairy products ---- 2-3 serving a day<br>oil ---- 2 tsp./ day ",
+    "print.female.bp.high.pulse.high.bmi.overweight.bmc.high.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bp.high.pulse.high.bmi.overweight.bmc.high.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.male.bp.high.pulse.high.bmi.obese.bmc.acceptable.daily.1600kcal":"DAILY ENERGY NEEDED 1600 Kcal:",
+    "print.male.bp.high.pulse.high.bmi.obese.bmc.acceptable.high.energy":"  Cereals/ Whole grains ---- 4-6 serving a day <br>Whole fruits ---- 3 serving a day <br> Vegetables ---- 3-5 serving a day<br> Low fat dairy products ---- 4-5 serving a day<br>oil ---- 2 tsp./ day ",
+    "print.male.bp.high.pulse.high.bmi.obese.bmc.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.male.bp.high.pulse.high.bmi.obese.bmc.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods",
+
+    "print.female.bp.high.pulse.high.bmi.obese.bmc.acceptable.daily.1400kcal":"DAILY ENERGY NEEDED 1400 Kcal:",
+    "print.female.bp.high.pulse.high.bmi.obese.bmc.acceptable.high.energy":"  Cereals/ Whole grains ---- 4-5 serving a day <br> Whole fruits ---- 2 serving a day <br> Vegetables ---- 4 serving a day <br>Low fat dairy products ---- 2-3 serving a day<br>oil ---- 2 tsp./ day ",
+    "print.female.bp.high.pulse.high.bmi.obese.bmc.acceptable.recommended":" Green leafy vegetables, salads, whole fruits,Homemade soups, Dry fruits like Almonds, walnuts, Drink low-fat or skimmed dairy products",
+    "print.female.bp.high.pulse.high.bmi.obese.bmc.acceptable.restriction":"Saturated and trans-fat, Red Meat, Sugar-containing drinks, Processed and packaged foods"
+
+   
+
+
+
+}   

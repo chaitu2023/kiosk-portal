@@ -1,0 +1,20 @@
+<!--Modal Notifications Bar Components -->
+<div id="notifications_bar" ng-show="notificationBar.notificationVisible" class="{{notificationBar.barClass}}">
+    <div id="notifications_bar_content" class="{{langClass}}">
+        <div id="notifications_bar_title" class="{{notificationBar.notifbarPinnedClass}}">
+            <span ng-show="notificationBar.pointMessage">
+                <span ng-bind-html="interfaceLabels[notificationBar.notifbarTitleAuthOneOfTwo]"></span><span ng-show="!notificationBar.offline" class="points_icon" id="point-token" ng-bind-html="notificationBar.earnedPoints"></span><span ng-bind-html="interfaceLabels[notificationBar.notifbarTitleAuthTwoOfTwo]" ng-show="!notificationBar.offline" ></span>
+            </span>
+            <span ng-show="notificationBar.loginMessage">
+                <span ng-show="loggedIn">
+                    <span ng-bind-html="interfaceLabels[notificationBar.notifbarTitleAuthOneOfTwo]"></span><span class="points_icon" id="point-token" ng-bind-html="notificationBar.earnedPoints"></span><span ng-bind-html="interfaceLabels[notificationBar.notifbarTitleAuthTwoOfTwo]"></span>
+                </span>
+                <span ng-show="!loggedIn" ng-bind-html="interfaceLabels[notificationBar.notifbarTitle]"></span>
+
+            </span>
+             <span ng-show="notificationBar.offlineMessage">
+                <span ng-show="notificationBar.offline"><i class="icon-offlinecloud"></i> {{interfaceLabels[notificationBar.notifbarTitleOffline]}}</span>
+             </span>
+        </div>
+    </div>
+</div>

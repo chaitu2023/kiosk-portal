@@ -1,0 +1,1043 @@
+<style>
+    .tele_consultation_summary_main_container{
+        /* height:345px; */
+        width:100%;
+        padding:0px 40px 0px 20px;
+        box-sizing: border-box;
+    }
+    .tele_consultation_summary_details_container{
+        height:auto;
+        width:100%;
+        display: flex;
+    }
+    .tele_consultation_summary_details_rx_image_container{
+        display:inline-block; 
+        width:20%; 
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .tele_consultation_summary_user_details_value_container{
+        display: inline-block;
+        width:40%;
+        padding:10px 0px 0px 10px;
+        box-sizing: border-box;
+    }
+    .tele_consultation_summary_doctor_details_value_container{
+        display: inline-block;
+        width:40%;
+        padding:10px 0px 0px 10px;
+        box-sizing: border-box;
+    }
+    .tele_consultation_summary_25_percent_block{
+        display:inline-block;
+        width:25%;
+        box-sizing: border-box;
+        text-align:center;
+        padding:7px;
+        word-break: normal;
+        word-wrap: break-word;
+    }
+    .tele_consultation_summary_50_percent_block{
+        display:inline-block;
+        width:50%;
+        box-sizing: border-box;
+        text-align:center;
+        padding:7px;
+        word-break: normal;
+    }
+    .tele_consultation_summary_heading_color{
+        color:#48acf5;
+    }
+    #tele_consultation_summary_main_container{
+        overflow: hidden;
+        height:345px;
+        /* width:100%; */
+        position: relative;
+        display: block;
+    }
+    .tele_consultation_summary_25_percent_block_apollo{
+        display: inline-block;
+        width: 25%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 4px;
+        word-break:  break-word;
+    }
+    .tele_consultation_summary_100_percent_block_apollo{
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 4px;
+        word-break:  break-word;
+    }
+</style>
+<div class="tele_header_container">
+    <img class="tele_header_image" src="./images/telmed.png">
+    <span class="tele_header_text"> Consultation Summary </span> 
+</div>
+
+<div class="tele_main_container">
+    
+    <div id="tele_consultation_summary_main_container">
+        <div id="tele_consultation_summary_main_container_scroll" style="padding:inherit; width:100%;">
+            <div class="tele_consultation_summary_main_container" ng-show="shwMsg == false">
+    
+                <!-- Details block -->
+                <div class="tele_consultation_summary_details_container">
+                    <div ng-show = "teleconsultationUserSelectedData['tele-consultation-selected-type'] == 'Medical Consultation'" class="tele_consultation_summary_details_rx_image_container">
+                        <img src="images/prescription_rx.png" style="height: 80px;">
+                    </div>
+                    
+                    <div class="tele_consultation_summary_user_details_value_container">
+                        <div style="margin-bottom:5px">
+                            <span class="tele_consultation_summary_heading_color">USERNAME :-</span>
+                            <span>{{userName}}</span>
+                        </div>
+                        <div style="margin-bottom:5px">
+                            <span class="tele_consultation_summary_heading_color">AGE :-</span>
+                            <span>{{userAge}}</span>
+                        </div>
+                        <div style="margin-bottom:5px">
+                            <span class="tele_consultation_summary_heading_color">GENDER :-</span>
+                            <span>{{userGender}}</span>
+                        </div>
+                        <div style="margin-bottom:5px">
+                            <span class="tele_consultation_summary_heading_color">DATE :-</span>
+                            <span>{{appointmentDate}}</span>
+                        </div>
+                    </div>
+
+                    <div class="tele_consultation_summary_doctor_details_value_container">
+                        <div style="margin-bottom:5px">
+                            <span class="tele_consultation_summary_heading_color">DOCTOR NAME:-</span>
+                            <span>{{((consultantName.search("amp;") > -1 )? consultantName.replaceAll("amp;", "") : consultantName)}}</span>
+                        </div>
+                        <div style="margin-bottom:5px">
+                            <span class="tele_consultation_summary_heading_color">SPECIALITY :-</span>
+                            <span>{{((consultantSpeciality.search("amp;") > -1 )? consultantSpeciality.replaceAll("amp;", "") : consultantSpeciality)}}</span>
+                        </div>
+                        <div style="margin-bottom:5px">
+                            <span class="tele_consultation_summary_heading_color">FEES :-</span>
+                            <span>{{consultantFee}} INR</span>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Details block ends -->
+                <div style="width: 100%;margin: 20px 0px;" ng-if="vendorName == 'IHL'">
+                   <!--  <div style="width:100%;display:flex;border:1px solid #c0c0c0">
+                        <div class="tele_consultation_summary_50_percent_block tele_consultation_summary_heading_color">Diagnosis</div>
+                        <div class="tele_consultation_summary_50_percent_block tele_consultation_summary_heading_color">Consultant Instruction</div>
+                    </div>
+
+                    <div style="width:100%;display:flex;">
+                        <div class="tele_consultation_summary_50_percent_block">{{diagnosis}}</div>
+                        <div class="tele_consultation_summary_50_percent_block">{{consultation_advice_notes}}</div>
+                    </div> -->
+                    <div style="width:100%;">
+                        <div style="width:100%;margin-left: 10px;" class="tele_consultation_summary_heading_color">
+                        Diagnosis: <p style="color: #4d4d4d;word-break: break-all;margin-left: 20px;">{{diagnosis}}</p>
+                        </div>
+                        <div style="width:100%;margin-left: 10px;" class="tele_consultation_summary_heading_color">Consultant Instruction: <p style="color: #4d4d4d;word-break: break-all;margin-left: 20px;">{{consultation_advice_notes}}</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div style="width:100%; margin:20px 0px;" ng-if="vendorName != 'IHL' && vendorName != 'APOLLO'">
+                    <div ng-if="medications != undefined && medications != null && medications.length > 0">
+                        <h3 style="color: #4d4d4d;">Prescription:</h3>
+                        <div style="width:100%;display:flex;border:1px solid #c0c0c0">
+                            <div class="tele_consultation_summary_25_percent_block tele_consultation_summary_heading_color">Medicine Name</div>
+                            <div class="tele_consultation_summary_25_percent_block tele_consultation_summary_heading_color">Frequency</div>
+                            <div class="tele_consultation_summary_25_percent_block tele_consultation_summary_heading_color">Days</div>
+                            <div class="tele_consultation_summary_25_percent_block tele_consultation_summary_heading_color">Direction Of Use</div>
+                        </div>
+    
+                        <div style="width:100%;display:flex;border-width: 0px 1px 1px 1px;border-style: solid;border-color: #c0c0c0;" ng-repeat="medication in medications">
+                            <div class="tele_consultation_summary_25_percent_block">{{medication.drug_name}}</div>
+                            <div class="tele_consultation_summary_25_percent_block">{{(medication.SIG && medication.SIG.length > 0) ? medication.SIG : 'N/A'}}</div>
+                            <div class="tele_consultation_summary_25_percent_block"> {{(medication.days && medication.days.length > 0) ? medication.days : 'N/A'}}</div>
+                            <div class="tele_consultation_summary_25_percent_block">{{(medication.direction_of_use && medication.direction_of_use.length > 0) ? medication.direction_of_use : 'N/A'}}</div>
+                        </div>
+                    </div>
+
+                    <div ng-if="labTests != undefined && labTests != null && labTests.length > 0">
+                        <h3 style="color: #4d4d4d;">Lab Test:</h3>
+                        <div style="width:100%;display:flex;border:1px solid #c0c0c0">
+                            <div class="tele_consultation_summary_25_percent_block tele_consultation_summary_heading_color">Date Prescribed</div>
+                            <div class="tele_consultation_summary_25_percent_block tele_consultation_summary_heading_color">Test Name</div>
+                            <div class="tele_consultation_summary_25_percent_block tele_consultation_summary_heading_color">Notes</div>
+                        </div>
+    
+                        <div style="width:100%;display:flex;border-width: 0px 1px 1px 1px;border-style: solid;border-color: #c0c0c0;" ng-repeat="labTest in labTests">
+                            <div class="tele_consultation_summary_25_percent_block">{{(labTest.test_prescribed_on)?labTest.test_prescribed_on : 'N/A'  }}</div>
+                            <div class="tele_consultation_summary_25_percent_block">{{(labTest.test_name && labTest.test_name.length > 0) ? labTest.test_name : 'N/A'}}</div>
+                            <div class="tele_consultation_summary_25_percent_block"> {{(labTest.lab_note && labTest.lab_note.length > 0) ? labTest.lab_note : 'N/A'}}</div>
+                        </div>
+                    </div>
+
+                    <div ng-if="patientDiagnosis != undefined && patientDiagnosis != null && patientDiagnosis.length > 0">
+                        <h3 style="color: #4d4d4d;">Diagnosis:</h3>
+                        <div style="width:100%;display:flex;border:1px solid #c0c0c0">
+                            <div class="tele_consultation_summary_25_percent_block tele_consultation_summary_heading_color">Diagnosis Name</div>
+                            <div class="tele_consultation_summary_25_percent_block tele_consultation_summary_heading_color">Diagnosis Note</div>
+                        </div>
+    
+                        <div style="width:100%;display:flex;border-width: 0px 1px 1px 1px;border-style: solid;border-color: #c0c0c0;" ng-repeat="diagnosis in patientDiagnosis">
+                            <div class="tele_consultation_summary_25_percent_block">{{(diagnosis.diagnosis_name && diagnosis.diagnosis_name.length > 0) ? diagnosis.diagnosis_name : 'N/A'}}</div>
+                            <div class="tele_consultation_summary_25_percent_block"> {{(diagnosis.diagnosis_note && diagnosis.diagnosis_note.length > 0) ? diagnosis.diagnosis_note : 'N/A'}}</div>
+                        </div>
+                    </div>
+
+                    <div ng-if="radiologies != undefined && radiologies != null && radiologies.length > 0">
+                        <h3 style="color: #4d4d4d;">Radiology:</h3>
+                        <div style="width:100%;display:flex;border:1px solid #c0c0c0">
+                            <div class="tele_consultation_summary_25_percent_block tele_consultation_summary_heading_color">Date Prescribed</div>
+                            <div class="tele_consultation_summary_25_percent_block tele_consultation_summary_heading_color">Test Name</div>
+                            <div class="tele_consultation_summary_25_percent_block tele_consultation_summary_heading_color">Notes</div>
+                        </div>
+    
+                        <div style="width:100%;display:flex;border-width: 0px 1px 1px 1px;border-style: solid;border-color: #c0c0c0;" ng-repeat="radiology in radiologies">
+                            <div class="tele_consultation_summary_25_percent_block">{{(radiology.test_prescribed_on)?radiology.test_prescribed_on : 'N/A'  }}</div>
+                            <div class="tele_consultation_summary_25_percent_block">{{(radiology.test_name && radiology.test_name.length > 0) ? radiology.test_name : 'N/A'}}</div>
+                            <div class="tele_consultation_summary_25_percent_block"> {{(radiology.radiology_note && radiology.radiology_note.length > 0) ? radiology.radiology_note : 'N/A'}}</div>
+                        </div>
+                    </div>
+
+                    <div ng-if="instructionNotes != undefined && instructionNotes != null && instructionNotes.length > 0">
+                       <h3 style="color: #4d4d4d;">Instructions:</h3> 
+                       <ul style="list-style-type: circle;color: #4d4d4d;">
+                           <li ng-repeat="note in instructionNotes">
+                               {{note.Description}}
+                           </li>
+                       </ul>
+                    </div>
+                    <div ng-if="(medications == undefined || medications == null || medications.length == 0) && (instructionNotes == undefined || instructionNotes == null || instructionNotes.length == 0) && (labTests == undefined || labTests == null || labTests.length == 0) && (radiologies == undefined || radiologies == null || radiologies.length == 0)">
+                        <div style="width:100%; text-align:center;padding:20px 0px; border-top:1px solid #c0c0c0">
+                            Sorry no medications details available for this appointment.
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width:100%; margin:20px 0px;" ng-if="vendorName == 'APOLLO'">
+                    <div ng-if="medications != undefined && medications != null && medications.length > 0">
+                        <h3 style="color: #4d4d4d;">Prescription:</h3>
+                        <div style="width:100%;display:flex;border:1px solid #c0c0c0">
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Medicine Name</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Dosage</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Strength</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Frequency</div>
+                            <!-- <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">When To Take</div> -->
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Notes</div>
+                            <!-- <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Start Date</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">End Date</div> -->
+                        </div>
+        
+                        <div style="width:100%;display:flex;border-bottom: 1px solid #c0c0c0; border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0;" ng-repeat="medication in medications">
+                            <div class="tele_consultation_summary_25_percent_block_apollo"  ng-bind-html="(medication.drug_name != undefined && medication.drug_name != null && medication.drug_name.length > 0 ) ? medication.drug_name:'N/A'"> 
+                            </div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo" ng-bind-html="(medication.dosage != undefined && medication.dosage != null  && medication.dosage.length > 0 ) ? medication.dosage +' '+ medication.units : 'N/A' "></div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo" ng-bind-html="(medication.strength != undefined && medication.strength != null && medication.strength.length > 0 ) ? medication.strength : 'N/A'"></div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo" 
+                            ng-bind-html="(medication.frequency != undefined && medication.frequency != null && medication.frequency.length > 0 ) ? medication.frequency : 'N/A' "></div>
+                            <!-- <div class="tele_consultation_summary_25_percent_block_apollo" 
+                            ng-bind-html="(medication.whenToTake != undefined && medication.whenToTake != null && medication.whenToTake.length > 0 )? medication.whenToTake:'N/A' "></div> -->
+                            <div class="tele_consultation_summary_25_percent_block_apollo" 
+                            ng-bind-html="(medication.notes != undefined && medication.notes != null && medication.notes.length > 0 ) ? medication.notes : 'N/A'"></div>
+                            <!-- <div class="tele_consultation_summary_25_percent_block" 
+                            ng-bind-html="medication.startDate |  date:'medium'"></div>
+                            <div class="tele_consultation_summary_25_percent_block" 
+                             ng-bind-html="medication.endDate |  date:'medium'"></div> -->
+                        </div>
+                    </div>
+
+                    <div ng-if="patientDiagnosis != undefined && patientDiagnosis != null && patientDiagnosis.length > 0">
+                        <h3 style="color: #4d4d4d;">Patient Diagnosis:</h3>
+                        <div style="width:100%;display:flex;border:1px solid #c0c0c0">
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Concept Id</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Description Id</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Diagnosis Type</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Primary Options</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Snomed Term</div>
+                            
+                        </div>
+        
+                        <div style="width:100%;display:flex;border-bottom: 1px solid #c0c0c0; border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0;" ng-repeat="diagnosis in patientDiagnosis">
+                            <div class="tele_consultation_summary_25_percent_block_apollo"  ng-bind-html="(diagnosis.conceptId != undefined && diagnosis.conceptId != null && diagnosis.conceptId.length > 0) ? diagnosis.conceptId:'N/A'"> 
+                            </div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo" ng-bind-html="(diagnosis.descriptionId != undefined && diagnosis.descriptionId != null && diagnosis.descriptionId.length > 0) ? diagnosis.descriptionId : 'N/A' "></div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo" ng-bind-html="(diagnosis.diagnosisType != undefined && diagnosis.diagnosisType != null && diagnosis.diagnosisType.length > 0) ? diagnosis.diagnosisType : 'N/A'"></div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo" 
+                            ng-bind-html="(diagnosis.primaryOptions != undefined && diagnosis.primaryOptions != null  && diagnosis.primaryOptions.length > 0) ? diagnosis.primaryOptions : 'N/A' "></div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo" 
+                            ng-bind-html="(diagnosis.snomedTerm != undefined && diagnosis.snomedTerm != null && diagnosis.snomedTerm.length > 0)? diagnosis.snomedTerm:'N/A' "></div>
+                        </div>
+                    </div>
+
+                    <div ng-if="diagnosticTest != undefined && diagnosticTest != null && diagnosticTest.length > 0">
+                        <h3 style="color: #4d4d4d;">Diagnostic Test:</h3>
+                        <div style="width:100%;display:flex;border:1px solid #c0c0c0">
+                            <div class="tele_consultation_summary_100_percent_block_apollo tele_consultation_summary_heading_color">Test</div>
+                            
+                        </div>
+        
+                        <div style="width:100%;display:flex;border-bottom: 1px solid #c0c0c0; border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0;" ng-repeat="test in diagnosticTest">
+                            <div class="tele_consultation_summary_100_percent_block_apollo"  ng-bind-html="(test.adviceType != undefined && test.adviceType != null && test.adviceType.length > 0) ? test.adviceType:'N/A'"> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div ng-if="patientSymptoms != undefined && patientSymptoms != null && patientSymptoms.length > 0">
+                        <h3 style="color: #4d4d4d;">Patient Symptoms:</h3>
+                        <div style="width:100%;display:flex;border:1px solid #c0c0c0">
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Symptom Name</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Symptom Duration</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Severity</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Onset</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Relieving Factor</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Aggrevating Factor</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">History Of Illness</div>
+                        </div>
+        
+                        <div style="width:100%;display:flex;border-bottom: 1px solid #c0c0c0; border-left: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0;" ng-repeat="symptoms in patientSymptoms">
+                            <div class="tele_consultation_summary_25_percent_block_apollo"  ng-bind-html="(symptoms.symptomName != undefined && symptoms.symptomName != null  && symptoms.symptomName.length > 0) ? symptoms.symptomName:'N/A'"> 
+                            </div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo" ng-bind-html="(symptoms.symptomOnsetDuration != undefined && symptoms.symptomOnsetDuration != null && symptoms.symptomOnsetDuration.length > 0) ? symptoms.symptomOnsetDuration +' '+ symptoms.symptomDurationType : 'N/A' "></div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo" ng-bind-html="(symptoms.severity != undefined && symptoms.severity != null  && symptoms.severity.length > 0) ? symptoms.severity : 'N/A'"></div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo" 
+                            ng-bind-html="(symptoms.onset != undefined && symptoms.onset != null && symptoms.onset.length > 0) ? symptoms.onset : 'N/A' "></div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo" 
+                            ng-bind-html="(symptoms.relievingFactor != undefined && symptoms.relievingFactor != null && symptoms.relievingFactor.length > 0)? symptoms.relievingFactor:'N/A' "></div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo" 
+                            ng-bind-html="(symptoms.aggrevatingFactor != undefined && symptoms.aggrevatingFactor != null && symptoms.aggrevatingFactor.length > 0)? symptoms.aggrevatingFactor:'N/A' "></div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo" 
+                            ng-bind-html="(symptoms.historyOfPresentIllness != undefined && symptoms.historyOfPresentIllness != null && symptoms.historyOfPresentIllness.length > 0)? symptoms.historyOfPresentIllness:'N/A' "></div>
+                        </div>
+                    </div>
+
+                    <div ng-if="adviceToPatient != undefined && adviceToPatient != null && adviceToPatient.length > 0">
+                        <h3 style="color: #4d4d4d;">Advice To Patient :</h3>
+                        <div style="width:100%;display:flex;border:1px solid #c0c0c0">
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color" style="width: 50%">Advice</div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color" style="width: 50%">Advice Type</div>
+                           
+                        </div>
+        
+                        <div style="width:100%;display:flex;border-bottom: 1px solid #c0c0c0; border-left: 1px solid #c0c0c0;border-right: 1px solid #c0c0c0;" ng-repeat="advices in adviceToPatient">
+                            <div class="tele_consultation_summary_25_percent_block_apollo"  ng-bind-html="(advices.advice != undefined && advices.advice != null  && advices.advice.length > 0) ? advices.advice:'N/A'" style="width: 50%"> 
+                            </div>
+                            <div class="tele_consultation_summary_25_percent_block_apollo" ng-bind-html="(advices.adviceType != undefined && advices.adviceType != null && advices.adviceType.length > 0) ? advices.adviceType: 'N/A' " style="width: 50%"></div>
+                        
+                        </div>
+                    </div>
+
+
+                    
+
+                    <div ng-if="(medications == undefined || medications == null || medications.length == 0) && (adviceToPatient == undefined || adviceToPatient == null || adviceToPatient.length == 0) && (patientDiagnosis == undefined || patientDiagnosis == null || patientDiagnosis.length == 0) && (patientSymptoms == undefined || patientSymptoms == null || patientSymptoms.length == 0) ">
+                        <div style="width:100%; text-align:center;padding:20px 0px; border-top:1px solid #c0c0c0">
+                            Sorry no medications details available for this appointment.
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width:100%; margin:20px 0px;" ng-if="!isPerscriptionGiven">
+                    <div style="width:100%; text-align:center;padding:20px 0px; border-top:1px solid #c0c0c0">
+                        Some information/advise/instructions can be added here
+                    </div>
+                </div>
+    
+            </div>
+            <div class="tele_consultation_summary_main_container" ng-show="shwMsg == true" style="text-align: center; margin: 20% auto;">
+                {{containerMessage}}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<a class="global_previous_page_button"
+    ng-class="{'button-enter-left' : prevIsVisible, 'button-exit-left' : !prevIsVisible}" ng-show="prevIsVisible"
+    ng-click="prevButtonClick()">
+    <span class="global_previous_page_text" ng-show="shwMsg == false">Back</span>
+</a>
+
+<a class="global_continue_next_button"
+    ng-class="{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible && (lab != undefined && lab != null && lab.length > 0) && _is_base64_labpdf_available"
+    ng-click="labOrderBtnClick()" style="top:435px;">
+    <span class="global_continue_next_button_text" ng-show="shwMsg == false"> Get Lab Reports </span>
+</a>
+
+<a class="global_continue_next_button"
+    ng-class="{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible && (medications != undefined && medications != null && medications.length > 0) && _is_base64_pdf_available"
+    ng-click="nextButtonClick()">
+    <span class="global_continue_next_button_text" ng-show="shwMsg == false"> Buy Medicine </span>
+</a>
+
+
+<a class="global_print_button {{disabling_print_btn}}" ng-if="showPrintButton && (vendorName == 'APOLLO' || vendorName == 'IHL')" ng-click="printPerscription()" ng-show="shwMsg == false">
+    <span style="position: relative;top:12px;">
+        <img ng-hide="disabling_print_btn == 'disable'" class="" style="content:url(images/printer-icon.png);height:30px;position: absolute;left:-60px;">
+        <img ng-if="disabling_print_btn =='disable' " class="" style="content:url(images/disabled_printer.png);height:30px;position: absolute;left:-60px;">        
+        <span class="global_print_text" style="top:2px; right:20px;">
+        {{(vendorName == 'IHL')? 'Print Consult Notes':'Print Perscription'}}</span>
+    </span>
+</a>
+
+<a class="global_print_button {{disabling_print_btn}}" ng-if="showPrintButton && vendorName == 'GENIX' && prescriptionDataFetch" ng-click="printPerscription()" ng-show="shwMsg == false">
+    <span style="position: relative;top:12px;">
+        <img ng-hide="disabling_print_btn == 'disable'" class="" style="content:url(images/printer-icon.png);height:30px;position: absolute;left:-60px;">
+        <img ng-if="disabling_print_btn =='disable' " class="" style="content:url(images/disabled_printer.png);height:30px;position: absolute;left:-60px;">
+        <span class="global_print_text" style="top:2px; right:20px;">
+        {{(vendorName == 'IHL')? 'Print Consult Notes':'Print Perscription'}}</span>
+    </span>
+</a>
+<!-- --------------------------------------------------------------------------Print Perscription--------------------------------------------------------------- -->
+<style>
+    #teleConsulationSummaryprintPerscription, #teleConsulationSummaryLabReports{
+        display:none;
+    }
+    @media print{
+        #teleConsulationSummaryprintPerscription, #teleConsulationSummaryLabReports{
+            display: block;
+        }
+        .tele_header_container{
+            display: none;
+        }
+        .tele_main_container{
+            display: none;
+        }
+        .global_previous_page_button, .global_continue_next_button , .global_print_button{
+            display:none;
+        }
+        .higi_top_container, #global_splash_logo{
+            display: none;
+        }
+    }
+</style>
+<div id="teleConsulationSummaryprintPerscription">
+    <div ng-if="vendorName != 'IHL' && vendorName != 'APOLLO'">
+
+        <style>
+        .tele_consultation_summary_print_perscription_heading_color{
+            color:#48acf5;
+        }
+        .tele_consultation_summary_print_perscription_25_percent_block{
+            display:inline-block;
+            width:25%;
+            box-sizing: border-box;
+            text-align:center;
+            padding:7px;
+            word-break: normal;
+        }
+        tr {border: 1px solid #c0c0c0;}
+        th {text-align: left;}
+        td, th {padding: 5px;}
+        </style>
+
+        <div style="background-color: #FFFFFF;font-family: -webkit-pictograph, sans-serif;">
+            <img alt="IHL_logo" src="https://apps.indiahealthlink.com/affiliate_logo/ihl-plus.png" ng-style="{'width': '100px', 'display': 'block', 'margin': 'auto'}">
+        </div>
+        <div style="position: relative;float: right;margin-bottom: 20px;font-family: -webkit-pictograph, sans-serif;" class="ng-binding"><strong>Date : </strong>{{appointmentDate}}</div>
+        <div style="clear: both;content: ""; display: table;"></div>
+        <table style="border: 2px solid black;width: 100%;margin: auto;font-family: -webkit-pictograph, sans-serif;">
+        <tbody><tr>
+         <td class="ng-binding"><span class="tr-header">Patient Name : </span>{{userName}}</td>
+         <td class="ng-binding"><span class="tr-header">Gender | Age : </span>{{userGender}} | {{userAge}} Years Old</td>
+         <td class="ng-binding"><span class="tr-header">Doctor Name : </span>{{consultantName}}</td>
+        </tr>
+        <tr>
+         <td class="ng-binding"><span class="tr-header">Patient e-mail : </span>{{userMail}}</td>
+         <td class="ng-binding"><span class="tr-header"> </span></td>
+         <td class="ng-binding"><span class="tr-header">RMP ID : </span>{{consultantRmpId}}</td>
+        </tr>
+        <tr>        
+         <td colspan="2" class="ng-binding"><span class="tr-header">Prescription Number : </span>{{prescriptionNumberFor1mg}}</td>
+         <td class="ng-binding"><span class="tr-header">Speciality : </span>{{consultantSpeciality}}</td>
+        </tr>
+        <tr>
+         <td colspan="2" class="ng-binding"><span class="tr-header">Appointment ID : </span>{{appointmentIdForMedPrint}}</td>
+         <td class="ng-binding"><span class="tr-header">Doctor e-mail : </span>{{consultantEmail}}</td>
+        </tr>
+        </tbody>
+        </table>
+        
+        <div style="width:100%; padding:20px 0px;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+            <div ng-if="medications != undefined && medications != null && medications.length > 0">
+                <!-- <div style="width:100%;display: flex;justify-content: center;align-items: center; padding:10px 0px;">
+                    <img src="./images/prescription_rx.png" style="height:25px"><span style="font-size:22px;font-family: -webkit-pictograph;font-weight: bold;">Prescription</span>
+                </div> -->
+
+                <div style="padding:10px 0px;">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfjCBoMABKpc7eaAAAEgUlEQVRo3u3ZWWxUdRTH8U+nA22lWk00YJcIFRQXRAOoEYhEiME1QY2YsEXxARUFY0x8URJjXaIPSsQHDUEKQmyNMcRA3KhRI27RgsaVpRRaAStFCnSb9vpSKwxD6b3TGV743Zf7/8/cc745/+2eczle+SZbrVFCEOna7gl5IqvIA+q064roPtBlp6f7ixBPaue40QKlDqv1m+7Q+KWuVKLEXDme0R4eoNi1RmuwykqtgtAAkxUpkavEbPqDkAxQYrjBtlrjj9DOoUkbmjUZYY5AxckQYkntQoU4YGsk9//pRy+rU2qeJ082F5IjEBNDl460APZ5V45HjXCfQ17TcuLBjIex228F9qoWs1i5ByWssP9ECJkBIPCXt+RaZLiFuqyxLzVCpgAINFsubrEyj+hW7c9UCAMN0K0buQbrEGixVKF7lVkk8E4qhFgEJ33pkEM428iedofnVNqtzGJ3GCYn+YHcpHa5Scr9rDoywiXGyROol2+IQgW2KHOh841yUJ0jx/59oIegwSZTXW6hiTZr643LYUVGWSxhtcN9GZjmI4GqNBCKLLDjhIfZOhOP/ftAzwH+8aY5quzRleLXAgWZBqDNF+YoEZdzzJVyXmUCIJROA5xygDD7wM2mG9ZzH2iz1w8+sD97ANPNVdQLkHBQvWmW+inlgssAwFBFmu3SDAYrdpXLFFpiq0Q2AHKwU5XaHoDhbjTdneq8EH0gwp4FTb71cc99nu+d62qzva1FZzSAdFZBu68tQ7GxyRtsdgDotAGMkH9qAPTkTrnHv2hkB2CQKehW358kLLWiv5DkGKTYEjTbpCXbEYg5x63WGYMVdkXfisJGYJppST0bPO9AVPfpzYFuf3vWbM0RsujIEWhQa7c8I03S7jMvOZCO+/AAO6z2uZjLLTHBNa73Xjruww9BmyYNdvnSMs2GekpZeks56sMtaiwXM8YTCo/ahoa614tuyjxAt73W2CjubjOc0dNb6BYLzTYl8wB0+t0rdjnXQlfIQ64pZhnjoPrMACTP9lYbvaHTOPcrFTPeXBM0eb/niBpwgD2aNB2z6bR63acS7nKbCeaZIvCxtbb332iYZfiBdlvsOKqn214vuEC5+SYZr0iNNb4PYTMUwHrrU/R+otLDLnWZwBaVPg1X3hyIvOBVv+uUo02VD3tT8iwCnKVLgH80aQ37cPoA+SpMEJcwzEzXhbWYfoXkIXcp8I3ARW6wzXbbsheBuKmeV6DB4+5RI+Ee8wzJFkDcRZaLa/OYWvWW+9aZZpgZzkhUxZR4WSkqbNQiUGO0oS52p19synwEzna7iXK9ZWVPJbhVtQ3aXWNGNiKQsF+L71Ro7H0lbbTWecaGyRSjAxxRY779fj3qkOqy2XPOU5edCDRqPK73sM3hzJzyEs1pgGSA/+v9A608ub32+wBIrvcPnEY6By3JaWzyKmhQp8Mos6xwJMKX09SKGWKWkTrUaTgZQKp6f7rKN9ZVhvjJVymWbpL6rvdH/6DdbocFvXXGk/BOskpD5M/3x18Ju1WamKqS9C/PqeOyMh/+NgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOS0wOC0yNlQxMDowMDoxOCswMjowMJJdnq0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTktMDgtMjZUMTA6MDA6MTgrMDI6MDDjACYRAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg==" style="height:40px">
+                    <span style="font-weight: bold;" class="tele_consultation_summary_heading_color">Medicines Prescribed</span>
+                </div>
+
+                <!-- <div style="width:100%;display:flex;border:1px solid #c0c0c0;font-family: -webkit-pictograph;font-weight: bold;">
+                    <div class="tele_consultation_summary_print_perscription_25_percent_block" style="width:100%;">Medicine Name</div>
+                    <div class="tele_consultation_summary_print_perscription_25_percent_block" style="width:100%;">Days</div>
+                    <div class="tele_consultation_summary_print_perscription_25_percent_block" style="width:100%;">Frequency</div>
+                    <div class="tele_consultation_summary_print_perscription_25_percent_block" style="width:100%;">Direction Of Use</div>
+                </div>
+
+                <div  style="width: 100%;display: flex;font-family: -webkit-pictograph;border-width: 0px 1px 1px 1px;border-style: solid;border-color: #c0c0c0;" ng-repeat="medication in medications">
+                    <div class="tele_consultation_summary_print_perscription_25_percent_block" style="width:100%;">{{medication.drug_name}}</div>
+                    <div class="tele_consultation_summary_print_perscription_25_percent_block" style="width:100%;">{{(medication.SIG && medication.SIG.length > 0) ? medication.SIG : 'N/A'}}</div>
+                    <div class="tele_consultation_summary_print_perscription_25_percent_block" style="width:100%;">{{(medication.days && medication.days.length > 0) ? medication.days : 'N/A'}}</div>
+                    <div class="tele_consultation_summary_print_perscription_25_percent_block" style="width:100%;">{{(medication.direction_of_use && medication.direction_of_use.length > 0) ? medication.direction_of_use : 'N/A'}}</div>
+                </div> -->
+                <table style="width: 100%;font-family: -webkit-pictograph;border: 1px solid #c0c0c0;border-collapse: collapse;">
+                    <tr>
+                        <th>Medicine Name</th>
+                        <th>Days</th>
+                        <th>Frequency</th>
+                        <th>Direction Of Use</th>
+                    </tr>
+                    <tr ng-repeat="medication in medications">
+                        <td>{{medication.drug_name}}</td>
+                        <td>{{(medication.SIG && medication.SIG.length > 0) ? medication.SIG : 'N/A'}}</td>
+                        <td>{{(medication.days && medication.days.length > 0) ? medication.days : 'N/A'}}</td>
+                        <td>{{(medication.direction_of_use && medication.direction_of_use.length > 0) ? medication.direction_of_use : 'N/A'}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div ng-if="instructionNotes != undefined && instructionNotes != null && instructionNotes.length > 0">
+                <h3 style="color: #4d4d4d;">Instructions:</h3> 
+                <ul style="list-style-type: circle;color: #4d4d4d;font-family: -webkit-pictograph;">
+                    <li ng-repeat="note in instructionNotes">
+                        {{note.Description}}
+                    </li>
+                </ul>
+            </div>
+            <div ng-if="(medications == undefined || medications == null || medications.length == 0) && (instructionNotes == undefined || instructionNotes == null || instructionNotes.length == 0)">
+                <div style="width:100%; text-align:center;padding:20px 0px; border-top:1px solid #c0c0c0">
+                    Sorry no medications details available for this appointment.
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div style="width:100%; padding:20px 0px;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+            <div style="font-weight: bold;">Doctor's Signature:-<br>
+                <img ng-src='{{doctorSignature}}' alt="" style="width: 150px;"><br>
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="vendorName == 'APOLLO'">
+        <style>
+        .tele_consultation_summary_print_perscription_heading_color{
+            color:#48acf5;
+        }
+        .tele_consultation_summary_print_perscription_25_percent_block{
+            display:inline-block;
+            width:25%;
+            box-sizing: border-box;
+            text-align:center;
+            padding:7px;
+            word-break: normal;
+        }
+        </style>
+        <div style="text-align:center;background-color: #FFFFFF">
+            <img src="{{printTemplateLogo}}" alt='IHL_logo' style="width:150px">
+        </div><br>
+
+        <div style="padding: 15px 0px;font-family: -webkit-pictograph;background-color: #FFFFFF">
+            <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">DOCTOR NAME:- </span>{{((consultantName.search("amp;") > -1 )? consultantName.replaceAll("amp;", "") : consultantName)}}</div>
+            <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">SPECIALITY :-</span>{{((consultantSpeciality.search("amp;") > -1 )? consultantSpeciality.replaceAll("amp;", "") : consultantSpeciality)}}</div>
+            <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">FEES :-</span>{{consultantFee}} INR</div>
+        </div>
+
+        <div style="font-family: -webkit-pictograph;background-color: #FFFFFF">
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">USERNAME :-</span>
+                <span>{{userName}}</span>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">AGE :-</span>
+                <span>{{userAge}}</span>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">GENDER :-</span>
+                <span>{{userGender}}</span>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">DATE :-</span>
+                <span>{{appointmentDate}}</span>
+            </div>
+        </div>
+
+            
+        <div style="width:100%; padding:20px 0px;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+            
+            <div style="width:100%;display: flex;justify-content: center;align-items: center; padding:10px 0px;">
+                <!-- <img src="./images/prescription_rx.png" style="height:25px"> --><span style="font-size:22px;font-family: -webkit-pictograph;font-weight: bold;">Prescription</span>
+            </div>
+            <div ng-if="medications != undefined && medications != null && medications.length > 0">
+                <!-- <div style="width:100%;display:flex;border:1px solid #c0c0c0">
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Medicine Name</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Dosage</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Strength</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Frequency</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">When To Take</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Notes</div>
+                </div>
+
+                <div style="width:100%;display:flex;" ng-repeat="medication in medications">
+                    <div class="tele_consultation_summary_25_percent_block_apollo"  ng-bind-html="(medication.drug_name != undefined && medication.drug_name != null) ? medication.drug_name:'N/A'"> 
+                    </div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" ng-bind-html="(medication.dosage != undefined && medication.dosage != null ) ? medication.dosage +' '+ medication.units : 'N/A' "></div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" ng-bind-html="(medication.strength != undefined && medication.strength != null) ? medication.strength : 'N/A'"></div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" 
+                    ng-bind-html="(medication.frequency != undefined && medication.frequency != null ) ? medication.frequency : 'N/A' "></div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" 
+                    ng-bind-html="(medication.whenToTake != undefined && medication.whenToTake != null )? medication.whenToTake:'N/A' "></div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" 
+                    ng-bind-html="(medication.notes.length > 0 ) ? medication.notes : 'N/A'"></div>
+                </div> -->
+                <div style="width:100%;font-family: -webkit-pictograph;" ng-repeat="medication in medications">
+                    <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Medicine Name: </span>{{(medication.drug_name != undefined && medication.drug_name != null) ? medication.drug_name:'N/A'}}
+                    </div>
+
+                    <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Dosage: </span>{{(medication.dosage != undefined && medication.dosage != null ) ? medication.dosage +' '+ medication.units : 'N/A'}}
+                    </div>
+
+                    <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Strength: </span>{{(medication.strength != undefined && medication.strength != null) ? medication.strength : 'N/A'}}
+                    </div>
+
+                    <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Frequency: </span>{{(medication.frequency != undefined && medication.frequency != null ) ? medication.frequency : 'N/A'}}
+                    </div>
+
+                    <!-- <div style="display:block;margin-bottom: 5px;"><span class="tele_consultation_summary_print_perscription_heading_color">When To Take: </span>{{(medication.whenToTake != undefined && medication.whenToTake != null )? medication.whenToTake:'N/A'}}
+                    </div> -->
+
+                    <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Notes: </span>{{(medication.notes.length > 0 ) ? medication.notes : 'N/A'}}
+                    </div>
+                    <hr>
+                </div>
+
+            </div>
+            <div ng-if="medications == undefined || medications == null || medications.length == 0">
+                <div style="width:100%; text-align:center;padding:20px 0px; border-top:1px solid #c0c0c0;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+                    Sorry no medications details available for this appointment.
+                </div>
+            </div>
+        </div>
+
+        <div style="width:100%; padding:20px 0px;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+            <div style="font-weight: bold;">Doctor's Signature:-</div>
+        </div>
+    </div>
+
+    <div ng-if="vendorName == 'IHL'">
+        <style>
+        .tele_consultation_summary_print_perscription_heading_color{
+            color:#48acf5;
+        }
+        .tele_consultation_summary_print_perscription_25_percent_block{
+            display:inline-block;
+            width:25%;
+            box-sizing: border-box;
+            text-align:center;
+            padding:7px;
+            word-break: normal;
+        }
+        </style>
+        <div style="background-color: #FFFFFF;text-align: center;">
+            <img ng-src="{{printTemplateLogo}}" alt='IHL_logo' style="width:150px">
+        </div><br>
+
+        <h4>Consultant Instruction</h4><hr>
+
+        <div style="font-family: -webkit-pictograph;background-color: #FFFFFF">
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">Patient Name :-</span>
+                <span>{{userName}}</span>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">Age :-</span>
+                <span>{{userAge}}</span>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">Gender :-</span>
+                <span>{{userGender}}</span>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">Email :-</span>
+                <span>{{userEmail}}</span>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">Consultation Date & Time:-</span>
+                <span>{{callStartTime}}</span>
+            </div>
+        </div><hr>
+
+        <div style="padding: 15px 0px;font-family: -webkit-pictograph;background-color: #FFFFFF">
+            <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Physician Name:- </span>{{consultantName}}</div>
+            <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Mobile Number :-</span>{{consultantMobile}}</div>
+            <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Email Id :-</span>{{consultantEmail}}</div>
+            <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Speciality :-</span>{{consultantSpeciality}}</div>
+        </div><hr>
+
+
+            
+        <div style="width:100%; padding:20px 0px;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+            
+            <div style="width:100%;display: flex;justify-content: center;align-items: center; padding:10px 0px;">
+                <!-- <img src="./images/prescription_rx.png" style="height:25px"> -->
+                <div style="width:100%;margin-left: 10px;font-weight: bold;" class="tele_consultation_summary_heading_color">
+                Reason For Visit: <p style="color: #4d4d4d;word-break: break-all;margin-left: 20px;">{{reasonForVisit}}</p>
+                </div>
+            </div>
+            <!-- <div ng-if="medications != undefined && medications != null && medications.length > 0"> -->
+                <!-- <div style="width:100%;display:flex;border:1px solid #c0c0c0">
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Medicine Name</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Dosage</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Strength</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Frequency</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">When To Take</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Notes</div>
+                </div>
+
+                <div style="width:100%;display:flex;" ng-repeat="medication in medications">
+                    <div class="tele_consultation_summary_25_percent_block_apollo"  ng-bind-html="(medication.drug_name != undefined && medication.drug_name != null) ? medication.drug_name:'N/A'"> 
+                    </div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" ng-bind-html="(medication.dosage != undefined && medication.dosage != null ) ? medication.dosage +' '+ medication.units : 'N/A' "></div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" ng-bind-html="(medication.strength != undefined && medication.strength != null) ? medication.strength : 'N/A'"></div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" 
+                    ng-bind-html="(medication.frequency != undefined && medication.frequency != null ) ? medication.frequency : 'N/A' "></div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" 
+                    ng-bind-html="(medication.whenToTake != undefined && medication.whenToTake != null )? medication.whenToTake:'N/A' "></div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" 
+                    ng-bind-html="(medication.notes.length > 0 ) ? medication.notes : 'N/A'"></div>
+                </div> -->
+                <!-- <div style="width:100%;font-family: -webkit-pictograph;" ng-repeat="medication in medications">
+                    <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Medicine Name: </span>{{(medication.drug_name != undefined && medication.drug_name != null) ? medication.drug_name:'N/A'}}
+                    </div>
+
+                    <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Dosage: </span>{{(medication.dosage != undefined && medication.dosage != null ) ? medication.dosage +' '+ medication.units : 'N/A'}}
+                    </div>
+
+                    <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Strength: </span>{{(medication.strength != undefined && medication.strength != null) ? medication.strength : 'N/A'}}
+                    </div>
+
+                    <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Frequency: </span>{{(medication.frequency != undefined && medication.frequency != null ) ? medication.frequency : 'N/A'}}
+                    </div> -->
+
+                    <!-- <div style="display:block;margin-bottom: 5px;"><span class="tele_consultation_summary_print_perscription_heading_color">When To Take: </span>{{(medication.whenToTake != undefined && medication.whenToTake != null )? medication.whenToTake:'N/A'}}
+                    </div> -->
+
+                    <!-- <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Notes: </span>{{(medication.notes.length > 0 ) ? medication.notes : 'N/A'}}
+                    </div> -->
+                    
+                </div><hr>
+
+                <div style="width:100%;">
+                        <div style="width:100%;margin-left: 10px;font-weight: bold;" class="tele_consultation_summary_heading_color">
+                        Diagnosis: <p style="color: #4d4d4d;word-break: break-all;margin-left: 20px;">{{diagnosis}}</p>
+                        </div>
+                        <div style="width:100%;margin-left: 10px;font-weight: bold" class="tele_consultation_summary_heading_color">Consultant Instruction: <p style="color: #4d4d4d;word-break: break-all;margin-left: 20px;">{{consultation_advice_notes}}</p>
+                        </div>
+                    </div>
+
+            
+            <!-- <div ng-if="medications == undefined || medications == null || medications.length == 0">
+                <div style="width:100%; text-align:center;padding:20px 0px; border-top:1px solid #c0c0c0;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+                    Sorry no medications details available for this appointment.
+                </div>
+            </div> -->
+        
+
+        <div style="width:100%; padding:20px 0px;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+            <div style="font-weight: bold;">Doctor's Signature:-</div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- lab template for lab order -->
+<div id="teleConsulationSummaryLabReports">
+    <div ng-if="vendorName != 'IHL' && vendorName != 'APOLLO'">
+
+        <style>
+        .tele_consultation_summary_print_perscription_heading_color{
+            color:#48acf5;
+        }
+        .tele_consultation_summary_print_perscription_25_percent_block{
+            display:inline-block;
+            width:25%;
+            box-sizing: border-box;
+            text-align:center;
+            padding:7px;
+            word-break: normal;
+        }
+        tr {border: 1px solid #c0c0c0;}
+        th {text-align: left;}
+        td, th {padding: 5px;}
+        </style>
+
+        <div style="background-color: #FFFFFF;font-family: -webkit-pictograph, sans-serif;">
+            <img ng-src="{{logoURLForMedPrint}}" alt="IHL_logo" ng-style="{'width': '100px', 'display': 'block', 'margin': 'auto'}">
+        </div>
+        <div style="position: relative;float: right;margin-bottom: 20px;font-family: -webkit-pictograph, sans-serif;" class="ng-binding"><strong>Date : </strong>{{appointmentDate}}</div>
+        <div style="clear: both;content: ""; display: table;"></div>
+        <table style="border: 2px solid black;width: 100%;margin: auto;font-family: -webkit-pictograph, sans-serif;">
+        <tbody><tr>
+         <td class="ng-binding"><span class="tr-header">Patient Name : </span>{{userName}}</td>
+         <td class="ng-binding"><span class="tr-header">Gender | Age : </span>{{userGender}} | {{userAge}} Years Old</td>
+         <td class="ng-binding"><span class="tr-header">Doctor Name : </span>{{consultantName}}</td>
+        </tr>
+        <tr>
+         <td class="ng-binding"><span class="tr-header">Patient e-mail : </span>{{userMail}}</td>
+         <td class="ng-binding"><span class="tr-header"> </span></td>
+         <td class="ng-binding"><span class="tr-header">RMP ID : </span>{{consultantRmpId}}</td>
+        </tr>
+        <tr>        
+         <td colspan="2" class="ng-binding"><span class="tr-header">Prescription Number : </span>{{prescriptionNumberFor1mg}}</td>
+         <td class="ng-binding"><span class="tr-header">Speciality : </span>{{consultantSpeciality}}</td>
+        </tr>
+        <tr>
+         <td colspan="2" class="ng-binding"><span class="tr-header">Appointment ID : </span>{{appointmentIdForMedPrint}}</td>
+         <td class="ng-binding"><span class="tr-header">Doctor e-mail : </span>{{consultantEmail}}</td>
+        </tr>
+        </tbody>
+        </table>
+        
+        <div style="width:100%; padding:20px 0px;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+            <div ng-if="lab != undefined && lab != null && lab.length > 0">
+                <div style="width:100%;display: flex;justify-content: center;align-items: center; padding:10px 0px;">
+                    <span style="font-size:22px;font-family: -webkit-pictograph;font-weight: bold;">Lab Reports</span>
+                </div>
+
+                <table style="width: 100%;font-family: -webkit-pictograph;border: 1px solid #c0c0c0;border-collapse: collapse;">
+                    <tr>
+                        <th>Test Name</th>
+                        <th>Lab Notes</th>                        
+                    </tr>
+                    <tr ng-repeat="labdata in lab">
+                        <td>{{(labdata.test_name && labdata.test_name != "" && labdata.test_name != null) ? labdata.test_name : 'N/A'}}</td>
+                        <td>{{(labdata.lab_note && labdata.lab_note != "" && labdata.lab_note != null) ? labdata.lab_note : 'N/A'}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div ng-if="instructionNotes != undefined && instructionNotes != null && instructionNotes.length > 0">
+                <h3 style="color: #4d4d4d;">Instructions:</h3> 
+                <ul style="list-style-type: circle;color: #4d4d4d;font-family: -webkit-pictograph;">
+                    <li ng-repeat="note in instructionNotes">
+                        {{note.Description}}
+                    </li>
+                </ul>
+            </div>            
+        </div>
+
+        <div style="width:100%; padding:20px 0px;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+            <div style="font-weight: bold;">Doctor's Signature:-<br>
+                <img ng-src='{{doctorSignature}}' alt="" style="width: 150px;"><br>
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="vendorName == 'APOLLO'">
+        <style>
+        .tele_consultation_summary_print_perscription_heading_color{
+            color:#48acf5;
+        }
+        .tele_consultation_summary_print_perscription_25_percent_block{
+            display:inline-block;
+            width:25%;
+            box-sizing: border-box;
+            text-align:center;
+            padding:7px;
+            word-break: normal;
+        }
+        </style>
+        <div style="text-align:center;background-color: #FFFFFF">
+            <img ng-src="{{printTemplateLogo}}" alt='IHL_logo' style="width:150px">
+        </div><br>
+
+        <div style="padding: 15px 0px;font-family: -webkit-pictograph;background-color: #FFFFFF">
+            <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">DOCTOR NAME:- </span>{{((consultantName.search("amp;") > -1 )? consultantName.replaceAll("amp;", "") : consultantName)}}</div>
+            <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">SPECIALITY :-</span>{{((consultantSpeciality.search("amp;") > -1 )? consultantSpeciality.replaceAll("amp;", "") : consultantSpeciality)}}</div>
+            <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">FEES :-</span>{{consultantFee}} INR</div>
+        </div>
+
+        <div style="font-family: -webkit-pictograph;background-color: #FFFFFF">
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">USERNAME :-</span>
+                <span>{{userName}}</span>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">AGE :-</span>
+                <span>{{userAge}}</span>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">GENDER :-</span>
+                <span>{{userGender}}</span>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">DATE :-</span>
+                <span>{{appointmentDate}}</span>
+            </div>
+        </div>
+
+            
+        <div style="width:100%; padding:20px 0px;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+            <div ng-if="lab != undefined && lab != null && lab.length > 0">
+                <div style="width:100%;display: flex;justify-content: center;align-items: center; padding:10px 0px;">
+                    <span style="font-size:22px;font-family: -webkit-pictograph;font-weight: bold;">Lab Reports</span>
+                </div>
+
+                <table style="width: 100%;font-family: -webkit-pictograph;border: 1px solid #c0c0c0;border-collapse: collapse;">
+                    <tr>
+                        <th>Test Name</th>
+                        <th>Lab Notes</th>                        
+                    </tr>
+                    <tr ng-repeat="labdata in lab">
+                        <td>{{(labdata.test_name && labdata.test_name != "" && labdata.test_name != null) ? labdata.test_name : 'N/A'}}</td>
+                        <td>{{(labdata.lab_note && labdata.lab_note != "" && labdata.lab_note != null) ? labdata.lab_note : 'N/A'}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div ng-if="instructionNotes != undefined && instructionNotes != null && instructionNotes.length > 0">
+                <h3 style="color: #4d4d4d;">Instructions:</h3> 
+                <ul style="list-style-type: circle;color: #4d4d4d;font-family: -webkit-pictograph;">
+                    <li ng-repeat="note in instructionNotes">
+                        {{note.Description}}
+                    </li>
+                </ul>
+            </div>            
+        </div>
+
+        <div style="width:100%; padding:20px 0px;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+            <div style="font-weight: bold;">Doctor's Signature:-</div>
+        </div>
+    </div>
+
+    <div ng-if="vendorName == 'IHL'">
+        <style>
+        .tele_consultation_summary_print_perscription_heading_color{
+            color:#48acf5;
+        }
+        .tele_consultation_summary_print_perscription_25_percent_block{
+            display:inline-block;
+            width:25%;
+            box-sizing: border-box;
+            text-align:center;
+            padding:7px;
+            word-break: normal;
+        }
+        </style>
+        <div style="background-color: #FFFFFF;text-align: center;">
+            <img ng-src="{{printTemplateLogo}}" alt='IHL_logo' style="width:150px">
+        </div><br>
+
+        <h4>Consultant Instruction</h4><hr>
+
+        <div style="font-family: -webkit-pictograph;background-color: #FFFFFF">
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">Patient Name :-</span>
+                <span>{{userName}}</span>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">Age :-</span>
+                <span>{{userAge}}</span>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">Gender :-</span>
+                <span>{{userGender}}</span>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">Email :-</span>
+                <span>{{userEmail}}</span>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <span style="font-weight: bold;">Consultation Date & Time:-</span>
+                <span>{{callStartTime}}</span>
+            </div>
+        </div><hr>
+
+        <div style="padding: 15px 0px;font-family: -webkit-pictograph;background-color: #FFFFFF">
+            <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Physician Name:- </span>{{consultantName}}</div>
+            <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Mobile Number :-</span>{{consultantMobile}}</div>
+            <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Email Id :-</span>{{consultantEmail}}</div>
+            <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Speciality :-</span>{{consultantSpeciality}}</div>
+        </div><hr>
+
+
+            
+        <div style="width:100%; padding:20px 0px;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+            
+            <div style="width:100%;display: flex;justify-content: center;align-items: center; padding:10px 0px;">
+                <!-- <img src="./images/prescription_rx.png" style="height:25px"> -->
+                <div style="width:100%;margin-left: 10px;font-weight: bold;" class="tele_consultation_summary_heading_color">
+                Reason For Visit: <p style="color: #4d4d4d;word-break: break-all;margin-left: 20px;">{{reasonForVisit}}</p>
+                </div>
+            </div>
+            <!-- <div ng-if="medications != undefined && medications != null && medications.length > 0"> -->
+                <!-- <div style="width:100%;display:flex;border:1px solid #c0c0c0">
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Medicine Name</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Dosage</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Strength</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Frequency</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">When To Take</div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo tele_consultation_summary_heading_color">Notes</div>
+                </div>
+
+                <div style="width:100%;display:flex;" ng-repeat="medication in medications">
+                    <div class="tele_consultation_summary_25_percent_block_apollo"  ng-bind-html="(medication.drug_name != undefined && medication.drug_name != null) ? medication.drug_name:'N/A'"> 
+                    </div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" ng-bind-html="(medication.dosage != undefined && medication.dosage != null ) ? medication.dosage +' '+ medication.units : 'N/A' "></div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" ng-bind-html="(medication.strength != undefined && medication.strength != null) ? medication.strength : 'N/A'"></div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" 
+                    ng-bind-html="(medication.frequency != undefined && medication.frequency != null ) ? medication.frequency : 'N/A' "></div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" 
+                    ng-bind-html="(medication.whenToTake != undefined && medication.whenToTake != null )? medication.whenToTake:'N/A' "></div>
+                    <div class="tele_consultation_summary_25_percent_block_apollo" 
+                    ng-bind-html="(medication.notes.length > 0 ) ? medication.notes : 'N/A'"></div>
+                </div> -->
+                <!-- <div style="width:100%;font-family: -webkit-pictograph;" ng-repeat="medication in medications">
+                    <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Medicine Name: </span>{{(medication.drug_name != undefined && medication.drug_name != null) ? medication.drug_name:'N/A'}}
+                    </div>
+
+                    <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Dosage: </span>{{(medication.dosage != undefined && medication.dosage != null ) ? medication.dosage +' '+ medication.units : 'N/A'}}
+                    </div>
+
+                    <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Strength: </span>{{(medication.strength != undefined && medication.strength != null) ? medication.strength : 'N/A'}}
+                    </div>
+
+                    <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Frequency: </span>{{(medication.frequency != undefined && medication.frequency != null ) ? medication.frequency : 'N/A'}}
+                    </div> -->
+
+                    <!-- <div style="display:block;margin-bottom: 5px;"><span class="tele_consultation_summary_print_perscription_heading_color">When To Take: </span>{{(medication.whenToTake != undefined && medication.whenToTake != null )? medication.whenToTake:'N/A'}}
+                    </div> -->
+
+                    <!-- <div style="display:block;padding-bottom: 5px;"><span style="font-weight: bold;">Notes: </span>{{(medication.notes.length > 0 ) ? medication.notes : 'N/A'}}
+                    </div> -->
+                    
+                </div><hr>
+
+                <div style="width:100%;">
+                        <div style="width:100%;margin-left: 10px;font-weight: bold;" class="tele_consultation_summary_heading_color">
+                        Diagnosis: <p style="color: #4d4d4d;word-break: break-all;margin-left: 20px;">{{diagnosis}}</p>
+                        </div>
+                        <div style="width:100%;margin-left: 10px;font-weight: bold" class="tele_consultation_summary_heading_color">Consultant Instruction: <p style="color: #4d4d4d;word-break: break-all;margin-left: 20px;">{{consultation_advice_notes}}</p>
+                        </div>
+                    </div>
+
+            
+            <!-- <div ng-if="medications == undefined || medications == null || medications.length == 0">
+                <div style="width:100%; text-align:center;padding:20px 0px; border-top:1px solid #c0c0c0;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+                    Sorry no medications details available for this appointment.
+                </div>
+            </div> -->
+        
+
+        <div style="width:100%; padding:20px 0px;background-color: #FFFFFF;font-family: -webkit-pictograph;">
+            <div style="font-weight: bold;">Doctor's Signature:-</div>
+        </div>
+    </div>
+  </div>
+</div>

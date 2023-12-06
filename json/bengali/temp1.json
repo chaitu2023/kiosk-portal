@@ -1,0 +1,12 @@
+{
+    "temp1.title": "দেহের তাপমাত্রা",
+    "temp1.instructions": "নির্দেশাবলী",
+    "temp1.startTest": "পরীক্ষা শুরু করুন",
+    "temp1.skip": "এড়িয়ে যান",
+    "temp1.holdhands": "আপনার হাত দিয়ে আলতো করে হ্যান্ডেল ধরুন",
+    "temp1.restwristt": "ফলাফল প্রদর্শিত না হওয়া পর্যন্ত কবজি ইলেকট্রোডের উপর রাখুন",
+    "temp1.testWillBeginBefore": "আপনার হাত সঠিক জায়গায় রাখার পরে এই পরীক্ষা শুরু হবে",
+    "temp1.testWillBegin": "আপনার হাত সঠিক জায়গায় রাখার পরে এই পরীক্ষা শুরু হবে",
+    "temp1.tempForeheadText1": "Place your face inside the red circle",
+    "temp1.tempForeheadText2": "once you start the test"
+}

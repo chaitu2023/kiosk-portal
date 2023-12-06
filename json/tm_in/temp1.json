@@ -1,0 +1,12 @@
+{
+    "temp1.title": "உடல் வெப்ப நிலை",
+    "temp1.instructions": "அறிவுறுத்தல்கள்",
+    "temp1.startTest": "தொடங்கு",
+    "temp1.skip": "தவிர்",
+    "temp1.holdhands": "கைப்பிடிகளை உங்கள் கைகளால் மெதுவாகப் பிடிக்கவும்",
+    "temp1.restwristt": "உங்கள் முடிவுகள் காட்டப்படும்வரை உங்கள் மணிக்கட்டை எலக்ட்ரோடுகளின் மேல் வைக்கவும்",
+    "temp1.testWillBeginBefore": "உங்கள் கை சரியாக வைக்கப்படும்போது இந்தப் பரிசோதனை தொடங்கும்",
+    "temp1.testWillBegin": "உங்கள் கை சரியாக வைக்கப்படும்போது இந்தப் பரிசோதனை தொடங்கும்",
+    "temp1.tempForeheadText1": "Place your face inside the red circle",
+    "temp1.tempForeheadText2": "once you start the test"
+}

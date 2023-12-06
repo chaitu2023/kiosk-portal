@@ -1,0 +1,240 @@
+
+<div id="kiosk_modal_popup" class="keyboard_dialog_content" ng-show="modalVisible"  >
+    <div id="higi_keyboard_close_btn" class="{{modalShowStateClass}} keyboard_class_close_btn" ng-click="modalHide()">
+        <div class=""></div>
+        <span higi_resource_html="global.close">Close</span>
+    </div>
+
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalLoginVisible]">
+       <login-modal ng-if="!loadingModalVisible"></login-modal>
+    </div>
+
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-if="modalList[modalOfflineSaveVisible]">
+        <qr-modal></qr-modal>
+    </div>
+
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalRegisterVisible]">
+        <register-modal ng-if="!loadingModalVisible"></register-modal>
+    </div>
+
+    <!-- Abha Modal Verify/Register & Care context -->
+    <div class="higi_keyboard_dialog {{modalShowStateClass}}" ng-show="modalList[abhaVerifyRegVisible]">
+        <abha-verify-reg-modal ng-if="!loadingModalVisible"></abha-verify-reg-modal>
+    </div>
+
+    <div class="higi_keyboard_dialog {{modalShowStateClass}}" ng-show="modalList[abhaCareContextVisible]">
+        <abha-care-context-modal ng-if="!loadingModalVisible"></abha-care-context-modal>
+    </div>
+    <!-- Abha End -->
+
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[ihlMembershipVisible]">
+        <ihl-membership-modal></ihl-membership-modal>
+    </div>
+
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalLastCheckinVisible]">
+        <last-checkin-modal></last-checkin-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalAccountCreatedChallengeVisible]">
+        <account-created-challenge></account-created-challenge>
+    </div>
+
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalRegistrationPromptVisible]">
+        <registration-prompt-modal ng-if="!loadingModalVisible"></registration-prompt-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalResetPasswordVisible]">
+        <password-reset-modal ng-if="!loadingModalVisible"></password-reset-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalEmailResultsVisible]">
+        <email-results-modal ng-if="!loadingModalVisible"></email-results-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalMobileNumberVisible]">
+        <mobile-number-modal ng-if="!loadingModalVisible"></mobile-number-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalWaistCircumstanceVisible]">
+        <bc-waist-circumstance-modal ng-if="!loadingModalVisible"></bc-waist-circumstance-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modaltelemedicinestartVisible]">
+        <telemedicine-start-modal ng-if="!loadingModalVisible"></telemedicine-start-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modaltelemedQuestionaireVisible]">
+        <telemedicine-questionnaire-modal></telemedicine-questionnaire-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalGenixtelemedQuestionaireVisible]">
+        <genixtelemedicine-questionnaire-modal></genixtelemedicine-questionnaire-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalpaymentstartVisible]">
+        <payment-start-modal ng-if="!loadingModalVisible"></payment-start-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalguestUserVisible]">
+        <guest-user-modal ng-if="!loadingModalVisible"></guest-user-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalreasonForVisitVisible]">
+        <reason-for-visit-modal ng-if="!loadingModalVisible"></reason-for-visit-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalteleConsultationSummaryBuyMedicineVisible]">
+        <teleconsultationsummarybuymedicine ng-if="!loadingModalVisible"></teleconsultationsummarybuymedicine>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalteleConsultationSummaryLabOrderVisible]">
+        <teleconsultationsummarylaborder ng-if="!loadingModalVisible"></teleconsultationsummarylaborder>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalteleConsultationSummaryRatingsVisible]">
+        <teleconsultationsummaryratings ng-if="!loadingModalVisible"></teleconsultationsummaryratings>
+    </div>
+    <div id="service_provider" class="{{modalShowStateClass}}" ng-show="modalList[modalServiceProviderVisible]">
+        <service-provider-modal></service-provider-modal>
+    </div>
+    <div id="apollo_confirm_exit" class="{{modalShowStateClass}}" ng-show="modalList[modalApolloConfirmExitVisible]">
+        <apollo-confirm-exit-modal></apollo-confirm-exit-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalssoUserVisible]">
+        <sso-user-modal ng-if="!loadingModalVisible"></sso-user-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalIVTdashVisible]">
+        <ivt-dashboard-modal ng-if="!loadingModalVisible"></ivt-dashboard-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalHeamoDataEntryVisible]">
+        <heamo-data-entry-modal ng-if="!loadingModalVisible"></heamo-data-entry-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalGlcDataEntryVisible]">
+        <glc-data-entry-modal ng-if="!loadingModalVisible"></glc-data-entry-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalLipDataEntryVisible]">
+        <lip-data-entry-modal ng-if="!loadingModalVisible"></lip-data-entry-modal>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalUrnDataEntryVisible]">
+        <urn-data-entry-modal ng-if="!loadingModalVisible"></urn-data-entry-modal>
+    </div>
+    
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalivtTwoParaEntryVisible]">
+        <ivt-two-para-data-entry-modal ng-if="!loadingModalVisible"></ivt-two-para-data-entry-modal>
+    </div>
+
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalMebLoginVisible]">
+        <login-meb-modal ng-if="!loadingModalVisible"></login-meb-modal>
+     </div>
+
+     <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalESanjeevaniVisible]">
+        <e-sanjeevani-modal ng-if="!loadingModalVisible"></e-sanjeevani-modal>
+     </div>
+
+     <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalEsanjeevaniReqTestListVisible]">
+        <e-sanjeevani-req-test-list-modal ng-if="!loadingModalVisible"></e-sanjeevani-req-test-list-modal>
+     </div>
+
+     <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalFlipKartQRCodeScannerVisible]">
+        <flip-kart-qr-code-scanner-modal ng-if="!loadingModalVisible"></flipkart-qrcode-scanner-modal>
+     </div>
+
+     <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalShutDownHPodVisible]">
+        <shut-down-h-pod-modal ng-if="!loadingModalVisible"></shut-down-h-pod-modal>
+     </div>
+
+     <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-show="modalList[modalMehtaUserVisible]">
+        <mehta-user-modal ng-if="!loadingModalVisible"></mehta-user-modal>
+     </div>
+
+    <a class="higi_overlay_mask" ng-show="modalVisible" ></a>
+</div>
+
+
+<div class="keyboard_dialog_content" ng-show="modalConfirmVisible">
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-if="modalList[modalConfirmTerms]">
+        <confirm-ppol-terms toconfirm="terms"></confirm-ppol-terms>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-if="modalList[modalConfirmPpol]">
+        <confirm-ppol-terms toconfirm="ppol"></confirm-ppol-terms>
+    </div>
+    <div class="higi_keyboard_dialog  {{modalShowStateClass}}" ng-if="modalList[modalConfirmPpolTerms]">
+        <confirm-ppol-terms toconfirm="both"></confirm-ppol-terms>
+    </div>
+    <a class="higi_overlay_mask"></a>
+</div>
+
+<div id="info_box" ng-show="modalInfoboxVisible" class="{{modalShowStateClass}}">
+    <div id="higi_keyboard_close_btn" ng-click="modalInfoboxHide()">
+        <div class=""></div>
+    </div>
+    <div id="info_box_dialog">
+        <div id="info_box_scroll_weight" ng-show="modalList[modalinfoboxWeightVisible]">
+            <div ng-if="!loadingModalVisible">
+                <infobox-weight-modal></infobox-weight-modal>
+            </div>
+        </div>
+        <div id="info_box_scroll_bmc" ng-show="modalList[modalinfoboxWeightBodyMassCompVisible]">
+            <div  ng-if="!loadingModalVisible">
+                <infobox-weight-bmc-modal></infobox-weight-bmc-modal>
+            </div>
+        </div>
+        <div id="info_box_scroll_bp" ng-show="modalList[modalinfoboxBpVisible]">
+            <div  ng-if="!loadingModalVisible"><infobox-bp></infobox-bp></div>
+        </div>
+        <div id="info_box_scroll_hypertensive" ng-show="modalList[modalinfoboxBpHypertensiveVisible]">
+           <div  ng-if="!loadingModalVisible"><infobox-bp-hypertensive></infobox-bp-hypertensive></div>
+        </div>
+
+        <div id="info_box_scroll_bp_multitest" ng-show="modalList[modalinfoboxBpMultipleTestsVisible]">
+            <div  ng-if="!loadingModalVisible"><infobox-bp-multiple-tests></infobox-bp-multiple-tests></div>
+        </div>
+
+        <div id="info_box_scroll_points" ng-show="modalList[modalinfoboxPointsVisible]">
+            <div  ng-if="!loadingModalVisible"><infobox-points></infobox-points></div>
+        </div>
+
+        <div id="info_box_scroll_higi_score" ng-show="modalList[modalinfoboxHigiScoreVisible]">
+            <div  ng-if="!loadingModalVisible"><infobox-higi-score></infobox-higi-score></div>
+        </div>
+        <div id="info_box_scroll_spo2" ng-show="modalList[modalinfoboxSpo2Visible]">
+            <div ng-if="!loadingModalVisible"><infobox-spo2-modal></infobox-spo2-modal>  </div>
+        </div>
+        <div id="info_box_scroll_thermometer" ng-show="modalList[modalinfoboxThermometerVisible]">
+            <div ng-if="!loadingModalVisible"><infobox-thermometer-modal></infobox-thermometer-modal>  </div>
+        </div>
+        <div id="info_box_scroll_printer" ng-show="modalList[modalinfoboxPrinterVisible]">
+            <div ng-if="!loadingModalVisible"><infobox-printer-modal></infobox-printer-modal>  </div>
+        </div>
+        <div id="info_box_telemedicine_modal"  ng-show="modalList[modalinfoboxtelemedicineVisible]">
+            <div ng-if="!loadingModalVisible" ><infobox-telemedicine-modal></infobox-telemedicine-modal></div>
+        </div>
+    </div>
+</div>
+
+<a class="higi_overlay_mask" ng-show="modalInfoboxVisible" ng-click="modalInfoboxHideMask()"></a>
+<div id="exit_confirm" class="{{modalShowStateClass}}" ng-show="modalList[modalExitConfirmVisible]">
+        <exit-confirm-modal></exit-confirm-modal>
+</div>
+<a class="higi_overlay_mask" ng-show="modalList[modalExitConfirmVisible]"></a>
+
+
+<div id="thirdPartyDiv" class="{{modalShowStateClass}}" style="display: none;">
+        <third-party-data-modal></third-party-data-modal>
+</div>
+
+
+
+<div id="email_used" class=""  ng-show="modalEmailUsedVisible">
+    <registration-confirm-email-exists ng-if="!loadingModalVisible"></registration-confirm-email-exists>
+</div>
+<a class="higi_overlay_mask" ng-show="modalEmailUsedVisible"></a>
+
+<div id="auth_dialog" ng-show="modalList[modalAuthDialogVisible]" class="{{modalShowStateClass}}">
+    <div id="auth_dialog_box">
+        <div id="auth_dialog_title" class="{{modalAuthDialogTitleClass}}">{{interfaceLabels[modalAuthDialogTitle]}}</div>
+        <div id="auth_dialog_content" class="">{{interfaceLabels[modalAuthDialogContent]}}</div>
+        <div id="auth_dialog_icon" class="{{modalAuthDialogIconClass}}"></div>
+    </div>
+    <a class="higi_overlay_mask" ng-click="authDisplayHideClicked();"></a>
+</div>
+
+
+
+<!-- <div id="ecg_display" class="{{modalShowStateClass}}" ng-show="modalList[modalEcgVisible]">
+
+        <ecg-display-modal></ecg-display-modal>
+
+</div>
+
+<div id="ecg__regret_display" class="{{modalShowStateClass}}" ng-show="modalList[modalEcgRegretVisible]">
+
+        <ecg-display-modal2></ecg-display-modal2>
+
+</div> -->

@@ -1,0 +1,16 @@
+{	
+	"fullbodybmc1.title":"BCA",
+    "text.instructions":"Instructions",
+	"fullbodybmc1.holdhands":"Gently hold the handles with your hands",
+    "fullbodybmc1.restwristt":"Rest your wrist on the electrodes until your results displayed",
+    "fullbodybmc1.restLegsOnfootPads":"Rest your legs on the pads of footrest",
+    "fullbodybmc1.will.beginBefore" : "This test will begin when your hands are in place",
+    "fullbodybmc1.will.begin" : "Click 'Start Test' when your Hand & leg are placed as shown",
+    "fullbodybmc1.skip": "Skip",
+    "fullbodybmc1.startTest": "Start Test",
+    "fullbodybmc1.bmc.progress" : "BCA Test in progress...",
+
+    
+    "weight04.bmc.hands.removed.warning" : "It looks like something went wrong. Let’s try again."
+    
+}

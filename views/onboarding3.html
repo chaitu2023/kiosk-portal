@@ -1,0 +1,23 @@
+<div ng-hide="coppFailHide">
+    <!-- <div id="slide_title">{{interfaceLabels[slideTitle]}}</div> -->
+    <div class="age-title">{{interfaceLabels[slideSubTitle]}} <span class="current-of-total">{{interfaceLabels[currentOfTotal]}}</span></div>
+    <div class="higi_top_container"></div>
+    <div ng-class="(directiveClickable) ? '' : 'no-click'">
+        <age-numpad></age-numpad>
+    </div>
+
+    <a class="global_previous_page_button {{redoTransitionStyle}}" ng-show="prevIsVisible" ng-click="backButtonOut()">
+        <span class="global_previous_page_text">{{interfaceLabels[prevSlideText]}}</span>
+    </a>
+    <a class="global_continue_next_button {{nextTransitionStyle}}" ng-show="nextVisible && validated" ng-click="nextButtonOut()">
+        <span class="global_continue_next_button_text">{{interfaceLabels[nextSlideText]}}</span>
+    </a>
+
+
+    <!-- <a id="higi_control_left_btn" class="left_control_btn {{langClass}} {{redoTransitionStyle}}" ng-show="prevIsVisible" ng-click="backButtonOut()">
+        <span class="{{langClass}}">{{interfaceLabels[prevSlideText]}}</span>
+    </a>
+    <a id="higi_control_right_ng_btn" class="right_control_btn {{langClass}} {{nextTransitionStyle}}" ng-show="nextVisible && validated" ng-click="nextButtonOut()">
+        <span class="{{langClass}} {{interfaceLabels[nextSlideText]}}">{{interfaceLabels[nextSlideText]}}</span>
+    </a> -->
+</div>

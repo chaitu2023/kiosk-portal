@@ -1,0 +1,283 @@
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+
+.column {
+  float: left;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+  .column {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.doctor_details{
+  margin-top: 2px;
+    margin-left: 110px;
+    font-weight:bold;
+    font-size: 14px;
+    text-shadow: 0px -1px 1px #fff;
+    font-family: IntervalSansProCondSemiBoldRg;
+  }
+
+.doctor_details_span{
+ color: black;
+ font-size: 14px;
+ font-family: IntervalSansProCondSemiBoldRg;
+}
+.call_doctor_button{
+   width: 140px;
+   height: 38px;
+   color: white;
+   margin-left: 178px;
+   top: 183px;
+   position: absolute;
+   text-transform: uppercase;
+   text-align: center;
+   font-size: 16px; 
+   font-family: ''IntervalSansProMediumRegular'';  
+   border-style: solid;
+   border-radius: 13px;
+   letter-spacing: 1px;
+        
+}
+.call_doctor_button:focus {
+  outline: none;
+} 
+.StarRatings{
+  font-size: 18px;
+  margin-top: 11px;
+  margin-left: 9px;
+}
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  background-color: #dbdbdb;
+  text-align: center;
+  border-radius: 15px;
+  width: 200px;
+  height: 200px;
+   margin-left: 5px;
+}
+.doctor_card {
+  box-shadow: 0 6px 3px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 15px;
+  width: 340px;
+  height: 226px;
+  margin-left: 10px;
+  margin-right: -10px;
+  background-color: #e0e0e0;
+
+
+}
+.doctor_name{
+    font-family: 'IntervalSansProMediumRegular';
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: -6px;
+    margin-bottom: 6px;
+    margin-left: 25px;
+    color: black;
+}
+::-webkit-scrollbar { 
+}
+.speciality_name{
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -8px;
+    margin-bottom: 2px;
+}
+
+.container {
+  background-size: cover;
+  background: rgb(226,226,226); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(226,226,226,1)), color-stop(50%,rgba(219,219,219,1)), color-stop(51%,rgba(209,209,209,1)), color-stop(100%,rgba(254,254,254,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Chrome10+,Safari5.1+ */
+  padding: 20px;
+}
+
+.led-box {
+  float: left;
+  margin-top: -23px;
+  margin-right: -5px;
+}
+
+.led-box p {
+  font-size: 12px;
+  text-align: center;
+  margin: 1em;
+}
+
+.led-red {
+  margin: auto;
+  width: 14px;
+  height: 14px;
+  background-color: #F00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+  -webkit-animation: blinkRed 1s infinite;
+  -moz-animation: blinkRed 1s infinite;
+  -ms-animation: blinkRed 1s infinite;
+  -o-animation: blinkRed 1s infinite;
+  animation: blinkRed 1s infinite;
+}
+
+@-webkit-keyframes blinkRed {
+    from { background-color: #F00; }
+    50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+    to { background-color: #F00; }
+}
+
+.led-green {
+  margin: auto;
+  width: 14px;
+  height: 14px;
+  background-color: #ABFF00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+  -webkit-animation: blinkGreen 0.5s infinite;
+  -moz-animation: blinkGreen 1s infinite;
+  -ms-animation: blinkGreen 1s infinite;
+  -o-animation: blinkGreen 1s infinite;
+  animation: blinkGreen 1s infinite;
+}
+@-webkit-keyframes blinkGreen {
+    from { background-color: #ABFF00; }
+    50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px; }
+    to { background-color: #ABFF00; }
+}
+.checked {
+  color: #2a76c4;
+}
+.doctor_busy{
+  background-color: darkgrey;
+}
+.doctor_notbusy{
+ background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+}
+</style>
+<div>
+  <div id="slide_title" style = "position: absolute;">{{interfaceLabels[telemedTitle]}}</div>
+  <div id="slide_subtitle" > {{ specialistsName }} {{interfaceLabels[specialistSubTitle]}}</div>
+  <!-- List of Doctors starts !-->
+  <div id ="doctor_list" class="row {{doctorList}} scrollbar" style="height: 488px;width: 745px;margin-top: 15px;margin-left: 20px;padding-bottom: 20px">
+
+   <!--  <div style="border:1px solid red; width:100%; padding: 10px;" ng-repeat = "doctors_lists in doctorLists"> 
+
+
+      <div class="column" style = "margin-top: 15px">
+        <div class="doctor_card">
+
+      <div style="border:1px solid red; width:100%;"> 
+          <div style="border:1px solid red; width:30%;float: left; padding-left: 5px; position: relative;">
+            <div class="led-box">
+              <div ng-class ="{'led-green': doctors_lists.online_status != 'busy',
+                   'led-red': doctors_lists.online_status == 'busy'}">
+              </div>
+            </div>
+            <div style = "width: 100px;text-align: center;">
+              <img src="{{doctors_lists.profile_picture}}" alt="Avatar" style="width:100px; height: 100px;">
+            </div>
+          </div>
+          <div  style="border:1px solid red; width:70%;float: right; padding-right: 5px; position: relative;">
+            row 1 col2
+          </div>
+      </div>
+      <div> 
+          row2
+          <div> </div>
+      </div>
+      <div> 
+          row3
+          <div>
+            row 3 col1
+          </div>
+          <div>
+            row 3 col2
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div> -->
+    <div ng-repeat = "doctors_lists in doctorLists">
+      <div class="column" style = "margin-top: 15px">
+        <div class="doctor_card">
+          <p class = "doctor_name">{{doctors_lists.name}}</p>
+
+          <div class="led-box">
+            <div ng-class ="{'led-green': doctors_lists.online_status != 'busy' && doctors_lists.online_status == 'online',
+                 'led-red': doctors_lists.online_status == 'busy' || doctors_lists.online_status == 'offline'}">
+            </div>
+          </div>
+
+          <div style = "width: 100px;text-align: center;">
+            <img src="{{doctors_lists.profile_picture}}" alt="Avatar" style="width:100px; height: 100px;">
+          </div>  
+
+          <div style="color: #2a76c4; top:139px; position: absolute; font-family: 'IntervalSansProCondSemiBoldRg';">
+
+            <p class = "doctor_details" style="margin-top: -100px;">{{interfaceLabels[specialistTitle]}}:-<span class = "doctor_details_span">{{doctors_lists.speciality_name}}</span></p>
+
+            <p class = "doctor_details" >{{interfaceLabels[doctorQualification]}}:-<span class = "doctor_details_span">{{doctors_lists.qualification}}M.B.B.S</span></p>
+
+            <p class = "doctor_details">{{interfaceLabels[doctorExperience]}}:-<span class = "doctor_details_span">{{doctors_lists.experience}}49 Years 6 Months</span></p>
+
+            <p class = "doctor_details">{{interfaceLabels[doctorLanguage]}}:-<span class = "doctor_details_span">{{doctors_lists.languages}}English,hindi</span></p>
+          </div>
+
+          
+          <div style = "margin-top: 8px;font-size: 13px;font-family: IntervalSansProCondSemiBoldRg;color: #4a4a4a;border-bottom: 1px solid #2a76c4">&#x20b9;{{doctors_lists.fixed_charge}}<span style="margin-left: 5px; font-size: 13px; font-family: IntervalSansProCondSemiBoldRg;">per {{doctors_lists.fixed_duration}} mins / <br>&#x20b9;{{doctors_lists.additional_minutes}} per min post {{doctors_lists.fixed_duration}} mins</span>
+          </div>
+          
+          
+
+          <div class="StarRatings">
+            <span data-ng-repeat = "star in doctors_lists.stars" class="fa fa-star {{star.starClass}}"></span>
+          </div>
+
+          <button class="call_doctor_button doctor_busy" ng-if="doctors_lists.online_status == 'busy' || doctors_lists.online_status == 'offline'" ng-disabled="doctors_lists.online_status == 'busy' || doctors_lists.online_status == 'offline'" ng-click="CallDoctorsinList()">{{interfaceLabels[calldoc]}}</button>
+          <button class="call_doctor_button doctor_notbusy" ng-if="doctors_lists.online_status != 'busy'  && doctors_lists.online_status == 'online'" ng-disabled="doctors_lists.online_status == 'busy'  && doctors_lists.online_status == 'online'" ng-click="CallDoctorsinList(doctors_lists.id)">{{interfaceLabels[calldoc]}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- List of Doctors ends !-->
+  <!-- List of Specialists starts  !-->
+  <!-- <div id = "specialits_list" class="row {{specialists}} scrollbar" style="height: 442px; width: 684px;margin-top: 32px;margin-left: 60px;">
+    <div ng-repeat = "specialists_category in specialists">
+      <div id="{{specialists.specialist_name}}" class="column  {{langClass}}" style = "margin-top: 15px" ng-click = "showDoctorList(specialists_category.id)">
+        <div class="card">
+          <p class = "speciality_name">{{specialists_category.name}}</p>
+          <img src={{specialists_category.webicon_file}} alt="Avatar" style="width:158px; height: 158px; border-radius: 50%;">
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- List of Specialists starts  !-->
+</div>

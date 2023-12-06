@@ -1,0 +1,20 @@
+{
+  "temp3.results": "परिणाम",
+  "temp3.continue": "जारी रखें",
+  "temp3.calibration": "अंशांकन",
+  "temp3.tempScale": "शारीरिक  तापमान पैमाना",
+  "temp3.status.healt": "सामान्य",
+  "temp3.status.accep": "स्वीकार्य",
+  "temp3.status.fever": "ज्वर",
+  "temp3.status.highfever": "तेज ज्वर",
+  "temp3.roomTemp": " कक्ष",
+  "temp3.wristTemp": "शरीर",
+  "temp3.temperature": "तापमान",
+  "temp3.bodyTemp": "शारीरिक तापमान ",
+  "temp3.information": "जानकारी",
+  "temp3.parameter": "मानदण्ड",
+  "temp3.yourscore": "आपका स्कोर",
+  "temp3.OverallStatus": "संपूर्ण स्थिति",
+  "temp3.finalResult": "अंतिम परिणाम",
+  "temp3.checkTempagain": "तापमान फिर से जांचें"
+}

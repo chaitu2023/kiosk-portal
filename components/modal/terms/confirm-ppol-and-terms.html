@@ -1,0 +1,13 @@
+<div id="login_create_account">
+    <div id="login_confirm_terms_title" ng-bind-html="interfaceLabels[termsUpdate.title]"  ng-hide="termsUpdate.serverError"></div>
+    <div class="login_confirm_terms_title_error" ng-bind-html="interfaceLabels[termsUpdate.serverErrorMessage]" ng-show="termsUpdate.serverError"></div>
+    <div id="login_tos_privacy_confirm">
+        <div id="login_tos_privacy_confirm_wrapper">
+            <div id="login_tos_privacy_confirm_scroller" ng-bind-html="termsOfServicePpol">
+            </div>
+        </div>
+    </div>
+    <div id="login_cancel_updated_terms" ng-click="termsUpdate.declineTerms()"><span ng-bind="interfaceLabels[termsUpdate.cancel]"></span></div>
+    <div id="login_accept_updated_terms" ng-click="termsUpdate.acceptTerms()" ng-show="!termsUpdate.saving"><span ng-bind="interfaceLabels[termsUpdate.accept]"></span></div>
+    <div id="login_updated_terms_saving" ng-show="termsUpdate.saving"></div>
+</div>

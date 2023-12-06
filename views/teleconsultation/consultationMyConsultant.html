@@ -1,0 +1,278 @@
+<style>
+    .tele_consultation_doctor_main_box {
+        width: 360px;
+        height: 248px;
+        display: inline-block;
+        border-radius: 10px;
+        margin: 10px 10px;
+        box-sizing: border-box;
+        padding: 10px;
+        /*background: #fff;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);*/
+        background-color: #e6e6e6;
+        box-shadow: 4px 4px 4px #AFAFAF, -3px -3px 1px white;
+    }
+
+    .tele_consultation_doctor_main_box_icon {
+        display: inline-block;
+        height: 150px;
+    }
+
+    .tele_consultation_doctor_main_box_title {
+        font-family: 'latoBold';
+        color: #4d4d4d;
+    }
+
+    .tele_consultation_doctor_main_box_active {
+        color: white;
+        background-color: #208ad6;
+    }
+
+    /* .tele_consultation_doctor_list_green_dot { */
+    /* border: 20px solid green; */
+    /* } */
+
+
+    .tele_consultation_doctor_list_green_dot {
+        margin: 0px 5px;
+        width: 14px;
+        height: 14px;
+        background-color: #ABFF00;
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+        /* -webkit-animation: blinkGreen 0.5s infinite; */
+        /* -moz-animation: blinkGreen 1s infinite; */
+        /* -ms-animation: blinkGreen 1s infinite; */
+        /* -o-animation: blinkGreen 1s infinite; */
+        /* animation: blinkGreen 1s infinite; */
+    }
+
+    @-webkit-keyframes blinkGreen {
+        from {
+            background-color: #ABFF00;
+        }
+
+        50% {
+            background-color: #AA0;
+            box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+        }
+
+        to {
+            background-color: #ABFF00;
+        }
+    }
+
+    .tele_consultation_doctor_details {
+        width: 100%;
+        height: 100px;
+        text-align: initial;
+        margin: 10px 0px;
+    }
+
+    .tele_consultation_doctor_details_image_container {
+        display: inline-block;
+        width: 34%;
+        height: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .tele_consultation_doctor_details_image_container_img {
+       /* height: 90px;*/
+       height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        /*border: 1px solid;*/
+    }
+
+    .tele_consultation_doctor_details_container {
+        display: inline-block;
+        width: 64%;
+        height: 100%;
+        /* font-size: 15px; */
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+        /* bottom: -5px; */
+        /* position: absolute; */
+        /* top: -35px; */
+        margin-top: -10px;
+    }
+
+    #tele_consultation_doctor_main_container {
+        padding: 0px 0px;
+        text-align: center;
+        height: 345px;
+        width: 800px;
+        /* overflow: auto; */
+        /* margin-right: 23px; */
+        overflow:hidden;
+        position: relative;
+    }
+
+    .tele_consultation_doctor_details_container p {
+        text-align: left;
+        word-break: break-all;
+        /* margin: 1px; */
+        /* margin: 10px 10px 10px 10px; */
+        font-size: 13px;
+        font-family: 'latoHeavy';
+        color: #4d4d4d;
+        /* font-weight: 500; */
+        margin: 10px;
+        margin-left: 3px;
+    }
+
+    .tele_consultation_doctor_details_container_title{
+        color: rgb(34,138,213);
+        font-family: 'latobold';
+    }
+
+    #tele_consultation_doctor_main_container_scroll{
+        width:100%;
+        /* height:345px; */
+        /* position: absolute; */
+    }
+
+    .tele_consultation_doctor_details_container_domain{
+        position: relative;
+        font-family: 'latoBold';
+    }
+
+    .tele_consultation_doctor_details_container_amount{
+        font-size: 12px;
+        width: fit-content;
+        /* margin: 0px 1px 0px 0px; */
+        color: gray;
+        font-family: 'latobold';
+        text-align: center;
+    }
+
+    .tele_consultation_doctor_details_rating_stars_container{
+        display: inline;
+        color: #2a76c4;
+    }
+
+    .call_doctor_button_class{
+        font-size: 14px;
+        float: right;
+        border-radius: 5px;
+        border: 0px;
+        padding: 8px 15px;
+        background-color: rgb(34,138,213);
+        color: white;
+        /* box-shadow: 0px 0px 0px 1px #afafaf; */
+        /* box-shadow: 0px 1px 1px #c8c8c8; */
+        box-shadow: 0px 1px 2px dodgerblue;
+        /* color: black; */
+        text-transform: uppercase;
+    }
+
+</style>
+<div class="tele_header_container">
+    <img class="tele_header_image" src="./images/telmed.png">
+    <span class="tele_header_text"> Doctor List </span> 
+</div>
+
+<div class="tele_main_container">
+    <!-- <p class="tele_subtitle_heading"> <button onclick="window.location = '#/ihl-teleconsultation-video-call';">Start video call</button></p> -->
+    
+    <div id="tele_consultation_doctor_main_container">
+            <div id="tele_consultation_doctor_main_container_scroll">
+        
+                <div class="tele_consultation_doctor_main_box" 
+            style="text-align: initial;">
+
+            <div class="tele_consultation_doctor_main_box_title" style="text-align: left;">
+                <span class="tele_consultation_doctor_list_green_dot"></span><b style="font-family: 'latoRegular';
+    color: #4d4d4d;">Pooja Malhotra</b>
+            </div>
+            <div class="tele_consultation_doctor_details">
+
+                <div class="tele_consultation_doctor_details_image_container" style="">
+                    <img src="images/teleconsultation/sample.jpg"
+                        class="tele_consultation_doctor_details_image_container_img" style="">
+                </div>
+
+                <div class="tele_consultation_doctor_details_container">
+                    <p>
+                        <span class="tele_consultation_doctor_details_container_title" 
+                       >Specialist: </span> 
+                        <span class="tele_consultation_doctor_details_container_domain" >
+                            Pooja Malhotra
+                        </span>
+                        
+                    </p>
+                    <p>
+                        <span class="tele_consultation_doctor_details_container_title"
+                        >Qualification: </span>
+                        <span class="tele_consultation_doctor_details_container_domain">
+                          Masters in food and diet  
+                        </span>
+                        
+                    </p>
+                    <p>
+                        <span class="tele_consultation_doctor_details_container_title"
+                        >Experience: </span>
+                        <span class="tele_consultation_doctor_details_container_domain">
+                            10 years
+                        </span> 
+                        
+                    </p>
+                    <p>
+                        <span class="tele_consultation_doctor_details_container_title"
+                       >Languages Spoken: </span>
+                        <span class="tele_consultation_doctor_details_container_domain">
+                            English, Hindi, Punjabi
+                        </span>
+                    </p>
+                </div>
+
+            </div>
+            <div class="tele_consultation_doctor_details_container_amount">
+               Conultation Fees<br>
+                &#8377; 500
+            </div>
+            <hr>
+            <div>
+
+                <div class="tele_consultation_doctor_details_rating_stars_container" style="display:inline;">
+                    
+                    <span >
+                        <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                    </span>
+                    <!-- <span ng-if="isPartialStar(consultationDoctor) == true">
+                        <i class="fa fa-star-half-o"></i>
+                    </span> -->
+                </div>
+
+                <!-- <span style="font-size:24px;">&#9734; &#9734; &#9734; &#9734; &#9734;</span> -->
+                <button class="call_doctor_button_class"
+                
+               >Book Now</button>
+            </div>
+            <span class="tele_consultation_doctor_main_box_icon">
+                <img src="{{ consultationDoctor['speciality_image_url'] }}" style="height:100%;">
+            </span>
+        </div>
+            </div>
+        
+    </div>
+
+</div>
+
+<a class="global_previous_page_button"
+    ng-class="{'button-enter-left' : prevIsVisible, 'button-exit-left' : !prevIsVisible}" ng-show="prevIsVisible"
+    ng-click="prevButtonClick()">
+    <span class="global_previous_page_text">Back</span>
+</a>
+
+<a class="global_continue_next_button"
+    ng-class="{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible"
+    ng-click="nextButtonClick()">
+    <span class="global_continue_next_button_text"> Continue </span>
+</a>

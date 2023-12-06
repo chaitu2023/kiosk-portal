@@ -1,0 +1,11 @@
+{
+  "onboarding.2.of.3": "(3 का 2)",
+  "age01.how.young": "आपकी जन्मतिथि क्या है?",
+  "age01.numpad.next": "अगला",
+  "age01.numpad.clear": "मिटाएँ",
+  "age01.error": "कृपया मान्य तिथि प्रविष्ट करें",
+  "age01.warning.under13": "कृपया अपनी जन्मतिथि दोबारा दर्ज करें।",
+  "age01.dd": "(DD)",
+  "age01.mm": "(MM)",
+  "age01.yyyy": "(YYYY)"
+}

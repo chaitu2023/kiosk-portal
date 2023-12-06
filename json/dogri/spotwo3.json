@@ -1,0 +1,20 @@
+{
+    "spo2three.spo2":"SpO2",
+    "spo2three.results" : "Results",
+    "spo2three.continue": "Continue",    
+    "spo2three.spo2.percent" : "%",
+    "spo2three.spo2level":"SpO2 Oxygen Level",
+    "spo2three.checkSpo2again":"Check SpO2 Again",
+    "spo2three.information":"Information",
+    "spo2three.parameter":"Parameter",
+    "spo2three.yourscore":"Your score",
+    "spo2three.OverallStatus":"Overall Status",
+    "spo2three.spo22scale":"SpO<sub>2</sub> Scale",
+    "spo2three.finalResult":"Final Result",
+
+    "spo2three.status.healthy" : "Healthy",
+    "spo2three.status.acceptable" : "Acceptable",
+    "spo2three.status.atrisk" : "At-risk",
+    "spo2three.status.low": "Low",
+    "spo2three.status.spo2_check_healthcare_provider": "Check With Healthcare Provider"
+}

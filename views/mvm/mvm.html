@@ -1,0 +1,191 @@
+<style type="text/css">
+  #PrescrionTable {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    overflow: hidden;
+  }
+
+#PrescrionTable td, #PrescrionTable th {
+  border: 1px solid #fff;
+  padding: 5px;
+  text-align: center;
+}
+#PrescrionTable tr:nth-child(even){background-color: #d8d8d8;}
+#PrescrionTable tr:nth-child(odd){background-color: #e6e6e6;}
+
+#PrescrionTable tr:hover {/*background-color: #ddd;*/}
+
+#PrescrionTable th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  background-color: #4295d1;
+  color: white;
+}
+
+table{
+  border: 1px solid;
+}
+
+.dispenseAll{
+  color: rgb(2, 97, 194);
+    border-radius: 20px;
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: bolder;
+    background-image: linear-gradient(#E6E6E6 55%, #FFFFFF);
+    background-color: #FEFEFE;
+    background-image: -webkit-linear-gradient(#FEFEFE 55%, #E6E6E6);
+    background-image: linear-gradient(#FEFEFE 55%, #E6E6E6);
+    border: 1px solid lightgrey;
+    border-radius: 40px;
+    line-height: 55px;
+    text-align: center;
+    color: #0261c2;
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    text-transform: uppercase;
+    text-shadow: 0px -1px 1px #fff;
+    background-color: white;
+    position: relative;
+    top: -5px;
+}
+.dispenseAll span{
+  padding: 0px 15px;
+}
+.dispenseAllBtnShadow{
+    background-image: -webkit-linear-gradient(#E6E6E6 55%, #FFFFFF);
+    background-image: linear-gradient(#E6E6E6 55%, #FFFFFF);
+    height: 80px;
+    width: 160px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #F6F6F6;
+    border-radius: 50px;
+    top: 15px;
+}
+
+.dispenseAll:focus, .dispenseBtn:focus, .goHomeBtn:focus{
+  outline:0;
+}
+.dispenseBtn, .goHomeBtn{ 
+  border: 2px solid #4295d1;
+    background-color: #fff;
+    font-weight: 600;
+    border-radius: 15px;
+    letter-spacing: .7px;
+    padding: 7px 15px;
+}
+
+#PrescrionTable th {
+   color: #fff; 
+   font-family: 'IntervalSansProCondSemiBoldRg';
+   letter-spacing: 0.7px;  
+   text-align: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  /*border-radius: 10px;*/
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc; 
+}
+</style>
+
+<!-- <div style="float: right; top: 15px; left: -140px; position: relative;"> 
+  <h1 style="color: #4295d1; font-family: 'IntervalSansProCondSemiBoldRg';"> Your prescription list </h1> 
+</div> -->
+<div id = "mvm_available">
+
+<div id ="MedicineVending">
+<div style="top: 0px; left: 300px;  position: relative;"> 
+    <div style="text-align: center;position: relative; top: 15px; left: -25px;"> 
+      <div class="dispenseAllBtnShadow" data-ng-show="dispenseMediAllBtnEnable && !offlineInfo">
+        <button class="dispenseAll"data-ng-show="dispenseMediAllBtnEnable" data-ng-click="dispenseMediAll()" > 
+          <span data-ng-show="dispenseMediAllBtnEnable" data-ng-click="dispenseMediAll()" > Dispense All </span> 
+        </button> 
+      </div>
+    </div>
+</div>
+<div style="text-align: center;"> 
+  <h1 style="color: #4295d1; font-family: 'IntervalSansProCondSemiBoldRg';"> Your prescription list </h1> 
+</div>
+<div data-ng-show="offlineInfo" style="text-align: center;">
+  <h1 calss="offlineInfoTxt"> </h1>
+</div>
+<div style="margin-top: 0px; height:600px; width:800px; overflow: hidden;">
+  <div style="width:80%; margin:auto;"  data-ng-hide="prescriptionListSync">      
+    <div style=" width: 10%; margin: auto; margin-top: 20%"> <img src="images/sandtimerpngg.png" width="100"/></div>
+    <div style="text-align: center;">  <p id="mvmSyncTxt"> </p> </div>
+
+  </div>
+  <div style="width:80%; margin:auto;" data-ng-show="prescriptionListSync && !offlineInfo">
+    <div id="scrollBarShowHide" style="height:300px; overflow: hidden;"> 
+      <table  id="PrescrionTable">
+        <tr> 
+          <th> Name </th>
+          <th> ID </th>   
+          <th> Cost </th>
+          <th> Prescribed <br> Quantity </th>
+          <th> Required Dispense <br> Quantity </th>
+          <th> Availability </th>
+          <th> Dispense </th>
+          <th data-ng-show="mvmStatus"> Status </th>
+        </tr>
+        <tr data-ng-repeat = "medi in mediDescr ">
+          <td> {{medi.ProductName}} </td>
+          <td> {{medi.Id}} </td>
+          <td> 
+            <span data-ng-if="(medi.ProductCost != '' || medi.ProductCost != undefined)"> {{medi.ProductCost}} </span>
+            <span data-ng-if="medi.ProductCost == '' || medi.ProductCost == undefined"> -- </span>
+          </td>
+          <td> {{medi.preQuantity}} <span data-ng-if="medi.MaterialType != undefined"> ({{ medi.MaterialType }}) </span> </td>
+          <td> {{ medi.quantity }} </td>
+          <td> 
+            <span data-ng-if="medi.StockLevel != undefined && medi.StockLevel >= medi.quantity">  <img src="images/auth_success20120518.png" width="25%"> </span> 
+            <span data-ng-if="medi.StockLevel != undefined && medi.StockLevel < medi.quantity">  {{medi.StockLevel}} </span> 
+            <span data-ng-if="medi.StockLevel == undefined">  -- </span>
+          </td>
+          <td> 
+            <button class="dispenseBtn" id="dispenseMedi_{{medi.Id}}" data-ng-if=" medi.Dispense == true && medi.StockLevel > 0" data-ng-click="SingleMedicineRequest(medi)"> Dispense </button> 
+            <span data-ng-if="medi.StockLevel == 0"> No stock </span>
+            <span data-ng-if="medi.Dispense == false || medi.Dispense == undefined"> N/A </span>
+          </td>
+          <td data-ng-show="mvmStatus"> <span id="medi_{{medi.Id}}">  </span> </td>
+        </tr>  
+      </table>
+    </div>
+    <div style="text-align:center; margin-top: 15px;" data-ng-show="true">      
+      <button class="goHomeBtn" style="color: #eeeeee; border-color: #dadada; background-color: #166dc7;" data-ng-show="homePageBtnShow" data-ng-click="goHome()"> Go Home </button> <br><br>
+      <button id = "print_prescription" class="goHomeBtn" style="color: #eeeeee; border-color: #dadada; background-color: #166dc7;" data-ng-click="printPrescription()"> Print Prescription </button> 
+    </div>
+  </div>  
+</div>
+</div></div>
+
+<div  id = "mvm_not_available" style="margin-top: 115px; margin-left: 35px;" >
+<h2 style="text-align : center; color: #4295d1; font-family: 'IntervalSansProCondSemiBoldRg'; font-size: 20px;"> We regret this Medicine Vending Machine is temporarily </h2>
+<h1 style="text-align : center; color: #4295d1; font-family: 'IntervalSansProCondSemiBoldRg'; font-size: 24px;">Out of Service </h1> 
+
+<div style="margin-left: 289px";>
+  <img src="images/mvm_not_available.png">
+  <!-- <img src="../Almond_IHL_Kiosk_UI/images/mvm_not_available.png"> -->
+
+      <button class="goHomeBtn" style="color: #eeeeee; border-color: #dadada; position: relative; background-color: #166dc7; top: 0px; left: -525px; height: 122px; width: 135px; border-radius: 0 50% 50% 0;" data-ng-click="goHome()"> <span style="color: #fff; text-shadow: 1px 1px 2px #353535; position: relative; top: 0px; display: block; font-family: 'IntervalSansProCondSemiBoldRg'; font-size: 30px; line-height: 48px;"> Back </span> </button>
+</div>
+</div>

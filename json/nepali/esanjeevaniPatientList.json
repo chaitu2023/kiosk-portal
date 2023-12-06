@@ -1,0 +1,22 @@
+{
+    "eSanjeevani.next": "Next",
+    "eSanjeevani.invalidPassText": "Invalid password",
+    "eSanjeevani.serverErrorText": "Couldn't connect to the server, Please try after sometime",
+    "eSanjeevani.loginText": "Login",
+    "eSanjeevani.backText": "Back",
+    "eSanjeevani.forgotPassText": "Forgot password?",
+    "eSanjeevani.requiredInputField": "Required Input Field",
+    "eSanjeevani.invalidMobNum": "Invalid mobile number",
+    "eSanjeevani.invalidOperator": "Invalid operator",
+    "eSanjeevani.noPatientAvail": "No patient available",
+    "eSanjeevani.sentNewPass": "We have sent new password successfully to your mobile number.",
+    "eSanjeevani.continueText": "Continue",
+    "eSanjeevani.patientListText": "Patient List",
+    "eSanjeevani.patientIdText": "Patient ID:",
+    "eSanjeevani.dobText": "DOB:",
+    "eSanjeevani.genderText": "Gender:",
+    "eSanjeevani.eSanPatientList": "e-Sanjeevani Patient List",
+    "eSanjeevani.fetchPatientListText": "Fetch Patient List..",
+    "eSanjeevani.refreshPatientListText": "Refresh Patient List",
+    "eSanjeevani.startTestText": "Start Test"
+}

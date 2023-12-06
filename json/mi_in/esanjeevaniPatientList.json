@@ -1,0 +1,22 @@
+{
+    "eSanjeevani.next": "पुढचे",
+    "eSanjeevani.invalidPassText": "अवैध पासवर्ड",
+    "eSanjeevani.serverErrorText": "सर्व्हरशी जोडता आलं नाही, कृपया काही काळानंतर प्रयत्न करा",
+    "eSanjeevani.loginText": "लॉगइन",
+    "eSanjeevani.backText": "मागे जा",
+    "eSanjeevani.forgotPassText": "पासवर्ड विसरलात का?",
+    "eSanjeevani.requiredInputField": "Required Input Field",
+    "eSanjeevani.invalidMobNum": "Invalid mobile number",
+    "eSanjeevani.invalidOperator": "Invalid operator",
+    "eSanjeevani.noPatientAvail": "No patient available",
+    "eSanjeevani.sentNewPass": "We have sent new password successfully to your mobile number.",
+    "eSanjeevani.continueText": "सुरु ठेवा",
+    "eSanjeevani.patientListText": "Patient List",
+    "eSanjeevani.patientIdText": "Patient ID:",
+    "eSanjeevani.dobText": "DOB:",
+    "eSanjeevani.genderText": "लिंग:",
+    "eSanjeevani.eSanPatientList": "e-Sanjeevani Patient List",
+    "eSanjeevani.fetchPatientListText": "Fetch Patient List..",
+    "eSanjeevani.refreshPatientListText": "Refresh Patient List",
+    "eSanjeevani.startTestText": "तपासणी सुरु करा"
+}

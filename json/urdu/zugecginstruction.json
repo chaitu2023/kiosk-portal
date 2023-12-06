@@ -1,0 +1,14 @@
+{
+  "zugEcg1.singleLeadecgtitledisp": "ECG - سنگل لیڈ",
+  "zugEcg1.threeLeadecgtitledisp": "ECG - تین لیڈ",
+  "zugEcg1.sixLeadecgtitledisp": "ECG - چھہ لیڈ",
+  "zugEcg1.sitStraight": "سیدھا بیٹھیں",
+  "zugEcg1.restWrist": "اپنی کلائی کو ہینڈلز پر رکھیں",
+  "zugEcg1.placeleftleg": "اپنی بائیں ٹانگ کو پیڈل میں رکھیں",
+  "zugEcg1.placebothleg": "کلمپس اپنی دونوں ٹانگوں پر رکھیں",
+  "zugEcg1.skipTest": "ہٹائیں",
+  "zugEcg1.startTest": "Start Test",
+  "zugEcg1.EcgTestWillBegin": "یہ ٹیسٹ اس وقت شروع ہوگا جب آپ کے ہاتھ اور ٹانگیں جگہ پر ہوں گی",
+  "zugEcg1.keepHandsProper": "براہ مہربانی اپنے ہاتھ ٹھیک سے رکھیں",
+  "zugEcg1.keepLegsProper": "براہ مہربانی اپنی ٹانگیں ٹھیک سے رکھیں"
+}

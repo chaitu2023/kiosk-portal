@@ -1,0 +1,12 @@
+{
+
+    "weight01_audio01":"sounds/bodo/vo1_weight&bmi.wav",
+    "weight01_audio02":"sounds/bodo/voice2_weight&bmi.wav",
+    "weight01_audio03":"sounds/bodo/voice3_weight&bmi.wav",
+    "weight01_audio04":"sounds/bodo/startWeightTest.wav",
+    "weight01_audio05":"sounds/bodo/voice4_weight&bmi.wav",
+    "weight03_audio01":"sounds/bodo/results.wav",
+	"weight01_audiolap":"sounds/bodo/handsonLap.wav",
+    "weight03_audio10":"sounds/bodo/chkWeight&bmiAgain.wav"
+
+}

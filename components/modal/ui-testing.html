@@ -1,0 +1,67 @@
+ <div id="ui-testing-panel" class="{{uiTesting.panelClass}}" ng-if="uiTestingPanelVisible && uiTestingEnabled" draggable="true">
+     <div class="hardware-panel" ng-hide="true">
+         <a class="standing-toggle {{uiTesting.standButtonClass}}" ng-click="uiTesting.toggleStand()">
+                        <span ng-if="isUserSeated">
+                            Stand Up
+                        </span>
+                        <span ng-if="!isUserSeated">
+                            Sit down
+                        </span>
+     </a>
+         <a class="bp-error {{uiTesting.standButtonClass}}" ng-click="uiTesting.simulateBpError()" ng-if="uiTesting.showBpErrorButton">
+             Show BP Error
+         </a>
+         <a class="bmc-hand-removed-error {{uiTesting.standButtonClass}}" ng-click="uiTesting.simulateBmcHandRemoved()" ng-if="uiTesting.showHandRemovedButton">
+             Remove Hands (hands placed method fires automatically)
+         </a>
+         <a class="male {{uiTesting.genderClassMale}}" ng-click="uiTesting.setGender('m')">
+             Male
+         </a>
+         <a class="female {{uiTesting.genderClassFemale}}"  ng-click="uiTesting.setGender('f')">
+             Female
+         </a>
+         <a class="set-language"  ng-click="uiTesting.setUiLanguage(0)" ng-if="langClass == 'es_us'">
+             Set English
+         </a>
+         <a class="set-language"  ng-click="uiTesting.setUiLanguage(1)" ng-if="langClass == 'en_us'">
+             Set Spanish
+         </a>
+     </div>
+     <div class="panel-shortcuts" ng-hide="true">
+         <h1>Shortcuts</h1>
+         <ul>
+             <li ng-repeat="shortcut in uiTesting.shortcuts"><a href="{{shortcut.url}}">{{shortcut.label}}</a></li>
+         </ul>
+     </div>
+     <div class="panel-shortcuts col2" ng-hide="true">
+         <h1>Status</h1>
+         <ul>
+             <li>ADA Mode : <span ng-if="kioskADAMode">Active</span><span ng-if="!kioskADAMode">Not Active</span></li>
+             <li>Test Mode : <span ng-if="mode == ''">Not Set</span><span ng-if="mode != ''">{{mode}}</span></li>
+             <li>Gender : <span ng-if="uiTesting.gender != 'm' && uiTesting.gender != 'f'">Not Set</span><span ng-if="uiTesting.gender == 'f'">Female</span><span ng-if="uiTesting.gender == 'm'">Male</span></li>
+             <li>Height : <span ng-if="uiTesting.height == undefined">Not Set</span><span ng-if="uiTesting.height != undefined">{{uiTesting.height}}</span></li>
+             <li>Birthdate : <span ng-if="uiTesting.birthdate == undefined">Not Set</span><span ng-if="uiTesting.birthdate != undefined">{{uiTesting.birthdate}}</span></li>
+
+         </ul>
+     </div>
+     <table id="events">
+         <thead>
+         <tr>
+             <th class="span-2">sessionId</th>
+             <th class="span-6">senderId</th>
+             <th class="span-2">eventCategory</th>
+             <th class="span-2">eventName</th>
+         </tr>
+         </thead>
+         <tbody>
+         <tr ng-repeat="message in loggedEvents" >
+             <td class="span-2">{{message.sessionId}}</td>
+             <td class="span-6">{{message.senderId}}</td>
+             <td class="span-2">{{message.eventCategory}}</td>
+             <td class="span-2">{{message.eventName}}</td>
+         </tr>
+         </tbody>
+     </table>
+ </div>
+<a class="ui-testing-button" ng-click="uiTesting.toggleUiTestingPanel()" ng-if="uiTesting.buttonVisible && uiTestingEnabled"><i class="fa fa-cog" ng-if="!uiTestingPanelVisible"></i><i class="fa fa-times" ng-if="uiTestingPanelVisible"></i></a>
+<a class="ui-hidden-testing-button" ng-mousedown="uiTesting.startUiTestingPress()" ng-mouseup="uiTesting.endUiTestingPress()"></a>

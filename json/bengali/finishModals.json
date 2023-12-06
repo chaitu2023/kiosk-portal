@@ -1,0 +1,20 @@
+{
+    "emailresults.enter.email": "আপনার ইমেল অ্যাড্রেস লিখুন",
+    "emailresults.enter.email.to.send.results": "আপনার ফলাফল পাঠানোর জন্য আপনার ইমেল অ্যাড্রেস লিখুন",
+    "emailresults.email.sent": "আপনার ফলাফল পেতে নিজের ইমেল দেখুন।",
+    "emailresults.by.clicking.send": "আপনার ফলাফল ইমেল করার মাধ্যমে, আপনি স্বীকার করছেন যে আপনার তথ্য সংরক্ষণ করা হতে পারে।",
+    "global.send": "পাঠান",
+    "finishModal.email.never.spam": "(আমরা আপনাকে স্প্যাম মেল পাঠাব না। কথা দিচ্ছি!)",
+    "finishModal.printwarning": " সাবধান! ",
+    "finishModal.makesure": "অনুগ্রহ করে প্রিন্টারের জায়গা ব্লক করে রাখবেন না",
+    "finishModal.printinstruct": "পরীক্ষার ফলাফলের স্লিপ পেতে নীচের প্রিন্ট করুন বাটন টিপুন",
+    "finishModal.notavail": "কাগজ নেই",
+    "finishModal.papernot": "দুঃখিত, এইচপডে প্রিন্টের কাগজ নেই",
+    "finishModal.refill": "আমরা শীঘ্রই রিফিল করব...",
+    "finishModal.printRes": "ফলাফল প্রিন্ট করুন",
+    "finishModal.okayy": "ঠিক আছে",
+    "finishModal.printEcgraph": "ইসিজি গ্রাফ প্রিন্ট করুন",
+    "global.requird.test": "No Test Results",
+    "emailresults.enter.email.to.send.abharesults": "Enter your Email Address to get your card",
+    "emailresults.by.clicking.abhasend": "By emailing your results, you accept that your card may be saved"
+}

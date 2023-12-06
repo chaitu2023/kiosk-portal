@@ -1,0 +1,45 @@
+<div id="numpad_error">
+    <span ng-show="ageInvalidVisible">{{interfaceLabels[ageInvalidErrorMessage]}}</span>
+    <span ng-show="ageErrorVisible">{{interfaceLabels[ageErrorMessge]}}</span>
+</div>
+<div id="age_component_container">
+    <div id="numpad_entry">
+        <input type="text" id="age_dd" placeholder='{{(activeBox != 1) ? interfaceLabels["age01.dd"] : ""}}' maxlength="2" class="{{enabledCursor}} {{dateDDClass}}" ng-click="dateValFieldClicked('dd')" ng-mouseup="clearSelected('age_dd');" ng-mousedown="startDrag()" ng-model="dateDD"/>
+        <input type="text" id="age_mm" placeholder='{{(activeBox != 2) ? interfaceLabels["age01.mm"] : ""}}' maxlength="2" class="{{enabledCursor}} {{dateMMClass}}" ng-click="dateValFieldClicked('mm')" ng-mouseup="clearSelected('age_mm');" ng-mousedown="startDrag()" ng-model="dateMM"/>
+        <input type="text" id="age_yyyy" placeholder='{{(activeBox != 3) ? interfaceLabels["age01.yyyy"] : ""}}' maxlength="4" class="{{enabledCursor}} {{dateYYYYClass}}" ng-click="dateValFieldClicked('yyyy')" ng-mouseup="clearSelected('age_yyyy');" ng-mousedown="startDrag()" ng-model="dateYYYY"/>
+    </div>
+
+    <ul id="numpad">
+        <div class="row_one">
+            <li class="key"><a ng-click="dateNumClick($event)"  >1</a></li>
+            <li class="key"><a ng-click="dateNumClick($event)">2</a></li>
+            <li class="key last"><a ng-click="dateNumClick($event)">3</a></li>
+        </div>
+        <div class="row_two">
+            <li class="key"><a ng-click="dateNumClick($event)">4</a></li>
+            <li class="key"><a ng-click="dateNumClick($event)">5</a></li>
+            <li class="key last"><a ng-click="dateNumClick($event)">6</a></li>
+        </div>
+        <div class="row_three">
+            <li class="key"><a ng-click="dateNumClick($event)">7</a></li>
+            <li class="key"><a ng-click="dateNumClick($event)">8</a></li>
+            <li class="key last"><a ng-click="dateNumClick($event)">9</a></li>
+        </div>
+        <div class="row_four">
+            <li class="clear {{clearButtonClass}}"><span></span></li>
+            <li class="key" ><a ng-click="dateNumClick($event)">0</a></li>
+            <!-- Modification here -->
+            <!-- <li class="key last diff_shape"><a ng-click="removeTagOnBackspace($event)">*</a></li> -->
+            <li id = "age_cancel_keys" class="key last diff_shape" ng-click="removeTagOnBackspace($event)" style="    position: relative;
+    background: rgb(194,194,194) !important;
+    border-radius: 10px;height: 40px;width: 92px">
+                <div class="line_for_delete age_delete_line1"></div>
+                <div class="line2_for_delete age_delete_line2"></div>
+                <span class="height_ft_del age_delete_ref"><button><i class="fa fa-times-thin fa-2x close_thin_icon" aria-hidden="true"></i></button>
+                </span>
+            </li>    
+            <li class="nextfield {{nextButtonClass}}"><span></span></span></li>
+        </div>
+    </ul>
+
+</div>

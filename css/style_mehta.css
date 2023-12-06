@@ -1,0 +1,612 @@
+#pincode_error {
+    left: 280px;
+    top: 40px;
+    width: 170px;
+    font-size: 18px;
+    font-family: 'LatoRegular';
+    position: absolute;
+    color: #dd0000e0;
+    font-weight: 600;
+    margin-left: -8px;
+}
+
+#mehta_mobile_error {
+    left: 240px;
+    top: 40px;
+    width: 180px;
+    font-size: 18px;
+    font-family: 'LatoRegular';
+    position: absolute;
+    color: #dd0000e0;
+    font-weight: 600;
+    margin-left: -8px;
+}
+
+.pincode_heading {
+    width: fit-content;
+    margin: 0px;
+    float: left;
+    font-size: 20px !important;
+    font-family: LatoRegular !important;
+    color: #808080d1 !important;
+    pointer-events: none !important;
+    /* margin-top: 52px !important; */
+    margin-left: 50px !important;
+}
+
+.pincode_division {
+    width: 500px;
+    top: 35px;
+    position: absolute;
+    height: 90px;
+    left: 0px;
+    /* border: 1px solid gray; */
+    font-family: 'LatoRegular';
+}
+
+.pincode_input_box input{
+    top: 40px!important;
+    left: 50px !important;
+    height: 59px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+    border: 2px solid #808080d1;
+    color: #808080d1 !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: 10px !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 365px !important;
+    display: block !important;
+    font-size: 18px !important;
+    position: absolute !important;
+    background: white !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.pincode_input_box div {
+    top: 39px!important;
+    left: 10px !important;
+    height: 54px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    border: none !important;
+    color: gray !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: 0px !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 326px !important;
+    display: none !important;
+    font-size: 15px !important;
+    position: absolute !important;
+    background: transparent !important;
+    z-index: -10 !important;
+    pointer-events: none;
+    line-height: 0px !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.mehta_mobile_division {
+    width: 500px;
+    top: 35px;
+    position: absolute;
+    height: 90px;
+    left: 0px;
+    /* border: 1px solid gray; */
+    font-family: 'LatoRegular';
+}
+
+.mehta_mobile_heading {
+    width: fit-content;
+    margin: 0px;
+    float: left;
+    font-size: 20px !important;
+    font-family: LatoRegular !important;
+    color: #808080d1 !important;
+    pointer-events: none !important;
+    margin-left: 50px !important;
+}
+
+.mehta_mobile_input_box input{
+    top: 60px!important;
+    left: 45px !important;
+    height: 59px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+    border: 2px solid #808080d1;
+    color: #808080d1 !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: 10px !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 370px !important;
+    display: block !important;
+    font-size: 18px !important;
+    position: absolute !important;
+    background: white !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.mehta_mobile_input_box div {
+    top: 39px!important;
+    left: 10px !important;
+    height: 54px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    border: none !important;
+    color: gray !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: 0px !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 326px !important;
+    display: none !important;
+    font-size: 15px !important;
+    position: absolute !important;
+    background: transparent !important;
+    z-index: -10 !important;
+    pointer-events: none;
+    line-height: 0px !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.pincode_submission_btn{
+    position: absolute !important;
+    top: 45px !important;
+    width: 190px !important;
+    height: 50px !important;
+    left: 450px !important;
+    pointer-events: none !important;
+    text-align: center !important;
+    font-family: "LatoRegular" !important;
+    z-index: 15 !important;
+    line-height: 60px !important;
+    border: 1px solid #cecece !important;
+    border-radius: 7px !important;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%) !important;
+}
+
+.mehta_mobile_submission_btn {
+    position: absolute !important;
+    top: 62px !important;
+    width: 190px !important;
+    height: 50px !important;
+    left: 450px !important;
+    pointer-events: none !important;
+    text-align: center !important;
+    font-family: "LatoRegular" !important;
+    z-index: 15 !important;
+    line-height: 60px !important;
+    border: 1px solid #cecece !important;
+    border-radius: 7px !important;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%) !important;
+}
+
+.pincode_submission_btn span{
+    position: relative !important;
+    top: -3px !important;
+    color: #fff !important;
+    font-size: 22px !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2) !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: .9 !important;
+}
+
+.mehta_mobile_submission_btn span {
+    position: relative !important;
+    top: -3px !important;
+    color: #fff !important;
+    font-size: 22px !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2) !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: .9 !important;
+}
+
+.pincode_submission_btn.pincode_active_btn{
+    position: absolute !important;
+    top: 45px !important;
+    height: 50px !important;
+    left: 450px !important;
+    border-radius: 10px !important;
+    border-top: 2px solid #5dbcff !important;
+    border-left: 2px solid #5fa4d4bf !important;
+    border-bottom: 2px solid #50a4e0bf !important;
+    border-right: 2px solid #50a4e0bf !important;
+    width: 190px !important;
+    color: white !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    box-shadow: 0px 4px 4px #4a4a4ae0 !important;
+    background: linear-gradient(to bottom,#5aa4d9,#3989c3, #0261c2) !important;
+    text-shadow: none !important;
+    font-family: 'LatoRegular' !important;
+    font-weight: 500 !important;
+    pointer-events: all !important;
+}
+
+.mehta_mobile_submission_btn.mobile_active_btn {
+    position: absolute !important;
+    top: 62px !important;
+    height: 50px !important;
+    left: 450px !important;
+    border-radius: 10px !important;
+    border-top: 2px solid #5dbcff !important;
+    border-left: 2px solid #5fa4d4bf !important;
+    border-bottom: 2px solid #50a4e0bf !important;
+    border-right: 2px solid #50a4e0bf !important;
+    width: 190px !important;
+    color: white !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    box-shadow: 0px 4px 4px #4a4a4ae0 !important;
+    background: linear-gradient(to bottom,#5aa4d9,#3989c3, #0261c2) !important;
+    text-shadow: none !important;
+    font-family: 'LatoRegular' !important;
+    font-weight: 500 !important;
+    pointer-events: all !important;
+}
+
+.pincode_submission_btn.pincode_active_btn span{
+    font-size: 21px !important;
+    text-align: center !important;
+    position: relative !important;
+    top: -4px !important;
+    font-family: LatoRegular !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+}
+
+.mehta_mobile_submission_btn.mobile_active_btn span {
+    font-size: 21px !important;
+    text-align: center !important;
+    position: relative !important;
+    top: -4px !important;
+    font-family: LatoRegular !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+}
+
+.pincode_submission_btn.pincode_active_btn:active{
+    box-shadow: none !important;
+}
+
+.mehta_mobile_submission_btn.mobile_active_btn:active { 
+    box-shadow: none !important;
+}
+
+.mehta_main_container{
+	box-shadow: 0px 5px 9px #afafaf, 0px 0px 10px #999;
+    background-color: #e6e6e6;
+    height: 345px;
+    margin-top: -15px;
+}
+
+#mehta_patient_main_container {
+    padding: 0px 0px;
+    text-align: center;
+    height: 345px;
+    width: 800px;
+    /* overflow: auto; */
+    /* margin-right: 23px; */
+    overflow: hidden;
+    position: relative;
+    margin-left: 5px;
+    margin-top: 45px;
+}
+
+.pincode_area_dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#pincode_area_dropdown_main_container {
+    padding: 0px 0px;
+    text-align: left;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 135px;
+    background-color: #f1f1f1;
+    min-width: 365px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 120px;
+    border-radius: 10px;
+    line-height: 1.5;
+}
+
+#pincode_area_list {
+    padding: 5px 15px;
+}
+
+.mehta_header_image {
+    width: 27px;
+    position: relative;
+    top: 15px
+}
+
+.mehta_header_container {
+    margin-top: 4%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.mehta_header_text {
+    padding-left: 10px;
+    font-weight: 500;
+    margin-top: 0px;
+    font-family: 'LatoItalic';
+    font-size: 25px;
+    color: #4d4d4d;
+}
+.mehta_continue_next_button {
+    top: 355px;
+    right: 0px;
+    position: fixed;
+    height: 50px;
+    border-top: 3px solid #5dbcff;
+    border-left: 3px solid #5fa4d4bf;
+    border-bottom: 3px solid #50a4e0bf;
+    width: 210px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+    box-shadow: 4px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#5aa4d9d1,#3989c3de, #0261c2f2);
+}
+.mehta_continue_next_button_text {
+    left: 20px;
+    font-size: 20px;
+    text-align: left;
+    position: fixed;
+    top: 14px;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.mehta_area_selection_image {
+    width: 27px;
+    position: relative;
+    top: -20px;
+    margin-left: 300px;
+}
+
+.mehta_mobile_validation_loader {
+    top: 72px;
+    left: 360px;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+    pointer-events: none !important;
+    background: transparent url(../images/keyboard_dialog_loading_icon06222012.png) top left no-repeat;
+    -webkit-animation: rotate360 1.3s linear infinite;
+} 
+
+.mehta_pincode_validation_loader {
+    top: 55px;
+    left: 360px;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+    pointer-events: none !important;
+    background: transparent url(../images/keyboard_dialog_loading_icon06222012.png) top left no-repeat;
+    -webkit-animation: rotate360 1.3s linear infinite;
+}
+
+.mehta_continue_button{
+    position: fixed;
+    height: 45px;
+    width: 200px;
+    top: 362px;
+    left: 260px;
+    border: 2px solid #208ad6bf;
+    border-radius: 10px;
+    text-align: center;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+}
+
+.mehta_continue_button_text{
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    top: 12px;
+}
+
+.mehta_continue_button:active{
+    box-shadow:none;
+}
+
+.mehta_continue_button:hover{
+    color: #4d4d4d;
+}
+
+.mehta_patient_main_box {
+    width: 320px;
+    height: 220px;
+    /*display: inline-block;*/
+    border-radius: 10px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    /*background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);*/
+    background-color: #e6e6e6;
+    box-shadow: 4px 4px 4px #AFAFAF, -3px -3px 1px white;
+    border: 2px solid #c0c0c0;
+    float: left;
+    margin-left: 17px;
+}
+
+.mehta_patient_main_box_icon {
+    display: inline-block;
+    height: 150px;
+}
+
+.mehta_patient_main_box_title {
+    font-family: 'latoBold';
+    color: #4d4d4d;
+}
+
+.mehta_patient_main_box_active {
+    /* color: white;
+    background-color: #208ad6;*/
+    border-color: #48acf5;
+}
+
+.mehta_patient_details {
+    width: 100%;
+    height: 100px;
+    text-align: initial;
+    margin: 10px 0px;
+}
+
+.mehta_patient_details_image_container {
+    display: inline-block;
+    width: 34%;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.mehta_patient_details_image_container_img {
+    /* height: 90px;*/
+    height: 80px;
+    width: 80px;
+    /*border: 1px solid;*/
+}
+
+.mehta_patient_details_container {
+    display: inline-block;
+    width: 64%;
+    height: 100%;
+    /* font-size: 15px; */
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    /* bottom: -5px; */
+    /* position: absolute; */
+    /* top: -35px; */
+    margin-top: -10px;
+}
+
+.mehta_patient_details_container p {
+    text-align: left;
+    word-break: break-all;
+    /* margin: 1px; */
+    /* margin: 10px 10px 10px 10px; */
+    font-size: 13px;
+    font-family: 'latoHeavy';
+    color: #4d4d4d;
+    /* font-weight: 500; */
+    margin: 10px;
+    margin-left: 3px;
+}
+
+.mehta_patient_details_container_title {
+    color: rgb(34,138,213);
+    font-family: 'latobold';
+}
+
+.mehta_patient_details_container_label {
+    position: relative;
+    font-family: 'latoBold';
+}
+
+.mehta_loader_section {
+    margin-top: 200px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.mehta_loader_visible {
+    top: -55px;
+    left: 330px;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+    pointer-events: none !important;
+    background: transparent url(../images/keyboard_dialog_loading_icon06222012.png) top left no-repeat;
+    -webkit-animation: rotate360 1.3s linear infinite;
+} 
+
+#mobile_server_error {
+    left: 55px;
+    top: 130px;
+    width: 210px;
+    font-size: 18px;
+    font-family: 'LatoRegular';
+    position: absolute;
+    color: #dd0000e0;
+    font-weight: 600;
+    margin-left: -8px;
+}
+
+#pincode_server_error {
+    left: 60px;
+    top: 110px;
+    width: 210px;
+    font-size: 18px;
+    font-family: 'LatoRegular';
+    position: absolute;
+    color: #dd0000e0;
+    font-weight: 600;
+    margin-left: -8px;
+}

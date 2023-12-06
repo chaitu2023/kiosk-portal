@@ -1,0 +1,490 @@
+.invasive_instructions_main_container{
+    margin-top: -23px;    
+    box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;
+    background-color: #dddddd;
+    height: 368px;
+}
+
+.invasive_instructions_header_text {
+    padding-left: 200px;
+    font-weight: 500;
+    margin-left: 157px;
+    margin-top: 66px;
+    font-family: 'LatoItalic';
+    font-size: 34px;
+    color: #4d4d4d;
+    margin-bottom: 30px;
+}
+
+.invasive_instructions_main_container{
+    margin-top: -23px;    
+    box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;
+    background-color: #dddddd;
+    height: 368px;
+}
+
+.invasive_instructions_heading{
+    text-align: center;
+    font-size: 24px;
+    margin-left: 9px;
+    padding-top: 10px;
+    font-family: 'LatoSemibold';
+    color: #333333;
+}
+
+.invasive_instruction_box{
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0px 3px 11px #bdbdbd, 0px 0px 7px #888;
+    width: 589px;
+    height: 150px;
+    margin-left: 103px;
+    padding: 9px;
+    margin-top: 68px;
+    background: white;
+    align-items: baseline;
+    justify-content: center;
+}
+.invasive_instruction_box_text{
+    position: absolute;
+    font-size: larger;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    top: 93px;
+    font-family: LatoRegular;
+    font-family: 'LatoSemibold';
+    color: #333333;
+}
+
+
+.invasive_instructions_header_image{
+    float: left;
+    margin-left: 307px;
+    width: 44px;
+}
+
+/* .invasive_instructions_header_image{
+    float: left;
+    margin-left: 307px;
+    width: 29px;
+} */
+
+.invasive_glc_slc_main_container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    position: absolute;
+    top: 130px;
+    /* color: wheat; */
+    grid-gap: 21px;
+}
+
+#invasive_glc_slc_container{
+    left: 90px;
+    background-color: white;
+    box-shadow: 0px 0px 6px #bdbdbd, 0px 0px 5px #888;
+    display: grid;
+    width: 205px;
+    height: 94px;
+    position: relative;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    align-items: center;
+    text-align: center;
+}
+
+.invasive_glc_slc_title{
+	font-size: 20px;
+    font-weight: 500;
+    color: #4a4a4ae3;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: LatoBold;
+}
+
+#invasive_glc_slc_container_active{
+    left: 90px;
+    background-color: #208ad6;
+    box-shadow: 0px 0px 6px #bdbdbd, 0px 0px 5px #888;
+    display: grid;
+    width: 205px;
+    height: 94px;
+    position: relative;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    align-items: center;
+    text-align: center;
+}
+
+#invasive_glc_slc_container_active .invasive_glc_slc_title{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: LatoBold;
+}
+
+.instruction-enter-right {
+    -webkit-animation: slideInRight 0.5s both ease-in;
+    -moz-animation: slideInRight 0.5s both ease-in;
+    animation: slideInRight 0.5s both ease-in;
+}
+
+.glc_logo{
+    content: url(../images/invasive/sugar-blood-level-off.png);
+}
+
+.urn_logo{
+    content: url(../images/invasive/urine-test-off.png);
+}
+
+.hcv_logo{
+    content: url(../images/invasive/hcv-test-off.png);
+}
+
+.preg_logo{
+    content: url(../images/invasive/pregnant-test-off.png);
+}
+
+.deng_logo{
+    content: url(../images/invasive/dengue-test-off.png);
+}
+
+.trop_logo{
+    content: url(../images/invasive/troponin-test-off.png);
+}
+
+.heamo_logo{
+    content: url(../images/invasive/heamo-test-off.png);
+    width: 29px;
+}
+
+.mal_logo{
+    content: url(../images/invasive/malaria-test-off.png);
+}
+
+.syph_logo{
+    content: url(../images/invasive/syphilis-test-off.png);
+}
+
+.lip_logo{
+    content: url(../images/invasive/lipid-test-off.png);
+}
+
+.hiv_logo{
+    content: url(../images/invasive/hiv-off.png);
+}
+
+.invasive_instructions_circle_container_1 {
+	top: 40px;
+    left: 121px;
+    position: absolute;
+}
+
+#invasiveInstructionAnimationGif_1 {
+	background: transparent url(../images/invasive/ivt_opRd_1.png) top left no-repeat;
+	background-size: cover;
+    height: 201px;
+    width: 211px;
+    margin-top: 16px;
+    margin-left: 24px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+.invasiveInstruction_1{
+	position: absolute;
+    top: 270px;
+    left: 121px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 280px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}
+
+.invasive_instructions_circle_container_2 {
+	top: 40px;
+    left: 455px;
+    position: absolute;
+}
+
+#invasiveInstructionAnimationGif_2 {
+    background: transparent url(../images/invasive/ivt_opRd_2.png) top left no-repeat;
+    background-size: cover;
+    height: 201px;
+    width: 211px;
+    margin-top: 16px;
+    margin-left: 10px;
+    display: block;
+    /* transform: rotate(15deg); */
+    z-index: 5;
+    border-radius: 115px;
+}
+
+.invasiveInstruction_2{
+    position: absolute;
+    top: 270px;
+    left: 425px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 280px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}
+
+
+.optical_reader_instructions_circle_container_1 {
+    top: -20px;
+    left: 50px;
+    position: absolute;
+}
+
+.optical_reader_instructions_circle_place_overlays, .LipidoCare_instructions_circle_place_overlays, .heamo_instructions_circle_place_overlays {
+    background: transparent url(../images/tests_instruction_circle20121009_transparent.png) top left no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    z-index: 20;
+    display: block;
+    height: 224px;
+    width: 224px;
+    background-size: cover;
+}
+
+#optical_reader_instructions_circle1_place_frames {
+    background: transparent url(../images/invasive/optical-reader/optical-reader-connect.gif) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+#optical_reader_instructions_circle1_place_frames_png {
+    background: transparent url(../images/invasive/optical-reader/optical-reader-connect.png) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+.optical_reader_instructions_text_1{
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 224px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}
+
+
+.optical_reader_instructions_circle_container_2 {
+    top: -20px;
+    left: 290px;
+    position: absolute;
+}
+
+.optical_reader_instructions_circle_container_3 {
+    top: -20px;
+    left: 525px;
+    position: absolute;
+}
+
+
+.optical_reader_instructions_text_2{
+    position: absolute;
+    top: 200px;
+    left: 310px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 195px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}
+.optical_reader_instructions_text_3{
+    position: absolute;
+    top: 200px;
+    left: 525px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 230px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}
+
+#optical_reader_instructions_circle2_place_frames {
+    background: transparent url(../images/invasive/optical-reader/optical-reader-insert-caset.gif) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+#optical_reader_instructions_circle2_place_frames_png {
+    background: transparent url(../images/invasive/optical-reader/optical-reader-insert-caset.png) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;opacity: 0.4;
+}
+
+#optical_reader_instructions_circle3_place_frames {
+    background: transparent url(../images/invasive/optical-reader/optical-reader-start-test.gif) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+#optical_reader_instructions_circle3_place_frames_png {
+    background: transparent url(../images/invasive/optical-reader/optical-reader-start-test.png) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+    opacity: 0.4;
+}
+
+
+.LipidoCare_instructions_circle_container_1 {
+    top: -20px;
+    left: 290px;
+    position: absolute;
+}
+.LipidoCare_instructions_circle_container_2 {
+    top: -20px;
+    left: 430px;
+    position: absolute;
+}
+
+#LipidoCare_instructions_circle1_place_frames {
+    background: transparent url(../images/invasive/lip/lip-connect-device.png) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+#LipidoCare_instructions_circle2_place_frames {
+    background: transparent url(../images/invasive/lip/lip-power-on.png) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+
+.LipidoCare_instructions_text_1{
+    position: absolute;
+    top: 200px;
+    left: 290px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 224px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}
+
+.LipidoCare_instructions_text_2{
+    position: absolute;
+    top: 200px;
+    left: 450px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 195px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}
+
+
+.heamo_instructions_circle_container_1 {
+    top: -20px;
+    left: 290px;
+    position: absolute;
+}
+.heamo_instructions_circle_container_2 {
+    top: -20px;
+    left: 430px;
+    position: absolute;
+}
+
+#heamo_instructions_circle1_place_frames {
+    background: transparent url(../images/invasive/trueHP/connect-device.png) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+#heamo_instructions_circle2_place_frames {
+    background: transparent url(../images/invasive/trueHP/power-on.png) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+
+.heamo_instructions_text_1{
+    position: absolute;
+    top: 200px;
+    left: 290px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 224px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}
+
+.heamo_instructions_text_2{
+    position: absolute;
+    top: 200px;
+    left: 450px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 195px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}

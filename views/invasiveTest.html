@@ -1,0 +1,38 @@
+<div class="welcome_screen_title">
+    {{interfaceLabels[welcomePageHeadlineText]}} 
+</div>
+
+<div class="invasive_header_container">
+    <img class="invasive_header_container_logo" src="images/invasive-logo-off.png">
+    <span class="invasive_header_container_text">Invasive</span>
+</div>
+
+<div class="invasive_header_container_subText">
+    <span>Please select from the list of test below and click 'Continue' to proceed</span>
+</div>
+
+<div class="invasive_main_container">
+    <div id="invasive_btn_box_ng">
+        <div ng-repeat="button in invasiveBtn" class="invasive_btn_style"  id="{{ button.buttonId }}">
+            <div class="buttonBorder" ng-click="selectIvtTest(button)">
+                <img class="invasive_btn_icon {{button.buttonId}}">
+                <span class="invasive_btn_text">{{ button.label }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a class="invasive_back_button" ng-click="backButtonOut()">
+    <span class="invasive_previous_page_text">{{interfaceLabels[prevSlideText]}}</span>
+</a>
+
+<a class="invasive_continue_next_button flow_begins_button" ng-show="ivtNextVisible" ng-class="{'button-enter-right' : ivtNextVisible, 'button-exit-right' : !ivtNextVisible}" ng-click="selectedIvtTestList()"
+     style="width: 200px;">
+    <span class="invasive_continue_next_button_text">{{interfaceLabels[AddIvasiveSelectedTest]}}</span>
+</a>
+
+<div class="kiosk_offline_tooltip" ng-show="kioskApiNotAvailableTipVisible">
+   <div class="kiosk_offline_tooltip_text">
+    {{interfaceLabels[ivtOfflineText]}} 
+   </div>
+</div>

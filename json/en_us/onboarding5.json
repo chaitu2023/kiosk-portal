@@ -1,0 +1,6 @@
+{
+    "onboarding.5.tittle": "What is your Waist Circumference?",
+    "onboarding.5.subtitle": "(waist circumference is used to find Visceral Fat)",
+    "onboarding.5.inputErr": "Please enter valid waist circumference(*Ref Range varies from 50 to 140 cm)",
+    "onboarding.5.inputErr2": "Please enter valid waist circumference(*Ref Range varies from 20 to 55 inch)"
+}

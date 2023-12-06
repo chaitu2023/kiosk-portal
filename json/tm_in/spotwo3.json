@@ -1,0 +1,20 @@
+{
+    "spo2three.spo2": "எஸ்பிஓ2",
+    "spo2three.results": "முடிவுகள்",
+    "spo2three.continue": "தொடரவும்",
+    "spo2three.spo2.percent": "%",
+    "spo2three.spo2level": "எஸ்பிஓ2 ஆக்சிஜன் அளவு",
+    "spo2three.checkSpo2again": "மீண்டும் சரிபார்க்கவும்",
+    "spo2three.information": "தகவல்",
+    "spo2three.parameter": "அளவுகோல்",
+    "spo2three.yourscore": "உங்கள் மதிப்பெண்",
+    "spo2three.OverallStatus": "ஒட்டுமொத்த நிலை",
+    "spo2three.spo22scale": "எஸ்பிஓ<sub>2</sub> அளவு",
+    "spo2three.finalResult": "இறுதி முடிவு",
+    "spo2three.status.healthy": "ஆரோக்கியம்",
+    "spo2three.status.acceptable": "ஏற்கக்கூடியது",
+    "spo2three.status.atrisk": "ஆபத்தில்",
+    "spo2three.status.low": "குறைவு",
+    "spo2two.in.progress": "SpO2 is in Progress...",
+    "spo2three.status.spo2_check_healthcare_provider": "Check With Healthcare Provider"
+}

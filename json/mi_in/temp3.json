@@ -1,0 +1,20 @@
+{
+	"temp3.results" : "निकाल",
+    "temp3.continue": "सुरु ठेवा",
+    "temp3.calibration": "अंश शोधन",
+    "temp3.tempScale" : "शरीराच्या तापमानाची स्केल",
+    "temp3.status.healt":"सामान्य",
+    "temp3.status.accep":"स्वीकार्य",
+    "temp3.status.fever":"ताप",
+    "temp3.status.highfever":"खूप ताप",
+    "temp3.roomTemp" : "खोली",
+    "temp3.wristTemp" : "शरीर",
+    "temp3.temperature":"तापमान",
+    "temp3.bodyTemp" : "शरीराचे तापमान",
+    "temp3.information":"माहिती",
+    "temp3.parameter":"घटक",
+    "temp3.yourscore":"आपले गुण",
+    "temp3.OverallStatus":"एकंदरीत स्थिती",
+    "temp3.finalResult":"अंतिम निकाल",
+    "temp3.checkTempagain":"तापमान पुन्हा तपासा"
+}

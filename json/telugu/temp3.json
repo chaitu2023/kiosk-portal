@@ -1,0 +1,20 @@
+{
+    "temp3.results": "ఫలితాలు",
+    "temp3.continue": "కొనసాగండి",
+    "temp3.calibration": "కాలిబరేషన్",
+    "temp3.tempScale": "బాడీ టెంపరేచర్ స్కేల్",
+    "temp3.status.healt": "సాధారణం",
+    "temp3.status.accep": "అంగీకరించతగినది",
+    "temp3.status.fever": "జ్వరం",
+    "temp3.status.highfever": "ఎక్కువ జ్వరం",
+    "temp3.roomTemp": "గది",
+    "temp3.wristTemp": "శరీరం",
+    "temp3.temperature": "ఉష్ణోగ్రత",
+    "temp3.bodyTemp": "శరీర ఉష్ణోగ్రత",
+    "temp3.information": "సమాచారం",
+    "temp3.parameter": "పారామీటర్",
+    "temp3.yourscore": "మీ స్కోర్",
+    "temp3.OverallStatus": "మొత్తంమీద స్థితి",
+    "temp3.finalResult": "తుది ఫలితం",
+    "temp3.checkTempagain": "టెంపరేచర్ మళ్ళీ చెక్ చేయండి"
+}

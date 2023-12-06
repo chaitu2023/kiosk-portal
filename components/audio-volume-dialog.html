@@ -1,0 +1,17 @@
+
+<div id="higi_audio_box">
+  <div id="higi_audio_dialog" style="z-index:200;" class="{{audioButtonShift}}">
+    <div class="audio_slider_bkg_arrow {{volume.isLoggedInClass}}"></div>
+    <div class="audio_slider_container">
+      <div class="audio_mute_btn_left" ng-click="volume.muteToggle('mute')"></div>
+      <div class="audio_mute_btn_right" ng-click="volume.muteToggle('unmute')"></div>
+      <div id="audio_slider_tick_container" style="display: none;">
+        <div id="{{tick.id}}" class="{{tick.class}} {{tick.onClass}}" ng-repeat="tick in volume.dialogPoints"></div>
+      </div>
+      <div id="audio_slider" class="sliderbar"></div>
+    </div>
+  </div>
+  <div id="higi_audio_mask" ng-click="volume.volumeMaskClicked()"></div>
+  <div style="background-color:transparent;width:800px; height:600px;z-index:100;"
+    ng-click="isVisibleAudioSlider =!isVisibleAudioSlider"></div>
+</div>

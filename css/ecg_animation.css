@@ -1,0 +1,77 @@
+#ecgContainer {
+	/* position: relative;
+	left: 240px; */
+} 
+#ecgAnimation {
+	background-image: url('../images/ecgloader.gif');
+	background-repeat: no-repeat;
+	height: 650px;
+	width: 100%;
+	position: absolute;
+	top: -70px;
+	left: -45px;
+ }
+#ecg_ad_video{   
+	top: -100px;
+	left: 10px;
+	position: relative;
+}
+#ecgContainer #bloodpressure_ad{
+	top:0px;
+	z-index: 0;
+	position: absolute;
+	text-align: center;
+	height: 400px;
+	width: 680px;
+	left: 72px;
+	position: absolute;
+	overflow: hidden;
+	background: none;
+}
+
+/*#spo2InstructionAnimationGif {
+	background-image: url('../images/gif/spo2_ins_v3.gif');
+	background-repeat: no-repeat;
+	height: 650px;
+	width: 100%;
+	position: absolute;
+	top: 10px;
+	left: 0px;
+ }
+#spo2InstructionAnimationGif {
+	background-image: url('../images/gif/spo2_ins_v6.png');
+	background-repeat: no-repeat;
+	height: 650px;
+	width: 100%;
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	background-color: #F7F7F7;
+	background-color: rgb(221,221,221);
+	top:156px;
+	height: 300px;
+ }
+#spo2InprogressAnimationGif {
+	background-image: url('../images/gif/spo2InprogressAnimationGif.gif');
+	background-repeat: no-repeat;
+	height: 650px;
+	width: 100%;
+	position: absolute;
+	top: -95px;
+	left: 0px;
+	background-color: #F7F7F7;
+	background-color: rgb(221,221,221);
+	top:39px;
+	height: 331px;
+ }
+#temperatureInProgressAnimationGif {
+	background-image: url('../images/gif/temperatureInProgressAnimationGif.gif');
+	background-repeat: no-repeat;
+	height: 650px;
+	width: 100%;
+	position: absolute;
+	top: -95px;
+	left: 0px;
+ }
+ */
+ 

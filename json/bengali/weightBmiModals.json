@@ -1,0 +1,16 @@
+{
+    "infobox.about.bmi": "এই বিএমআই ব্যাপারটা কি??",
+    "infobox.about.bmi.subtitle": "আপনার বডি মাস ইনডেক্স, যা বিএমআই নামেও পরিচিত, গণনা করা হয় আপনার ওজন ও উচ্চতা থেকে। এই হল তার শৌখিন ফর্মুলা:",
+    "infobox.about.bmi.point01": "আপনার মোট বডি ফ্যাট নির্দেশিত করা বিএমআই থেকে আপনার ওজনের কারণে হওয়া সম্ভাব্য সমস্যার পূর্বাভাস পাওয়া যায়।",
+    "infobox.about.bmi.point02": "বিএমআই বেশী হলে, আপনার সামগ্রিক দৈহিক গঠনের কথা মাথায় রাখতে হবে। আপনি যদি অ্যাথলিট বা বডিবিল্ডার হন তাহলে আপনার বিএমআই স্বাভাবিকের থেকে বেশী হবেই।",
+    "weightBmiModals.underweight": "ওজন কম",
+    "weightBmiModals.normalweight": "স্বাভাবিক",
+    "weightBmiModals.overweight": "ওজন বেশী",
+    "weightBmiModals.obese": "মেদবহুল",
+    "infobox.about.bmi.point03": "বিএমআই সীমা",
+    "infobox.about.bmi.point04": "18.5 এর কম",
+    "infobox.about.bmi.point05": "18.5 থেকে 22.99",
+    "infobox.about.bmi.point06": "23 থেকে 27.5",
+    "infobox.about.bmi.point07": "27.5 এবং তার বেশী",
+    "infobox.about.bmi.point08": "এই চার্টে রোগ নিয়ন্ত্রণ ও প্রতিরোধ সংক্রান্ত কেন্দ্রের নির্দেশিত বডি মাস ইনডেক্স বিভাগগুলি দেখানো হয়েছে।"
+}

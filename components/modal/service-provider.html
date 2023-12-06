@@ -1,0 +1,28 @@
+<div id="service_provider_dialog" ng-show="!apolloConsultationLastSessionUncomplete">
+   <img src="images/auth_failure20120727.png" class = "book_appointment_modal_image_container">
+    <p class = "book_appointment_modal_text_container">{{interfaceLabels[serviceProvider.lastSessionNotCompletedText]}}<br><small style="padding: 10px;"><i>{{interfaceLabels[serviceProvider.wishToContinuePreviousSession]}}</i></small></p> 
+    <a class="book_appointment_modal_button_exit" ng-click="serviceProvider.proceedToCurrentSession()"> 
+        <span>{{interfaceLabels[serviceProvider.wishToContinuePreviousSessionButtonNo]}}</span>
+    </a>
+    <a class="book_appointment_modal_button_home" ng-click="serviceProvider.proceedToPreviousSession()">
+        <span>{{interfaceLabels[serviceProvider.wishToContinuePreviousSessionButtonYes]}}</span>
+    </a>
+</div>
+
+<div id="service_provider_dialog" ng-show="apolloConsultationLastSessionUncomplete">
+	<div ng-show="serviceProvider.isTeleconsultationConfirmModalShow" style="position: absolute;">
+	   <img src="images/auth_failure20120727.png" class = "book_appointment_modal_image_container">
+	    <p class = "book_appointment_modal_text_container" style="left: 114px;margin-left: 90px;">{{interfaceLabels[serviceProvider.lastSessionNotCompletedText]}}<br><small style="padding: 10px;"><i>{{interfaceLabels[serviceProvider.wishToContinuePreviousSession]}}</i></small></p> 
+	    <a class="book_appointment_modal_button_exit" ng-click="serviceProvider.proceedToCurrentTeleconsultationSession()">
+	        <span>{{interfaceLabels[serviceProvider.wishToContinuePreviousSessionButtonNo]}}</span>
+	    </a>
+	    <a class="book_appointment_modal_button_home" ng-click="serviceProvider.proceedToPreviousTeleconsultationSession()">
+	        <span>{{interfaceLabels[serviceProvider.wishToContinuePreviousSessionButtonYes]}}</span>
+	    </a>
+    </div>
+    <div ng-show="!serviceProvider.isTeleconsultationConfirmModalShow" style="position: absolute;">
+	   <img src="images/auth_failure20120727.png" class = "book_appointment_modal_image_container">
+	    <p class = "book_appointment_modal_text_container" style="margin-left: 167px;margin-top: 167px;font-size: 24px;">{{interfaceLabels[serviceProvider.pleaseWaitText]}}<br><small style="padding: 10px;"><i>{{interfaceLabels[serviceProvider.initiateLiveCallText]}}</i></small></p> 
+	    <div class="vital-fetch-spinner" style="top: 267px;"></div>
+    </div>
+</div>

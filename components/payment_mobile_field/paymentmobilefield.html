@@ -1,0 +1,84 @@
+<style type="text/css">
+ .payment_mobile_login_input {
+    top: 100px;
+    left: 18px;
+    height: 55px !important;
+    padding-right: 90px !important;
+    padding-left: 10px !important;
+    border: 2px solid #808080d1;
+    color: #808080d1;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: 10px !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 415px !important;
+    display: block !important;
+    font-size: 18px !important;
+    position: absolute !important;
+    background: white !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
+
+  /*.payment_mobile_login_input::-moz-selection {
+    background-color: #0261c2;  }
+  .payment_mobile_login_input::selection {
+   background-color: #0261c2;  }
+  .payment_mobile_login_input::-webkit-selection {
+   background-color: #0261c2; }
+  .payment_mobile_login_input:focus {
+    border: 3px solid #3F90E2; }
+  .payment_mobile_login_input {
+    padding-left: 15px;
+    text-indent: 0px; }*/
+
+ 
+.payment_text_mobile_error {
+  color: red;
+  margin-left: 20px;
+  margin-top: 120px;
+}
+
+.payment_mobile_main_title{
+  font-size: 28px;
+  font-weight: 500;
+  color: #4a4a4a;
+  font-family: 'LatoItalic';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 668px;
+}
+
+.payment_mobile_textbox_title {
+  color: #4a4a4a;
+  font-size: 14px;
+  left: 20px;
+  position: absolute;
+  top: 65px;
+  font-family: 'LatoRegular';
+}
+
+
+</style>
+
+<div class="payment_mobile_main_title">{{interfaceLabels[enterMobileNumber]}}
+  <i class="fa fa-close" style="position: absolute;right: 30px;top: 9px;color: #6d6d6d;font-size: 22px;" ng-click="mobileLogoutExit()">
+  </i>
+</div>
+<div class="payment_mobile_textbox_title">{{interfaceLabels[enterTenDigitMobileNumberText]}}</div>
+
+<ng-form name="myForm" >
+    <div>
+      <input type="text" name="phone" ng-pattern="phoneNumbr" ng-model="paymentmobilefield.text" ng-focus="setIndex(paymentmobilefield.id);paymentmobilefield.focus()" id="{{paymentmobilefield.id}}"  class="payment_mobile_login_input {{enabledCursor}} {{paymentmobilefield.text == '' ? 'blank' : ''}}"  ng-mouseup="clearSelected(paymentmobilefield.id);" ng-mousedown="startDrag(paymentmobilefield.id);" ng-disabled="disabledField(paymentmobilefield.id);"  />
+      <div class="reason_for_visit_disclaimer" style="top: 171px !important;">{{interfaceLabels[validMobileNumberText]}}</div>
+      <!-- <p class="payment_text_mobile_error" ng-show="myForm.phone.$error.pattern">Phone number must be 10 digit valid number</p> -->
+
+    </div>
+</ng-form>

@@ -1,0 +1,280 @@
+/* Checkbox hack */
+
+.switch input {
+    cursor: pointer;
+    height: 100%;
+    opacity: 0;
+    position: relative;
+    top: -25px;
+    width: 100%;
+    z-index: 100;
+}
+/* Container */
+
+.switch {
+    height: 40px;
+    /* margin: 25px 0px 0px 2px; */
+    margin: 37px 0px 0px 23px;
+    position: relative;
+    width: 100px;
+}
+/* Background unchecked */
+
+.switch label {
+    /*border: 1px solid #0261C2;*/
+    border-radius: 2px;
+    display: block;
+    height: 100%;
+    position: relative;
+    transition: all .15s ease;
+    width: 100%;
+    border-radius: 3px;
+}
+/* Slider unchecked */
+
+.switch label div {
+    background: #0261C2;
+    border-radius: 2px;
+    display: block;
+    height: 100%;
+    /*left: 6px;*/
+    position: absolute;
+    /*top: 5px;*/
+    transition: all .15s ease;
+    width: 50%;
+    z-index: 3;
+    /*border: 1px solid #CFCFCF;*/
+    /*border-radius: 3px;*/
+}
+/* Vertical lines on slider */
+
+.switch label div:before {
+    /*background: #d3d3d3;*/
+    color: #d3d3d3;
+    bottom: 0;
+    /*box-shadow: -6px 0 0 0 #d3d3d3, 6px 0 0 0 #d3d3d3;*/
+    content: 'ft';
+    display: block;
+    height: 100%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all .15s ease;
+    width: 100%;
+}
+/* Icon styles */
+
+.switch .fontawesome-ok {
+    font-size: 28px;
+    left: 20px;
+    position: relative;
+    top: 13px;
+    z-index: 2;
+}
+.switch .fontawesome-remove {
+    font-size: 29px;
+    left: 51px;
+    position: relative;
+    top: 12px;
+    z-index: 2;
+}
+/* Checked States */
+
+.switch input:checked~label {
+    /*border: 1px solid #0261C2;*/
+}
+.switch input:checked~label div {
+    left: 50px;
+}
+.switch_cm {
+    position: relative;
+    top: -25px;
+    left: 60px;
+    color: #0261C2;
+    font-family: 'IntervalSansProSemiBoldItalic';
+    font-size: 18px;
+    opacity: .3;
+}
+.switch_cm_active {
+    position: relative;
+    top: -25px;
+    left: 60px;
+    color: #0261C2;
+    font-family: 'IntervalSansProSemiBoldItalic';
+    font-size: 18px;
+}
+.swith_inch {
+    position: relative;
+    top: -25px;
+    left: 20px;
+    color: #0261C2;
+    font-family: 'IntervalSansProSemiBoldItalic';
+    font-size: 18px;
+    opacity: .3;
+}
+.swith_inch_active {
+    position: relative;
+    top: -25px;
+    left: 20px;
+    color: #0261C2;
+    font-family: 'IntervalSansProSemiBoldItalic';
+    font-size: 18px;
+}
+.swith_ft_active {
+    position: relative;
+    top: -25px;
+    left: 20px;
+    color: #0261C2;
+    font-family: 'IntervalSansProSemiBoldItalic';
+    font-size: 18px;
+}
+.swith_ft {
+    position: relative;
+    top: -25px;
+    left: 20px;
+    color: #0261C2;
+    font-family: 'IntervalSansProSemiBoldItalic';
+    font-size: 18px;
+    opacity: .3;
+}
+.switch_pos {
+    border: 1px solid #CFCFCF;
+    height: 64px;
+    width: 126px;
+    position: relative;
+    top: 14px;
+    left: 23px;
+    border-radius: 3px;
+    background-image: -moz-linear-gradient(90deg, #EFEFEF 0%, #F6F6F6 100%);
+    background-image: -webkit-linear-gradient(90deg, #EFEFEF 0%, #F6F6F6 100%);
+    background-image: -ms-linear-gradient(90deg, #EFEFEF 0%, #F6F6F6 100%);
+    box-shadow: 0px 2px 1px 0px white;
+}
+/* .tgl {
+  display: none;
+}
+.tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.tgl::-moz-selection, .tgl:after::-moz-selection, .tgl:before::-moz-selection, .tgl *::-moz-selection, .tgl *:after::-moz-selection, .tgl *:before::-moz-selection, .tgl + .tgl-btn::-moz-selection {
+  background: none;
+}
+.tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
+  background: none;
+}
+.tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 7em;
+  height: 3.5em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+.tgl + .tgl-btn:before {
+  display: none;
+}
+.tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+
+.tgl-flip + .tgl-btn {
+  padding: 4px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  font-family: sans-serif;
+  -webkit-perspective: 100px;
+  perspective: 100px;
+}
+.tgl-flip + .tgl-btn:after, .tgl-flip + .tgl-btn:before {
+  display: inline-block;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  line-height: 3.6em;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 4px;
+}
+.tgl-flip + .tgl-btn:after {
+  	content: attr(data-tg-on);
+   	background: #CFCFCF; 
+	color: #0261C2;
+	border: 1px solid #CFCFCF;
+	box-shadow: 0px 2px 1px 0px white;
+  	-webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+	background-image: -moz-linear-gradient(90deg, #EFEFEF 0%, #F6F6F6 100%);
+	background-image: -webkit-linear-gradient(90deg, #EFEFEF 0%, #F6F6F6 100%);
+	background-image: -ms-linear-gradient(90deg, #EFEFEF 0%, #F6F6F6 100%);
+	font-family: 'IntervalSansProSemiBold';
+	font-style: italic;
+	font-size: 32px;
+	line-height: 65px;
+}
+.tgl-flip + .tgl-btn:before {
+   	background: #CFCFCF; 
+	color: #0261C2;
+	border: 1px solid #CFCFCF;
+	content: attr(data-tg-off);
+	background-image: -moz-linear-gradient(90deg, #EFEFEF 0%, #F6F6F6 100%);
+	background-image: -webkit-linear-gradient(90deg, #EFEFEF 0%, #F6F6F6 100%);
+	background-image: -ms-linear-gradient(90deg, #EFEFEF 0%, #F6F6F6 100%);
+	box-shadow: 0px 2px 1px 0px white;
+	font-family: 'IntervalSansProSemiBold';
+	font-style: italic;
+	font-size: 32px;
+	line-height: 65px;
+}
+.tgl-flip + .tgl-btn:active:before {
+  	-webkit-transform: rotateY(-20deg);
+    transform: rotateY(-20deg);
+}
+.tgl-flip:checked + .tgl-btn:before {
+  	-webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tgl-flip:checked + .tgl-btn:after {
+  	-webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  	left: 0;
+}
+.tgl-flip:checked + .tgl-btn:active:after {
+  	-webkit-transform: rotateY(20deg);
+    transform: rotateY(20deg);
+}
+.tgl_pos {
+	position: relative;
+	top: 15px;
+	left: 20px;
+}
+.flip_btn_icon{	
+	position: relative;
+	left: 115px;
+	top: 45px;
+	color: #0261C2;
+}
+ */

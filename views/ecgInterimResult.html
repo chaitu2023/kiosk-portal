@@ -1,0 +1,328 @@
+<!-- <div id="slide_title" class="{{langClass}}">{{interfaceLabels[slideTitle]}}</div> -->
+<!-- <div id="slide_subtitle">{{interfaceLabels[slideSubTitle]}}</div> -->
+
+<div id="bloodpressure_results" class="ecg_local_result_main_container1">
+
+
+    <div class="ecg_local_result_title_container">        
+        <div class="ecg_local_result_title_inner_container" ng-if="getLeadStatus() == 3">
+            <img src="images/ecg/Icons-30.png" style="width:50px;">
+            {{interfaceLabels[ecglead3]}}<span>{{interfaceLabels[resultsECG]}}</span>
+        </div>
+        
+        <div class="ecg_local_result_title_inner_container" ng-if="getLeadStatus() == 6">
+            <img src="images/ecg/Icons-30.png" style="width:50px;">
+            {{interfaceLabels[ecglead6]}} <span>{{interfaceLabels[resultsECG]}}</span>
+        </div>
+    </div>
+
+    <div class="ecg_local_result_container" id="ecg_local_result_loaded_container" style="">
+
+    <div class="ecg_local_result_navbar">
+        
+        <div class="ecg_local_result_navbar_tab_parent"  id="ecg_local_result_navbar_tab_ecg_check_up_summary_parent">
+            <div
+            class="ecg_local_result_navbar_tab " 
+            id="ecg_local_result_navbar_tab_ecg_check_up_summary"
+            ng-click="ecgLocalResultNavbarNavigate('ecg_local_result_navbar_tab_ecg_check_up_summary')"
+            >
+                {{interfaceLabels[ecgCheckUpSumm]}}
+            </div> 
+        </div> 
+
+
+        <div ng-hide="irregularECG" ng-show="ecgBadValidation" class="ecg_local_result_navbar_tab_parent" id="ecg_local_result_navbar_tab_graph_set_1_parent">
+            <div 
+            class="ecg_local_result_navbar_tab" 
+            id="ecg_local_result_navbar_tab_graph_set_1"
+            ng-click="ecgLocalResultNavbarNavigate('ecg_local_result_navbar_tab_graph_set_1')">
+            {{interfaceLabels[grpset1]}}
+            </div>
+        </div>
+    
+        <div ng-hide="irregularECG" ng-show="ecgBadValidation" class="ecg_local_result_navbar_tab_parent" id="ecg_local_result_navbar_tab_graph_set_2_parent"ng-if="getLeadStatus() == 6">
+            <div 
+                class="ecg_local_result_navbar_tab" 
+                id="ecg_local_result_navbar_tab_graph_set_2"
+                ng-click="ecgLocalResultNavbarNavigate('ecg_local_result_navbar_tab_graph_set_2')" >
+                {{interfaceLabels[grpset2]}}
+            </div>
+        </div>
+
+
+    </div>
+        
+    <!-- ECG Check Up Summary -->
+    <div id="ecg_local_result_block_ecg_check_up_summary" ng-hide="irregularECG" ng-show="ecgBadValidation">
+        <div id="weight05_results_weight" class="ecg_local_result_block_summary_paramters_container">
+            <span class="ecg_local_result_block_summary_paramters_container_parameter">{{interfaceLabels[ecgParameter]}}</span>
+            <span class="ecg_local_result_block_summary_paramters_container_your_score">{{interfaceLabels[ecgYourscore]}}</span>
+            <span class="ecg_local_result_block_summary_paramters_container_status">{{interfaceLabels[ecgSTATUS]}}</span>
+            <span class="ecg_local_result_block_summary_paramters_container_normal_range">{{interfaceLabels[ecgNormalrange]}}</span>
+        </div>
+        <div id="weight05_results_weight" class="ecg_local_result_block_summary_values_container">
+
+            <div class="result_title">{{interfaceLabels[ecgHeartRate]}}
+                <br>
+                <span ng-show="ecgBadValidation" class="unit">{{interfaceLabels[ecgBpm]}}</span>
+            </div>
+            <!-- <div class="result_title">Resistance</div> -->
+            <div class="result testFadeIn">
+                <span ng-hide="irregularECG" ng-show="ecgBadValidation" id="ecg_heart_rate" class="value"
+                    ng-class="{'ecg_normal_val': ECGBpmRisk == 'Normal', 'ecg_abnormal_val': ECGBpmRisk!= 'Normal'} ">{{ECGBpmValue}}</span>
+                <span ng-show="irregularECG" ng-show="ecgBadValidation" id="ecg_heart_rate" class="value"
+                    style="color:#f37279;font-size: 52.7px;">{{MinECGBpmValue}}<span
+                        id="symbol">~</span>{{MaxECGBpmValue}}</span>                
+                <span ng-show="ecgBadValidation" class="unit">{{interfaceLabels[ecgBpm]}}</span>
+            </div>
+            <span class="weight05_result_status">
+                {{interfaceLabels[ECGBpmRiskStatus]}}
+            </span>
+            <span ng-show="ecgBadValidation" class="unit">60 - 100 </span>
+        </div>
+        <div id="weight05_results_bodyfat" style="flex:100%;width:auto;position: static;height:100%;background-color: #f2f2f2;border-radius: 10px;display: flex;flex-direction: column;justify-content: space-between;box-sizing: border-box;padding:5px">
+
+            <div class="result_title">
+                {{interfaceLabels[ecgPrInterval]}}
+                <br>
+                <span ng-show="ecgBadValidation" class="unit">{{interfaceLabels[ecgMs]}}</span>
+            </div>
+            <div class="result testFadeIn">
+                <span ng-show="ecgBadValidation" id="ecg_pr_interval" class="value" ng-class="{'ecg_normal_val': ECGPRIntervalRisk == 'Normal', 'ecg_abnormal_val': ECGPRIntervalRisk != 'Normal'} ">{{PRIntervalValue}}</span>                
+                <span ng-show="ecgBadValidation" class="unit">{{interfaceLabels[ecgMs]}}</span>
+
+            </div>
+            <span class="weight05_result_status">
+                {{interfaceLabels[ECGPRIntervalRiskStatus]}}
+            </span>
+            <span ng-show="ecgBadValidation" class="unit">120 - 200</span>
+        </div>
+        <div id="weight05_results_leanmass" style="flex:100%;width:auto;position: static;height:100%;display: flex;flex-direction: column;justify-content: space-between;box-sizing: border-box;padding:5px">
+            <div class="result_title">
+                {{interfaceLabels[ecgQrs]}} 
+                <br>
+                <span ng-show="ecgBadValidation" class="unit">{{interfaceLabels[ecgDuration]}}</span>
+            </div>
+            <div class="result testFadeIn">
+                <span ng-show="ecgBadValidation" id="ecg_qrs_interval" class="value" ng-class="{'ecg_normal_val': ECGQRSDurationRisk == 'Normal', 'ecg_abnormal_val': ECGQRSDurationRisk != 'Normal'} ">{{QRSDurationValue}}</span>
+                <span ng-show="ecgBadValidation" class="unit">{{interfaceLabels[ecgMs]}}</span>
+
+            </div>
+            <span class="weight05_result_status">
+                {{interfaceLabels[ECGQRSDurationRiskStatus]}}
+            </span>
+            <span ng-show="ecgBadValidation" class="unit">80 - 120</span>
+        </div>
+
+        <div id="weight05_results_leanmass" style="flex:100%;width:auto;position: static;height:100%;background-color: #f2f2f2;border-radius: 10px;display: flex;flex-direction: column;justify-content: space-between;box-sizing: border-box;padding:5px">
+
+            <div class="result_title">
+                {{interfaceLabels[ecgQtc]}} 
+                <br>
+                <span class="unit" ng-show="ecgBadValidation">{{interfaceLabels[ecgInterval]}}</span>
+            </div>
+            <div class="result testFadeIn">
+                <span ng-show="ecgBadValidation" id="ecg_qtc_interval" class="value" ng-class="{'ecg_normal_val': ECGQTCIntervalRisk == 'Normal', 'ecg_abnormal_val': ECGQTCIntervalRisk != 'Normal'} ">{{QTCIntervalValue}}</span>
+                <span class="unit" ng-show="ecgBadValidation">{{interfaceLabels[ecgMs]}}</span>
+
+            </div>
+            <span class="weight05_result_status">
+                {{interfaceLabels[ECGQTCIntervalRiskStatus]}}
+            </span>
+            <span class="unit" ng-show="ecgBadValidation"> 310 - 450</span>
+        </div>
+        <div id="ecg_status" style="display: none;" ng-class="{'ecg_normal': ecgvalidationstatusresult == ('Normal Sinus Rhythm'),'ecg_clinical_screen_val': ecgvalidationstatusresult == 'Clinical Screening Recommended', 'ecg_abnormal': (ecgvalidationstatusresult != 'Normal Sinus Rhythm' && ecgvalidationstatusresult != 'Clinical Screening Recommended')} ">
+            <div class="result_title">
+                {{interfaceLabels[ecgTitle]}}
+                <br>
+                <!--<span class="unit">{{interfaceLabels[ecgOverallStatus]}}</span>-->
+            </div>
+            <div class="ecg_overall_status">
+                <p>
+                    <img ng-if="ecgvalidationstatusresult == 'Normal Sinus Rhythm'" src="./images/vital_status/vital_status_normal.png" style="width: 60px;">
+                    <img ng-if="ecgvalidationstatusresult == 'Clinical Screening Recommended'" src="./images/vital_status/hospital-buildings.png" style="width: 60px;">
+                    <img ng-if="ecgvalidationstatusresult != 'Normal Sinus Rhythm' && ecgvalidationstatusresult != 'Clinical Screening Recommended'" src="./images/vital_status/vital_status_risk.png" style="width: 60px;">
+                </p>
+                <span ng-class="{'ecg_clinical_screen':ecgvalidationstatusresult == 'Clinical Screening Recommended'}"> {{ecgvalidationstatusresult}} </span>
+            </div>
+        </div>
+    </div>
+
+  <div ng-show="irregularECG" id="ecg_status" style="margin-top: 50px;">{{interfaceLabels[irregularEcgTest]}} <br>{{interfaceLabels[ecgRedoTask]}}
+        </div>
+    <!-- GRAPH SET 1 -->
+    <div id="ecg_local_result_block_graph_set_1">
+        
+        <div class="ecg_local_result_loading_graph_container" ng-show="isGraphLoaded == false">
+            <span>{{interfaceLabels[loadinggraph]}}</span>
+        </div>
+
+        <div style="display: flex;" ng-show="isGraphLoaded == true">
+            <div style="flex:25%;text-align: right;margin: auto;color: #4A4A4A;font-size:20px;"> 
+                {{interfaceLabels[ECGLead1]}}
+            </div>
+            <div style="flex:75%">
+                <span id="ecgchartContainer" ng-if="getLeadStatus() == 3"></span>
+                <span id="ecg_result_Graph1" ng-if="getLeadStatus() == 6"></span>
+                <br>
+            </div>
+        </div>
+
+        <div style="display: flex;" ng-show="isGraphLoaded == true">
+            <div style="flex:25%;text-align: right;margin: auto;color: #4A4A4A;font-size:20px;"> 
+                {{interfaceLabels[ECGLead2]}}
+            </div>
+            <div style="flex:75%">
+                <span id="ecg2chartContainer" ng-if="getLeadStatus() == 3"></span>
+                <span id="ecg_result_Graph2" ng-if="getLeadStatus() == 6"></span>
+                <br>
+            </div>
+        </div>
+
+        <div style="display: flex;" ng-show="isGraphLoaded == true">
+            <div style="flex:25%;text-align: right;margin: auto;color: #4A4A4A;font-size:20px;"> 
+                {{interfaceLabels[ECGLead3]}}
+            </div>
+            <div style="flex:75%">
+                <span id="ecg3chartContainer" ng-if="getLeadStatus() == 3"></span>
+                <span id="ecg_result_Graph3" ng-if="getLeadStatus() == 6"></span><br>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- GRAPH SET 2 -->
+    <div id="ecg_local_result_block_graph_set_2" ng-if="getLeadStatus() == 6">
+        
+        
+        <div class="ecg_local_result_loading_graph_container" ng-show="isGraphLoaded == false">
+            <span>{{interfaceLabels[loadinggraph]}}</span>
+        </div>
+
+
+        <div style="display: flex;" ng-show="isGraphLoaded == true">
+            <div style="flex:25%;text-align: right;margin: auto;color: #4A4A4A;font-size:20px;"> 
+               {{interfaceLabels[ECGLeadavr]}}
+            </div>
+            <div style="flex:75%">
+                <span id="ecg_result_Graph4"></span>
+                <br>
+            </div>
+        </div>
+
+        <div style="display: flex;" ng-show="isGraphLoaded == true">
+            <div style="flex:25%;text-align: right;margin: auto;color: #4A4A4A;font-size:20px;"> 
+                {{interfaceLabels[ECGLeadavl]}}
+            </div>
+            <div style="flex:75%">
+                <span id="ecg_result_Graph5"></span>
+                <br>
+            </div>
+        </div>
+
+        <div style="display: flex;" ng-show="isGraphLoaded == true">
+            <div style="flex:25%;text-align: right;margin: auto;color: #4A4A4A;font-size:20px;"> 
+                {{interfaceLabels[ECGLeadavf]}}
+            </div>
+            <div style="flex:75%">
+                <span id="ecg_result_Graph6"></span><br>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    </div>
+</div>
+
+<div id="three_lead_mode" style="margin-top: 65px;margin-left: 1px;">
+    <p id="ecgchartContainer"></p><br><br><br><br><br><br>
+    <p id="ecg2chartContainer"></p><br><br><br><br><br><br>
+    <p id="ecg3chartContainer"></p><br><br><br><br><br><br>
+    <p id="fecgchartContainer"></p><br><br><br><br><br><br>
+
+</div>
+<div id="five_lead_mode_first_three_graphs" style="margin-top: 64px;margin-left: 1px;">
+    <p id="ecg_result_Graph1"></p><br><br><br><br><br><br>
+    <p id="ecg_result_Graph2"></p><br><br><br><br><br><br>
+    <p id="ecg_result_Graph3"></p><br><br><br><br><br><br>
+    <p id="f1ecg_result_Graph1"></p><br><br><br><br>
+
+</div>
+<div id="five_lead_mode_next_three_graphs" style="margin-top: 64px;margin-left: 1px;">
+    <p id="ecg_result_Graph4"></p><br><br><br><br><br><br>
+    <p id="ecg_result_Graph5"></p><br><br><br><br><br><br>
+    <p id="ecg_result_Graph6"></p><br><br><br><br><br><br>
+
+</div>
+<!-- <div id="ecg_retake_hint" style="display: none;">
+    <span id="ecg_retake_tap_redo" class="adFadeIn" ng-bind-html="interfaceLabels[eg03TapRedo]"
+        ng-show="redoVisible"></span>
+</div> -->
+<!-- <a id="higi_control_left_btn"
+    class="left_control_btn {{langClass}}  {{prevIsVisible ? buttonEnterLeft : buttonExitLeft}}" ng-show="prevIsVisible"
+    ng-click="backButtonOut()">
+    <span class="{{langClass}}">{{interfaceLabels[prevSlideText]}}</span>
+</a> -->
+<!-- <a id="higi_control_left_btn"
+    class="left_control_btn {{langClass}} {{(redoVisible) ? buttonEnterLeft : buttonExitLeft}}" ng-show="redoVisible"
+    ng-click="redoeg()">
+    <span class="{{langClass}}">{{interfaceLabels[redoSlideText]}}</span>
+</a> -->
+<!-- 
+<h2 id="load_text" ng-show="showLoadText">
+    {{interfaceLabels[loadECGGraphMessage]}}</h2> -->
+<div class="skip_test" id="ECG_redo_button">
+    <button style="
+    top: -15px;
+    position: absolute;
+" class="skip_test_button" ng-show="redoECGVisible" ng-click="redoeg()">{{interfaceLabels[redoText]}}</button>
+</div>
+<!-- 
+<a id="higi_control_right_ng_btn"
+    class="right_control_btn {{langClass}} {{(nextVisible) ? buttonEnterRight : buttonExitRight }}"
+    ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="{{langClass}}">{{interfaceLabels[nextSlideText]}}</span>
+</a>
+<a id="higi_control_right_ng_btn"
+    class="right_control_btn {{langClass}} {{(secondnextVisible) ? buttonEnterRight : buttonExitRight }}"
+    ng-show="secondnextVisible" ng-click="nextfunction()">
+    <span class="{{langClass}}">{{interfaceLabels[nextSlideText]}}</span>
+</a>
+<a id="higi_control_right_ng_btn"
+    class="right_control_btn {{langClass}} {{(exitNextVisible) ? buttonEnterRight : buttonExitRight }}"
+    ng-show="exitNextVisible" ng-click="exitNextfunction()">
+    <span class="{{langClass}}">{{interfaceLabels[nextSlideText]}}</span>
+</a> -->
+<!-- 
+<a id="higi_control_left_btn"
+    class="left_control_btn {{langClass}}  {{prevIsVisible ? buttonEnterLeft : buttonExitLeft}}" ng-show="prevIsVisible"
+    ng-click="backButtonOut()">
+    <span class="{{langClass}}">{{interfaceLabels[prevSlideText]}}</span>
+</a> -->
+ 
+<!-- <a id="higi_control_right_ng_btn"
+    class="right_control_btn {{langClass}} {{(nextVisible) ? buttonEnterRight : buttonExitRight }}"
+    ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="{{langClass}}">{{interfaceLabels[nextSlideText]}}</span>
+</a> -->
+
+<div class="global_redo_button" ng-show="redoVisible" ng-click="redoeg()">
+    <div class="global_redo_outer_line">
+        <img src="images/Icons-27.png" class="global_redo_button_icon">
+        <small class="global_redo_button_small_text">{{interfaceLabels[checkecgAgain]}}</small>
+    </div>
+</div>
+
+
+<a class= "global_continue_next_button" ng-class = "{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[nextSlideText]}}</span>
+</a>
+
+<a class="global_previous_page_button" ng-class = "{'button-enter-left' : prevIsVisible, 'button-exit-left' : !prevIsVisible}" ng-show="prevIsVisible" ng-click="backButtonOut()">
+        <span class="global_previous_page_text">{{interfaceLabels[prevSlideText]}}</span>
+</a>
+<div class="ngif_for_ecg_bottom_results" ng-if="ECGBpmRisk !== 'Normal' || ECGPRIntervalRisk !== 'Normal' || ECGQRSDurationRisk !== 'Normal' || ECGQTCIntervalRisk !== 'Normal'" >
+    Further screening is recommended.
+</div>

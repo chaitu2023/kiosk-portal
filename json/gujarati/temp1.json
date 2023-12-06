@@ -1,0 +1,12 @@
+{
+    "temp1.title": "શરીરનું તાપમાન",
+    "temp1.instructions": "સૂચનાઓ",
+    "temp1.startTest": "પરીક્ષણ શરુ કરો",
+    "temp1.skip": "સ્કિપ",
+    "temp1.holdhands": "હેન્ડલને તમારા હાથથી ધીમેધીમે પકડો",
+    "temp1.restwristt": "તમારા પરિણામો પ્રદર્શિત ન થાય ત્યાં સુધી તમારા કાંડાને ઇલેક્ટ્રોડ પર રહેવા દો",
+    "temp1.testWillBeginBefore": "This test will begin when your hands are in place",
+    "temp1.testWillBegin": "જ્યારે તમારા હાથ બરાબર જગ્યાએ હશે ત્યારે આ પરીક્ષણ શરૂ થશે",
+    "temp1.tempForeheadText1": "Place your face inside the red circle",
+    "temp1.tempForeheadText2": "once you start the test"
+}

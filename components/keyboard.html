@@ -1,0 +1,210 @@
+<div id="nb-email-extensions-wrapper" ng-show="keyboardVisible && isEmailField && showNbEmailExtensions" class="{{keyboardTransition}}">
+    <div id="nb-email-extensions" class="{{nbKeyboardClass}}" ng-show="showNbEmailExtensions && keyboardVisible">
+        <a class="typSnd" ng-mousedown="keyExtensionClick($event)" ng-repeat="domain in domainsNb" ng-bind-html="domain"></a>
+    </div>
+</div>
+<div id="nb-email-extensions-wrapper" ng-show="keyboardVisible && showAbhaExtensions" class="{{keyboardTransition}}">
+    <div id="nb-email-extensions" class="{{nbKeyboardClass}}" ng-show="keyboardVisible && showAbhaExtensions">
+        <a class="typSnd" ng-mousedown="abhakeyExtensionClick($event)" ng-repeat="abha in AbhaAddressArray" ng-bind-html="abha"></a>
+    </div>
+</div>
+<div id="keyboardbox" ng-show="keyboardVisible" class="{{keyboardTransition}} {{keyboardShadowOff}}">
+    <ul id="keyboard">
+        <div class="row_one {{offCanvasRow1}}">
+            <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter" >q</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >1</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >!</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter" >w</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >2</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >@</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >e</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >3</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >#</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >r</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >4</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >$</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >t</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >5</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >%</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >y</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >6</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >^</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >u</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >7</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >&</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >i</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >8</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >*</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >o</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >9</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >(</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >p</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >0</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >)</a>
+            </li>
+            <li class="delete"><a class="typSnd" ng-mousedown="keyClickDelete()">del</a></li>
+        </div>
+
+        <div class="row_two {{offCanvasRow2}}">
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >a</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >`</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >`</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >s</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >|</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >|</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >d</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >[</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >{</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >f</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >]</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >}</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >g</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >/</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >/</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >h</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >'</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >'</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >j</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >~</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >~</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >k</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >"</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >"</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >l</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >\</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >\</a>
+            </li>
+            <!-- <li class="enter {{keyboardEnterButtonClass}}" ng-mousedown="keyboardEnterPressed()"><a>Enter</a></li> -->
+            <li class="enter enter_active" ng-mousedown="keyboardSpacePressed($event)"><a>Space</a></li>
+        </div>
+
+        <div class="row_three {{offCanvasRow3}}">
+            <li class="shift" ng-mousedown="toggleShiftKey()"><a>Shift</a></li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter" >z</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >:</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >:</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >x</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >;</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >;</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >c</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" ><</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" ><</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >v</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >></a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >></a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >b</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >=</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >=</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >n</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >+</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >+</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >m</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >?</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >?</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >_</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >_</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >_</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >-</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >-</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >-</a>
+            </li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >.</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >.</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >.</a>
+            </li>
+
+        </div>
+        <div class="domain-row-container" ng-show="showExtensionMenu">
+            <div class="domain-row {{domainRowAnimationClass}}" >
+                <li class="key domain-key" ng-repeat="domain in domains">
+                    <a class="typSnd" ng-mousedown="keyExtensionClick($event)" ng-bind-html="domain"></a>
+                </li>
+                <li class="key no-bg">
+                    <a class="typSnd" ng-mousedown="hideEmailExtension()"><i class="fa fa-times-circle"></i></a>
+                </li>
+
+            </div>
+        </div>
+        <div class="row_four {{offCanvasRow4}}">
+            <li  class="numbers_toggle {{visibleNumberClass}}" ng-mousedown="keyboardModeToggle('number')"><a>123</a></li>
+            <li  class="letters_toggle {{visibleLetterClass}}" ng-mousedown="keyboardModeToggle('letter')"><a>ABC</a></li>
+            <li  class="specials_toggle {{visibleSpecialClass}}" ng-mousedown="keyboardModeToggle('special')"><a>#$%</a></li>
+           <li class="key {{shiftKeyKeyClass}}">
+                <a class="typSnd" ng-mousedown="showEmailExtension($event)" ng-if="emailExtensionEnabled && isEmailField">@</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  ng-if="!emailExtensionEnabled || !isEmailField">@</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" ng-if="!emailExtensionEnabled || !isEmailField">@</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" ng-if="!emailExtensionEnabled || !isEmailField">@</a>
+            </li>
+            <li class="key dotcom">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >.com</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >.com</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >.com</a>
+            </li>
+            <li class="key dotcom">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >.edu</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >.edu</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >.edu</a>
+            </li>
+            <li class="key dotcom">
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleLetter"  >,</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleNumber" >,</a>
+                <a class="typSnd" ng-mousedown="keyClick($event)" ng-show="visibleSpecial" >,</a>
+            </li>
+        </div>
+
+    </ul>
+</div>

@@ -1,0 +1,54 @@
+<div class="spo2_instructions_header_container">
+    <img class="spo2_instructions_header_image" src="./images/spo2/Icons-35.png">
+    <span class="spo2_instructions_header_text">{{interfaceLabels[slideTitle]}}</span></span> 
+</div>
+
+<div class="spo2_instructions_main_container">
+    <p class="spo2_instructions_heading">{{interfaceLabels[slideSubTitle]}}</p>
+    <div class="spo2_instructions_circle_container_1">
+        <div class="spo2_instructions_circle_place_overlays"></div>
+        <div id ="spo2InstructionAnimationGif_1"></div>
+    </div>
+
+    <div class="newspo2classinstruction_1">
+        <span ng-bind-html="interfaceLabels[insertfinger]"></span>
+    </div>
+
+    <div class="spo2_instructions_circle_container_2">
+        <div class="spo2_instructions_circle_place_overlays"></div>
+        <div id ="spo2InstructionAnimationGif_2"></div>
+    </div>
+
+    <div class="newspo2classinstruction_2">
+        <span ng-bind-html="interfaceLabels[instruct]"></span>
+    </div>
+
+    
+
+    <p class="spo2_instructions_bottom_heading"> {{interfaceLabels[fingerinplace]}} </p>
+</div>
+
+<a class= "global_skip_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()">
+    <span class="global_skip_button_text" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}}</span>
+</a>
+
+<!-- <a class= "global_continue_next_button" ng-class = "{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[startTest]}}</span>
+</a> -->
+
+<!-- <div id="slide_title" ng-bind-html="interfaceLabels[slideTitle]"></div>
+<div id="slide_subtitle" style="background-color: rgb(221,221,221)">{{interfaceLabels[slideSubTitle]}}</div>
+<div class="higi_top_container"></div>
+
+<div id ="spo2InstructionAnimationGif" style="background-position: 98px -117px;background-size:600px"></div>
+
+<div class="newspo2classinstruction" style="left:230px !important; width:350px;text-align: center;
+		top:372px !important;font-size:initial;font-weight: normal;">
+    <span ng-bind-html="interfaceLabels[insertfinger]"></span>
+</div>
+
+<div class="instruction begin" style="position: relative; top: 352px; font-size: 21px; text-align: center;">{{interfaceLabels[fingerinplace]}}
+ </div>
+<div class="skip_test" style="position: relative;top: 425px; z-index: 1000001;">
+	<button class="skip_test_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()" ng-bind="interfaceLabels[skipTest]"></button>
+</div> -->

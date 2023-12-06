@@ -1,0 +1,20 @@
+{
+    "temp3.results": "Results",
+    "temp3.continue": "Continue",
+    "temp3.calibration": "Calibration",
+    "temp3.tempScale": "Body Temperature Scale",
+    "temp3.status.healt": "Normal",
+    "temp3.status.accep": "Acceptable",
+    "temp3.status.fever": "Fever",
+    "temp3.status.highfever": "High Fever",
+    "temp3.roomTemp": "ROOM",
+    "temp3.wristTemp": "BODY",
+    "temp3.temperature": "Temperature",
+    "temp3.bodyTemp": "Body Temperature",
+    "temp3.information": "Information",
+    "temp3.parameter": "Parameter",
+    "temp3.yourscore": "Your score",
+    "temp3.OverallStatus": "Overall Status",
+    "temp3.finalResult": "Final Result",
+    "temp3.checkTempagain": "Check Temperature Again"
+}

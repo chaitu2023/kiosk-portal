@@ -1,0 +1,160 @@
+
+<style type="text/css">
+	.card_main_container{    
+		margin-top: -23px;
+	    box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;
+	    background-color: #dddddd;
+	    height: 345px;
+
+	}
+	.card_header_text{    
+		padding-left: 10px;
+	    font-weight: 500;
+	    margin-top: 0px;
+	    font-family: 'LatoItalic';
+	    font-size: 34px;
+	    color: #4d4d4d;
+	    position: relative;
+	    top: -5px;
+	}
+	.card_header_container{    
+		margin-top: 11%;
+	    text-align: center;
+	    margin-bottom: 30px;
+	}
+	.card_header_image{
+		position: relative;
+    	top: 6px;    
+    	width: 44px;
+	}
+</style>
+
+<div class="card_header_container">
+    <img class="card_header_image" src="./images/card-icon.png" >
+    <span class="card_header_text"> {{ interfaceLabels[cardPayPinInterfaceLabels.title] }} </span>
+    
+</div>
+
+
+
+<div id="pinNumber_instruction">	
+	<div class="card_main_container">
+		<div style="margin-top: 40px;margin-left: 250px;">
+			<p style="font-family: 'LatoRegular';color: #0261C2;font-size: 22px;margin-left: 10px;">
+				{{ interfaceLabels[cardPayPinInterfaceLabels.instruction_1] }}
+			</p>
+			<span>
+				<img style="margin-top: 10px;margin-left: 40px; width: 180px;" src="images/entering-password.png">
+			</span>
+		</div>
+
+		<div style="margin-top: 0px">
+			<p style="font-family: 'LatoRegular';color: #6d6d6d;font-size: 20px;
+			margin-left: 240px;">
+				{{ interfaceLabels[cardPayPinInterfaceLabels.instruction_2] }}
+			</p>
+			<p style="font-family: 'LatoRegular';color: #6d6d6d;font-size: 20px;
+			margin-left: 190px;">
+				
+				{{ interfaceLabels[cardPayPinInterfaceLabels.instruction_3] }} <span><img src="images/card-check-mark.png"></span> {{ interfaceLabels[cardPayPinInterfaceLabels.instruction_4] }}
+			</p>
+		</div>
+	</div>
+</div>
+
+
+<!-- Payment sucess message -->
+<div id="payment_success" style="display: none;">
+	<div class="card_main_container">
+
+		<div style="margin-top: 0px;margin-left: 150px;">
+
+			<img style="margin: 20px;width: 65%" src="images/payment.gif" alt="animated">
+
+			<p style="font-family: 'LatoRegular';color: #0261C2;font-size: 22px;margin-left: 140px; margin-top: 0px;">
+				{{ interfaceLabels[cardPayPinInterfaceLabels.success_msg_1] }}
+			</p>
+
+		</div>
+		
+	</div>
+</div>
+
+<!-- Payment Failure message -->
+<div id="payment_failed"  style="display: none;">
+	<div class="card_main_container">
+		<div style="margin-top:20px;margin-left: 230px;">
+
+			<img style="margin: 30px; width: 36%; margin-left: 60px;" src="images/attention-sign.png">
+
+			<p style="font-family: 'LatoRegular';color: #0261C2;font-size: 22px;margin-left: 25px; margin-top: -10px; color: #d91010;">
+				{{ interfaceLabels[cardPayPinInterfaceLabels.failure_msg_1] }}
+			</p>
+			<p style="font-family: 'LatoRegular';color: #6d6d6d;font-size: 22px;margin-left: -65px;">
+				{{ interfaceLabels[cardPayPinInterfaceLabels.failure_msg_2] }}
+			</p>
+		</div>		
+	</div>
+</div>
+
+
+
+<!-- <div id="pinNumber_instruction">	
+	<div style="margin-top: 40px;margin-left: 250px;">
+		<p style="font-family: 'LatoRegular';color: #0261C2;font-size: 22px;margin-left: 10px;">
+			Enter your PIN Number
+		</p>
+		<span>
+			<img style="margin-top: 10px;margin-left: 40px" src="images/entering-password.png">
+		</span>
+	</div>
+
+	<div style="margin-top: 0px">
+		<p style="font-family: 'LatoRegular';color: #6d6d6d;font-size: 20px;
+		margin-left: 240px;">
+			PIN Pad available just next to your card.
+		</p>
+		<p style="font-family: 'LatoRegular';color: #6d6d6d;font-size: 20px;
+		margin-left: 190px;">
+			
+			Press the Green <span><img src="images/check-mark (1).png"></span> Button on the Pin Pad to Proceed.
+		</p>
+	</div>
+</div> -->
+
+<!-- <button ng-click="paymentStatus()">message</button> -->
+
+<!-- Payment sucess message -->
+
+<!-- <div id="payment_success">
+
+	<div style="margin-top: 0px;margin-left: 150px;">
+
+		<img style="margin: 20px;width: 65%" src="images/payment.gif" alt="animated">
+
+		<p style="font-family: 'LatoRegular';color: #0261C2;font-size: 22px;margin-left: 140px;">
+			Payment Successful.
+		</p>
+
+	</div>
+	
+</div> -->
+
+<!-- Payment Failure message -->
+
+<!-- <div id="payment_failed">
+
+	<div style="margin-top:20px;margin-left: 230px;">
+
+		<img style="margin: 30px;width: 45%" src="images/attention-sign.png">
+
+		<p style="font-family: 'LatoRegular';color: #0261C2;font-size: 22px;margin-left: 25px;">
+			Payment Authorization Failure!
+		</p>
+		<p style="font-family: 'LatoRegular';color: #6d6d6d;font-size: 22px;margin-left: -65px;">
+			Reason for failure here from the Payment gateway!
+		</p>
+
+	</div>
+	
+</div> -->

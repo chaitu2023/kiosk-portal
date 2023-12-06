@@ -1,0 +1,24 @@
+{
+    "weight3.results" : "Results",
+    "weight3.information":"Information",
+    "weight3.parameter":"Parameter",
+    "weight3.yourscore":"Your score",
+    "weight3.OverallStatus":"Overall Status",
+
+    "global.underweight":"Underweight",
+    "global.normalweight":"Normal",
+    "global.overweight":"Overweight",
+    "global.obese":"Obese",
+    "weight3.weight":"Weight",
+	"weight3.height":"Height",
+    "weight3.kgUnit": "in Kgs",
+    "weight3.feetUnit": "in feet",
+    "weight3.parameter.bmi.title":"BMI",
+    "weight3.body.mass.index":"Body Mass Index",
+    "weight3.bmi.scale":"Body Mass Index Scale",
+    "weight3.underweight":"Underweight",
+    "weight3.normalweight":"Normal",
+    "weight3.overweight":"Overweight",
+    "weight3.obese":"Obese",
+    "weight3.check.Again":"Check Weight & BMI Again"
+}

@@ -1,0 +1,10 @@
+{
+    
+    "bmc01_audio01" : "sounds/nepali/vo6_weight&bmi.wav",
+    "bmc01_audio02" : "sounds/nepali/hand_instructions1.wav",
+    "bmc01_audio03" : "sounds/nepali/hand_instructions2.wav",
+    "bmc01_audio04" : "sounds/nepali/voice9_weight &bmi.wav",
+    "bmc01_audio05":"sounds/nepali/chkBmcAgain.wav",
+    "bmc01_audio06" : "sounds/nepali/restyourlegsonfootrest.wav"
+    
+}

@@ -1,0 +1,12 @@
+{
+
+    "weight01_audio01":"sounds/maithili/vo1_weight&bmi.wav",
+    "weight01_audio02":"sounds/maithili/voice2_weight&bmi.wav",
+    "weight01_audio03":"sounds/maithili/voice3_weight&bmi.wav",
+    "weight01_audio04":"sounds/maithili/startWeightTest.wav",
+    "weight01_audio05":"sounds/maithili/voice4_weight&bmi.wav",
+    "weight03_audio01":"sounds/maithili/results.wav",
+	"weight01_audiolap":"sounds/maithili/handsonLap.wav",
+    "weight03_audio10":"sounds/maithili/chkWeight&bmiAgain.wav"
+
+}

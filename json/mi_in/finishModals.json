@@ -1,0 +1,20 @@
+{
+    "emailresults.enter.email": "आपला ईमेल पत्ता इथे लिहा",
+    "emailresults.enter.email.to.send.results": "आपले निकाल पाठविण्यासाठी आपला ईमेल पत्ता इथे लिहा",
+    "emailresults.email.sent": "आपले निकाल मिळविण्यासाठी आपला ईमेल तपासा.",
+    "emailresults.by.clicking.send": "आपले निकाल ईमेल करून, आपण स्वीकारता की आपली माहिती राखून ठेवली जाऊ शकते.",
+    "global.send": "पाठवा",
+    "finishModal.email.never.spam": "(आम्ही आपल्याला स्पॅम करणार नाही. वचन देतो!) ",
+    "finishModal.printwarning": " चेतावणी! ",
+    "finishModal.makesure": "कृपया प्रिंटरची जागा अडवू नका",
+    "finishModal.printinstruct": "तपासणीच्या निकालाच्या स्लिपसाठी खालील प्रिंट बटण दाबा",
+    "finishModal.notavail": "पेपर उपलब्ध नाही आहे",
+    "finishModal.papernot": " माफ करा, एचपॉडमध्ये प्रिंट पेपर उपलब्ध नाही आहे",
+    "finishModal.refill": "आम्ही लवकरच त्यात पुन्हा भरू…",
+    "finishModal.printRes": "निकाल प्रिंट करा",
+    "finishModal.okayy": "ठीक आहे",
+    "finishModal.printEcgraph": "ईसीजी ग्राफ प्रिंट करा",
+    "global.requird.test": "No Test Results",
+    "emailresults.enter.email.to.send.abharesults": "Enter your Email Address to get your card",
+    "emailresults.by.clicking.abhasend": "By emailing your results, you accept that your card may be saved"
+}

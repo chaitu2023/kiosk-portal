@@ -1,0 +1,58 @@
+<style type="text/css">
+    .telemedi_mobile_slide_container{
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 710px;
+        height: 520px;
+    }
+    .telemedi_mobile_slide_title{
+        font-size: 31px;
+        color: #0261c2;
+        font-family: "IntervalSansProCondSemiBoldRg";
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 670px;
+    }
+    .genix_telemedicine_submits{
+     pointer-events: all;
+     width: 150px;
+     background-color: #2a76c4;
+     border: 1px solid #0261c2;
+     border-radius: 3px;
+     background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+     top: 100px;
+     left: 450px;
+     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+     height: 50px;
+     position: absolute;
+
+    }
+    .genix_telemedicine_submits span {
+     color: #fff;
+     font-size: 22px;
+     text-align: center;
+     font-family: 'IntervalSansProMediumRegular';
+     text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2);
+     line-height: 50px;
+     height: 54px;
+     display: inline-block;
+     opacity: .9;
+     margin-left: 49px;
+    }
+    .mob_disabled_next{
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #cecece;
+    pointer-events: none;
+    }
+</style>
+
+<div class="telemedi_mobile_slide_container" >
+  <div class="telemedi_mobile_slide_title" >{{interfaceLabels[mobileNumber.entermobnum]}}</div> 
+  <telemedi-mobile-text-field  mobilefield="mobileNumber.fields[0]"></telemedi-mobile-text-field>
+  <p class="tele_text_mobile_error">{{interfaceLabels[mobvalidmessage]}}</p>
+  <p class="tele_text_mobile_error" id="MobileNoAlreadyExists">{{interfaceLabels[MobileNoAlreadyExists]}}</p>
+  <a id="genix_next_buttons" class="genix_telemedicine_submits {{disable_next}}" ng-click="mobileNumberValue()"><span>{{interfaceLabels[mobileNumber.NEXT]}}</span></a>
+</div>

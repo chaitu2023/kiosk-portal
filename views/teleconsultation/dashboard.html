@@ -1,0 +1,231 @@
+<style>
+    
+    .disable_btn_click {
+        cursor: none;
+        pointer-events: none;
+        color: #4d4d4d;
+        opacity: 0.3;
+        box-shadow: none;
+    }
+
+    .tele_dashboard_main_inner_container{
+        /* padding:62px 0px;  */
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    
+    .tele_consultation_outer_box{
+        width: 150px;
+        height: 150px;
+        background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(100%, #F7F7F7));
+        -moz-box-shadow: 1px 1px 7px 2px rgba(153, 153, 153, 0.4);
+        text-align: center;
+        box-shadow: 4px 4px 4px #AFAFAF, -3px -3px 1px white;
+        border-radius: 10px;
+        margin:6px 10px;
+        display: inline-block;
+    }
+    .tele_consultation_outer_box.tele-consultation-dashboard-active{
+        /* background-color:#208ad6 */
+    }
+    .tele_consultation_inner_box{
+        border-radius: 10px;
+        /* border: 2px solid #48acf5; */
+        border: 2px solid #c0c0c0;
+        height: 120px;
+        width: 125px;
+        margin-left: 3px;
+        margin-top: 3px;
+        height:96%;
+        width:96%;
+        margin:3px;
+        box-sizing: border-box;
+        background-color: #e6e6e6;
+    }
+    .tele_consultation_inner_box.tele-consultation-dashboard-active{
+        /* border:0px; */
+        /* border-color:#208ad6; */
+        /*border-color:#48acf5;*/
+        border-color: #208ad6;
+        color: #dde8ef;
+        background-color: #208ad6;
+    }
+    .tele-dashboard-outer-box-icon{
+        display: block;
+        width:100%;
+        text-align: center;
+        font-size: 50px;
+        /* margin:10px 0px; */
+        color: #3887b2;
+        height:60px;
+        margin-top:20px;
+    
+    }
+    .tele-dashboard-outer-box-icon.tele-consultation-dashboard-active{
+        /* color: #e6e6e6; */
+        border-color: #208ad6;
+        color: #dde8ef;
+        background-color: #208ad6;
+    }
+    .tele-dashboard-outer-box-title{
+        display: block;
+        width: 96%;
+        text-align: center;
+        font-size: 16px;
+        margin-top: 10px;
+        color: #4d4d4d;
+        font-weight: bold;
+        height: 40px;
+        overflow: hidden;
+        padding: 3px;
+    }
+    .tele-dashboard-outer-box-title.tele-consultation-dashboard-active{
+        font-weight: normal;
+        /* color: #dde8ef; */
+        border-color: #208ad6;
+        color: #dde8ef;
+        background-color: #208ad6;
+    }
+    .tele_consultation_outer_box.tele-consultation-dashboard-active {
+        /* border-color: #208ad6; */
+        color: #dde8ef;
+        /* background-color: #208ad6; */
+    }
+
+    .tele_dashboard_join_call_button{
+        width: 67px;
+        height: 67px;
+        text-align: center;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 40px;
+        /* left: 20px; */
+        float: right;
+        right: 24px;
+        top: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #48acf5;
+        box-shadow: 4px 4px 4px #afafaf, -3px -3px 1px white;
+    }
+
+    .tele_dashboard_join_call_button_img{
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        /* margin: 10px 0px; */
+        color: green;
+        height: 50px;
+        margin-top: 14px;
+
+    }
+
+    .tele_dashboard_join_call_button_text{
+        font-family: LatoRegular;
+        font-size: 12px;
+        position: relative;
+        top: -27px;
+        color: #4d4d4d;
+        font-weight: bold;
+    }
+
+    .tele_dashboard_join_call_button:active{
+        box-shadow: 1px 1px 1px #afafaf, -1px -1px 1px white;
+    }
+</style>
+
+<div class="tele_header_container">
+    <!-- <img class="tele_header_image" src="./images/telmed.png"> (old code) 
+    <span class="tele_header_text"> Tele Consultation </span>  -->
+    <img class="tele_header_image">
+    <span class="tele_header_text"></span>
+</div>
+
+<div class="tele_main_container">
+    <div class="tele_dashboard_main_inner_container" ng-show="showTabs == true">
+        <div ng-if = "consultationAppointments == true && validAppointmentForJoinCall.length == 1 && doctorStatusMapping != undefined && doctorStatusMapping != null && doctorStatusMapping[validAppointmentForJoinCall[0]['ihl_consultant_id']] == 'Online'" class = "tele_dashboard_join_call_button" 
+        ng-click = "redirectToVideoCallController(validAppointmentForJoinCall[0])">
+            <i class="fa fa-phone tele_dashboard_join_call_button_img"></i>
+            <span class="tele_dashboard_join_call_button_text">Join Call</span>
+        </div>   
+        
+        <!-- <div 
+        class="tele_consultation_outer_box"
+        ng-class="{'tele-consultation-dashboard-active':currentSelectedTab == 'Start Call Now', 'disable_btn_click':!enableGeneralServiceDirectCallOption}"
+        ng-click="selectTeleconsultationDashboardTab('Start Call Now')"
+        >
+            <div 
+            class="tele_consultation_inner_box"
+            ng-class="{'tele-consultation-dashboard-active':currentSelectedTab == 'Start Call Now'}"
+            >
+                <span 
+                class="tele-dashboard-outer-box-icon"
+                ng-class="{'tele-consultation-dashboard-active':currentSelectedTab == 'Start Call Now'}"
+                ><i class="fa fa-phone"></i></span>
+                <span 
+                class="tele-dashboard-outer-box-title"
+                ng-class="{'tele-consultation-dashboard-active':currentSelectedTab == 'Start Call Now'}"
+                >Start Call Now</span>
+            </div>
+        </div>
+        
+        <div 
+        class="tele_consultation_outer_box"
+        ng-class="{'tele-consultation-dashboard-active':currentSelectedTab == 'Book Appointment', 'disable_btn_click':!enableGeneralServiceBookAppointmentOption}"
+        ng-click="selectTeleconsultationDashboardTab('Book Appointment')"
+        >
+            <div 
+            class="tele_consultation_inner_box"
+            ng-class="{'tele-consultation-dashboard-active':currentSelectedTab == 'Book Appointment'}"
+            >
+                <span 
+                class="tele-dashboard-outer-box-icon"
+                ng-class="{'tele-consultation-dashboard-active':currentSelectedTab == 'Book Appointment'}"
+                ><i class="fa fa-calendar"></i></span>
+                <span 
+                class="tele-dashboard-outer-box-title"
+                ng-class="{'tele-consultation-dashboard-active':currentSelectedTab == 'Book Appointment'}"
+                >Book Appointment</span>
+            </div>
+        </div> -->
+
+        <div 
+        class="tele_consultation_outer_box" style="display: none !important;" 
+        ng-class="{'tele-consultation-dashboard-active':currentSelectedTab == 'Fitness Class'}"
+        ng-click="selectTeleconsultationDashboardTab('Fitness Class')"
+        >
+            <div 
+            class="tele_consultation_inner_box"
+            ng-class="{'tele-consultation-dashboard-active':currentSelectedTab == 'Fitness Class'}"
+            >
+                <span 
+                class="tele-dashboard-outer-box-icon"
+                ng-class="{'tele-consultation-dashboard-active':currentSelectedTab == 'Fitness Class'}"
+                ><i class="fac fa-fitness"></i></span>
+                <span 
+                class="tele-dashboard-outer-box-title"
+                ng-class="{'tele-consultation-dashboard-active':currentSelectedTab == 'Fitness Class'}"
+                >Fitness Class</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="tele_dashboard_main_inner_container" ng-show="showTabs == false">
+        {{containerMessage}}
+    </div>
+</div>
+
+<a class="global_previous_page_button" ng-class = "{'button-enter-left' : prevIsVisible, 'button-exit-left' : !prevIsVisible}" ng-show="prevIsVisible && !teleconsultationNewFlow" ng-click="backButtonOut()">
+    <span class="global_previous_page_text">Back</span>
+</a>
+
+
+<a class="global_continue_next_button"
+    ng-class="{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible"
+    ng-click="nextButtonClick()">
+    <span class="global_continue_next_button_text"> Continue </span>
+</a>

@@ -1,0 +1,1033 @@
+.reason_for_visit_main_container{
+    position: absolute;
+    left: 20px;
+    width: 668px;
+    top: 20px;
+    height: 205px;
+    border-radius: 10px;
+    background-color: #dbdbdb;
+}
+
+.reason_for_visit_main_title{
+    font-size: 28px;
+    font-weight: 500;
+    color: #4a4a4a;
+    font-family: 'LatoItalic';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 668px;
+}
+
+.reason_for_visit_sub_container{
+    overflow: hidden;
+    top: 0px;
+    left: 0;
+    width: 668px;
+    height: 205px;
+}
+
+.reason_for_visit_sub_container_title{
+    color: #4a4a4a;
+    font-size: 14px;
+    left: 20px;
+    position: absolute;
+    top: 60px;
+    font-family: 'LatoRegular';
+}
+
+.reason_for_visit_InputBoxContainer input{
+    top: 95px;
+    left: 18px;
+    height: 55px !important;
+    padding-right: 90px !important;
+    padding-left: 10px !important;
+    border: 2px solid #808080d1;
+    color: #808080d1;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: 10px !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 415px !important;
+    display: block !important;
+    font-size: 18px !important;
+    position: absolute !important;
+    background: white !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+
+.reason_for_visit_InputBoxContainer div{
+    top: 95px!important;
+    left: 18px !important;
+    height: 54px !important;
+    padding-right: 90px !important;
+    padding-left: 12px !important;
+    padding-top: 27px;
+    border: none !important;
+    color: gray !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: 0px !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 415px !important;
+    display: block!important;
+    font-size: 18px !important;
+    position: absolute !important;
+    background: transparent !important;
+    z-index: 10 !important;
+    pointer-events: none;
+    line-height: 0px !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.reason_for_visit_disclaimer{
+    font-size: 15px;
+    color: #4a4a4a;
+    position: absolute;
+    /*top: 171px;*/
+    top: 6px;
+    text-align: center;
+    /*width: 668px;*/
+    font-family: 'LatoRegular';
+    /*left: 23px;*/
+    left: 176px;
+}
+
+.reason_for_visit_next_button{
+    top: 93px;
+    left: 455px;
+    position: absolute !important;
+    width: 190px !important;
+    height: 55px !important;
+    pointer-events: none !important;
+    text-align: center !important;
+    font-family: "LatoRegular" !important;
+    z-index: 15 !important;
+    line-height: 60px !important;
+    border: 1px solid #cecece !important;
+    border-radius: 7px !important;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%) !important;
+
+}
+
+.reason_for_visit_next_button span{
+    position: relative !important;
+    top: -1px !important;
+    color: #fff !important;
+    font-size: 22px !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2) !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: .9 !important;
+    pointer-events: none !important;
+}
+
+.reason_for_visit_next_button.reason_for_visit_next_active_btn{
+    position: absolute !important;
+    top: 93px !important;
+    height: 53px !important;
+    left: 455px !important;
+    border-radius: 10px !important;
+    border-top: 2px solid #5dbcff !important;
+    border-left: 2px solid #5fa4d4bf !important;
+    border-bottom: 2px solid #50a4e0bf !important;
+    border-right: 2px solid #50a4e0bf !important;
+    width: 190px !important;
+    color: white !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    box-shadow: 0px 4px 4px #4a4a4ae0 !important;
+    background: linear-gradient(to bottom,#5aa4d9,#3989c3, #0261c2) !important;
+    text-shadow: none !important;
+    font-family: 'LatoRegular' !important;
+    font-weight: 500 !important;
+    text-align: center;
+    pointer-events: all !important;
+}
+
+.reason_for_visit_next_button.reason_for_visit_next_active_btn span{
+    font-size: 21px !important;
+    text-align: center !important;
+    position: relative !important;
+    top: -1px !important;
+    font-family: LatoRegular !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+.reason_for_visit_next_button.reason_for_visit_next_active_btn:active{
+    box-shadow: none !important;
+}
+
+.payment_method_main_container{
+    /*height: 250px;
+    margin: 250px 20px 20px 20px;*/
+    margin: 80px 20px !important;
+    height: 55% !important;
+    border-radius: 10px;
+    background-color: #dbdbdb;
+}
+
+.adjust_payment_ui {
+    margin: 80px 20px !important;
+    height: 50% !important;
+}
+
+.payment_method_main_title{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: #4a4a4a;
+    font-family: 'LatoItalic';
+    position: absolute;
+    top: 10px;
+    width: 668px;
+}
+
+.payment_method_card_container{
+    height: 170px;
+    position: fixed;
+    width: 180px;
+    left: 15px;
+    top: 60px;
+}
+
+.payment_method_card_container img{
+    width: 80px;
+    position: absolute;
+    left: 45px;
+    height: 80px;
+}
+
+.payment_method_card_container a{
+    position: fixed;
+    height: 52px;
+    width: 143px;
+    top: 90px;
+    border: 2px solid #208ad6bf;
+    border-radius: 10px;
+    text-align: center;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+}
+
+.payment_method_card_container a:active{
+    box-shadow: none;
+}
+
+.payment_method_card_container span{
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+
+.payment_method_card_container_2{
+    height: 170px;
+    position: fixed;
+    width: 180px;
+    left: 15px;
+    top: 60px;
+}
+
+.payment_method_card_container_2 img{
+    width: 80px;
+    position: absolute;
+    left: 73px;
+    height: 80px;
+}
+
+.payment_method_card_container_2 a{
+    position: fixed;
+    height: 52px;
+    width: 200px;
+    top: 90px;
+    border: 2px solid #208ad6bf;
+    border-radius: 10px;
+    text-align: center;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+}
+
+.payment_method_card_container_2 a:active{
+    box-shadow: none;
+}
+
+.payment_method_card_container_2 span{
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+
+.payment_method_upi_container{
+    height: 170px;
+    position: fixed;
+    width: 180px;
+    left: 180px;
+    top: 60px;
+}
+
+.payment_method_upi_container img{
+    top: 4px;
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    left: 25px;
+}
+
+.payment_method_upi_container a{
+    position: fixed;
+    height: 52px;
+    width: 143px;
+    top: 90px;
+    border: 2px solid #208ad6bf;
+    border-radius: 10px;
+    text-align: center;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+}
+
+.payment_method_upi_container a:active{
+    box-shadow: none;
+}
+
+.payment_method_upi_container span{
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+
+.payment_method_upi_container_2{
+    height: 170px;
+    position: fixed;
+    width: 180px;
+    left: 235px;
+    top: 60px;
+}
+
+.payment_method_upi_container_2 img{
+    top: 4px;
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    left: 54px;
+}
+
+.payment_method_upi_container_2 a{
+    position: fixed;
+    height: 52px;
+    width: 200px;
+    top: 90px;
+    border: 2px solid #208ad6bf;
+    border-radius: 10px;
+    text-align: center;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+}
+
+.payment_method_upi_container_2 a:active{
+    box-shadow: none;
+}
+
+.payment_method_upi_container_2 span{
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+
+.payment_method_cash_container{
+    height: 170px;
+    position: fixed;
+    width: 180px;
+    left: 345px;
+    top: 60px;
+}
+
+.payment_method_cash_container img{
+    top: 4px;
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    left: 18px;
+}
+
+.payment_method_cash_container a{
+    position: fixed;
+    height: 52px;
+    width: 143px;
+    top: 90px;
+    border: 2px solid #208ad6bf;
+    border-radius: 10px;
+    text-align: center;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+}
+
+.payment_method_cash_container a:active{
+    box-shadow: none;
+}
+
+.payment_method_cash_container span{
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+
+.payment_method_cash_container_2{
+    height: 170px;
+    position: fixed;
+    width: 180px;
+    left: 455px;
+    top: 60px;
+}
+
+.payment_method_cash_container_2 img{
+    top: 4px;
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    left: 42px;
+}
+
+.payment_method_cash_container_2 a{
+    position: fixed;
+    height: 52px;
+    width: 200px;
+    top: 90px;
+    border: 2px solid #208ad6bf;
+    border-radius: 10px;
+    text-align: center;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+}
+
+.payment_method_cash_container_2 a:active{
+    box-shadow: none;
+}
+
+.payment_method_cash_container_2 span{
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+
+
+
+.payment_method_coupon_container{
+    height: 170px;
+    position: fixed;
+    width: 180px;
+    left: 510px;
+    top: 60px;
+}
+
+.payment_method_coupon_container img{
+    top: 4px;
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    left: 18px;
+}
+
+.payment_method_coupon_container a{
+    position: fixed;
+    height: 52px;
+    width: 143px;
+    top: 90px;
+    border: 2px solid #208ad6bf;
+    border-radius: 10px;
+    text-align: center;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+}
+
+.payment_method_coupon_container a:active{
+    box-shadow: none;
+}
+
+.payment_method_coupon_container span{
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+
+
+.payment_method_terms_accept{
+    text-align: center;
+    position: relative;
+    top: 225px;
+    color: #4a4a4a;
+    font-size: 17px;
+    font-family: 'LatoRegular';
+}
+
+.bookappointment_loader {
+    top: 105px;
+    left: 456px;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+    pointer-events: none !important;
+    background: transparent url(../images/keyboard_dialog_loading_icon06222012.png) top left no-repeat;
+    -webkit-animation: rotate360 1.3s linear infinite; 
+}
+
+.card_disabled{
+    opacity: 0.5;
+}
+
+.reason_for_visit_accept_check_box{
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    /*top: 167px;*/
+    top: 3px;
+    left: 145px;
+    border: 2px solid #808080d1;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.reason_for_visit_accept_check_box.accept_checkmark {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    /*top: 167px;*/
+    top: 3px;
+    left: 145px;
+    border: 2px solid #808080d1;
+    border-radius: 4px;
+    background-color: white;
+    background: transparent url(../images/new_tick_mark.png) top left no-repeat;
+    background-size: 30px;
+    background-position-x: center;
+    background-position-y: center;  
+}
+
+.vital_section_main_container{
+    height: 250px;
+    margin: 250px 20px 20px 20px;
+    border-radius: 10px;
+    /*background-color: #dbdbdb;*/
+    background-color: white;
+    box-shadow: inset 0px 0px 4px 2px #c8c8c8;
+    box-sizing: border-box;
+    border: 1px solid #c8c8c8;
+}
+
+.vital_section_main_title{
+    text-align: center;
+    font-size: 23px;
+    font-weight: 500;
+    /* color: #4a4a4a; */
+    color: #0261c2;
+    font-family: 'LatoItalic';
+    position: absolute;
+    top: 8px;
+    width: 668px;
+}
+
+#health_vital_details {
+    top: 43px;
+    position: relative;
+    width: 100%;
+    height: 195px;
+    overflow: hidden;
+    margin: auto;
+    display: block;
+}
+
+.reason_for_visit_ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    /*width: 710px;*/
+}
+
+.reason_for_visit_li{
+    border-radius: 10px;
+    margin: 10px;
+    /* height: 110px; */
+    height: 75px;
+    position: relative;
+}
+
+.reason_for_visit_body_vitals_table_list_title{
+    color: #4a4a4a;
+    font-size: 18px;
+    display: block;
+    font-family: 'LatoSemiBold';
+    /*text-transform: capitalize;*/
+
+}
+
+.reason_for_visit_body_vitals_main_container{
+    padding:inherit; 
+    width:100%;
+}
+
+.reason_for_visit_body_vitals_table{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    table-layout: fixed;
+
+}
+
+.reason_for_visit_body_vitals_table_img{
+    height: 60px;
+   /* padding-left: 10px;*/
+}
+
+.reason_for_visit_body_vitals_table_list_sub_title{
+    color: #4a4a4a;
+}
+
+table.reason_for_visit_body_vitals_table td {
+  width: 25% ;
+}
+
+/*#snackbar {
+  display:  none;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 0;
+  left: 46%;
+  bottom: 40px;
+  font-size: 17px;
+}*/
+
+#snackbar {
+    display: none;
+    min-width: 250px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    font-size: 17px;
+    top: 89%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+}
+
+#snackbar.show {
+  display:  block;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  z-index: 100005;
+}
+
+.terms_conditions_main_container{
+    /*height: 250px;
+    margin: 250px 20px 20px 20px;*/
+    height: 420px;
+    margin: 20px 20px 20px 20px;
+    border-radius: 10px;
+    /*background-color: #dbdbdb;*/
+    background-color: white;
+    box-shadow: inset 0px 0px 4px 2px #c8c8c8;
+    box-sizing: border-box;
+    border: 1px solid #c8c8c8;
+}
+
+.terms_conditions_accept_check_box{
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    /*top: 167px;*/
+    top: 3px;
+    left: 145px;
+    border: 2px solid #808080d1;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.terms_conditions_accept_check_box.accept_checkmark {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    /*top: 167px;*/
+    top: 3px;
+    left: 145px;
+    border: 2px solid #808080d1;
+    border-radius: 4px;
+    background-color: white;
+    background: transparent url(../images/new_tick_mark.png) top left no-repeat;
+    background-size: 30px;
+    background-position-x: center;
+    background-position-y: center;  
+}
+
+.terms_conditions_options_container{
+    top: 165px;
+    position: absolute;
+    height: 30px;
+    width: 668px;
+}
+
+.terms_conditions_options_container.disable_element{
+    top: 165px;
+    position: absolute;
+    height: 30px;
+    width: 668px;
+    opacity: 0.6;
+    pointer-events: none !important;
+}
+
+#terms_conditions_privacy_policy_wrapper{
+    position: relative;
+    width: 100%;
+    /*height: 241px;*/
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+    display: block;
+    font-size: 14px;
+    color: #6d6d6d;
+    text-shadow: 1px 0 1px #fff;
+}
+
+.terms_container_reason_for_visit{
+    padding: 10px 20px 10px 12px;
+    box-sizing: border-box;
+}
+
+.teleconsult_terms_conditions_accept_button{
+    left: 345px;
+    top: 429px;
+    width: 185px;
+    text-align: center;
+    position: absolute;
+    height: 50px;
+    border-radius: 10px;
+    border-top: 2px solid #5dbcff;
+    border-left: 2px solid #5fa4d4bf;
+    border-bottom: 2px solid #50a4e0bf;
+    border-right: 2px solid #50a4e0bf;
+    color: white;
+    box-shadow: 0px 4px 4px #4a4a4ae0;
+    background: linear-gradient(to bottom,#5aa4d9,#3989c3, #0261c2);
+    text-shadow: none;
+    font-family: 'LatoRegular';
+    font-weight: 500;
+    pointer-events: all;
+}
+
+.teleconsult_terms_conditions_accept_button span{
+    font-size: 18px !important;
+    text-align: center !important;
+    position: relative !important;
+    top: -1px !important;
+    font-family: LatoRegular !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+    text-transform: none;
+}
+
+.teleconsult_terms_conditions_accept_button:active{
+    box-shadow: none !important;
+}
+
+.teleconsult_terms_conditions_reject_button{
+    top: 429px;
+    position: fixed;
+    height: 50px;
+    width: 185px;
+    left: 105px;
+    border: 2px solid #208ad6bf;
+    border-radius: 10px;
+    text-align: center;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+}
+
+.teleconsult_terms_conditions_reject_button span{
+   font-size: 18px;
+    text-align: center;
+    position: relative;
+    top: 14px;
+    text-transform: none;
+    font-weight: 500;
+    font-family: 'LatoRegular';
+    width: fit-content;
+}
+
+.teleconsult_terms_conditions_reject_button:active{
+    box-shadow: none;
+}
+
+#medical_documents_details{
+    top: 43px;
+    position: relative;
+    width: 100%;
+    height: 195px;
+    overflow: hidden;
+    margin: auto;
+    display: block;
+}
+
+.share_healthvital_to_consultant_option_button{
+    top: -30px;
+    left: 18px;
+    height: 60px;
+    width: 265px;
+    position: fixed;
+    border: 2px solid #208ad6bf;
+    border-radius: 10px;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+    text-align: center;
+    line-height: 57px;
+    font-size: 19px;
+}
+.share_healthvital_to_consultant_option_button:active {
+    background-color: #5297ca;
+}
+
+.share_healthvitals_to_consultant_option_button_text{
+    height: 170px;
+    position: fixed;
+    width: 201px;
+    left: 60px;
+    top: 73px;
+}
+
+.share_healthvitals_to_consultant_option_button_text_icon{
+    font-size: 20px;
+    font-weight: 400;
+    color: gray;
+    padding-left: 22px;
+    position: absolute;
+    top: 5px;
+} 
+
+.share_medicalfiles_to_consultant_option_button{
+    text-align: center;
+    line-height: 57px;
+    top: -30px;
+    left: 367px;
+    height: 60px;
+    width: 265px;
+    position: fixed;
+    border: 2px solid #208ad6bf;
+    border-radius: 10px;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+    font-size: 19px;
+}
+
+.share_medicalfiles_to_consultant_option_button_text{
+    top: 11px;
+    left: 20px;
+    font-size: 20px;
+    position: relative;
+    
+}
+
+.share_medicalfiles_to_consultant_option_button_icon{
+    font-size: 20px;
+    font-weight: 400;
+    color: gray;
+    padding-left: 22px;
+    position: absolute;
+    top: 5px;
+}  
+
+.health_vital_confirm{
+    background-color: blue;
+    top: 50px;
+    width: 62px;
+    height: 43px;
+    float: right;
+    z-index: 9999;
+    position:fixed;
+}
+
+.reason_for_visit_no_documents_available{
+    text-align: center;
+    font-size: 20px;
+    line-height: 115px;
+}
+
+#snackbar.green {
+    display:  block;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    z-index: 100005;
+    background-color: green;
+}
+
+#snackbar.gray {
+    display:  block;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    z-index: 100005;
+    background-color: #000;
+    /* color: white; */
+}
+
+#snackbar.red {
+    display:  block;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    z-index: 100005;
+    background-color: red
+}
+
+.med-doc-details {
+    border-radius: 10px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #e6e6e6;
+    box-shadow: 4px 4px 4px #afafaf, -3px -3px 1px white;
+    border: 2px solid #c0c0c0;
+    float: left;
+    margin-left: 30px;
+    width: 280px;
+    min-height: 50px;
+    max-height: 100px;
+    overflow: auto;
+}
+.med-doc-checkbox {
+    width: 21px;
+    height: 21px;
+    left: 5px;
+    border: 2px solid #808080d1;
+    border-radius: 4px;
+    background-color: white;
+}
+
+#medical-snackbar {
+    display: none;
+    min-width: 250px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    font-size: 17px;
+    top: 89%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+}
+
+#medical-snackbar.show{
+  display:  block;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  z-index: 100005;
+}
+
+#medical-snackbar.green {
+    display:  block;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    z-index: 100005;
+    background-color: green;
+}
+
+#medical-snackbar.gray {
+    display:  block;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    z-index: 100005;
+    background-color: #000;
+    /* color: white; */
+}
+
+#medical-snackbar.red {
+    display:  block;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    z-index: 100005;
+    background-color: red
+}
+
+#medical_documents_upload{
+    top: 43px;
+    position: relative;
+    width: 100%;
+    height: 195px;
+    overflow: hidden;
+    margin: auto;
+    display: block;
+}
+
+.documentupload_back_button{
+    right: 497px;
+    height: 50px;
+    width: 220px;
+    color: #4d4d4d;
+    position: fixed;
+    text-align: right;
+    padding-right: 34px;
+    border-right: 2px solid #208ad6bf;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 2px solid #208ad6bf;
+    border-bottom: 2px solid #208ad6bf;
+    border-left: 2px solid #208ad6bf;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+    top: 210px;
+}
+
+.documentupload_back_button_text{
+    top: 10px;
+    font-size: 20px;
+    position: relative;
+}

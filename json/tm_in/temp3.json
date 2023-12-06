@@ -1,0 +1,20 @@
+{
+    "temp3.results": "முடிவுகள்",
+    "temp3.continue": "தொடரவும்",
+    "temp3.calibration": "அளவுதிருத்தம்",
+    "temp3.tempScale": "உடல் வெப்பநிலை அளவுகோல்",
+    "temp3.status.healt": "இயல்புநிலை",
+    "temp3.status.accep": "",
+    "temp3.status.fever": "காய்ச்சல்",
+    "temp3.status.highfever": "அதிகக்",
+    "temp3.roomTemp": "அறை",
+    "temp3.wristTemp": "உடல்",
+    "temp3.temperature": "வெப்பநிலை",
+    "temp3.bodyTemp": "வெப்பநிலை",
+    "temp3.information": "தகவல்",
+    "temp3.parameter": "அளவுரு",
+    "temp3.yourscore": "உங்கள் மதிப்பெண்",
+    "temp3.OverallStatus": "ஒட்டுமொத்த நிலை",
+    "temp3.finalResult": "முடிவு",
+    "temp3.checkTempagain": "மீண்டும் சரிபார்க்கவும்"
+}

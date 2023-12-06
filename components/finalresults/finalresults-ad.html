@@ -1,0 +1,36 @@
+<div id="finalresults01_ad" ng-show="finalResultsAd.adVisible">
+    <div id="finalresults01_adbox" ng-hide="finalResultsAd.showInteractiveForm">
+        <div id="finalresults01_ad_container">
+            <div id="finalresults01_adbox_header">
+                <div class="ad_spinner"></div>
+                <div id="finalresults01_adbox_header_title">
+                    <span ng-bind="interfaceLabels[finalResultsAd.calcHigiScore]"></span>
+                </div>
+            </div>
+            <div id="finalresults01_adbox_ad_container" data-ng-if="!isMEBOrg">
+                <div id="finalresults01_adbox_rounded_corners">
+                    <div class="NewAdText1" ng-show="finalresults_New_adtext1" ng-bind="interfaceLabels[finalResultsAd.newAd1]"></div>
+                    <img id="finalresults_ad_image" height="100%" ng-show="finalResultsAd.adVisibleImage"  ng-src="{{finalResultsAd.adImageSrc}}"/>
+                    <div id="finalresultsad-video-wrapper" class="video-wrapper" ng-show="finalResultsAd.adVisibleVideo"  class="{{finalResultsAd.videoAdClass}}">
+
+                    </div>
+
+                      <a class="replay-video {{langClass}}" ng-show="finalResultsAd.replayVideoButtonVisible" ng-click="finalResultsAd.replayAdVideo()" ng-bind-html="interfaceLabels[finalResultsAd.replayVideo]"></a>
+                    <div class="timer" ng-show="finalResultsAd.showTimer">{{finalResultsAd.adVideoInfo.remaining}}</div>
+                </div>
+                <div class="NewAdText2" ng-show="finalresults_New_adtext2">
+                  <span class="NewAdText2Part1" ng-bind="interfaceLabels[finalResultsAd.newAd2Part1]"></span>
+                  <span class="NewAdText2Part2" ng-bind="interfaceLabels[finalResultsAd.newAd2Part2]"></span>
+                  <span class="NewAdText2Part3" ng-bind="interfaceLabels[finalResultsAd.newAd2Part3]"></span>
+             </div>
+                <div class="ad-cta slideInUp" ng-if="finalResultsAd.isInteractive && finalResultsAd.interactiveButtonsVisible">
+                    <a class="accept" ng-click="finalResultsAd.loadInteractiveForm()">{{finalResultsAd.acceptLabel}}</a>
+                    <a class="skip {{finalResultsAd.activeClass}}" ng-click="finalResultsAd.declinedAd()">{{finalResultsAd.skipLabel}}</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <interactive-ad-form ng-if="finalResultsAd.showInteractiveForm" adobject="finalResultsAd"></interactive-ad-form>
+    <div class="higi_overlay_mask_dark" ng-show="finalResultsAd.adVisible"></div>
+</div>

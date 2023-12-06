@@ -1,0 +1,15 @@
+{
+    "infobox.about.spo2": "SpO<sub>2</sub> గురించి",
+    "infobox.about.spo2.subtitle": "మీ బాడీ పల్స్ ఆక్సిమీటర్, దీనిని SpO<sub>2</sub>అని కూడా అంటారు.",
+    "infobox.about.spo2.point03": "SpO<sub>2</sub> పరిధులు",
+    "infobox.about.spo2.point04": "95కి పైన",
+    "infobox.about.spo2.point05": "91 నుండి 95",
+    "infobox.about.spo2.point06": "70 నుండి 90",
+    "infobox.about.spo2.point07": "70కి తక్కువ",
+    "spo2.status.healthy": "ఆరోగ్యంగా",
+    "spo2.status.acceptable": "అంగీకరించతగినది",
+    "spo2.status.atrisk": "ప్రమాదంలో",
+    "spo2.status.low": "తక్కువ",
+    "infobox.about.spo2.point08": " ఈ చార్ట్ వ్యాధి నియంత్రణ మరియు నివారణ కేంద్రాలచే నిర్వచించబడిన SpO<sub>2</sub>కేటగిరీలను ప్రతిబింబిస్తుంది.",
+    "infobox.about.spo2.point09": "below 95"
+}

@@ -1,0 +1,13 @@
+{
+    "fullbodybmc1.title": "BMC",
+    "text.instructions": "సూచనలు",
+    "fullbodybmc1.holdhands": "హ్యాండిల్స్‌ని మీ చేతులతో మెల్లగా పట్టుకోండి",
+    "fullbodybmc1.restwristt": "మీ ఫలితాలు డిస్ప్లే అయ్యే వరకు మీ మణికట్టును ఎలక్ట్రోడ్‌లపై ఉంచండి",
+    "fullbodybmc1.restLegsOnfootPads": "ఫుట్‌రెస్ట్ ప్యాడ్‌లపై మీ కాళ్లను విశ్రాంతి తీసుకోండి",
+    "fullbodybmc1.will.beginBefore": "మీ చేతులు ఉంచితేనే ఈ పరీక్ష ప్రారంభమవుతుంది",
+    "fullbodybmc1.will.begin": "మీ చేతులు ఉంచితేనే ఈ పరీక్ష ప్రారంభమవుతుంది",
+    "fullbodybmc1.skip": "దాటవేయి",
+    "fullbodybmc1.startTest": "పరీక్ష ప్రారంభించండి",
+    "fullbodybmc1.bmc.progress": "BMC పరీక్ష జరుగుతోంది...",
+    "weight04.bmc.hands.removed.warning": "ఏదో తప్పు జరిగినట్లు కనిపిస్తోంది. మళ్లీ ప్రయత్నిద్దాం."
+}

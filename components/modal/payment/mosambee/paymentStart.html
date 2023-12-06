@@ -1,0 +1,186 @@
+
+<style type="text/css">
+ .mosambee_pay_mobile_auth_validate_container{
+    position: absolute;
+    left: 20px;
+    width: 668px;
+    top: 20px;
+    height: 205px;
+    border-radius: 10px;
+    background-color: #dbdbdb;
+}
+
+/*.payment_next_button{
+    pointer-events: all;
+    width: 150px;
+    background-color: #2a76c4;
+    border: 1px solid #0261c2;
+    border-radius: 3px;
+    background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+    left: 462px;
+    top: 113px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    position: absolute;
+}
+.payment_next_button span {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'IntervalSansProMediumRegular';
+    text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2);
+    line-height: 50px;
+    height: 54px;
+    display: inline-block;
+    opacity: .9;
+    margin-left: 49px;
+}*/
+
+.payment_next_button{
+    position: absolute !important;
+    top: 98px !important;
+    height: 53px !important;
+    left: 455px !important;
+    border-radius: 10px !important;
+    border-top: 2px solid #5dbcff !important;
+    border-left: 2px solid #5fa4d4bf !important;
+    border-bottom: 2px solid #50a4e0bf !important;
+    border-right: 2px solid #50a4e0bf !important;
+    width: 190px !important;
+    color: white !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    box-shadow: 0px 4px 4px #4a4a4ae0 !important;
+    background: linear-gradient(to bottom,#5aa4d9,#3989c3, #0261c2) !important;
+    text-shadow: none !important;
+    font-family: 'LatoRegular' !important;
+    font-weight: 500 !important;
+    text-align: center;
+    pointer-events: all !important;
+}
+
+.payment_next_button span {
+    font-size: 21px !important;
+    text-align: center !important;
+    position: relative !important;
+    top: -1px !important;
+    font-family: LatoRegular !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+.payment_next_button:active{
+    box-shadow: none !important;
+}
+
+.payment_title_bar{
+    font-size: 31px;
+    color: #0261c2;
+    font-family: "IntervalSansProCondSemiBoldRg";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 670px;
+}
+.authcode_text_mobile_error {
+    color: red;
+    margin-left: 21px;
+    margin-top: 155px;
+}
+/*.disabled_next{
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #cecece;
+    pointer-events: none;
+}*/
+
+.payment_next_button.disabled_next{
+    top: 98px;
+    left: 455px;
+    position: absolute !important;
+    width: 190px !important;
+    height: 55px !important;
+    pointer-events: none !important;
+    text-align: center !important;
+    font-family: "LatoRegular" !important;
+    z-index: 15 !important;
+    line-height: 60px !important;
+    border: 1px solid #cecece !important;
+    border-radius: 7px !important;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%) !important;
+}
+
+.payment_next_button.disabled_next span{
+    position: relative !important;
+    top: -1px !important;
+    color: #fff !important;
+    font-size: 22px !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2) !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: .9 !important;
+    pointer-events: none !important;
+}
+
+.bookappointment_loading {
+    top: 110px;
+    left: 335px;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+    pointer-events: none !important;
+    background: transparent url(images/keyboard_dialog_loading_icon06222012.png) top left no-repeat;
+    -webkit-animation: rotate360 1.3s linear infinite; 
+}
+
+.auth_modal_password_eyes_images {
+    width: 44px;
+    height: 21px;
+    background: transparent url(images/Icons-0006.png) top left no-repeat;
+    position: absolute;
+    top: 117px;
+    left: 380px;
+    background-size: 40px;
+}
+
+.auth_modal_password_eyes_images.active_eyes{
+    width: 44px;
+    height: 28px;
+    background: transparent url(images/password_hide_icon.png) top left no-repeat;
+    position: absolute;
+    top: 114px;
+    left: 380px;
+    background-size: 40px;
+}
+
+</style>
+
+
+<div class="mosambee_pay_mobile_auth_validate_container">
+    <payment-mobile-field ng-show="paymentMobileTextField" paymentmobilefield="paymentModal.fields[0]"></payment-mobile-field>
+
+    <a id="phone_next_button" ng-show="paymentMobileTextField" class="payment_next_button {{disabled_next}}" ng-click="paymentMobileNumberValue()"><span>{{interfaceLabels[paymentModal.NEXT]}}</span></a>
+
+    <payment-authorization-field ng-hide="paymentMobileTextField" paymentauthorizationfield="paymentModal.fields[1]" ng-if = "paymentMode == 'cash'"></payment-authorization-field>
+
+    <payment-coupon-field ng-hide="paymentMobileTextField" paymentauthorizationfield="paymentModal.fields[1]" ng-if = "paymentMode == 'coupon'"></payment-coupon-field>
+
+    <div ng-hide="paymentMobileTextField" ng-click="paymentModal.showAuthToggle(paymentModal.fields[1])" class="auth_modal_password_eyes_images {{authShowPasswordClass}}"></div>
+
+    <a id="authcode_next_button" ng-hide="paymentMobileTextField" class="payment_next_button" ng-click="paymentAuthorizationValue()"><span>{{interfaceLabels[paymentModal.NEXT]}}</span></a>
+
+    <div ng-show="bookingAppointment == true" class="bookappointment_loading"></div>
+
+    <p class="authcode_text_mobile_error" ng-show="authcodeNotValid">{{interfaceLabels[paymentModal.authcodeNotValid]}}</p>
+</div>

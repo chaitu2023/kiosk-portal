@@ -1,0 +1,13 @@
+{
+
+    "weight01_audio01":"sounds/mi_in/vo1_weight&bmi.wav",
+    "weight01_audio02":"sounds/mi_in/voice2_weight&bmi.wav",
+    "weight01_audio03":"sounds/mi_in/voice3_weight&bmi.wav",
+    "weight01_audio04":"sounds/mi_in/startWeightTest.wav",
+    "weight01_audio05":"sounds/mi_in/voice4_weight&bmi.wav",
+    "weight03_audio01":"sounds/mi_in/results.wav",
+	"weight01_audiolap":"sounds/mi_in/handsonLap.wav",
+    "weight03_audio10":"sounds/mi_in/chkWeight&bmiAgain.wav",
+    "weight03_audio11": "sounds/mi_in/chkBmcAgain.wav"
+
+}

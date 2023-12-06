@@ -1,0 +1,14 @@
+{
+    "zugEcg1.singleLeadecgtitledisp": "ఇసిజి - సింగిల్ లీడ్",
+    "zugEcg1.threeLeadecgtitledisp": "ఇసిజి - 3 లీడ్",
+    "zugEcg1.sixLeadecgtitledisp": "ఇసిజి - 6 లీడ్",
+    "zugEcg1.sitStraight": "నిటారుగా కూర్చోండి",
+    "zugEcg1.restWrist": "మీ మణికట్టును హ్యాండిల్స్ మీద ఉంచండి",
+    "zugEcg1.placeleftleg": "మీ ఎడమ కాలును పెడల్ మీద ఉంచండి",
+    "zugEcg1.placebothleg": "ఈ క్లాంపులను మీ రెండు కాళ్ల మీద ఉంచండి",
+    "zugEcg1.skipTest": "దాటవేయి",
+    "zugEcg1.startTest": "పరీక్ష ప్రారంభించండి",
+    "zugEcg1.EcgTestWillBegin": "మీ చేతులు మరియు కాళ్ళు సరైన స్థానంలో ఉన్నప్పుడు ఈ పరీక్ష ప్రారంభమవుతుంది",
+    "zugEcg1.keepHandsProper": "దయచేసి మీ చేతులను సరిగ్గా ఉంచండి",
+    "zugEcg1.keepLegsProper": "దయచేసి మీ కాళ్ళను సరిగ్గా ఉంచండి"
+}

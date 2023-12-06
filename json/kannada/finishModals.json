@@ -1,0 +1,20 @@
+{
+    "emailresults.enter.email": "ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ",
+    "emailresults.enter.email.to.send.results": "ನಿಮ್ಮ ಫಲಿತಾಂಶಗಳನ್ನು ಕಳುಹಿಸಲು ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ",
+    "emailresults.email.sent": "ನಿಮ್ಮ ಫಲಿತಾಂಶಗಳನ್ನು ಪಡೆಯಲು ನಿಮ್ಮ ಇಮೇಲ್ ಪರಿಶೀಲಿಸಿ.",
+    "emailresults.by.clicking.send": "ನಿಮ್ಮ ಫಲಿತಾಂಶಗಳನ್ನು ಇಮೇಲ್ ಮಾಡುವ ಮೂಲಕ, ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ಸೇವ್‌ ಮಾಡಬಹುದು ಎಂದು ನೀವು ಒಪ್ಪಿಕೊಳ್ಳುತ್ತೀರಿ.",
+    "global.send": "ಕಳುಹಿಸು",
+    "finishModal.email.never.spam": "(ನಾವು ನಿಮ್ಮನ್ನು ಸ್ಪ್ಯಾಮ್ ಮಾಡುವುದಿಲ್ಲ. ವಾಗ್ದಾನ ನೀಡುತ್ತೇವೆ!)",
+    "finishModal.printwarning": " ಎಚ್ಚರಿಕೆ! ",
+    "finishModal.makesure": "ದಯವಿಟ್ಟು ಪ್ರಿಂಟರ್ ಪ್ರದೇಶವನ್ನು ನಿರ್ಬಂಧಿಸಬೇಡಿ",
+    "finishModal.printinstruct": "ಮುದ್ರಣ ಬಟನ್ ಒತ್ತಿರಿ",
+    "finishModal.notavail": "ಪೇಪರ್ ಲಭ್ಯವಿಲ್ಲ",
+    "finishModal.papernot": " ಕ್ಷಮಿಸಿ, Hpod ನಲ್ಲಿ ಪ್ರಿಂಟ್ ಪೇಪರ್ ಲಭ್ಯವಿಲ್ಲ",
+    "finishModal.refill": "ನಾವು ಶೀಘ್ರದಲ್ಲೇ ರಿಫಿಲ್ ಮಾಡುತ್ತೇವೆ...",
+    "finishModal.printRes": "ಮುದ್ರಿಸಿ",
+    "finishModal.okayy": "ಸರಿ",
+    "finishModal.printEcgraph": "ಇಸಿಜಿ ಗ್ರಾಫ್ ಮುದ್ರಿಸಿ",
+    "global.requird.test": "No Test Results",
+    "emailresults.enter.email.to.send.abharesults": "Enter your Email Address to get your card",
+    "emailresults.by.clicking.abhasend": "By emailing your results, you accept that your card may be saved"
+}

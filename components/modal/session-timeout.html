@@ -1,0 +1,12 @@
+
+    <div id="timeout_dialog_title">{{interfaceLabels[sessionExitConfirm.title]}}</div>
+    <div id="timeout_dialog_subtitle">{{interfaceLabels[sessionExitConfirm.subTitle]}}</div>
+    <div id="timeout_dialog_content">
+        <span id="timeout_countdown">{{sessionExitConfirm.timeLeft}}</span>
+        <span id="session_timeout_message" ng-bind-html="interfaceLabels[sessionExitConfirm.message]"></span>
+    </div>
+    <a class="global_continue_next_button" ng-click="sessionExitConfirm.returnSession()">
+    	<span class="global_continue_next_button_text">{{interfaceLabels[sessionExitConfirm.cancel]}}</span>
+	</a>
+	
+    <!-- <div id="cancel_timeout_btn" ng-click="sessionExitConfirm.returnSession()"><span class="{{langClass}}">{{interfaceLabels[sessionExitConfirm.cancel]}}</span></div> -->

@@ -1,0 +1,20 @@
+<div class="infobox_content">
+        <div class="infobox_content_title {{langClass}}">{{interfaceLabels[infoboxContentTitle]}}</div>
+        <div class="infobox_content_subtitle bp-multi-test">{{interfaceLabels[infoboxContentSubTitle]}}</div>
+        <table cellspacing="0">
+            <thead>
+            <tr>
+                <th></th>
+                <th class="bp_results_average_infobox_headers">{{interfaceLabels[infoboxBloodPressure]}}</th>
+                <th class="bp_results_average_infobox_headers">{{interfaceLabels[infoboxPulse]}}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr  ng-repeat="(index, bp) in bpArray">
+                <td class="bp_results_average_testnumber">{{(index+1)}}</td>
+                <td class="bp_results_average_bpnumber">{{bp.systolic}}/{{bp.diastolic}}<span class="bp_results_average_unit" ng-bind-html="interfaceLabels[infoboxBpUnit]"></span></td>
+                <td class="bp_results_average_pulsenumber">{{bp.pulse}}<span class="bp_results_average_unit">{{interfaceLabels[infoboxBpBpm]}}</span></td>
+            </tr>
+            </tbody>
+        </table>
+ </div>

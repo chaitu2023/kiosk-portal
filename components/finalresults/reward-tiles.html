@@ -1,0 +1,21 @@
+<!-- offline mode -->
+<span ng-if="!rewardsAd.apiAvailable"  class="offline-ad-frame">
+    <img class="reward-tile-image offline-es" ng-src='{{rewardsAd.offline_es_us}}' ng-if="rewardsAd.unauthEs"/>
+    <img class="reward-tile-image offline-en" ng-src='{{rewardsAd.offline_en_us}}' ng-if="rewardsAd.unauthEn"/>
+</span>
+
+<!--challenge ad -->
+<span ng-if="rewardsAd.apiAvailable && rewardsAd.hasChallenge" class="challenge-ad-frame">
+    <img class="reward-tile-image challenge-joined" ng-src='{{rewardsAd.challengeJoinedAd}}' ng-if="rewardsAd.loggedIn && rewardsAd.challengeJoined"/>
+    <a ng-click="rewardsAd.joinChallenge()" ng-if="!rewardsAd.challengeJoined">
+        <img class="reward-tile-image challenge-not-joined" ng-src='{{rewardsAd.challengeAd}}'/>
+    </a>
+</span>
+
+<!--default ad -->
+<span ng-if="rewardsAd.apiAvailable && !rewardsAd.hasChallenge"  class="inline-no-challenge-ad-frame">
+    <img class="reward-tile-image unauthenticated-es" ng-src='{{rewardsAd.unauthenticated_es_us}}' ng-if="rewardsAd.unauthEs"/>
+    <img class="reward-tile-image unauthenticated-en" ng-src='{{rewardsAd.unauthenticated_en_us}}' ng-if="rewardsAd.unauthEn"/>
+    <img class="reward-tile-image authenticated-es" ng-src='{{rewardsAd.authenticated_es_us}}' ng-if="rewardsAd.authEs"/>
+    <img class="reward-tile-image authenticated-en" ng-src='{{rewardsAd.authenticated_en_us}}' ng-if="rewardsAd.authEn"/>
+</span>

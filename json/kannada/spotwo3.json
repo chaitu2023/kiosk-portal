@@ -1,0 +1,20 @@
+{
+    "spo2three.spo2": "Spo2",
+    "spo2three.results": "ಫಲಿತಾಂಶಗಳು",
+    "spo2three.continue": "ಮುಂದುವರಿಸಿ",
+    "spo2three.spo2.percent": "%",
+    "spo2three.spo2level": "SpO2 ಆಮ್ಲಜನಕದ ಮಟ್ಟ",
+    "spo2three.checkSpo2again": "ಮತ್ತೆ SPO2 ಪರಿಶೀಲಿಸಿ",
+    "spo2three.information": "ಮಾಹಿತಿ",
+    "spo2three.parameter": "ಪ್ಯಾರಾಮೀಟರ್",
+    "spo2three.yourscore": "ನಿಮ್ಮ ಸ್ಕೋರ್",
+    "spo2three.OverallStatus": "ಒಟ್ಟಾರೆ ಸ್ಥಿತಿ",
+    "spo2three.spo22scale": "SpO<sub>2</sub> ಸ್ಕೇಲ್",
+    "spo2three.finalResult": "ಅಂತಿಮ ಫಲಿತಾಂಶ",
+    "spo2three.status.healthy": "ಆರೋಗ್ಯಕರ",
+    "spo2three.status.acceptable": "ಸ್ವೀಕಾರಾರ್ಹ",
+    "spo2three.status.atrisk": "ಅಪಾಯದಲ್ಲಿ",
+    "spo2three.status.low": "ಕಡಿಮೆ",
+    "spo2two.in.progress": "SpO2 is in Progress...",
+    "spo2three.status.spo2_check_healthcare_provider": "Check With Healthcare Provider"
+}

@@ -1,0 +1,172 @@
+<div ng-show="reasonForVisit.purposeVisitenable" class="reason_for_visit_main_container {{reasonForVisit.purposeVisitSectionClass}}" >
+  <div class="reason_for_visit_main_title" ng-bind-html="interfaceLabels[reasonForVisit.title]"></div>
+  <div class="reason_for_visit_sub_container" >
+    <div class="reason_for_visit_sub_container_title" ng-bind-html="interfaceLabels[reasonForVisit.mentionReason]"></div>
+    <higi-text-field field="reasonForVisit.fields[0]" class="reason_for_visit_InputBoxContainer"></higi-text-field>
+    <div class="reason_for_visit_next_button {{reasonForVisit.nextBtnActive}}" ng-click = "reasonForVisit.showTermsAndConditionOption()">
+      <span ng-bind-html="interfaceLabels[reasonForVisit.next]"></span>
+    </div>
+    <!-- <div class="bookappointment_loader"></div> -->
+  </div>
+  <!--
+  <div style="top: 165px; position: absolute; height: 30px; width: 668px;" ng-if="reasonForVisit.enableHealthVitalSharingOption">
+    <a class="reason_for_visit_accept_check_box {{reasonForVisit.healthVitalSharingCheckboxClass}}" ng-click="reasonForVisit.toggleHealthVitalsSharing()"></a>
+    <div class="reason_for_visit_disclaimer">{{'I agree to share my Health Vitals'}}
+    <a ng-style="{'color': '#0261c2', 'letter-spacing': '0.5px', 'text-decoration':'underline'}" ng-click="reasonForVisit.showUserHealthVitalDetails()">Health Vitals</a> {{' to the consultant/doctor.'}}
+    </div>
+  </div>
+  -->
+
+  <!-- Sharing Health Vitals Data -->
+  <div  ng-if="reasonForVisit.enableHealthVitalSharingOption">
+    <a class="share_healthvital_to_consultant_option_button" ng-click="reasonForVisit.enableHealthVitalsShare()">{{interfaceLabels[reasonForVisit.shareYourHealthVitals]}}</a>
+  </div>
+
+  <!-- Sharing Medical Documents Files -->
+  <div>
+    <a class="share_medicalfiles_to_consultant_option_button" ng-click="reasonForVisit.toggleMedicalDocumentsSharing()">{{interfaceLabels[reasonForVisit.shareYourMedicalFiles]}}</a>
+  </div>
+
+  <!-- <div class = "terms_conditions_options_container {{reasonForVisit.acceptedTermsAndConditionClass}}" ng-if="reasonForVisit.enableTermsAndConditionOption">
+    <a class="terms_conditions_accept_check_box {{reasonForVisit.termsConditionsOptionCheckboxClass}}" ng-click="reasonForVisit.toggleTermsAndConditionsOption(reasonForVisit.fields[0].text)"></a>
+    <div class="reason_for_visit_disclaimer">{{'I agree with all the terms, conditions & privacy policy'}}</div>
+  </div> -->
+  <!-- <div class="reason_for_visit_disclaimer" ng-bind-html="interfaceLabels[reasonForVisit.disclaimer]"></div> -->
+</div>
+
+<div ng-show="reasonForVisit.paymentMethodenable" class="payment_method_main_container {{reasonForVisit.paymentMethodSectionClass}}" >
+  <div class="payment_method_main_title" ng-bind-html="interfaceLabels[reasonForVisit.paymentMethodTitle]">
+  </div>
+  <i class="fa fa-close" style="position: absolute;right: 15px;top: 16px;color: #6d6d6d;font-size: 22px;" ng-click="reasonForVisit.logoutExit()">
+  </i>
+
+  <div ng-class ="{'card_disabled': mosambeeHardwareEnable == false, '': mosambeeHardwareEnable == true, 'payment_method_card_container':!discountPaymentMethodSelected, 'payment_method_card_container_2':discountPaymentMethodSelected}">
+       <img src="./images/card_payment_icon.png"> 
+       <a ng-click="reasonForVisit.card_upiPaymentClick('card')">
+            <span>{{interfaceLabels[reasonForVisit.cardPaymentText]}}</span>
+       </a>
+    </div>
+    <div ng-class="{'payment_method_upi_container':!discountPaymentMethodSelected, 'payment_method_upi_container_2':discountPaymentMethodSelected}">
+       <img src="./images/upi_payment_icon.png"> 
+       <a ng-click="reasonForVisit.card_upiPaymentClick('UPI')">
+            <span>{{interfaceLabels[reasonForVisit.upiPaymentText]}}</span>
+       </a>
+    </div>
+    <div ng-class="{'payment_method_cash_container':!discountPaymentMethodSelected, 'payment_method_cash_container_2':discountPaymentMethodSelected}">
+       <img src="./images/cash_in_hand.png"> 
+       <a ng-click="reasonForVisit.card_upiPaymentClick('cash')">
+            <span> {{interfaceLabels[reasonForVisit.cashPaymentText]}}</span>
+       </a>
+    </div>
+
+    <div class="payment_method_coupon_container" ng-if="!discountPaymentMethodSelected">
+       <img src="./images/coupon.png"> 
+       <a ng-click="reasonForVisit.card_upiPaymentClick('coupon')">
+            <span> {{interfaceLabels[reasonForVisit.couponPaymentText]}} </span>
+       </a>
+    </div>
+
+    <div class="payment_method_terms_accept" ng-show="!paymentFlowForVitalPrinting && !paymentFlowForPrescriptionPrinting">{{interfaceLabels[reasonForVisit.termsAcceptPaymentText]}} &#8377;{{(dataForAppointmentBooking && (dataForAppointmentBooking["doctorFees"] != undefined && dataForAppointmentBooking["doctorFees"] > 0)) ? dataForAppointmentBooking["doctorFees"] : kioskVitalTestCost}}</div>
+    <div class="payment_method_terms_accept" ng-show="paymentFlowForVitalPrinting && !paymentFlowForPrescriptionPrinting">{{interfaceLabels[reasonForVisit.termsAcceptPaymentText]}} &#8377;{{printingVitalAndPresCostObj["vital_print_cost_inbuilt"]}}</div>
+    <div class="payment_method_terms_accept" ng-show="paymentFlowForPrescriptionPrinting && !paymentFlowForVitalPrinting">{{interfaceLabels[reasonForVisit.termsAcceptPaymentText]}} &#8377;{{printingVitalAndPresCostObj["prescription_print_cost_inbuilt"]}}</div>
+    <small ng-show = "mosambeeHardwareEnable == false" style="color: red;top: 256px;position: absolute;left: 267px;">
+     {{interfaceLabels[reasonForVisit.cardDeviceNotFoundText]}}
+   </small>
+</div>
+
+<div ng-show="reasonForVisit.vitalSectionEnable" class="vital_section_main_container {{reasonForVisit.vitalSectionClass}}" >
+  <div class="vital_section_main_title" ng-bind-html="'Your Health Vitals'"></div>
+  <div id="health_vital_details">
+    <div class="reason_for_visit_body_vitals_main_container">
+      <ul class="reason_for_visit_ul">
+        <li ng-repeat="vital in reasonForVisit.healthVitalDataToShow" class="reason_for_visit_li" ng-style="{'background-color':($odd)? 'lightgray' : '#e6e6e6'}" >
+          <table class="reason_for_visit_body_vitals_table">
+            <tbody>
+              <tr>
+               <td>
+                  <img class="reason_for_visit_body_vitals_table_img" src="{{vital.image}}">
+               </td>
+               <td>
+                 <p class="reason_for_visit_body_vitals_table_list_title">{{vital.vital_name}}</p>
+               </td>
+               <!-- <td>
+                 <p class="reason_for_visit_body_vitals_table_list_sub_title">Systolic/Diastolic</p>
+               </td> -->
+               <td>
+                 <p class="reason_for_visit_body_vitals_table_list_title">{{vital.value +' '+vital.unit}}</p>
+               </td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <input type="submit" value="Share" class="reason_for_visit_next_button {{reasonForVisit.nextBtnActiveHealthVital}}" style="font-size: 20px;top: 192px !important;left: 255px !important;position: fixed !important;line-height: 1px !important;" ng-click="reasonForVisit.shareVitalsToDoctor()">
+  <input type="submit" value="Cancel" class="reason_for_visit_next_button {{reasonForVisit.nextBtnActiveHealthVital}}" style="font-size: 20px;top: 192px !important;left: 480px !important;position: fixed !important;line-height: 1px !important;" ng-click="reasonForVisit.cancelVitalsToDoctor()">
+  <div id="snackbar">{{snackBarAlertText}}</div>
+</div>
+
+<div ng-show="reasonForVisit.medicalDocumentsEnable" class="vital_section_main_container {{reasonForVisit.medicalDocumentsClass}}" >
+  <div class="vital_section_main_title" ng-bind-html="'Select Files to Share'"></div>
+  <div id="medical_documents_details">
+    <div ng-if="reasonForVisit.medicalFilesDataToSharedFromApi.length > 0;" class="reason_for_visit_body_vitals_main_container">
+      <!-- <ul class="reason_for_visit_ul">
+        <li ng-repeat="medicalFiles in reasonForVisit.medicalFilesDataToSharedFromApi" class="reason_for_visit_li" ng-style="{'background-color':($odd)? 'lightgray' : '#e6e6e6'}" >
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <p class="reason_for_visit_body_vitals_table_list_title">{{medicalFiles.document_name}}</p>
+                </td>
+                <td>
+                  <input type="checkbox" style="top: 40px;height: 21px;width: 21px;" ng-click="reasonForVisit.onSelectDocument(medicalFiles.document_id)">
+                </td>               
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul> -->
+      <div class="med-doc-details" ng-repeat="medicalFiles in reasonForVisit.medicalFilesDataToSharedFromApi">
+        <input class="med-doc-checkbox" type="checkbox" ng-click="reasonForVisit.onSelectDocument(medicalFiles.document_id)" ng-checked="medicalFiles.isSelected">
+        <span class="med-doc-name" ng-bind-html="medicalFiles.document_name"></span>          
+      </div>
+    </div>
+    <div ng-if="reasonForVisit.medicalFilesDataToSharedFromApi.length == 0;" class="reason_for_visit_no_documents_available">
+      <p>No Documents available.</p>
+    </div>
+  </div>
+  <a class="documentupload_back_button button-enter-left" ng-click="reasonForVisit.showDocumentUploadQrCodePage()">
+    <span class="documentupload_back_button_text">Upload Files</span>
+  </a> 
+  <input type="submit" ng-if="reasonForVisit.medicalFilesShareToDoctor.length > 0 || !reasonForVisit.medicalFilesShareStatus" value="Share" class="reason_for_visit_next_button {{reasonForVisit.nextBtnActiveMedicalFiles}}" style="font-size: 20px;top: 211px !important;left: 255px !important;position: fixed  !important;line-height: 1px !important;" ng-click="reasonForVisit.shareMedFilesToDoctor()">
+  <input type="submit" ng-if="reasonForVisit.medicalFilesShareToDoctor.length > 0 || !reasonForVisit.medicalFilesShareStatus" value="Cancel" class="reason_for_visit_next_button {{reasonForVisit.nextBtnActiveMedicalFiles}}" style="font-size: 20px;top: 211px !important;left: 480px !important;position: fixed  !important;line-height: 1px !important;" ng-click="reasonForVisit.cancelMedFilesToDoctor()">
+  <div id="medical-snackbar">{{medicalSnackBarAlertText}}</div>
+  
+</div>
+
+<div ng-show="reasonForVisit.medicalDocumentsUploadEnable" class="vital_section_main_container {{reasonForVisit.medicalDocumentsUploadClass}}" >
+  <div class="vital_section_main_title" ng-bind-html="'Scan QR Code for document upload'"></div>
+  <div id="medical_documents_upload">
+    <div id="medical-doc-upload-qrcode" style="margin: 5px 245px;"></div>
+  </div>
+  <a class="documentupload_back_button  button-enter-left" ng-click="reasonForVisit.showMedicalDocumentDetails()">
+    <span class="documentupload_back_button_text {{langClass}} ">Back</span>
+  </a>  
+</div>
+
+<div ng-show="reasonForVisit.termsConditionsContainerEnable" class="terms_conditions_main_container {{reasonForVisit.termsConditionsContainerClass}}" >
+  <div id="terms_conditions_privacy_policy_wrapper">
+    <div class="terms_container_reason_for_visit" ng-bind-html="reasonForVisit.termsOfServicePpol"></div>
+  </div>
+  <a class="teleconsult_terms_conditions_accept_button" ng-click="reasonForVisit.toggleTermsAndConditionsOption(reasonForVisit.fields[0].text, true)" ng-hide ="paymentDisabled">
+    <span>I Agree</span>
+  </a>
+  <a class="teleconsult_terms_conditions_reject_button" ng-click="reasonForVisit.toggleTermsAndConditionsOption(reasonForVisit.fields[0].text, false)" ng-hide ="paymentDisabled"> 
+    <span>Cancel</span>
+  </a>
+  
+  <div ng-show ="paymentDisabled" style="margin: auto;text-align: center;margin-top: 45px;font-size: 18px;color: #4d4d4d;">
+    <p> <span class="bookappointment_loader" style="left: 240px;top: -6px;"></span> Please wait...</p>
+  </div>
+</div>

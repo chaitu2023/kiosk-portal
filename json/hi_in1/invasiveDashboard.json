@@ -1,0 +1,16 @@
+{
+    "ivtDash.invasive": "Invasive",
+    "ivtDash.ivtDashSubTitle": "Please select from the list of test below and click 'Continue' to proceed",
+    "ivtDash.glucose": "Glucose",
+    "ivtDash.urine": "Urine Test",
+    "ivtDash.hcv": "HCV",
+    "ivtDash.pregnancy": "Pregnancy Test",
+    "ivtDash.dengue": "Dengue",
+    "ivtDash.troponin": "Troponin",
+    "ivtDash.heamoglobin": "Heamoglobin",
+    "ivtDash.malaria": "Malaria",
+    "ivtDash.syphilis": "Syphilis",
+    "ivtDash.lipid": "Lipid Profile",
+    "ivtDash.hiv": "HIV",
+    "ivtDash.ivtOfflineText": "Invasive is offline"
+}

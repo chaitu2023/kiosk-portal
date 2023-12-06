@@ -1,0 +1,496 @@
+<!-- Old code starts here
+<div>
+    <div class="abha_header">
+        <img src="images/abha_logo.jpg" class="abha_care_context_img">
+        <p class="abha_care_context_heading">Select your data to link your ABHA account</p>
+    </div>
+    
+    <div id="abha_care_context_scroll">
+        <table class="abha_care_context_table">
+            <tr ng-repeat = "response in res" >
+                <td class = "abhaCheckBox {{abhaCareContext.shareVital}}" ng-click = abhaCareContext.ShareSelectedVitalData()>
+                    <input type="checkbox" ng-model="response.isSelected">
+                </td>
+                <td class = "abhaDateTime">{{response.dateTimeFormatted}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <input type="checkbox" id="abhaSelectAllVital" style="margin: 15px 18px; width: 30px; height: 28px; top: 285px;" ng-click="abhaCareContext.ShareAllVitalData()">
+    <div id="abhaSelectAllVital">Select All</div>
+    <p class="abhaTotalCount">Selected Count : {{abhaCareContext.shareVitalArray.length}}</p>
+
+    <div  class="abha_verify_and_continue_btn {{abhaCareContext.VerifyAndContinueActiveBtn}}" ng-click="abhaCareContext.verifyAndContinueFlow()" ><span>verify and Continue</span></div>
+</div>
+
+<div data-ng-show="loadingImg">
+    <div style="text-align: center;">{{interfaceLabels[progress_message]}}</div>
+    <div class="abhaVitalDataLoader"></div>
+</div> 
+old code ends here-->
+
+<div data-ng-show="linktestResWithAbha" class="keyboard_lastcheckin">
+    <p class="checkin_abha_careContext_heading">Would you like to share your test result with ABHA ?</p>
+    <img src="images/abha_png.png" id="abha_Logo" />
+
+    <div style="padding-left:33px">
+        <div class="abha_cc_info_button" ng-click="showAbhaCCInfobox()">
+            <img class="global_info_button_icon" src="images/icons8-info-32.png">
+            <span class="global_info_button_text ng-binding">Info</span>
+        </div>
+    </div>
+
+    <a class="abha_careCon_Section_yes_btn {{abhaCareContext.abhaLinkButtonClass}}" ng-click="abhaCareContext.abhaCareContextShareBtn('Yes')">
+        <span>Yes</span>
+    </a>
+
+    <a class="abha_careCon_Section_no_btn {{abhaCareContext.abhaLinkButtonClass}}" ng-click="abhaCareContext.abhaCareContextShareBtn('No')">
+        <span>No</span>
+    </a>
+</div> 
+<div ng-if="EnableshowAbhaCCInfobox" id="abha_cc_info_container" style="left: 11px;">
+    <div id="abha_cc_info_container_scroll">
+        <div>
+            <p class="infobox_content_title ng-binding">
+                ABHA Health System
+                <img src="images/abha_logo.jpg" style="width: 37px; object-fit: cover; top: 8px; position: relative;right:440px">             
+            </p>
+            <div style="height:334px;font-size: 18px;color:#6d6d6d;">
+                <p style="padding-left: 14px;color: black;font-size: larger;">What is ABHA ?</p>
+                <p style="padding-left: 14px;">ABHA, or Ayushman Bharat Health System, is a smart healthcare system by the Indian government. It's your digital health identity for all your important health records.</p>
+                <p style="padding-left: 14px;color: black;font-size: larger;">Benefits of ABHA</p>
+                <div class="info_row">
+                    <div class="info_column">
+                      <div class="info_card">
+                        <div style="padding-left: 100px;text-align: initial;padding-top:15px;font-size:15px">
+                            <a style="font-weight: bolder;color: black;">Connect your hpod to ABHA</a> for amazing advantages.
+                        </div>
+                        <div>
+                            <img src="images/cloud-service.png" style="width: 62px; object-fit: cover; top: -48px; position: relative;right:112px">             
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="info_column">
+                      <div class="info_card">
+                        <div style="padding-left: 100px;text-align: initial;padding-top:7px;font-size:15px">
+                            <a style="font-weight: bolder;color: black;">Seamless Care:</a> Doctors and nurses can access your health info for better care.
+                        </div>
+                        <div>
+                            <img src="images/medical-checkup.png" style="width: 62px; object-fit: cover; top: -60px; position: relative;right:112px">             
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="info_column">
+                      <div class="info_card">
+                        <div style="padding-left: 100px;text-align: initial;padding-top:7px;font-size:15px">
+                            <a style="font-weight: bolder;color: black;">Acess Important health details:</a> ECG, Weight, Blood pressure & more.
+                        </div>
+                        <div>
+                            <img src="images/assistance.png" style="width: 62px; object-fit: cover; top: -60px; position: relative;right:112px">             
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="info_column">
+                      <div class="info_card">
+                        <div style="padding-left: 100px;text-align: initial;padding-top:5px;font-size:15px">
+                            <a style="font-weight: bolder;color: black;">Ayushhman Bharat Scheme:</a> Enjoy affordable healthcare services and insurance.
+                        </div>
+                        <div>
+                            <img src="images/planning.png" style="width: 62px; object-fit: cover; top: -55px; position: relative;right:112px">             
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="info_column">
+                        <div class="info_card">
+                            <div style="padding-left: 100px;text-align: initial;padding-top:7px;font-size:15px">
+                                <a style="font-weight: bolder;color: black;">Smart Choices:</a> Keep track of your health journey and make informed decisions.
+                            </div>
+                            <div>
+                                <img src="images/choice.png" style="width: 62px; object-fit: cover; top: -60px; position: relative;right:112px">             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a ng-if="abhaCCInfobackbutton" class="abha_back_button button-enter-left" ng-click="abhaCCinfobackbutton()">
+        <span class="global_previous_page_text">Back</span>
+    </a>
+</div>
+<div data-ng-show="abhaCareContextPopupEnable">
+    <div class="abha_header">
+        <img src="images/abha_png.png" class="abha_care_context_img">
+        <p class="abha_care_context_heading">Select your data to link your ABHA account</p>
+    </div>
+
+    <div data-ng-if="UserInfo['abha_hip_link_alert_last_date'] != undefined" style="float: right;position: relative;left: -27px;top: -21px;">
+        <button style="outline: none;border: none;" data-ng-click="careContextDataShowTab('latest_DataShow')" data-ng-class="latest_DataShow ? 'historyBtnActive' : 'historyBtn'"> Latest Data </button>
+        <button style="outline: none;border: none;" data-ng-click="careContextDataShowTab('overAll_DataShow')" data-ng-class="overAll_DataShow ? 'historyBtnActive' : 'historyBtn'"> Over all Data </button>
+    </div>
+    
+    <div id="abha_care_context_scroll">
+        <!-- <div id="keyboard_lastcheckin_lastcheck_title">
+            <span id="keyboard_lastcheckin_lastcheck_title_text" style="color: #353535; font-size: 16px;">{{interfaceLabels[your_vital_history]}}</span>
+        </div> -->
+        <div id="abha_careContext_data_header">
+            <div id="abha_care_context_count_box" class="abha_care_context_count_box" > <span id="abha_care_context_count_num" class="abha_care_context_count_num" ng-bind-html="abhaCareContext.shareVitalArray.length" style="font-size: 17px;"></span> </div>
+            <div style="top: -7px;position: relative;display: inline;font-size: 17px;left: 155px;font-family: 'LatoBold';">Data Selected</div>
+            <div id="abhaSelectAllVitalText">{{abhaCareContext.selectDeselectText}}</div>
+            <input type="checkbox" id="abhaSelectAllVital" style="width: 20px;height: 19px;top: -4px;" ng-click="abhaCareContext.ShareAllVitalData()">
+        </div>
+        <div data-ng-repeat="checkinData in res">
+            <button class="accordion" ng-click="accordionClickVital($index)"> <span>
+            <span data-ng-repeat="param in checkinData.vitalParam">
+            {{interfaceLabels[param]}}<span ng-show="$index != (checkinData.vitalParam.length-1)">,</span> </span> {{' '+interfaceLabels[test_taken_on_title]+' '}} {{checkinData.checkInDate}} <span class="abhaCcAccordionIcon"><img id="vital_accordion_image_{{$index}}" src="images/bmi_scale_arrow20120509_WIDE.png"/></span> </span>
+            </button>
+            <div class = "abhaCheckBox active_checkmark" style="top: 19px;position: absolute;right: 20px;" ng-click = abhaCareContext.ShareSelectedVitalData()>
+                <input type="checkbox" ng-model="checkinData.isSelected">
+            </div>
+            <div class="panel" id="panel_{{$index}}">
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.dengue_IgG || checkinData.carecontext_detail.dengue_IgM">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/dengue-test-off.png" />Dengue Parameters</th>
+                    </tr>
+                    <tr>
+                        <th>Dengue IgG</th>
+                        <td> N/A </td>
+                        <td class="{{dengueIgGClassName}}" style="text-transform: capitalize;">{{checkinData.carecontext_detail.dengue_IgG}}</td>
+                    </tr>
+                    <tr>
+                        <th>Dengue IgM</th>
+                        <td> N/A </td>
+                        <td class="{{dengueIgMClassName}}" style="text-transform: capitalize;">{{checkinData.carecontext_detail.dengue_IgM}}</td>
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.malaria_p_f || checkinData.carecontext_detail.malaria_p_v">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/malaria-test-off.png" />Malaria Parameters</th>
+                    </tr>
+                    <tr>
+                        <th>Malaria PF</th>
+                        <td> N/A </td>
+                        <td class="{{malariaPfClassName}}" style="text-transform: capitalize;">{{checkinData.carecontext_detail.malaria_p_f}}</td>
+                    </tr>
+                    <tr>
+                        <th>Malaria PV</th>
+                        <td> N/A </td>
+                        <td class="{{malariaPvClassName}}" style="text-transform: capitalize;">{{checkinData.carecontext_detail.malaria_p_v}}</td>
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.hiv_I || checkinData.carecontext_detail.hiv_II">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/hiv-off.png" />HIV Parameters</th>
+                    </tr>
+                    <tr>
+                        <th>HIV I</th>
+                        <td> N/A </td>
+                        <td class="{{hivIClassName}}" style="text-transform: capitalize;">{{checkinData.carecontext_detail.hiv_I}}</td>
+                    </tr>
+                    <tr>
+                        <th>HIV II</th>
+                        <td> N/A </td>
+                        <td class="{{hivIIClassName}}" style="text-transform: capitalize;">{{checkinData.carecontext_detail.hiv_II}}</td>
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.hcv">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/hcv-test-off.png" />HCV Parameter</th>
+                    </tr>
+                    <tr>
+                        <th>HCV</th>
+                        <td> N/A </td>
+                        <td class="{{hcvStatusClassName}}" style="text-transform: capitalize;">{{hcvStatus}}</td>
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.pregnancy">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/pregnant-test-off.png" />Pregnancy Parameter</th>
+                    </tr>
+                    <tr>
+                        <th>Pregnancy</th>
+                        <td> N/A </td>
+                        <td class="{{pregStatusClassName}}" style="text-transform: capitalize;">{{pregStatus}}</td>
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.troponin">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/troponin-test-off.png" />Troponin Parameter</th>
+                    </tr>
+                    <tr>
+                        <th>Troponin</th>
+                        <td> N/A </td>
+                        <td class="{{tropStatusClassName}}" style="text-transform: capitalize;">{{tropStatus}}</td>
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.syphilis">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/syphilis-test-off.png" />Syphilis Parameter</th>
+                    </tr>
+                    <tr>
+                        <th>Syphilis</th>
+                        <td> N/A </td>
+                        <td class="{{syphStatusClassName}}" style="text-transform: capitalize;">{{syphStatus}}</td>
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.glucose_random_class || checkinData.carecontext_detail.glucose_fasting_class || checkinData.carecontext_detail.glucose_prandial_class">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/sugar-blood-level-off.png" />Glucose Parameter</th>
+                    </tr>
+                    <tr>
+                        <th>{{glcResultText}}</th>
+                        <td>{{glcResult}} mg/dL</td>
+                        <td class="{{glcStatusClassName}}" style="text-transform: capitalize;">{{glcStatus}}</td>
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.heamoglobin_class">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/heamo-test-off.png" />Heamoglobin Parameter</th>
+                    </tr>
+                    <tr>
+                        <th>Heamoglobin</th>
+                        <td>{{checkinData.carecontext_detail.heamoglobin}} mg/dL</td>
+                        <td class="{{heamoStatusClassName}}" style="text-transform: capitalize;">{{heamoStatus}}</td>
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.lipid_profile_tc_class">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/lipid-test-off.png" />Lipid Profile</th>
+                    </tr>
+                    <tr>
+                        <th>Total Cholesterol</th>
+                        <td>{{checkinData.carecontext_detail.lipid_profile_tc}} mg/dL</td>
+                        <td class="{{lipTcStatusClassName}}" style="text-transform: capitalize;">{{lipTcStatus}}</td>
+                    </tr>
+                    <tr>
+                        <th>HDL</th>
+                        <td>{{checkinData.carecontext_detail.lipid_profile_hg}} mg/dL</td>
+                        <td class="{{lipHgStatusClassName}}" style="text-transform: capitalize;">{{lipHgStatus}}</td>
+                    </tr>
+                    <tr>
+                        <th>Triglycerides</th>
+                        <td>{{checkinData.carecontext_detail.lipid_profile_tg}} mg/dL</td>
+                        <td class="{{lipTgStatusClassName}}" style="text-transform: capitalize;">{{lipTgStatus}}</td>
+                    </tr>
+                    <tr>
+                        <th>LDL</th>
+                        <td>{{checkinData.carecontext_detail.lipid_profile_ldl}} mg/dL</td>
+                        <td class="{{lipLdlStatusClassName}}" style="text-transform: capitalize;">{{lipLdlStatus}}</td>
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.urine_leukocytes">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/invasive/urine-test-off.png" />Urine Parameters</th>
+                    </tr>
+                    <tr>
+                        <th>Leukocytes</th>
+                        <td>{{checkinData.carecontext_detail.urine_leukocytes}}  Leu/&mu;L</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th>Nitrite</th>
+                        <td>{{checkinData.carecontext_detail.urine_nitrite}}</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th>Urobilinogen</th>
+                        <td>{{checkinData.carecontext_detail.urine_urobilinogen}} mg/dL</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th>Protein</th>
+                        <td>{{checkinData.carecontext_detail.urine_protein}} mg/dL</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th>pH</th>
+                        <td>{{checkinData.carecontext_detail.urine_ph}} mg/dL</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th>Blood</th>
+                        <td>{{checkinData.carecontext_detail.urine_blood}} Ery/&mu;L</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th>Specific Gravity</th>
+                        <td>{{checkinData.carecontext_detail.urine_specific_gravity}}</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th>Ketone</th>
+                        <td>{{checkinData.carecontext_detail.urine_ketone}} mg/dL</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th>Bilirubin</th>
+                        <td>{{checkinData.carecontext_detail.urine_bilirubin}} mg/dL</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th>Glucose</th>
+                        <td>{{checkinData.carecontext_detail.urine_glucose}} mg/dL</td>
+                        <td>N/A</td>
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.BpClass">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/Icons-32.png" />{{interfaceLabels[blood_pressure_title]}}</th>
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[blood_pressure_sub_title]}}</th>
+                        <td>{{checkinData.carecontext_detail.Systolic}} / {{checkinData.carecontext_detail.Diastolic}} mmHg</td>
+                        <!-- <td class="{{bpStatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[bp_status_info]}}</td> -->
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.BpClass">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/Icons-33.png" />{{interfaceLabels[pulse_title]}}</th>
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[pulse_sub_title]}}</th>
+                        <td>{{checkinData.carecontext_detail.PulseBpm}} bpm</td>
+                        <!-- <td class="{{checkinData.carecontext_detail.pulseStatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[checkinData.carecontext_detail.pulse_status_info]}}</td> -->
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.SpO2Class">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/spo2/Icons-35.png" />{{interfaceLabels[spo2_title]}}<sub>2</sub></th>
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[spo2_sub_title]}}</th>
+                        <td>{{checkinData.carecontext_detail.SpO2}} %</td>
+                        <!-- <td class="{{spo2StatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[spo2_status_info]}}</td> -->
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.Temperature">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/Icons-34.png" />{{interfaceLabels[temperature_title]}}</th>
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[temperature_sub_title]}}</th>
+                        <td>{{checkinData.carecontext_detail.Temperature}} &#176;F</td>
+                        <!-- <td class="{{tempStatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[temperature_status_info]}}</td> -->
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.body_fat_mass">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/Icons-29.png" />{{interfaceLabels[body_fat_title]}}</th>
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[body_fat_sub_title_1]}}</th>
+                        <td>{{checkinData.carecontext_detail.body_fat_mass | number:2}} kg</td>
+                        <!-- <td ng-class="{'low_color' : vitalHistorybodyFatMassStatus == 'Low' , 'normal_color' : vitalHistorybodyFatMassStatus == 'Normal', 'acceptable_color' : vitalHistorybodyFatMassStatus == 'Acceptable' , 'high_color' : vitalHistorybodyFatMassStatus == 'High'}">{{interfaceLabels[body_fat_mass_status_info]}}</td> -->
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[body_fat_sub_title_2]}}</th>
+                        <td>{{checkinData.carecontext_detail.percent_body_fat | number:2}} %</td>
+                        <!-- <td ng-class="{'low_color' : vitalHistorypercentBodyFatStatus == 'Low' , 'acceptable_color' : vitalHistorypercentBodyFatStatus == 'Acceptable', 'normal_color' : vitalHistorypercentBodyFatStatus == 'Normal', 'high_color' : vitalHistorypercentBodyFatStatus == 'High'}">{{interfaceLabels[percent_body_fat_status_info]}}</td> -->
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[body_fat_sub_title_3]}}</th>
+                        <td>{{checkinData.carecontext_detail.skeletal_muscle_mass | number:2}} kg</td>
+                        <!-- <td ng-class="{'low_color' : vitalHistoryskeletalMuscleMassStatus == 'Low' , 'normal_color' : vitalHistoryskeletalMuscleMassStatus == 'Normal'}">{{interfaceLabels[skeletal_muscle_mass_status_info]}}</td> -->
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[body_fat_sub_title_4]}}</th>
+                        <td>{{checkinData.carecontext_detail.body_cell_mass | number:2}} kg</td>
+                        <!-- <td ng-class="{'low_color' : vitalHistorybodyCellMassStatus == 'Low' , 'normal_color' : vitalHistorybodyCellMassStatus == 'Normal'}">{{interfaceLabels[body_cell_mass_status_info]}}</td> -->
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[body_fat_sub_title_5]}}</th>
+                        <td>{{checkinData.carecontext_detail.visceral_fat | number:2}} kg</td>
+                        <!-- <td ng-class="{'normal_color' : vitalHistoryvisceralFatStatus == 'Normal' , 'acceptable_color' : vitalHistoryvisceralFatStatus == 'Acceptable' , 'high_color' : vitalHistoryvisceralFatStatus == 'High'}">{{interfaceLabels[visceral_fat_status_info]}}</td> -->
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[body_fat_sub_title_6]}}</th>
+                        <td>{{checkinData.carecontext_detail.bone_mineral_content | number:2}} kg</td>
+                        <!-- <td ng-class="{'low_color' : vitalHistoryboneMineralContentStatus == 'Low' , 'normal_color' : vitalHistoryboneMineralContentStatus == 'Normal'}">{{interfaceLabels[bone_mineral_content_status_info]}}</td> -->
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[body_fat_sub_title_7]}}</th>
+                        <td>{{checkinData.carecontext_detail.protien | number:2}} kg</td>
+                        <!-- <td ng-class="{'low_color' : vitalHistoryprotienStatus == 'Low' , 'normal_color' : vitalHistoryprotienStatus == 'Normal'}">{{interfaceLabels[protien_status_info]}}</td> -->
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[body_fat_sub_title_8]}}</th>
+                        <td>{{checkinData.carecontext_detail.mineral | number:2}} kg</td>
+                        <!-- <td ng-class="{'low_color' : vitalHistorymineralStatus == 'Low' , 'normal_color' : vitalHistorymineralStatus == 'Normal'}">{{interfaceLabels[mineral_status_info]}}</td> -->
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[body_fat_sub_title_9]}}</th>
+                        <td>{{checkinData.carecontext_detail.intra_cellular_water | number:2}} Ltr</td>
+                        <!-- <td ng-class="{'low_color' : vitalHistoryintraCellularWaterStatus == 'Low' , 'normal_color' : vitalHistoryintraCellularWaterStatus == 'Normal'}">{{interfaceLabels[intra_cellular_water_status_info]}}</td> -->
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[body_fat_sub_title_10]}}</th>
+                        <td>{{checkinData.carecontext_detail.extra_cellular_water | number:2}} Ltr</td>
+                        <!-- <td ng-class="{'low_color' : vitalHistoryextraCellularWaterStatus == 'Low' , 'normal_color' : vitalHistoryextraCellularWaterStatus == 'Normal', 'high_color' : vitalHistoryextraCellularWaterStatus == 'High'}">{{interfaceLabels[extra_cellular_water_status_info]}}</td> -->
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[body_fat_sub_title_11]}}</th>
+                        <td>{{checkinData.carecontext_detail.waist_hip_ratio | number:2}} </td>
+                        <!-- <td ng-class="{'low_color' : vitalHistorywaistHipRatioStatus == 'Low' , 'normal_color' : vitalHistorywaistHipRatioStatus == 'Normal', 'high_color' : vitalHistorywaistHipRatioStatus == 'High'}">{{interfaceLabels[waist_hip_ratio_status_info]}}</td> -->
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[body_fat_sub_title_12]}}</th>
+                        <td>{{checkinData.carecontext_detail.waist_height_ratio | number:2}} </td>
+                        <!-- <td ng-class="{'low_color' : vitalHistorywaistHeightRatioStatus == 'Low' , 'normal_color' : vitalHistorywaistHeightRatioStatus == 'Normal', 'high_color' : vitalHistorywaistHeightRatioStatus == 'High'}">{{interfaceLabels[waist_height_ratio_status_info]}}</td> -->
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[body_fat_sub_title_13]}}</th>
+                        <td>{{checkinData.carecontext_detail.basal_metabolic_rate}} Kcal</td>
+                        <!-- <td>N/A</td> -->
+                        <!-- <td ng-class="{'low_color' : vitalHistorybasalMetabolicRateStatus == 'Low' , 'normal_color' : vitalHistorybasalMetabolicRateStatus == 'Normal'}">{{interfaceLabels[basal_metabolic_rate_status_info]}}</td> -->
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.ECGBpm && checkinData.carecontext_detail.ECGBpm != '0'">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/Icons-30.png" />{{interfaceLabels[ecg_title]}}</th>
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[ecg_sub_title]}}</th>
+                        <td>{{checkinData.carecontext_detail.ECGBpm}} bpm</td>
+                        <!-- <td data-ng-if="ecgadvice == ''">N/A</td> -->
+                        <!-- <td class="{{ecgStatusClassName}}" data-ng-if="ecgadvice != ''" style="text-transform: capitalize;">{{ecgadvice}}</td> -->
+                    </tr>
+                </table>
+                <table class="vitalHistoryTable" data-ng-if="checkinData.carecontext_detail.bmiClass">
+                    <tr>
+                        <th colspan="3"><img width="30px" class="vitalHistoryImage" src="images/Icons-28.png" />{{interfaceLabels[weight_bmi_title]}}</th>
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[bmi_sub_title]}}</th>
+                        <td>{{checkinData.carecontext_detail.bmi | number:2}}</td>
+                        <!-- <td class="{{bmiStatusClassName}}" style="text-transform: capitalize;">{{interfaceLabels[bmi_status_info]}}</td> -->
+                    </tr>
+                    <tr>
+                        <th>{{interfaceLabels[weight_sub_title]}}</th>
+                        <td>{{checkinData.carecontext_detail.weightKG | number : 2}} kg</td>
+                        <!-- <td>N/A</td> -->
+                    </tr>
+                </table>   
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- <input type="checkbox" id="abhaSelectAllVital" style="margin: 15px 18px; width: 30px; height: 28px; top: 285px;" ng-click="abhaCareContext.ShareAllVitalData()">
+    <div id="abhaSelectAllVital">Select All</div> -->
+    <!-- <p class="abhaTotalCount">Selected Count : {{abhaCareContext.shareVitalArray.length}}</p> -->
+
+    <div  class="abha_verify_and_continue_btn {{abhaCareContext.VerifyAndContinueActiveBtn}}" ng-click="abhaCareContext.verifyAndContinueFlow()" ><span>verify and Continue</span></div>
+</div>
+
+<div data-ng-show="loadingImg" style="top: 262px;position: fixed;left: 310px;">
+    <div style="text-align: center;">{{interfaceLabels[progress_message]}}</div>
+    <div class="abhaVitalDataLoader"></div>
+</div>
+
+<div data-ng-show="noDataFound" style="top: 262px;position: fixed;left: 310px;">
+    <div style="text-align: center;">No data to show...!</div>
+</div>

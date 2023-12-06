@@ -1,0 +1,24 @@
+<script src="machine_info.js"></script>
+
+<div id="exit_confirm_dialog" ng-hide = "ispaymentSuccesFailureContent">
+    <div ng-if="loggedIn">
+        <div id="exit_confirm_text"><span ng-bind-html="interfaceLabels[exitConfirm.ExitSureLoggedIn]"></span></div>
+        <div id="exit_confirm_confirm_btn" class="{{langClass}}" ng-click="exitConfirm.exitSession()"><span>{{interfaceLabels[exitConfirm.ExitYesLoggedIn]}}</span></div>
+    </div>
+    <div ng-if="!loggedIn">
+        <div id="exit_confirm_text"><span ng-bind-html="interfaceLabels[exitConfirm.ExitSure]"></span></div>
+        <div id="exit_confirm_confirm_btn" ng-click="exitConfirm.exitSession()"><span>{{interfaceLabels[exitConfirm.ExitYes]}}</span></div>
+    </div>
+    <div id="exit_confirm_cancel_btn" ng-click="exitConfirm.returnSession()"><span>{{interfaceLabels[exitConfirm.ExitNo]}}</span></div>
+</div>
+
+<div class="book_appointment_modal_main_container" ng-show = "ispaymentSuccesFailureContent">
+   <img src="images/auth_success20120518.png" class = "book_appointment_modal_image_container">
+    <p class = "book_appointment_modal_text_container">Your Appointment Booked Succesfully!<br><small style="padding: 10px;"><i>Please join live call with the consultant at India Health Link Website or Mobile App on time.</i></small></p> 
+    <a class="book_appointment_modal_button_exit" ng-click="exitConfirm.exitSession()">
+	    	<span>Logout & Exit</span>
+	</a>
+	<a class="book_appointment_modal_button_home" ng-click="homeButtonClick()">
+	    	<span>Go Home</span>
+	</a>
+</div>

@@ -1,0 +1,39 @@
+<div class="email_my_results_main_container">
+    <div class="email_my_results_main_title" ng-bind-html="interfaceLabels[emailResults.title]"></div>
+
+    <div class="email_my_results_sub_container" >
+	    <div class="email_my_results_sub_container_title" ng-bind-html="interfaceLabels[emailResults.neverSpamLabel]"></div>
+	    <higi-text-field field="emailResults.fields[0]" class="email_my_results_InputBoxContainer"></higi-text-field>
+	    <div class="email_my_results_loader"></div>
+	    <div class="email_my_results_error_visible" ng-show="emailResults.sendingErrorVisible" ng-bind-html="interfaceLabels[emailResults.sendEmailError]"></div>
+	    <div ng-show="normal_send_email" class="email_my_results_submit_button {{emailResults.nextBtnActive}}" ng-hide="emailResults.submitting" ng-click="emailResults.sendCheckinEmail()">
+            <span ng-bind-html="interfaceLabels[emailResults.sendLabel]"></span>
+	    </div>
+	    <div ng-show="abha_send_email" class="email_my_results_submit_button {{emailResults.nextBtnActive}}" ng-click="abha_card_send_mail()">
+	    	<span ng-bind-html="interfaceLabels[emailResults.sendLabel]"></span>
+	    </div>
+    </div>
+
+    <div class="email_my_results_account_disclaimer" ng-bind-html="interfaceLabels[emailResults.sendDisclaimer]"></div>
+    <div id = "abha_authMode_loader" class="abha_auth_mode_loader" style="top: 130px;left:381px"></div>
+
+    <a class="abha_continue_button flow_begins_button" ng-show="continuevisible" ng-click="abha_skip_continue()"
+    ng-class="{'button-enter-right' : continuevisible}" style="width: 173px;top:189px;line-height:34px">
+    <span style="font-size: 18px;padding-left: 9px;">Skip & Continue</span>
+</a>
+</div>
+
+
+
+<!-- <div id="keyboard_emailresults">
+    <div id="login_title" class="email_results_title {{langClass}}" ng-bind-html="interfaceLabels[emailResults.title]"></div>
+    <div id="login_credentials" >
+    <div id="email_results_title" ng-hide="emailResults.sendingErrorVisible" class="email_results_direction" ng-bind-html="interfaceLabels[emailResults.neverSpamLabel]"></div>
+    <div id="email_results_error" ng-show="emailResults.sendingErrorVisible" ng-bind-html="interfaceLabels[emailResults.sendEmailError]"></div>
+    <higi-text-field field="emailResults.fields[0]"></higi-text-field>
+    <div id="email_results_loading" class="keyboard_dialog_loading"></div>
+    <div id="email_results_send_btn" class="keyboard_submit_btn {{emailResults.nextBtnActive}}" ng-click="emailResults.sendCheckinEmail()"><span ng-bind-html="interfaceLabels[emailResults.sendLabel]"></span></div>
+    </div>
+        <div id="email_results_account_disclaimer" ng-bind-html="interfaceLabels[emailResults.sendDisclaimer]"></div>
+
+</div> -->

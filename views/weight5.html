@@ -1,0 +1,396 @@
+
+<!-- Full body composition UI template start -->
+<div class="BMCHealth_results_main_container" ng-show = "fullBodyBMCTest">
+   <div class="BMCHealth_results_header_container">
+        <img class="BMCHealth_results_header_image" src="./images/Icons-29.png">
+        <p class="BMCHealth_results_header_text">{{interfaceLabels[slideTitle]}} <small class="BMCHealth_results_small_text">{{interfaceLabels[slideSubTitle]}}</small></p> 
+
+        <div class= "global_info_button" ng-mousedown="showInfoboxWeightBodyMassComp()">
+            <img class= "global_info_button_icon" src="images/icons8-info-32.png">
+            <span class= "global_info_button_text">{{interfaceLabels[bmcInformation]}}</span>
+        </div>
+    </div> 
+
+    
+    <a class="button_anchor1 parent_active">
+        <button id= "fatAnls" class="BMCHealth_results_tablinks BMCHealth_tab1 childs_active" ng-click="openTabs($event, 'fatAnalysis')">{{interfaceLabels[bodyFatAnanlysis]}}</button>
+    </a>
+        
+    <a class="button_anchor2">
+        <button id= "massAnls" class="BMCHealth_results_tablinks BMCHealth_tab2" ng-click="openTabs($event, 'massAnalysis')">{{interfaceLabels[BoneMassAnalysis]}}</button>
+    </a>
+
+    <a class="button_anchor3">
+        <button id= "waterAnls" class="BMCHealth_results_tablinks BMCHealth_tab3" ng-click="openTabs($event, 'waterAnalysis')">{{interfaceLabels[TotalBodyWater]}}</button>
+    </a>
+        
+    <a class="button_anchor4">
+      <button id= "mislAnls" class="BMCHealth_results_tablinks BMCHealth_tab4" ng-click="openTabs($event, 'miscellaneous')">{{interfaceLabels[Miscellaneous]}} </button> 
+    </a>  
+    
+
+    <div id="fatAnalysis" class="BMCHealth_results_tabcontent first_tab_content" style="display: block;">
+        <div class="BMCHealth_results_fatAnalysis_title_container">
+            <p class="BMCHealth_results_fatAnalysis_parameter_title">{{interfaceLabels[bmcInformation]}}</p>
+            <p class="BMCHealth_results_fatAnalysis_yourscore_title">{{interfaceLabels[bmcInformation]}}</p>
+            <p class="BMCHealth_results_fatAnalysis_status_title">{{interfaceLabels[bmcInformation]}}</p>
+            <p class="BMCHealth_results_fatAnalysis_nrg_title">{{interfaceLabels[bmcNormalrange]}}</p>
+        </div>
+
+        <div class="BMCHealth_results_fatAnalysis_datas_container datas_container_1">
+            <p class="BMCHealth_results_fatAnalysis_datas_title">BFM</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_sub_title">Body fat mass</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_value" style="color: #FC3030">20.79 <span class="BMCHealth_results_fatAnalysis_datas_units"> kg</span></p>
+            <p class="BMCHealth_results_fatAnalysis_datas_live_status">Very high</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_Normal_range">6.000 ~ 13.000</p>
+        </div>
+
+        <div class="BMCHealth_results_fatAnalysis_datas_container datas_container_2">
+            <p class="BMCHealth_results_fatAnalysis_datas_title">PBF</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_sub_title">Percent body fat</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_value" style="color: #FC3030">30.79 <span class="BMCHealth_results_fatAnalysis_datas_units"> %</span> </p>
+            <p class="BMCHealth_results_fatAnalysis_datas_live_status">Very high</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_Normal_range">10.000 ~ 20.000</p>
+        </div>
+
+        <div class="BMCHealth_results_fatAnalysis_datas_container datas_container_3">
+            <p class="BMCHealth_results_fatAnalysis_datas_title">SMM</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_sub_title">Skeletal muscle mass</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_value datas_value3" style="color: #87C427">27.79 <span class="BMCHealth_results_fatAnalysis_datas_units"> kg</span></p>
+            <p class="BMCHealth_results_fatAnalysis_datas_live_status">Normal</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_Normal_range">26.000 ~ 32.000</p>
+        </div>
+
+        <div class="BMCHealth_results_fatAnalysis_datas_container datas_container_4">
+            <p class="BMCHealth_results_fatAnalysis_datas_title">BCM</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_sub_title">Body cell mass</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_value" style="color: #87C427">22.79 <span class="BMCHealth_results_fatAnalysis_datas_units"> kg</span></p>
+            <p class="BMCHealth_results_fatAnalysis_datas_live_status">Normal</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_Normal_range">20.000 ~ 25.000</p>
+        </div>
+
+        <div class="BMCHealth_results_fatAnalysis_datas_container datas_container_5">
+            <p class="BMCHealth_results_fatAnalysis_datas_title">VF</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_sub_title">Visceral fat</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_value" style="color: #87C427">10.79 <span class="BMCHealth_results_fatAnalysis_datas_units"> cm</span></p>
+            <p class="BMCHealth_results_fatAnalysis_datas_live_status">Normal</p>
+            <p class="BMCHealth_results_fatAnalysis_datas_Normal_range">01.000 ~ 12.000</p>
+        </div>
+    </div>
+
+    <div id="massAnalysis" class="BMCHealth_results_tabcontent">
+        <div class="BMCHealth_results_fatAnalysis_title_container">
+            <p class="BMCHealth_results_fatAnalysis_parameter_title">{{interfaceLabels[bmcInformation]}}</p>
+            <p class="BMCHealth_results_fatAnalysis_yourscore_title">{{interfaceLabels[bmcInformation]}}</p>
+            <p class="BMCHealth_results_fatAnalysis_status_title">{{interfaceLabels[bmcInformation]}}</p>
+            <p class="BMCHealth_results_fatAnalysis_nrg_title">{{interfaceLabels[bmcNormalrange]}}</p>
+        </div>
+
+        <div class="BMCHealth_results_massAnalysis_datas_container ma_datas_container_1">
+            <p class="BMCHealth_results_massAnalysis_datas_title">BMC</p>
+            <p class="BMCHealth_results_massAnalysis_datas_sub_title">Bone Mineral Content</p>
+            <p class="BMCHealth_results_massAnalysis_datas_value" style="color: #FC3030;">1.79
+                <small class="BMCHealth_results_massAnalysis_datas_units">kg</small>
+            </p>
+            <p class="BMCHealth_results_massAnalysis_datas_live_status">LOW</p>
+            <p class="BMCHealth_results_massAnalysis_datas_Normal_range">2.000 ~ 3.700</p>
+        </div>
+
+        <div class="BMCHealth_results_massAnalysis_datas_container ma_datas_container_2">
+            <p class="BMCHealth_results_massAnalysis_datas_title">Protein</p>
+            <p class="BMCHealth_results_massAnalysis_datas_sub_title">Overall protein content</p>
+            <p class="BMCHealth_results_massAnalysis_datas_value" style="color: #FC3030;">6.79
+                <small class="BMCHealth_results_massAnalysis_datas_units">kg</small>
+            </p>
+            <p class="BMCHealth_results_massAnalysis_datas_live_status">LOW</p>
+            <p class="BMCHealth_results_massAnalysis_datas_Normal_range">7.770 ~ 20.000</p>
+        </div>
+
+        <div class="BMCHealth_results_massAnalysis_datas_container ma_datas_container_3">
+            <p class="BMCHealth_results_massAnalysis_datas_title">Mineral</p>
+            <p class="BMCHealth_results_massAnalysis_datas_sub_title">Overall mineral content</p>
+            <p class="BMCHealth_results_massAnalysis_datas_value" style="color: #87C427;">3.79
+                <small class="BMCHealth_results_massAnalysis_datas_units">kg</small>
+            </p>
+            <p class="BMCHealth_results_massAnalysis_datas_live_status">Normal</p>
+            <p class="BMCHealth_results_massAnalysis_datas_Normal_range">2.500 ~ 4.000</p>
+        </div>
+
+    </div>
+
+    <div id="waterAnalysis" class="BMCHealth_results_tabcontent">
+         <div class="BMCHealth_results_fatAnalysis_title_container">
+            <p class="BMCHealth_results_fatAnalysis_parameter_title">{{interfaceLabels[bmcInformation]}}</p>
+            <p class="BMCHealth_results_fatAnalysis_yourscore_title">{{interfaceLabels[bmcInformation]}}</p>
+            <p class="BMCHealth_results_fatAnalysis_status_title">{{interfaceLabels[bmcInformation]}}</p>
+            <p class="BMCHealth_results_fatAnalysis_nrg_title">{{interfaceLabels[bmcNormalrange]}}</p>
+        </div>
+
+        <div class="BMCHealth_results_waterAnalysis_datas_container wa_datas_container_1">
+            <p class="BMCHealth_results_waterAnalysis_datas_title">ICW</p>
+            <p class="BMCHealth_results_waterAnalysis_datas_sub_title">Intra cellular water</p>
+            <p class="BMCHealth_results_waterAnalysis_datas_value" style="color: #87C427;">24.79
+                <small class="BMCHealth_results_waterAnalysis_datas_units">Ltr</small>
+            </p>
+            <p class="BMCHealth_results_waterAnalysis_datas_live_status">Normal</p>
+            <p class="BMCHealth_results_waterAnalysis_datas_Normal_range">22.000 ~ 27.000</p>
+        </div>
+
+        <div class="BMCHealth_results_waterAnalysis_datas_container wa_datas_container_2">
+            <p class="BMCHealth_results_waterAnalysis_datas_title">ECW</p>
+            <p class="BMCHealth_results_waterAnalysis_datas_sub_title">Extra cellular water</p>
+            <p class="BMCHealth_results_waterAnalysis_datas_value" style="color: #87C427;">15.79
+                <small class="BMCHealth_results_waterAnalysis_datas_units">Ltr</small>
+            </p>
+            <p class="BMCHealth_results_waterAnalysis_datas_live_status">Normal</p>
+            <p class="BMCHealth_results_waterAnalysis_datas_Normal_range">14.000 ~ 18.500</p>
+        </div>
+    </div>
+
+    <div id="miscellaneous" class="BMCHealth_results_tabcontent">
+         <div class="BMCHealth_results_fatAnalysis_title_container">
+            <p class="BMCHealth_results_fatAnalysis_parameter_title">{{interfaceLabels[bmcInformation]}}</p>
+            <p class="BMCHealth_results_fatAnalysis_yourscore_title">{{interfaceLabels[bmcInformation]}}</p>
+            <p class="BMCHealth_results_fatAnalysis_status_title">{{interfaceLabels[bmcInformation]}}</p>
+            <p class="BMCHealth_results_fatAnalysis_nrg_title">{{interfaceLabels[bmcNormalrange]}}</p>
+        </div>
+
+        <div class="BMCHealth_results_miscellaneous_datas_container mi_datas_container_1">
+            <p class="BMCHealth_results_miscellaneous_datas_title">Waist/hip</p>
+            <p class="BMCHealth_results_miscellaneous_datas_sub_title">Waist to hip ratio</p>
+            <p class="BMCHealth_results_miscellaneous_datas_value" style="color: #FC3030">0.95 <span class="BMCHealth_results_fatAnalysis_datas_units"></span></p>
+            <p class="BMCHealth_results_miscellaneous_datas_live_status">Very high</p>
+            <p class="BMCHealth_results_miscellaneous_datas_Normal_range">0.800 ~ 0.900</p>
+        </div>
+
+        <div class="BMCHealth_results_miscellaneous_datas_container mi_datas_container_2">
+            <p class="BMCHealth_results_miscellaneous_datas_title">Waist/height</p>
+            <p class="BMCHealth_results_miscellaneous_datas_sub_title">Waist to height ratio</p>
+            <p class="BMCHealth_results_miscellaneous_datas_value" style="color: #FC3030">0.98 <span class="BMCHealth_results_fatAnalysis_datas_units"></span></p>
+            <p class="BMCHealth_results_miscellaneous_datas_live_status">Very high</p>
+            <p class="BMCHealth_results_miscellaneous_datas_Normal_range">0.800 ~ 0.95</p>
+        </div>
+
+        <div class="BMCHealth_results_miscellaneous_datas_container mi_datas_container_3">
+            <p class="BMCHealth_results_miscellaneous_datas_title">BMR</p>
+            <p class="BMCHealth_results_miscellaneous_datas_sub_title">Basal metabolic rate</p>
+            <p class="BMCHealth_results_miscellaneous_datas_value" style="color: #87C427">1878 <span class="BMCHealth_results_fatAnalysis_datas_units"> kcal </span></p>
+            <p class="BMCHealth_results_miscellaneous_datas_live_status">Normal</p>
+            <p class="BMCHealth_results_miscellaneous_datas_Normal_range">10.000 ~ 20.000</p>
+        </div>
+        
+        <div  class="BMCHealth_results_miscellaneous_results_container mi_datas_container_4">
+            <p class="BMCHealth_results_miscellaneous_over_alls_status_titles">Body Mass</p>
+            <p class="BMCHealth_results_miscellaneous_over_alls_status_sub_titles">Calculation</p>
+            <p class="BMCHealth_results_miscellaneous_over_alls_status_small_titles">Overall Status</p>
+            <p class="BMCHealth_results_miscellaneous_over_alls_status_status_value">Normal</p>
+            <img  class="BMCHealth_results_miscellaneous_over_alls_status_status_icons" src="./images/vital_status/vital_status_normal.png">
+        </div>
+    </div>
+</div>
+<!-- Full body composition UI template end -->
+
+<!-- Existing BMC template start -->
+<div class="BMCHealth_results_main_container" ng-hide = "fullBodyBMCTest">
+   <div class="BMCHealth_results_header_container">
+        <img class="BMCHealth_results_header_image" src="./images/Icons-29.png">
+        <p class="BMCHealth_results_header_text">{{interfaceLabels[slideTitle]}} <small class="BMCHealth_results_small_text">{{interfaceLabels[slideSubTitle]}}</small></p> 
+
+        <div class= "global_info_button" ng-mousedown="showInfoboxWeightBodyMassComp()">
+            <img class= "global_info_button_icon" src="images/icons8-info-32.png">
+            <span class= "global_info_button_text">{{interfaceLabels[bmcInformation]}}</span>
+        </div>
+    </div> 
+
+    <div class="existing_bmc_results_sub_container">
+        <div class="existing_bmc_results_title_container">
+            <p class="existing_bmc_results_parameter_title"> {{interfaceLabels[bmcParameter]}} </p>
+            <p class="existing_bmc_results_yourscore_title"> {{interfaceLabels[bmcYourscore]}} </p>
+        </div>
+
+        <div class="existing_bmc_results_param1_container">
+            <p class="existing_bmc_results_param1_title"> {{interfaceLabels[weightTitle]}}</p>
+            <p class="existing_bmc_results_parm1_sub_title">{{interfaceLabels[kgUnit]}}</p>
+            <p class="existing_bmc_results_parm1_value"> {{weightLbs}}
+            </p>
+        </div>
+
+        <div class="existing_bmc_results_param2_container">
+            <p class="existing_bmc_results_param2_title"> {{interfaceLabels[weightBodyFat]}}</p>
+            <p class="existing_bmc_results_parm2_sub_title">in %</p>
+            <p class="existing_bmc_results_parm2_value"> {{bodyFat}} </p>            
+        </div>
+
+        <div class="existing_bmc_results_param3_container">
+            <p class="existing_bmc_results_param3_title"> {{interfaceLabels[leanMass]}}</p>
+            <p class="existing_bmc_results_parm3_sub_title">in %</p>
+            <p class="existing_bmc_results_parm3_value">  {{leanMassPercent}} </p>
+        </div>
+
+        <div class="existing_bmc_results_over_all_status_container" ng-class="{'existing_bmc_bg_color1' : weightBodyFatRisk == 'healthy' , 'existing_bmc_bg_color2' : weightBodyFatRisk == 'acceptable' , 'existing_bmc_bg_color3' : weightBodyFatRisk == 'at-risk'}" >
+            <p class="existing_bmc_results_over_all_status_titles">{{interfaceLabels[bodyComp]}}</p>
+            <p class="existing_bmc_results_overall_sub_title">{{interfaceLabels[bmcOverallStatus]}}</p>   
+
+            <img  ng-if="weightBodyFatRisk == 'healthy'" class="existing_bmc_overall_ststus_icon" src="./images/vital_status/vital_status_normal.png">
+            <img  ng-if="weightBodyFatRisk == 'at-risk'" class="existing_bmc_overall_ststus_icon" src="./images/vital_status/vital_status_risk.png">
+            <img  ng-if="weightBodyFatRisk == 'acceptable'" class="existing_bmc_overall_ststus_icon" src="./images/vital_status/vital_status_low.png">
+            <p class="existing_bmc_overall_status_txt" > {{interfaceLabels[bmiRiskStatus]}} </p>
+        </div>
+
+        <div class="existing_bmc_results_status_bar_container">
+            <div id="existing_bmc_results_bodyfat_scale">
+                <div class="existing_bmc_results_status_bar_heading">{{interfaceLabels[weightBodyFatScale]}}</div>
+                <div id="existing_bmc_bodyfat_scale" class="{{femaleScaleClass}}">
+                    <div id="existing_bmc_01" class="existing_bmc_scale_text">
+                        <span higi_resource_html="global.underweight">{{interfaceLabels[weightBodyFatHealthy]}}</span>
+                        <div class="existing_bmc_arrow-up"><i class="fa fa-sort-desc" ng-if="weightBodyFatRisk == 'healthy'" ></i></div>
+                    </div>
+                    <div id="existing_bmc_02" class="existing_bmc_scale_text">
+                        <span>{{interfaceLabels[weightBodyFatAcceptable]}}</span>
+
+                        <div class="existing_bmc_arrow-up"><i class="fa fa-sort-desc"  ng-if="weightBodyFatRisk == 'acceptable'"></i></div>
+                    </div>
+                    <div id="existing_bmc_03" class="existing_bmc_scale_text">
+                        <span >{{interfaceLabels[weightBodyFatAtRisk]}}</span>
+
+                        <div class="existing_bmc_arrow-up"><i class="fa fa-sort-desc"  ng-if="weightBodyFatRisk == 'at-risk'"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+</div>
+<!-- Existing BMC template end -->
+
+
+<div id="hardStopMessage" ng-show="hardStop">
+    <div ng-bind-html="interfaceLabels[hardStopMessage]" class="message"></div>
+    <div ng-bind-html="interfaceLabels[hardStopHeightRange]" class="height-range"></div>
+    <div ng-bind-html="interfaceLabels[hardStopWeightRange]" class="weight-range"></div>
+
+    <div ng-bind-html="interfaceLabels[hardStopHeightBottomFemale]" class="height-range-bottom" ng-if="!isMale"></div>
+    <div ng-bind-html="interfaceLabels[hardStopHeightTopFemale]" class="height-range-top"  ng-if="!isMale"></div>
+    <div ng-bind-html="interfaceLabels[hardStopWeightBottomFemale] + '' + interfaceLabels[weightPoundAbbv]" class="weight-range-bottom" ng-if="!isMale"></div>
+    <div ng-bind-html="interfaceLabels[hardStopWeightTopFemale]  + '' + interfaceLabels[weightPoundAbbv]" class="weight-range-top" ng-if="!isMale"></div>
+
+    <div ng-bind-html="interfaceLabels[hardStopHeightBottomMale]" class="height-range-bottom"  ng-if="isMale"></div>
+    <div ng-bind-html="interfaceLabels[hardStopHeightTopMale]" class="height-range-top" ng-if="isMale"></div>
+    <div ng-bind-html="interfaceLabels[hardStopWeightBottomMale]  + '' + interfaceLabels[weightPoundAbbv]" class="weight-range-bottom" ng-if="isMale"></div>
+    <div ng-bind-html="interfaceLabels[hardStopWeightTopMale]  + '' + interfaceLabels[weightPoundAbbv]" class="weight-range-top" ng-if="isMale"></div>
+</div>
+
+<div class="global_redo_button" ng-show="redoVisible" ng-click="redoBmc()">
+    <div class="global_redo_outer_line">
+        <img src="images/Icons-27.png" class="global_redo_button_icon">
+        <small class="global_redo_button_small_text">{{interfaceLabels[checkwbmcAgain]}}</small>
+    </div>
+</div>
+
+<a class= "global_continue_next_button" ng-class = "{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[nextSlideText]}}</span>
+</a>
+
+<a class="global_previous_page_button" ng-class = "{'button-enter-left' : prevIsVisible, 'button-exit-left' : !prevIsVisible}" ng-show="prevIsVisible" ng-click="backButtonOut()">
+        <span class="global_previous_page_text">{{interfaceLabels[prevSlideText]}}</span>
+</a>
+
+
+
+<!-- Old UI template -->
+<!-- <div id="slide_title" class="{{langClass}}">{{interfaceLabels[slideTitle]}}</div>
+<div id="slide_subtitle">{{interfaceLabels[slideSubTitle]}}</div>
+
+<div id="weight05_pane" class="{{langClass}}">
+    <div id="weight05_results" class="{{hardStopShift}}">
+        <div id="weight05_results_weight">
+           <div class="result_title">{{interfaceLabels[weightTitle]}}</div> 
+           
+            <div class="result testFadeIn" ng-show="showWeight">
+                <span class="value">{{weightLbs}}</span>
+                <span class="unit">{{interfaceLabels[weightPoundAbbv]}}</span>
+            </div>
+        </div>
+        <div id="weight05_results_bodyfat">
+
+            <div class="result_title">{{interfaceLabels[weightBodyFat]}}</div>
+            <div class="result testFadeIn" ng-show="showBodyFat">
+                <span class="value">{{bodyFat}}</span>
+                <span class="unit">{{interfaceLabels[weightBodyFatPercent]}} </span>
+                       
+            </div>
+        </div>
+        <div id="weight05_results_leanmass">
+            <div class="info_btn" ng-mousedown="showInfoboxWeightBodyMassComp()"></div>
+            <div class="result_title">{{interfaceLabels[leanMass]}}</div>
+            <div class="result testFadeIn" ng-show="showLeanMass">
+                <span class="value">{{leanMassPercent}}</span>
+                <span class="unit">{{interfaceLabels[weightBodyFatPercent]}}</span>
+                
+            </div>
+        </div>
+        <div id="weight05_results_bodychart">
+
+            <div class="result_title">{{interfaceLabels[weightBodyIconTitle]}}</div>
+            <div class="character-container testFadeIn" ng-show="showBmcCharacter">
+                <div class="character"><img src="images/Higi_character_Higi-Guy_Red.png" class="character-back" ng-if="isMale"/></div>
+                <div class="character" style="height:{{charHeight}}px"><img src="images/Higi_character_Higi-Guy_Green.png" class="character-front"  ng-if="isMale"/></div>
+                <div class="character"><img src="images/Higi_character_Higi-Gal_Red.png" class="character-back"  ng-if="!isMale"/></div>
+                <div class="character" style="height:{{charHeight}}px"><img src="images/Higi_character_Higi-Gal_Green.png" class="character-front"  ng-if="!isMale"/></div>
+            </div>
+            <div class="leanmass-above testFadeIn" ng-show="showBmcCharacter">
+                <i class="fa fa-square lean-square"></i> {{interfaceLabels[leanMass]}} ({{leanMassPercent}}{{interfaceLabels[weightBodyFatPercent]}})
+            </div>
+            <div class="fatmass-below testFadeIn" ng-show="showBmcCharacter">
+                <i class="fa fa-square fat-square"></i> {{interfaceLabels[weightBodyFat]}} ({{bodyFat}}{{interfaceLabels[weightBodyFatPercent]}})
+            </div>
+        </div>
+        
+        <div id="weight05_results_bodyfat_scale">
+            <div class="result_title">{{interfaceLabels[weightBodyFatScale]}}</div>
+            <div id="weight05_bodyfat_scale" class="{{femaleScaleClass}} {{weightBodyFatRisk}}">
+                <div id="bmc_01" class="bmc_scale_text">
+                    <span higi_resource_html="global.underweight">{{interfaceLabels[weightBodyFatHealthy]}}</span>
+
+                    <div class="arrow-up"><i class="fa fa-sort-desc"></i></div>
+                </div>
+                <div id="bmc_02" class="bmc_scale_text">
+                    <span>{{interfaceLabels[weightBodyFatAcceptable]}}</span>
+
+                    <div class="arrow-up"><i class="fa fa-sort-desc"></i></div>
+                </div>
+                <div id="bmc_03" class="bmc_scale_text">
+                    <span >{{interfaceLabels[weightBodyFatAtRisk]}}</span>
+
+                    <div class="arrow-up"><i class="fa fa-sort-desc"></i></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="hardStopMessage" ng-show="hardStop">
+        <div ng-bind-html="interfaceLabels[hardStopMessage]" class="message"></div>
+        <div ng-bind-html="interfaceLabels[hardStopHeightRange]" class="height-range"></div>
+        <div ng-bind-html="interfaceLabels[hardStopWeightRange]" class="weight-range"></div>
+
+        <div ng-bind-html="interfaceLabels[hardStopHeightBottomFemale]" class="height-range-bottom" ng-if="!isMale"></div>
+        <div ng-bind-html="interfaceLabels[hardStopHeightTopFemale]" class="height-range-top"  ng-if="!isMale"></div>
+        <div ng-bind-html="interfaceLabels[hardStopWeightBottomFemale] + '' + interfaceLabels[weightPoundAbbv]" class="weight-range-bottom" ng-if="!isMale"></div>
+        <div ng-bind-html="interfaceLabels[hardStopWeightTopFemale]  + '' + interfaceLabels[weightPoundAbbv]" class="weight-range-top" ng-if="!isMale"></div>
+
+        <div ng-bind-html="interfaceLabels[hardStopHeightBottomMale]" class="height-range-bottom"  ng-if="isMale"></div>
+        <div ng-bind-html="interfaceLabels[hardStopHeightTopMale]" class="height-range-top" ng-if="isMale"></div>
+        <div ng-bind-html="interfaceLabels[hardStopWeightBottomMale]  + '' + interfaceLabels[weightPoundAbbv]" class="weight-range-bottom" ng-if="isMale"></div>
+        <div ng-bind-html="interfaceLabels[hardStopWeightTopMale]  + '' + interfaceLabels[weightPoundAbbv]" class="weight-range-top" ng-if="isMale"></div>
+
+    </div>
+</div>
+
+<a id="higi_control_left_btn" class="left_control_btn {{langClass}} {{(redoVisible) ? buttonEnterLeft : buttonExitLeft}}" ng-show="redoVisible" ng-click="redoBmc()">
+    <span class="{{langClass}}">{{interfaceLabels[redoSlideText]}}</span>
+</a>
+
+<a id="higi_control_right_ng_btn" class="right_control_btn {{langClass}} {{(nextVisible) ? buttonEnterRight : buttonExitRight }}" ng-show="nextVisible" ng-click="nextButtonOut()" >
+    <span class="{{langClass}}">{{interfaceLabels[nextSlideText]}}</span>
+</a>
+ -->

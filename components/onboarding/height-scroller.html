@@ -1,0 +1,31 @@
+<div>
+<div id="height_pane">
+    <div id="height_component_container">
+        <div id="height_hint" ng-click="heightScroller.hintClicked()" ng-show="heightScroller.showHeightHint" class="{{heightScroller.heightScrollerTransition}}">
+            <div id="height_hint_hand"></div>
+            <div id="height_hint_bkg"></div>
+        </div>
+
+        <div id="height_scrollbox">
+            <div class="height_scrollbox_glass"></div>
+            <div id="glass_feet_text" class="height_scrollbox_glass_text" ng-bind-html="interfaceLabels[heightScroller.feetLabel]"></div>
+
+            <div id="{{heightScroller.feetWheel}}" class="height_scrollbox_scroller">
+                <ul id="{{heightScroller.feetList}}" class="height_scrollbox_list">
+                    <li ng-repeat="item in heightScroller.feetScrollerData" id="{{item.id}}" class="item">{{item.value}}</li>
+                </ul>
+            </div>
+
+            <div class="height_scrollbox_glass"></div>
+            <div id="glass_inches_text" class="height_scrollbox_glass_text" ng-bind-html="interfaceLabels[heightScroller.inchesLabel]"></div>
+
+            <div id="{{heightScroller.inchesWheel}}" class="height_scrollbox_scroller">
+                <ul id="{{heightScroller.inchesList}}" class="height_scrollbox_list">
+                    <li ng-repeat="item in heightScroller.inchesScrollerData" id="{{item.id}}"  class="item" repeat-done="heightScroller.setScrollers();">{{item.value}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="height_scrollbox_bkg"></div>
+    </div>
+</div></div>

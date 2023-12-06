@@ -1,0 +1,20 @@
+{
+    "spo2three.spo2": "एसपीओ२",
+    "spo2three.results": "निकाल",
+    "spo2three.continue": "सुरु ठेवा",
+    "spo2three.spo2.percent": "%",
+    "spo2three.spo2level": "एसपीओ२ ऑक्सिजनची पातळी ",
+    "spo2three.checkSpo2again": "पुन्हा एसपीओ२ तपासा ",
+    "spo2three.information": "माहिती",
+    "spo2three.parameter": "घटक",
+    "spo2three.yourscore": "आपले गुण",
+    "spo2three.OverallStatus": "एकंदरीत स्थिती",
+    "spo2three.spo22scale": "एसपीओ<sub>२</sub> स्केल",
+    "spo2three.finalResult": "अंतिम निकाल",
+    "spo2three.status.healthy": "पौष्टिक",
+    "spo2three.status.acceptable": "स्वीकार्य ",
+    "spo2three.status.atrisk": "धोका जाणवतोय",
+    "spo2three.status.low": "कमी",
+    "spo2two.in.progress": "SpO2 is in Progress...",
+    "spo2three.status.spo2_check_healthcare_provider": "Check With Healthcare Provider"
+}

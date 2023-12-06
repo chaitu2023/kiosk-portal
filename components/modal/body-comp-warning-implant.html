@@ -1,0 +1,10 @@
+<div class="bodycomp_warning_modal implant {{implantTransitionClass}}">
+  <div class="message">
+    <div class="title">{{interfaceLabels[bcWarningImplant.begin]}}</div>
+    <div class="sub-title">{{interfaceLabels[bcWarningImplant.questionTwo]}}</div>
+  </div>
+  <div class="buttons">
+    <a ng-click="bmcConfirmSkipTest('implant')" class="accept" ng-bind-html="interfaceLabels[bcWarningImplant.yes]"></a>
+    <a ng-click="bmcConfirmNoDevice('implant')" class="decline" ng-bind-html="interfaceLabels[bcWarningImplant.no]"></a>
+  </div>
+</div>

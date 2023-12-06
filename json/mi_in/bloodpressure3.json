@@ -1,0 +1,38 @@
+{
+	"bloodpressure3.results":"निकाल",
+	"bloodpressure3.information":"माहिती",
+    "bloodpressure3.parameter":"घटक",
+    "bloodpressure3.yourscore":"आपले गुण",
+    "bloodpressure3.STATUS":"स्थिती",
+    "bloodpressure3.normalrange":"सामान्य मर्यादा ",
+    "bloodpressure3.OverallStatus":"एकंदरीत स्थिती",
+    
+    "bloodpressure3.systolic":"डायस्टोलिक",
+    "bloodpressure3.diastolic":"सिस्टोलिक",
+    "bloodpressure3.pulse":"नाडी",
+    "bloodpressure3.mmhg":"एमएमएचजी",
+    "bloodpressure3.bpm":"बीएमएम",    
+
+    "bloodpressure3.normal":"सामान्य",
+    "bloodpressure3.acceptable":"स्वीकार्य",
+    "bloodpressure3.high":"उच्च",
+    "bloodpressure3.low":"कमी",
+    "bloodpressure3.checkagain":"पुन्हा बीपी तपासा",
+
+    "global.normalbp":"सामान्य",
+    "global.atriskbp":"स्वीकार्य",
+    "global.highbp":"उच्च",
+    "global.lowbp":"कमी",
+    "global.isolated_diastolic":"विलग्न डायस्टोलिक अतिरक्तदाब",
+    "global.isolated_systolic":"विलग्न सिस्टोलिक अतिरक्तदाब",
+    "global.lowpulse":"कमी",
+    "global.highpulse":"उच्च",
+    "bloodpressure3.recheck_consult_healthcare_provider": "Recheck or Consult a Healthcare Provider",
+    
+    "bloodpressure3.average.my.results":"सरासरी माझे परिणाम",
+    "bloodpressure3.show.all.results":"सर्व परिणाम दर्शवा",
+    "bloodpressure01.warningheading":"चेतावणी!",
+    "bloodpressure01.warningskip":"ही तपासणी वगळा",
+    "bloodpressure01.warningcontinue":"चालू ठेवा",
+    "bloodpressure01.redo.error" : "काहीतरी गडबड झाली असावी. आपण तयार झाल्यावर पुन्हा प्रयत्न करूया."
+}

@@ -1,0 +1,248 @@
+<div class="ecg_instructions_header_container">
+    <img class="ecg_instructions_header_image" src="./images/Icons-30.png">
+    <span class="ecg_instructions_header_text {{langClass}}"> {{interfaceLabels[slideTitle]}} </span>
+</div>
+
+<div class="ecg_instructions_main_container">
+    <p class="ecg_instructions_heading">{{interfaceLabels[instructions]}}</p>
+
+    <div id = "sample" >          
+        <div class="bmc-instruction-container {{bmcInstructionTransition}}">
+            <div class="instruction warning" ng-bind-html="interfaceLabels[bmcHandsRemovedWarning]" ng-if="retesting"></div>
+            <threeleadecg-instruction-one promisename="threeleadecgInstructionAnimationOneReady" class="weight-instructions" ng-show="showInstructions" style="display: none;"></threeleadecg-instruction-one>
+            <div class="ecgSitInstrunction" ng-show="showInstructions"> 
+                <img src="./images/ecg/sit_stright.png" />
+                <p class="ecgSitInstrunctionTxt"> {{interfaceLabels[sitStraight]}}</p>
+            </div>        
+            <threeleadecg-instruction-two promisename="threeleadecgInstructionAnimationTwoReady" class="weight-instructions"  ng-show="showInstructions"></threeleadecg-instruction-two>
+             <threeleadecg-instruction-three promisename="threeleadecgInstructionAnimationThreeReady" class="weight-instructions"  ng-show="showInstructions"></threeleadecg-instruction-three>
+            <div class="ecg_instructions_bottom_heading">
+                {{interfaceLabels[EcgTestWillBegin]}}
+            </div>
+        </div>
+    </div>
+
+    <div id ="sample1" >
+        <div class="instruction warning" ng-bind-html="interfaceLabels[bmcHandsRemovedWarning]" ng-if="retesting"></div>
+         <threeleadecg-instruction-one promisename="threeleadecgInstructionAnimationOneReady" class="weight-instructions" ng-show="showInstructions" style="display: none;"></threeleadecg-instruction-one>
+         <div class="ecgSitInstrunction" ng-show="showInstructions"> 
+            <img src="./images/ecg/sit_stright.png" />
+            <p class="ecgSitInstrunctionTxt"> {{interfaceLabels[sitStraight]}}</p>
+        </div>         
+        <threeleadecg-instruction-two promisename="threeleadecgInstructionAnimationTwoReady" class="weight-instructions"  ng-show="showInstructions"></threeleadecg-instruction-two>
+        <threeleadecg-instruction-three promisename="threeleadecgInstructionAnimationThreeReady" class="weight-instructions"  ng-show="showInstructions"></threeleadecg-instruction-three>
+        <div class="ecg_instructions_bottom_heading">
+            {{interfaceLabels[EcgTestWillBegin]}}
+        </div>
+    </div>  
+
+</div>
+
+<div class="bmc-test-container {{bmcTestTransition}}" ng-if="bmcTestVisible">
+    <div class="instruction" ng-bind-html="interfaceLabels[bmcRemainStill]"></div>
+    <bmc-guage promisename="bmcgaugeready" progress="bmcTestProgressValue"></bmc-guage>
+</div>
+
+<div class="ekg-modal {{modalFadeClass}}" id="RestartModal">
+    <div class="ekg-modal-box">
+        <div style = "top: 38px;" class="ecg_warning_title_txt"><span>{{interfaceLabels[ECGNotResponsiveErrorOne]}}</span></div>
+        <div style = "top: 46px;" class="ecg_warning_txt"><span>{{interfaceLabels[ECGNotResponsiveErrorTwo]}}</span></div>
+        <div style = "top: 145px; left: 169px;" id="ecg_leg_message_confirm_btn" ng-click="zugECGRegretbtnClick()"><span>OK</span></div>
+    </div>
+    <a class="higi_overlay_mask"></a>
+</div>
+<div id = "leginstructionimage"  ng-show ="myVar" class = "{{leginstructionimageclass}}" style="margin-top: 205px; margin-left: 150px;">
+    <div ng-show = "handimage" style = "top: -66px; font-family: 'IntervalSansProMediumRegular'; font-size: 21px; font-weight: bold; color: #4a4a4a; " class="bmc_instruction_place_text bmc_instruction_text">{{interfaceLabels[keepHandsProper]}} </div>
+    <div ng-show = "legimage" style = "top: -66px; font-family: 'IntervalSansProMediumRegular'; font-size: 21px; font-weight: bold; color: #4a4a4a; " class="bmc_instruction_place_text bmc_instruction_text">{{interfaceLabels[keepLegsProper]}} 
+    </div>   
+    <div ng-show = "legimage" style="position: absolute; margin-top: 35px; margin-left: 115px;">
+        <img src= "images/ECGNewLeg.png">
+    </div>
+    <div ng-show = "handimage" style="position: absolute; margin-top: 35px; margin-left: 115px;">
+        <img src= "images/ECGHand.png">
+    </div>
+</div>
+
+<a id="higi_control_left_btn" class="left_control_btn {{langClass}}  {{prevIsVisible ? buttonEnterLeft : buttonExitLeft}}" ng-show="prevIsVisible" ng-click="backButtonOut()">
+    <span class="{{langClass}}">{{interfaceLabels[prevSlideText]}}</span>
+</a>
+
+<a class= "global_skip_button" ng-show="showECGEmergencyStopButton" ng-click="ZugECGemergencyStop()">
+    <span class="global_skip_button_text" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}}</span>
+</a>
+<a class="global_continue_next_button" ng-class = "{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible" ng-click="takeTestButton()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[startTest]}}</span>
+</a>
+
+
+
+
+
+
+<!-- old template start -->
+<!-- <div id="slide_title" class="{{langClass}}">{{interfaceLabels[slideTitle]}}</div>
+<div id="slide_subtitle" ng-if="!bmcTestVisible">{{interfaceLabels[slideSubTitle]}}</div>
+<div id="slide_subtitle" ng-if="bmcTestVisible">{{interfaceLabels[slideSubTitleInProgress]}}</div>
+<div class="higi_top_container" ></div>
+
+
+ <div id="sread" style="text-align:center; display:none; margin-top:53px; height:45px; position:relative;">
+            
+            <div class="aboutyou_heading" style="width:700px; color:red; font-size:22px;"> Status: <span id="ECGReadingStatus" ></span></div>
+        </div> 
+        
+    <div id = "sample"  class="{{threeleadecgclass}} bmc-instruction-container">  
+        
+<div class="bmc-instruction-container {{bmcInstructionTransition}}">
+    <div class="instruction warning" ng-bind-html="interfaceLabels[bmcHandsRemovedWarning]" ng-if="retesting"></div>
+    <threeleadecg-instruction-one promisename="threeleadecgInstructionAnimationOneReady" class="weight-instructions" ng-show="showInstructions"></threeleadecg-instruction-one>
+    <threeleadecg-instruction-two promisename="threeleadecgInstructionAnimationTwoReady" class="weight-instructions"  ng-show="showInstructions"></threeleadecg-instruction-two>
+     <threeleadecg-instruction-three promisename="threeleadecgInstructionAnimationThreeReady" class="weight-instructions"  ng-show="showInstructions"></threeleadecg-instruction-three>
+    <div class="instruction begin">
+        {{interfaceLabels[bmcTestWillBegin]}}
+    </div>
+</div>
+</div>
+
+<div id ="sample1" class="{{threeleadecgclass}} bmc-instruction-container">
+    <div class="instruction warning" ng-bind-html="interfaceLabels[bmcHandsRemovedWarning]" ng-if="retesting"></div>
+     <threeleadecg-instruction-one promisename="threeleadecgInstructionAnimationOneReady" class="weight-instructions" ng-show="showInstructions"></threeleadecg-instruction-one>
+    <threeleadecg-instruction-two promisename="threeleadecgInstructionAnimationTwoReady" class="weight-instructions"  ng-show="showInstructions"></threeleadecg-instruction-two>
+    <threeleadecg-instruction-three promisename="threeleadecgInstructionAnimationThreeReady" class="weight-instructions"  ng-show="showInstructions"></threeleadecg-instruction-three>
+    <div class="instruction begin">
+        {{interfaceLabels[bmcTestWillBegin]}}
+    </div>
+
+</div>
+<div class="ekg-modal {{modalFadeClass}}" id="RestartModal">
+        <div class="ekg-modal-box">
+            <div style = "top: 38px;" class="ecg_warning_title_txt"><span>{{interfaceLabels[ECGNotResponsiveErrorOne]}}</span></div>
+            <div style = "top: 46px;" class="ecg_warning_txt"><span>{{interfaceLabels[ECGNotResponsiveErrorTwo]}}</span></div>
+            <div style = "top: 145px; left: 169px;" id="ecg_leg_message_confirm_btn" ng-click="zugECGRegretbtnClick()"><span>OK</span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+<div id = "leginstructionimage"  ng-show ="myVar" class = "{{leginstructionimageclass}}" style="margin-top: 205px; margin-left: 150px;">
+    <div ng-show = "handimage" style = "top: -66px; font-family: 'IntervalSansProMediumRegular'; font-size: 21px; font-weight: bold; color: #4a4a4a; " class="bmc_instruction_place_text bmc_instruction_text">Please keep your hands properly </div>
+    <div ng-show = "legimage" style = "top: -66px; font-family: 'IntervalSansProMediumRegular'; font-size: 21px; font-weight: bold; color: #4a4a4a; " class="bmc_instruction_place_text bmc_instruction_text">Please keep your leg properly 
+    </div>   
+    <div ng-show = "legimage" style="position: absolute; margin-top: 35px; margin-left: 115px;">
+        <img src= "images/ECGNewLeg.png">
+    </div>
+    <div ng-show = "handimage" style="position: absolute; margin-top: 35px; margin-left: 115px;">
+        <img src= "images/ECGHand.png">
+    </div>
+</div>
+
+<div class="bmc-test-container {{bmcTestTransition}}" ng-if="bmcTestVisible">
+    <div class="instruction" ng-bind-html="interfaceLabels[bmcRemainStill]"></div>
+    <bmc-guage promisename="bmcgaugeready" progress="bmcTestProgressValue"></bmc-guage>
+</div>
+
+<div class="skip_test" id="ECG_skip_button" style="display:none;">
+    <button  class="skip_test_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()" ng-bind="interfaceLabels[skipTest]"></button>
+</div>
+
+<a id="higi_control_left_btn" class="left_control_btn {{langClass}}  {{prevIsVisible ? buttonEnterLeft : buttonExitLeft}}" ng-show="prevIsVisible" ng-click="backButtonOut()">
+    <span class="{{langClass}}">{{interfaceLabels[prevSlideText]}}</span>
+</a> -->
+
+<!-- old template end -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Harry template start -->
+
+<!-- <div id="slide_title" class="{{langClass}}" style="font-family:LatoItalic;font-size: 27px;;"><img src="images/ecg/Icons-30.png" style="height:25px;">{{interfaceLabels[slideTitle]}}</div>
+<div id="slide_subtitle" style="font-size:24px;top:134px;font-family: LatoRegular;" ng-if="!bmcTestVisible">{{interfaceLabels[slideSubTitle]}}</div>
+<div id="slide_subtitle" style="font-size:24px;top:134px;font-family: LatoRegular;" ng-if="bmcTestVisible">{{interfaceLabels[slideSubTitleInProgress]}}</div>
+<div class="higi_top_container" ></div>
+
+
+ <div id="sread" style="text-align:center; display:none; margin-top:53px; height:45px; position:relative;">
+            
+            <div class="aboutyou_heading" style="width:700px; color:red; font-size:22px;"> Status: <span id="ECGReadingStatus" ></span></div>
+        </div> 
+        
+    <div id = "sample"  class="{{threeleadecgclass}} bmc-instruction-container">  
+        
+<div class="bmc-instruction-container {{bmcInstructionTransition}}" style="width: 800px;
+    background: white;
+    height: 330px;
+    position: relative;
+    background-color: rgb(221,221,221);
+    top: 130px;
+    box-shadow: 10px 0px 7px grey;">
+    <div class="instruction warning" ng-bind-html="interfaceLabels[bmcHandsRemovedWarning]" ng-if="retesting"></div>
+    <threeleadecg-instruction-one promisename="threeleadecgInstructionAnimationOneReady" class="weight-instructions" ng-show="showInstructions"></threeleadecg-instruction-one>
+    <threeleadecg-instruction-two promisename="threeleadecgInstructionAnimationTwoReady" class="weight-instructions"  ng-show="showInstructions"></threeleadecg-instruction-two>
+     <threeleadecg-instruction-three promisename="threeleadecgInstructionAnimationThreeReady" class="weight-instructions"  ng-show="showInstructions"></threeleadecg-instruction-three>
+    <div class="ecg_instructions_bottom_heading begin">
+        {{interfaceLabels[bmcTestWillBegin]}}
+    </div>
+</div>
+</div>
+
+<div id ="sample1" class="{{threeleadecgclass}} bmc-instruction-container" style="width: 800px;
+background: white;
+height: 330px;
+position: relative;
+background-color: rgb(221,221,221);
+top: 130px;
+box-shadow: 10px 0px 7px grey;">
+    <div class="instruction warning" ng-bind-html="interfaceLabels[bmcHandsRemovedWarning]" ng-if="retesting"></div>
+     <threeleadecg-instruction-one promisename="threeleadecgInstructionAnimationOneReady" class="weight-instructions" ng-show="showInstructions"></threeleadecg-instruction-one>
+    <threeleadecg-instruction-two promisename="threeleadecgInstructionAnimationTwoReady" class="weight-instructions"  ng-show="showInstructions"></threeleadecg-instruction-two>
+    <threeleadecg-instruction-three promisename="threeleadecgInstructionAnimationThreeReady" class="weight-instructions"  ng-show="showInstructions"></threeleadecg-instruction-three>
+    
+    <div class="instruction begin" style="position: absolute;
+    top: 300px;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;">
+        {{interfaceLabels[bmcTestWillBegin]}}
+    </div>
+</div>
+ <div class="ekg-modal {{modalFadeClass}}" id="RestartModal">
+        <div class="ekg-modal-box">
+            <div style = "top: 38px;" class="ecg_warning_title_txt"><span>{{interfaceLabels[ECGNotResponsiveErrorOne]}}</span></div>
+            <div style = "top: 46px;" class="ecg_warning_txt"><span>{{interfaceLabels[ECGNotResponsiveErrorTwo]}}</span></div>
+            <div style = "top: 145px; left: 169px;" id="ecg_leg_message_confirm_btn" ng-click="zugECGRegretbtnClick()"><span>OK</span></div>
+        </div>
+        <a class="higi_overlay_mask"></a>
+    </div>
+<div id = "leginstructionimage"  ng-show ="myVar" class = "{{leginstructionimageclass}}" style="margin-top: 205px; margin-left: 150px;">
+    <div ng-show = "handimage" style = "top: -66px; font-family: 'IntervalSansProMediumRegular'; font-size: 21px; font-weight: bold; color: #4a4a4a; " class="bmc_instruction_place_text bmc_instruction_text">Please keep your hands properly </div>
+    <div ng-show = "legimage" style = "top: -66px; font-family: 'IntervalSansProMediumRegular'; font-size: 21px; font-weight: bold; color: #4a4a4a; " class="bmc_instruction_place_text bmc_instruction_text">Please keep your leg properly 
+    </div>   
+    <div ng-show = "legimage" style="position: absolute; margin-top: 35px; margin-left: 115px;">
+        <img src= "images/ECGNewLeg.png">
+    </div>
+    <div ng-show = "handimage" style="position: absolute; margin-top: 35px; margin-left: 115px;">
+        <img src= "images/ECGHand.png">
+    </div>
+</div>
+
+<div class="bmc-test-container {{bmcTestTransition}}" ng-if="bmcTestVisible">
+    <div class="instruction" ng-bind-html="interfaceLabels[bmcRemainStill]"></div>
+    <bmc-guage promisename="bmcgaugeready" progress="bmcTestProgressValue"></bmc-guage>
+</div>
+
+<a id="higi_control_left_btn" class="left_control_btn {{langClass}}  {{prevIsVisible ? buttonEnterLeft : buttonExitLeft}}" ng-show="prevIsVisible" ng-click="backButtonOut()">
+    <span class="{{langClass}}">{{interfaceLabels[prevSlideText]}}</span>
+</a>
+
+
+<a id="ECG_skip_button" class= "global_skip_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()">
+    <span class="global_skip_button_text" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}}</span>
+</a> -->
+
+<!-- Harry template end -->

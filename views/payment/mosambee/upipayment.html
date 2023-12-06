@@ -1,0 +1,243 @@
+
+<style type="text/css">
+	#qrcode{
+		height: 150px;
+	}
+	.upi_main_container{    
+		margin-top: -23px;
+	    box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;
+	    background-color: #dddddd;
+	    height: 345px;
+
+	}
+	.upi_header_text{    
+		padding-left: 10px;
+	    font-weight: 500;
+	    margin-top: 0px;
+	    font-family: 'LatoItalic';
+	    font-size: 34px;
+	    color: #4d4d4d;
+	    position: relative;
+	    top: -5px;
+	}
+	.upi_header_container{    
+		margin-top: 11%;
+	    text-align: center;
+	    margin-bottom: 30px;
+	}
+	.upi_header_image{
+		position: relative;
+    	top: 6px;    
+    	width: 44px;
+	}
+</style>
+
+<div class="upi_header_container">
+    <img class="upi_header_image" src="./images/upi-icon.png" >
+    <span class="upi_header_text"> {{ interfaceLabels[upiInterfaceLabels.title] }}  </span> 
+</div>
+
+<!-- Payment QR code message -->
+<div id="qr_code_instru" ng-show = "QRCodeInstruction">
+	<div class="upi_main_container">
+		<div>
+			<span>
+				<img style="margin-left: 315px; width: 150px; margin-top: 20px;" src="data:image/png;base64, {{bharatQR}}" alt="QRCode" />
+			</span>
+		</div>
+
+		<div>
+			<p style="font-family: 'LatoRegular';color: #6d6d6d;font-size: 18px;margin-left: 185px;">
+					{{ interfaceLabels[upiInterfaceLabels.instruction_1] }}
+			</p>
+		</div>
+
+		<div style="margin-left: 270px;">
+			<img style="width: 45%" src="images/upi-payment-1.png">
+		</div>
+	</div>
+	<div style="">
+		<p style="font-family: 'LatoRegular';color: #6d6d6d;font-size: 18px;margin-left: 272px; margin-top: 5px;">
+			{{ interfaceLabels[upiInterfaceLabels.instruction_2] }}
+		</p>
+
+		<div style="border: 1px solid #0261C2;height: 20px;width: 100px;margin-left: 340px;padding: 4px;background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #2a76c4 7%, #3f90e2 86%, #3f90e2 100%); margin-top: -10px;">
+			<span style="font-family:'LatoRegular';font-size: 16px;color: white;"
+			 id="clockdiv"></span>
+		</div>
+	</div>
+</div>
+
+<!-- Payment timeout message -->
+<div id="sessionTimeout" ng-show = "sessionEnd">	
+	<div class="upi_main_container">
+		<div>
+			<span>
+				<img style="margin-left: 296px;height: 180px; margin-top: 20px;" src="images/timeout1.png" alt="QRCode" />
+			</span>
+		</div>
+
+		<div>
+			<p style="font-family: IntervalSansProBold;text-align: center;font-size: 29px;color: red; margin-top: 10px">
+				{{ interfaceLabels[upiInterfaceLabels.timeout_msg_1] }}
+			</p>
+		</div>
+
+		<div >
+			<p style="font-family: IntervalSansProBold;color: #6d6d6d;font-size: 20px;text-align: center;" ng-bind-html = "interfaceLabels[upiInterfaceLabels.timeout_msg_2]">
+					
+			</p>
+		</div>
+	</div>
+</div>
+
+<!-- Payment sucess message -->
+<div id="payment_success" ng-show = "PaymentSuccess">
+
+	<div class="upi_main_container">
+		<div style="margin-top: 0px;margin-left: 150px;">
+
+			<!-- <img style="margin: 20px;width: 65%" src="images/payment.gif" alt="animated"> -->
+			<i class="fa fa-check" aria-hidden="true" style="color: green;margin-top: 22px;margin-left: 160px;font-size: 180px;"></i>
+
+			<p style="font-family: 'LatoRegular';color: #0261C2;font-size: 30px;margin-left: 106px;margin-top: 0px;">
+				{{ interfaceLabels[upiInterfaceLabels.success_msg_1] }}
+			</p>
+			<p ng-show = "IHLTeleConsultSelected == true" style="font-family: 'LatoRegular';color: #0261C2;font-size: 30px;margin-left: -5px;margin-top: 0px;">
+				{{ interfaceLabels[upiInterfaceLabels.success_msg_2] }}
+			</p>
+
+		</div>
+	</div>	
+</div>
+
+<!-- Payment Failure message -->
+<div id="payment_failed" ng-show = "PaymentFailed">
+	<div class="upi_main_container">
+		<div style="">
+			<span>
+				<img style="margin-left: 296px; height: 180px; margin-top: 20px;" src="images/time over.png" alt="QRCode" />
+			</span>
+		</div>
+
+		<div>
+			<p style="font-family: IntervalSansProBold;text-align: center;font-size: 29px;color: red; margin-top: 15px;">
+				{{ interfaceLabels[upiInterfaceLabels.failure_msg_1] }}
+			</p>
+		</div>
+
+		<div >
+			<p style="font-family: IntervalSansProBold;color: #6d6d6d;font-size: 19px;text-align: center;" ng-bind-html = "interfaceLabels[upiInterfaceLabels.failure_msg_2]">
+			</p>
+		</div>
+	</div>
+</div>
+<!-- <div id="qr_code_instru" ng-show = "QRCodeInstruction">
+	
+	<div>
+
+		<span>
+			<img style="margin-left: 270px; margin-left: 315px;
+    width: 150px;" src="data:image/png;base64, {{bharatQR}}" alt="QRCode" />
+		</span>
+	</div>
+
+	<div>
+		<p style="font-family: 'LatoRegular';color: #6d6d6d;font-size: 18px;margin-left: 185px;">
+				Scan and Pay with any BHIM UPI app from your mobile
+		</p>
+	</div>
+
+	<div style="margin-left: 270px;margin-top: -13px;">
+		<img style="width: 45%" src="images/upi-payment-1.png">
+	</div>
+	
+
+	<div style="position: relative;top: 12px;left: 630px;">
+		<p style="font-family: 'LatoRegular';color: gray;font-size: 13px;margin-bottom: 2px;position: relative;right: -32px;">
+			Powered By
+		</p>
+		<img style="width: 17%" src="images/mosambee1.png">
+	</div>
+
+	<a id="upi_backButton" class="left_control_btn {{langClass}}  {{prevIsVisible ? buttonEnterLeft : buttonExitLeft}}" ng-show="prevIsVisible" ng-click="backButtonOut()">
+    <span class="{{langClass}}">Back</span>
+    </a>
+
+	
+
+	<div style="margin-top: -75px">
+		<p style="font-family: 'LatoRegular';color: #6d6d6d;font-size: 18px;margin-left: 272px;">
+			Your transaction will expire in 
+		</p>
+
+		<div style="border: 1px solid #0261C2;height: 20px;width: 95px;margin-left: 340px;padding: 4px;background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #2a76c4 7%, #3f90e2 86%, #3f90e2 100%);">
+			<span style="font-family:'LatoRegular';font-size: 16px;color: white"
+			 id="clockdiv"></span>
+		</div>
+	</div>
+
+</div> -->
+
+<!-- <div id="sessionTimeout" ng-show = "sessionEnd">
+	
+	<div style="margin-top: 40px;">
+		<span>
+			<img style="margin-left: 296px;height: 200px;" src="images/timeout1.png" alt="QRCode" />
+		</span>
+	</div>
+
+	<div>
+		<p style="font-family: IntervalSansProBold;text-align: center;font-size: 29px;color: red;">
+			Payment Timeout !
+		</p>
+	</div>
+
+	<div >
+		<p style="font-family: IntervalSansProBold;color: #6d6d6d;font-size: 20px;text-align: center;">
+				We did not received any payment yet. Please wait for few seconds until<br> we confirm any payment exists .
+		</p>
+	</div>
+
+</div> -->
+
+
+<!-- Payment sucess message -->
+
+<!-- <div id="payment_success" ng-show = "PaymentSuccess">
+
+	<div style="margin-top: 0px;margin-left: 150px;">
+
+		<img style="margin: 20px;width: 65%" src="images/payment.gif" alt="animated">
+
+		<p style="font-family: 'LatoRegular';color: #0261C2;font-size: 22px;margin-left: 140px;">
+			Payment Successful.
+		</p>
+
+	</div>
+	
+</div> -->
+
+<!-- Payment Failure message -->
+
+<!-- <div id="payment_failed" ng-show = "PaymentFailed">
+
+	<div style="margin-top: 40px;">
+		<span>
+			<img style="margin-left: 296px;height: 200px;" src="images/time over.png" alt="QRCode" />
+		</span>
+	</div>
+
+	<div>
+		<p style="font-family: IntervalSansProBold;text-align: center;font-size: 29px;color: red;">
+			Payment Failed !
+		</p>
+	</div>
+
+	<div >
+		<p style="font-family: IntervalSansProBold;color: #6d6d6d;font-size: 19px;text-align: center;">
+				Sorry, your transaction was not succeeded. If you made payment then <br> it will be refunded within 1 business day .
+		</p>
+	</div>
+	
+</div> -->

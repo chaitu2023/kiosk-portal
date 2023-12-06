@@ -1,0 +1,20 @@
+{
+    "spo2three.spo2": "SpO2",
+    "spo2three.results": "ফলাফলসমূহ",
+    "spo2three.continue": "অব্যাহত ৰাখক",
+    "spo2three.spo2.percent": "%",
+    "spo2three.spo2level": "SpO2 অক্সিজেনৰ স্তৰ",
+    "spo2three.checkSpo2again": "পুনৰ SpO2 পৰীক্ষা কৰক",
+    "spo2three.information": "তথ্য",
+    "spo2three.parameter": "প্ৰাচল",
+    "spo2three.yourscore": "আপোনাৰ নম্বৰ",
+    "spo2three.OverallStatus": "সামগ্ৰিক স্থিতি",
+    "spo2three.spo22scale": "SpO<sub>2</sub> স্কেল",
+    "spo2three.finalResult": "চূড়ান্ত ফলাফল",
+    "spo2three.status.healthy": "স্বাস্থ্যকৰ",
+    "spo2three.status.acceptable": "গ্ৰহণযোগ্য",
+    "spo2three.status.atrisk": "বিপদাশংকাত",
+    "spo2three.status.low": "নিম্ন",
+    "spo2two.in.progress": "SpO2 is in Progress...",
+    "spo2three.status.spo2_check_healthcare_provider": "Check With Healthcare Provider"
+}

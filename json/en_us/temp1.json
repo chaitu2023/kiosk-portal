@@ -1,0 +1,12 @@
+{
+    "temp1.title": "Body Temperature",
+    "temp1.instructions": "Instructions",
+    "temp1.startTest": "Start Test",
+    "temp1.skip": "Skip",
+    "temp1.holdhands": "Gently hold the handles with your hands",
+    "temp1.restwristt": "Rest your wrist on the electrodes until your results displayed",
+    "temp1.testWillBeginBefore": "This test will begin when your hands are in place",
+    "temp1.testWillBegin": "Click 'Start Test' button to begin the test",
+    "temp1.tempForeheadText1": "Place your face inside the red circle",
+    "temp1.tempForeheadText2": "once you start the test"
+}

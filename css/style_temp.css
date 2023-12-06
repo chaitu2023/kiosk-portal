@@ -1,0 +1,657 @@
+.temperature_count_down_container{
+	margin: 16% 20% 0 20%;
+    font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.temperature_count_down_logo{
+	width: 75px;
+	margin: 0% 0% 0% 45%;
+}
+
+.temperature_count_down_heading{
+	font-size: 30px;
+	font-weight: 500;
+	text-align: center;
+	margin: 10px 0px 0px 0px;
+	font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.temperature_count_down_sub_heading{
+	color: gray;
+	font-size: 23px;
+	font-weight: 500;
+	text-align: center;
+	margin: 10px 0px 0px 0px;
+	font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.temperature_count_down_start_test{
+	color: #808080b8;
+    font-size: 19px;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    font-family: 'IntervalSansProMediumRegular' !important;
+}
+
+.temperature_count_down_timer{
+	text-align: center;
+    color: #3887b2;
+    font-weight: 500;
+    font-size: 72px;
+    margin: 0px;
+}
+
+.temperature_instructions_header_container {
+	margin-top: 11%;
+    margin-left: 33.4%;
+    max-width: 100%;
+}
+
+.temperature_instructions_header_image {
+    float: left; 
+    margin-right: 15px; 
+    width: 22px;
+}
+
+.temperature_instructions_header_text {
+    padding-left: 31px;
+    font-weight: 500;
+    margin-top: 0px;
+    font-family: 'LatoItalic';
+    font-size: 34px;
+    color: #4d4d4d;
+    margin-bottom: 30px;
+}
+
+.temperature_instructions_main_container{
+    margin-top: -23px;    
+    box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;
+    background-color: #dddddd;
+    height: 368px;
+}
+
+.temperature_instructions_main_container_forehead{
+    margin-top: -23px;    
+    box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;
+    background-color: #dddddd;
+    height: 345px;
+}
+
+.temperature_instructions_heading{
+    text-align: center;
+    font-size: 24px;
+    margin-left: 9px;
+    padding-top: 10px;
+    font-family: 'LatoSemibold';
+    color: #333333;
+}
+
+.temperature_instructions_heading_forehead{
+    text-align: center;
+    font-size: 24px;
+    margin-left: 9px;
+    padding-top: 10px;
+    font-family: 'LatoSemibold';
+    color: #333333;
+}
+
+.temperature_instructions_circle_container_1 {
+	top: 40px;
+    left: 121px;
+    position: absolute;
+}
+
+.temperature_instructions_circle_container_1_forehead{
+    top: 40px;
+    left: 292px;
+    position: absolute;
+}
+
+.temperature_inprogress_circle_container_1_forehead{
+    top: 25px;
+    left: 95px;
+    position: absolute;
+}
+
+.temperature_instructions_circle_container_2 {
+	top: 40px;
+    left: 455px;
+    position: absolute;
+}
+
+.temperature_inprogress_circle_container_2_forehead {
+	top: 23px;
+    left: 424px;
+    position: absolute;
+}
+
+.temperature_instructions_circle_place_overlays {
+	background: transparent url(../images/tests_instruction_circle20121009_transparent.png) top left no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: block;
+    height: 224px;
+    width: 224px;
+    background-size: cover;
+}
+
+.temperature_inprogress_circle_place_overlays_forehead {
+	background: transparent url(../images/tests_instruction_circle20121009_transparent.png) top left no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: block;
+    height: 253px;
+    width: 239px;
+    background-size: cover;
+}
+
+#temperature_instructions_circle1_place_frames {
+	background: transparent url(../images/hands-sprite-15-3-18-higi.png) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+#temperature_instructions_circle1_place_frames_forehead {
+	background: transparent url(../images/gif/forehead-instruction.gif) top 20px left 7px no-repeat;
+    background-size: cover;
+    height: 215px;
+    width: 215px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+#temperature_inprogress_circle1_place_frames_forehead {
+	background: transparent url(../images/headhead.gif) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+#temperature_instructions_circle2_place_frames {
+    background: transparent url(../images/sitting-sprite-2015-03-18-higi.png) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    border-radius: 115px;
+}
+
+#temperature_inprogress_circle2_place_frames_forehead {
+    background: transparent url(../images/foreheadiframe.gif) top left no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 224px;
+    display: block;
+    z-index: 5;
+    /* border-radius: 115px; */
+}
+
+.temperature_instructions_text_1{
+    position: absolute;
+    top: 270px;
+    left: 121px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 224px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}
+
+.temperature_instructions_text_1_forehead{
+    position: absolute;
+    top: 270px;
+    left: 165px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 480px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}
+
+.temperature_inprogress_text_1_forehead{
+    position: absolute;
+    top: 283px;
+    left: 65px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 311px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}
+.temperature_instructions_text_2{
+    position: absolute;
+    top: 270px;
+    left: 425px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 280px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}
+
+.temperature_inprogress_text_2_forehead{
+    position: absolute;
+    top: 282px;
+    left: 438px;
+    font-size: 18px;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    width: 280px; 
+    font-family: LatoRegular;
+    font-weight: 500;
+    color: #808080;
+}
+
+#temperatureInProgressAnimatedGifImage {
+	background-image: url(../images/gif/temperatureInProgressAnimationGif.gif);
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 100%;
+    position: absolute;
+    top: -90px;
+    left: 85px;
+    background-size: 80%;
+}
+
+.temperature_unit{
+    font-size: 14px;
+}
+
+.temperature_results_main_container{
+	height: 370px; 
+    margin-top: 115px; 
+    box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;     
+    background-color: #dddddd; 
+}
+
+.temperature_results_header_container{
+	padding-top: 15px;
+    margin-left: 20px;
+}
+
+.temperature_results_header_image{
+	margin-right: 15px;
+    width: 22px;
+    float: left;
+}
+
+.temperature_results_header_text{
+	padding-left: 31px;
+    font-weight: 500;
+    margin-top: 0px;    
+    font-size: 34px;
+    color: #4d4d4d;
+    margin-bottom: 15px;
+    font-family: 'LatoItalic';
+}
+
+.temperature_results_small_text{
+	color: #797979;
+}
+
+.temperature_results_sub_container{
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+    height: 235px;    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.temperature_results_title_container{
+	background-color: #E6E6E6;
+    height: 133px;
+    width: 140px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+    left: 10px;
+}
+
+.temperature_results_parameter_title{
+	margin-top: 0px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    padding: 25px 0px;
+    color: #383838;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.temperature_results_yourscore_title{
+	color: #383838;
+    font-size: 14px;
+    background-color: #e6e6e6;
+    padding: 10px 0px;
+}
+
+.temperature_results_room_temp_container{
+    left: 155px;
+    background-color: transparent;
+    width: 160px;
+    height: 133px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.temperature_results_room_temp_title, .temperature_results_body_temp_title{
+	font-size: 24px;
+    font-weight: 500;
+    color: #4a4a4ae3;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: LatoBold;
+}
+
+.temperature_results_room_temp_sub_title, .temperature_results_body_temp_sub_title{
+	font-size: 14px; 
+    color: #6d6d6de8; 
+    position-top: 0px; 
+    font-family: LatoRegular;
+    text-align: center;
+    margin:0px;
+}
+
+.temperature_results_room_temp_value, .temperature_results_body_temp_value{
+	margin-top: 20px;
+    font-size: 32px;
+    margin-left: 6px;
+    color: gray;
+    font-family: LatoHeavy;
+    margin-bottom: 0px;
+}
+
+.temperature_results_body_temp_container{
+	left: 320px;
+    background-color: transparent;
+    width: 160px;
+    height: 133px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.temperature_results_body_temp_units, .temperature_results_room_temp_units{
+    font-size: 14px;
+    color: #6d6d6de8;
+    position-top: 0px;
+    font-family: LatoRegular;
+    text-align: center;
+    margin: 0px;    
+}
+
+.temperature_results_over_all_status_container{
+    left: 490px;
+    width: 160.5px;
+    height: 230.5px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 15px;
+    text-align: center;
+    background-color: #87C427;
+}
+
+.temperature_results_over_all_status_titles{
+	font-size: 20px;
+    color: #4a4a4aa8;
+    margin-top: 6px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: LatoBold;
+}
+
+.temperature_results_over_all_status_sub_titles{
+	font-size: 14px; 
+    color: #6d6d6de8; 
+    position-top: 0px; 
+    font-family: LatoRegular;
+    text-align: center;
+    margin:10px;
+}
+
+.temperature_results_over_all_status_small_titles{
+	margin-top: 10px;
+    font-size: 15px;
+    color: #6d6d6de8;
+    font-family: LatoRegular;
+}
+
+.temperature_results_over_all_status_status_value{
+	font-size: 22px;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #fff;
+    font-size: lato;
+}
+
+.temperature_results_over_all_status_status_icons{
+	width: 55px;
+    margin-top: -15px;
+}
+
+.temperature_results_status_bar_container{
+	margin-top: 138px;
+    height: 95.5px;
+    width: 475px;
+    background-color: #E6E6E6;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.temperature_results_status_bar_heading{
+	text-align: center;
+    margin: 0px;
+    margin-top: 5px;
+    color: #4a4a4ab0;
+    margin-bottom: 5px;
+}
+
+.temperature_results_status_bar_image{
+	width: 412px;
+	text-align: center;
+	margin-top: 0px;
+	height: 80px;
+}
+
+.temperature_results_status_bar_image_normal{
+	position: absolute;
+    top: 60px;
+    left: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #6aa010;
+    letter-spacing: 1.5px;
+}
+
+.temperature_results_status_bar_image_accept{
+	position: absolute;
+    top: 60px;
+    left: 140px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #c1a30f;
+}
+
+.temperature_results_status_bar_image_fever{
+	position: absolute;
+    top: 60px;
+    left: 265px;
+    font-size: 15px;
+    font-weight: 500;
+    /* color: #6aa010; */
+    color: #c0830a;
+    letter-spacing: 1.5px;
+}
+
+.temperature_results_status_bar_image_high_fever{
+	position: absolute;
+    top: 60px;
+    left: 340px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #c04f10;
+}
+
+.display_arrow_pos1 {
+    left: 5px;
+}
+
+.display_arrow_pos2 {
+    left: 115px;
+}
+
+.display_arrow_pos3 {
+    left: 220px;
+}
+
+.display_arrow_pos4 {
+    left: 345px;
+}
+
+.display_arrow_pos5{
+    left: 176px;
+}
+
+.temp_arrow_scale_pos {
+    transition: all .1s ease-in-out;
+    -webkit-animation: scalebounce 2s 1;
+    -moz-animation: scalebounce 2s 1;
+    animation: scalebounce 2s 1;
+    top: 23px;
+    height: 40px;
+}
+
+.temp_arrow_text_design {
+    font-size: 12px;
+    height: 22px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 140px;
+    top:35px;
+}
+
+.temp_arrow_scale_pos .temp_arrow_size_pos {
+    display: block;
+}
+
+.temp_arrow_size_pos {
+    background: url(../images/bmi_scale_arrow20120509.png) no-repeat;
+    display: none;
+    height: 15px;
+    margin: 0.35em auto;
+    width: 25px;
+    background-size: 20px;
+}
+
+.back_color1{
+	background-color: #83d501;
+}
+
+.back_color2{
+	background-color: #ef940f;
+}
+
+.back_color3{
+	background-color: #ac0404;
+}
+
+.back_color4{
+	background-color: #ac0404;
+}
+
+.back_color3 p:first-child,
+.back_color3 p:nth-child(2),
+.back_color4 p:first-child, 
+.back_color4 p:nth-child(2) {
+    color: #d1b8b8;
+}
+
+.temperature_instructions_bottom_heading{
+    font-family: 'LatoSemibold';
+    color: #585858; 
+    position: relative; 
+    top: 265px; 
+    font-size: 18px;
+    text-align: center;
+}
+.temperature_inprogress_bottom_heading{
+    font-family: 'LatoSemibold';
+    color: #585858; 
+    position: relative; 
+    top: 300px; 
+    font-size: 20px;
+    text-align: center;    
+}
+.temperature_inprogress_bottom_heading_forehead{
+    font-family: 'LatoSemibold';
+    color: #585858; 
+    position: relative; 
+    top: 330px; 
+    font-size: 20px;
+    text-align: center;    
+}
+.teperature_change_val_txt{
+    position: relative;
+    top: 325px;
+    left: 275px;
+    width: 90px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+#temp-ref-chart {
+    border: 1px solid black;
+    height: 18px;
+    border-radius: 10px;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    /* background-image: linear-gradient(to right, #37bd46, #7ea700, #ac8b00, #d16400, #eb1f12); */
+    background-image: linear-gradient(to right, #ef940f, #f3f514fa,#93de29,#5beb2a, #d27109, #eb1f12);    top: 25px;
+    padding: 5px;
+    justify-content: space-between;
+    color: #E6E6E6;
+}

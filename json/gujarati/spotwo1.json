@@ -1,0 +1,11 @@
+{
+    "spo2one.spo2": "SpO2",
+    "text.instructions": "સૂચનાઓ",
+    "spo2one.skip": "સ્કિપ",
+    "spo2one.startTest": "પરીક્ષણ શરુ કરો",
+    "spo2one.placeYourFingerProbably": "તમારી આંગળી સરખી રીતે મૂકો",
+    "spo2one.insertfinger": "તમારા જમણા હાથની તર્જની આંગળી Spo <sub> 2 </sub> ઇલેક્ટ્રોડ્સની અંદર સરખી રીતે નાખો",
+    "spo2one.instruct": "Place your finger gently and rest your palm here",
+    "spo2one.fingerinplaceBefore": " જ્યારે તમારી આંગળી બરાબર જગ્યાએ હશે ત્યારે આ પરીક્ષણ શરૂ થશે",
+    "spo2one.fingerinplace": " જ્યારે તમારી આંગળી બરાબર જગ્યાએ હશે ત્યારે આ પરીક્ષણ શરૂ થશે"
+}

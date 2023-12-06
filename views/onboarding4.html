@@ -1,0 +1,24 @@
+<div ng-hide="coppFailHide">
+<div id="slide_title">{{interfaceLabels[slideTitle]}}</div>
+<div id="slide_subtitle">{{interfaceLabels[slideSubTitle]}}</div>
+
+<div id="aboutyou_pane" class="{{twoButton}}">
+    <div class="higi_top_container"></div>
+    <a id="genderbox" class="aboutyou_btn {{twoButton}}" ng-click="editGender()">
+        <span class="aboutyou_heading" >{{interfaceLabels[sexLabel]}}</span>
+        <span id="aboutyou_gender_data" class="aboutyou_data">{{interfaceLabels[gender]}}</span>
+    </a>
+    <a ng-if="hasHeight" id="heightbox" class="aboutyou_btn" ng-click="editHeight()">
+        <span class="aboutyou_heading" >{{interfaceLabels[heightLabel]}}</span>
+        <span id="aboutyou_height_data" class="aboutyou_data" ng-bind-html="height"></span>
+    </a>
+    <a id="agebox" class="aboutyou_btn {{twoButton}}" ng-click="editAge()">
+        <span class="aboutyou_heading">{{interfaceLabels[ageLabel]}}</span></span>
+        <span id="aboutyou_age_data" class="aboutyou_data">{{age}}</span>
+    </a>
+</div>
+
+<a id="higi_control_right_ng_btn" class="right_control_btn {{langClass}} {{nextTransitionStyle}}" ng-show="nextVisible" ng-click="nextButtonOut()" >
+    <span class="{{langClass}} {{interfaceLabels[nextSlideText]}}">{{interfaceLabels[nextSlideText]}}</span>
+</a>
+</div>

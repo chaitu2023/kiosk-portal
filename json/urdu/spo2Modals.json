@@ -1,0 +1,14 @@
+{
+  "infobox.about.spo2": "کے بارے میں SpO<sub>2</sub>",
+  "infobox.about.spo2.subtitle": "آپ کے جسم کی نبض کا آکسیمیٹر، جسے SpO<sub>2</sub> بھی کہا جاتا ہے۔",
+  "infobox.about.spo2.point03": " SpO<sub>2</sub> حدود",
+  "infobox.about.spo2.point04": "95 کے اوپر",
+  "infobox.about.spo2.point05": "91 سے 95",
+  "infobox.about.spo2.point06": "70 سے 90",
+  "infobox.about.spo2.point07": " سے نیچے 70",
+  "spo2.status.healthy": "صحت مند",
+  "spo2.status.acceptable": "قابل قبول",
+  "spo2.status.atrisk": "خطرے میں",
+  "spo2.status.low": "کم",
+  "infobox.about.spo2.point08": "یہ چارٹ SpO<sub>2</sub> زمروں کی عکاسی کرتا ہے جن کی وضاحت سینٹرز فار ڈیزیز کنٹرول اینڈ پریوینشن نے کی ہے۔"
+}

@@ -1,0 +1,38 @@
+<div class="BMCHealth_instructions_header_container">
+    <img class="BMCHealth_instructions_header_image" src="./images/Icons-29.png">
+    <span class="BMCHealth_instructions_header_text">{{interfaceLabels[slideTitle]}} </span> 
+</div>
+
+<div class="BMCHealth_instructions_main_container">
+    <div class="bmc-instruction-container {{bmcInstructionTransition}}">
+        <p class="BMCHealth_instructions_heading">{{interfaceLabels[slideSubTitle]}}</p>
+        <full-body-bmc-instruction-one promisename="fullbodybmcInstructionAnimationOneReady" ng-show="showInstructions"></full-body-bmc-instruction-one>
+        <full-body-bmc-instruction-two promisename="fullbodybmcInstructionAnimationTwoReady" ng-show="showInstructions"></full-body-bmc-instruction-two>
+        <full-body-bmc-instruction-three promisename="fullbodybmcInstructionAnimationThreeReady" ng-show="showInstructions"></full-body-bmc-instruction-three>
+        <div class="BMCHealth_instructions_before_begin_text">
+            {{interfaceLabels[bmcTestWillBegin]}}
+        </div>
+    </div>
+
+    <div class="bmc-test-container {{bmcTestTransition}}" ng-if="bmcTestVisible">
+        <bmc-guage promisename="bmcgaugeready" progress="bmcTestProgressValue"></bmc-guage>
+        <div class= "BMCHealth_test_in_progress">{{interfaceLabels[bmcProgress]}}</div>
+    </div>
+</div>
+
+<a id="bmc_skip" class="global_skip_button" ng-show="skipTestInFullTest" ng-click="skipFullBodyBMCOnly()">
+    <span class="global_skip_button_text" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipbmc]}}</span>
+</a>
+<a class="global_continue_next_button" ng-class = "{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible" ng-click="takeTestButton()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[startTest]}}</span>
+</a>
+
+<div class="bmc-modal {{modalFadeClass}}" ng-show="showWarning">
+    <div class="bmc-modal-box">
+        <bc-warning-implant-modal ng-show="showImplantTest"></bc-warning-implant-modal>
+        <bc-warning-pregnant-modal ng-show="showPregTest"></bc-warning-pregnant-modal>
+        <bc-warning-error-modal ng-show="showSkipTest"></bc-warning-error-modal>
+        <bc-warning-disclaimer-modal ng-show="showDisclaimer"></bc-warning-disclaimer-modal>
+    </div>
+    <a class="higi_overlay_mask"></a>
+</div>

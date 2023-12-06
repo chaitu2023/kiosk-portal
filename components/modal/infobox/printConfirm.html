@@ -1,0 +1,249 @@
+<style>
+    #print-btn-container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 270px;
+    }
+    .print-btn-holder {
+        text-align: center;
+        padding: 10px;
+        color: #FFF;
+        text-transform: uppercase;
+        border-radius: 3px;
+        font-size: 18px;
+        text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2);
+        background-image: -moz-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        background-image: -ms-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        border-style: solid;
+        border-width: 1px;
+        border-color: #2a76c4;
+        text-shadow: 0px -1px 0px #828282;
+        border-radius: 3px;
+        -webkit-box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+        -moz-box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+        box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+    }
+    .singleprinterConfirmBtn{
+        /* border-top: 1px solid #dcdcdc; */
+        /*position: absolute;*/
+        background: none;
+        height: 85px;  
+    }
+    .singlePrinterConfirmBtnTxt{
+         width: 175px;
+        left: 150px;    
+        position: absolute;
+        top: 260px;
+        left: 270px;
+        color: #FFF;
+        height: 42px;
+        padding-top: 9px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 3px;
+        font-size: 18px;
+        text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2);
+        background-image: -moz-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        background-image: -ms-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        border-style: solid;
+        border-width: 1px;
+        border-color: #2a76c4;
+        text-shadow: 0px -1px 0px #828282;
+        border-radius: 3px;
+        -webkit-box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+        -moz-box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+        box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2); 
+    }
+    
+    .printerConfirmBtn{
+        border-top: 1px solid #dcdcdc;
+        position: absolute;
+        top: 245px;
+        background: none;
+        height: 85px;
+    }
+    .printerConfirmBtnTxt{
+        width: 175px;
+        left: 150px;    
+        position: absolute;
+        top: 20px;
+        left: 175px;
+        color: #FFF;
+        height: 42px;
+        padding-top: 9px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 3px;
+        font-size: 18px;
+        text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2);
+        background-image: -moz-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        background-image: -ms-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        border-style: solid;
+        border-width: 1px;
+        border-color: #2a76c4;
+        text-shadow: 0px -1px 0px #828282;
+        border-radius: 3px;
+        -webkit-box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+        -moz-box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+        box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+    }
+    .ecgPrinterConfirmBtn{
+        border-top: 1px solid #dcdcdc;
+        position: absolute;
+        top: 245px;
+        background: none;
+        height: 85px;
+    }
+    .ecgPrinterConfirmBtnTxt{
+        width: 175px;
+        left: 150px;    
+        position: absolute;
+        top: 20px;
+        left: 375px;
+        color: #FFF;
+        height: 42px;
+        padding-top: 9px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 3px;
+        font-size: 18px;
+        text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2);
+        background-image: -moz-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        background-image: -webkit-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        background-image: -ms-linear-gradient(90deg, #2a76c4 0%, #3f90e2 100%);
+        border-style: solid;
+        border-width: 1px;
+        border-color: #2a76c4;
+        text-shadow: 0px -1px 0px #828282;
+        border-radius: 3px;
+        -webkit-box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+        -moz-box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+        box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2);
+    }
+    .printerConfirmBtnTxt:active, .print-btn-holder:active {
+        opacity: .6;
+    } 
+    .printerConfirmBtnTxt:hover, .print-btn-holder:hover {
+        color: #ffffff;
+    } 
+    .ecgPrinterConfirmBtnTxt:active {
+        opacity: .6;
+    } 
+    .ecgPrinterConfirmBtnTxt:hover {
+        color: #ffffff;
+    } 
+    /*<!-- dynamic design button sandip -->*/
+    
+</style>
+<div class="infobox_content">
+    <div data-ng-show="paperAvailable">
+        <div class="infobox_content_title" higi_resource_html="infobox.about.spo2">{{interfaceLabels[printwarning]}} </div>
+        <div class="infobox_content_subtitle" higi_resource_html="infobox.about.spo2" style="padding-top: 20px; color:#000; font-size: 20px;"> {{interfaceLabels[makesure]}} </div>
+        <div class="infobox_content_subtitle" higi_resource_html="infobox.about.spo2" style="padding-top: 5px;color: #0261c2;font-size: 18px;padding-left: 0px;padding-right: 0px;"> {{interfaceLabels[printinstruct]}} </div>
+        <div style="height: 225px; width: 225px; border-radius: 50%; overflow: hidden; position: absolute; left: 250px; top: 140px;"> 
+            <img data-ng-show="externalPrinterName == ''" src="images/newprinterposition.jpg"> 
+            <img data-ng-show="externalPrinterName != ''" style="width: 200px;top: 15px;position: relative;" src="images/printer_icon.png" >
+        </div>
+
+        <!-- <div style="height: 225px; width: 225px; border-radius: 50%; overflow: hidden; position: absolute; left: 415px; top: 150px;"> 
+            <img src="images/printer-info1.png"> 
+        </div> -->
+        <!-- dynamic design button sandip -->
+        <!-- <div> -->
+        
+        <div ng-if="externalPrinterName == ''">    
+            <div ng-show="printECGraphButt">
+                <div class="singlePrinterConfirmBtn"><a class="singlePrinterConfirmBtnTxt" ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('ecg');">{{interfaceLabels[printEcgraph]}}</a> </div>
+            </div>
+    
+             <!-- printCheckinResultsConfirmation -->
+            <div ng-show="printResultsButt">
+                <div class="singleprinterConfirmBtn"><a class="singlePrinterConfirmBtnTxt" ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('vital');">{{interfaceLabels[printRes]}}</a> </div>
+            </div>
+    
+            <div ng-show="printInvasiveButt">
+                <div class="singleprinterConfirmBtn"><a class="singlePrinterConfirmBtnTxt" ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('invasive');">{{interfaceLabels[printIInvasiveResult]}}</a> </div>
+            </div>
+            <!-- for two buttons starts here-->
+            <div>
+                <!--vitals & invasive-->
+                <div ng-show="printVitalsAndInvasive" id="print-btn-container">
+                    <div class="print-btn-holder" >
+                        <a ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('vital');">{{interfaceLabels[printRes]}}</a> 
+                    </div>
+                    <div class="print-btn-holder" style="margin-left: 75px;"><!--ng-show="showInvasivePrintBtn"-->
+                        <a ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('invasive');">{{interfaceLabels[printIInvasiveResult]}}</a> 
+                    </div>
+                </div>
+                <!--vitals and ecg-->
+                <div ng-show="vitalsAndEcg" id="print-btn-container">
+                    <div class="print-btn-holder">
+                        <a ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('vital');">{{interfaceLabels[printRes]}}</a> 
+                    </div>
+                    <div class="print-btn-holder" style="margin-left: 75px;" ng-show="showEcgPrintBtn"><!--ng-show="showEcgPrintBtn"-->
+                        <a ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('ecg');">{{interfaceLabels[printEcgraph]}}</a> 
+                    </div>
+                </div>
+                <!--Ecg & Invasive-->
+                <div ng-show="ecgAndInvasive" id="print-btn-container">
+                    <div class="print-btn-holder" ng-show="showEcgPrintBtn" ng-show="showEcgPrintBtn">
+                        <a ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('ecg');">{{interfaceLabels[printEcgraph]}}</a> 
+                    </div>
+                    <div class="print-btn-holder" style="margin-left: 75px;">
+                        <a ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('invasive');">{{interfaceLabels[printIInvasiveResult]}}</a> 
+                    </div>
+                </div>
+            </div>
+            <!--for two buttons ends here-->
+        <!-- </div> -->
+        <!-- printCheckinResultsConfirmation -->
+        <!-- <div ng-show="printBothResultsButt">
+            <div class="printerConfirmBtn"><a class="printerConfirmBtnTxt" ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('vital');">{{interfaceLabels[printRes]}}</a> </div>
+            <div class="ecgPrinterConfirmBtn" ng-show="showEcgPrintBtn"><a class="ecgPrinterConfirmBtnTxt" ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('ecg');">{{interfaceLabels[printEcgraph]}}</a> </div>
+        </div> -->
+        <div ng-show="printThreeResultsButt" id="print-btn-container">
+            <div class="print-btn-holder">
+                <a ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('vital');">{{interfaceLabels[printRes]}}</a> 
+            </div>
+            <div class="print-btn-holder" style="margin-left: 12px;" ng-show="showEcgPrintBtn">
+                <a ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('ecg');">{{interfaceLabels[printEcgraph]}}</a> 
+            </div>
+            <div class="print-btn-holder" style="margin-left: 13px;">
+                <a ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('invasive');">{{interfaceLabels[printIInvasiveResult]}}</a>
+            </div>
+        </div>
+        <!-- dynamic design button sandip -->
+        </div>
+        
+        <div  ng-if="externalPrinterName != ''"> 
+            <div id="print-btn-container">
+                <div class="print-btn-holder">
+                    <a ng-click="modalInfoboxHide(); initFinishPageDietRecommendation('vital');">{{interfaceLabels[printRes]}}</a> 
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div data-ng-hide="paperAvailable">
+        <div class="infobox_content_title"> {{interfaceLabels[notavail]}} </div>
+        <div class="infobox_content_subtitle" higi_resource_html="infobox.about.spo2" style="padding-top: 30px; color:#000; font-size: 20px;"> <p style="color:#dc1010">{{interfaceLabels[papernot]}} </p> <p style="color: #0261c2">{{interfaceLabels[refill]}} </p></div>
+        
+        <div style="height: 225px; width: 225px; border-radius: 50%; overflow: hidden; position: absolute; left: 250px; top: 150px;"> 
+            <img src="images/preprint-bank-atm-receipt-paper-roll.jpg" style="width:115%; top: -17px; position: relative; "> 
+        </div>
+
+        <div class="printerConfirmBtn"><a class="printerConfirmBtnTxt" ng-click="modalInfoboxHide()">{{interfaceLabels[okayy]}}</a> </div>
+    </div>
+
+</div>
+

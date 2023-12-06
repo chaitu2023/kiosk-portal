@@ -1,0 +1,24 @@
+<div class="guestusermodal_main_container">
+	<p class="guestusermodal_heading">{{interfaceLabels[guestUserModal.benefitsofRegn]}}</p>
+	<div id="benefitConatainerID" class="guestusermodal_benefits modal-slide-in-left">
+		<div id="benefitConatainerIDSub" class="benefitConatainer {{langClass}}">
+			<p class="caption {{langClass}}"> <img src="./images/ihl-point.ico" class="icoImage" />{{interfaceLabels[guestUserModal.borPoint1]}} </p>	
+			<p class='caption1'> <img src="./images/ihl-point.ico" class="icoImage"/>{{interfaceLabels[guestUserModal.borPoint2]}} </p>
+			<p class='caption2'> <img src="./images/ihl-point.ico" class="icoImage" />{{interfaceLabels[guestUserModal.borPoint3]}}</p>
+			<p class='caption3'> <img src="./images/ihl-point.ico" class="icoImage" />{{interfaceLabels[guestUserModal.borPoint4]}}</p>
+		</div>
+	</div>
+
+	<div class="guestusermodal_confirm_container modal-slide-in-left">
+		<p class="guestusermodal_confirm_texts {{langClass}} ">{{interfaceLabels[guestUserModal.areyouSure]}}<b class="guestusermodal_confirm_small_texts">{{interfaceLabels[guestUserModal.guestUser2]}}</b></p>
+	</div>
+
+	<a  class="guestusermodal_continue_guestuser_button button-enter-right" ng-click="guestUserModal.checkForKioskPaymentMode()">
+        <span class="guestusermodal_continue_guestuser_button_text">{{interfaceLabels[guestUserModal.yesContinue]}}</span>
+    </a>
+
+	<a class="guestusermodal_register_button button-enter-right" ng-click="loginButtonClick()">
+        <span class="guestusermodal_register_button_text {{langClass}} ">{{interfaceLabels[guestUserModal.noRegister]}}</span>
+    </a>
+
+</div>

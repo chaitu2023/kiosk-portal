@@ -1,0 +1,80 @@
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+
+.column {
+  float: left;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+  .column {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  background-color: #dbdbdb;
+  text-align: center;
+  border-radius: 15px;
+  width: 200px;
+  height: 195px;
+  margin-left: 5px;
+}
+.speciality_name{
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -8px;
+    margin-bottom: 2px;
+}
+.doctorsdisblingbutton{
+  pointer-events: none;
+}
+.doctorsenablingbutton{
+  pointer-events: auto;
+}
+
+button[disabled]{
+  opacity: 0.5;
+}
+
+</style>
+<div>
+ <div id="slide_title" style = "position: absolute;">{{interfaceLabels[telemedTitle]}}</div>
+  <div id="slide_subtitle" >{{interfaceLabels[specialistSubTitle]}}</div>
+
+  <!-- List of Specialists starts  !-->
+  <div id = "specialits_list" class="row {{specialists}} scrollbar" style="height: 442px; width: 684px;margin-top: 32px;margin-left: 60px;">
+    <div ng-repeat = "specialists_category in specialists">
+      <button id="{{specialists.specialist_name}}" class="column  {{langClass}}" style = "margin-top: 15px;background-color: Transparent;background-repeat:no-repeat;border: none;outline:none;color:#6d6d6d;" ng-disabled="specialists_category.avaliable" ng-click = "questionnaireModalBox(specialists_category.id, specialists_category.name,specialists_category)">
+        <div class="card" >
+          <p class = "speciality_name">{{specialists_category.name}}</p>
+          <img src={{specialists_category.webicon_file}} alt="Avatar" style="width:135px; height: 135px; border-radius: 50%;">
+          <p data-ng-if="specialists_category.avaliable" style="margin-top: 0px;color: red;">{{interfaceLabels[docnotavail]}}</p>
+        </div>
+      </button>
+    </div>
+  </div>
+  <!-- List of Specialists starts  !-->
+</div>

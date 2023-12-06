@@ -1,0 +1,20 @@
+{
+  "temp3.results": "نتائج",
+  "temp3.continue": "جاری",
+  "temp3.calibration": "قطر سخبی",
+  "temp3.tempScale": "جسمانی درجہ حرارت پیمانہ",
+  "temp3.status.healt": "ٹھیک",
+  "temp3.status.accep": "قابل قبول",
+  "temp3.status.fever": "بخار",
+  "temp3.status.highfever": "تیز بخار",
+  "temp3.roomTemp": "کمرا",
+  "temp3.wristTemp": "جسم",
+  "temp3.temperature": "درجہ حرارت",
+  "temp3.bodyTemp": "جسمانی درجہ حرارت",
+  "temp3.information": "معلومات",
+  "temp3.parameter": "پیرامیٹر",
+  "temp3.yourscore": "آپ کا اسکور",
+  "temp3.OverallStatus": "مجموعی حیثیت",
+  "temp3.finalResult": "حتمی نتیجہ",
+  "temp3.checkTempagain": " درجہ حرارت ایک بار پھر چیک کریں"
+}

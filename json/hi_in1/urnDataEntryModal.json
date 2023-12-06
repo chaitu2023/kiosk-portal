@@ -1,0 +1,19 @@
+{
+    "urnModal.urnSlideTitle": "Enter Your Urine Test Value",
+    "urnModal.selectInput": "Select",
+    "urnModal.absenceInput": "Absence",
+    "urnModal.presenceInput": "Presence",
+    "urnModal.nilInput": "Nil",
+    "urnModal.leukocytesLabel": "Leukocytes",
+    "urnModal.nitriteLabel": "Nitrite",
+    "urnModal.urobilinogenLabel": "Urobilinogen",
+    "urnModal.proteinLabel": "Protein",
+    "urnModal.bloodLabel": "Blood",
+    "urnModal.ketoneLabel": "Ketone",
+    "urnModal.bilirubinLabel": "Bilirubin",
+    "urnModal.glucoseLabel": "Glucose",
+    "urnModal.invalidText": "Invalid",
+    "urnModal.pHLabel": "pH",
+    "urnModal.specificGravityLabel": "Specific gravity",
+    "urnModal.urnNext": "NEXT"
+}

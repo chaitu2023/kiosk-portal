@@ -1,0 +1,362 @@
+<style>
+.tele_consultation_main_inner_container {
+    width: 96%;
+    height: 100%;
+    display: flex;
+    margin-top: -10px;
+    margin: auto;
+}
+
+.book_appointment_doctor_card {
+    width: 40%;
+    padding: 10px;
+}
+
+.book_appointment_doctor_card_inner {
+    width: 100%;
+    height: 310px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #e6e6e6;
+    box-shadow: 4px 4px 4px #AFAFAF, -3px -3px 1px white;
+}
+
+.book_appointment_doctor_info {
+    margin-top: -15px;
+}
+
+.book_appointment_doctor_name {
+    color: #208ad6;
+    font-size: 18px;
+}
+
+.book_appointment_doctor_experience {
+    color: #828385;
+    margin-top: -10px;
+    font-family: LatoBold;
+}
+
+.book_appointment_doctor_speciality {
+    margin: 0px;
+    padding: 0px;
+}
+
+.book_appointment_doctor_fees {
+    color: #828385;
+    font-family: LatoBold;
+}
+
+.image-cover {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 10px;
+    border: 1px solid #579bcd;
+    box-shadow: 0px 0px 12px #fff;
+
+    object-fit: cover;
+    object-position: center right;
+}
+
+.speciality_background {
+    padding: 5px;
+    background-color: #828385;
+    border-radius: 6px;
+    color: #fdfdfd;
+    margin: 0px 0px 5px 5px;
+    text-align: center;
+    list-style: none;
+    display: inline-flex;
+    font-family: LatoItalic;
+    text-transform: capitalize;
+}
+
+.language_background {
+    padding: 5px;
+    background-color: #3d9ae2;
+    border-radius: 15px;
+    color: #fdfdfd;
+    margin: 0px 0px 5px 5px;
+    text-align: center;
+    list-style: none;
+    display: inline-flex;
+}
+
+.appointment_slot_container {
+    height: 265px;
+    border: 1px solid;
+}
+
+.slot-time {
+    background-color: #5297ca;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 6px;
+    /*box-shadow: 5px 0px 12px #fff;*/
+    list-style: none;
+    display: inline-flex;
+    font-size: 14px;
+}
+
+.oddSlots {
+    padding: 5px;
+}
+
+.evenSlots {
+    background-color: #c3c3c39c;
+    padding: 5px;
+}
+
+.book_appointment_doctor_rating {
+    color: #208ad6;
+}
+
+.book_appointment_ava_slot_card {
+    width: 60%;
+    padding: 10px;
+}
+
+.book_appointment_ava_slot_card_inner {
+    width: 100%;
+    height: 310px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 4px 4px 4px #AFAFAF, -3px -3px 1px white;
+}
+
+/*.book_appointment_ava_slot_title{
+            width: 100%;
+            display: flex; 
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden; 
+            text-align: center;
+            pointer-events: auto;
+}
+.book_appointment_ava_slot_title::-webkit-scrollbar {
+            width: 0;
+}*/
+
+#book_appointment_title_container {
+    margin: auto;
+}
+
+#book_appointment_title_container::-webkit-scrollbar {
+    display: none;
+}
+
+#book_appointment_title_container::-webkit-scrollbar-track {
+    display: none;
+}
+
+#book_appointment_title_container::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+#book_appointment_title_content {
+    white-space: nowrap;
+}
+
+.book_appointment_ava_slot_title button {
+    display: inline-block;
+    min-width: 130px;
+    height: auto;
+    background-color: #5297ca;
+    color: #fff;
+    box-shadow: 2px 2px 2px #AFAFAF, -1px -1px 1px white;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    text-transform: capitalize;
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    pointer-events: auto;
+    height: 30px;
+}
+
+.bookAppointment_date_btn_active {
+    background-color: #115088 !important;
+}
+
+.book_appointment_ava_slot_title button:disabled {
+    background-color: #d3d3d3;
+    color: #000;
+}
+
+.book_appointment_ava_slot_title_left_arrow {
+    float: left;
+}
+
+.book_appointment_ava_slot_title_right_arrow {
+    float: right;
+}
+
+.ava_slots {
+    padding: 5px;
+    text-transform: capitalize;
+}
+
+.time_slot_container {
+    margin: 0px;
+    padding: 0px;
+}
+
+.unava_slots {
+    margin: 10px;
+    color: #02426f;
+    font-family: LatoItalic;
+}
+
+.tele_consultation_class_slots_time_slot_active {
+    background-color: #115088;
+}
+
+.book_appointment_ava_slot {
+    top: 10px;
+    height: 248px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 0px 0px 10px 10px;
+}
+
+#book_appointment_ava_slot_scroll {
+    padding: 0px 0px;
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+}
+
+.left-arrow {
+    float: left;
+    margin-left: 20px;
+    margin-top: 8px;
+    color: grey;
+}
+
+.right-arrow {
+    float: right;
+    margin-right: 20px;
+    margin-top: 8px;
+    color: grey;
+}
+
+.msg {
+    display: block;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/*#calendar_btn_1 {
+    position: absolute;
+    right: 7px;
+    top: 83%;
+    min-width: 50px !important;
+    outline: none;
+}*/
+
+#calendar_btn_2 {
+    display: inline-block;
+    height: auto;
+    background-color: #5297ca;
+    color: #fff;
+    box-shadow: 2px 2px 2px #AFAFAF, -1px -1px 1px white;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    text-transform: capitalize;
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    pointer-events: auto;
+    position: absolute;
+    right: 7px;
+    top: 83%;
+    min-width: 50px !important;
+    outline: none;
+}
+#selected_date {
+    position: relative;
+    float: left;
+    padding: 20px;
+    font-weight: bold;
+    top: 7px;
+    left: 3px;
+}
+</style>
+<div class="tele_header_container">
+    <img class="tele_header_image" src="./images/telmed.png">
+    <span class="tele_header_text"> Subscribe Class </span>
+</div>
+<div class="tele_main_container">
+    <div class="tele_consultation_main_inner_container" ng-show="showMsg == false">
+        <div class="book_appointment_doctor_card">
+            <div class="book_appointment_doctor_card_inner">
+                <img ng-show="imgLoading == false" src="{{selectedCourse['course_img_url']}}" class="image-cover">
+                <i ng-show="imgLoading == true" class="{{course_icons}}" style="color: #208ad6; font-size: 100px;" class="image-cover"></i>
+                <div class="book_appointment_doctor_info">
+                    <p class="book_appointment_doctor_name"> {{selectedCourse['title']}} <br> {{selectedCourse['course_type']}} </p>
+                    <p class="book_appointment_doctor_experience"> Provider : {{selectedCourse['provider']}} </p>
+                    <ul class="book_appointment_doctor_speciality">
+                        <li class="speciality_background" ng-repeat="speciality in selectedCourse['consultant_speciality']"> {{speciality}} </li>
+                    </ul>
+                    <p class="book_appointment_doctor_fees">Fees: &#8377;{{selectedCourse.course_fees}}<br>Fees For: {{selectedCourse.fees_for}}</p>
+                    <div class="book_appointment_doctor_rating">
+                        <span ng-repeat="x in doctorRatingsArray track by $index">
+                            <i ng-class="{'fa fa-star':(x == 1) , 'fa fa-star-o':(x == 0) ,'fa fa-star-half-o':(x == 0.5)}"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="book_appointment_ava_slot_card">
+            <div class="book_appointment_ava_slot_card_inner">
+                 <div id= "book_appointment_title_container" class="book_appointment_ava_slot_title" ng-show="_isDateSelected == false"> 
+                        <div id="book_appointment_title_content">
+                            <div id="datepicker"></div>
+                            <!-- <button id="calendar_btn_1" ng-click="okButtonClick()">OK</button> -->
+                        </div>
+                 </div>
+                <div id="book_appointment_ava_slot" class="book_appointment_ava_slot" ng-show="_isDateSelected == true">
+                        <div id="book_appointment_ava_slot_scroll"> 
+
+                            <div class="ava_slots" ng-repeat="slot_type in  ['morning','afternoon','evening','night']" ng-class="{'oddSlots': slot_type == 'morning' || slot_type == 'evening', 'evenSlots':slot_type == 'afternoon' || slot_type == 'night'}">
+                                <span>{{slot_type}}</span>
+                                <div  ng-if="selectedCourseTimeSlots[slot_type].length > 0">
+                                    <ul class="time_slot_container"> 
+                                        <li class="slot-time" ng-repeat="time_slot in selectedCourseTimeSlots[slot_type]"
+                                        ng-click="selectTimeSlot(time_slot)" ng-class="{'tele_consultation_class_slots_time_slot_active':course_time == time_slot}"> 
+                                            {{time_slot}}
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="unava_slots"  ng-if="selectedCourseTimeSlots[slot_type].length == 0">
+                                    No Slots Available
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                <button id="calendar_btn_2" ng-show="_isDateSelected == true" ng-click="changeDateBtnClick()">Change Date</button>
+                <div id="selected_date" ng-show="_isDateSelected == true">Duration: {{selectedDate | date}} - {{endDate | date}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="tele_consultation_main_inner_container" ng-show="showMsg == true">
+        <div class="msg">{{containerMessage}}</div>
+    </div>
+</div>
+<a class="global_previous_page_button" ng-class="{'button-enter-left' : prevIsVisible, 'button-exit-left' : !prevIsVisible}" ng-show="prevIsVisible" ng-click="prevButtonClick()">
+    <span class="global_previous_page_text">Back</span>
+</a>
+<a class="global_continue_next_button" ng-class="{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible" ng-click="nextButtonClick()">
+    <span class="global_continue_next_button_text"> Continue </span>
+</a>

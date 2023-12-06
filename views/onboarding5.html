@@ -1,0 +1,10 @@
+<div class="height-title" style="">{{interfaceLabels[slideSubTitle]}}<br><span class="current-of-total">{{interfaceLabels[currentOfTotal]}}</span></div>
+ <div ng-class="(directiveClickable) ? '' : 'no-click'" style="">
+    <waist-circumference-numpad waistCircumferenceset="nextVisible"></waist-circumference-numpad>
+</div>
+<!--<a class="global_previous_page_button  {{prevIsVisible ? buttonEnterLeft : buttonExitLeft}}" ng-show="prevIsVisible" ng-click="backButtonOut()">
+    <span class="global_previous_page_text">Skip</span>-->
+</a>
+<a class="global_continue_next_button {{nextVisible ? buttonEnterRight : buttonExitRight}}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[nextSlideText]}}</span>
+</a>

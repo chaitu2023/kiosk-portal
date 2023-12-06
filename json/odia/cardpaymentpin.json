@@ -1,0 +1,10 @@
+{
+    "cardPaymentPin.title": "Card Payment",
+    "cardPaymentPin.instruction_1": "Enter your PIN Number",
+    "cardPaymentPin.instruction_2": "PIN Pad available just next to your card",
+    "cardPaymentPin.instruction_3": "Press the Green",
+    "cardPaymentPin.instruction_4": "Button on the Pin Pad to Proceed.",
+    "cardPaymentPin.success_msg_1": "Payment Successful.",
+    "cardPaymentPin.failure_msg_1": "Payment Authorization Failure!",
+    "cardPaymentPin.failure_msg_2": "Payment gateway failed!"
+}

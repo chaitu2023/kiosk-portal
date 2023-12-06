@@ -1,0 +1,20 @@
+{
+    "spo2three.spo2": "SpO2",
+    "spo2three.results": "ਨਤੀਜੇ",
+    "spo2three.continue": "ਜਾਰੀ ਰੱਖੋ",
+    "spo2three.spo2.percent": "%",
+    "spo2three.spo2level": "SpO2 ਆਕਸੀਜਨ ਪੱਧਰ",
+    "spo2three.checkSpo2again": "SpO2 ਦੁਬਾਰਾ ਵੇਖੋ",
+    "spo2three.information": "ਜਾਣਕਾਰੀ",
+    "spo2three.parameter": "ਮਾਪਦੰਡ",
+    "spo2three.yourscore": "ਤੁਹਾਡਾ ਸਕੋਰ",
+    "spo2three.OverallStatus": "ਸਮੁੱਚੀ ਸਥਿਤੀ",
+    "spo2three.spo22scale": "SpO<sub>2</sub> ਪੈਮਾਨਾ",
+    "spo2three.finalResult": "ਅੰਤਿਮ ਨਤੀਜਾ",
+    "spo2three.status.healthy": "ਤੰਦਰੁਸਤ",
+    "spo2three.status.acceptable": "ਸਵੀਕਾਰਯੋਗ",
+    "spo2three.status.atrisk": "ਜ਼ੋਖਮ ਵਿੱਚ",
+    "spo2three.status.low": "ਘੱਟ",
+    "spo2two.in.progress": "SpO2 is in Progress...",
+    "spo2three.status.spo2_check_healthcare_provider": "Check With Healthcare Provider"
+}

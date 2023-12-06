@@ -1,0 +1,234 @@
+.signup_modal_first_name_input_box_fkplus input{
+    top: 40px!important;
+    left: 120px !important;
+    height: 59px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+    border: 2px solid #808080d1;
+    color: #808080d1 !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: 10px !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 290px !important;
+    display: block !important;
+    font-size: 18px !important;
+    position: absolute !important;
+    background: white !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.signup_modal_first_name_input_box_fkplus div{
+    top: 39px!important;
+    left: 10px !important;
+    height: 54px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    border: none !important;
+    color: gray !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: 0px !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 326px !important;
+    display: none !important;
+    font-size: 15px !important;
+    position: absolute !important;
+    background: transparent !important;
+    z-index: -10 !important;
+    pointer-events: none;
+    line-height: 0px !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.signup_modal_last_name_input_box_fkplus input{
+    top: 23px!important;
+    left: 120px !important;
+    height: 59px !important;
+    padding-right: 100px !important;
+    padding-left: 10px !important;
+    border: 2px solid #808080d1;
+    color: #808080d1 !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: 10px !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 290px !important;
+    display: block !important;
+    font-size: 18px !important;
+    position: absolute !important;
+    background: white !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.signup_modal_last_name_input_box_fkplus div{
+    top: 39px!important;
+    left: 10px !important;
+    height: 54px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    border: none !important;
+    color: gray !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: 0px !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 326px !important;
+    display: none !important;
+    font-size: 15px !important;
+    position: absolute !important;
+    background: transparent !important;
+    z-index: -10 !important;
+    pointer-events: none;
+    line-height: 0px !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.signup_modal_create_account_button_container_fkplus {
+    width: 270px;
+    top: 23px;
+    position: absolute;
+    height: 158px;
+    left: 415px;
+    font-family: 'LatoRegular';
+    background-color: #dbdbdb;
+    border-radius: 10px;
+}
+
+#terms_main_container {
+    padding: 0px 0px;
+    text-align: center;
+    height: 345px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* .fkplus_scanner_instruction_container_text {
+    margin-left: 20px;
+    font-family: LatoRegular;
+    color: #808080;
+    font-size: 16px;
+    float: left;
+    margin-top: 12px;
+}
+
+.fkplus_scanner_instruction_container {
+    width: 499px;
+    top: 250px;
+    position: absolute;
+    height: 85px;
+    left: 100px;
+    font-family: 'LatoRegular';
+    background-color: #dbdbdb;
+    border-radius: 10px;
+} */
+
+.fkplus_scanner_instruction_container_text {
+    margin-left: 20px;
+    font-family: LatoRegular;
+    color: #202020;
+    font-size: 20px;
+    float: left;
+    margin-top: 25px;
+    line-height: 1.5;
+}
+
+.fkplus_scanner_instruction_container {
+    width: 575px;
+    top: 140px;
+    position: absolute;
+    height: 150px;
+    left: 65px;
+    font-family: 'LatoRegular';
+    background-color: #dbdbdb;
+    border-radius: 10px;
+}
+.proceed_btn {
+    top: 330px;
+    right: 280px;
+    position: fixed;
+    height: 50px;
+    border-top: 3px solid #5dbcff;
+    border-left: 3px solid #5fa4d4bf;
+    border-bottom: 3px solid #50a4e0bf;
+    width: 180px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: 3px solid #5fa4d4bf;
+    box-shadow: 4px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#5aa4d9d1,#3989c3de, #0261c2f2);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 20px;
+}
+
+.loader_img {
+    /* top: 10px;
+    left: 315px; */
+    width: 35px;
+    height: 35px;
+    z-index: 18;
+    position: absolute;
+    background: transparent url(../images/keyboard_dialog_loading_icon06222012.png) top left no-repeat;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    left: 330px;
+    /* display: block; */
+    top: 140px;
+}
+
+.loader_txt {
+    /* display: inline-block; */
+    font-size: 25px; 
+    text-align: center; 
+}
+
+.fkplus_qrcode {
+    display: inline-block;
+}
+  
+.fkplus_qrcode.title {
+    margin-top: 25px;
+    margin-left: 75px;
+    font-size: 30px;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,20 @@
+{
+    "images" : [
+      "images/bp_instruction_arm_sequence20121016_wide.png",
+      "images/weight_instruction_seatcenter_sequence_SH20121015.png",
+      "images/weight_instruction_feetbar_sequence_SH20121015.png",
+      "images/hands-sprite-15-2-20.png",
+      "images/sitting-sprite-2014-12-29.png",
+      "images/tests_instruction_circle20121009_transparent_wide_OLD.png",
+      "images/bp_instruction_palm_hand20121009.png",
+      "images/bp_instruction_palm_background20121009_wide.png",
+      "images/bp_instruction_relax_higiguy20121009_wide.png",
+      "images/bp_instruction_relax_umbrella20121009.png",
+      "images/bp_instruction_relax_beach20121009_wide.png",
+      "images/green-wave.gif",
+      "images/bmc-gauge-loader-holder.png"
+    ],
+    "audio" : []
+
+
+}

@@ -1,0 +1,14 @@
+{
+    "zugEcg1.singleLeadecgtitledisp": "ECG - একক লীড",
+    "zugEcg1.threeLeadecgtitledisp": "ECG - তিনিটা লীড",
+    "zugEcg1.sixLeadecgtitledisp": "ECG - ছয়টা লীড",
+    "zugEcg1.sitStraight": "পোনকৈ বহক",
+    "zugEcg1.restWrist": "আপোনাৰ মণিবন্ধ হেণ্ডেলত ৰাখা",
+    "zugEcg1.placeleftleg": "আপোনাৰ বাওঁ ভৰি পেডেলত ৰাখক",
+    "zugEcg1.placebothleg": "ক্লেম্পবোৰ আপোনাৰ দুয়োখন ভৰিৰ ওপৰত ৰাখক",
+    "zugEcg1.skipTest": "বাদ দিয়ক",
+    "zugEcg1.startTest": "শুরু পরীক্ষা",
+    "zugEcg1.EcgTestWillBegin": "এই পৰীক্ষা আৰম্ভ হ'ব যেতিয়া আপোনাৰ হাত আৰু ভৰি সঠিক স্থানত থাকে",
+    "zugEcg1.keepHandsProper": "অনুগ্ৰহ কৰি আপোনাৰ হাত সঠিকভাৱে ৰাখক",
+    "zugEcg1.keepLegsProper": "অনুগ্ৰহ কৰি আপোনাৰ ভৰি খন সঠিকভাৱে ৰাখক"
+}

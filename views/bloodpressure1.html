@@ -1,0 +1,55 @@
+<!-- <div id="slide_title" higi_resource_html="global.blood.pressure">{{interfaceLabels[slideTitle]}}</div>
+<div id="slide_subtitle" higi_resource_html="global.instructions">{{interfaceLabels[slideSubTitle]}}</div>
+<div id="bloodpressure_instructions_pane">
+    <div class="instruction warning" ng-bind-html="interfaceLabels[bpRedoError]" ng-if="retesting"></div>
+    <bp-instruction-arm promisename="bpAnimationArmReady"></bp-instruction-arm>
+    <bp-instruction-palm promisename="bpAnimationPalmReady"></bp-instruction-palm>
+    <bp-instruction-relax promisename="bpAnimationRelaxReady"></bp-instruction-relax>
+</div>
+
+<div class="skip_test" style="bottom: 43px;">
+	<button class="skip_test_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}}</button>
+</div>
+
+<a id="higi_control_right_ng_btn" class="right_control_btn {{langClass}} {{(nextVisible) ? buttonEnterRight : buttonExitRight}}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="{{langClass}} {{interfaceLabels[nextSlideText]}}">{{interfaceLabels[nextSlideText]}}</span>
+</a>
+
+
+<div id="bp_instruction_disclaimer">
+    <span higi_resource_html="bloodpressure01.disclaimer">{{interfaceLabels[bpDisclaimer]}}</span>
+</div> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,400;1,700&display=swap" rel="stylesheet"> -->
+<!-- <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'> -->
+
+<div class="bp_instructions_header_container">
+	<img class="bp_instructions_header_image" src="./images/Icons-32.png">
+	<h1 class="bp_instructions_header_text">{{interfaceLabels[slideTitle]}}</h1> 
+</div>
+
+<div class="bp_instructions_main_container">
+	<p class="bp_instructions_heading" >{{interfaceLabels[slideSubTitle]}}</p>
+	<div id="bloodpressure_instructions_pane">
+	    <div class="instruction warning" style="top: 225px;" ng-bind-html="interfaceLabels[bpRedoError]" ng-if="retesting"></div>
+	    <bp-instruction-arm promisename="bpAnimationArmReady"></bp-instruction-arm>
+	    <bp-instruction-palm promisename="bpAnimationPalmReady"></bp-instruction-palm>
+	    <bp-instruction-relax promisename="bpAnimationRelaxReady"></bp-instruction-relax>
+	</div>
+	<p class="bp_instructions_bottom_heading">{{interfaceLabels[slideIntructionFour]}}</p>
+</div>
+<!-- <div class="skip_test" style="bottom: 43px;">
+	<button class="skip_test_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}} </button>
+</div> -->
+<a class= "global_skip_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()">
+    <span class="global_skip_button_text" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}}</span>
+</a>
+<a class= "global_continue_next_button" ng-class = "{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[instructionMinus]}}</span>
+</a>
+
+<div class="bp_warning_modal {{bpModalFadeClass}}" ng-show="showBPWarning">
+    <div class="bp_warning_modal_box">
+        <bp-warning-modal-box ng-show="showBPWarningModalBox"></bp-warning-modal-box>
+    </div>
+    <a class="higi_overlay_mask"></a>
+</div>

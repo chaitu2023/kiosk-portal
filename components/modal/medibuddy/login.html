@@ -1,0 +1,114 @@
+<div class="login_modal_main_container">
+    <div ng-show="loginMEBModal.selectLogin" class="login_modal_input_field_container {{loginMEBModal.EmailAndPasswordDivisionClass}}">
+
+        <div id="login_meb_username" ng-click ="loginMEBModal.disableQuickLoginOptionSection('login_meb_username','login_modal_userId_section')">
+
+            <p class="signup_meb_modal_mobile_number_heading" style="margin-top:-35px !important;">Mobile Number (Required)</p>
+
+            <higi-text-field field="loginMEBModal.fields[0]" class="login_meb_modal_email_input_box"></higi-text-field>
+
+            <div id="meb_login_username_loading_new" class="email_validation_loader"></div>
+            
+            <p id="register-first-screen-text"></p>
+            
+            <p id="login_mobile_error"></p>
+            
+            <p id="meb_login_username_error_newest3" ng-if="loginMEBModal.mobilefieldIsEmpty"> Required Input Field </p>
+            
+            <div id="login_username_error" ng-if="loginMEBModal.loginServerErrorVisible">{{interfaceLabels[loginMEBModal.loginServerError]}}
+            </div>
+            
+            <a id="login_password_submit_btn" class="login_modal_password_submission_btn {{loginMEBModal.loginBtnActive}}" ng-click="loginMEBModal.login()" ng-hide="loginMEBModal.submitting" >
+                <span>{{interfaceLabels[loginMEBModal.globalLogin]}}</span>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="login_modal_buttons_container ">
+        <a ng-show = "loginMEBModal.accountVisible">
+            <p class="login_modal_register_forgot_indicator_text">
+               {{interfaceLabels[loginMEBModal.CreatAcc]}}
+            </p>
+            <img class="login_modal_register_forgot_indicator_icon" src="./images/Icons-08.png"> 
+        </a>
+
+        <a ng-show = "loginMEBModal.accountVisible" ng-class = "{'button-enter-right' : loginMEBModal.accountVisible, 'button-exit-right' : !loginMEBModal.accountVisible}" class="login_modal_register_forgot_password_button" style="top: 6px!important;right:-21px!important;width:185px!important;" ng-click="loginMEBModal.createNewIHLAccount(loginMEBModal.fields[0])">
+            <span class="login_modal_register_forgot_password_button_text">{{interfaceLabels[loginMEBModal.CreatAccbuttonTxt]}}</span>
+        </a>
+    </div>
+
+    <div ng-show = "loginMEBModal.quickLoginOptions" class="login_modal_quick_options_container">
+        <p class="login_modal_quick_options_header_text">{{interfaceLabels[loginMEBModal.quickLoginOp]}}</p>
+        <div class="login_modal_quick_options_sso_login_container">
+            <img src="./images/guestuser.jpg" class="login_modal_quick_options_image_class"> 
+            <a class="login_modal_quick_options_button_class" ng-click="loginMEBModal.ssoUserLogin()">
+                 <span class="login_modal_quick_options_button_text_class">{{interfaceLabels[loginMEBModal.ssoLogin]}}</span>
+            </a>
+         </div>
+        <div class="login_modal_quick_options_fingerprint_container">
+           <img src="./images/Icons-12.png" class="login_modal_quick_options_image_class"> 
+           <a id = "fingerprintLogin" class="login_modal_quick_options_button_class" ng-click="proceedFingerPrintLogin()">
+                <span class="login_modal_quick_options_button_text_class">{{interfaceLabels[loginMEBModal.scanFinger]}}</span>
+           </a>
+        </div>
+           <p id="fp-not-connect" style="color: red; text-align: center; font-size: 18px; position: relative;top: 180px;"> {{interfaceLabels[loginMEBModal.devicenotConn]}}</p>
+        <div class="login_modal_quick_options_guest_user_container {{IHLTeleConsultSelected ? 'disable_guest_user_button' : 'enable_guest_user_button'}}">
+           <img src="./images/guestuser.jpg" class="login_modal_quick_options_image_class"> 
+           <a class="login_modal_quick_options_button_class" ng-click="loginMEBModal.guestUserLogin()">
+                <span class="login_modal_quick_options_button_text_class">{{interfaceLabels[loginMEBModal.guestUser]}}</span>
+           </a>
+        </div>
+    </div>
+
+
+    <div ng-show="loginMEBModal.emailSection" class="{{loginMEBModal.loginEmailSectionClass}}">
+        <div class="signup_meb_modal_progression_dots_main_container" style="margin-top: -145px;">
+           <span class="signup_meb_modal_progression_dots1"></span>
+           <span class="signup_meb_modal_progression_dots2"></span>
+           <span class="signup_meb_modal_progression_dots3"></span>
+        </div>
+        <div class="signup_meb_modal_email_address_division">
+            <p class="signup_meb_modal_email_address_heading">{{interfaceLabels[enteremail]}}</p>
+            <higi-text-field field="loginMEBModal.fields[1]" class="signup_meb_modal_email_address_input_box"></higi-text-field>
+            <div id = "signup_meb_email_loader" class="email_meb_address_validation_loader"></div>
+            <div id = "signup_meb_email_error" class="email_meb_address_validation_error">{{interfaceLabels[emailIDexissts]}}</div>
+            <div id = "signup_meb_email_srv_err" class="email_meb_address_validation_srv_err">{{interfaceLabels[sevrerr]}}</div>
+        </div>     
+        <a class="signup_modal_next_btn {{loginMEBModal.MobileSectionNextButtonClass}}" ng-click="loginMEBModal.NameEntrySection()" style="top: 60px !important;">
+            <span>{{interfaceLabels[loginMEBModal.globalNext]}}</span>
+        </a>
+    </div> 
+
+
+    <div ng-show="loginMEBModal.loginNameSection" class="{{loginMEBModal.loginNameSectionClass}}">
+        <div class="signup_meb_modal_progression_dots_main_container">
+           <span class="signup_meb_modal_progression_dots1"></span>
+           <span class="signup_meb_modal_progression_dots2"></span>
+           <span class="signup_meb_modal_progression_dots3"></span>
+        </div>
+        <div class="signup_modal_first_name_division">
+            <p class="signup_modal_first_name_heading">{{interfaceLabels[frnme]}}</p>
+            <small class="signup_modal_first_name_small_hint {{langClass}}">{{interfaceLabels[validatename]}}</small>
+            <higi-text-field field="loginMEBModal.fields[2]" class="signup_modal_first_name_input_box"></higi-text-field>   
+        </div> 
+
+        <div class="signup_modal_last_name_division">
+            <p class="signup_modal_last_name_heading">{{interfaceLabels[lnnme]}}</p>
+            <small class="signup_modal_last_name_small_hint {{langClass}}">{{interfaceLabels[validatename]}}</small>
+            <higi-text-field field="loginMEBModal.fields[3]" class="signup_modal_last_name_input_box"></higi-text-field>   
+        </div> 
+        
+        <p id="reg_error_info"></p>
+
+
+        <div id="meb_reg_username_loading_new" class="email_validation_loader"></div>
+        
+        <a class="signup_modal_first_last_name_next_btn {{loginMEBModal.firstLastNameSectionNextButtonClass}}" ng-click="loginMEBModal.createAccount()">
+            <span>{{interfaceLabels[loginMEBModal.globalSignup]}}</span>
+        </a> 
+    </div>
+          
+</div>
+
+

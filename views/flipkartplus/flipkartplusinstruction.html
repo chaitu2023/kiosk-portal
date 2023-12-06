@@ -1,0 +1,24 @@
+<div class="bp_instructions_header_container">
+	<img class="bp_instructions_header_image" src="./images/Icons-32.png">
+	<h1 class="bp_instructions_header_text">{{interfaceLabels[slideTitle]}}</h1> 
+</div>
+
+<div class="bp_instructions_main_container">
+	<p class="bp_instructions_heading" ></p>
+	<div id="bloodpressure_instructions_pane">
+		<div class="fkplus_instructions" style="width: 100%; height: 100%; margin-left: 20px;">
+			<img src="images/flipkart_plus/instruction1-qrcode.png" style="width: 30%;">
+			<img src="images/flipkart_plus/instruction2-camera.png" style="width: 30%;">
+			<img src="images/flipkart_plus/instruction3-scanner.png" style="width: 30%;">
+		</div>
+		<span style="font-size: 19px; display: flex; justify-content: center;">{{interfaceLabels[instruction]}}</span>
+	</div>
+</div>
+
+<a class="global_previous_page_button button-enter-right" ng-click="backButtonOut()">
+    <span class="global_previous_page_text">{{interfaceLabels[backText]}}</span>
+</a>
+
+<a class= "global_continue_next_button button-enter-right" ng-click="nextButtonOut()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[continueText]}}</span>
+</a>

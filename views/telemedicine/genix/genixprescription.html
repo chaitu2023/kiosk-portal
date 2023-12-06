@@ -1,0 +1,364 @@
+<style type="text/css">
+	#PrescrionTable {
+	  	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	  	border-collapse: collapse;
+	  	width: 100%;
+		overflow: hidden;
+	}
+
+#PrescrionTable td {
+  border: none;
+  padding: 5px;
+  text-align: center;
+  word-break: break-all;
+}
+#PrescrionTable tr:nth-child(even){/*background-color: #d8d8d8;*/}
+#PrescrionTable tr:nth-child(odd){/*background-color: #e6e6e6;*/}
+
+#PrescrionTable tr:hover {/*background-color: #ddd;*/}
+
+#PrescrionTable th {
+	 color: #2a76c4; 
+	 font-family: 'IntervalSansProCondSemiBoldRg';
+	 letter-spacing: 0.7px;	 
+	 text-align: center;
+	 padding-top: 5px;
+     padding-bottom: 5px;
+     border-bottom: 1px solid #CCC;
+}
+
+table{
+	border: 1px solid #CCC;
+    
+}
+
+.printBtn{
+	color: rgb(2, 97, 194);
+    border-radius: 20px;
+    font-size: 18px;
+    margin-top: 19px;
+    font-weight: bolder;
+    background-image: linear-gradient(#E6E6E6 55%, #FFFFFF);
+    background-color: #FEFEFE;
+    background-image: -webkit-linear-gradient(#FEFEFE 55%, #E6E6E6);
+    background-image: linear-gradient(#FEFEFE 55%, #E6E6E6);
+    border: 1px solid lightgrey;
+    border-radius: 40px;
+    line-height: 46px;
+    text-align: center;
+    color: #0261c2;
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    text-transform: uppercase;
+    text-shadow: 0px -1px 1px #fff;
+    background-color: white;
+    position: relative;
+    top: -13px;
+    padding-left: 51px;
+    padding-right: 51px;
+}
+.logoutBtn{
+	color: rgb(2, 97, 194);
+    border-radius: 20px;
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bolder;
+    background-image: linear-gradient(#E6E6E6 55%, #FFFFFF);
+    background-color: #FEFEFE;
+    background-image: -webkit-linear-gradient(#FEFEFE 55%, #E6E6E6);
+    background-image: linear-gradient(#FEFEFE 55%, #E6E6E6);
+    border: 1px solid lightgrey;
+    border-radius: 40px;
+    line-height: 46px;
+    text-align: center;
+    color: #0261c2;
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    text-transform: uppercase;
+    text-shadow: 0px -1px 1px #fff;
+    background-color: white;
+    position: relative;
+    top: -9px;
+    padding-right: 38px;
+    padding-left: 38px;
+
+}
+
+.Print_BtnShadow{
+   background-image: -webkit-linear-gradient(#E6E6E6 55%, #FFFFFF);
+    background-image: linear-gradient(#E6E6E6 55%, #FFFFFF);
+    height: 60px;
+    width: 165px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #F6F6F6;
+    border-radius: 50px;
+    top: 19px;
+    left:55px;
+}
+.Logout_BtnShadow{
+	background-image: -webkit-linear-gradient(#E6E6E6 55%, #FFFFFF);
+    background-image: linear-gradient(#E6E6E6 55%, #FFFFFF);
+    height: 60px;
+    width: 160px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #F6F6F6;
+    border-radius: 50px;
+    top: 16px;
+
+}
+.printBtn:focus, .dispenseBtn:focus, .goHomeBtn:focus{
+	outline:0;
+}
+.dispenseBtn, .goHomeBtn{	
+	border: 2px solid #4295d1;
+    background-color: #fff;
+    font-weight: 600;
+    border-radius: 15px;
+    letter-spacing: .7px;
+    padding: 7px 15px;
+}
+.patient_details{
+  margin-top: 2px;
+    margin-left: 110px;
+    /*font-weight:bold;*/
+    font-size: 16px;
+    text-shadow: 0px -1px 1px #fff;
+    font-family: IntervalSansProCondSemiBoldRg;
+ }
+ .patient_details_span{
+ color: black;
+ font-size: 16px;
+ font-family: IntervalSansProCondSemiBoldRg;
+}
+.box {
+  box-shadow: -2 0 1px rgba(34, 25, 25, 0.4);
+}
+
+/*.template_card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  background-color: #dbdbdb;
+  text-align: center;
+  border-radius: 15px;
+  width: 700px;
+  height: 700px;
+   margin-left: 5px;
+}*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  /*border-radius: 10px;*/
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc; 
+}
+hr { 
+  position: relative;
+  top: 102px;
+  margin-bottom: 0.5em;
+  margin-left: 45px;
+  margin-right: 45px;
+  border-style: inset;
+  border-width: 2px;
+} 
+footer{
+    background-color: white;
+    width: 100%;
+    height: 12%;
+    bottom: -5px;
+    position: fixed;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1;
+}
+
+</style>
+
+<!-- <div style="float: right; top: 15px; left: -140px; position: relative;"> 
+	<h1 style="color: #4295d1; font-family: 'IntervalSansProCondSemiBoldRg';"> Your prescription list </h1> 
+</div> -->
+<div class="scrollbar" style="height: 90%">
+<div id="splash_logo"></div>
+
+<div style="color: #2a76c4; top:30px; position: absolute; font-family: 'IntervalSansProCondSemiBoldRg';margin-left: 400px">
+	
+  <div class = "patient_details">DOCTOR NAME:-<span class ="patient_details_span">{{doctorname}}Sanjay S</span></div>
+  
+  <div class = "patient_details" >SPECIALITY:-<span class ="patient_details_span">{{doctorspec}}Cardiology</span></div>
+
+  <!-- <div class = "patient_details">EMAIL:-<span class ="patient_details_span">{{doctoremail}}</span></div> -->
+
+</div>
+
+
+
+<div>
+	<hr>
+</div>
+
+<div style="color: #2a76c4; top:100px; position: relative; font-family: 'IntervalSansProCondSemiBoldRg';margin-left: 52px">
+	
+  <div class = "patient_details">USERNAME:-<span class = "patient_details_span">{{patientName}}</span></div>
+
+  <div class = "patient_details" >AGE:-<span class = "patient_details_span">{{patienAge}}</span></div>
+  <div class = "patient_details">GENDER:-<span class = "patient_details_span">{{patientgender}}</span></div>
+
+  <div class = "patient_details">DATE:-<span class = "patient_details_span">{{dateTime}}</span></div>
+
+</div>
+
+
+<div style="position:relative;top: 27px; margin-left: 67px">
+	<img style="width:9%" src="images/prescription_rx.png">
+</div>
+	
+ <!-- <div id = "mvm_available">
+<div id ="MedicineVending">
+<div style="top: 0px; left: 300px;  position: relative;"> 
+		<div style="text-align: center;position: relative; top: 15px; left: -25px;"> 
+			<div class="dispenseAllBtnShadow" data-ng-show="dispenseMediAllBtnEnable && !offlineInfo">
+				<button class="dispenseAll"data-ng-show="dispenseMediAllBtnEnable" data-ng-click="dispenseMediAll()" > 
+					<span data-ng-show="dispenseMediAllBtnEnable" data-ng-click="dispenseMediAll()" > Dispense All </span> 
+				</button> 
+			</div>
+		</div>
+</div>
+<div style="text-align: center;">	
+	 <h1 style="color: #4295d1; font-family: 'IntervalSansProCondSemiBoldRg';"> Your prescription list </h1> 
+</div>
+<div data-ng-show="offlineInfo" style="text-align: center;">
+	<h1 calss="offlineInfoTxt"> </h1>
+</div>
+<div style="margin-top: 0px; height:310px; width:800px; overflow: hidden;">
+	<div style="width:80%; margin:auto;"  data-ng-hide="prescriptionListSync">			
+		<div style=" width: 10%; margin: auto; margin-top: 20%"> <img src="images/sandtimerpngg.png" width="100"/></div>
+		<div style="text-align: center;">  <p id="mvmSyncTxt"> </p> </div>
+
+	</div>
+	<div style="width:80%; margin:auto;" data-ng-show="prescriptionListSync">
+		<div  id="tele_prescriptionborder"> 
+			<div class="scrollbar" id="tele_style-2">
+			<table  id="PrescrionTable">
+				<tr> 
+					<th> Name </th>
+					<th> ID </th>		
+					<th> Cost </th>
+					<th> Prescribed <br> Quantity </th>
+					<th> Required Dispense <br> Quantity </th>
+					<th> Availability </th>
+					<th> Dispense </th>
+					<th data-ng-show="mvmStatus"> Status </th>
+				</tr>
+				<tr data-ng-repeat = "medi in prescriplist ">
+					<td> {{medi.ProductName}} </td>
+					<td> {{medi.medicineId}} </td>
+					<td> 
+						<span data-ng-if="(medi.ProductCost != '' || medi.ProductCost != undefined)"> {{medi.ProductCost}} </span>
+						<span data-ng-if="medi.ProductCost == '' || medi.ProductCost == undefined"> -- </span>
+					</td>
+					<td> {{medi.preQuantity}} <span data-ng-if="medi.MaterialType != undefined"> ({{ medi.MaterialType }}) </span> </td>
+					<td> {{ medi.quantity }} </td>
+					<td> 
+						<span data-ng-if="medi.StockLevel != undefined && medi.StockLevel >= medi.quantity">  <img src="images/tickimage.png" > </span> 
+						<span data-ng-if="medi.StockLevel != undefined && medi.StockLevel < medi.quantity">  {{medi.StockLevel}} </span> 
+						<span data-ng-if="medi.StockLevel == undefined">  -- </span>
+					</td>
+					<td> 
+						
+					   <button class="dispenseBtn" id="dispenseMedi_{{medi.Id}}"  data-ng-click="SingleMedicineRequest(medi)"> Dispense </button> 
+					</td>
+					<td data-ng-show="mvmStatus"> <span id="medi_{{medi.Id}}">  </span> </td>
+				</tr>  
+			</table>
+			</div>
+		</div>
+		<div style="text-align:center; margin-top: 15px;margin-left: -30px;" data-ng-show="true">			
+			<button class="goHomeBtn" style="color: #eeeeee; border-color: #dadada;
+    background-color: #166dc7;" data-ng-click="goHome()"> Go Home </button> 
+             <button class="printBtn" style="color: #eeeeee; border-color: #dadada;
+    background-color: #166dc7;" data-ng-click="printprescriptions()" >    Print   </button> 
+		</div> 
+	
+	</div>	
+</div>
+
+</div>
+</div> -->
+
+
+<div  id = "mvm_not_available" style="margin-top: 50px;margin-left: -5px">
+
+<!-- <div style="text-align: center;">	
+	<h1 style="color: #4295d1; font-family: 'IntervalSansProCondSemiBoldRg';">  </h1> 
+</div> -->
+	
+	<div style="width:80%; margin:auto;">
+		<div  id="tele_prescriptionoutline"> 
+			<div id="tele_style-2">
+			<table  id="PrescrionTable">
+				<tr> 
+					<th> Drug Name </th>
+					<th> Dosage </th>		
+					<th> Frequency </th>
+					<th> Instructions </th>
+				</tr>
+				<tr data-ng-repeat = "prescriplist in prescriptionLists">
+					<td> {{prescriplist.drug_name}} </td>
+					<td> {{prescriplist.dosage}} </td>
+					<td> {{prescriplist.frequency}}  </td>
+					<td> {{prescriplist.notes}}  </td>
+				</tr>  
+			</table>
+			</div>
+		</div>
+	<div>
+		<div style="color: #2a76c4; text-align: left; font-family: 'IntervalSansProCondSemiBoldRg'; font-size: 18px; text-shadow: 0px -1px 1px #fff; margin-left: 2px; position: relative; margin-bottom: -60px; top: 25px">Doctor's Signature:-<span class = "patient_details_span">{{doctors_lists.signature}}D.raja</span></div>
+	</div>
+
+	
+	</div>	
+<hr>
+</div>
+</div>
+
+		
+<footer class="box">
+	<div style="text-align:center; position: fixed; top: -10px; margin-left: 155px;" data-ng-show="true">	
+	<div class="Logout_BtnShadow">		
+	     <button class="logoutBtn" data-ng-click="goHome()"> Log out </button> 
+   </div>
+   <div class="Print_BtnShadow">
+        <button class="printBtn" data-ng-click="printprescriptions()" > Print </button> 
+   </div> 
+</footer>
+<!-- <h2 style="text-align : center; color: #4295d1; font-family: 'IntervalSansProCondSemiBoldRg'; font-size: 20px;"> We regret this Medicine Vending Machine is temporarily </h2>
+<h1 style="text-align : center; color: #4295d1; font-family: 'IntervalSansProCondSemiBoldRg'; font-size: 24px;">Out of Service </h1> 
+
+<div style="margin-left: 289px";>
+  <img src="images/mvm_not_available.png">
+  
+      <button class="goHomeBtn" style="color: #eeeeee; border-color: #dadada; position: relative; background-color: #166dc7; top: 0px; left: -525px; height: 122px; width: 135px; border-radius: 0 50% 50% 0;" data-ng-click="goHome()"> <span style="color: #fff; text-shadow: 1px 1px 2px #353535; position: relative; top: 0px; display: block; font-family: 'IntervalSansProCondSemiBoldRg'; font-size: 30px; line-height: 48px;"> Back </span> </button>
+</div> -->
+
+
+
+
+
+
+
+

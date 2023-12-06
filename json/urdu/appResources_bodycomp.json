@@ -1,0 +1,10 @@
+{
+    
+    "bmc01_audio01" : "sounds/urdu/vo6_weight&bmi.wav",
+    "bmc01_audio02" : "sounds/urdu/hand_instructions1.wav",
+    "bmc01_audio03" : "sounds/urdu/hand_instructions2.wav",
+    "bmc01_audio04" : "sounds/urdu/voice9_weight &bmi.wav",
+    "bmc01_audio05":"sounds/urdu/chkBmcAgain.wav",
+    "bmc01_audio06" : "sounds/urdu/restyourlegsonfootrest.wav"
+    
+}

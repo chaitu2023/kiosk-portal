@@ -1,0 +1,11 @@
+{
+    "spo2one.spo2": "SpO2",
+    "text.instructions": "নিৰ্দেশনাসমূহ",
+    "spo2one.skip": "বাদ দিয়ক",
+    "spo2one.startTest": "শুরু পরীক্ষা",
+    "spo2one.placeYourFingerProbably": "আপোনাৰ আঙুলি সঠিকভাৱে ৰাখক",
+    "spo2one.insertfinger": "Spo<sub>2</sub> ইলেক্ট্ৰডৰ ভিতৰত আপোনাৰ সোঁ হাতৰ তৰ্জনী আঙুলি দৃঢ়ভাৱে সুমুৱাওক",
+    "spo2one.instruct": "Place your finger gently and rest your palm here",
+    "spo2one.fingerinplaceBefore": " আপোনাৰ আঙুলি স্থানত থাকিলে এই পৰীক্ষা আৰম্ভ হ'ব",
+    "spo2one.fingerinplace": " আপোনাৰ আঙুলি স্থানত থাকিলে এই পৰীক্ষা আৰম্ভ হ'ব"
+}

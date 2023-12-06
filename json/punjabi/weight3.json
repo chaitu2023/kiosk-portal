@@ -1,0 +1,23 @@
+{
+  "weight3.results": "ਨਤੀਜੇ",
+  "weight3.information": "ਜਾਣਕਾਰੀ",
+  "weight3.parameter": "ਮਾਪਦੰਡ",
+  "weight3.yourscore": "ਤੁਹਾਡਾ ਸਕੋਰ",
+  "weight3.OverallStatus": "ਸਮੁੱਚੀ ਸਥਿਤੀ",
+  "global.underweight": "ਘੱਟ ਵਜ਼ਨ",
+  "global.normalweight": "ਸਧਾਰਨ",
+  "global.overweight": "ਜ਼ਿਆਦਾ ਵਜ਼ਨ",
+  "global.obese": "ਮੋਟੇ",
+  "weight3.weight": "ਵਜ਼ਨ",
+  "weight3.height": "ਕੱਦ",
+  "weight3.kgUnit": "in Kgs",
+  "weight3.feetUnit": "in feet",
+  "weight3.parameter.bmi.title": "ਬੀ.ਐਮ.ਆਈ.",
+  "weight3.body.mass.index": "ਸਰੀਰ ਪੁੰਜ ਇੰਡੈਕਸ",
+  "weight3.bmi.scale": "ਸਰੀਰ ਪੁੰਜ ਇੰਡੈਕਸ ਪੈਮਾਨਾ",
+  "weight3.underweight": "ਘੱਟ ਵਜ਼ਨ",
+  "weight3.normalweight": "ਸਧਾਰਨ",
+  "weight3.overweight": "ਜ਼ਿਆਦਾ ਵਜ਼ਨ",
+  "weight3.obese": "ਮੋਟੇ",
+  "weight3.check.Again": "ਵਜ਼ਨ ਤੇ ਬੀ.ਐਮ.ਆਈ. ਨੂੰ ਦੁਬਾਰਾ ਜਾਂਚੋ"
+}

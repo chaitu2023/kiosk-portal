@@ -1,0 +1,31 @@
+<div id="keyboard_login">
+    <div class="qr-modal-title {{langClass}}" ng-bind-html="interfaceLabels[title]" />
+    <div class="qr-modal-sub-title {{langClass}}" ng-bind-html="interfaceLabels[subTitle]"></div>
+    <div class="qr-left" ng-hide="showOverlay">
+        <div class="video-wrapper">
+       <!--<img src="images/qr-vid-mask-small.png" class="mask-img">-->
+            <video height="238" width="120" src="images/Mini_Phone_Animation_01.mp4" autoplay="autoplay" loop/>
+        </div>
+        <div class="instructions {{langClass}}">
+            <h2 ng-bind-html="interfaceLabels[instruction1Title]"></h2>
+            <p ng-bind-html="interfaceLabels[instruction1SubTitle]"  class="{{langClass}}"></p>
+        </div>
+    </div>
+    <div class="qr-right" ng-hide="showOverlay">
+        <div class="code-wrapper">
+            <qrcode version="5" error-correction-level="L" size="150" data="{{qrData}}" ng-if="qrData != undefined"></qrcode>
+        </div>
+        <a ng-click="showOverlayQr()">{{interfaceLabels[troubleScanning]}} <i class='fa fa-search-plus'></i></a>
+        <div class="instructions {{langClass}}">
+            <h2 ng-bind-html="interfaceLabels[instruction2Title]"></h2>
+            <p ng-bind-html="interfaceLabels[instruction2SubTitle]" class="{{langClass}}"></p>
+        </div>
+    </div>
+    <div class="qr-footer">
+        <a ng-hide="showOverlay" ng-click="endSession()" ng-bind-html="interfaceLabels[qrDone]"/>
+        <a ng-show="showOverlay" ng-click="hideOverlayQr()" ng-bind-html="interfaceLabels[qrBack]"/>
+    </div>
+    <div class="qr-overlay" ng-show="showOverlay">
+        <qrcode version="5" error-correction-level="M" size="300" data="{{qrData}}" ng-if="qrData != undefined"></qrcode>
+    </div>
+</div>

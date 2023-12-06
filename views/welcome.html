@@ -1,0 +1,104 @@
+<div class="welcome_screen_title">
+     {{interfaceLabels[welcomePageHeadlineText]}} 
+</div>
+<!-- <div id="splash_message01" class="splash_marketing_message en_us pusher">
+    <span class="splash_marketing_message_title" ng-bind-html="interfaceLabels[mainMessage]"></span>
+    </div> -->
+
+</div>
+<div class="{{bmcInstructionTransition}}">
+    <div id="welcome_btn_box_ng" class="pusher {{weightButtonClass}}" ng-hide="loadingModalVisible">
+        <a id="{{button.buttonId}}" class="splash_test_btn {{button.shake}} {{langClass}}" ng-click="selectMode(button)"
+            ng-repeat="button in buttons">
+            <div class="buttonBorder">
+                <div ng-show = "kioskWithPaymentMode && vitalPayment">
+                    <div class="price_border_line1"></div>
+                    <div class="price_border_line2">
+                        <p class="price_text">
+                           &#x20B9; {{button.price}}/-
+                        </p>
+                    </div>
+                </div>
+                <div id="" class="splash_test_copy_cnt {{langClass}}">
+                    <span
+                        ng-class="{'splash_test_copy_spo2':button.mode == 'spo2' , 'splash_test_copy':button.mode != 'spo2'}"
+                        ng-bind-html="interfaceLabels[button.label]"></span>
+                    <p class="welcome_description" ng-bind-html="interfaceLabels[button.description]">
+                        {{button.description}} </p>
+                </div>
+            </div>
+            <div ng-if="button.mode == 'bpw'" class="recommended-pos">
+                <div class="bpw-recommended"></div>
+                <span class="recommended-txt"> {{interfaceLabels[recommendedText]}} </span>
+            </div>
+        </a>
+    </div>
+    <p class="welcome_page_info_txt">{{interfaceLabels[welcomePageInstructionText]}}</p>
+    <p ng-show = "kioskWithPaymentMode && vitalPayment && kioskVitalTestCost !== 0" class="price_total_container" > {{interfaceLabels[pay_title]}}: 
+        <span class="price_total_text"> &#x20B9; {{kioskVitalTestCost}} /-<span>
+    </p>
+</div>
+<!-- <div id="splash_disclaimer" class="pusher">
+        <span>{{interfaceLabels[disclaimer]}}</span>
+    </div> -->
+<button class="global_disclaimer_button" ng-click="disclaimerButtonClick()">
+    <img class="global_disclaimer_button_icon" src="images/disclaimer_icon.png">
+    <small class="global_disclaimer_button_text">{{interfaceLabels[disclaimerText]}}</small>
+</button>
+
+
+<button class="new_disclaimer" style="position: relative; left: 600px; top: 85px;" ng-click="openMembershipModal()"> Membership Modal  </button>
+
+<div class="dummy_background_wrap"></div>
+<div id="higi_keyboard_close_btn" class="{{modalShowStateClass}} no-print close_btn_ref"
+    ng-click="disclaimermodalHide()">
+    <div class="closeIcon"></div>
+    <span higi_resource_html="global.close"></span>
+</div>
+
+<div id="disclaimerModal" class="disclaimer_modal pusher">
+    <p class="disclaimer_title">
+        {{interfaceLabels[disclaimetitle]}}
+    </p>
+    <span>{{interfaceLabels[disclaimer]}}</span>
+</div>
+
+<div ng-if="isMEBOrg || poweredByIHLShow" class="powerByIHL"> 
+   <span> {{interfaceLabels[poweredbyText]}} </span> <img src="images/auth_loading_bkg20120720.png" /> <span> {{interfaceLabels[ihlText]}} </span>
+</div>
+
+<a class="global_continue_next_button flow_begins_button" ng-show="nextVisible" ng-click="loginButtonClick()"
+    ng-class="{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" style="width: 200px;">
+    <span class="global_continue_next_button_text">{{interfaceLabels[WelcomeButtonStartTest]}}</span>
+</a>
+<!-- <a class="global_continue_next_button flow_begins_button" ng-show="nextVisible" ng-click="checkHardwareAvailablity()"
+    ng-class="{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" style="width: 200px;">
+    <span class="global_continue_next_button_text">{{interfaceLabels[WelcomeButtonStartTest]}}</span>
+</a> -->
+
+<!-- Tele-consultation button -->
+<div ng-if="!isMEBOrg" ng-class="{'disable_btn_click':(!enableTeleConsultation || enableTeleConsultation == null || teleMedDisabled)}" class = "teleconsult_main_button {{IHLTeleConsultMainButtonClass}}" ng-click = "ihlTeleconsultationButtonSelect()">
+    <img class="teleconsult_main_button_img" />
+    <span class="teleconsult_main_button_text {{langClass}} ">{{interfaceLabels[telemedTitle]}}</span>
+</div>
+
+<div ng-show="invasiveEnable" class = "invasive_test_button {{IHLInvasiveTestButtonClass}}" ng-click="invasiveSocketConnectioCheck()">
+    <img class="invasive_test_button_img" />
+    <span class="invasive_test_button_text">{{interfaceLabels[invasive]}}</span>
+
+    <div class="invasive_test_error_hint" ng-show="showInvasiveErrorHint">
+        <span class="invasive_test_error_hint_text">{{interfaceLabels[issueInvasive]}}</span>
+    </div>
+</div>
+
+
+
+<div class="invasive_circle" ng-show="selectedIvtListArray.length > 0">
+    <span class="invasive_circle_text">{{ selectedIvtListArray.length >= 10 ? selectedIvtListArray.length : '0'+selectedIvtListArray.length }}</span>
+</div>
+
+<div class="kiosk_offline_tooltip" ng-show="kioskApiNotAvailableTipVisible">
+    <div class="kiosk_offline_tooltip_text">
+        {{interfaceLabels[ivtOfflineText]}} 
+    </div>
+</div>

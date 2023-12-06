@@ -1,0 +1,71 @@
+<div class="temperature_instructions_header_container">
+	<img class="temperature_instructions_header_image" src="./images/Icons-34.png">
+	<p class="temperature_instructions_header_text">{{interfaceLabels[slideTitle]}}</p> 
+</div>
+
+<div data-ng-if="temperatureModuleName == 'Wrist'" class="temperature_instructions_main_container">
+	<div id="temperatureInProgressAnimatedGifImage">
+		<div class="teperature_change_val_txt"> 
+			<span class="">{{changeTemperatur}} <small class="temperature_unit"> °F </small></span> 			
+		</div>
+	</div>
+	<p class="temperature_inprogress_bottom_heading">{{interfaceLabels[slideSubTitle]}}</p>
+</div>
+
+<div data-ng-if="temperatureModuleName != 'Wrist'" class="temperature_instructions_main_container">
+	<div style="margin: 10px;width: 500px;height: 342px;overflow: hidden; border: 1px solid #ededed;margin-left: 277px;"> 
+		<iframe id="foreheadPrev" src="http://127.0.0.1:5000/" style="width: 100%;height: 336px;"></iframe>
+	</div>
+    <div style="border:5px solid #cdcdcd;position: relative;top: -324px;width: 200px;margin: 10px;height: 200px;left: 30px;border-radius: 54%;overflow: hidden;">    
+    	<img src="./images/gif/forehead-instruction.gif" style="
+    width: 100%;"> 
+	</div>
+	<div ng-hide="userinPosition || userCloser || userFarAway">
+		<p style="position: relative; top: -326px; left: 36px;font-family: LatoRegular;font-weight: 500;color: #808080;font-size: 18px;text-shadow: 0 1px 1px #fff;">{{interfaceLabels[intructionText1]}}</p>
+		<p style="position: relative;top: -326px;left: 60px;font-family: LatoRegular;font-weight: 500;color: #808080;font-size: 18px;text-shadow: 0 1px 1px #fff;">{{interfaceLabels[intructionText2]}}</p>
+	</div>
+	<div ng-show="userinPosition" style="margin-left: 26px;">
+		<p style="position: relative; top: -326px; left: 36px;font-family: LatoRegular;font-weight: 500;color: green;font-size: 18px;text-shadow: 0 1px 1px #fff;">Please remains in the </p>
+		<p style="position: relative;top: -326px;left: 60px;font-family: LatoRegular;font-weight: 500;color: green;font-size: 18px;text-shadow: 0 1px 1px #fff;">same position</p>
+	</div>
+	<div ng-show="userCloser" style="margin-left: 26px;">
+		<p style="position: relative; top: -326px; left: 36px;font-family: LatoRegular;font-weight: 500;color: red;font-size: 18px;text-shadow: 0 1px 1px #fff;">Please go backward</p>
+	</div>
+	<div ng-show="userFarAway" style="margin-left: 26px;">
+		<p style="position: relative; top: -326px; left: 36px;font-family: LatoRegular;font-weight: 500;color: red;font-size: 18px;text-shadow: 0 1px 1px #fff;">Please come forward</p>
+	</div>
+</div>
+
+<a class= "global_skip_button" ng-show="skipTestInFullTest" ng-click="skipTestClick()">
+    <span class="global_skip_button_text" ng-bind="interfaceLabels[skipTest]">{{interfaceLabels[skipTest]}}</span>
+</a>
+
+<div class="bp_warning_modal {{bpModalFadeClass}}" ng-show="showTempWarningModalBox">
+    <div class="bp_warning_modal_box">
+        <temperature-technical-issue-msg ng-show="showTempWarningModalBox"></temperature-technical-issue-msg>
+    </div>
+    <a class="higi_overlay_mask"></a>
+</div>
+
+<!-- <div id="slide_title">{{interfaceLabels[slideTitle]}}</div>
+<div id="slide_subtitle" class="weight02_subtitle">{{interfaceLabels[slideSubTitle]}}</div>
+<div class="higi_top_container"></div>
+
+<div style="margin-top: 85px; text-align: center;"> 
+
+<div id="temperatureInProgressAnimationGif"></div>
+
+
+<div style="position: relative; top: 315px;font-family: 'IntervalSansProBold'; color: #f7f7f7; left: 0px;"> 
+	<p>		
+		<span style="font-size: 30px;">{{changeTemperatur}}</span> 
+		<span style="font-size: 18px;"> °F </span> 
+	 </p>
+</div>
+
+
+
+</div>
+ -->
+
+	

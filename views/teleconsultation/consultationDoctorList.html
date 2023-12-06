@@ -1,0 +1,822 @@
+<style>
+    .tele_consultation_doctor_main_box {
+        width: 360px;
+        height: 248px;
+        /*display: inline-block;*/
+        border-radius: 10px;
+        margin: 10px 10px;
+        box-sizing: border-box;
+        padding: 10px;
+        /*background: #fff;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);*/
+        background-color: #e6e6e6;
+        box-shadow: 4px 4px 4px #AFAFAF, -3px -3px 1px white;
+        border: 2px solid #c0c0c0;
+        float: left;
+        margin-left: 17px;
+    }
+
+    .tele_consultation_doctor_main_box_icon {
+        display: inline-block;
+        height: 150px;
+    }
+
+    .tele_consultation_doctor_main_box_title {
+        font-family: 'latoBold';
+        color: #4d4d4d;
+    }
+
+    .tele_consultation_doctor_main_box_active {
+       /* color: white;
+        background-color: #208ad6;*/
+        border-color: #48acf5;
+    }
+
+    /* .tele_consultation_doctor_list_green_dot { */
+    /* border: 20px solid green; */
+    /* } */
+
+
+    .tele_consultation_doctor_list_green_dot {
+        margin: 0px 5px;
+        width: 14px;
+        height: 14px;
+        background-color: #ABFF00;
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+        /* -webkit-animation: blinkGreen 0.5s infinite; */
+        /* -moz-animation: blinkGreen 1s infinite; */
+        /* -ms-animation: blinkGreen 1s infinite; */
+        /* -o-animation: blinkGreen 1s infinite; */
+        /* animation: blinkGreen 1s infinite; */
+    }
+
+    @-webkit-keyframes blinkGreen {
+        from {
+            background-color: #ABFF00;
+        }
+
+        50% {
+            background-color: #AA0;
+            box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+        }
+
+        to {
+            background-color: #ABFF00;
+        }
+    }
+
+    .tele_consultation_doctor_list_red_dot {
+        margin: 0px 5px;
+        width: 14px;
+        height: 14px;
+        background-color: #F00;
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+    }
+    .tele_consultation_doctor_list_green_dot {
+        margin: 0px 5px;
+        width: 14px;
+        height: 14px;
+        background-color: green;
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: green 0 -1px 7px 1px, inset green 0 -1px 9px, green 0 2px 12px;
+    }
+    .tele_consultation_doctor_list_grey_dot {
+        margin: 0px 5px;
+        width: 14px;
+        height: 14px;
+        background-color: grey;
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: grey 0 -1px 7px 1px, inset grey 0 -1px 9px, grey 0 2px 12px;
+    }
+
+    .tele_consultation_doctor_details {
+        width: 100%;
+        height: 100px;
+        text-align: initial;
+        margin: 10px 0px;
+    }
+
+    .tele_consultation_doctor_details_image_container {
+        display: inline-block;
+        width: 34%;
+        height: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .tele_consultation_doctor_details_image_container_img {
+        /* height: 90px;*/
+        height: 90px;
+        width: 90px;
+        /*border: 1px solid;*/
+    }
+
+    .tele_consultation_doctor_details_container {
+        display: inline-block;
+        width: 64%;
+        height: 100%;
+        /* font-size: 15px; */
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+        /* bottom: -5px; */
+        /* position: absolute; */
+        /* top: -35px; */
+        margin-top: -10px;
+    }
+
+    #tele_consultation_doctor_main_container {
+        padding: 0px 0px;
+        text-align: center;
+        height: 345px;
+        width: 800px;
+        /* overflow: auto; */
+        /* margin-right: 23px; */
+        overflow:hidden;
+        position: relative;
+    }
+
+    .tele_consultation_doctor_details_container p {
+        text-align: left;
+        word-break: break-all;
+        /* margin: 1px; */
+        /* margin: 10px 10px 10px 10px; */
+        font-size: 13px;
+        font-family: 'latoHeavy';
+        color: #4d4d4d;
+        /* font-weight: 500; */
+        margin: 10px;
+        margin-left: 3px;
+    }
+
+    .tele_consultation_doctor_details_container_title{
+        color: rgb(34,138,213);
+        font-family: 'latobold';
+    }
+
+    #tele_consultation_doctor_main_container_scroll{
+        width:100%;
+        /* height:345px; */
+        /* position: absolute; */
+    }
+
+    .tele_consultation_doctor_details_container_domain{
+        position: relative;
+        font-family: 'latoBold';
+    }
+
+    .tele_consultation_doctor_details_container_label_content{
+        margin: 2px;
+        font-family: 'latoBold';
+        display: inline-block;
+    }
+
+    .tele_consultation_doctor_details_container_amount{
+        font-size: 12px;
+        width: fit-content;
+        /* margin: 0px 1px 0px 0px; */
+        color: gray;
+        font-family: 'latobold';
+        text-align: center;
+    }
+
+    .tele_consultation_doctor_details_rating_stars_container{
+        display: inline;
+        color: #2a76c4;
+    }
+
+    .call_doctor_button_class{
+        font-size: 14px;
+        float: right;
+        border-radius: 5px;
+        border: 0px;
+        padding: 8px 15px;
+        background-color: rgb(34,138,213);
+        color: white;
+        /* box-shadow: 0px 0px 0px 1px #afafaf; */
+        /* box-shadow: 0px 1px 1px #c8c8c8; */
+        box-shadow: 0px 1px 2px dodgerblue;
+        /* color: black; */
+        text-transform: uppercase;
+        margin-left: 10px;
+    }
+
+    .call_doctor_button_class_btn{
+        font-size: 14px;
+        float: right;
+        border-radius: 5px;
+        border: 0px;
+        padding: 8px 15px;
+        background-color: rgb(34,138,213);
+        color: white;
+        box-shadow: 0px 1px 2px dodgerblue;
+        text-transform: uppercase;
+        margin-left: 10px;
+        pointer-events: none !important;
+        border: 1px solid #cecece !important;
+        -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+        -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+        background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%) !important;
+    }
+
+    .call_doctor_button_class .call_doctor_button_class_btn{
+        font-size: 14px;
+        float: right;
+        border-radius: 5px;
+        border: 0px;
+        padding: 8px 15px;
+        background-color: rgb(34,138,213);
+        color: white;
+        box-shadow: 0px 1px 2px dodgerblue;
+        text-transform: uppercase;
+        margin-left: 10px;
+        pointer-events: none !important;
+        border: 1px solid #cecece !important;
+        -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+        -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+        background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%) !important;
+    /* position: absolute !important;
+    top: -3px !important;
+    height: 50px !important;
+    left: 420px !important;
+    border-radius: 10px !important;
+    border-top: 2px solid #5dbcff !important;
+    border-left: 2px solid #5fa4d4bf !important;
+    border-bottom: 2px solid #50a4e0bf !important;
+    border-right: 2px solid #50a4e0bf !important;
+    width: 190px !important;
+    color: white !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    box-shadow: 0px 4px 4px #4a4a4ae0 !important;
+    background: linear-gradient(to bottom,#5aa4d9,#3989c3, #0261c2) !important;
+    text-shadow: none !important;
+    font-family: 'LatoRegular' !important;
+    font-weight: 500 !important;
+    pointer-events: all !important; */
+}
+
+
+    /*.label {
+        background-color: #a0c5eebd;
+        width: auto;
+        padding: 2px;
+        border-radius: 5px; 
+    }*/
+
+    .consultant-name-text > span {
+        display: inline-block;
+        overflow: hidden;
+        position: fixed;
+        white-space: nowrap;
+        width: 90%;
+    }
+
+    .consultant-name-text > span > span {
+        display: inline-block;
+        padding-left: 100%;
+        width: 100%;
+        animation: marquee 10s linear infinite;
+    }
+
+    @keyframes marquee {
+        0%   { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
+    }
+
+    .tele_filter_button {
+        right: 20px;
+        position: absolute;
+        width: 100px;
+        outline: none;
+        border: 2px solid #208ad6bf;
+        box-shadow: 0px 4px 4px #6d6d6d;
+        background: linear-gradient(to bottom,#ebebeb, #dbdbdb , #c1c1c1);
+        top: 10px;
+        height: 30px;
+        border-radius: 9px 9px 9px 10px;
+    }
+
+    .tele_filter_search_button {
+        right: 20px;
+        position: absolute;
+        width: 120px;
+        outline: none;
+        border: 2px solid #208ad6bf;
+        box-shadow: 0px 4px 4px #6d6d6d;
+        background: linear-gradient(to bottom,#ebebeb, #dbdbdb , #c1c1c1);
+        top: 127px;
+        height: 30px;
+        border-radius: 9px 9px 9px 10px;
+    }
+
+    .tele_clear_search_button {
+        right: 155px;
+        position: absolute;
+        width: 90px;
+        outline: none;
+        border: 2px solid #208ad6bf;
+        box-shadow: 0px 4px 4px #6d6d6d;
+        background: linear-gradient(to bottom,#ebebeb, #dbdbdb , #c1c1c1);
+        top: 127px;
+        height: 27px;
+        border-radius: 9px 9px 9px 10px;
+    }
+
+    .doctor_list_search input {
+        top: -42px !important;
+        /* margin-top: -10%; */
+        left: 312px !important;
+        height: 45px !important;
+        /* padding-right: 16px !important; */
+        /* padding-left: 20px !important; */
+        border: none !important;
+        color: gray !important;
+        font-weight: 500 !important;
+        font-family: 'LatoRegular' !important;
+        /* overflow-x: hidden !important; */
+        /* overflow-y: hidden !important; */
+        border-radius: none !important;
+        outline: none !important;
+        text-indent: 0px !important;
+        box-sizing: border-box !important;
+        width: 337px !important;
+        display: block !important;
+        font-size: 19px !important;
+        position: relative !important;
+    }
+
+    .global_info_button_text_filter {
+        color: #4e4e4e;
+        margin-left: 8px;
+        position: absolute;
+        font-size: 16px;
+        font-family: LatoRegular;
+        font-weight: 500;
+        margin-top: 4.6px;
+    }
+
+    .global_info_button_icon_filter {
+        width: 22px;
+        margin-left: -50px;
+        margin-top: 3.5px;
+    }
+    .Main_Container_For_Doctor_Amount_And_Doctor_Availability{
+        width: 100%;
+        height: 34px;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .TeleConsultation_Doctor_Amount_Dynamic_Display_Container{
+        display: inline-block;
+        width: 34%;
+        height: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .TeleConsultation_DoctorOrConsulatant_Next_Availability_Dynamic_Display_Container_Section{
+        display: inline-block;
+        width: 64%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+        margin-top: -10px;
+    }
+    .Consulatant_Next_Availability_Dynamic_Text{
+        font-family: 'latoBold';
+        color: #4d4d4d;
+    }
+
+</style>
+<div class="tele_header_container" ng-style="showDoctorFilter && {'margin-right': '400px', 'margin-bottom': '-35px', 'margin-top': '14%'} || {'margin-right': '0px', 'margin-bottom': '30px'}">
+    <img class="tele_header_image" src="./images/telmed.png">
+    <span class="tele_header_text"> Doctor List </span>
+    <higi-text-field field="searchFields[0]" class="doctor_list_search" ng-if="showDoctorFilter"></higi-text-field>
+    <div class="tele_filter_button" ng-click="showFilterBox()" ng-if="!showDoctorFilter && showFilterBtn">
+        <img class= "global_info_button_icon_filter" src="images/icons8-info-32.png">
+        <span class= "global_info_button_text_filter">Filter</span>
+    </div>
+</div>
+
+<div class= "tele_filter_search_button" ng-class = "{'button-enter-right' : showDoctorFilter, 'button-exit-right' : !showDoctorFilter}" ng-click="searchDoctor()" ng-show="showDoctorFilter">
+    <!-- <img class= "global_info_button_icon" src="images/icons8-info-32.png"> -->
+    <span class= "global_info_button_text">Search</span>
+</div>
+
+<div class= "tele_clear_search_button" ng-class = "{'button-enter-right' : showClearBtn, 'button-exit-right' : !showClearBtn}" ng-click="clearSearch()" ng-show="showClearBtn">
+    <span class= "global_info_button_text">Clear</span>
+</div>
+
+ <div class="tele_main_container">
+    <!-- <p class="tele_subtitle_heading"> <button onclick="window.location = '#/ihl-teleconsultation-video-call';">Start video call</button></p> -->
+       <!--
+    <div id="tele_consultation_doctor_main_container" ng-if="teleConsultDashboardOption == 'Book Appointment'" >
+            <div id="tele_consultation_doctor_main_container_scroll">
+        
+                <div class="tele_consultation_doctor_main_box" ng-repeat="consultationDoctor in consultationDoctorList"
+        ng-class="{'tele_consultation_doctor_main_box_active':(currentSelectedTab == consultationDoctor['ihl_consultant_id']) }"
+            style="text-align: initial;" ng-show="shwMsg == false">
+
+            <div class="tele_consultation_doctor_main_box_title" style="text-align: left; height: 20px;">
+                <span ng-show="teleConsultDashboardOption == 'Start Call Now'" ng-class="{'tele_consultation_doctor_list_red_dot':(doctorStatusMapping[consultationDoctor['ihl_consultant_id']] == 'Busy'), 'tele_consultation_doctor_list_green_dot': (doctorStatusMapping[consultationDoctor['ihl_consultant_id']] == 'Online'), 'tele_consultation_doctor_list_grey_dot':(!doctorStatusMapping[consultationDoctor['ihl_consultant_id']] || doctorStatusMapping[consultationDoctor['ihl_consultant_id']] == 'Offline')}"></span>
+                <b class="consultant-name-text" style="font-family: 'latoRegular';color: #4d4d4d; text-transform: capitalize;">
+                    <span ng-bind-html="fineTuneConsultantName(consultationDoctor['name'])"></span>
+                </b>
+            </div>
+            <div class="tele_consultation_doctor_details">
+
+                <div class="tele_consultation_doctor_details_image_container">
+                    <img ng-style="consultationDoctor['consultantProfileImage'] && {'border-radius': '50%', 'border': '3px solid #228ad5'}" ng-src="{{consultationDoctor['consultantProfileImage'] ? consultationDoctor['consultantProfileImage'] : 'images/teleconsultation/user-md.png' }}"
+                        class="tele_consultation_doctor_details_image_container_img">
+                </div>
+
+                <div class="tele_consultation_doctor_details_container">
+                    need to comment starts here
+                    <p>
+                        <span class="tele_consultation_doctor_details_container_title" 
+                        ng-style="(currentSelectedTab == consultationDoctor['ihl_consultant_id']) && {color: rgb(34,138,213)}">Specialist: </span> 
+                        <span class="tele_consultation_doctor_details_container_domain" >
+                            {{consultationDoctor['name']}}
+                        </span>
+                        
+                    </p>
+                    need to comment ends here
+                    <p>
+                        <span class="tele_consultation_doctor_details_container_title"
+                        ng-style="(currentSelectedTab == consultationDoctor['ihl_consultant_id']) && {color: rgb(34,138,213)}">Experience: </span>
+                        <span class="tele_consultation_doctor_details_container_domain">
+                            {{fineTunedExperience(consultationDoctor['experience'])}}
+                        </span> 
+                        
+                    </p>
+                    <p>
+                        <span class="tele_consultation_doctor_details_container_title"
+                        ng-style="(currentSelectedTab == consultationDoctor['ihl_consultant_id']) && {color: rgb(34,138,213)}">Speciality: </span>
+                        <span class="tele_consultation_doctor_details_container_label_content" style="text-transform: capitalize;">
+                          {{fineTunedSpeciality(selected_speciality)}}  
+                        </span>
+                        
+                    </p>
+                    <p>
+                        <span class="tele_consultation_doctor_details_container_title"
+                        ng-style="(currentSelectedTab == consultationDoctor['ihl_consultant_id']) && {color: rgb(34,138,213)}">Languages Spoken: </span>
+                        <span ng-if="consultationDoctor['languages_Spoken'].length > 1">
+                            <span class="tele_consultation_doctor_details_container_label_content" ng-repeat="language in consultationDoctor['languages_Spoken']">
+                                {{language}},
+                            </span>
+                        </span>
+                        <span ng-if="consultationDoctor['languages_Spoken'].length == 1 && !langObjUndefined">
+                           <span class="tele_consultation_doctor_details_container_label_content">
+                                {{(consultationDoctor['languages_Spoken'] && consultationDoctor['languages_Spoken'][0])? consultationDoctor['languages_Spoken'][0] : 'English'}}
+                            </span>
+                        </span>
+                        <span ng-if="consultationDoctor['languages_Spoken'].length == 1 && langObjUndefined">
+                            <span class="tele_consultation_doctor_details_container_label_content">
+                                English
+                            </span>
+                        </span>
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="tele_consultation_doctor_details_container_amount" ng-if="selectedTeleconsultationService != 'Member Service'">
+               Conultation Fees<br>
+                &#8377; {{(consultationDoctor['consultation_fees'])? consultationDoctor['consultation_fees'] : '0' }} <span ng-show="consultationDoctor['consultation_fees'] && consultationDoctor['consultation_fees'] != 0">(Incl. of all taxes)</span>
+            </div>
+
+            <div class="tele_consultation_doctor_details_container_amount" ng-if="selectedTeleconsultationService == 'Member Service'">
+               Conultation Fees<br>
+                &#8377; {{consultationDoctor.affilation_excusive_data.affilation_array[0].affilation_price}} <span ng-show="consultationDoctor.affilation_excusive_data.affilation_array[0].affilation_price != 0">(Incl. of all taxes)</span>
+            </div>
+            <hr>
+            <div>
+
+                <div class="tele_consultation_doctor_details_rating_stars_container" style="display:inline;">
+                    
+                    <span ng-repeat="x in getStars(consultationDoctor) track by $index">
+                         <i 
+                                ng-class="{'fa fa-star':(x == 1) , 'fa fa-star-o':(x == 0) ,'fa fa-star-half-o':(x == 0.5)}"
+                                ></i>
+                    </span>
+                    need to comment starts here
+                    <span ng-if="isPartialStar(consultationDoctor) == true">
+                        <i class="fa fa-star-half-o"></i>
+                    </span>
+                    need to comment ends here
+                </div>
+                need to comment starts here
+                <span style="font-size:24px;">&#9734; &#9734; &#9734; &#9734; &#9734;</span>
+                need to comment ends here
+                <button ng-hide="doctolistButtonText == 'Start Call' && doctorStatusMapping[consultationDoctor['ihl_consultant_id']] != 'Online'"class="call_doctor_button_class"
+                ng-click="selectTeleconsultationDoctorTab(consultationDoctor['ihl_consultant_id'])"
+               >{{doctolistButtonText}}</button>
+            </div>
+            need to comment starts here
+            <span class="tele_consultation_doctor_main_box_icon">
+                <img src="images/teleconsultation/doctor1.png" style="height:100%;">
+            </span>
+            need to comment ends here
+        </div>
+            </div>
+            <div ng-show="shwMsg == true" style="text-align: center; margin: 20% auto;">
+            {{containerMessage}}
+            </div>
+        
+    </div>
+
+    <div id="tele_consultation_doctor_main_container" ng-if="teleConsultDashboardOption == 'Start Call Now'" >
+            <div id="tele_consultation_doctor_main_container_scroll" >
+        
+                <div ng-if="onlineDoctorList.length > 0" class="tele_consultation_doctor_main_box" ng-repeat="consultationDoctor in onlineDoctorList"
+        ng-class="{'tele_consultation_doctor_main_box_active':(currentSelectedTab == consultationDoctor['ihl_consultant_id']) }"
+            style="text-align: initial;" ng-show="shwMsg == false">
+
+            <div class="tele_consultation_doctor_main_box_title" style="text-align: left; height: 20px;">
+                <span ng-show="teleConsultDashboardOption == 'Start Call Now' && consultationDoctor['vendor_id'] != 'APOLLO' " ng-class="{'tele_consultation_doctor_list_red_dot':(doctorStatusMapping[consultationDoctor['ihl_consultant_id']] == 'Busy'), 'tele_consultation_doctor_list_green_dot': (doctorStatusMapping[consultationDoctor['ihl_consultant_id']] == 'Online'), 'tele_consultation_doctor_list_grey_dot':(!doctorStatusMapping[consultationDoctor['ihl_consultant_id']] || doctorStatusMapping[consultationDoctor['ihl_consultant_id']] == 'Offline')}">
+                </span>
+                <span ng-show="teleConsultDashboardOption == 'Start Call Now' && consultationDoctor['vendor_id'] == 'APOLLO'" class="tele_consultation_doctor_list_green_dot">
+                </span>
+
+                <b class="consultant-name-text" style="font-family: 'latoRegular';color: #4d4d4d; text-transform: capitalize;">
+                    <span ng-bind-html="fineTuneConsultantName(consultationDoctor['name'])"></span>
+                </b>
+            </div>
+            <div class="tele_consultation_doctor_details">
+
+                <div class="tele_consultation_doctor_details_image_container">
+                    <img src="images/teleconsultation/user-md.png"
+                        class="tele_consultation_doctor_details_image_container_img">
+                </div>
+
+                <div class="tele_consultation_doctor_details_container">
+                    need to comment starts here
+                    <p>
+                        <span class="tele_consultation_doctor_details_container_title" 
+                        ng-style="(currentSelectedTab == consultationDoctor['ihl_consultant_id']) && {color: rgb(34,138,213)}">Specialist: </span> 
+                        <span class="tele_consultation_doctor_details_container_domain" >
+                            {{consultationDoctor['name']}}
+                        </span>
+                        
+                    </p>
+                    need to comment ends here
+                    <p>
+                        <span class="tele_consultation_doctor_details_container_title"
+                        ng-style="(currentSelectedTab == consultationDoctor['ihl_consultant_id']) && {color: rgb(34,138,213)}">Experience: </span>
+                        <span class="tele_consultation_doctor_details_container_domain">
+                            {{fineTunedExperience(consultationDoctor['experience'])}}
+                        </span> 
+                        
+                    </p>
+                    <p>
+                        <span class="tele_consultation_doctor_details_container_title"
+                        ng-style="(currentSelectedTab == consultationDoctor['ihl_consultant_id']) && {color: rgb(34,138,213)}">Speciality: </span>
+                        <span class="tele_consultation_doctor_details_container_label_content" style="text-transform: capitalize;">
+                          {{fineTunedSpeciality(selected_speciality)}}  
+                        </span>
+                        
+                    </p>
+                    <p>
+                        <span class="tele_consultation_doctor_details_container_title"
+                        ng-style="(currentSelectedTab == consultationDoctor['ihl_consultant_id']) && {color: rgb(34,138,213)}">Languages Spoken: </span>
+                        <span ng-if="consultationDoctor['languages_Spoken'].length > 1">
+                            <span class="tele_consultation_doctor_details_container_label_content" ng-repeat="language in consultationDoctor['languages_Spoken']">
+                                {{language}},
+                            </span>
+                        </span>
+                        <span ng-if="consultationDoctor['languages_Spoken'].length == 1 && !langObjUndefined">
+                           <span class="tele_consultation_doctor_details_container_label_content">
+                                {{(consultationDoctor['languages_Spoken'] && consultationDoctor['languages_Spoken'][0])? consultationDoctor['languages_Spoken'][0] : 'English'}}
+                            </span>
+                        </span>
+                        <span ng-if="consultationDoctor['languages_Spoken'].length == 1 && langObjUndefined">
+                            <span class="tele_consultation_doctor_details_container_label_content">
+                                English
+                            </span>
+                        </span>
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="tele_consultation_doctor_details_container_amount" ng-if="selectedTeleconsultationService != 'Member Service'">
+               Conultation Fees<br>
+                &#8377; {{(consultationDoctor['consultation_fees'])? consultationDoctor['consultation_fees'] : '0' }} <span ng-show="consultationDoctor['consultation_fees'] && consultationDoctor['consultation_fees'] != 0">(Incl. of all taxes)</span>
+            </div>
+            <div class="tele_consultation_doctor_details_container_amount" ng-if="selectedTeleconsultationService == 'Member Service'">
+               Conultation Fees<br>
+                &#8377; {{consultationDoctor.affilation_excusive_data.affilation_array[0].affilation_price}} <span ng-show="consultationDoctor.affilation_excusive_data.affilation_array[0].affilation_price != 0">(Incl. of all taxes)</span>
+            </div>
+            <hr>
+            <div>
+
+                <div class="tele_consultation_doctor_details_rating_stars_container" style="display:inline;">
+                    
+                    <span ng-repeat="x in getStars(consultationDoctor) track by $index">
+                         <i 
+                                ng-class="{'fa fa-star':(x == 1) , 'fa fa-star-o':(x == 0) ,'fa fa-star-half-o':(x == 0.5)}"
+                                ></i>
+                    </span>
+                    need to comment starts here
+                    <span ng-if="isPartialStar(consultationDoctor) == true">
+                        <i class="fa fa-star-half-o"></i>
+                    </span>
+                    need to comment ends here
+                </div>
+
+                need to comment starts here
+                <span style="font-size:24px;">&#9734; &#9734; &#9734; &#9734; &#9734;</span>
+                need to comment ends here
+                <button ng-show="doctolistButtonText == 'Start Call' && doctorStatusMapping[consultationDoctor['ihl_consultant_id']] == 'Online' && consultationDoctor['vendor_id'] != 'APOLLO'" class="call_doctor_button_class"
+                ng-click="selectTeleconsultationDoctorTab(consultationDoctor['ihl_consultant_id'])"
+               >{{doctolistButtonText}}
+                </button>
+
+               <button ng-show="doctolistButtonText == 'Start Call' && consultationDoctor['vendor_id'] == 'APOLLO'"class="call_doctor_button_class" ng-click="appoloTeleconsultationStartCall(consultationDoctor)"
+               >{{doctolistButtonText}}
+                </button>
+            </div>
+            need to comment start here
+            <span class="tele_consultation_doctor_main_box_icon">
+                <img src="images/teleconsultation/doctor1.png" style="height:100%;">
+            </span>
+            need to comment ends here
+        </div>
+            
+            <div ng-if="onlineDoctorList.length == 0" style="text-align: center;color: red;margin-top: 20%;">
+            No doctors are online right now.
+            </div>
+            </div>
+            <div ng-show="shwMsg == true" style="text-align: center; margin: 20% auto;">
+            {{containerMessage}}
+            </div>
+
+           
+        
+    </div> -->
+    <div id="tele_consultation_doctor_main_container">
+        <div id="tele_consultation_doctor_main_container_scroll">
+    
+            <div class="tele_consultation_doctor_main_box" ng-repeat="consultationDoctor in consultationDoctorList"
+    ng-class="{'tele_consultation_doctor_main_box_active':(currentSelectedTab == consultationDoctor['ihl_consultant_id']) }"
+        style="text-align: initial;" ng-show="shwMsg == false">
+
+        <div class="tele_consultation_doctor_main_box_title" style="text-align: left; height: 20px;">
+            <span ng-show="teleConsultDashboardOption == 'Start Call Now'" ng-class="{'tele_consultation_doctor_list_red_dot':(doctorStatusMapping[consultationDoctor['ihl_consultant_id']] == 'Busy'), 'tele_consultation_doctor_list_green_dot': (doctorStatusMapping[consultationDoctor['ihl_consultant_id']] == 'Online'), 'tele_consultation_doctor_list_grey_dot':(!doctorStatusMapping[consultationDoctor['ihl_consultant_id']] || doctorStatusMapping[consultationDoctor['ihl_consultant_id']] == 'Offline')}"></span>
+            <b class="consultant-name-text" style="font-family: 'latoRegular';color: #4d4d4d; text-transform: capitalize;">
+                <span ng-bind-html="fineTuneConsultantName(consultationDoctor['name'])"></span>
+            </b>
+        </div>
+        <div class="tele_consultation_doctor_details">
+
+            <div class="tele_consultation_doctor_details_image_container">
+                <img ng-style="consultationDoctor['consultantProfileImage'] && {'border-radius': '50%', 'border': '3px solid #228ad5'}" ng-src="{{consultationDoctor['consultantProfileImage'] ? consultationDoctor['consultantProfileImage'] : 'images/teleconsultation/user-md.png' }}"
+                    class="tele_consultation_doctor_details_image_container_img">
+            </div>
+
+            <div class="tele_consultation_doctor_details_container">
+                <p>
+                    <span class="tele_consultation_doctor_details_container_title"
+                    ng-style="(currentSelectedTab == consultationDoctor['ihl_consultant_id']) && {color: rgb(34,138,213)}">Experience: </span>
+                    <span class="tele_consultation_doctor_details_container_domain">
+                        {{fineTunedExperience(consultationDoctor['experience'])}}
+                    </span> 
+                    
+                </p>
+                <p>
+                    <span class="tele_consultation_doctor_details_container_title"
+                    ng-style="(currentSelectedTab == consultationDoctor['ihl_consultant_id']) && {color: rgb(34,138,213)}">Speciality: </span>
+                    <span class="tele_consultation_doctor_details_container_label_content" style="text-transform: capitalize;">
+                      {{fineTunedSpeciality(selected_speciality)}}  
+                    </span>
+                    
+                </p>
+
+                <!--uncomment for 4 pillar category starts here
+                <p ng-if="selectedTeleconsultationService == 'Global Service'">
+                    <span class="tele_consultation_doctor_details_container_title"
+                    ng-style="(currentSelectedTab == consultationDoctor['ihl_consultant_id']) && {color: rgb(34,138,213)}">Speciality: </span>
+                    <span class="tele_consultation_doctor_details_container_label_content" style="text-transform: capitalize;">
+                      {{fineTunedSpeciality(selected_speciality)}}  
+                    </span>
+                    
+                </p>
+                 
+                <p ng-if="selectedTeleconsultationService == 'Member Service'">
+                    <span class="tele_consultation_doctor_details_container_title"
+                    ng-style="(currentSelectedTab == consultationDoctor['ihl_consultant_id']) && {color: rgb(34,138,213)}">Category: </span>
+                    <span class="tele_consultation_doctor_details_container_label_content" style="text-transform: capitalize;">
+                      {{selected_speciality}}  
+                    </span>
+                    
+                </p> 
+                uncomment for 4 pillar category ends here-->
+                <p>
+                    <span class="tele_consultation_doctor_details_container_title"
+                    ng-style="(currentSelectedTab == consultationDoctor['ihl_consultant_id']) && {color: rgb(34,138,213)}">Languages Spoken: </span>
+                    <span ng-if="consultationDoctor['languages_Spoken'].length > 1">
+                        <span class="tele_consultation_doctor_details_container_label_content" ng-repeat="language in consultationDoctor['languages_Spoken']">
+                            {{language}},
+                        </span>
+                    </span>
+                    <span ng-if="consultationDoctor['languages_Spoken'].length == 1 && !langObjUndefined">
+                       <span class="tele_consultation_doctor_details_container_label_content">
+                            {{(consultationDoctor['languages_Spoken'] && consultationDoctor['languages_Spoken'][0])? consultationDoctor['languages_Spoken'][0] : 'English'}}
+                        </span>
+                    </span>
+                    <span ng-if="consultationDoctor['languages_Spoken'].length == 1 && langObjUndefined">
+                        <span class="tele_consultation_doctor_details_container_label_content">
+                            English
+                        </span>
+                    </span>
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="Main_Container_For_Doctor_Amount_And_Doctor_Availability">
+            <div class="TeleConsultation_Doctor_Amount_Dynamic_Display_Container">
+                <div class="tele_consultation_doctor_details_container_amount" ng-if="selectedTeleconsultationService == 'Member Service'">
+                    Conultation Fees<br>
+                     &#8377; {{consultationDoctor.affilation_excusive_data.affilation_array[0].affilation_price}} <span ng-show="consultationDoctor.affilation_excusive_data.affilation_array[0].affilation_price != 0">(Incl. of all taxes)</span>
+                </div>
+
+                <div class="tele_consultation_doctor_details_container_amount" ng-if="selectedTeleconsultationService != 'Member Service'">
+                   Conultation Fees<br>
+                    &#8377; {{(consultationDoctor['consultation_fees'])? consultationDoctor['consultation_fees'] : '0' }} <span ng-show="consultationDoctor['consultation_fees'] && consultationDoctor['consultation_fees'] != 0">(Incl. of all taxes)</span>
+                </div>
+            </div>
+
+            <div class="TeleConsultation_DoctorOrConsulatant_Next_Availability_Dynamic_Display_Container_Section">
+                <p class="Consulatant_Next_Availability_Dynamic_Text"> {{doctorStatusMapping[consultationDoctor.ihl_consultant_id+"consultant_next_availability"]}} </p>
+            </div>
+        </div>
+        <hr>
+        <div>
+
+            <div class="tele_consultation_doctor_details_rating_stars_container" style="display:inline;">
+                
+                <span ng-repeat="x in getStars(consultationDoctor) track by $index">
+                     <i 
+                            ng-class="{'fa fa-star':(x == 1) , 'fa fa-star-o':(x == 0) ,'fa fa-star-half-o':(x == 0.5)}"
+                            ></i>
+                </span>
+            </div>
+            <button ng-show = "doctorStatusMapping[consultationDoctor['ihl_consultant_id']] == 'Online'" class="call_doctor_button_class" 
+                ng-click="selectTeleconsultationDoctorTab(consultationDoctor['ihl_consultant_id'],'Start Call Now')"
+               >Start Call
+                </button>
+            <button ng-show = "doctorStatusMapping[consultationDoctor['ihl_consultant_id']] != 'Online'" class="call_doctor_button_class_btn" 
+                ng-click="selectTeleconsultationDoctorTab(consultationDoctor['ihl_consultant_id'],'Start Call Now')"
+               >Start Call
+                </button>
+
+            <!-- <button ng-show="consultationDoctor['vendor_id'] == 'APOLLO'"class="call_doctor_button_class" ng-click="appoloTeleconsultationStartCall(consultationDoctor)"
+            >{{doctolistButtonText}}
+            </button> -->
+
+            <button ng-show="consultationDoctor['vendor_id'] != 'APOLLO'" class="call_doctor_button_class"
+            ng-click="selectTeleconsultationDoctorTab(consultationDoctor['ihl_consultant_id'],'Book Appointment')"
+           >Book Now</button>
+        </div>
+    </div>
+        </div>
+        <div ng-show="shwMsg == true" style="text-align: center; margin: 20% auto;">
+        {{containerMessage}}
+        </div>    
+</div>
+    <div ng-if="(filterDoctorArr.length == 0 && showNoDoctorAvailable) || consultationDoctorList.length == 0" style="text-align: center;color: red;margin-top: -25%;">
+        No doctors are available.
+    </div>
+     <!-- <div ng-if="teleConsultDashboardOption == 'Start Call Now' && onlineDoctorList.length == 0" style="text-align: center;color: red;">
+            No doctors are online right now.
+    </div> -->
+</div>
+
+<!-- <div class="tele_main_container" ng-show="consultationDoctorList.length == 0" style="text-align: center;">
+    <p style="color: #c80c0c; padding-top: 150px;">No consultant is available right now.</p>
+</div> -->
+
+<a class="global_previous_page_button"
+    ng-class="{'button-enter-left' : prevIsVisible, 'button-exit-left' : !prevIsVisible}" ng-show="prevIsVisible"
+    ng-click="prevButtonClick()">
+    <span class="global_previous_page_text">Back</span>
+</a>
+
+<!-- <a class="global_continue_next_button"
+    ng-class="{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible"
+    ng-click="nextButtonClick()">
+    <span class="global_continue_next_button_text"> Continue </span>
+</a> -->

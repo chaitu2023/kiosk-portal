@@ -1,0 +1,250 @@
+<style type="text/css">
+    .oneParaImgInfo{
+        position: relative;
+        top: 25px;
+        left: 125px;
+    }
+    .twoParaImgInfo{
+        position: relative;
+        top: 25px;
+        left: 115px;
+    }
+</style>
+
+<div class="invasive_results_main_container">
+    <div class="invasive_results_header_container">
+         <img class="invasive_results_header_image {{ instructionHeaderImage }}" src="">
+         <p class="invasive_results_header_text">{{ interfaceLabels[instructionHeader] }} {{interfaceLabels[test]}}<small class="invasive_results_small_text">{{interfaceLabels[resultText]}}</small></p> 
+ 
+         <!-- <div class= "global_info_button" ng-click="showInfoboxThermometer()">
+             <img class= "global_info_button_icon" src="images/icons8-info-32.png">
+             <span class= "global_info_button_text"></span>
+         </div> -->
+     </div> 
+ 
+     <div class="invasive_results_sub_container">
+
+        <div ng-if="currentIvtTest === 'deng' || currentIvtTest === 'mal' || currentIvtTest === 'hiv'">
+            <div class="ivt_dengMal_results_title_container">
+                <p class="ivt_dengMal_results_parameter_title"> <span class="ivt_dengMal_results_parameter_title_txt"> {{interfaceLabels[parameter]}} <span> </p>
+                <p class="ivt_dengMal_results_yourscore_title"> <span class="ivt_dengMal_results_parameter_title_txt"> {{interfaceLabels[yourScore]}} </span> </p>
+            </div>
+    
+            <div ng-if="currentIvtTest === 'deng'" class="ivt_deng_results_parm1_container">
+                <p class="ivt_deng_results_parm1_title">{{interfaceLabels[dengParmTitle1]}}</p>
+                <p class="ivt_deng_results_param1_sub_title">{{interfaceLabels[dengParmSub1]}}</p>
+                <p class="ivt_deng_results_param1_value">{{ dengue_IgG }}
+                </p>
+            </div>
+
+            <div ng-if="currentIvtTest === 'deng'" class="ivt_deng_results_parm2_container">
+                <p class="ivt_deng_results_parm2_title">{{interfaceLabels[dengParmTitle2]}}</p>
+                <p class="ivt_deng_results_param2_sub_title">{{interfaceLabels[dengParmSub2]}}</p>
+                <p class="ivt_deng_results_param2_value">{{ dengue_IgM }}
+                </p>
+            </div>
+
+            <div ng-if="currentIvtTest === 'mal'" class="ivt_mal_results_parm1_container">
+                <p class="ivt_mal_results_parm1_title">{{interfaceLabels[malParmTitle1]}}</p>
+                <p class="ivt_mal_results_param1_sub_title">{{interfaceLabels[malParmSub1]}}</p>
+                <p class="ivt_mal_results_param1_value">{{ Malaria_pf }}
+                </p>
+            </div>
+
+            <div ng-if="currentIvtTest === 'mal'" class="ivt_mal_results_parm2_container">
+                <p class="ivt_mal_results_parm2_title">{{interfaceLabels[malParmTitle2]}}</p>
+                <p class="ivt_mal_results_param2_sub_title">{{interfaceLabels[malParmSub2]}}</p>
+                <p class="ivt_mal_results_param2_value">{{ Malaria_pv }}
+                </p>
+            </div>
+			
+			<div ng-if="currentIvtTest === 'hiv'" class="ivt_mal_results_parm1_container">
+                <p class="ivt_mal_results_parm1_title">{{interfaceLabels[hivI]}}</p>
+                <!-- <p class="ivt_mal_results_param1_sub_title">Plasmodium Flaciparum</p> -->
+                <p class="ivt_hiv_results_param1_value">{{hiv_I}}
+                </p>
+            </div>
+
+            <div ng-if="currentIvtTest === 'hiv'" class="ivt_mal_results_parm2_container">
+                <p class="ivt_mal_results_parm2_title">{{interfaceLabels[hivII]}}</p>
+                <!-- <p class="ivt_mal_results_param2_sub_title">Plasmodium Vivax</p> -->
+                <p class="ivt_hiv_results_param2_value"> {{hiv_II}}
+                </p>
+            </div>
+
+        </div>
+
+         <div ng-if="currentIvtTest === 'deng' || currentIvtTest === 'mal' || currentIvtTest === 'hiv' || currentIvtTest === 'hcv' || currentIvtTest === 'trop' || currentIvtTest === 'syph' || currentIvtTest === 'preg'" class="invasive_results_image_container {{ currentIvtTest }}">
+                <p data-ng-if="cassetImageSrc == '' || cassetImageSrc ==  undefined" data-ng-class="{oneParaImgInfo : currentIvtTest== 'hcv' || currentIvtTest== 'trop' || currentIvtTest== 'syph' || currentIvtTest== 'preg', twoParaImgInfo : currentIvtTest== 'deng' || currentIvtTest== 'mal' || currentIvtTest== 'hiv'}">  {{interfaceLabels[imageText]}}</p>
+             <img data-ng-if="cassetImageSrc != '' && cassetImageSrc !=  undefined" id="{{ currentIvtTest }}" class="invasive_results_image" src="{{ cassetImageSrc }}">
+         </div>
+
+         <span ng-if="currentIvtTest === 'heamo'">
+            <div class="ivt_heamo_results_title_container">
+                <p class="ivt_heomo_results_parameter_title"> <span class="ivt_heomo_results_parameter_title_txt"> {{interfaceLabels[parameter]}} <span> </p>
+                <p class="ivt_heamo_results_yourscore_title"> <span class="ivt_heamo_results_parameter_title_txt"> {{interfaceLabels[yourScore]}} </span> </p>
+            </div>
+    
+            <div class="ivt_heamo_results_parm1_container">
+                <p class="ivt_heamo_results_parm1_title">{{interfaceLabels[heamoglobinText]}}</p>
+                <p class="ivt_heamo_results_param1_value">{{ heamoglobinValue }}
+                    <small class="ivt_heamo_results_parm1_units">g/dL</small>
+                </p>
+            </div>
+         </span>
+
+         <span ng-if="currentIvtTest === 'lip' || currentIvtTest === 'glc'" class="ivt_results_lip_title_container">
+             <p ng-if="currentIvtTest === 'lip'" class="invasive_results_lip_parameter_title">{{interfaceLabels[parameter]}}</p>
+             <p ng-if="currentIvtTest === 'lip'" class="invasive_results_lip_yourscore_title">{{interfaceLabels[resultText]}}</p>
+             <p ng-if="currentIvtTest === 'lip'" class="invasive_results_lip_yourstatus_title">{{interfaceLabels[statusText]}}</p>
+             <p ng-if="currentIvtTest === 'lip'" class="invasive_results_lip_yournrg_title">{{interfaceLabels[normalRange]}}</p>
+
+             <p ng-if="currentIvtTest === 'glc'" class="invasive_results_glc_parameter_title">{{interfaceLabels[parameter]}}</p>
+             <p ng-if="currentIvtTest === 'glc'" class="invasive_results_glc_yourscore_title">{{interfaceLabels[resultText]}}</p>
+         </span>
+
+         <div class="invasive_results_lip_main_container" ng-if="currentIvtTest === 'lip'">
+            <span class="invasive_results_lip_container" ng-repeat="lip in ivtLipResult" id="{{ lip.id }}">
+                <p class="invasive_results_lip_title">{{ interfaceLabels[lip.label] }}</p>
+                <p class="invasive_results_lip_sub_title">{{ interfaceLabels[lip.name] }}</p>
+                <p class="invasive_results_lip_value">
+					{{ lip.value }}
+                    <small class="invasive_results_lip_units">{{ lip.unit }}</small>
+                </p>
+                <p class="invasive_results_lip_status_result" ng-style="{
+                    'margin-left': lip.status == 'High' ? '41px' : (lip.status == 'Low' ? '41px' : (lip.status == 'Normal' ? '31px' : '15px'))}" ng-class="{'lip_low_color' : lip.status == 'Low' , 'lip_normal_color' : lip.status == 'Normal', 'lip_high_color' : lip.status == 'High', 'lip_accpectable_color' : lip.status == 'Acceptable', 'lip_borderline_color' : lip.status == 'Borderline High' || lip.status == 'Borderline low'}">{{ lip.status }}</p>
+                <p class="invasive_results_lip_ref_ranges">{{ lip.nrfRange }}</p>
+            </span>
+         </div>
+
+         <div class="invasive_results_glc_main_container" ng-if="currentIvtTest === 'glc'">
+            <span class="invasive_results_glc_container" ng-repeat="glc in ivtGlcResult">
+                <p class="invasive_results_glc_title">{{ interfaceLabels[glc.label] }}</p>
+                <p class="invasive_results_glc_value">
+                    <small class="invasive_results_glc_units">{{ glc.value }} {{ glc.value !== 'Not Taken'? glc.unit : '' }}</small>
+                </p>
+            </span>
+         </div>
+ 
+         <span ng-class="{'status_healthy' : overallStatusResult === 'HEALTHY' || overallStatusResult === 'Normal', 'status_positive' : overallStatusResult === 'POSITIVE' || overallStatusResult === 'High' || overallStatusResult === 'Diabetic' || overallStatusResult === 'Very Low', 'status_consult' : overallStatusResult === 'CONSULT Dr.' || overallStatusResult === 'Low' || overallStatusResult === 'Pre-Diabetes' || overallStatusResult === 'Acceptable'}" class="invasive_results_over_all_status_container" ng-if="currentIvtTest != 'urn' && currentIvtTest != 'lip' && currentIvtTest != 'preg'">
+             <p class="invasive_results_over_all_status_titles">{{ interfaceLabels[instructionHeader] }}</p>
+             <img ng-if="overallStatusResult === 'CONSULT Dr.' || overallStatusResult === 'Low' || overallStatusResult === 'Pre-Diabetes' || overallStatusResult === 'Acceptable'" class="invasive_results_over_all_status_status_icons"tes src="./images/vital_status/vital_status_low.png">
+             <img ng-if="overallStatusResult === 'HEALTHY' || overallStatusResult === 'Normal'" class="invasive_results_over_all_status_status_icons" src="./images/vital_status/vital_status_normal.png">
+             <img ng-if="overallStatusResult === 'POSITIVE' || overallStatusResult === 'High' || overallStatusResult === 'Diabetic' || overallStatusResult === 'Very Low'" class="invasive_results_over_all_status_status_icons" src="./images/vital_status/vital_status_risk.png">
+             <p class="invasive_results_over_all_status_status_value" ng-if="currentIvtTest === 'deng' || currentIvtTest === 'mal' || currentIvtTest === 'hiv' || currentIvtTest === 'hcv' || currentIvtTest === 'trop' || currentIvtTest === 'syph'">{{ interfaceLabels[overallStatusResultText] }}</p>
+             <p class="invasive_results_over_all_status_status_value" ng-if="currentIvtTest === 'heamo' || currentIvtTest === 'glc'"><span ng-if="!interfaceLabels[overallStatusResultText]">{{ overallStatusResultText }}</span><span ng-show="interfaceLabels[overallStatusResultText]">{{ interfaceLabels[overallStatusResultText] }}</span></p>
+         </span>
+		 
+		 <span ng-class="{'status_healthy' : overallStatusResult === 'POSITIVE' , 'status_positive' : overallStatusResult === 'NEGATIVE'}" class="invasive_results_over_all_status_container" ng-if="currentIvtTest == 'preg'">
+             <p class="invasive_results_over_all_status_titles">{{ interfaceLabels[instructionHeader] }}</p>
+             <img ng-if="overallStatusResult === 'POSITIVE'" class="invasive_results_over_all_status_status_icons" src="./images/vital_status/vital_status_normal.png">
+             <img ng-if="overallStatusResult === 'NEGATIVE'" class="invasive_results_over_all_status_status_icons" src="./images/vital_status/vital_status_risk.png">
+             <p class="invasive_results_over_all_status_status_value" ng-if="currentIvtTest === 'preg'">{{ interfaceLabels[overallStatusResultText] }}</p>
+         </span>
+			<!--Ashley code hided starts
+         <span ng-if="currentIvtTest === 'heamo' || currentIvtTest === 'glc'" class="invasive_results_status_bar_container">
+             <p class="invasive_results_status_bar_heading">{{ instructionHeader }} Scale</p>
+             <div class="ivt_arrow_text_design ivt_arrow_scale_pos">
+                 <div class="ivt_arrow_size_pos"></div>
+             </div>
+             <div id="ivt-ref-chart">
+                 <div style="padding-left: 20px;"></div>
+                 <div style="padding-right: 20px;"></div>
+             </div>-->
+             <!-- <div id="ivt_ref_text" ng-if="currentIvtTest === 'deng' || currentIvtTest === 'mal' || currentIvtTest === 'hiv' || currentIvtTest === 'hcv' || currentIvtTest === 'trop' || currentIvtTest === 'syph' || currentIvtTest === 'preg'">
+                <div style="padding-left: 20px;">Negative</div>
+                <div style="padding-right: 20px;">Positive</div>
+             </div> -->
+			 <!--
+             <div id="ivt_ref_text" ng-if="currentIvtTest === 'heamo' || currentIvtTest === 'glc'">
+                <div style="padding-left: 20px;">Normal</div>
+                <div style="padding-right: 20px;">High</div>
+             </div>
+         </span>
+		 Ashley code hided ends-->
+		<span ng-if="currentIvtTest === 'glc'" class="invasive_results_status_bar_container">
+            <p class="invasive_results_status_bar_heading">{{interfaceLabels[instructionHeader]}} {{interfaceLabels[scaleText]}}</p>
+            <div ng-class="{'display_arrow_pos1' : gluStatus == 'Normal' ,'display_arrow_pos2' : gluStatus == 'Pre-Diabetes' || gluStatus == 'Acceptable', 'display_arrow_pos4' : gluStatus == 'Diabetic' || gluStatus == 'High'}" class="glu_arrow_text_design glu_arrow_scale_pos">
+                <div class="glu_arrow_size_pos"></div>
+            </div>
+            <div id="glu-ref-chart">
+                <div style="padding-left: 20px;">{{interfaceLabels[normalText]}}</div>
+                <div ng-if="glucose_fasting == undefined">{{interfaceLabels[preDiabetesText]}}</div>
+                <div ng-if="glucose_fasting != undefined">Acceptable</div>
+                <div ng-if="glucose_fasting == undefined"style="padding-right: 20px;">{{interfaceLabels[diabetesText]}}</div>
+                <div ng-if="glucose_fasting != undefined"style="padding-right: 20px;">{{interfaceLabels[highText]}}</div>
+            </div>
+        </span>
+         
+        <span ng-if="currentIvtTest === 'heamo'" class="invasive_results_status_bar_container">
+            <p class="invasive_results_status_bar_heading">{{ interfaceLabels[instructionHeader] }} {{interfaceLabels[scaleText]}}</p>
+            <div ng-class="{'hemo_display_arrow_pos1' : heamoStatus == 'Very Low' ,'hemo_display_arrow_pos2' : heamoStatus == 'Low','hemo_display_arrow_pos3' : heamoStatus == 'Acceptable', 'hemo_display_arrow_pos4' : heamoStatus == 'Normal', 'hemo_display_arrow_pos5' : heamoStatus == 'High'}" class="glu_arrow_text_design glu_arrow_scale_pos">
+                <div class="glu_arrow_size_pos"></div>
+            </div>
+            <div id="glu-ref-chart" style="background-image: linear-gradient(to right, #eb1f12,#c9680f, #09c21d, #eb1f12);">
+                <div style="padding-left: 0px;">Very Low</div>
+                <div style="padding-left: 0px;">{{interfaceLabels[lowText]}}</div>
+                <div style="padding-right: 0px;">Acceptable</div>
+                <div style="padding-right: 19px;">{{interfaceLabels[normalText]}}</div>
+                <div style="padding-right: 0px;">{{interfaceLabels[highText]}}</div>
+            </div>
+        </span>
+         <div class="invasive_urn_result_container" ng-if="currentIvtTest === 'urn'">
+            <div class="invasive_urn_result_table1">
+                <table>
+                    <tr>
+                        <td style="border: none; padding: 9px;">
+                            <span style="font-weight: bold;">{{interfaceLabels[testName]}}</span>
+                        </td>
+                        <td style="border: none; padding: 9px;">
+                            <span style="font-weight: bold;">{{interfaceLabels[testResult]}}</span>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="param in ivtUrnResultTable1">
+                        <td style="border: none; padding: 9px;">
+                            <span>{{ interfaceLabels[param.label] }}</span>
+                        </td>
+                        <td style="border: none; padding: 9px;">
+                            {{ param.value }} {{ param.value === '' ? '' : param.unit }} {{ param.label === 'Leukocytes' && param.value != '' ? '&mu;L' : '' }}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+
+            <div class="invasive_urn_result_table2">
+                <table>
+                    <tr>
+                        <td style="border: none; padding: 9px;">
+                            <span style="font-weight: bold;">{{interfaceLabels[testName]}}</span>
+                        </td>
+                        <td style="border: none; padding: 9px;">
+                            <span style="font-weight: bold;">{{interfaceLabels[testResult]}}</span>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="param in ivtUrnResultTable2">
+                        <td style="border: none; padding: 9px;">
+                            <span>{{ interfaceLabels[param.label] }}</span>
+                        </td>
+                        <td style="border: none; padding: 9px;">
+                            {{ param.value }} {{ param.value === '' ? '' : param.unit }} {{ param.label === 'Blood' && param.value != '' ? '&mu;L' : '' }}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+         </div>
+
+     </div>
+ </div>
+  
+ <div class="global_redo_button" ng-if="invasiveStartTestButtonSelect" ng-click="redoIvt()">
+     <div class="global_redo_outer_line">
+         <img src="images/Icons-27.png" class="global_redo_button_icon">
+         <small class="global_redo_button_small_text">{{interfaceLabels[redo]}}</small>
+     </div>
+ </div>
+ 
+ <a class= "global_continue_next_button" ng-click="nextButtonOut()">
+     <span class="global_continue_next_button_text">{{interfaceLabels[ivtnxtBtnTxt]}}</span>
+ </a>

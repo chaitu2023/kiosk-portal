@@ -1,0 +1,30 @@
+<!-- <div id="slide_title">{{interfaceLabels[slideTitle]}}</div> -->
+<div id="slide_subtitle"></div>
+<div class="higi_top_container"></div>
+<div class="height-title" style="">{{interfaceLabels[slideSubTitle]}}<span class="current-of-total">{{interfaceLabels[currentOfTotal]}}</span></div>
+
+<!-- <div class="height-subtitle">{{interfaceLabels[slideWhyHeight]}}</div> -->
+<!-- <div class="" style="
+    top: 100px;
+    position: absolute;
+    left: 400px;
+    transform: translate(-50%, 0px);
+    font-size: 25px;">Enter Your Height</div>
+ -->
+ <div ng-class="(directiveClickable) ? '' : 'no-click'" style="">
+    <height-numpad heightset="nextVisible"></height-numpad>
+</div>
+<a class="global_previous_page_button  {{prevIsVisible ? buttonEnterLeft : buttonExitLeft}}" ng-show="prevIsVisible" ng-click="backButtonOut()">
+    <span class="global_previous_page_text">{{interfaceLabels[prevSlideText]}}</span>
+</a>
+<a class="global_continue_next_button {{nextVisible ? buttonEnterRight : buttonExitRight}}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[nextSlideText]}}</span>
+</a>
+
+
+<!-- <a id="higi_control_left_btn" class="left_control_btn {{langClass}}  {{prevIsVisible ? buttonEnterLeft : buttonExitLeft}}" ng-show="prevIsVisible" ng-click="backButtonOut()">
+    <span class="{{langClass}}">{{interfaceLabels[prevSlideText]}}</span>
+</a>
+<a id="higi_control_right_ng_btn" class="right_control_btn {{langClass}} {{nextVisible ? buttonEnterRight : buttonExitRight}}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="{{langClass}} {{interfaceLabels[nextSlideText]}}">{{interfaceLabels[nextSlideText]}}</span>
+</a>

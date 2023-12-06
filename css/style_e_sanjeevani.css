@@ -1,0 +1,932 @@
+.san_login_modal_main_container{
+    margin: 20px 20px 20px 20px;
+    height: 478px;
+}
+
+.login_modal_input_field_container{
+    height: 145px;
+    margin: 30px 10px 0px 10px;
+    border-radius: 10px;
+    background-color: #dbdbdb;
+}
+
+.login_esan_modal_email_input_box input{
+    top: 0px !important;
+    left: 0px !important;
+    height: 50px !important;
+    padding-right: 16px !important;
+    padding-left: 20px !important;
+    border: none !important;
+    color: gray !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: none !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 400px !important;
+    display: block !important;
+    font-size: 19px !important;
+    position: relative !important;
+    background: transparent !important;
+}
+
+.login_esan_modal_email_input_box input::selection {
+    top: 0px !important;
+    left: 0px !important;
+    height: 50px !important;
+    padding-right: 16px !important;
+    padding-left: 20px !important;
+    border: none !important;
+    color: gray !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: none !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 400px !important;
+    display: block !important;
+    font-size: 19px !important;
+    position: relative !important;
+    background: transparent !important; 
+}
+
+.login_esan_modal_email_input_box input::-webkit-selection {
+    top: 0px !important;
+    left: 0px !important;
+    height: 50px !important;
+    padding-right: 16px !important;
+    padding-left: 20px !important;
+    border: none !important;
+    color: gray !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: none !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 400px !important;
+    display: block !important;
+    font-size: 19px !important;
+    position: relative !important;
+    background: transparent !important; 
+}
+
+.login_esan_modal_email_input_box input::-moz-selection{
+    top: 0px !important;
+    left: 0px !important;
+    height: 50px !important;
+    padding-right: 16px !important;
+    padding-left: 20px !important;
+    border: none !important;
+    color: gray !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: none !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 400px !important;
+    display: block !important;
+    font-size: 19px !important;
+    position: relative !important;
+    background: transparent !important;  
+}
+
+.login_esan_modal_email_input_box div{
+    font-size: 18px !important;
+    top: 0px !important;
+    left: 0px !important;
+    font-family: LatoRegular !important;
+    color: rgb(166, 166, 166) !important;
+    display: block !important;
+    height: 50px !important;
+    line-height: 50px !important;
+    position: absolute !important;
+    text-indent: 19px !important;
+    width: 350px !important;
+    border-radius: none !important;
+    z-index: 10 !important;
+    pointer-events: none !important; 
+    margin-top: 0px !important; 
+    margin-bottom: 0px !important; 
+    margin-left: 0px !important; 
+    margin-right: 0px !important; 
+}
+
+/*#login_username_error_newest3.hi_in {
+    left: 410px;
+    top: -11px;
+    width: 80px;
+    font-size: 12px;
+    font-family: 'LatoRegular';
+    position: absolute;
+    color: #d00;
+}*/
+
+#register-first-screen-text{
+    top: -16px;
+    left: 432px;
+    width: 75px;
+    font-size: 18px;
+    font-family: 'LatoRegular';
+    position: absolute;
+    color: #d00;
+}
+
+/*#register-first-screen-text.hi_in{
+    top: -9px;
+    left: 389px;
+    width: 139px;
+    font-size: 14px;
+    font-family: 'LatoRegular';
+    position: absolute;
+    color: #d00;
+}*/
+
+.email_validation_loader {
+    top: 10px;
+    /*left: 510px;*/
+    left: 550px;
+    width: 35px;
+    height: 35px;
+    z-index: 18;
+    display: none;
+    position: absolute;
+    background: transparent url(../images/keyboard_dialog_loading_icon06222012.png) top left no-repeat;
+    -webkit-animation: rotate360 1.3s linear infinite; 
+}
+
+#login_password {
+    top: 78px;
+    position: absolute;
+    width: 410px;
+    height: 50px;
+    left: 15px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background: white;
+    font-family: 'LatoRegular';
+}
+
+.login_modal_password_input_box input{
+    top: 0px !important;
+    left: 0px !important;
+    height: 50px !important;
+    padding-right: 16px !important;
+    padding-left: 20px !important;
+    border: none !important;
+    color: gray !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: none !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 310px !important;
+    display: block !important;
+    font-size: 19px !important;
+    position: relative !important;
+    background: transparent !important;
+}
+
+.login_modal_password_input_box input::selection {
+    top: 0px !important;
+    left: 0px !important;
+    height: 50px !important;
+    padding-right: 16px !important;
+    padding-left: 20px !important;
+    border: none !important;
+    color: gray !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: none !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 310px !important;
+    display: block !important;
+    font-size: 19px !important;
+    position: relative !important;
+    background: transparent !important; 
+}
+
+.login_modal_password_input_box input::-webkit-selection {
+    top: 0px !important;
+    left: 0px !important;
+    height: 50px !important;
+    padding-right: 16px !important;
+    padding-left: 20px !important;
+    border: none !important;
+    color: gray !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: none !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 310px !important;
+    display: block !important;
+    font-size: 19px !important;
+    position: relative !important;
+    background: transparent !important; 
+}
+
+.login_modal_password_input_box input::-moz-selection{
+    top: 0px !important;
+    left: 0px !important;
+    height: 50px !important;
+    padding-right: 16px !important;
+    padding-left: 20px !important;
+    border: none !important;
+    color: gray !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: none !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 310px !important;
+    display: block !important;
+    font-size: 19px !important;
+    position: relative !important;
+    background: transparent !important;  
+}
+
+.login_modal_password_input_box div{
+    font-size: 18px !important;
+    top: 0px !important;
+    left: 0px !important;
+    font-family: LatoRegular !important;
+    color: rgb(166, 166, 166) !important;
+    display: block !important;
+    height: 50px !important;
+    line-height: 50px !important;
+    position: absolute !important;
+    text-indent: 19px !important;
+    width: 350px !important;
+    border-radius: none !important;
+    z-index: 10 !important;
+    pointer-events: none !important; 
+    margin-top: 0px !important; 
+    margin-bottom: 0px !important; 
+    margin-left: 0px !important; 
+    margin-right: 0px !important; 
+}
+
+.login_modal_password_eyes_images {
+    width: 44px;
+    height: 21px;
+    background: transparent url(../images/Icons-0006.png) top left no-repeat;
+    position: absolute;
+    top: 15px;
+    left: 359px;
+    background-size: 40px;
+}
+
+.login_modal_password_eyes_images.active_eyes{
+    width: 44px;
+    height: 28px;
+    background: transparent url(../images/password_hide_icon.png) top left no-repeat;
+    position: absolute;
+    top: 12px;
+    left: 359px;
+    background-size: 40px;
+}
+
+.login_modal_password_input_field_error{
+    top: 4px;
+    left: 278px;
+    width: 80px;
+    font-size: 17px;
+    font-family: 'LatoRegular';
+    position: absolute;
+    color: #d00;
+}
+
+.login_modal_password_server_error{
+    top: -13px;
+    left: 306px;
+    width: 80px;
+    font-size: 17px;
+    font-family: 'LatoRegular';
+    position: absolute;
+    color: #d00;
+    display: none;
+}
+
+.login_modal_account_credetial_error{
+    top: -13px;
+    left: 210px;
+    width: 150px;
+    font-size: 16px;
+    font-family: 'LatoRegular';
+    position: absolute;
+    color: #d00;
+    display: none;
+}
+
+.password_validation_loader {
+    top: 10px;
+    left: 420px;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+    pointer-events: none !important;
+    background: transparent url("../images/keyboard_dialog_loading_icon06222012.png") top left no-repeat;
+    -webkit-animation: rotate360 1.3s linear infinite; 
+}
+
+.login_modal_password_submission_btn{
+    position: absolute !important;
+    top: -3px !important;
+    width: 190px !important;
+    height: 50px !important;
+    left: 420px !important;
+    pointer-events: none !important;
+    text-align: center !important;
+    font-family: "LatoRegular" !important;
+    z-index: 15 !important;
+    line-height: 60px !important;
+    border: 1px solid #cecece !important;
+    border-radius: 7px !important;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%) !important;
+}
+
+.login_modal_password_submission_btn span{
+    position: relative !important;
+    top: -3px !important;
+    color: #fff !important;
+    font-size: 22px !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2) !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: .9 !important;
+}
+
+.login_modal_password_submission_btn.login_modal_password_active_btn{
+    position: absolute !important;
+    top: -3px !important;
+    height: 50px !important;
+    left: 420px !important;
+    border-radius: 10px !important;
+    border-top: 2px solid #5dbcff !important;
+    border-left: 2px solid #5fa4d4bf !important;
+    border-bottom: 2px solid #50a4e0bf !important;
+    border-right: 2px solid #50a4e0bf !important;
+    width: 190px !important;
+    color: white !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    box-shadow: 0px 4px 4px #4a4a4ae0 !important;
+    background: linear-gradient(to bottom,#5aa4d9,#3989c3, #0261c2) !important;
+    text-shadow: none !important;
+    font-family: 'LatoRegular' !important;
+    font-weight: 500 !important;
+    pointer-events: all !important;
+}
+
+.login_modal_password_submission_btn.login_modal_password_active_btn span{
+    font-size: 21px !important;
+    text-align: center !important;
+    position: relative !important;
+    top: -4px !important;
+    font-family: LatoRegular !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+}
+
+.login_modal_password_submission_btn.login_modal_password_active_btn:active{
+    box-shadow: none !important;
+}
+
+#san_login_mobile_loading_new{
+    top: 10px;
+    left: 315px;
+    width: 35px;
+    height: 35px;
+    z-index: 18;
+    position: absolute;
+    background: transparent url(../images/keyboard_dialog_loading_icon06222012.png) top left no-repeat;
+    -webkit-animation: rotate360 1.3s linear infinite;
+}
+
+#san_login_mobile_empty_error {
+    left: 315px;
+    top: -13px;
+    width: 80px;
+    font-size: 17px;
+    font-family: 'LatoRegular';
+    position: absolute;
+    color: #dd0000e0;
+    font-weight: 600;
+}
+
+#san_login_mobile_error {
+    left: 300px;
+    top: -13px;
+    width: 170px;
+    font-size: 18px;
+    font-family: 'LatoRegular';
+    position: absolute;
+    color: #dd0000e0;
+    font-weight: 600;
+    margin-left: -8px;
+}
+
+#san_login_mobile {
+    top: 15px;
+    position: absolute;
+    /* width: 500px; */
+    width: 410px;
+    height: 50px;
+    left: 15px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background: white;
+    font-family: 'LatoRegular';
+}
+
+.san_main_container {
+	/*margin-top: -440px;  */  
+    /*box-shadow: 0px 5px 9px #bdbdbd, 0px 0px 10px #888;
+    background-color: #dddddd;*/
+    box-shadow: 0px 5px 9px #afafaf, 0px 0px 10px #999;
+    /*background-color: #dfdfdf;*/
+    background-color: #e6e6e6;
+    height: 350px;
+}
+
+.san_patient_main_box {
+    width: 320px;
+    height: 220px;
+    /*display: inline-block;*/
+    border-radius: 10px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    /*background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);*/
+    background-color: #e6e6e6;
+    box-shadow: 4px 4px 4px #AFAFAF, -3px -3px 1px white;
+    border: 2px solid #c0c0c0;
+    float: left;
+    margin-left: 17px;
+}
+
+.san_patient_main_box_icon {
+    display: inline-block;
+    height: 150px;
+}
+
+.san_patient_main_box_title {
+    font-family: 'latoBold';
+    color: #4d4d4d;
+}
+
+.san_patient_main_box_active {
+    /* color: white;
+    background-color: #208ad6;*/
+    border-color: #48acf5;
+}
+
+/* .san_patient_list_green_dot { */
+/* border: 20px solid green; */
+/* } */
+
+
+.san_patient_list_green_dot {
+    margin: 0px 5px;
+    width: 14px;
+    height: 14px;
+    background-color: #ABFF00;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+    /* -webkit-animation: blinkGreen 0.5s infinite; */
+    /* -moz-animation: blinkGreen 1s infinite; */
+    /* -ms-animation: blinkGreen 1s infinite; */
+    /* -o-animation: blinkGreen 1s infinite; */
+    /* animation: blinkGreen 1s infinite; */
+}
+
+@-webkit-keyframes blinkGreen {
+    from {
+        background-color: #ABFF00;
+    }
+
+    50% {
+        background-color: #AA0;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+    }
+
+    to {
+        background-color: #ABFF00;
+    }
+}
+
+.san_patient_list_red_dot {
+    margin: 0px 5px;
+    width: 14px;
+    height: 14px;
+    background-color: #F00;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+}
+.san_patient_list_green_dot {
+    margin: 0px 5px;
+    width: 14px;
+    height: 14px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: green 0 -1px 7px 1px, inset green 0 -1px 9px, green 0 2px 12px;
+}
+.san_patient_list_grey_dot {
+    margin: 0px 5px;
+    width: 14px;
+    height: 14px;
+    background-color: grey;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: grey 0 -1px 7px 1px, inset grey 0 -1px 9px, grey 0 2px 12px;
+}
+
+.san_patient_details {
+    width: 100%;
+    height: 100px;
+    text-align: initial;
+    margin: 10px 0px;
+}
+
+.san_patient_details_image_container {
+    display: inline-block;
+    width: 34%;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.san_patient_details_image_container_img {
+    /* height: 90px;*/
+    height: 80px;
+    width: 80px;
+    /*border: 1px solid;*/
+}
+
+.san_patient_details_container {
+    display: inline-block;
+    width: 64%;
+    height: 100%;
+    /* font-size: 15px; */
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    /* bottom: -5px; */
+    /* position: absolute; */
+    /* top: -35px; */
+    margin-top: -10px;
+}
+
+#san_patient_main_container {
+    padding: 0px 0px;
+    text-align: center;
+    height: 345px;
+    width: 800px;
+    /* overflow: auto; */
+    /* margin-right: 23px; */
+    overflow:hidden;
+    position: relative;
+    margin-left: 50px;
+}
+
+.san_patient_details_container p {
+    text-align: left;
+    word-break: break-all;
+    /* margin: 1px; */
+    /* margin: 10px 10px 10px 10px; */
+    font-size: 13px;
+    font-family: 'latoHeavy';
+    color: #4d4d4d;
+    /* font-weight: 500; */
+    margin: 10px;
+    margin-left: -10px;
+    margin-top: 15px;
+}
+
+.san_patient_details_container_title{
+    color: rgb(34,138,213);
+    font-family: 'latobold';
+}
+
+#san_patient_main_container_scroll{
+    width:100%;
+    /* height:345px; */
+    /* position: absolute; */
+}
+
+.san_patient_details_container_domain{
+    position: relative;
+    font-family: 'latoBold';
+}
+
+.san_patient_details_container_label_content{
+    margin: 2px;
+    font-family: 'latoBold';
+    display: inline-block;
+}
+
+.san_patient_details_container_amount{
+    font-size: 12px;
+    width: fit-content;
+    /* margin: 0px 1px 0px 0px; */
+    color: gray;
+    font-family: 'latobold';
+    text-align: center;
+}
+
+.san_patient_details_rating_stars_container{
+    display: inline;
+    color: #2a76c4;
+}
+
+.call_doctor_button_class{
+    font-size: 14px;
+    float: right;
+    border-radius: 5px;
+    border: 0px;
+    padding: 8px 15px;
+    background-color: rgb(34,138,213);
+    color: white;
+    /* box-shadow: 0px 0px 0px 1px #afafaf; */
+    /* box-shadow: 0px 1px 1px #c8c8c8; */
+    box-shadow: 0px 1px 2px dodgerblue;
+    /* color: black; */
+    text-transform: uppercase;
+}
+
+/*.label {
+    background-color: #a0c5eebd;
+    width: auto;
+    padding: 2px;
+    border-radius: 5px; 
+}*/
+
+.consultant-name-text > span {
+    display: inline-block;
+    overflow: hidden;
+    position: fixed;
+    white-space: nowrap;
+    width: 90%;
+}
+
+.consultant-name-text > span > span {
+    display: inline-block;
+    padding-left: 100%;
+    width: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+.san_header_container {
+    /* margin-top: 11%; */
+    text-align: center;
+    margin-bottom: 30px;
+}
+.san_header_image {
+    width: 30px;
+}
+.san_header_text {
+    padding-left: 10px;
+    font-weight: 500;
+    margin-top: 0px;
+    font-family: 'LatoItalic';
+    font-size: 34px;
+    color: #4d4d4d;
+    position: relative;
+    top: -5px;
+}
+.san-success-msg {
+    color: #270;
+    background-color: #d3f1a1;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 3px 3px 3px 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#san_login_error {
+    left: 435px;
+    top: -5px;
+    width: 170px;
+    font-size: 18px;
+    font-family: 'LatoRegular';
+    position: absolute;
+    color: #dd0000e0;
+    font-weight: 600;
+    margin-left: -8px;
+}
+.missing_test_request {
+    margin-top: -320px;
+    font-size: 30px;
+    text-align: center;
+    color: #d00;
+    padding: 10px;
+}
+
+.san_test_section_main_container{
+    /* height: 250px;
+    margin: 250px 20px 20px 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: inset 0px 0px 4px 2px #c8c8c8;
+    box-sizing: border-box;
+    border: 1px solid #c8c8c8; */
+
+    /*height: 430px;
+    margin: -448px 25px 20px 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: inset 0px 0px 4px 2px #c8c8c8;
+    box-sizing: border-box;
+    border: 1px solid #c8c8c8;*/
+
+    height: 430px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: inset 0px 0px 4px 2px #c8c8c8;
+    box-sizing: border-box;
+    border: 1px solid #c8c8c8;
+    margin: 70px 20px 20px 20px;
+}
+
+.san_test_section_main_title{
+    text-align: center;
+    font-size: 34px;
+    font-weight: 500;
+    color: #4a4a4a;
+    /* color: #0261c2; */
+    font-family: 'LatoItalic';
+    position: absolute;
+    top: -50px;
+    width: 668px;
+}
+
+#san_test_request_details{
+    /* top: 43px;
+    position: relative;
+    width: 100%;
+    height: 195px;
+    overflow: hidden;
+    margin: auto;
+    display: block; */
+
+    top: 40px;
+    position: relative;
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+    margin: auto;
+    display: block;
+}
+
+.san-test-details {
+    /* border-radius: 10px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #e6e6e6;
+    box-shadow: 4px 4px 4px #afafaf, -3px -3px 1px white;
+    border: 2px solid #c0c0c0;
+    float: left;
+    margin-left: 30px;
+    width: 280px;
+    min-height: 50px;
+    max-height: 100px;
+    overflow: auto; */
+
+    border-radius: 10px;
+    margin: -5px 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    /* background-color: #e6e6e6; */
+    /* box-shadow: 4px 4px 4px #afafaf, -3px -3px 1px white; */
+    /* border: 2px solid #c0c0c0; */
+    float: left;
+    margin-left: 30px;
+    width: 280px;
+    min-height: 50px;
+    max-height: 100px;
+    overflow: auto;
+}
+.san-test-checkbox {
+    width: 21px;
+    height: 21px;
+    left: 5px;
+    border: 2px solid #808080d1;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.san_test_continue_next_button{
+    top: 390px;
+    right: -25px;
+    position: fixed;
+    height: 50px;
+    border-top: 3px solid #5dbcff;
+    border-left: 3px solid #5fa4d4bf;
+    border-bottom: 3px solid #50a4e0bf;
+    width: 180px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+    box-shadow: 4px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#5aa4d9d1,#3989c3de, #0261c2f2);
+}
+
+.san_test_continue_next_button_text{
+	left: 20px;
+    font-size: 20px;
+    text-align: left;
+    position: fixed;
+    top: 14px;
+}
+
+.san_test_name {
+    position: relative;
+    top: -5px;
+}
+
+.san-test-checkboxes ul, .san-test-checkboxes li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.san-test-checkboxes li {
+    display:inline-block;
+    width:33.3333%;
+    line-height: 2;
+}
+.esan_send_button{
+    position: fixed;
+    top: 2px;
+    left: 475px;
+    width: 300px;
+    height: 35px;
+    border: 3px solid #208ad6bf;
+    border-radius: 10px;
+    text-align: right;
+    color: #4d4d4d;
+    box-shadow: 0px 5px 3px #4a4a4ae0;
+    background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+}
+
+.esan_icon {
+    width: 12px;
+    margin-top: -4px;
+    padding: 0px 0px;
+    margin-left: 0px;
+}
+
+.esan_send_text {
+    font-family: LatoRegular;
+    font-size: 18px;
+    position: relative;
+    top: -6px;
+    margin-left: 2px;
+    margin-right: 15px;
+}

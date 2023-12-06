@@ -1,0 +1,10 @@
+{"zugEcg3.Lead3":"ECG -3 ലീഡ്  ","zugEcg3.Lead6":"ECG -6 ലീഡ് ","zugEcg3.results":"ഫലങ്ങള്‍","zugEcg3.ecgCheckUpSummTitle":"ECG പരിശോധന സംഗ്രഹം ","zugEcg3.grpset1":"ഗ്രാഫ് സെറ്റ് -1 ","zugEcg3.grpset2":"ഗ്രാഫ് സെറ്റ് -2 ","zugEcg3.loadinggraph":"നിങ്ങളുടെ ECG ഗ്രാഫ് ലോഡ് ചെയ്യുന്നു ദയവായി കാത്തിരിക്കുക...","zugECG3.parameter":"മാനദണ്ഡങ്ങൾ","zugECG3.yourscore":"നിങ്ങളുടെ സ്കോര്‍","zugECG3.STATUS":"സ്ഥിതി","zugECG3.normalrange":"സാധാരണ റേഞ്ച് ","zugECG3.OverallStatus":"മൊത്തത്തിലുള്ള സ്ഥിതി","zugEcg3.ecglead1":"ECG ലീഡ് I","zugEcg3.ecglead2":"ECG ലീഡ് Ii","zugEcg3.ecglead3":"ECG ലീഡ് III","zugEcg3.ecglead4":"ECG ലീഡ് AVR","zugEcg3.ecglead5":"ECG ലീഡ് AVF","zugEcg3.ecglead6":"ECG ലീഡ് AVL","zugECG3.checkAgain":"ECG വീണ്ടും പരിശോധിക്കുക","global.finalResult":"ഫൈനല്‍ റിസള്‍ട്ട്","zugECG3.ecgHeartRate": "Heart Rate",
+"zugECG3.ecgBpm": "bpm",
+"zugECG3.ecgPrInterval": "PR Interval",
+"zugECG3.ecgMs": "ms",
+"zugECG3.ecgQrs": "QRS",
+"zugECG3.ecgDuration": "Duration",
+"zugECG3.ecgQtc": "QTc",
+"zugECG3.ecgInterval": "Interval",
+"zugECG3.irregularEcgTest": "Signal strength is low. Unable to process the ECG Graph.",
+"zugECG3.ecgRedoTask": "Please redo the test"}

@@ -1,0 +1,25 @@
+<div data-ng-show="ihlMembership.ihlMembershipListShow" class="keyboard_lastcheckin">
+    <p class="membership_header">Flexible payment plans tailored to your needs</p>
+
+    <div style="display: flex;padding: 20px;">
+        <div class="ihl_membership_btn" ng-repeat="item in ihlMembership.membershipPlanArray" data-ng-click="selectPackageType(item.planName)">
+            <div style="display: flex;align-items: center;justify-content: space-between;">
+                <h4>{{ item.planName }}</h4>
+                <img style="width: 35px;" src="images/{{item.image}}.png">
+            </div>
+            <p>{{ item.planlimit }}</p>
+            <label>&#x20B9; {{ item.amount }}</label>
+
+            <ul ng-repeat="data in item.valueAddedList">
+                <li style="font-size: smaller;">{{ data }}</li>
+            </ul>
+            
+        </div>
+
+        <a class="membership_next_btn {{ ihlMembership.membershipNextBtnClass }}" ng-click="" style="">
+            <span>Next</span>
+        </a>
+
+    </div>
+
+</div>

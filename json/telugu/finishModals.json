@@ -1,0 +1,20 @@
+{
+    "emailresults.enter.email": "మీ ఈ మెయిల్ అడ్రస్ ని నమోదు చేయండి",
+    "emailresults.enter.email.to.send.results": "మీ ఫలితాలను పంపడానికి మీ ఇమెయిల్ అడ్రస్ ను నమోదు చేయండి",
+    "emailresults.email.sent": "మీ ఫలితాలను పొందడానికి మీ ఇమెయిల్‌ని తనిఖీ చేయండి.",
+    "emailresults.by.clicking.send": "మీ ఫలితాలను ఇమెయిల్ చేయడం ద్వారా, మీ సమాచారం సేవ్ చేయబడవచ్చని మీరు అంగీకరిస్తున్నారు.",
+    "global.send": "పంపండి",
+    "finishModal.email.never.spam": "మేము మిమ్మల్ని స్పామ్ చేయము. ప్రామిస్!)",
+    "finishModal.printwarning": " హెచ్చరిక! ",
+    "finishModal.makesure": "దయచేసి ప్రింటర్ ప్రాంతాన్ని బ్లాక్ చేయవద్దు",
+    "finishModal.printinstruct": "టెస్ట్ ఫలితాల స్లిప్ పొందడానికి దిగువ PRINT బటన్‌ని నొక్కండి",
+    "finishModal.notavail": "పేపర్ అందుబాటులో లేదు",
+    "finishModal.papernot": " క్షమించండి, Hpod లో ప్రింట్ పేపర్ అందుబాటులో లేదు",
+    "finishModal.refill": "మేము త్వరలో రీఫిల్ చేస్తాము...",
+    "finishModal.printRes": "ప్రింట్ ఫలితాలు",
+    "finishModal.okayy": "ఓకే",
+    "finishModal.printEcgraph": "ఇసిజి గ్రాఫ్ ప్రింట్ చేయండి",
+    "global.requird.test": "No Test Results",
+    "emailresults.enter.email.to.send.abharesults": "Enter your Email Address to get your card",
+    "emailresults.by.clicking.abhasend": "By emailing your results, you accept that your card may be saved"
+}

@@ -1,0 +1,1598 @@
+<style type="text/css" media="print">
+    .take-print {
+        /*visibility: visible;
+        margin-top: -40px;*/
+        display: none !important;
+    }
+</style>
+
+
+<!-- <div id="slide_title" class="no-print" higi_resource_html="finalresults.title">{{interfaceLabels[slideTitle]}}</div> -->
+<div id="slide_subtitle" class="finalresults01_subtitle {{savingClass}} {{langClass}} no-print">
+    <span ng-show="savedState.success.status" style="font-family: LatoItalic;
+    color: #4d4d4d;
+    font-size: 25px;">{{interfaceLabels[savedState.success.savedLabel]}}</span>
+    <span ng-show="savedState.failure.status">{{interfaceLabels[savedState.failure.savedLabel]}}</span>
+    <span ng-show="savedState.saving.status"><i class="saving"></i><span
+            class="text">{{interfaceLabels[savedState.saving.savedLabel]}}</span></span>
+
+
+</div>
+<style type="text/css">
+    #mydiv {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        /* background-color:gr;*/
+        background-position: center;
+        opacity: .8;
+    }
+
+    #call-btn-container {
+        z-index: 1;
+        position: absolute;
+        margin-top: -80px;
+        margin-left: 490px;
+        width: 500px;
+    }
+
+    #call-btn-container > span {
+        border: 3px solid #208ad6bf;
+        color: #208ad6bf;
+        box-shadow: 0px 5px 3px #4a4a4ae0;
+        background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+        padding: 5px;
+        position: absolute;
+        right: 260px;
+        margin-top: 20px;
+        width: 170px;
+        text-align: left;
+        opacity: 1;
+        transition: opacity 1s;
+        border-radius: 10px;
+        animation: changeBorderColorAnime 2s infinite;
+        pointer-events: all;
+    }
+
+    #call-btn {
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        border: 3px solid #208ad6bf;
+        text-align: right;
+        box-shadow: 0px 5px 3px #4a4a4ae0;
+        background: linear-gradient(to bottom,#f7f7f7, #dbdbdb , #c1c1c1);
+        border-radius: 50%;
+        animation: changeBorderColorAnime 2s infinite;
+        pointer-events: all;
+    }
+
+    #call-btn-icon {
+        font-size: 4em;
+        position: absolute;
+        left: 10px;
+        margin-top: -22px;
+        color: #208ad6bf;
+        animation: changeBorderColorAnime 2s infinite;
+        pointer-events: all;
+    }
+
+    @keyframes changeBorderColorAnime {
+        from {border-color: #208ad6bf; color: #208ad6bf;}
+        to {border-color: green; color: green;}
+    }
+</style>
+
+<!-- <style type="text/css" media="print">
+    .no-print {
+        visibility: hidden;
+    }
+</style> -->
+
+
+
+
+
+
+
+
+
+
+
+<div class="higi_top_container no-print"></div>
+
+<div id="finalresults01_pane" class="no-print">
+    <!-- Harry Code -->
+    <div class="final_result_title">{{interfaceLabels[finalresult_Title]}}</div>
+    <a class="esan_send_button" ng-show="eSanSendResponseBtn" ng-click="sendTestRequestResultToESanjeevani()">
+        <span style="position: relative;top:12px;">
+            <img class="esan_icon" src="images/ESanjeevani_logo.png">
+            <span class="esan_send_text">{{interfaceLabels[sendResponseToESan]}}</span>
+        </span>
+    </a>
+
+    <div class="final_result_container">
+        <!-- tele consultation button -->
+        <div ng-if="!isMEBOrg" id="call-btn-container" ng-show="showTeleCallBtn && enableTeleConsultation && (!useralredyinTeleflow)">
+            <span ng-click="redirectToTeleConsultDashboard()">{{interfaceLabels[consultDoctorNow]}}</span>
+            <button id="call-btn" ng-click="redirectToTeleConsultDashboard()">
+                <i class="fa fa-phone" id="call-btn-icon"></i>
+            </button>
+        </div>
+        <!-- Navbar -->
+        <div class="final_result_navbar_container">
+            <div class="final_result_navbar_tab" id="navbar_tab_body_vitals" style="border-radius: 10px 0px 0px 0px;">
+                <div class="final_result_navbar_tab_inner"
+                    ng-click="FinalResultNavbarNavigate('navbar_tab_body_vitals')">{{interfaceLabels[finalresult_BodyVitalTitle]}}</div>
+            </div>
+            <div class="final_result_navbar_tab" id="navbar_tab_electro_cardio_graph">
+                <div class="final_result_navbar_tab_inner"
+                    ng-click="FinalResultNavbarNavigate('navbar_tab_electro_cardio_graph')">{{interfaceLabels[finalresult_Ecg_Title]}}
+                </div>
+            </div>
+            <div ng-show = "fullBodyBMCTest" class="final_result_navbar_tab" id="navbar_tab_body_mass_calculations"
+                >
+                <div class="final_result_navbar_tab_inner"
+                    ng-click="FinalResultNavbarNavigate('navbar_tab_body_mass_calculations')">{{interfaceLabels[finalresult_Bmc_Title]}}</div>
+            </div>
+            <div  class="final_result_navbar_tab" id="navbar_tab_invasive_body_vitals" style="border-radius: 0px 10px 0px 0px;">
+                <div class="final_result_navbar_tab_inner"
+                    ng-click="FinalResultNavbarNavigate('navbar_tab_invasive_body_vitals')"> {{interfaceLabels[finalresult_InvasiveTitle]}}  
+                </div>
+            </div>
+        </div>
+        <!-- Navbar ends -->
+        <!-- Result display section -->
+        <div class="final_result_display_container">
+
+            <!-- Body Vitals Result display -->
+            <div class="final_result_display_body_vital_container" id="display_tab_body_vitals" style="display: none;"><!--id="display_tab_body_vitals"-->
+                <div class="final_result_display_body_vital_inner_container" style="width:320px;">
+                    <div class="final_result_title_heading">{{interfaceLabels[finalresult_BpTitle]}}</div>
+
+                    <div class="final_result_display_test_not_taken"
+                        ng-show="StorageSessionKeyValue['diastolic'] == undefined">
+                        <span>{{interfaceLabels[finalresult_NotTaken]}}</span>
+                    </div>
+
+                    <div style="display: flex;" ng-show="StorageSessionKeyValue['diastolic'] != undefined">
+
+                        <div class="final_result_display_box_body_vitals">
+                            <span class="final_result_display_box_1">
+                                {{interfaceLabels[finalresult_systolicTitle]}}<br>
+                                <span class="final_result_display_box_unit_1">mmHg</span>
+                            </span>
+
+                            <span class="final_result_display_box_value">
+                                {{StorageSessionKeyValue['systolic']}} <span
+                                    class="final_result_display_box_unit_2">mmHg</span>
+                            </span>
+
+                            <!-- <span class="final_result_display_box_status finalresults_result_status final_result_systolic_acceptable" ng-if="StorageSessionKeyValue['systolic'] <= 139">
+                                {{interfaceLabels[finalresult_ACCEPTABLE]}}
+                            </span> 
+                            <span class="final_result_display_box_status finalresults_result_status final_result_systolic_high" ng-if="StorageSessionKeyValue['systolic'] >= 140" style="font-size: 8px;">
+                                {{interfaceLabels[finalresult_CONSULTHEALTHCAREPROVIDER]}}
+                            </span>  -->
+                            <span ng-class="{ 'font-size-for-clinical-screen': getVitalRangeStatus('BP') === 'Clinical Screening Recommended' , 'final_result_display_box_status': getVitalRangeStatus('BP') !== 'Clinical Screening Recommended' }" class="finalresults_result_status" ng-style="getVitalRangeColor('BP')">
+                                {{getVitalRangeStatus('BP')}}
+                            </span>
+                        </div>
+                        <div class="final_result_display_box_body_vitals">
+                            <span class="final_result_display_box_1">
+                                {{interfaceLabels[finalresult_diastolicTitle]}}<br>
+                                <span class="final_result_display_box_unit_1">mmHg</span>
+                            </span>
+                            <span class="final_result_display_box_value">
+                                {{StorageSessionKeyValue['diastolic']}} <span
+                                    class="final_result_display_box_unit_2">mmHg</span>
+                            </span>
+                            <!-- <span class="final_result_display_box_status finalresults_result_status final_result_diastolic_normal" ng-if="StorageSessionKeyValue['diastolic'] < 80">
+                                {{interfaceLabels[finalresult_NORMAL]}}
+                            </span> 
+                            <span class="final_result_display_box_status finalresults_result_status final_result_diastolic_acceptable" ng-if="StorageSessionKeyValue['diastolic'] >= 80 && StorageSessionKeyValue['diastolic'] < 90">
+                                {{interfaceLabels[finalresult_ACCEPTABLE]}}
+                            </span> 
+                            <span class="final_result_display_box_status finalresults_result_status final_result_diastolic_high" ng-if="StorageSessionKeyValue['diastolic'] >= 90 && StorageSessionKeyValue['diastolic'] < 100" style="font-size: 10px; margin-top: -5px;">
+                                {{interfaceLabels[finalresult_1STAGEHYPER]}}
+                            </span> 
+                            <span class="final_result_display_box_status finalresults_result_status final_result_diastolic_high" ng-if="StorageSessionKeyValue['diastolic'] >= 100" style="font-size: 10px; margin-top: -5px;">
+                                {{interfaceLabels[finalresult_2STAGEHYPER]}}
+                            </span>  -->
+                        </div>
+                        <div class="final_result_display_box_body_vitals">
+                            <span class="final_result_display_box_1">
+                               {{interfaceLabels[finalresult_PulseTitle]}}<br>
+                                <span class="final_result_display_box_unit_1">{{interfaceLabels[beats_per_min]}}</span>
+                            </span>
+                            <span class="final_result_display_box_value">
+                                {{StorageSessionKeyValue['pulse']}}
+                                <span class="final_result_display_box_unit_2">bpm</span>
+                            </span>
+                            <span
+                                class="final_result_display_box_status finalresults_result_status" ng-style="getVitalRangeColor('PULSE')" style=" ">{{getVitalRangeStatus('PULSE')}}</span>
+                                <!-- class="final_result_display_box_status finalresults_result_status final_result_pulse_high"
+                                ng-if="pulseRiskClass=='high'" style="font-size: 12px">{{interfaceLabels[pulseRisk]}}</span>
+
+                            <span
+                                class="final_result_display_box_status finalresults_result_status final_result_pulse_normal"
+                                ng-if="pulseRiskClass=='normal'">{{interfaceLabels[pulseRisk]}}</span>
+
+                            <span
+                                class="final_result_display_box_status finalresults_result_status final_result_pulse_low"
+                                ng-if="pulseRiskClass=='low'">{{interfaceLabels[pulseRisk]}}</span>-->
+
+                            <!-- <span class="final_result_display_box_status finalresults_result_status" -->
+                            <!-- ng-if="{'final_result_pulse_high':(pulseRiskClass=='high'),'final_result_pulse_normal':(pulseRiskClass=='normal'),'final_result_pulse_low':(pulseRiskClass=='low')}">{{interfaceLabels[pulseRisk]}}</span> -->
+                            <!-- ng-class="{'final_result_pulse_high':(pulseRiskClass=='high'),'final_result_pulse_normal':(pulseRiskClass=='normal'),'final_result_pulse_low':(pulseRiskClass=='low')}">{{interfaceLabels[pulseRisk]}}</span> -->
+                        </div>
+                    </div>
+                    <div style="display: flex;" ng-show="StorageSessionKeyValue['systolic'] != undefined">
+                        <div class="final_result_display_box_body_vitals" style="top: 10px;">
+                            <span class="final_result_display_box_1">
+                               {{interfaceLabels[finalresult_blood]}}<br>{{interfaceLabels[finalresult_pressure]}}<br>
+                                <span class="final_result_display_box_unit_1" style="top:40px;">mmHg</span>
+                            </span>
+                            <span class="final_result_display_box_value"
+                                style="top:65px">{{StorageSessionKeyValue['systolic']}}/{{StorageSessionKeyValue['diastolic']}}</span>
+                        </div>
+                        <div class="final_result_display_body_vitals_overall_status_container">
+                            <span class="final_result_display_body_vitals_overall_status">{{interfaceLabels[finalresult_overall]}}</span>
+                            <!-- <span
+                                class="final_result_display_body_vitals_overall_status_value finalresults_result_status"
+                                ng-class="{'final_result_bp_overall_status_low':(bpRiskClass == 'result_risk low'),'final_result_bp_overall_status_normal':(bpRiskClass == 'result_risk normal'),'final_result_bp_overall_status_acceptable':(bpRiskClass == 'result_risk bp_acceptable'),'final_result_bp_overall_status_high':(bpRiskClass == 'result_risk high'),'final_result_bp_overall_status_atrisk':(bpRiskClass == 'result_risk atrisk')}"
+                                id="finalresults_bp_status">{{interfaceLabels[bpRisk]}}</span> -->
+                                <span
+                                class="final_result_display_body_vitals_overall_status_value finalresults_result_status"
+                                ng-style="getVitalRangeColor('BP')"
+                                id="finalresults_bp_status">{{getVitalRangeStatus('BP')}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div ng-show = "fullBodyBMCTest" class="final_result_display_body_vital_inner_container" style="width:213px">
+                    <div class="final_result_title_heading">{{interfaceLabels[finalresult_WeightBmiTitle]}}</div>
+
+                    <div class="final_result_display_test_not_taken"
+                        ng-show="StorageSessionKeyValue['weight'] == undefined">
+                        <span>{{interfaceLabels[finalresult_NotTaken]}}</span>
+                    </div>
+
+                    <div style="display: flex;" ng-show="StorageSessionKeyValue['weight'] != undefined">
+                        <div class="final_result_display_box_body_vitals">
+                            <span class="final_result_display_box_1">
+                              {{interfaceLabels[finalresult_WeightTitle]}} <br>
+                                <span class="final_result_display_box_unit_1">{{interfaceLabels[kgUnit]}}</span>
+                            </span>
+                            <span class="final_result_display_box_value">
+                                {{weight}}
+                                <span class="final_result_display_box_unit_2">kgs</span>
+                            </span>
+                        </div>
+                        <div class="final_result_display_box_body_vitals">
+                            <span class="final_result_display_box_1">
+                               {{interfaceLabels[finalresult_HeightTitle]}}<br>
+                                <span class="final_result_display_box_unit_1">{{interfaceLabels[feetUnit]}}</span>
+                            </span>
+                            <span class="final_result_display_box_value">
+                                {{height}}
+                            </span>
+                        </div>
+                    </div>
+                   <div class="final_result_display_body_vitals_bmi_container"
+                        ng-show="StorageSessionKeyValue['weight'] != undefined">
+                        <div class="final_result_display_body_vitals_bmi_title_container">
+                            <span class="final_result_display_body_vitals_bmi_title_1">{{interfaceLabels[finalresult_BMITitle]}}</span>
+                            <span class="final_result_display_body_vitals_bmi_title_2">{{interfaceLabels[BodyMassindexTitle]}}</span>
+                        </div>
+                        <div class="final_result_display_body_vitals_bmi_value_container">
+                            <span class="final_result_display_body_vitals_bmi_value_1">{{bmi}}</span>
+                            <!-- <span
+                                class="final_result_display_body_vitals_bmi_value_2 finalresults_result_status {{bmiRiskClass}}"
+                                ng-class="{'final_result_bmi_overall_status_normal':(bmiRiskClass=='normal'),'final_result_bmi_overall_status_obese':(bmiRiskClass=='high'),'final_result_bmi_overall_status_atrisk':(bmiRiskClass=='atrisk')}"
+                                id="finalresults_bmi_status">{{interfaceLabels[bmiRisk]}}</span> -->
+                                <span
+                                class="final_result_display_body_vitals_bmi_value_2 finalresults_result_status"
+                                ng-style="getVitalRangeColor('BMI')"
+                                id="finalresults_bmi_status">{{getVitalRangeStatus('BMI')}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div ng-hide = "fullBodyBMCTest" class="final_result_display_body_vital_inner_container" style="width:213px">
+                    <div class="final_result_title_heading">{{interfaceLabels[finalresult_WeightBmiBmcTitle]}}</div>
+
+                    <div class="final_result_display_test_not_taken"
+                        ng-show="StorageSessionKeyValue['weight'] == undefined">
+                        <span>{{interfaceLabels[finalresult_NotTaken]}}</span>
+                    </div>
+
+                    <div style="display: flex;" ng-show="StorageSessionKeyValue['weight'] != undefined">
+                        <div class="final_result_display_box_body_vitals">
+                            <span class="final_result_display_box_1">
+                               {{interfaceLabels[finalresult_WeightTitle]}}<br>
+                                <span class="final_result_display_box_unit_1">{{interfaceLabels[kgUnit]}}</span>
+                            </span>
+                            <span class="final_result_display_box_value">
+                                {{weight}}
+                                <span class="final_result_display_box_unit_2">kgs</span>
+                            </span>
+                        </div>
+                        <div class="final_result_display_box_body_vitals">
+                            <span class="final_result_display_box_1">
+                               {{interfaceLabels[finalresult_HeightTitle]}}<br>
+                                <span class="final_result_display_box_unit_1">{{interfaceLabels[feetUnit]}}</span>
+                            </span>
+                            <span class="final_result_display_box_value">
+                                {{height}}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;" ng-show="StorageSessionKeyValue['weight'] != undefined">
+                        <div class="final_result_display_box_body_vitals">
+                            <span class="final_result_display_box_1">
+                               {{interfaceLabels[finalresult_BMITitle]}}<br>
+                                <span class="final_result_display_box_unit_1">{{interfaceLabels[BodyMassindexTitle]}}</span>
+                            </span>
+                            <span class="final_result_display_box_value">
+                               {{bmi}}
+                            </span>
+                            <!-- <span
+                                class="final_result_display_box_status finalresults_result_status {{oldbmiRiskClass}}"
+                                ng-class="{'final_result_bmi_overall_status_normal':(bmiRiskClass=='normal'),'final_result_bmi_overall_status_obese':(bmiRiskClass=='high'),'final_result_bmi_overall_status_atrisk':(bmiRiskClass=='atrisk')}"
+                                id="finalresults_bmi_status">{{interfaceLabels[bmiRisk]}}
+                            </span> -->
+                            <span
+                                class="final_result_display_box_status finalresults_result_status"
+                                ng-style="getVitalRangeColor('BMI')"
+                                id="finalresults_bmi_status">{{getVitalRangeStatus('BMI')}}
+                            </span>
+                        </div>
+                        <div ng-show = "StorageSessionKeyValue['fatRatio'] != undefined" class="final_result_display_box_body_vitals">
+                            <span class="final_result_display_box_1">
+                                {{interfaceLabels[BMC]}}<br>
+                                <span class="final_result_display_box_unit_1">in %</span>
+                            </span>
+                            <span class="final_result_display_box_value">
+                                {{bmc}}
+                            </span>
+                            <span class="final_result_display_box_status finalresults_result_status" ng-class="{'final_result_bmc_overall_status_healthy':(bmcRiskClass == 'healthy'),'final_result_bmc_overall_status_accept':(bmcRiskClass == 'acceptable'),'final_result_bmc_overall_status_atrisk':(bmcRiskClass == 'at-risk')}" id="finalresults_bmc_status">{{interfaceLabels[bmcRisk]}}</span>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width:213px">
+                    <div class="final_result_display_body_vital_inner_container"
+                        style="height:148px;margin-bottom: 5px;">
+                        <div class="final_result_title_heading">{{interfaceLabels[finalresult_TempTitle]}}</div>
+
+                        <div class="final_result_display_test_not_taken"
+                            ng-show="StorageSessionKeyValue['roomTemperature'] == undefined">
+                            <span>{{interfaceLabels[finalresult_NotTaken]}}</span>
+                        </div>
+
+                        <div style="display: flex;" ng-show="StorageSessionKeyValue['roomTemperature'] != undefined">
+                            <div class="final_result_display_box_body_vitals">
+                                <span class="final_result_display_box_1">
+                                   {{interfaceLabels[finalresult_RoomTitle]}}<br>
+                                    <span class="final_result_display_box_unit_1">{{interfaceLabels[finalresult_temperature]}}</span>
+                                </span>
+                                <span class="final_result_display_box_value">
+                                    {{StorageSessionKeyValue['roomTemperature']}}
+                                    <span class="final_result_display_box_unit_2">F</span>
+                                </span>
+                            </div>
+                            <div class="final_result_display_box_body_vitals">
+                                <span class="final_result_display_box_1">
+                                   {{interfaceLabels[finalresult_BodyTitle]}}<br>
+                                    <span class="final_result_display_box_unit_1">{{interfaceLabels[finalresult_temperature]}}</span>
+                                </span>
+                                <span class="final_result_display_box_value">
+                                    {{temperatur}}
+                                    <span class="final_result_display_box_unit_2">F</span>
+                                </span>
+                                <!-- <span id="finalresults_temp_status"
+                                    class="final_result_display_box_status finalresults_result_status {{tempRiskClass}}"
+                                    ng-class="{'final_result_body_temperature_normal':(tempRiskClass=='normal'),'final_result_body_temperature_acceptable':(tempRiskClass=='acceptable'),'final_result_body_temperature_fever':(tempRiskClass=='atrisk'),'final_result_body_temperature_high_fever':(tempRiskClass=='high')}">{{interfaceLabels[temphealth]}}</span> -->
+                                    <span id="finalresults_temp_status"
+                                    class="final_result_display_box_status finalresults_result_status"
+                                    ng-style="getVitalRangeColor('TEMP')">{{getVitalRangeStatus('TEMP')}}</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="final_result_display_body_vital_inner_container" style="height: 103px;">
+                        <div class="final_result_title_heading">{{interfaceLabels[finalresult_Spo2Title]}}</div>
+
+                        <div class="final_result_display_test_not_taken"
+                            ng-show="StorageSessionKeyValue['spo2Status'] == undefined">
+                            <span>{{interfaceLabels[finalresult_NotTaken]}}</span>
+                        </div>
+
+                        <div class="final_result_display_body_vital_container_spo2_container"
+                            ng-show="StorageSessionKeyValue['spo2Status'] != undefined">
+                            <div class="final_result_display_body_vital_container_spo2_title_container">
+                                <span class="final_result_display_body_vital_container_spo2_title_1">{{interfaceLabels[finalresult_oxyLevel]}}</span>
+                                <span class="final_result_display_body_vital_container_spo2_title_2">{{interfaceLabels[finalresult_percentage]}}</span>
+                            </div>
+                            <div class="final_result_display_body_vital_container_spo2_value_container">
+                                <span class="final_result_display_body_vital_container_spo2_value_1">{{oxygen}} <span class="final_result_display_body_vital_container_spo2_units_container">%</span></span>
+                                <!-- <span
+                                    class="final_result_display_body_vital_container_spo2_value_2 finalresults_result_status {{spo2RiskClass}}"
+                                    id="finalresults_spo2_status" ng-style="spo2RiskClass == 'spo2-atrisk' && {'font-size':'10px'}">{{interfaceLabels[spo2health]}}</span> -->
+                                    <span
+                                    class="final_result_display_body_vital_container_spo2_value_2 finalresults_result_status"
+                                    id="finalresults_spo2_status" ng-style="getVitalRangeColor('SPO2')" style="font-size: 10px;">{{getVitalRangeStatus('SPO2')}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Body Vitals Result display ends -->
+
+            <!-- ECG Result display -->
+            <div class="final_result_display_ecg_container" id="display_tab_electro_cardio_graph"
+                style="display: none;">
+                <!-- ECG not taken -->
+                <div class="final_result_display_test_not_taken" style="width:100%;background-color: rgb(242,242,242);"
+                    ng-show="EcgTakenStatus == false">
+                    <span>{{interfaceLabels[finalresult_NotTaken]}}</span>
+                </div>
+                <!-- Graph display block -->
+                <div class="final_result_display_ecg_inner_container"
+                    style="width:65%;margin-top: -10px;background-color: white;" ng-hide="EcgTakenStatus == false">
+                    <div id="ecg_3lead_graph" style="width:100%;height:100%;display:none;position: relative;">
+
+                        <span class="final_result_display_ecg_graph1_3lead_title">{{interfaceLabels[ECGLead1]}}</span>
+                        <p id="ecg3LeadGrapgh1" class="final_result_display_ecg_graph1_3lead"></p>
+
+                        <span class="final_result_display_ecg_graph2_3lead_title">{{interfaceLabels[ECGLead2]}}</span>
+                        <p id="ecg3LeadGrapgh2" class="final_result_display_ecg_graph2_3lead"></p>
+
+                        <span class="final_result_display_ecg_graph3_3lead_title">{{interfaceLabels[ECGLead3]}}</span>
+                        <p id="ecg3LeadGrapgh3" class="final_result_display_ecg_graph3_3lead"></p>
+
+                        <p id="fecgchartContainer" style="display: none;"></p>
+                    </div>
+                    <div id="ecg_6lead_graph" style="width:100%;height:100%;display:none;position:relative; margin-top: 15px;">
+
+                        <span class="final_result_display_ecg_graph1_6lead_title">{{interfaceLabels[ECGLead1]}}</span>
+                        <p id="ecg6LeadGrapgh1" class="final_result_display_ecg_graph1_6lead"></p>
+
+                        <span class="final_result_display_ecg_graph2_6lead_title">{{interfaceLabels[ECGLead2]}}</span>
+                        <p id="ecg6LeadGrapgh2" class="final_result_display_ecg_graph2_6lead"></p>
+
+                        <span class="final_result_display_ecg_graph3_6lead_title">{{interfaceLabels[ECGLead3]}}</span>
+                        <p id="ecg6LeadGrapgh3" class="final_result_display_ecg_graph3_6lead"></p>
+
+                        <span
+                            class="final_result_display_ecg_graph4_6lead_title final_result_display_ecg_graph_6lead_left_title">{{interfaceLabels[ECGLeadavr]}}</span>
+                        <p id="ecg6LeadGrapgh4"
+                            class="final_result_display_ecg_graph4_6lead final_result_display_ecg_graph_6lead_left"></p>
+
+                        <span
+                            class="final_result_display_ecg_graph5_6lead_title final_result_display_ecg_graph_6lead_left_title">{{interfaceLabels[ECGLeadavf]}}</span>
+                        <p id="ecg6LeadGrapgh5"
+                            class="final_result_display_ecg_graph5_6lead final_result_display_ecg_graph_6lead_left"></p>
+
+                        <span
+                            class="final_result_display_ecg_graph6_6lead_title final_result_display_ecg_graph_6lead_left_title">{{interfaceLabels[ECGLeadavl]}}</span>
+                        <p id="ecg6LeadGrapgh6"
+                            class="final_result_display_ecg_graph6_6lead final_result_display_ecg_graph_6lead_left"></p>
+
+                        <p id="f1ecg_result_Graph1" style="display: none;"></p>
+                    </div>
+                </div>
+                <!-- Ecg Values display -->
+                <div class="final_result_display_ecg_inner_container"
+                    style="width:35%;display: flex;flex-wrap: wrap;background-color: transparent;margin-top: 20px;"
+                    ng-hide="EcgTakenStatus == false">
+                    <div class="final_result_display_box_ecg">
+                        <span class="final_result_display_box_1">
+                            {{interfaceLabels[HeartRateTitle]}}<br>
+                            <span class="final_result_display_box_unit_1">bpm</span>
+                        </span>
+                        <span class="final_result_display_box_value">
+                            {{HeartRateBpm}}
+                            <span class="final_result_display_box_unit_2">bpm</span>
+                        </span>
+                        <span class="final_result_display_box_status finalresults_result_status  {{FinalECGRiskHeartRateBpmStatusClass}}">{{interfaceLabels[FinalECGRiskHeartRateBpmStatusName]}}</span>
+                    </div>
+                    <div class="final_result_display_box_ecg">
+                        <span class="final_result_display_box_1">
+                            {{interfaceLabels[PrIntervalTitle]}}<br>
+                            <span class="final_result_display_box_unit_1">bpm</span>
+                        </span>
+                        <span class="final_result_display_box_value">
+                            {{PRIntervalValue}}
+                            <span class="final_result_display_box_unit_2">ms</span>
+                        </span>
+                        <span class="final_result_display_box_status finalresults_result_status  {{FinalECGRiskPRIntervalStatusClass}}">{{interfaceLabels[FinalECGRiskPRIntervalStatusName]}}</span>
+                    </div>
+                    <div class="final_result_display_box_ecg" style="margin-top:-0px">
+                        <span class="final_result_display_box_1">
+                            QRS<br>
+                            <span class="final_result_display_box_unit_1">Duration</span>
+                        </span>
+                        <span class="final_result_display_box_value">
+                            {{QRSDurationValue}}
+                            <span class="final_result_display_box_unit_2">ms</span>
+                        </span>
+                        <span class="final_result_display_box_status finalresults_result_status  {{FinalECGRiskQRSDurationStatusClass}}">{{interfaceLabels[FinalECGRiskQRSDurationStatusName]}}</span>
+                    </div>
+                    <div class="final_result_display_box_ecg" style="margin-top:-0px">
+                        <span class="final_result_display_box_1">
+                            QTC<br>
+                            <span class="final_result_display_box_unit_1">Interval</span>
+                        </span>
+                        <span class="final_result_display_box_value">
+                            {{QTCIntervalValue}}
+                            <span class="final_result_display_box_unit_2">ms</span>
+                        </span>
+                        <span class="final_result_display_box_status finalresults_result_status  {{FinalECGRiskQTCIntervalStatusClass}}">{{interfaceLabels[FinalECGRiskQTCIntervalStatusName]}}</span>
+                    </div>
+                    <div class="final_result_display_box_ecg" style="height:55px;width:100%; display: none;">
+                        <!-- <span ng-hide = "irregularIntervals" class="ecg_status_result" id = "ecg_status_finish" style="color: green;">{{FinalECGStatus}}</span> -->
+                        <!-- <span ng-show = "irregularIntervals" class="ecg_status_result_irregular" id = "ecg_status_finish_irregular" style="color: #f37279;font-size: 12.5px;">{{FinalECGIrregularStatus}}</span> -->
+
+                        <span class="final_result_display_box_1"
+                            style="color:rgb(61,61,61)">{{interfaceLabels[StatusTitle]}}</span>
+                        <span class="final_result_display_box_status finalresults_result_status {{FinalECGRiskStatusClass}}"
+                            style="top:30px; font-size:13px;">{{FinalECGStatus}}</span>
+                    </div>
+                </div>
+            </div>
+            <!-- ECG Result display ends -->
+
+            <!-- BMC result display -->
+            <div  ng-show = "fullBodyBMCTest" class="final_result_display_bmc_container" id="display_tab_body_mass_calculations"
+                style="margin-top:-10px;display: none;">
+                <div style="display: grid;">
+                    <div class="final_result_display_bmc_row">
+                        <div class="final_result_display_bmc_inner_container" style="width:515px;margin-top:11px">
+                            <div class="final_result_title_heading_bmc">{{interfaceLabels[bodyFatAnanlysis]}}</div>
+                            <div style="display:flex">
+                                <div class="final_result_display_box_bmc">
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[BFM]}}<br>
+                                        <span class="final_result_display_box_unit_1">{{interfaceLabels[BodyFatMass]}}</span>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{fat}}<span class="final_result_display_box_unit_2">kg</span>
+                                    </span>
+
+                                    <!-- <span class="final_result_display_box_status" ng-class="{'bmc_low_color' : fatStatusText == 'Low' , 'bmc_normal_color' : fatStatusText == 'Normal', 'bmc_acceptable_color' : fatStatusText == 'Acceptable' , 'bmc_high_color' : fatStatusText == 'High'}">{{fatStatus}}</span> -->
+                                    <span class="final_result_display_box_status" ng-style="getFullBodyBCAVitalRangeColor('BFM')">{{getFullBodyBCAVitalRangeStatus('BFM')}}</span>
+                                </div>
+                                <div class="final_result_display_box_bmc">
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[PBF]}}<br>
+                                        <span class="final_result_display_box_unit_1">{{interfaceLabels[PercentBodyFat]}}</span>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{pbf}}<span class="final_result_display_box_unit_2">%</span>
+                                    </span>
+
+                                    <!-- <span class="final_result_display_box_status" ng-class="{'bmc_low_color' : pbfStatusText == 'Low' , 'bmc_normal_color' : pbfStatusText == 'Normal', 'bmc_acceptable_color' : pbfStatusText == 'Acceptable' , 'bmc_high_color' : pbfStatusText == 'High'}">{{pbfStatus}}</span> -->
+                                    <span class="final_result_display_box_status" ng-style="getFullBodyBCAVitalRangeColor('PBF')">{{getFullBodyBCAVitalRangeStatus('PBF')}}</span>
+                                </div>
+                                <div class="final_result_display_box_bmc">
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[SMM]}}<br>
+                                        <span class="final_result_display_box_unit_1">{{interfaceLabels[SkeletalMuscleMass]}}</span>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{smm}}<span class="final_result_display_box_unit_2">kg</span>
+                                    </span>
+
+                                    <!-- <span class="final_result_display_box_status" ng-class="{'bmc_low_color' : smmStatusText == 'Low' , 'bmc_normal_color' : smmStatusText == 'Normal'}">{{smmStatus}}</span> -->
+                                    <span class="final_result_display_box_status" ng-style="getFullBodyBCAVitalRangeColor('SMM')">{{getFullBodyBCAVitalRangeStatus('SMM')}}</span>
+                                </div>
+                                <div class="final_result_display_box_bmc">
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[BCM]}}<br>
+                                        <span class="final_result_display_box_unit_1">{{interfaceLabels[BodyCellMass]}}</span>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{bcm}}<span class="final_result_display_box_unit_2">kg</span>
+                                    </span>
+
+                                    <!-- <span class="final_result_display_box_status" ng-class="{'bmc_low_color' : bcmStatusText == 'Low' , 'bmc_normal_color' : bcmStatusText == 'Normal'}">{{bcmStatus}}</span> -->
+                                    <span class="final_result_display_box_status" ng-style="getFullBodyBCAVitalRangeColor('BCM')">{{getFullBodyBCAVitalRangeStatus('BCM')}}</span>
+                                </div>
+                                <div class="final_result_display_box_bmc" ng-show = "isWaistCircumference">
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[VF]}}<br>
+                                        <span class="final_result_display_box_unit_1">{{interfaceLabels[VisceralFat]}}</span>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{vf}} <span class="final_result_display_box_unit_2">cm.sq</span>
+                                    </span>
+
+                                    <!-- <span class="final_result_display_box_status" ng-class="{'bmc_normal_color' : vfStatusText == 'Normal','bmc_acceptable_color' : vfStatusText == 'Acceptable', 'bmc_high_color' : vfStatusText == 'High'}">{{vfStatus}}</span> -->
+                                    <span class="final_result_display_box_status" ng-style="getFullBodyBCAVitalRangeColor('VF')">{{getFullBodyBCAVitalRangeStatus('VF')}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="final_result_display_bmc_inner_container" style="margin-top:11px">
+                            <div class="final_result_title_heading_bmc">{{interfaceLabels[TotalBodyWater]}}</div>
+                            <div style="display:flex">
+                                <div class="final_result_display_box_bmc">
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[ICW]}}<br>
+                                        <span class="final_result_display_box_unit_1">{{interfaceLabels[IntraCellularWater]}}</span>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{icw}}<span class="final_result_display_box_unit_2">ltr</span>
+                                    </span>
+
+                                    <!-- <span class="final_result_display_box_status" ng-class="{'bmc_low_color' : icwStatusText == 'Low' , 'bmc_normal_color' : icwStatusText == 'Normal', 'bmc_high_color' : icwStatusText == 'High'}">{{icwStatus}}</span> -->
+                                    <span class="final_result_display_box_status" ng-style="getFullBodyBCAVitalRangeColor('ICW')">{{getFullBodyBCAVitalRangeStatus('ICW')}}</span>
+                                </div>
+                                <div class="final_result_display_box_bmc">
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[ECW]}}<br>
+                                        <span class="final_result_display_box_unit_1">{{interfaceLabels[ExtraCellularWater]}}</span>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{ecw}} <span class="final_result_display_box_unit_2">ltr</span>
+                                    </span>
+
+                                    <!-- <span class="final_result_display_box_status" ng-class="{'bmc_low_color' : ecwStatusText == 'Low' , 'bmc_normal_color' : ecwStatusText == 'Normal' , 'bmc_high_color' : ecwStatusText == 'High'}">{{ecwStatus}}</span> -->
+                                    <span class="final_result_display_box_status" ng-style="getFullBodyBCAVitalRangeColor('ECW')">{{getFullBodyBCAVitalRangeStatus('ECW')}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="final_result_display_bmc_row">
+                        <div class="final_result_display_bmc_inner_container" style="width:310px;">
+                            <div class="final_result_title_heading_bmc">{{interfaceLabels[BoneMassAnalysis]}}</div>
+                            <div style="display: flex;">
+                                <div class="final_result_display_box_bmc">
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[BMC]}}<br>
+                                        <span class="final_result_display_box_unit_1">{{interfaceLabels[BoneMineralContent]}}</span>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{boneMineralContent}} <span class="final_result_display_box_unit_2">kg</span>
+                                    </span>
+
+                                    <!-- <span class="final_result_display_box_status" ng-class="{'bmc_low_color' : boneMineralContentStatusText == 'Low' , 'bmc_normal_color' : boneMineralContentStatusText == 'Normal'}">{{boneMineralContentStatus}}</span> -->
+                                    <span class="final_result_display_box_status" ng-style="getFullBodyBCAVitalRangeColor('BMC')">{{getFullBodyBCAVitalRangeStatus('BMC')}}</span>
+                                </div>
+                                <div class="final_result_display_box_bmc">
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[Protein]}}<br>
+                                        <span class="final_result_display_box_unit_1">{{interfaceLabels[OverallProteinContent]}}</span>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{protein}} <span class="final_result_display_box_unit_2">kg</span>
+                                    </span>
+
+                                    <!-- <span class="final_result_display_box_status" ng-class="{'bmc_low_color' : proteinStatusText == 'Low' , 'bmc_normal_color' : proteinStatusText == 'Normal'}">{{proteinStatus}}</span> -->
+                                    <span class="final_result_display_box_status" ng-style="getFullBodyBCAVitalRangeColor('PRO')">{{getFullBodyBCAVitalRangeStatus('PRO')}}</span>
+                                </div>
+                                <div class="final_result_display_box_bmc">
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[Mineral]}}<br>
+                                        <span class="final_result_display_box_unit_1">{{interfaceLabels[OverallMineralContent]}}</span>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{mineral}} <span class="final_result_display_box_unit_2">kg</span>
+                                    </span>
+
+                                    <!-- <span class="final_result_display_box_status" ng-class="{'bmc_low_color' : mineralStatusText == 'Low' , 'bmc_normal_color' : mineralStatusText == 'Normal'}">{{mineralStatus}}</span> -->
+                                    <span class="final_result_display_box_status" ng-style="getFullBodyBCAVitalRangeColor('MIN')">{{getFullBodyBCAVitalRangeStatus('MIN')}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="final_result_display_bmc_inner_container">
+                            <div class="final_result_title_heading_bmc">{{interfaceLabels[Miscellaneous]}}</div>
+                            <div style="display: flex;">
+                                <div class="final_result_display_box_bmc">
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[WaistHip]}}<br>
+                                        <span class="final_result_display_box_unit_1">{{interfaceLabels[WaistToHipRatio]}}</span>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{whpr}}
+                                    </span>
+
+                                    <!-- <span class="final_result_display_box_status" ng-class="{'bmc_low_color' : whprStatusText == 'Low' , 'bmc_normal_color' : whprStatusText == 'Normal', 'bmc_high_color' : whprStatusText == 'High'}">{{whprStatus}}</span> -->
+                                    <span class="final_result_display_box_status" ng-style="getFullBodyBCAVitalRangeColor('WHP')">{{getFullBodyBCAVitalRangeStatus('WHP')}}</span>
+                                </div>
+                                <div class="final_result_display_box_bmc" ng-show = "isWaistCircumference">
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[WaistHeight]}}<br>
+                                        <span class="final_result_display_box_unit_1">{{interfaceLabels[WaistToHeightRatio]}}</span>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                       {{whtr}}
+                                    </span>
+
+                                    <!-- <span class="final_result_display_box_status" ng-class="{'bmc_low_color' : whtrStatusText == 'Low' , 'bmc_normal_color' : whtrStatusText == 'Normal', 'bmc_high_color' : whtrStatusText == 'High'}">{{whtrStatus}}</span> -->
+                                    <span class="final_result_display_box_status" ng-style="getFullBodyBCAVitalRangeColor('WHT')">{{getFullBodyBCAVitalRangeStatus('WHT')}}</span>
+                                </div>
+                                <div class="final_result_display_box_bmc">
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[BMR]}}<br>
+                                        <span class="final_result_display_box_unit_1">{{interfaceLabels[BasalMetabolicRate]}}</span>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{bmr}} <span class="final_result_display_box_unit_2">kcal</span>
+                                    </span>
+
+                                    <!-- <span class="final_result_display_box_status" ng-class="{'bmc_low_color' : bmrStatusText == 'Low' , 'bmc_normal_color' : bmrStatusText == 'Normal'}">{{bmrStatus}}</span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- BMC result display ends -->
+
+            <!--Invasive result display starts-->
+            <div class="final_result_display_invasive_container" id="display_tab_invasive_test" style="display: none;"><!--id="display_tab_body_vitals"-->
+                <!-- <div> finalresult_NotTaken-->
+            <div style="width: 226px;display:flex;">
+                    <div class="inner_container">
+                        <div style="display: flex;"><!-- width: 226px;-->
+                            <div class="final_result_display_box_invasive">
+                                <div class="final_result_invasive_title_heading">{{interfaceLabels[finishresult_GlucoseTitle]}}</div><br>
+                                <div ng-show="glucose_random != undefined">
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[finishresult_GlucoseRandomTitle]}}<br>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{glucose_random}}<span class="final_result_display_box_unit_2">mg/dl</span>
+                                    </span><br>
+                                    <span class="final_result_display_box_status" ng-class="{'glucose_normal_color' : glucose_random_class == 'Normal', 'glucose_high_color' : glucose_random_class == 'Diabetic','glucose_prediabetic_color' : glucose_random_class == 'Pre-Diabetes'}">{{interfaceLabels[glucose_random_class_text] || glucose_random_class}}</span><!--'glucose_low_color' : glucose_random_class == 'Pre-Diabetes' ,  no prediabetes for random-->
+                                </div>
+                                <div ng-show="glucose_fasting != undefined"><!--glucose fasting-->
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[finishresult_GlucoseFastingTitle]}}<br>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{glucose_fasting}}<span class="final_result_display_box_unit_2">mg/dl</span>
+                                    </span><br>
+                                    <span class="final_result_display_box_status" ng-class="{'glucose_prediabetic_color' : glucose_fasting_class == 'Acceptable' , 'glucose_normal_color' : glucose_fasting_class == 'Normal', 'glucose_high_color' : glucose_fasting_class == 'High'}">{{interfaceLabels[glucose_fasting_class_text] || glucose_fasting_class}}</span>
+                                </div>
+                                <div ng-show="glucose_post_prandial != undefined"><!--glucose postprandial-->
+                                    <span class="final_result_display_box_1">
+                                        {{interfaceLabels[finishresult_GlucosePostPrandialTitle]}}<br>
+                                    </span>
+                                    <span class="final_result_display_box_value">
+                                        {{glucose_post_prandial}}<span class="final_result_display_box_unit_2">mg/dl</span>
+                                    </span><br>
+                                    <span class="final_result_display_box_status" ng-class="{'glucose_low_color' : glucose_post_prandial_class == 'Pre-Diabetes' , 'glucose_normal_color' : glucose_post_prandial_class == 'Normal', 'glucose_high_color' : glucose_post_prandial_class == 'Diabetic'}">{{glucose_post_prandial_class}}</span>
+                                </div>
+                                
+                                <div ng-show="glucose_random == undefined && glucose_fasting == undefined && glucose_post_prandial == undefined">
+                                    <span class="final_result_display_box_value">{{interfaceLabels[finalresult_NotTaken]}}</span>
+                                </div>
+                                
+                            </div> 
+                            <div class="final_result_display_box_invasive" style="width: 107px;">
+                                <div class="final_result_invasive_title_heading">{{interfaceLabels[finishresult_HemoglobinTitle]}}</div><br><br>
+                                <div ng-show="hemoglobin != undefined" style="position:relative;top:-19px;">
+                                    <span class="final_result_display_box_value">
+                                        {{hemoglobin}}<span class="final_result_display_box_unit_2">g/dl</span>
+                                    </span><br>
+                                    <span class="final_result_display_box_status" ng-class="{'glucose_normal_color' : heamoglobin_class == 'Normal' , 'glucose_prediabetic_color' : heamoglobin_class == 'Acceptable','glucose_high_color' : heamoglobin_class == 'Low' || heamoglobin_class == 'High' || heamoglobin_class == 'Very Low'}">{{ interfaceLabels[heamoglobin_class_text] || heamoglobin_class}}</span>
+                                </div>
+                                <div ng-show="hemoglobin == undefined" style="position:relative;top:-19px;">
+                                    <span class="final_result_display_box_value">{{interfaceLabels[finalresult_NotTaken]}}</span>
+                                </div>
+                                   
+                            </div>                        
+                        </div>
+                        <div class="inner_container">
+                            <div style="display: grid;">
+                                <div class="final_result_display_box_invasive_lipid">
+                                    <div class="final_result_invasive_title_heading">{{interfaceLabels[finishresult_LipidTitle]}}</div><br>
+                                    <div ng-show = "invasive_lipid_testtaken == true" style="display: flex;flex-direction: row;"><!--lipid_profile_tc != undefined && lipid_profile_hg != undefined && lipid_profile_ldl != undefined && lipid_profile_tg != undefined-->
+                                        <div style="width: 50%;">
+                                            <div class="final_result_invasive_lipid_box1"> 
+                                                <span class="final_result_display_box_1">
+                                                    {{interfaceLabels[finishresult_TotalCholestrolTitle]}}<br>
+                                                </span>
+                                                <span class="final_result_display_box_value">
+                                                    {{lipid_profile_tc}}<span class="final_result_display_box_unit_2">mg/dl</span>
+                                                </span><br>
+                                                <span class="final_result_display_box_status" ng-class="{'glucose_accpectable_color' : lipid_profile_tc_class == 'Acceptable' , 'glucose_normal_color' : lipid_profile_tc_class == 'Normal', 'glucose_high_color' : lipid_profile_tc_class == 'High', 'glucose_prediabetic_color' : lipid_profile_tc_class == 'Borderline High'}">{{lipid_profile_tc_class}}</span>
+                                            </div>     
+                                            <hr class="horizantalLine">
+                                            <div class="final_result_invasive_lipid_box2"> 
+                                                <span class="final_result_display_box_1">
+                                                    {{interfaceLabels[finishresult_LDLTitle]}}<br>
+                                                </span>
+                                                <span class="final_result_display_box_value">
+                                                    {{lipid_profile_ldl}}<span class="final_result_display_box_unit_2">mg/dl</span>
+                                                </span><br>
+                                                <span class="final_result_display_box_status" ng-class="{'glucose_accpectable_color' : lipid_profile_ldl_class == 'Acceptable' , 'glucose_normal_color' : lipid_profile_ldl_class == 'Normal', 'glucose_high_color' : lipid_profile_ldl_class == 'High', 'glucose_prediabetic_color' : lipid_profile_tc_class == 'Borderline High'}">{{lipid_profile_ldl_class}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="verticalLine"></div>
+                                        <div style="width: 50%;">
+                                            <div class="final_result_invasive_lipid_box1"> 
+                                                <span class="final_result_display_box_1">
+                                                    {{interfaceLabels[finishresult_HDLTitle]}}<br>
+                                                </span>
+                                                <span class="final_result_display_box_value">
+                                                    {{lipid_profile_hg}}<span class="final_result_display_box_unit_2">mg/dl</span>
+                                                </span><br>
+                                                <span class="final_result_display_box_status" ng-class="{'glucose_low_color' : lipid_profile_hgl_class == 'Low' , 'glucose_normal_color' : lipid_profile_hgl_class == 'Normal', 'glucose_prediabetic_color' : lipid_profile_hgl_class == 'Borderline low'}">{{lipid_profile_hgl_class}}</span>
+                                            </div>
+                                            <hr style="border: 1px solid white; width: 80%;">
+                                            <div class="final_result_invasive_lipid_box2"> 
+                                                <span class="final_result_display_box_1">
+                                                    {{interfaceLabels[finishresult_triglyceridesTitle]}}<br>
+                                                </span>
+                                                <span class="final_result_display_box_value">
+                                                    {{lipid_profile_tg}}<span class="final_result_display_box_unit_2">mg/dl</span>
+                                                </span><br>
+                                                <span class="final_result_display_box_status" ng-class="{'glucose_accpectable_color' : lipid_profile_tg_class == 'Acceptable' , 'glucose_normal_color' : lipid_profile_tg_class == 'Normal', 'glucose_high_color' : lipid_profile_tg_class == 'High', 'glucose_prediabetic_color' : lipid_profile_tg_class == 'Borderline High'}">{{lipid_profile_tg_class}}</span>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div ng-show="invasive_lipid_testtaken == false"><!--lipid_profile_tc != undefined && lipid_profile_hg != undefined && lipid_profile_ldl != undefined && lipid_profile_tg != undefined-->
+                                        <span class="final_result_display_box_value">{{interfaceLabels[finalresult_NotTaken]}}</span>
+                                    </div>
+                                    
+                                </div> 
+                            </div> 
+                        </div>
+                    </div>
+                <!-- </div> -->
+
+                <div style="background-color: #E6E6E6; border-radius: 10px; box-sizing: border-box; height: 97%;">
+                    <div class="inner_container">
+                        <div class="final_result_invasive_title_heading">{{interfaceLabels[finishresult_urineTestTitle]}}</div><br>
+                        <div ng-show="invasive_urine_testtaken == true" style="display: flex;width: 345px;height: 100%;">
+                            <div>
+                                <div class="final_result_display_box_invasive_urine">
+                                    <span class="final_result_display_box_urinepara_title">
+                                        {{interfaceLabels[finishresult_urineLeukocyteTitle]}}
+                                        <span class="final_result_display_box_urinepara_value">{{urine_leukocytes}} <span style="font-size: 12px">Leu/µL</span></span><br>
+                                    </span>
+                                </div>
+                                <div class="final_result_display_box_invasive_urine">
+                                    <span class="final_result_display_box_urinepara_title">
+                                        {{interfaceLabels[finishresult_urineNitriteTitle]}}
+                                        <span class="final_result_display_box_urinepara_value">{{urine_nitrite}}</span><br>
+                                    </span>
+                                </div>
+                                <div class="final_result_display_box_invasive_urine">
+                                    <span class="final_result_display_box_urinepara_title" style="margin-left: -2px;">
+                                        {{interfaceLabels[finishresult_urineUrobilinogenTitle]}}
+                                        <span class="final_result_display_box_urinepara_value">{{urine_urobilinogen}} <span style="font-size: 12px">mg/dl</span></span><br>
+                                    </span>
+                                </div>
+                                <div class="final_result_display_box_invasive_urine">
+                                    <span class="final_result_display_box_urinepara_title">
+                                        {{interfaceLabels[finishresult_urineProteinTitle]}}
+                                        <span class="final_result_display_box_urinepara_value">{{urine_protein}} <span style="font-size: 12px">mg/dl</span></span><br>
+                                    </span>
+                                </div>
+                                <div class="final_result_display_box_invasive_urine">
+                                    <span class="final_result_display_box_urinepara_title">
+                                        {{interfaceLabels[finishresult_urinepHTitle]}}
+                                        <span class="final_result_display_box_urinepara_value">{{urine_ph}}</span><br>
+                                    </span>
+                                </div>
+                            </div> 
+                            <div>
+                                <div class="final_result_display_box_invasive_urine">                                
+                                    <span class="final_result_display_box_urinepara_title">
+                                        {{interfaceLabels[finishresult_urineBloodTitle]}}
+                                        <span class="final_result_display_box_urinepara_value">{{urine_blood}} <span style="font-size: 12px">Ery/µL</span></span><br>
+                                    </span>
+                                </div>
+                                <div class="final_result_display_box_invasive_urine">                                
+                                    <span class="final_result_display_box_urinepara_title">
+                                        {{interfaceLabels[finishresult_urineSpecificgravityTitle]}}
+                                        <span class="final_result_display_box_urinepara_value">{{urine_specific_gravity}}</span><br>
+                                    </span>
+                                </div> 
+                                <div class="final_result_display_box_invasive_urine">
+                                    <span class="final_result_display_box_urinepara_title">
+                                        {{interfaceLabels[finishresult_urineKetoneTitle]}}
+                                        <span class="final_result_display_box_urinepara_value">{{urine_ketone}} <span style="font-size: 12px">mg/dl</span></span><br>
+                                    </span>
+                                </div>
+                                <div class="final_result_display_box_invasive_urine">
+                                    <span class="final_result_display_box_urinepara_title">
+                                        {{interfaceLabels[finishresult_urineBilirubinTitle]}}
+                                        <span class="final_result_display_box_urinepara_value">{{urine_bilirubin}} <span style="font-size: 12px">mg/dl</span></span><br>
+                                    </span>
+                                </div>
+                                <div class="final_result_display_box_invasive_urine">
+                                    <span class="final_result_display_box_urinepara_title">
+                                        {{interfaceLabels[finishresult_urineGlucoseTitle]}}
+                                        <span class="final_result_display_box_urinepara_value">{{urine_glucose}} <span style="font-size: 12px">mg/dl</span></span><br>
+                                    </span>
+                                </div>
+                            </div>                                
+                        </div>
+                        <div ng-show="invasive_urine_testtaken == false" class="final_result_display_urinetest_nottaken">
+                            <span class="final_result_display_box_value final_result_unit_test_notTaken">{{interfaceLabels[finalresult_NotTaken]}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="top: -1px;position:relative;">
+                    <div class="inner_container">
+                        <div>
+                            <div class="final_result_display_box_invasive_unit_test">
+                                <span class="final_result_display_box_urinepara_title final_result_unit_test">
+                                    {{interfaceLabels[finishresult_dengue_IgG]}}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;
+                                    <span ng-show="dengue_IgG != undefined" class="final_result_display_box_urinepara_value" ng-class="{'unit_test_low_risk' : dengue_IgG == 'Negative', 'unit_test_high_risk' : dengue_IgG == 'Positive'}">{{dengue_IgG}}</span><br>
+                                    <span ng-show="dengue_IgG == undefined" class="final_result_unit_test_notTaken">{{interfaceLabels[finalresult_NotTaken]}}</span><!--final_result_display_box_value-->
+                                </span> 
+                            </div>
+                        </div> 
+                        <div>
+                            <div class="final_result_display_box_invasive_unit_test">
+                                <span class="final_result_display_box_urinepara_title final_result_unit_test">
+                                    {{interfaceLabels[finishresult_dengue_IgM]}}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;
+                                    <span ng-show="dengue_IgM != undefined" class="final_result_display_box_urinepara_value" ng-class="{'unit_test_low_risk' : dengue_IgM == 'Negative', 'unit_test_high_risk' : dengue_IgM == 'Positive'}">{{dengue_IgM}}</span><br>
+                                    <span ng-show="dengue_IgM == undefined" class="final_result_unit_test_notTaken">{{interfaceLabels[finalresult_NotTaken]}}</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="final_result_display_box_invasive_unit_test">
+                                <span class="final_result_display_box_urinepara_title final_result_unit_test">
+                                    {{interfaceLabels[finishresult_malaria_Pv]}}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;
+                                    <span ng-show="malaria_p_v != undefined" class="final_result_display_box_urinepara_value" ng-class="{'unit_test_low_risk' : malaria_p_v == 'Negative', 'unit_test_high_risk' : malaria_p_v == 'Positive'}">{{malaria_p_v}}</span><br>
+                                    <span ng-show="malaria_p_v == undefined" class="final_result_unit_test_notTaken">{{interfaceLabels[finalresult_NotTaken]}}</span>
+
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="final_result_display_box_invasive_unit_test">
+                                <span class="final_result_display_box_urinepara_title final_result_unit_test">
+                                    {{interfaceLabels[finishresult_malaria_pf]}}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span ng-show="malaria_p_f != undefined" class="final_result_display_box_urinepara_value" ng-class="{'unit_test_low_risk' : malaria_p_f == 'Negative', 'unit_test_high_risk' : malaria_p_f == 'Positive'}">{{malaria_p_f}}</span><br>
+                                    <span ng-show="malaria_p_f == undefined" class="final_result_unit_test_notTaken">{{interfaceLabels[finalresult_NotTaken]}}</span>
+
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="final_result_display_box_invasive_unit_test">
+                                <span class="final_result_display_box_urinepara_title final_result_unit_test">
+                                    {{interfaceLabels[finishresult_hiv_I]}}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;
+                                    <span ng-show="hiv_I != undefined" class="final_result_display_box_urinepara_value" ng-class="{'unit_test_low_risk' : hiv_I == 'Negative', 'unit_test_high_risk' : hiv_I == 'Positive'}">{{hiv_I}}</span><br>
+                                    <span ng-show="hiv_I == undefined" class="final_result_unit_test_notTaken">{{interfaceLabels[finalresult_NotTaken]}}</span>
+
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="final_result_display_box_invasive_unit_test">
+                                <span class="final_result_display_box_urinepara_title final_result_unit_test">
+                                    {{interfaceLabels[finishresult_hiv_II]}}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;
+                                    <span ng-show="hiv_II != undefined" class="final_result_display_box_urinepara_value" ng-class="{'unit_test_low_risk' : hiv_II == 'Negative', 'unit_test_high_risk' : hiv_II == 'Positive'}">{{hiv_II}}</span><br>
+                                    <span ng-show="hiv_II == undefined" class="final_result_unit_test_notTaken">{{interfaceLabels[finalresult_NotTaken]}}</span>
+
+                                </span>
+                            </div>
+                        </div> 
+                        <div>
+                            <div class="final_result_display_box_invasive_unit_test">
+                                <span class="final_result_display_box_urinepara_title final_result_unit_test">
+                                    {{interfaceLabels[finishresult_hcv]}}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;
+                                    <span ng-show="hcv != undefined" class="final_result_display_box_urinepara_value" ng-class="{'unit_test_low_risk' : hcv == 'Negative', 'unit_test_high_risk' : hcv == 'Positive'}">{{hcv}}</span><br>
+                                    <span ng-show="hcv == undefined" class="final_result_unit_test_notTaken">{{interfaceLabels[finalresult_NotTaken]}}</span>
+
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="final_result_display_box_invasive_unit_test">
+                                <span class="final_result_display_box_urinepara_title final_result_unit_test">
+                                    {{interfaceLabels[finishresult_troponin]}}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;
+                                    <span ng-show="troponin != undefined" class="final_result_display_box_urinepara_value" ng-class="{'unit_test_low_risk' : troponin == 'Negative', 'unit_test_high_risk' : troponin == 'Positive'}">{{troponin}}</span><br>
+                                    <span ng-show="troponin == undefined" class="final_result_unit_test_notTaken">{{interfaceLabels[finalresult_NotTaken]}}</span>
+
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="final_result_display_box_invasive_unit_test">
+                                <span class="final_result_display_box_urinepara_title final_result_unit_test">
+                                    {{interfaceLabels[finishresult_syphilis]}}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;
+                                    <span ng-show="syphilis !== undefined" class="final_result_display_box_urinepara_value" ng-class="{'unit_test_low_risk' : syphilis == 'Negative', 'unit_test_high_risk' : syphilis == 'Positive'}">{{syphilis}}</span><br>
+                                    <span ng-show="syphilis == undefined" class="final_result_unit_test_notTaken">{{interfaceLabels[finalresult_NotTaken]}}</span>
+
+                                </span>
+                            </div>
+                        </div>  
+                        <div>
+                            <div class="final_result_display_box_invasive_unit_test">
+                                <span class="final_result_display_box_urinepara_title final_result_unit_test">
+                                    {{interfaceLabels[finishresult_pregnancy]}}-
+                                    <span ng-show="pregnancy != undefined"class="final_result_display_box_urinepara_value" ng-class="{'unit_test_low_risk' : pregnancy == 'Positive', 'unit_test_high_risk' : pregnancy == 'Negative'}">{{pregnancy}}</span><br>
+                                    <span ng-show="pregnancy == undefined" class="final_result_unit_test_notTaken">{{interfaceLabels[finalresult_NotTaken]}}</span>
+
+                                </span>
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+            </div>    
+            </div>
+            
+            <!--Invasive result display ends-->
+
+        </div>
+        <!-- Result display section ends -->
+    </div>
+    <!-- Harry Code ends -->
+</div>
+
+
+<!-- <a ng-if="!isMEBOrg" class="global_print_button no-print" ng-show="showPrintButton" ng-click="printCheckinResults()">
+    <span style="position: relative;top:12px;">
+        <img class="global_print_button_icon">
+        <span class="global_print_text">{{interfaceLabels[_printresult]}}</span>
+    </span>
+</a> -->
+<a ng-if="abhaflowEnable" class="global_print_button no-print" ng-click="linkWithAbha()">
+    <span style="position: relative;top:7px;">
+        <img class="abha_link_button_icon">
+        <span class="global_print_text">Link with ABHA</span>
+    </span>
+</a>
+
+<a class="global_continue_next_button no-print"
+    ng-class="{'button-enter-right' : showNextButton, 'button-exit-right' : !showNextButton}" ng-show="showNextButton"
+    ng-click="finalResultNextNavigate()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[finalresult_nextPage]}}</span>
+</a>
+
+<!-- <a class="global_continue_next_button no-print"
+    ng-class="{'button-enter-right' : showEmailButton, 'button-exit-right' : !showEmailButton}"
+    ng-show="showEmailButton" ng-click="emailCheckinResults()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[_emailresult]}}</span>
+</a> -->
+
+
+<a class="global_previous_page_button no-print"
+    ng-class="{'button-enter-left' : showPrevButton, 'button-exit-left' : !showPrevButton}" ng-show="showPrevButton"
+    ng-click="finalResultPrevNavigate()">
+    <span class="global_previous_page_text">{{interfaceLabels[finalresult_previousPage]}}</span>
+</a>
+
+
+<!-- ----------------------- Below code is depreciated  ------------------>
+<div id="finalresults01_pane" style="display: none !important;">
+
+    <div id="finalresults_right_control_btn" ng-show="resultsButton" class="{{nextTransitionStyle}} {{langClass}}"
+        ng-click="saveButtonClick(loggedIn,online)">
+        <span ng-bind-html="interfaceLabels[saveResults]" ng-if="!loggedIn && online"></span>
+        <span ng-bind-html="interfaceLabels[saveResultsFinish]" ng-if="loggedIn || !online"
+            class="finish-session {{interfaceLabels[saveResultsFinish]}}"></span>
+    </div>
+
+    <div id="finalresults_box_" style="height: 100%;">
+
+        <!--new top panel for ecg to avoid disturbing current code flow thamarai-->
+        <div id="top_second_panel">
+            <img src="images/tag.png" style="margin-top: 14px;margin-left: 12px;" />
+            <span class="statcheck_title">{{interfaceLabels[statchecktitle]}}</span>
+        </div>
+        <div id="top_panel">
+
+            <div class="final_ecg_title">{{interfaceLabels[FinalEcgTitle]}}</div>
+            <div class="final_ecg_not_taken" ng-hide="EcgTakenStatus">{{interfaceLabels[NoEcgTaken]}}</div>
+            <div class="ecg_final_status" ng-show="EcgTakenStatus">
+                <div class="ecg_heart_rate">
+                    <span class="ecg_status_titles">{{interfaceLabels[HeartRateTitle]}}</span>
+                    <span ng-hide="irregularIntervals" class="ecg_status_values" id="ecg_heart_rate_finish"
+                        style="color: green;">{{HeartRateBpm}}<span class="ecg_status_units">bpm</span></span>
+                    <span ng-show="irregularIntervals" class="ecg_status_values" id="ecg_heart_rate_irregular"
+                        style="color: #f37279;">{{MinECGBpmValue}}~{{MaxECGBpmValue}}<span
+                            class="ecg_status_units">bpm</span></span>
+                </div>
+                <div class="ecg_pr_interval">
+                    <span class="ecg_status_titles">{{interfaceLabels[PrIntervalTitle]}}</span>
+                    <span class="ecg_status_values" style="color: green;"
+                        id="ecg_pr_interval_finish">{{PRIntervalValue}}<span class="ecg_status_units">ms</span></span>
+                </div>
+                <div class="ecg_qrs_duration">
+                    <span class="ecg_status_titles">{{interfaceLabels[QrsDurationTitle]}}</span>
+                    <span class="ecg_status_values" id="ecg_qrs_interval_finish"
+                        style="color: green;">{{QRSDurationValue}}<span class="ecg_status_units">ms</span></span>
+                </div>
+                <div class="ecg_qtc_interval">
+                    <span class="ecg_status_titles">{{interfaceLabels[QtcIntervalTitle]}}</span>
+                    <span class="ecg_status_values" id="ecg_qtc_interval_finish"
+                        style="color: green;">{{QTCIntervalValue}}<span class="ecg_status_units">ms</span></span>
+                </div>
+                <div class="ecg_status">
+                    <span class="ecg_status_titles">{{interfaceLabels[StatusTitle]}}</span>
+                    <!-- <span ng-hide="irregularIntervals" class="ecg_status_result" id="ecg_status_finish"
+                        style="color: green;">{{FinalECGStatus}}</span>
+                    <span ng-show="irregularIntervals" class="ecg_status_result_irregular"
+                        id="ecg_status_finish_irregular"
+                        style="color: #f37279;font-size: 12.5px;">{{FinalECGIrregularStatus}}</span> -->
+                        <span class="{{FinalECGRiskStatusClass}}" style="font-size: 12.5px;"> {{FinalECGStatus}} </span>
+                </div>
+            </div>
+        </div>
+        <div id="top_side_panel">
+
+        </div>
+        <!-- old top panel set as display none thamarai-->
+        <div id="top_panel_" style="display: none;">
+            <!--thamarai-->
+
+            <div id="ECG_id" class="ECG_wrapper" style="margin-top: 55px;">
+
+                <!-- <span id="finalresults_ecg" style="display:block; margin-right:20px; margin-top:5px;margin-bottom:5px;" class="finalresults_result_title {{langClass}}" ></span>   -->
+
+                <span id="final_ecg_nottaken" style="padding-top: 89px;padding-right: 435px;"
+                    class="finalresults_result_number finalresults_nottaken">{{ekgNotTaken}}</span>
+
+
+                <div id="print_ecg_canvas">
+
+                    <center>
+                        <span id="zugbpm" style="margin-top: -8px;
+    margin-left: -211px;"><span style="font-weight: bold;"> {{ finalEcgBpm }} </span><span
+                                style="font-weight: bold;">{{interfaceLabels[bpBpm]}}</span></span>
+                    </center>
+
+                    <center style="margin-top: -19px;
+    margin-left: -557px;">
+                        <span id="zuglead" style="font-weight: bold;"> </span>
+                    </center>
+
+                    <div style="float: left; margin-top: 30px; margin-left:20px;"><button
+                            style="padding-left: 0px;padding-right: 0px" id="prev1" type='image'><img
+                                src="images/leftarrow1.png" /></button></div>
+
+                    <div style="float: right; margin-top: 30px; margin-right:425px;"><button
+                            style="padding-left: 0px;padding-right: 0px" id="next1" type='image'><img
+                                src="images/rightarrow1.png" /></button></div>
+
+
+                    <div id='slides1' style="margin-top: 0px;">
+
+                        <p id="ecg_result1"></p>
+                        <p id="ecg_result2"></p>
+                        <p id="ecg_result3"></p>
+
+                    </div>
+
+                    <div id='slides2' style="margin-top: 0px;">
+                        <p id="six_lead_ecg_result1"></p>
+                        <p id="six_lead_ecg_result2"></p>
+                        <p id="six_lead_ecg_result3"></p>
+                        <p id="six_lead_ecg_result4"></p>
+                        <p id="six_lead_ecg_result5"></p>
+                        <p id="six_lead_ecg_result6"></p>
+                    </div>
+
+                    <center style="margin-top: -22px;
+    margin-left: -395px;">
+                        <span style="font-weight: bold;"> {{validationResultsDisplay}}</span>
+                    </center>
+
+                </div>
+            </div>
+
+
+
+
+            <div id="finalresults_higiscore_panel" class="finalresults_panel">
+
+                <final-results-score-gauge promisename="scoreguagepromise"></final-results-score-gauge>
+            </div>
+            <div class="top-panel-divider" ng-if="!loggedIn"></div>
+
+            <div class="top-panel-divider-auth" ng-if="loggedIn"></div>
+
+            <div id="finalresults_awards_panel" class="finalresults_panel testFadeIn {{pointsMessageVisible}}"
+                ng-show="showRewardPanel">
+
+
+
+
+                <!--Default-->
+                <h2 class='point-save-message' ng-show="savedState.default.status && rewardsEnabled">
+                    {{interfaceLabels[savedState.default.savedPoints]}}</h2>
+
+
+                <!--Saving-->
+                <h2 class='point-save-message' ng-show="savedState.saving.status && rewardsEnabled">
+                    {{interfaceLabels[savedState.saving.savedPoints]}}</h2>
+
+                <!--Saved-->
+                <div class='points-message' ng-show="savedState.success.status && rewardsEnabled">
+                    <span ng-bind-html="interfaceLabels[savedState.success.savedPointsS1]"></span><span
+                        id="point-score-auth"></span> {{finalResultsPointTotal}} <span
+                        ng-bind-html="interfaceLabels[savedState.success.savedPointsS2]"></span>
+                </div>
+                <h2 class='point-save-message' ng-show="savedState.success.status  && rewardsEnabled">
+                    {{interfaceLabels[savedState.success.savedPoints]}}</h2>
+
+                <!--  <!Failure-->
+                <div class='points-message' ng-show="savedState.failure.status && rewardsEnabled">
+                    <span ng-bind-html="interfaceLabels[savedState.failure.savedTotalPointsS1]"></span>
+                </div>
+                <h2 class='point-save-message' ng-if="savedState.failure.status  && rewardsEnabled">
+                    {{interfaceLabels[savedState.failure.savedPoints]}}</h2>
+
+
+
+
+                <final-results-reward-tiles promisename="rewardtilespromise" lang_class="{{langClass}}">
+                </final-results-reward-tiles>
+            </div>
+
+        </div>
+
+        <div id="bottom_panel" class="{{bmcAvailableClass}} no-print">
+            <div id="finalresults_bp_panel" class="finalresults_panel  {{langClass}}">
+                <div class="finalresults_bp_result  bp_result">
+                    <span id="finalresults_result_title_bp" class="finalresults_result_title {{langClass}}"
+                        higi_resource_html="global.blood.pressure">{{interfaceLabels[bpTitle]}}</span>
+                    <span class="finalresults_result_number finalresults_nottaken"
+                        ng-hide="bpTaken">{{interfaceLabels[bpRisk]}}</span>
+                    <span class="finalresults_result_number finalresults_panel_icon_bp" ng-show="bpTaken"><span
+                            id="finalresults_bp_info">{{systolic}}/{{diastolic}}</span><span
+                            class="finalresults_result_number_units"
+                            higi_resource_html="global.mmhg">{{interfaceLabels[bpUnits]}}</span></span>
+                    <span class="finalresults_result_status {{bpRiskClass}}" id="finalresults_bp_status"
+                        ng-show="bpTaken">{{interfaceLabels[bpRisk]}}<span></span></span>
+                </div>
+
+                <div class="finalresults_bp_result pulse_result">
+                    <span id="finalresults_result_title_pulse" class="finalresults_result_title {{langClass}}"
+                        higi_resource_html="global.pulse">{{interfaceLabels[bpPulse]}}</span>
+                    <span class="finalresults_result_number finalresults_nottaken"
+                        ng-hide="pulseTaken">{{interfaceLabels[pulseRisk]}}</span>
+                    <span class="finalresults_result_number finalresults_panel_icon_pulse" ng-show="pulseTaken"><span
+                            id="finalresults_pulse_info">{{pulse}}</span><span class="finalresults_result_number_units"
+                            higi_resource_html="global.bpm">{{interfaceLabels[bpBpm]}}</span></span>
+                    <span class="finalresults_result_status {{pulseRiskClass}}" id="finalresults_pulse_status"
+                        ng-show="pulseTaken">{{interfaceLabels[pulseRisk]}}<span></span></span>
+                </div>
+            </div>
+
+            <div id="finalresults_weight_panel" class="finalresults_panel {{langClass}}">
+                <div class="finalresults_weight_result weight_result">
+                    <span class="finalresults_result_title {{langClass}}"
+                        higi_resource_html="global.weight">{{interfaceLabels[weightTitle]}}</span>
+                    <span class="finalresults_result_number finalresults_nottaken"
+                        ng-hide="weightTaken">{{interfaceLabels[weightTakenLabel]}}</span>
+                    <span class="finalresults_result_number finalresults_panel_icon_weight" ng-show="weightTaken"><span
+                            id="finalresults_weight_info">{{weight}}</span><span
+                            class="finalresults_result_number_units"
+                            higi_resource_html="global.abbv.pounds">{{interfaceLabels[weightUnits]}}</span></span>
+                </div>
+                <div class="finalresults_weight_result bmi_result">
+                    <span class="finalresults_result_title {{langClass}}"
+                        higi_resource_html="global.body.mass.index">{{interfaceLabels[bmiTitle]}}</span>
+                    <span class="finalresults_result_number finalresults_nottaken"
+                        ng-hide="weightTaken">{{interfaceLabels[bmiRisk]}}</span>
+                    <span class="finalresults_result_number finalresults_panel_icon_bmi" ng-show="weightTaken"><span
+                            id="finalresults_bmi_info">{{bmi}}</span></span>
+                    <!-- <span class="finalresults_result_status {{bmiRiskClass}}" id="finalresults_bmi_status"
+                        ng-show="weightTaken">{{interfaceLabels[bmiRisk]}}<span></span></span> -->
+                        <span class="finalresults_result_status" id="finalresults_bmi_status" ng-style="getVitalRangeColor('BMI')"
+                    ng-show="weightTaken">{{getVitalRangeStatus('BMI')}}<span></span></span>
+                </div>
+                <div class="finalresults_weight_result bmc_result " ng-if="true">
+                    <span class="finalresults_result_title {{langClass}}">{{interfaceLabels[bmcTitle]}}</span>
+                    <span class="finalresults_result_number finalresults_nottaken"
+                        ng-hide="bmcTaken">{{interfaceLabels[bmcNotTaken]}}</span>
+                    <span class="finalresults_result_number finalresults_panel_icon_bmc">
+                        <span id="finalresults_weight_info" ng-if="bmcTaken">{{bmc}}</span>
+                        <span class="finalresults_result_number_units" higi_resource_html="global.abbv.pounds"
+                            ng-show="bmcTaken">{{interfaceLabels[bmcUnits]}}</span>
+                        <span class="finalresults_result_status {{bmcRiskClass}}" id="finalresults_bmc_status"
+                            ng-show="bmcTaken">{{interfaceLabels[bmcRisk]}}<span></span></span>
+
+                    </span>
+                </div>
+            </div>
+
+
+            <div id="finalresults_spo2_temp_panel" class="finalresults_panel  {{langClass}}">
+                <div class="finalresults_spo2_temp_result  spo2_result">
+                    <span id="finalresults_result_title_spo2" class="finalresults_result_title {{langClass}}"
+                        ng-bind-html="interfaceLabels[spo2Title]"></span>
+
+                    <span class="finalresults_result_number finalresults_nottaken" data-ng-if="oxygen == undefined">
+                        {{interfaceLabels[SpO2NotTaken]}} </span>
+
+                    <span class="finalresults_result_number" ng-if="oxygen != undefined">
+                        <span> {{oxygen}} </span>
+                        <span class="finalresults_result_number_units" higi_resource_html="global.abbv.pounds">% </span>
+                        <span class="finalresults_result_status {{spo2RiskClass}}" id="finalresults_spo2_status">
+                            {{interfaceLabels[spo2health]}}1013 </span>
+                    </span>
+                </div>
+
+                <div class="finalresults_spo2_temp_result  temp_result">
+                    <span id="finalresults_result_title_temp" class="finalresults_result_title {{langClass}}">
+                        {{interfaceLabels[temperatureTitle]}} </span>
+
+                    <span data-ng-if="temperatur == undefined" class="finalresults_result_number finalresults_nottaken">
+                        {{interfaceLabels[tempNotTaken]}} </span>
+
+                    <span id="finalresults_tempTitleValue" class="finalresults_result_number"
+                        data-ng-if="temperatur != undefined">
+                        <span> {{temperatur}} </span>
+                        <span class="finalresults_result_number_units" higi_resource_html="global.abbv.pounds">°F
+                        </span>
+                        <span class="finalresults_result_status {{tempRiskClass}}"
+                            id="finalresults_temp_status">{{interfaceLabels[temphealth]}}</span>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="finalresults_buttons" class="no-print">
+        <div id="finalresults_print_btn" class="slideIn" ng-show="emailButton">
+            <div id="finalresults_print_icon" class="finalresults_icon"></div>
+            <span higi_resource_html="finalresults.print">{{interfaceLabels[emailLabel]}}</span>
+        </div>
+
+
+        <div id="finalresults_email_btn" class="slideIn" ng-show="resultsButton" ng-click="emailCheckinResults()">
+            <div id="finalresults_email_icon" class="finalresults_icon"></div>
+            <span higi_resource_html="finalresults.email.results">{{interfaceLabels[emailLabel]}}</span>
+        </div>
+        <img src="images/finalresults_btn_shadow20120524.png" alt="" id="finalresults_email_btn_shadow"
+            class="finalresults_btn_shadow" />
+        <img src="images/finalresults_btn_shadow20120524.png" alt="" id="finalresults_print_btn_shadow"
+            class="finalresults_btn_shadow" />
+    </div>
+
+
+
+
+
+    <style>
+        #finalresults_email_btnp.slideIn {
+            -webkit-animation: slideInDown 0.5s both ease-in;
+            -moz-animation: slideInDown 0.5s both ease-in;
+            animation: slideInDown 0.5s both ease-in;
+        }
+
+        #finalresults_email_btnp,
+        #finalresults_email_btn_shadow {
+            /* left: 528px; */
+            /* left: 28px; */
+            top: 20px;
+            left: 28px;
+        }
+
+        #finalresults_email_btnp {
+            height: 85px;
+            width: 258px;
+            border-radius: 4px;
+            background-image: -moz-linear-gradient(90deg, #dbdbdb 0%, #e0e0e0 14%, #e8e8e8 91%, #eaeaea 93%, #ebebeb 100%);
+            background-image: -webkit-linear-gradient(90deg, #dbdbdb 0%, #e0e0e0 14%, #e8e8e8 91%, #eaeaea 93%, #ebebeb 100%);
+            background-image: -ms-linear-gradient(90deg, #dbdbdb 0%, #e0e0e0 14%, #e8e8e8 91%, #eaeaea 93%, #ebebeb 100%);
+            border: 1px solid #dbdbdb;
+            -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+
+        #finalresults_email_btnp span {
+            font-family: "IntervalSansProCondSemiBoldRg";
+            font-size: 20px;
+            color: #686666;
+            text-shadow: 0 1px 1px white, 0 0px 2px rgba(0, 0, 0, 0.3);
+            position: relative;
+            top: 9px;
+            text-align: center;
+        }
+    </style>
+    <div id="finalresults_email_btnp" style="margin-top:446px; margin-left:277px; z-index:300;" class="slideIn no-print"
+        ng-show="resultsButton" ng-click="printCheckinResults()">
+        <div id="finalresults_email_icon"
+            style="background: url(./images/finalresults_print_icon.png) center center no-repeat;"
+            class="finalresults_icon"></div>
+        <span higi_resource_html="finalresults.email.results">{{interfaceLabels[printresulttitle]}}</span>
+    </div>
+    <img src="images/finalresults_btn_shadow20120524.png" alt="" id="finalresults_email_btn_shadow"
+        class="finalresults_btn_shadow" />
+    <img src="images/finalresults_btn_shadow20120524.png" alt="" id="finalresults_print_btn_shadow"
+        class="finalresults_btn_shadow" />
+</div>
+<!-- ----------------------- Below code is depreciated  ends------------------>
+
+
+
+
+
+
+
+
+<style type="text/css">
+    #keyboard_lastcheckin_content::-webkit-scrollbar {
+        display: none;
+    }
+</style>
+
+
+<div id="printcontentsdiv" class="keyboard_lastcheckin printcontentsdiv take-print"
+    ng-show="lastCheckin.checkinDataVisible" style="display:none !important;">
+    <div id="keyboard_lastcheckin_header" class="no-print">
+        <div id="keyboard_lastcheckin_title"><span>{{lastCheckin.printresults}}</span></div>
+
+    </div>
+    <div id="keyboard_lastcheckin_content" style="overflow:visible;">
+        <div id="keyboard_lastcheckin_content_scroll">
+            <div id="keyboard_lastcheckin_summary">
+                <div id="finalresults_higiscore_panel" class="finalresults_panel">
+                    <h2 id="finalresults_title"></h2>
+                    <table id="user_details" style="font-size:26px; position: relative; top: 0px;">
+                        <tr>
+                            <td style="padding: 40px; padding-left: 0px; padding-bottom: 0px; padding-top: 0px; ">
+                                {{interfaceLabels[lastCheckin.ageTitle]}} </td>
+                            <td style="padding: 40px; padding-bottom: 0px; padding-top: 0px; padding-left: 0px;"
+                                id="print_age"></td>
+                            <td style="padding: 40px; padding-bottom: 0px; padding-top: 0px; padding-left: 40px;">
+                                {{interfaceLabels[lastCheckin.aboutYouSex]}} </td>
+                            <td style="padding: 40px; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; "
+                                id="print_gender"></td>
+                            <td style="padding: 40px; padding-bottom: 0px; padding-top: 0px; padding-left: 40px; ">
+                                {{interfaceLabels[lastCheckin.aboutYouHeight]}} </td>
+                            <td style="padding: 40px;padding-bottom: 0px; padding-top: 0px; padding-left: 0px; "
+                                id="print_height"></td>
+                        </tr>
+                    </table>
+                </div>
+
+
+
+            </div>
+
+
+
+            <div id="keyboard_lastcheckin_results" class="take-print">
+                <div id="keyboard_lastcheckin_lastcheck_results"
+                    ng-bind-html="interfaceLabels[lastCheckin.yourResults]"></div>
+                <ul class="keyboard_lastcheckin_lastcheck_list">
+                    <li id="nlastcheck_list_bp" style="display:none;">
+                        <div style="float:left;"> <img src="./images/welcomeback_bpicon_20140611.png" /></div>
+                        <div class="lastcheck_list_data" style="margin-left:-60px;">
+                            <span class="lastcheck_list_title">{{interfaceLabels[lastCheckin.bp]}}</span>
+                            <span class="lastcheck_list_number"><span id="nlastcheck_list_number_bp"></span><span
+                                    class="lastcheck_list_number_unit">{{interfaceLabels[lastCheckin.mmhg]}}</span></span>
+                        </div>
+                        <div class="lastcheck_list_rating">
+                            <span class="lastcheck_list_rating_title">{{interfaceLabels[lastCheckin.rating]}}<span
+                                    class="lastcheck_list_higipoints"></span></span>
+                            <span id="nlastcheck_list_rating_bp"
+                                class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClass}}">
+                            </span>
+                        </div>
+                    </li>
+
+
+                    <li id="nlastcheck_list_pulse" style="display:none;">
+                        <div style="float:left;"> <img src="./images/welcomeback_pulseicon_20140611.png" /></div>
+                        <div class="lastcheck_list_data" style="margin-left:-60px;">
+                            <span class="lastcheck_list_title">{{interfaceLabels[lastCheckin.pulse]}}<span
+                                    class="lastcheck_list_higipoints"></span></span>
+                            <span class="lastcheck_list_number"><span id="nlastcheck_list_number_pulse"></span><span
+                                    class="lastcheck_list_number_unit">{{interfaceLabels[lastCheckin.bpm]}}</span></span>
+                        </div>
+                        <div class="lastcheck_list_rating">
+                            <span class="lastcheck_list_rating_title">{{interfaceLabels[lastCheckin.rating]}}<span
+                                    class="lastcheck_list_higipoints"></span></span>
+                            <span id="nlastcheck_list_rating_pulse"
+                                class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassPulse}}"></span>
+                        </div>
+                    </li>
+
+                    <li id="nlastcheck_list_weight" style="display:none;">
+                        <div style="float:left;"> <img src="./images/welcomeback_weighticon_20140611.png" /></div>
+                        <div class="lastcheck_list_data" style="margin-left:-60px;">
+                            <span class="lastcheck_list_title">{{interfaceLabels[lastCheckin.weight]}}<span
+                                    class="lastcheck_list_higipoints"></span></span>
+                            <span class="lastcheck_list_number"><span id="nlastcheck_list_number_weight"></span><span
+                                    class="lastcheck_list_number_unit">{{interfaceLabels[lastCheckin.abbvPounds]}}</span></span>
+                        </div>
+                    </li>
+
+                    <li id="nlastcheck_list_bmi" style="display:none;">
+                        <div style="float:left;"> <img src="./images/welcomeback_bmiicon_20140611.png" /></div>
+                        <div class="lastcheck_list_data" style="margin-left:-60px;">
+                            <span class="lastcheck_list_title">{{interfaceLabels[lastCheckin.bmi]}}<span
+                                    class="lastcheck_list_higipoints"></span></span>
+                            <span class="lastcheck_list_number"><span
+                                    id="nlastcheck_list_number_bmi">{{lastCheckin.lastCheckBmiNumber}}</span><span
+                                    class="lastcheck_list_number_unit"></span></span>
+                        </div>
+                        <div class="lastcheck_list_rating" style="margin-left:-20px;">
+                            <span class="lastcheck_list_rating_title"> {{interfaceLabels[lastCheckin.rating]}}
+                                <span class="lastcheck_list_higipoints"></span></span>
+                            <span id="nlastcheck_list_rating_bmi"
+                                class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassBmi}}"> </span>
+                        </div>
+                    </li>
+
+                    <li id="nlastcheck_list_bodyFat" style="display:none;">
+                        <div style="float:left;"> <img src="./images/welcomeback_bodyFat_icon.png" /></div>
+                        <div class="lastcheck_list_data" style="margin-left:-60px;">
+                            <span class="lastcheck_list_title">{{interfaceLabels[lastCheckin.bodyFat]}}<span
+                                    class="lastcheck_list_higipoints"></span></span>
+                            <span class="lastcheck_list_number"><span id="nlastcheck_list_number_bmc"></span><span
+                                    class="lastcheck_list_number_unit">%</span></span>
+                        </div>
+                        <div class="lastcheck_list_rating">
+                            <span class="lastcheck_list_rating_title">{{interfaceLabels[lastCheckin.rating]}}<span
+                                    class="lastcheck_list_higipoints"></span></span>
+                            <span id="nlastcheck_list_rating_bmc"
+                                class="lastcheck_list_rating_value {{lastCheckin.resultsRiskClassFatRatio}}"
+                                ng-bind-html="interfaceLabels[lastCheckin.resultsRiskLabelFatRatio]"></span>
+                        </div>
+                    </li>
+
+                    <li id="nlastcheck_list_ECGData" style="display:none;">
+                        <div style="float:left;"> <img src="./images/welcomeback_ecgicon_20140611.png" /></div>
+                        <div class="lastcheck_list_data" style="margin-left:-60px;">
+                            <span class="lastcheck_list_title">{{interfaceLabels[lastCheckin.ECG]}}<span
+                                    class="lastcheck_list_higipoints"></span></span>
+                            <span class="lastcheck_list_number"><span id="nlastcheck_list_number_ECGBpm"></span><span
+                                    class="lastcheck_list_number_unit">{{interfaceLabels[lastCheckin.bpm]}}</span></span>
+                        </div>
+                        <div class="lastcheck_list_rating">
+                            <span class="lastcheck_list_rating_title">{{interfaceLabels[lastCheckin.rating]}}<span
+                                    class="lastcheck_list_higipoints"></span></span>
+                            <span id="nlastcheck_list_rating_ECG" class="lastcheck_list_rating_value">N/A</span>
+                        </div>
+                    </li>
+
+                    <li id="nlastcheck_list_thermometer" style="display:none;">
+                        <div style="float:left;"> <img src="./images/welcomeback_tempicon_20140611.png" /></div>
+                        <div class="lastcheck_list_data" style="margin-left:-60px;">
+                            <span class="lastcheck_list_title">{{interfaceLabels[lastCheckin.weight]}}<span
+                                    class="lastcheck_list_higipoints"></span></span>
+                            <span class="lastcheck_list_number"><span id="nlastcheck_list_number_weight"></span><span
+                                    class="lastcheck_list_number_unit">{{interfaceLabels[lastCheckin.abbvPounds]}}</span></span>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <div id="keyboard_lastcheckin_footer" style="display:block;" class="no-print">
+
+        <div id="keyboard_lastcheckin_continue_btn" class="keyboard_narrow_submit_btn active_btn"
+            ng-click="lastCheckin.continueCloseLastCheckin2('printcontentsdiv')"><span>Print</span></div>
+    </div>
+</div>
+
+</div>
+<final-results-ad promisename="finalresultsad"></final-results-ad>
+<notification-bar promisename="notibar"></notification-bar>

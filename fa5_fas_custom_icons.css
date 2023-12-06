@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'fa5_fas_custom_icons';
+  src:  url('fonts/fa5_fas_custom_icons.eot?s1mk1f');
+  src:  url('fonts/fa5_fas_custom_icons.eot?s1mk1f#iefix') format('embedded-opentype'),
+    url('fonts/fa5_fas_custom_icons.ttf?s1mk1f') format('truetype'),
+    url('fonts/fa5_fas_custom_icons.woff?s1mk1f') format('woff'),
+    url('fonts/fa5_fas_custom_icons.svg?s1mk1f#fa5_fas_custom_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.fas {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fa5_fas_custom_icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-capsules:before {
+  content: "\e907";
+}
+.fa-hospital:before {
+  content: "\e908";
+}
+.fa-x-ray:before {
+  content: "\e909";
+}
+.fa-hand-paper:before {
+  content: "\e90a";
+}
+.fa-tints:before {
+  content: "\e90b";
+}
+.fa-female:before {
+  content: "\e90c";
+}
+.fa-dna:before {
+  content: "\e90d";
+}
+.fa-brain:before {
+  content: "\e90e";
+}
+.fa-lungs:before {
+  content: "\e900";
+}
+.fa-user-md:before {
+  content: "\e901";
+}
+.fa-spa:before {
+  content: "\e902";
+}
+.fa-heartbeat:before {
+  content: "\e903";
+}
+.fa-briefcase-medical:before {
+  content: "\e904";
+}
+.fa-bone:before {
+  content: "\e905";
+}
+.fa-baby:before {
+  content: "\e906";
+}

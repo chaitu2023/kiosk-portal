@@ -1,0 +1,69 @@
+<style type="text/css">
+ .tele_mobile_login_input {
+  background: none repeat scroll 0 0 white;
+  border: 1px solid #ccc;
+  color: #999;
+  display: block;
+  font-size: 22px;
+  height: 56px;
+  position: relative;
+  text-indent: 15px;
+  top: 20px;
+   left: 18px;
+  width: 440px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-radius: 3px;
+  padding-right: 16px;
+  padding-left: 20px;
+  outline: none;
+  text-indent: 0px;
+  box-sizing: border-box; }
+  .tele_mobile_login_input::-moz-selection {
+    background-color: #0261c2;  }
+  .tele_mobile_login_input::selection {
+   background-color: #0261c2;  }
+  .tele_mobile_login_input::-webkit-selection {
+   background-color: #0261c2; }
+  .tele_mobile_login_input:focus {
+    border: 3px solid #3F90E2; }
+  .tele_mobile_login_input {
+    padding-left: 15px;
+    text-indent: 0px; }
+
+ .tele_mobile_login_input {
+    width: 550px;
+    left: 80px; }
+
+  .tele_mobile_login_input{
+ top: 20px;
+   left: 18px;
+  /*width: 328px;*/
+  width: 400px;
+  height: 48px;
+  border: 2px solid #27A3DD;
+ }
+ .tele_text_mobile_error {
+    color: red;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 400px;
+  }
+
+ .tele_text_mobile_questions{
+  margin-top: 82px;
+  margin-left: 20px;
+  font-family: IntervalSansProMediumRegular;
+  font-size: 28px;
+  color: #4a4a4a;
+}
+</style>
+
+<div class="tele_text_mobile_questions">{{mobilefield.name}}</div>
+
+<ng-form name="myForm" >
+    <div>
+      <input type="text" name="phone" ng-pattern="phoneNumbr" ng-model="mobilefield.text" ng-focus="setIndex(mobilefield.id);mobilefield.focus()" id="{{mobilefield.id}}"  class="tele_mobile_login_input {{mobilefield.selectedClass}} {{enabledCursor}} {{mobilefield.text == '' ? 'blank' : ''}}"  ng-mouseup="clearSelected(mobilefield.id);" ng-mousedown="startDrag(mobilefield.id);" ng-disabled="disabledField(mobilefield.id);"  />
+      <p class="tele_text_mobile_error" ng-show="myForm.phone.$error.pattern">{{interfaceLabels[mobvalidmessage]}}</p>
+    </div>
+</ng-form>

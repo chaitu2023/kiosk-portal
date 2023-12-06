@@ -1,0 +1,21 @@
+<div class="keyboard_dialog_content">
+    <div class="higi_keyboard_dialog interactive-ad-dialog">
+    <div id="keyboard_emailresults">
+        <div class="interactive_ad_form_title" ng-bind-html="interactiveAdForm.title"></div>
+        <div class="interactive-ad-sub-title" ng-bind-html="interactiveAdForm.subTitle"></div>
+        <div id="login_credentials" >
+        <div id="email_results_title" ng-hide="interactiveAdForm.sendingErrorVisible" class="email_results_direction" ng-bind-html="interfaceLabels[interactiveAdForm.enterEmailLabel]"></div>
+        <div id="email_results_error" ng-show="interactiveAdForm.sendingErrorVisible" ng-bind-html="interfaceLabels[interactiveAdForm.sendEmailError]"></div>
+        <higi-text-field field="interactiveAdForm.fields[0]"></higi-text-field>
+        <div id="email_results_loading" class="keyboard_dialog_loading"></div>
+        <div id="email_results_send_btn" class="keyboard_narrow_submit_btn {{interactiveAdForm.nextBtnActive}}" ng-click="interactiveAdForm.sendInteractiveAdFeedback()"><span ng-bind-html="interfaceLabels[interactiveAdForm.sendLabel]"></span></div>
+        </div>
+        <div class="interactive_ad_disclaimer" ng-bind-html="interactiveAdForm.sendDisclaimer"></div>
+        <a class="skip" ng-click="interactiveAdForm.skipToResults()" ng-bind-html="interactiveAdForm.continue"></a>
+
+        <a id="login_account_disclaimer_btn"  class="{{interactiveAdForm.registerButtonClass}} interactive-ad-checkbox" ng-click="interactiveAdForm.toggleTermsAcceptance()"></a>
+        <div id="cbox-glow" ng-hide="interactiveAdForm.termsAccepted" class="interactive-ad-checkbox"></div>
+    </div>
+    </div>
+    <div class="higi_overlay_mask_dark"></div>
+</div>

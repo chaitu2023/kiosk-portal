@@ -1,0 +1,197 @@
+<div class="ecg_instructions_header_container" ng-dblclick="realTimeGraphEnable()">
+    <img class="ecg_instructions_header_image" src="./images/Icons-30.png">
+    <span class="ecg_instructions_header_text {{langClass}}"> {{interfaceLabels[slideTitle]}} </span>
+</div>
+
+
+  <div id="three_lead_ecg">
+    <div class="ecg_inprogress_main_container">
+      <div class="rightHandPositionImg"> 
+          <!-- <img class="ecg-inprogress-img-pos" ng-if="handPositionSuccess" src="./images/ecg/rightHandPositionSuccess.png" />
+          <img class="ecg-inprogress-img-pos" ng-if="!handPositionSuccess" src="./images/ecg/rightHandPositionFailure.png" /> -->
+          <img class="ecg-inprogress-img-pos" src="./images/ecg/rightHandPositionSuccess.png" />
+      </div>
+      <div class="leftHandPositionImg" style="display: none;"> 
+          <!-- <img class="ecg-inprogress-img-pos" ng-if="handPositionSuccess" src="./images/ecg/leftHandPositionSuccess.png" />
+          <img class="ecg-inprogress-img-pos" ng-if="!handPositionSuccess" src="./images/ecg/leftHandPositionFailure.png" /> -->
+          <img class="ecg-inprogress-img-pos" src="./images/ecg/leftHandPositionSuccess.png" />
+      </div>
+      <div class="legPositionImg"> 
+          <!-- <img class="ecg-inprogress-img-pos" ng-if="threeLeadLegPositionSuccess" src="./images/ecg/legPositionSuccess.png" />
+          <img class="ecg-inprogress-img-pos" ng-if="!threeLeadLegPositionSuccess" src="./images/ecg/legPositionFailure.png" /> -->
+          <img class="ecg-inprogress-img-pos" src="./images/ecg/legPositionSuccess.png" />
+      </div>
+      <div class="ecg_gif_pos" ng-hide="realTimeGraphShow"> 
+          <img src="./images/ecg/ecg-gif.gif" />        
+      </div>
+      <div class="zug_ecg_graph"  ng-show="realTimeGraphShow">
+        <div id="live_chart_graph_area" align="center"> </div>
+      </div>
+    </div>
+    <div id="ecgMessage"></div>
+
+    <!-- inprogress page animation ends -->
+    
+  <a id="higi_control_left_btn"
+    class="left_control_btn {{langClass}} {{(redoVisible) ? buttonEnterLeft : buttonExitLeft}}" ng-show="redoVisible"
+    ng-click="redoBp()">
+    <span class="{{langClass}}">{{interfaceLabels[redoSlideText]}}</span>
+  </a>
+  <a id="higi_control_right_ng_btn"
+    class="right_control_btn {{langClass}} {{(nextVisible) ? buttonEnterRight : buttonExitRight}}" ng-show="nextVisible"
+    ng-click="nextButtonOut()">
+    <span class="{{langClass}} {{interfaceLabels[nextSlideText]}}">{{interfaceLabels[nextSlideText]}}</span>
+  </a>
+  <div style="display: none;"> <!-- hide for new UI integration -->
+    <div id="ecggraphone" class="finalresults_panel  {{langClass}}"
+      style="top: 440px; margin-left: 18px; width: 225px; height:130px;">
+      <p id="ecg_result_one" class="finalresults_result_number finalresults_nottaken">
+      </p>
+    </div>
+
+    <div id="ecggraphtwo" class="finalresults_panel  {{langClass}}"
+      style="top: 440px; margin-left: 256px; width: 225px; height:130px;">
+      <p id="ecg_result_two" class="finalresults_result_number finalresults_nottaken">
+      </p>
+    </div>
+    <div id="ecggraphthree" class="finalresults_panel  {{langClass}}"
+      style="top: 440px; margin-left: 494px; width: 225px; height:130px;">
+      <p id="ecg_result_three" class="finalresults_result_number finalresults_nottaken">
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="five_lead_ecg">
+
+    <div class="ecg_inprogress_main_container">
+      <div class="rightHandPositionImg"> 
+          <!-- <img class="ecg-inprogress-img-pos" ng-if="handPositionSuccess" src="./images/ecg/rightHandPositionSuccess.png" />
+          <img class="ecg-inprogress-img-pos" ng-if="!handPositionSuccess" src="./images/ecg/rightHandPositionFailure.png" /> -->
+          <img class="ecg-inprogress-img-pos" src="./images/ecg/rightHandPositionSuccess.png" />
+      </div>
+      <div class="leftHandPositionImg" style="display: none;"> 
+          <!-- <img class="ecg-inprogress-img-pos" ng-if="handPositionSuccess" src="./images/ecg/leftHandPositionSuccess.png" />
+          <img class="ecg-inprogress-img-pos" ng-if="!handPositionSuccess" src="./images/ecg/leftHandPositionFailure.png" /> -->
+          <img class="ecg-inprogress-img-pos" src="./images/ecg/leftHandPositionSuccess.png" />
+      </div>
+      <div class="legPositionImg"> 
+          <!-- <img class="ecg-inprogress-img-pos" ng-if="sixLeadLegPositionSuccess" src="./images/ecg/ECGNewLeg2-Success.png" />
+          <img class="ecg-inprogress-img-pos" ng-if="!sixLeadLegPositionSuccess" src="./images/ecg/ECGNewLeg2-failure.png" /> -->
+          <img class="ecg-inprogress-img-pos" src="./images/ecg/ECGNewLeg2-Success.png" />
+      </div>
+      <div class="ecg_gif_pos" ng-hide="realTimeGraphShow"> 
+          <img src="./images/ecg/ecg-gif.gif" />        
+      </div>
+      <div class="zug_ecg_graph" ng-show="realTimeGraphShow">
+          <div ng-repeat="five_leads in leads" class="zug_ecg_graph_pos">
+              <div id="{{five_leads.leadId}}" class="finalresults_panel  {{langClass}}" style="width: 350px; height:150px;">
+                  <div id="bloodpressure_result_bp_number" class="finalresults_result_number finalresults_nottaken"
+                    style="font-size: 14px; font-weight: bold;" ng-bind-html="interfaceLabels[five_leads.leadLabel]"></div>
+                  <div id="{{five_leads.liveGraphSlotId}}" align="center">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div id="ecgMessageSixLead"> </div>
+  
+</div>
+
+<a class= "global_skip_button" ng-show="showECGEmergencyStopButton" ng-click="ZugECGemergencyStop()">
+    <span class="global_skip_button_text">{{interfaceLabels[emergencyStop]}}</span>
+</a>
+<!-- <a class= "ecg_skip_button" ng-show="showECGEmergencyStopButton" ng-click="ZugECGemergencyStop()">
+    <span class="ecg_skip_button_text">ECG Emergency Stop</span>
+</a> -->
+
+
+
+
+<!-- <div id="slide_title" style="position: absolute;">{{interfaceLabels[slideTitle]}}</div>
+<div id="slide_subtitle">{{interfaceLabels[slideSubTitle]}}</div>
+
+<div id="three_lead_ecg">
+  <div id="bloodpressure_results_pane">
+    <div id="bloodpressure_results" style="background-image:url('./images/bp_r3.png');">
+      <div id="bloodpressure_results_bp">
+        <div class="result_text">
+          <span id="result_title_bp" class="result_title">{{interfaceLabels[bp03BloodPressure]}}</span>
+          <span class="result_title"></span>
+          <span id="result_risk_bp" class=" result_risk {{bpRiskClass}}">{{interfaceLabels[bpRisk]}}</span>
+        </div>
+        <div class="result_numbers1 testFadeIn" ng-show="showValidationResults">
+          <div id="leadone">
+            <span id="bloodpressure_result_bp_number" class=" value"
+              style="font-size: 30px; margin-left: -80px; margin-top: -36px; font-weight: bold; top: 20px; position: absolute;">{{interfaceLabels[ecglead1]}}</span>
+            <div>
+              <img style="width : 87px; height: 87px; margin-left: 513px; margin-top: -33px; "
+                src='images/leadimage3.png' /></div>
+          </div>
+          <div id="leadtwo">
+            <span id="bloodpressure_result_bp_number" class=" value"
+              style="font-size: 30px; margin-left: -80px; margin-top: -36px; font-weight: bold; top: 20px; position: absolute;">{{interfaceLabels[ecglead2]}}</span>
+            <div>
+              <img style="width : 87px; height: 87px; margin-left: 513px; margin-top: -33px; "
+                src='images/leadimage1.png' /></div>
+          </div>
+          <div id="leadthree">
+            <span id="bloodpressure_result_bp_number" class=" value"
+              style="font-size: 30px; margin-left: -80px; margin-top: -36px; font-weight: bold; top: 20px; position: absolute;">{{interfaceLabels[ecglead3]}}</span>
+            <div>
+              <img style="width : 87px; height: 87px; margin-left: 513px; margin-top: -33px; "
+                src='images/leadimage2.png' /></div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 100px;"><img style="width: 706px;height: 25px;margin-top: -7px;" src='images/demo.png' />
+        <div id="ecgMessage" style="margin-top: -29px;font-size: 15px;text-align: center;font-family: IntervalSansProBold;">
+        </div>
+      </div>
+      <div class="zug_ecg_graph" style="margin-top: 20px; margin-left: 0px;">
+        <div id="live_chart_graph_area" align="center"> </div>
+      </div>
+    </div>
+  </div>
+  <a id="higi_control_left_btn"
+    class="left_control_btn {{langClass}} {{(redoVisible) ? buttonEnterLeft : buttonExitLeft}}" ng-show="redoVisible"
+    ng-click="redoBp()">
+    <span class="{{langClass}}">{{interfaceLabels[redoSlideText]}}</span>
+  </a>
+  <a id="higi_control_right_ng_btn"
+    class="right_control_btn {{langClass}} {{(nextVisible) ? buttonEnterRight : buttonExitRight}}" ng-show="nextVisible"
+    ng-click="nextButtonOut()">
+    <span class="{{langClass}} {{interfaceLabels[nextSlideText]}}">{{interfaceLabels[nextSlideText]}}</span>
+  </a>
+  <div id="ecggraphone" class="finalresults_panel  {{langClass}}"
+    style="top: 440px; margin-left: 18px; width: 225px; height:130px;">
+    <p id="ecg_result_one" class="finalresults_result_number finalresults_nottaken">
+    </p>
+  </div>
+
+  <div id="ecggraphtwo" class="finalresults_panel  {{langClass}}"
+    style="top: 440px; margin-left: 256px; width: 225px; height:130px;">
+    <p id="ecg_result_two" class="finalresults_result_number finalresults_nottaken">
+    </p>
+  </div>
+  <div id="ecggraphthree" class="finalresults_panel  {{langClass}}"
+    style="top: 440px; margin-left: 494px; width: 225px; height:130px;">
+    <p id="ecg_result_three" class="finalresults_result_number finalresults_nottaken">
+    </p>
+  </div>
+</div>
+
+<div id="five_lead_ecg">
+  <div style="margin-top: 100px;"><img style="width: 710px;height: 25px;margin-top: -7px;margin-left: 47px;" src='images/demo.png' />
+    <div id="ecgMessageSixLead" style="margin-top: -29px;font-size: 15px;text-align: center;font-family: IntervalSansProBold;">
+    </div>
+  </div>
+  <div ng-repeat="five_leads in leads" style="margin-top: -109px;">
+    <div id="{{five_leads.leadId}}" class="finalresults_panel  {{langClass}}" style="width: 350px; height:150px;">
+      <div id="bloodpressure_result_bp_number" class="finalresults_result_number finalresults_nottaken"
+        style="font-size: 14px; font-weight: bold;" ng-bind-html="interfaceLabels[five_leads.leadLabel]"></div>
+      <div id="{{five_leads.liveGraphSlotId}}" align="center">
+      </div>
+    </div>
+  </div>
+</div> -->

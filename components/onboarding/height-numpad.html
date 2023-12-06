@@ -1,0 +1,150 @@
+<div id="age_component_container" class="height-numpad-container" style="height: 308px; width:370px;">
+    <!-- Modfification below added class height_ref -->
+    <div id="numpad_entry" class="height-pad height_ref" style="width:100%">
+        <input type="text" id="height_ft" maxlength="2" class="{{enabledCursor}} {{heightNumberPad.activeFeet}}" ng-click="heightNumberPad.activateFeet()" ng-model="heightNumberPad.feetVal" style="height: 52px; border-radius: 10px; padding:6px;width:110px;background-color: white" />
+        <label for="height_ft" class="height_ft_label" style="top:26px;left:37px;font-size: 20px;text-transform: lowercase;">{{interfaceLabels[heightNumberPad.feetLabel]}}</label>
+        
+        <input type="text" id="height_in" maxlength="2" class="{{enabledCursor}} {{heightNumberPad.activeInches}}" ng-click="heightNumberPad.activateInches('Input')" ng-model="heightNumberPad.inchVal" style="height: 52px;width:110px; border-radius: 10px; padding:6px;padding-left: 30px; text-align: unset;background-color: white;">
+        <label for="height_in" class="height_in_label" style="top:26px;left:160px;font-size: 20px;text-transform: lowercase;">{{interfaceLabels[heightNumberPad.inchesLabel]}}</label>
+        
+        <!-- Modfifications here-->
+        <input type="text" id="height_cm" maxlength="3" class="{{enabledCursor}} {{heightNumberPad.activeCms}}"  style="height: 52px;width:125px; border-radius: 10px; padding-top:30px; padding: 6px" ng-model="heightNumberPad.cmsVal">
+        <label for="height_cms" class="height_cms_label {{langClass}}" ng-show="cmShow">{{interfaceLabels[heightNumberPad.CM]}}</label>
+        <!-- <img ng-show="cmShow" class="height_cm_active_png" src="images/green-arrow-bottom.png"> -->
+        <div class="outer_for_dropdown" style="height: auto">
+    		<div class="switch">
+				<input type="checkbox" ng-checked="cmChecked" data-ng-click="CmFtSlide()">
+				<label style="top:-23px; height: 48px; line-height: 45px;width:100px; display: flex;border-radius: 10px;color:rgb(103,103,103);">
+				   	<!-- <span class="fontawesome-ok"></span> -->
+                    <span style="width:50px;height: 100%;text-align: center;display: inline-block;box-sizing: border-box;border-right:1px solid black; border-radius: 10px 0px 0px 10px;text-transform: lowercase;background-color: rgb(146,146,146);color:rgb(103,103,103);" 
+                        ng-style="cmChecked == false && {'background-image':'linear-gradient(rgb(2,72,116), rgb(94,164,215))','color':'white'}" ng-click="CmFtSlide()"> {{interfaceLabels[heightNumberPad.FT]}} </span>
+                    <span style="width:50px;height: 100%;background-color: white;text-align: center;display: inline-block;box-sizing: border-box;text-transform:lowercase;border-radius: 0px 10px 10px 0px;background-color: rgb(146,146,146);"
+                        ng-style="cmChecked == true && {'background-image':'linear-gradient(rgb(2,72,116), rgb(94,164,215))','color':'white'}" ng-click="CmFtSlide()"> {{interfaceLabels[heightNumberPad.CM]}} </span>
+				   	<!-- <span class="fontawesome-remove"></span> -->
+				   	<!-- <div></div> -->
+				</label>
+				<!-- <span class="{{FtClass}}"> {{interfaceLabels[heightNumberPad.FT]}} </span>  -->
+				<!-- <span class="{{CmClass}}"> {{interfaceLabels[heightNumberPad.CM]}} </span> -->
+			</div>
+    	</div>
+
+    	<span data-ng-show="cmShow" class="height_cm_valid {{langClass}}"> <span data-ng-show="cmValid"> {{interfaceLabels[heightNumberPad.cmValidErrormessage]}}</span> </span>
+        
+        <!-- till here modifications -->
+    </div>  
+
+    <ul id="numpad" class="height-pad" style="padding:00px;width:100%;">
+        <div class="row_one inch_row_reference {{(heightNumberPad.inchesPanel) ? heightNumberPad.padEnterRight : heightNumberPad.padExitRight}}" ng-show="heightNumberPad.inchesPanel">
+            <li class="key" style="margin-bottom: 0px;"><a ng-click="heightNumberPad.inchKeyClick($event)" style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height: 38px;">0</a></li>
+            <li class="key" style="margin-bottom: 0px;"><a ng-click="heightNumberPad.inchKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height: 38px;">1</a></li>
+            <li class="key" style="margin-bottom: 0px;"><a ng-click="heightNumberPad.inchKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height: 38px;">2</a></li>
+        </div>
+        <div class="row_two inch_row_reference {{(heightNumberPad.inchesPanel) ? heightNumberPad.padEnterRight : heightNumberPad.padExitRight}}" ng-show="heightNumberPad.inchesPanel">
+            <li class="key" style="margin-bottom: 0px;"><a ng-click="heightNumberPad.inchKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height: 38px;">3</a></li>
+            <li class="key" style="margin-bottom: 0px;"><a ng-click="heightNumberPad.inchKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height: 38px;">4</a></li>
+            <li class="key" style="margin-bottom: 0px;"><a ng-click="heightNumberPad.inchKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height: 38px;">5</a></li>
+        </div>
+        <div class="row_three inch_row_reference {{(heightNumberPad.inchesPanel) ? heightNumberPad.padEnterRight : heightNumberPad.padExitRight}}" ng-show="heightNumberPad.inchesPanel">
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.inchKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height: 38px;">6</a></li>
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.inchKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height: 38px;">7</a></li>
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.inchKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height: 38px;">8</a></li>
+        </div>
+        <div class="row_three inch_row_reference {{(heightNumberPad.inchesPanel) ? heightNumberPad.padEnterRight : heightNumberPad.padExitRight}}" ng-show="heightNumberPad.inchesPanel">
+            <li class="key" style="margin-bottom: 2px;visibility: hidden;"><a ng-click="heightNumberPad.inchKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height: 38px;">9</a></li>
+            <li class="key" style="margin-bottom: 2px"><a ng-click="heightNumberPad.inchKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height: 38px;">9</a></li>
+            <!-- <li class="key" style="margin-bottom: 2px"><a ng-click="heightNumberPad.inchKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">10</a></li>
+ -->
+            <li class="key" style="margin-bottom: 2px">
+                <a ng-click="heightNumberPad.activateInches('Button')"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height: 38px;">
+                    <div class="line_feet_delete"></div>
+                    <div class="line2_feet_delete"></div>
+                    <span class="feet_del_img"><button class="feet_del_btn"><i class="fa fa-times-thin fa-2x close_thin_icon" aria-hidden="true"></i></button></span>
+                    
+                </a>
+            </li>
+            
+            <!-- Modification here -->
+            <!-- <li class="delete_for_inches" ng-click="heightNumberPad.deleteInchesInputs()"> -->
+            <!-- <li class="delete_for_inches" ng-click="heightNumberPad.activateInches('Button')"> -->
+                <!-- <div class="line_feet_delete"></div> -->
+                <!-- <div class="line2_feet_delete"></div> -->
+                <!-- <span class="feet_del_img"><button class="feet_del_btn"><i class="fa fa-times-thin fa-2x close_thin_icon" aria-hidden="true"></i></button></span> -->
+            <!-- </li> -->
+            <!-- <li class="key"><a ng-click="heightNumberPad.inchKeyClick($event)">11</a></li> -->
+        </div>
+        <!-- Modification id added for reference -->
+        <div id="row1_feet" class="row_one feet-row {{(heightNumberPad.feetPanel) ? heightNumberPad.padEnterLeft : heightNumberPad.padExitLeft}}" ng-show="heightNumberPad.feetPanel">
+
+            <li class="key" style=""><a ng-click="heightNumberPad.feetKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height:38px;">3</a></li>
+            
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.feetKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center; height:38px;">4</a></li>
+        </div>
+        <!-- Modification id added for reference -->
+        <div id="row2_feet" class="row_two  feet-row {{(heightNumberPad.feetPanel) ? heightNumberPad.padEnterLeft : heightNumberPad.padExitLeft}}" ng-show="heightNumberPad.feetPanel">
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.feetKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height:38px;">5</a></li>
+            <!-- <br> -->
+            <li class="key" style=""><a id="feet_6" ng-click="heightNumberPad.feetKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height:38px;left: -100px;">6</a></li>
+
+            <li class="key" style=""><a id="feet_7" ng-click="heightNumberPad.feetKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;height:38px; left: -100px;top: 0px">7</a></li>
+
+            <li class="key" style="position: absolute;left:200px;top:168px">
+                <a ng-click="heightNumberPad.activateFeet()" style="border-radius: 10px;padding: 0px;line-height: 45px;height: 38px;;text-align: center;">
+                    <div class="line_feet_delete"></div>
+                    <div class="line2_feet_delete"></div>
+                    <span class="feet_del_img"><button class="feet_del_btn"><i class="fa fa-times-thin fa-2x close_thin_icon" aria-hidden="true"></i></button></span>
+                </a>
+            </li>
+
+            <!-- modification here -->
+            <!-- <li class="delete_for_feet" ng-click="heightNumberPad.deleteFtInputs()"> -->
+            <!-- <li class="delete_for_feet" ng-click="heightNumberPad.activateFeet()">
+                <div class="line_feet_delete"></div>
+                <div class="line2_feet_delete"></div>
+                <span class="feet_del_img"><button class="feet_del_btn"><i class="fa fa-times-thin fa-2x close_thin_icon" aria-hidden="true"></i></button></span>
+            </li> -->
+        </div>
+        <!-- Modification here for cm -->
+        <div class="row_one {{(heightNumberPad.cmPanel) ? heightNumberPad.padEnterRight : heightNumberPad.padExitRight}}" ng-show="heightNumberPad.cmPanel">
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">1</a></li>
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">2</a></li>
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">3</a></li>
+        </div>
+        <div class="row_two {{(heightNumberPad.cmPanel) ? heightNumberPad.padEnterRight : heightNumberPad.padExitRight}}" ng-show="heightNumberPad.cmPanel">
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">4</a></li>
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">5</a></li>
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">6</a></li>
+        </div>
+        <div class="row_three {{(heightNumberPad.cmPanel) ? heightNumberPad.padEnterRight : heightNumberPad.padExitRight}}" ng-show="heightNumberPad.cmPanel">
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">7</a></li>
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">8</a></li>
+            <li class="key" style="margin-bottom: 2px;"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">9</a></li>
+        </div>
+        <div class="row_three {{(heightNumberPad.cmPanel) ? heightNumberPad.padEnterRight : heightNumberPad.padExitRight}}" ng-show="heightNumberPad.cmPanel">
+            <li class="key" style="margin-bottom: 2px;margin-left: 99px"><a ng-click="heightNumberPad.cmsKeyClick($event)"style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">0</a></li>
+            
+            <li class="key" style="margin-bottom: 2px;margin-left: 1px">
+                <a  ng-click="heightNumberPad.deleteCmsInputs()" style="border-radius: 10px;padding: 0px;line-height: 45px;text-align: center;">
+                    <div class="line_for_delete"></div>
+                    <div class="line2_for_delete"></div>
+                    <span class="height_ft_del"><button><i class="fa fa-times-thin fa-2x close_thin_icon" aria-hidden="true"></i></button></span>
+                </a>
+            </li>
+
+
+<!-- 
+            <li class="delete_for_cm" ng-click="heightNumberPad.deleteCmsInputs()">
+                <div class="line_for_delete"></div>
+                <div class="line2_for_delete"></div>
+                <span class="height_ft_del"><button><i class="fa fa-times-thin fa-2x close_thin_icon" aria-hidden="true"></i></button></span>
+            </li> -->
+        </div>
+
+        <!-- Modification here 3 elements added  -->
+            <!-- <span class="arrow-left"></span> -->
+            <!-- <div class="line_for_delete"></div>
+            <div class="line2_for_delete"></div>
+            <li class="height_ft_del"><button><p></p></button></li>  -->   
+
+    </ul>
+
+</div>

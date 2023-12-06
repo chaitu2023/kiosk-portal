@@ -1,0 +1,607 @@
+<!-- 
+<style>
+
+.weight_results_main_container{
+	height: 360px;
+	margin-top: 130px;
+    background-color: #ccc;
+}
+
+.weight_results_header_container{
+	margin-left: 40px;
+	padding-top: 15px;
+}
+
+.weight_results_header_image{
+	float: left;
+    width: 35px;
+}
+
+.weight_results_header_text{
+	padding-left: 31px;
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #4a4a4a;
+    font-family: "IntervalSansProMediumRegular";
+}
+
+.weight_results_small_text{
+	color: white;
+}
+
+.weight_results_sub_container{
+    height: 226px;
+    width: 90%;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-top: -16px;
+    margin-left: 29px;
+    border-radius: 10px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+}
+
+.weight_results_title_container{
+	background-color: #E6E6E6;
+    height: 133px;
+    width: 100px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.weight_results_parameter_title{
+	margin-top: 25px;
+    font-size: 14px;
+    color: gray;
+}
+
+.weight_results_yourscore_title{
+	color: gray;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.weight_results_weight_container{
+	left: 120px;
+    background-color: transparent;
+    width: 130px;
+    height: 133px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.weight_results_weight_title{
+	font-size: 23px;
+    font-weight: 500;
+    color: #4a4a4ae3;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.weight_results_weight_sub_title{
+	margin: 0px;
+    color: #808080bf;
+    font-size: 18px;
+    text-align: center;
+}
+
+.weight_results_weight_value{
+	margin-top: 10px;
+    font-size: 35px;
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    margin-left: 6px;
+    color: gray;
+}
+
+.weight_results_weight_units{
+	font-size: 23px;
+}
+
+.weight_results_height_container{
+	left: 260px;
+	background-color: #E6E6E6;
+    width: 160px;
+    height: 133px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.weight_results_height_title{
+	font-size: 23px;
+    font-weight: 500;
+    color: #4a4a4ae3;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.weight_results_height_sub_title{
+	margin: 0px;
+    color: #808080bf;
+    font-size: 18px;
+    text-align: center;
+}
+
+.weight_results_height_value{
+	margin-top: 10px;
+    font-size: 35px;
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    margin-left: 6px;
+    color: gray;
+}
+
+.weight_results_height_units{
+	font-size: 23px;
+}
+
+.weight_results_bmi_container{
+	left: 420px;
+	background-color: transparent;
+    width: 130px;
+    height: 133px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.weight_results_bmi_title{
+	font-size: 23px;
+    font-weight: 500;
+    color: #4a4a4ae3;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.weight_results_bmi_sub_title{
+	margin-top: 2px;
+    color: #808080bf;
+    font-size: 13px;
+    text-align: center;
+}
+
+.weight_results_bmi_value{
+	margin-top: 10px;
+    font-size: 35px;
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    margin-left: 6px;
+    color: gray;
+}
+
+.weight_results_bmi_units{
+	font-size: 23px;
+}
+
+.weight_results_over_all_status_container{
+    background-color: #E6E6E6;
+    left: 570px;
+    width: 160px;
+    height: 225px;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 15px;
+    text-align: center;
+    /*background-color: #87C427;*/
+}
+
+.weight_results_over_all_status_titles{
+	font-size: 24px;
+    color: #4a4a4aa8;
+    margin-top: 6px;
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    font-weight: 500;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.weight_results_over_all_status_sub_titles{
+	font-size: 24px;
+    color: #4a4a4aa8;
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    margin: -4px;
+    text-align: center;
+}
+
+.weight_results_over_all_status_small_titles{
+	margin-top: 10px;
+    font-size: 15px;
+    color: #6d6d6de8;
+}
+
+.weight_results_over_all_status_status_value{
+	font-size: 27px;
+    margin-top: 20px;
+    font-family: 'IntervalSansProCondSemiBoldRg';
+    text-align: center;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    letter-spacing: 0.6px;
+}
+
+.weight_results_over_all_status_status_icons{
+	width: 55px;
+    margin-top: -15px;
+}
+
+.weight_results_status_bar_container{
+	margin-top: 138px;
+    height: 87.5px;
+    width: 550px;
+    background-color: #E6E6E6;
+    position: absolute;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-size: 17px;
+    text-align: center;
+}
+
+.weight_results_status_bar_heading{
+	text-align: center;
+    margin: 0px;
+    margin-top: 4px;
+}
+
+.weight_results_status_bar_image{
+    width: 412px;
+	text-align: center;
+	margin-top: 5px;
+	height: 40px;
+}
+
+.weight_results_status_bar_image_underweight{
+	position: absolute;
+    top: 70px;
+    left: 70px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #c1a30f;
+    letter-spacing: 1.5px;
+}
+
+.weight_results_status_bar_image_normal{
+	position: absolute;
+    top: 70px;
+    left: 190px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #6aa010;
+}
+
+.weight_results_status_bar_image_overweight{
+	position: absolute;
+    top: 70px;
+    left: 290px;
+    font-size: 13px;
+    font-weight: 500;
+    /* color: #6aa010; */
+    color: #c0830a;
+    letter-spacing: 1.5px;
+}
+
+.weight_results_status_bar_image_obese{
+	position: absolute;
+    top: 70px;
+    left: 420px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #c04f10;
+}
+
+.bmi_display_arrow_pos1 {
+    left: 69px;
+}
+
+.bmi_display_arrow_pos2 {
+    left: 176px;
+}
+
+.bmi_display_arrow_pos3 {
+    left: 280px;
+}
+
+.bmi_display_arrow_pos4 {
+    left: 375px;
+}
+
+.weight_arrow_scale_pos {
+    transition: all .1s ease-in-out;
+    -webkit-animation: scalebounce 2s 1;
+    -moz-animation: scalebounce 2s 1;
+    animation: scalebounce 2s 1;
+    top: 23px;
+    height: 40px;
+}
+
+.weight_arrow_text_design {
+    top: 15px;
+    font-size: 12px;
+    height: 22px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 140px;
+}
+
+.weight_arrow_scale_pos .weight_arrow_size_pos {
+    display: block;
+}
+
+.weight_arrow_size_pos {
+    background: url('../images/bmi_scale_arrow20120509.png') no-repeat;
+    display: none;
+    height: 8px;
+    margin: 0.35em auto;
+    width: 13px;
+}
+
+.bg_color1{
+	background-color: #c1a30f;
+}
+
+.bg_color2{
+	background-color: #6aa010;
+}
+
+.bg_color3{
+	background-color: #c0830a;
+}
+
+.bg_color4{
+	background-color: red;
+}
+
+.repeat_button_container{
+    margin-top: 2%;
+    margin-left: 37%;
+    width: 225px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: white;
+    border: 2px solid dodgerblue;
+}
+
+.repeat_button_container:active{
+    background-color: gainsboro;
+}
+
+.repeat_button_text{
+   	font-size: 23px;
+    font-weight: 500;
+    margin-top: 4px;
+    color: #4a4a4a;
+    font-family: "IntervalSansProMediumRegular";
+}
+
+.info_btn{
+    right: 30px;
+    top: 20px;
+    z-index: 5;
+}
+
+.info_btn {
+  position: absolute;
+  background: ("../images/info_btn.gif") top left no-repeat;
+  height: 35px;
+  width: 35px;
+  border: none;
+  text-indent: -9999px; }
+
+.info_btn:active {
+  background-position: bottom left; }
+</style>
+
+<div class="weight_results_main_container">
+    <div class="weight_results_header_container">
+         <img class="weight_results_header_image" src="./images/Icons-28.png">
+         <p class="weight_results_header_text">Weight & BMI <small class="weight_results_small_text">Results</small></p> 
+         <button class="info_btn" ng-click="showInfoboxWeight()">
+             Information
+         </button>
+    </div> 
+ 
+     <div class="weight_results_sub_container">
+         <span class="weight_results_title_container">
+             <p class="weight_results_parameter_title">Parameter</p>
+             <p class="weight_results_yourscore_title">Your score</p>
+         </span>
+ 
+         <span class="weight_results_weight_container">
+             <p class="weight_results_weight_title">Weight</p>
+             <p class="weight_results_weight_sub_title">in Kgs</p>
+             <p class="weight_results_weight_value">{{weight}}</p>
+         </span>
+ 
+         <span class="weight_results_height_container">
+             <p class="weight_results_height_title">Height</p>
+             <p class="weight_results_height_sub_title">in feet</p>
+             <p class="weight_results_height_value">{{height}}</p>
+         </span>
+ 
+         <span class="weight_results_bmi_container">
+            <p class="weight_results_bmi_title">BMI</p>
+            <p class="weight_results_bmi_sub_title">Body Mass Index</p>
+            <p class="weight_results_bmi_value">{{bmi}}</p>
+        </span>
+
+         <span ng-class="{'bg_color1' : bmiRisk == 'underweight' , 'bg_color2' : bmiRisk == 'normal' , 'bg_color3' : bmiRisk == 'overweight' , 'bg_color4' : bmiRisk == 'obese'}" class="weight_results_over_all_status_container">
+             <p class="weight_results_over_all_status_titles">Body Mass</p>
+             <p class="weight_results_over_all_status_sub_titles">Index</p>
+             <p class="weight_results_over_all_status_small_titles">Overall Status</p>
+             <p class="weight_results_over_all_status_status_value">{{bmiRisk}}</p>
+             <img  class="weight_results_over_all_status_status_icons" src="./images/Icons-04.png">
+         </span>
+ 
+         <span class="weight_results_status_bar_container">
+             <p class="weight_results_status_bar_heading">Body Mass Index Scale</p>
+             <div ng-class="{'bmi_display_arrow_pos1' : bmiRisk == 'underweight' , 'bmi_display_arrow_pos2' : bmiRisk == 'normal' , 'bmi_display_arrow_pos3' : bmiRisk == 'overweight' , 'bmi_display_arrow_pos4' : bmiRisk == 'obese'}" class="weight_arrow_text_design weight_arrow_scale_pos">
+                 <div class="weight_arrow_size_pos"><img ng-src="images/bmi_scale_arrow20120509.png"></div>
+             </div>
+             <img class="weight_results_status_bar_image" src="images/bmi_scale_new20120509.png">
+             <span class="weight_results_status_bar_image_underweight">Underweight</span>
+             <span class="weight_results_status_bar_image_normal" >Normal</span>
+             <span class="weight_results_status_bar_image_overweight" >Overweight</span>
+             <span class="weight_results_status_bar_image_obese" >Obese</span>
+         </span>
+     </div>
+ </div>
+
+ <div>
+    <button  class="repeat_button_container" ng-click="redoWeight()">
+        <p class="repeat_button_text">Repeat BMI Test</p>
+    </button>
+</div>
+
+<a id="higi_control_left_btn" class="left_control_btn {{langClass}} {{(redoVisible) ? buttonEnterLeft : buttonExitLeft}}" ng-show="redoVisible" ng-click="redoWeight()">
+    <span class="{{langClass}}">{{interfaceLabels[redoSlideText]}}</span>
+</a>
+<a id="higi_control_right_ng_btn" class="right_control_btn {{langClass}} {{(nextVisible) ? buttonEnterRight : buttonExitRight}}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="{{langClass}} {{interfaceLabels[nextSlideText]}}">{{interfaceLabels[nextSlideText]}}</span>
+</a> -->
+
+
+
+<!--
+<div id="slide_title">{{interfaceLabels[slideTitle]}}</div>
+<div id="slide_subtitle">{{interfaceLabels[slideSubTitle]}}</div>
+
+<div class="weight_instructions_main_container">
+    <div id="weight03_results">
+        <div id="weight03_results_weight">
+            <div class="result_title">{{interfaceLabels[weightTitle]}}</div>
+            <div class="result testFadeIn" ng-show="showWeight">
+                <span class="value">{{weight}}</span>
+                <span class="unit">{{interfaceLabels[weightPoundAbbv]}}</span>
+            </div>
+        </div>
+        <div id="weight03_results_height">
+            <div class="result_title">{{interfaceLabels[heightTitle]}}</div>
+            <div class="result testFadeIn"  ng-show="showHeight">
+                <span class="value">{{height}}</span>
+            </div>
+        </div>
+        <div id="weight03_results_bmi">
+            <div class="info_btn" ng-click="showInfoboxWeight()"></div>
+            <div class="result_title {{langClass}}" >{{interfaceLabels[weightBmi]}}</div>
+            <div class="result testFadeIn" ng-show="showBmi">
+                <span class="value">{{bmi}}</span>
+            </div>
+        </div>
+        <div id="weight03_results_bmi_scale">
+            <div class="result_title">{{interfaceLabels[weightBmiScale]}}</div>
+            <div id="weight03_bmi_scale">
+                <div id="bmi_01" class="bmi_scale_text {{bmiIsUnderWeight}}">
+                    <span >{{interfaceLabels[weightBmiUnder]}}</span>
+                    <div class="bmi_arrow"></div>
+                </div>
+                <div id="bmi_02" class="bmi_scale_text {{bmiIsNormal}}">
+                    <span>{{interfaceLabels[weightBmiNormal]}}</span>
+
+                    <div class="bmi_arrow"></div>
+                </div>
+                <div id="bmi_03" class="bmi_scale_text  {{bmiIsOverWeight}}">
+                    <span>{{interfaceLabels[weightBmiOver]}}</span>
+
+                    <div class="bmi_arrow"></div>
+                </div>
+                <div id="bmi_04" class="bmi_scale_text {{bmiIsObese}}">
+                    <span>{{interfaceLabels[weightBmiObese]}}</span>
+                    <div class="bmi_arrow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a id="higi_control_left_btn" class="left_control_btn {{langClass}} {{(redoVisible) ? buttonEnterLeft : buttonExitLeft}}" ng-show="redoVisible" ng-click="redoWeight()">
+    <span class="{{langClass}}">{{interfaceLabels[redoSlideText]}}</span>
+</a>
+<a id="higi_control_right_ng_btn" class="right_control_btn {{langClass}} {{(nextVisible) ? buttonEnterRight : buttonExitRight}}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="{{langClass}} {{interfaceLabels[nextSlideText]}}">{{interfaceLabels[nextSlideText]}}</span>
+</a>
+-->
+
+<div class="weight_results_main_container">
+   <div class="weight_results_header_container">
+        <img class="weight_results_header_image" src="./images/Icons-28.png">
+        <p class="weight_results_header_text">{{interfaceLabels[slideTitle]}}<small class="weight_results_small_text">{{interfaceLabels[slideSubTitle]}}</small></p>                   
+        <div class= "global_info_button" ng-click="showInfoboxWeight()">
+            <img class= "global_info_button_icon" src="images/icons8-info-32.png">
+            <span class= "global_info_button_text">{{interfaceLabels[wbmiInformation]}}</span>
+        </div>
+    </div> 
+
+    <div class="weight_results_sub_container">
+        <div class="weight_results_title_container">
+            <p class="weight_results_parameter_title"> {{interfaceLabels[wbmiParameter]}}</p>
+            <p class="weight_results_yourscore_title"> {{interfaceLabels[wbmiYourscore]}}</p>
+        </div>
+
+        <div class="weight_results_param1_container">
+            <p class="weight_results_param1_title">{{interfaceLabels[weightTitle]}}</p>
+            <p class="weight_results_parm1_sub_title">{{interfaceLabels[kgUnit]}}</p>
+            <p class="weight_results_parm1_value"> {{weight}}
+            </p>
+        </div>
+
+        <div class="weight_results_param2_container">
+            <p class="weight_results_param2_title">{{interfaceLabels[heightTitle]}}</p>
+            <p class="weight_results_parm2_sub_title">{{interfaceLabels[feetUnit]}}</p>
+            <p class="weight_results_parm2_value"> {{height}} </p>            
+        </div>
+
+        <div class="weight_results_param3_container">
+            <p class="weight_results_param3_title">{{interfaceLabels[bmiPTitle]}}</p>
+            <p class="weight_results_parm3_sub_title">{{interfaceLabels[bodymassindex]}}</p>
+            <p class="weight_results_parm3_value">  {{bmi}} </p>
+        </div>
+
+
+        <div class="weight_results_over_all_status_container" ng-class="{'weight_bg_color1' : bmiRisk == 'Low' , 'weight_bg_color2' : bmiRisk == 'Normal' , 'weight_bg_color4' : bmiRisk == 'High'}" >            <p class="weight_results_over_all_status_titles">{{interfaceLabels[bodymassindex]}}</p>
+            <p class="weight_results_overall_sub_title"> {{interfaceLabels[wbmiOverallStatus]}}</p>            
+            <img  ng-if="bmiRisk == 'Normal'" class="weight_overall_ststus_icon" src="./images/vital_status/vital_status_normal.png">
+            <img  ng-if="bmiRisk == 'High'" class="weight_overall_ststus_icon" src="./images/vital_status/vital_status_risk.png">
+            <img  ng-if="bmiRisk == 'Low' || bmiRisk == 'overweight'" class="weight_overall_ststus_icon" src="./images/vital_status/vital_status_low.png">
+            <p class="weight_overall_status_txt" > {{interfaceLabels[bmiRiskStatus]}} </p>
+        </div>
+        
+        <div class="weight_results_status_bar_container">
+             <p class="weight_results_status_bar_heading">{{interfaceLabels[bmiScale]}}</p>
+             <div ng-class="{'bmi_display_arrow_pos1' : bmiRisk == 'Low' , 'bmi_display_arrow_pos2' : bmiRisk == 'Normal' , 'bmi_display_arrow_pos4' : bmiRisk == 'High'}" class="weight_arrow_text_design weight_arrow_scale_pos">                 <div class="weight_arrow_size_pos"><img class="bmi_arrow_pos" ng-src="images/bmi_scale_arrow20120509.png"></div>
+             </div>
+             <img class="weight_results_status_bar_image" src="images/bmi_scale_new20120509.png">
+             <span class="weight_results_status_bar_image_underweight {{langClass}} ">{{interfaceLabels[wbmiunderweight]}}</span>
+             <span class="weight_results_status_bar_image_normal {{langClass}} " >{{interfaceLabels[wbminormalweight]}}</span>
+             <!-- <span class="weight_results_status_bar_image_overweight {{langClass}} " >{{interfaceLabels[wbmioverweight]}}</span> -->
+             <span class="weight_results_status_bar_image_obese {{langClass}} " >{{interfaceLabels[wbmiobese]}}</span>
+        </div>
+     </div>
+</div>
+
+<!-- <a class= "global_redo_button" ng-show="redoVisible" ng-click="redoWeight()">
+    <span class="global_redo_button_text"><b>Do</b> Weight & BMI Test <b>Again</b></span>
+</a> -->
+<div class="global_redo_button" ng-show="redoVisible" ng-click="redoWeight()">
+    <div class="global_redo_outer_line">
+        <img src="images/Icons-27.png" class="global_redo_button_icon">
+        <small class="global_redo_button_small_text">{{interfaceLabels[checkwbmiAgain]}}</b> </small>
+    </div>
+</div>
+
+<a class= "global_continue_next_button" ng-class = "{'button-enter-right' : nextVisible, 'button-exit-right' : !nextVisible}" ng-show="nextVisible" ng-click="nextButtonOut()">
+    <span class="global_continue_next_button_text">{{interfaceLabels[nextSlideText]}}</span>
+</a>

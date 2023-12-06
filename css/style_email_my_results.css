@@ -1,0 +1,201 @@
+.email_my_results_main_container{
+	height: 520px;
+}
+
+.email_my_results_main_title{
+	font-size: 26px;
+    font-weight: 500;
+    color: #4a4a4a;
+    /* font-family: 'LatoRegular'; */
+    font-family: 'LatoItalic';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 670px;
+}
+
+.email_my_results_sub_container{
+	overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 710px;
+    height: 520px;
+}
+
+
+.email_my_results_sub_container_title{
+	color: #4a4a4a;
+    font-size: 14px;
+    left: 20px;
+    position: absolute;
+    top: 80px;
+    font-family: 'LatoRegular';
+}
+
+.email_my_results_InputBoxContainer input{
+    top: 120px;
+    left: 18px;
+    height: 55px !important;
+    padding-right: 90px !important;
+    padding-left: 10px !important;
+    border: 2px solid #808080d1;
+    color: #808080d1;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: 10px !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 415px !important;
+    display: block !important;
+    font-size: 18px !important;
+    position: absolute !important;
+    background: white !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+
+.email_my_results_InputBoxContainer div{
+    top: 120px!important;
+    left: 18px !important;
+    height: 54px !important;
+    padding-right: 90px !important;
+    padding-left: 12px !important;
+    padding-top: 27px;
+    border: none !important;
+    color: gray !important;
+    font-weight: 500 !important;
+    font-family: 'LatoRegular' !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border-radius: 0px !important;
+    outline: none !important;
+    text-indent: 0px !important;
+    box-sizing: border-box !important;
+    width: 415px !important;
+    display: block!important;
+    font-size: 18px !important;
+    position: absolute !important;
+    background: transparent !important;
+    z-index: 10 !important;
+    pointer-events: none;
+    line-height: 0px !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.email_my_results_loader{
+	top: 130px;
+    left: 470px;
+    width: 35px;
+    height: 35px;
+    z-index: 0;
+    display: block;
+    position: absolute;
+    background: transparent url(../images/keyboard_dialog_loading_icon06222012.png) top left no-repeat;
+    -webkit-animation: rotate360 1.3s linear infinite;
+}
+
+.email_my_results_submit_button{
+    top: 118px;
+    left: 470px;
+    position: absolute !important;
+    width: 190px !important;
+    height: 55px !important;
+    pointer-events: none !important;
+    text-align: center !important;
+    font-family: "LatoRegular" !important;
+    z-index: 15 !important;
+    line-height: 60px !important;
+    border: 1px solid #cecece !important;
+    border-radius: 7px !important;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    background-image: -webkit-linear-gradient(90deg, #dedede 0%, #dfdfdf 10%, #eaeaea 84%, #ebebeb 100%) !important;
+
+}
+
+.email_my_results_submit_button span{
+    position: relative !important;
+    top: -3px !important;
+    color: #fff !important;
+    font-size: 22px !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.2) !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: .9 !important;
+    pointer-events: none !important;
+}
+
+.email_my_results_submit_button.email_my_results_submit_active_btn{
+    position: absolute !important;
+    top: 118px !important;
+    height: 53px !important;
+    left: 470px !important;
+    border-radius: 10px !important;
+    border-top: 2px solid #5dbcff !important;
+    border-left: 2px solid #5fa4d4bf !important;
+    border-bottom: 2px solid #50a4e0bf !important;
+    border-right: 2px solid #50a4e0bf !important;
+    width: 190px !important;
+    color: white !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    box-shadow: 0px 4px 4px #4a4a4ae0 !important;
+    background: linear-gradient(to bottom,#5aa4d9,#3989c3, #0261c2) !important;
+    text-shadow: none !important;
+    font-family: 'LatoRegular' !important;
+    font-weight: 500 !important;
+    text-align: center;
+    pointer-events: all !important;
+}
+
+.email_my_results_submit_button.email_my_results_submit_active_btn span{
+    font-size: 21px !important;
+    text-align: center !important;
+    position: relative !important;
+    top: -1px !important;
+    font-family: LatoRegular !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    line-height: 50px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+.email_my_results_submit_button.email_my_results_submit_active_btn:active{
+    box-shadow: none !important;
+}
+
+.email_my_results_account_disclaimer{
+	font-size: 14px;
+    color: #4a4a4a;
+    position: absolute;
+    top: 200px;
+    text-align: center;
+    width: 710px;
+    font-family: 'LatoRegular';
+}
+
+.email_my_results_error_visible{
+	top: 126px;
+    left: 348px;
+    width: 80px;
+    font-size: 17px;
+    font-family: 'LatoRegular';
+    color: #d00;
+    position: absolute;
+    z-index: 10;
+}

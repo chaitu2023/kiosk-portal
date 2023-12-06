@@ -1,0 +1,94 @@
+<style>
+/* The container */
+.tele_genixs_check_container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-top: 20px;
+    margin-left: 20px;
+  cursor: pointer;
+  font-size: 22px;
+   color: #4a4a4a;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.tele_genixs_check_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.tele_genixs_check_checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.tele_genixs_check_container:hover input ~ .tele_genixs_check_checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.tele_genixs_check_container input:checked ~ .tele_genixs_check_checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.tele_genixs_check_checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.tele_genixs_check_container input:checked ~ .tele_genixs_check_checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.tele_genixs_check_container .tele_genixs_check_checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.tele_genix_check_questions{
+  margin-top: 82px;
+  margin-left: 20px;
+  font-family: IntervalSansProMediumRegular;
+  font-size: 28px;
+  color: #4a4a4a;
+}
+
+.genixs_checkbox_lable {
+    list-style: none;
+    display: inline-block;
+}
+
+</style>
+<div class="tele_genix_check_questions">{{telecheckgenix.name}}</div>
+<li  ng-repeat="labels in newLabels" class="genixs_checkbox_lable">
+  <label class="tele_genixs_check_container" >{{labels.Name}}
+    <input type="{{telecheckgenix.input_type}}" id="{{labels.Id}}" value="{{labels}}" ng-click="CheckLabels(labels)">
+    <span class="tele_genixs_check_checkmark" required={{telecheckgenix.is_required}}></span>
+  </label>
+</li>
+
