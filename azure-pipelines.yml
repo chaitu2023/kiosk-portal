@@ -12,5 +12,7 @@ pool:
 steps:
 - script: |
     ls -lrt
-    test.py
+    python -m pip install requests
+    python -m pip install selenium
+    python test.py
   displayName: 'Test'
