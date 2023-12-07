@@ -11,5 +11,6 @@ pool:
 
 steps:
 - script: |
+    ls -lrt
     test.py
   displayName: 'Test'
