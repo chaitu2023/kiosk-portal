@@ -10,7 +10,7 @@ def main():
     driver = webdriver.Chrome(options=options)
     
     try:
-        driver.get("http://3.110.92.113")  # Replace with your URL
+        driver.get("http://3.110.46.249")  # Replace with your URL
 
         # Wait for the welcome element to be present for a maximum of 15 seconds
         wait = WebDriverWait(driver, 15)
