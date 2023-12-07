@@ -3,6 +3,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+def click_element(driver, xpath):
+    try:
+        element = driver.find_element(By.XPATH, xpath)
+        element.click()
+    except Exception as e:
+        print(f"Error while clicking element: {str(e)}")
+
 def main():
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
@@ -20,9 +27,7 @@ def main():
         if welcome_element:
             print("Page loaded successfully")
 
-            # Find and click the Full Body Test button
-            # full_body_test_button = driver.find_element(By.XPATH, '/html/body/div[40]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/a[2]')
-            # full_body_test_button.click()
+            # Find and click the Full Body Test button using the click_element function
             click_element(driver, full_body_test_button_xpath)
 
             print("Selected Full Body Test")
