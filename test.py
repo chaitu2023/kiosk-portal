@@ -19,11 +19,17 @@ def main():
         if welcome_element:
             print("Page loaded successfully")
 
-            # Locate and click the Full Body Test button without iframe handling
+            # Locate and click the Full Body Test button
             full_body_test_button_xpath = '/html/body/div[40]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/a[1]/div[1]'
             full_body_test_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, full_body_test_button_xpath)))
             full_body_test_button.click()
             print("Selected Full Body Test")
+
+            # Wait for the Start button and click it
+            start_button_xpath = '/html/body/div[40]/div[2]/div/div[2]/div[4]/div/div/a'
+            start_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, start_button_xpath)))
+            start_button.click()
+            print("Clicked Start")
         else:
             print("Page not loaded")
     
