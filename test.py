@@ -27,7 +27,7 @@ def main():
                 driver.switch_to.frame(iframe)
                 try:
                     # Find and click the Full Body Test button using an explicit wait
-                    full_body_test_button_xpath = '/html/body/div[40]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/a[2]'
+                    full_body_test_button_xpath = '/html/body/div[40]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/a[1]/div[1]'
                     full_body_test_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, full_body_test_button_xpath)))
                     full_body_test_button.click()
                     print("Selected Full Body Test")
