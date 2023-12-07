@@ -11,6 +11,7 @@ def main():
     
     try:
         driver.get("http://3.110.46.249")  # Replace with your URL
+        full_body_test_button_xpath = '/html/body/div[40]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/a[2]'
 
         # Wait for the welcome element to be present for a maximum of 15 seconds
         wait = WebDriverWait(driver, 15)
@@ -20,8 +21,9 @@ def main():
             print("Page loaded successfully")
 
             # Find and click the Full Body Test button
-            full_body_test_button = driver.find_element(By.XPATH, '/html/body/div[40]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/a[1]')
-            full_body_test_button.click()
+            # full_body_test_button = driver.find_element(By.XPATH, '/html/body/div[40]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/a[2]')
+            # full_body_test_button.click()
+            click_element(driver, full_body_test_button_xpath)
 
             print("Selected Full Body Test")
         else:
