@@ -34,6 +34,8 @@ def main():
                     break
                 except Exception as e:
                     print("Element not found in this iframe:", str(e))
+                    # Optionally, you can print the current page source for debugging purposes:
+                    # print(driver.page_source)
                     driver.switch_to.default_content()
                     continue
             else:
